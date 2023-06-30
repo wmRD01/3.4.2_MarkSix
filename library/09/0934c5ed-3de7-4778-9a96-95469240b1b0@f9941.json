@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bg_road3",
+    "atlas": "",
+    "rect": {
+      "x": 9,
+      "y": 9,
+      "width": 26,
+      "height": 26
+    },
+    "offset": {
+      "x": 4.5,
+      "y": -4.5
+    },
+    "originalSize": {
+      "width": 35,
+      "height": 35
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "0934c5ed-3de7-4778-9a96-95469240b1b0@6c48a",
+    "packable": true
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "ver": "1.0.5",
+  "importer": "bitmap-font",
+  "imported": true,
+  "uuid": "7be5589b-4f91-4d78-8a58-ac9f9cd2a92d",
+  "files": [
+    ".json"
+  ],
+  "subMetas": {},
+  "userData": {
+    "_fntConfig": {
+      "commonHeight": 32,
+      "fontSize": 32,
+      "atlasName": "silver_0.png",
+      "fontDefDictionary": {
+        "70": {
+          "rect": {
+            "x": 164,
+            "y": 0,
+            "width": 66,
+            "height": 82
+          },
+          "xOffset": 0,
+          "yOffset": 0,
+          "xAdvance": 66
+        },
+        "72": {
+          "rect": {
+            "x": 85,
+            "y": 0,
+            "width": 78,
+            "height": 82
+          },
+          "xOffset": 0,
+          "yOffset": 0,
+          "xAdvance": 78
+        },
+        "73": {
+          "rect": {
+            "x": 298,
+            "y": 0,
+            "width": 38,
+            "height": 82
+          },
+          "xOffset": 0,
+          "yOffset": 0,
+          "xAdvance": 38
+        },
+        "78": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 84,
+            "height": 82
+          },
+          "xOffset": 0,
+          "yOffset": 0,
+          "xAdvance": 84
+        },
+        "83": {
+          "rect": {
+            "x": 231,
+            "y": 0,
+            "width": 66,
+            "height": 82
+          },
+          "xOffset": 0,
+          "yOffset": 0,
+          "xAdvance": 66
+        }
+      },
+      "kerningDict": {}
+    },
+    "fontSize": 32,
+    "textureUuid": "80a47d2e-ab57-417f-ba12-62dcb70bf636"
+  }
+}

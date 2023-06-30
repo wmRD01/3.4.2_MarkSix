@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/ViewIndex.ts"],"names":["ViewIndex"],"mappings":";;;;;;;;;;;;;;;;iBAEYA,S,MAAAA,S,yBAAAA,S","sourcesContent":["import { Component, director, game, sys } from \"cc\";\r\n\r\nexport enum ViewIndex {\r\n\r\n}\r\n"]}

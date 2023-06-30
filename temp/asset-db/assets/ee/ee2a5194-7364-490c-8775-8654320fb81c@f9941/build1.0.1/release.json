@@ -1,0 +1,53 @@
+[
+    1,
+    [
+        "eeKlGUc2RJDId1hlQyD7gc@6c48a"
+    ],
+    [
+        "_textureSource"
+    ],
+    [
+        "cc.SpriteFrame"
+    ],
+    0,
+    [
+        {
+            "name": "Index_Challenge",
+            "rect": {
+                "x": 3,
+                "y": 2,
+                "width": 120,
+                "height": 121
+            },
+            "offset": {
+                "x": 0,
+                "y": 0.5
+            },
+            "originalSize": {
+                "width": 126,
+                "height": 126
+            },
+            "rotated": false,
+            "capInsets": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "packable": true
+        }
+    ],
+    [
+        0
+    ],
+    0,
+    [
+        0
+    ],
+    [
+        0
+    ],
+    [
+        0
+    ]
+]

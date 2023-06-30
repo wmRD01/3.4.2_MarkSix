@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Login_Above",
+    "atlas": "",
+    "rect": {
+      "x": 6,
+      "y": 0,
+      "width": 1112,
+      "height": 722
+    },
+    "offset": {
+      "x": 0.5,
+      "y": 3
+    },
+    "originalSize": {
+      "width": 1123,
+      "height": 728
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "732729dc-835a-4da2-9ded-bbcf1270b6d6@6c48a",
+    "packable": true
+  }
+}

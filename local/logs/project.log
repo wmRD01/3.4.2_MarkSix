@@ -1,0 +1,252 @@
+2023-06-29 15:16:14-log: [Package] menu@1.0.0 enable
+2023-06-29 15:16:14-log: [Package] profile@1.0.0 enable
+2023-06-29 15:16:14-log: [Package] project@1.0.1 enable
+2023-06-29 15:16:14-log: [Package] messages@1.0.0 enable
+2023-06-29 15:16:14-log: [Package] program@1.0.0 enable
+2023-06-29 15:16:14-log: [Package] device@1.0.1 enable
+2023-06-29 15:16:14-log: [Package] ui-kit@1.0.1 enable
+2023-06-29 15:16:14-log: [Package] tester@1.0.0 enable
+2023-06-29 15:16:14-log: [Package] preferences@1.0.0 enable
+2023-06-29 15:16:15-log: Setup mods mgr.: 258.967ms
+2023-06-29 15:16:15-log: Profile changed: engine (modules.includeModules: audio,base,gfx-webgl,intersection-2d,physics-2d-box2d,profiler,tween,ui)
+2023-06-29 15:16:15-log: [Package] engine@1.0.5 enable
+2023-06-29 15:16:17-log: [Package] programming@1.0.0 enable
+2023-06-29 15:16:17-log: [Package] engine-extends@1.0.0 enable
+2023-06-29 15:16:17-log: [Package] asset-db@1.0.0 enable
+2023-06-29 15:16:17-log: [Package] console@1.0.0 enable
+2023-06-29 15:16:17-log: [Package] scene@1.0.0 enable
+2023-06-29 15:16:17-log: [Package] about@1.0.0 enable
+2023-06-29 15:16:17-log: [Package] server@1.0.0 enable
+2023-06-29 15:16:17-log: [Package] utils@1.0.0 enable
+2023-06-29 15:16:17-log: [Package] assets@1.0.0 enable
+2023-06-29 15:16:18-log: [Package] inspector@1.0.0 enable
+2023-06-29 15:16:18-log: [Package] hierarchy@1.0.0 enable
+2023-06-29 15:16:19-log: [Package] preview@1.0.1 enable
+2023-06-29 15:16:19-log: [Package] animator@1.0.0 enable
+2023-06-29 15:16:19-log: [Package] builder@1.3.1 enable
+2023-06-29 15:16:19-log: [Package] node-library@1.0.0 enable
+2023-06-29 15:16:19-log: [Package] shortcuts@1.0.1 enable
+2023-06-29 15:16:20-log: [Package] package-asset@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] reference-image@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] animation-graph@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] channel-upload-tools@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] runtime-dev-tools@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] lightmap@1.0.4 enable
+2023-06-29 15:16:20-log: [Package] alipay-mini-game@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] android@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] baidu-mini-game@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] bytedance-mini-game@1.0.1 enable
+2023-06-29 15:16:20-log: [Package] huawei-agc@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] ios@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] ios-app-clip@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] mac@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] native@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] ohos@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] web-desktop@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] web-mobile@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] wechatgame@1.0.1 enable
+2023-06-29 15:16:20-log: [Package] windows@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] xiaomi-quick-game@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] cocos-play@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] huawei-quick-game@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] link-sure@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] oppo-mini-game@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] qtt@1.0.0 enable
+2023-06-29 15:16:20-log: [Package] vivo-mini-game@1.0.0 enable
+2023-06-29 15:16:21-log: [Package] cocos-service@3.0.2 enable
+2023-06-29 15:16:21-log: [Package] importer@1.0.0 enable
+2023-06-29 15:16:21-log: [Package] extension@3.0.15 enable
+2023-06-29 15:16:21-log: [Im-plugin] Check im-plugin version.
+2023-06-29 15:16:21-log: [Package] im-plugin@3.0.10 enable
+2023-06-29 15:16:23-log: [Im-plugin] Im-plugin online version is 3.0.10.
+2023-06-29 15:16:23-log: [Im-plugin] Im-plugin local version is 3.0.10.
+2023-06-29 15:16:23-log: [Im-plugin] Im-plugin need not update.
+2023-06-29 15:16:28-warn: Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating
+2023-06-29 15:16:31-log: [Scene] Cocos Creator v3.4.2
+2023-06-29 15:16:34-info: [Scene] Forward render pipeline initialized.
+2023-06-29 15:17:45-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 15:18:27-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 15:18:44-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 15:37:24-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 17:15:56-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 17:17:21-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 17:18:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 17:18:49-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 17:19:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 17:19:18-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 17:19:25-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 17:56:56-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:01:24-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:06:42-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:08:38-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:08:41-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'set')
+2023-06-29 18:08:41-error: [Preview]TypeError: Cannot read properties of undefined (reading 'set')
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:115:37
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:6:105)
+    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:8:196)
+2023-06-29 18:09:12-error: Failed to load module file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/GameRoom/PanelBall.ts: SyntaxError: unknown: Unexpected token (47:24)
+
+  45 |
+  46 |                         _color = 
+> 47 |                         break;
+     |                         ^
+  48 |                     case 3:
+  49 |                     case 4:
+  50 |                         _color = ColorType.藍.
+2023-06-29 18:09:12-error: Failed to load module file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/GameRoom/PanelBall.ts: SyntaxError: unknown: Unexpected token (47:24)
+
+  45 |
+  46 |                         _color = 
+> 47 |                         break;
+     |                         ^
+  48 |                     case 3:
+  49 |                     case 4:
+  50 |                         _color = ColorType.藍.
+2023-06-29 18:09:12-error: [Scene] Failed to resolve __unresolved_1 from pack:///mods/fs/0/assets/Script/Contorll/GameRoom/Paneltest.js.
+2023-06-29 18:09:12-warn: [Scene] Missing class: a8d3dfISBtMrYJ9a4AsB4k2
+2023-06-29 18:09:12-error: [Scene] Error when checking MissingScript 7, SyntaxError: Unexpected token u in JSON at position 0
+2023-06-29 18:09:12-error: [Scene] Script "a8d3dfISBtMrYJ9a4AsB4k2" attached to "PanelBall" in prefab "PanelBall" is missing or invalid. Detailed information:
+Asset url: "db://assets/Prefab/GameRoom/PanelBall"
+Script UUID: "a8d3d7c8-481b-4cad-827d-6b802c078936"
+Class ID: "a8d3dfISBtMrYJ9a4AsB4k2"
+
+2023-06-29 18:09:12-error: [Scene] Script "a8d3dfISBtMrYJ9a4AsB4k2" attached to "PanelBall" in prefab "PanelBall" is missing or invalid. Detailed information:
+Asset url: "db://assets/Prefab/GameRoom/PanelBall"
+Script UUID: "a8d3d7c8-481b-4cad-827d-6b802c078936"
+Class ID: "a8d3dfISBtMrYJ9a4AsB4k2"
+
+2023-06-29 18:09:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:09:13-error: [Preview]Unable to resolve bare specifier '__unresolved_27' from http://localhost:7456/scripting/x/mods/cce/internal/x/prerequisite-imports.js (SystemJS Error#8 https://git.io/JvFET#8)
+2023-06-29 18:09:13-error: [Preview]Error: Unable to resolve bare specifier '__unresolved_27' from http://localhost:7456/scripting/x/mods/cce/internal/x/prerequisite-imports.js (SystemJS Error#8 https://git.io/JvFET#8)
+    at throwUnresolved (http://localhost:7456/scripting/systemjs/system.js:696:11)
+    at systemJSPrototype.resolve (http://localhost:7456/scripting/systemjs/system.js:692:102)
+    at systemJSPrototype.resolve (http://localhost:7456/scripting/systemjs/system.js:1048:24)
+    at http://localhost:7456/scripting/systemjs/system.js:335:39
+    at Array.map (<anonymous>)
+    at http://localhost:7456/scripting/systemjs/system.js:333:43
+2023-06-29 18:09:58-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:10:00-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'set')
+2023-06-29 18:10:00-error: [Preview]TypeError: Cannot read properties of undefined (reading 'set')
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:114:37
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:6:105)
+    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:8:196)
+2023-06-29 18:10:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:10:13-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'set')
+2023-06-29 18:10:13-error: [Preview]TypeError: Cannot read properties of undefined (reading 'set')
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:114:37
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:6:105)
+    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:8:196)
+2023-06-29 18:10:46-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:10:48-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'set')
+2023-06-29 18:10:48-error: [Preview]TypeError: Cannot read properties of undefined (reading 'set')
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:107:37
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:6:105)
+    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:8:196)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:8:366
+    at new Promise (<anonymous>)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:8:99
+    at PanelBall.onLoad (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:145:13)
+    at http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:148650:16
+    at OneOffInvoker._invoke (http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:147414:9)
+2023-06-29 18:10:58-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:11:01-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'set')
+2023-06-29 18:11:01-error: [Preview]TypeError: Cannot read properties of undefined (reading 'set')
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:114:37
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:6:105)
+    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:8:196)
+2023-06-29 18:11:35-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:12:01-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:12:16-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:35:32-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:36:33-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:36:35-error: [Preview]unhandledrejection: Cannot read properties of null (reading 'clickEvents')
+2023-06-29 18:36:35-error: [Preview]TypeError: Cannot read properties of null (reading 'clickEvents')
+    at MyButton.findEvent (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Manager/ButtonMng.js:30:39)
+    at MyButton.addEvent (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Manager/ButtonMng.js:19:20)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:147:45
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:6:105)
+    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:8:196)
+2023-06-29 18:36:53-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:36:56-error: [Preview]unhandledrejection: Cannot read properties of null (reading 'clickEvents')
+2023-06-29 18:36:56-error: [Preview]TypeError: Cannot read properties of null (reading 'clickEvents')
+    at MyButton.findEvent (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Manager/ButtonMng.js:30:39)
+    at MyButton.addEvent (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Manager/ButtonMng.js:19:20)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:147:45
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:6:105)
+    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js:8:196)
+2023-06-29 18:37:32-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:38:08-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:56:44-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:56:48-error: [Preview]Uncaught TypeError: Cannot read properties of undefined (reading 'indexOf') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js
+2023-06-29 18:57:05-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:57:39-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:57:57-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 18:58:04-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:01:47-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:11:55-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:17:01-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:17:17-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:17:40-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:17:45-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:18:48-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:19:51-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:20:37-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:22:44-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:22:56-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:23:54-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:24:32-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:24:55-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:26:05-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:26:23-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:28:10-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:28:35-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:29:47-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:29:59-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-29 19:30:03-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 10:10:54-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 10:14:46-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 10:14:47-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 10:26:04-warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+2023-06-30 10:26:04-warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating
+2023-06-30 11:04:30-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 11:09:29-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 11:24:37-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 11:25:21-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 11:26:03-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 11:27:24-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 11:27:32-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 11:27:42-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 11:28:25-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 11:35:17-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 13:35:05-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 14:51:11-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 14:51:20-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 14:51:23-error: [Preview]Uncaught ReferenceError: ColorType is not defined in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/GameRoom/PanelBall.js
+2023-06-30 14:53:39-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 14:56:04-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 14:56:22-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 14:56:49-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 14:57:09-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 15:09:14-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 15:11:23-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 15:11:51-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 15:30:56-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 16:04:10-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 16:39:50-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-06-30 16:40:18-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}

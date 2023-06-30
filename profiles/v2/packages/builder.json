@@ -1,0 +1,205 @@
+{
+  "__version__": "1.3.1",
+  "version": {
+    "builder": "1.2.3"
+  },
+  "BuildTaskManager": {
+    "taskMap": {
+      "1654667623042": {
+        "id": "1654667623042",
+        "progress": 1,
+        "state": "success",
+        "message": "2023-6-30 15:12 Build success in 17379 ms!",
+        "options": {
+          "name": "Baccarat",
+          "platform": "web-mobile",
+          "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\SixMark",
+          "debug": false,
+          "md5Cache": true,
+          "sourceMaps": false,
+          "replaceSplashScreen": true,
+          "mainBundleCompressionType": "merge_all_json",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": false,
+          "startScene": "a6be183e-e1e8-49c5-81b4-6d6021a69d89",
+          "scenes": [
+            {
+              "url": "db://assets/Scene/Lobby.scene",
+              "uuid": "a6be183e-e1e8-49c5-81b4-6d6021a69d89",
+              "inBundle": false
+            }
+          ],
+          "outputName": "web-mobile",
+          "packages": {
+            "web-mobile": {
+              "orientation": "portrait",
+              "polyfills": {
+                "asyncFunctions": true,
+                "coreJs": false
+              }
+            },
+            "cocos-service": {
+              "configID": "08c3e2",
+              "services": []
+            }
+          }
+        },
+        "time": "2023-6-30 15:11",
+        "dirty": false
+      },
+      "1659321737563": {
+        "id": "1659321737563",
+        "state": "failure",
+        "time": "Invalid Date Inval",
+        "dirty": false,
+        "rawOptions": {
+          "name": "3.0.1_Rocket",
+          "platform": "web-desktop",
+          "buildPath": "..\\..\\inetpub\\wwwroot\\JaiJaiTest\\Rocket",
+          "debug": false,
+          "md5Cache": false,
+          "sourceMaps": false,
+          "replaceSplashScreen": false,
+          "mainBundleCompressionType": "merge_dep",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": true,
+          "startScene": "6d75f75e-afa0-42f6-b7ee-162d8198800d",
+          "scenes": [
+            {
+              "url": "db://assets/Scene/MainGame.scene",
+              "uuid": "6d75f75e-afa0-42f6-b7ee-162d8198800d"
+            }
+          ],
+          "outputName": "web-desktop-001",
+          "packages": {
+            "cocos-service": {},
+            "web-desktop": {
+              "resolution": {
+                "designWidth": 1280,
+                "designHeight": 960
+              },
+              "polyfills": {
+                "asyncFunctions": true
+              }
+            }
+          }
+        }
+      },
+      "1662027362863": {
+        "id": "1662027362863",
+        "progress": 1,
+        "state": "success",
+        "message": "2023-1-12 18:51 Build success in 16054 ms!",
+        "options": {
+          "name": "GPG_Rocket",
+          "platform": "android",
+          "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\test1",
+          "debug": false,
+          "md5Cache": true,
+          "sourceMaps": false,
+          "replaceSplashScreen": true,
+          "mainBundleCompressionType": "merge_all_json",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": false,
+          "startScene": "6d75f75e-afa0-42f6-b7ee-162d8198800d",
+          "scenes": [
+            {
+              "url": "db://assets/Scene/MainGame.scene",
+              "uuid": "6d75f75e-afa0-42f6-b7ee-162d8198800d",
+              "inBundle": false
+            }
+          ],
+          "outputName": "android",
+          "packages": {
+            "android": {
+              "packageName": "com.cocos.RocketPlay",
+              "orientation": {
+                "portrait": true,
+                "upsideDown": false,
+                "landscapeRight": false,
+                "landscapeLeft": false
+              },
+              "apiLevel": "android-30",
+              "appABIs": [
+                "armeabi-v7a"
+              ],
+              "useDebugKeystore": true,
+              "keystorePath": "",
+              "keystorePassword": "",
+              "keystoreAlias": "",
+              "keystoreAliasPassword": "",
+              "appBundle": false,
+              "androidInstant": false,
+              "remoteUrl": "",
+              "sdkPath": "",
+              "ndkPath": "",
+              "renderBackEnd": {
+                "vulkan": false,
+                "gles3": true,
+                "gles2": true
+              }
+            },
+            "native": {
+              "polyfills": {
+                "asyncFunctions": true
+              },
+              "encrypted": false,
+              "xxteaKey": "06g9qyTYRL4bE3MQ",
+              "compressZip": false,
+              "makeAfterBuild": false,
+              "JobSystem": "tbb"
+            },
+            "cocos-service": {
+              "configID": "08c3e2",
+              "services": [
+                {
+                  "service_id": "235",
+                  "service_component_name": "service-analytics",
+                  "builder": "C:\\Users\\ASUS\\.CocosCreator\\.service\\analytics\\builder\\builder.js",
+                  "enable": false,
+                  "params": {}
+                }
+              ]
+            }
+          }
+        },
+        "time": "2023-1-12 18:51",
+        "dirty": false
+      }
+    }
+  },
+  "common": {
+    "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\SixMark",
+    "mainBundleCompressionType": "merge_all_json",
+    "outputName": "web-mobile",
+    "platform": "web-mobile",
+    "md5Cache": true,
+    "experimentalEraseModules": false,
+    "compressTexture": true,
+    "packAutoAtlas": false,
+    "replaceSplashScreen": true,
+    "sourceMaps": false,
+    "name": "Baccarat",
+    "debug": false,
+    "startScene": "a6be183e-e1e8-49c5-81b4-6d6021a69d89",
+    "scenes": [
+      {
+        "url": "db://assets/Scene/Lobby.scene",
+        "uuid": "a6be183e-e1e8-49c5-81b4-6d6021a69d89"
+      }
+    ],
+    "mainBundleIsRemote": false
+  },
+  "log": {
+    "level": 4
+  }
+}

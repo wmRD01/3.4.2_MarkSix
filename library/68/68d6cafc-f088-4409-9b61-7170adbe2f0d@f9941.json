@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bg_Circle",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 26,
+      "height": 26
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 26,
+      "height": 26
+    },
+    "rotated": false,
+    "capInsets": [
+      13,
+      13,
+      13,
+      13
+    ],
+    "texture": "68d6cafc-f088-4409-9b61-7170adbe2f0d@6c48a",
+    "packable": true
+  }
+}

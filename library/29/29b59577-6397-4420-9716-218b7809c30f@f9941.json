@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Index_Buildings",
+    "atlas": "",
+    "rect": {
+      "x": 3,
+      "y": 2,
+      "width": 91,
+      "height": 96
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 97,
+      "height": 100
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "29b59577-6397-4420-9716-218b7809c30f@6c48a",
+    "packable": true
+  }
+}

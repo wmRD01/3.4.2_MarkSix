@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_amoun",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 39
+    },
+    "offset": {
+      "x": 0,
+      "y": 0.5
+    },
+    "originalSize": {
+      "width": 40,
+      "height": 40
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "b660b471-9b1f-481a-8d3f-3c2f2ce46a3d@6c48a",
+    "packable": true
+  }
+}

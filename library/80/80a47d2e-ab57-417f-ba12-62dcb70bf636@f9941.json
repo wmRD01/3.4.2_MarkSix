@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "silver_0",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 336,
+      "height": 82
+    },
+    "offset": {
+      "x": -7,
+      "y": 4
+    },
+    "originalSize": {
+      "width": 350,
+      "height": 90
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "80a47d2e-ab57-417f-ba12-62dcb70bf636@6c48a",
+    "packable": true
+  }
+}

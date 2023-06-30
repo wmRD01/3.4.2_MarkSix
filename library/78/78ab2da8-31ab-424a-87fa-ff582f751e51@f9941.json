@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bg_horseman",
+    "atlas": "",
+    "rect": {
+      "x": 3,
+      "y": 0,
+      "width": 391,
+      "height": 47
+    },
+    "offset": {
+      "x": -1,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 399,
+      "height": 47
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "78ab2da8-31ab-424a-87fa-ff582f751e51@6c48a",
+    "packable": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Set up_button00",
+    "atlas": "",
+    "rect": {
+      "x": 3,
+      "y": 2,
+      "width": 474,
+      "height": 304
+    },
+    "offset": {
+      "x": 0.5,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 479,
+      "height": 308
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "c7a903b1-a935-4310-8fb7-17502ed4bc42@6c48a",
+    "packable": true
+  }
+}

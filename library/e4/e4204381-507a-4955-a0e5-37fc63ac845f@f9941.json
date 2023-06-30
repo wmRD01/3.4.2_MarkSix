@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Challenge_GreenBall",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 92,
+      "height": 91
+    },
+    "offset": {
+      "x": 0,
+      "y": 0.5
+    },
+    "originalSize": {
+      "width": 92,
+      "height": 92
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "e4204381-507a-4955-a0e5-37fc63ac845f@6c48a",
+    "packable": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Login_Facebook",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 140,
+      "height": 140
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 140,
+      "height": 140
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "94ac12af-e37d-4c7e-b65e-cdbdc77dc448@6c48a",
+    "packable": true
+  }
+}

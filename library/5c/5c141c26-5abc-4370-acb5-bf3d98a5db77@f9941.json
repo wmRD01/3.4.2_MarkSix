@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "p32",
+    "atlas": "",
+    "rect": {
+      "x": 1,
+      "y": 1,
+      "width": 106,
+      "height": 144
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 108,
+      "height": 146
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "5c141c26-5abc-4370-acb5-bf3d98a5db77@6c48a",
+    "packable": true
+  }
+}

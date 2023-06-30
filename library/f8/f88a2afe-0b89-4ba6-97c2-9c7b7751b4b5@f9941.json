@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Index_Bottom",
+    "atlas": "",
+    "rect": {
+      "x": 3,
+      "y": 4,
+      "width": 1134,
+      "height": 357
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 1140,
+      "height": 365
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "f88a2afe-0b89-4ba6-97c2-9c7b7751b4b5@6c48a",
+    "packable": true
+  }
+}

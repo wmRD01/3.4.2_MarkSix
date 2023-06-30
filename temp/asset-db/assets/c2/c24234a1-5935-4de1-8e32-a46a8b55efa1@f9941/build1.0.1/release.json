@@ -1,0 +1,53 @@
+[
+    1,
+    [
+        "c2QjShWTVN4Y4ypGqLVe+h@6c48a"
+    ],
+    [
+        "_textureSource"
+    ],
+    [
+        "cc.SpriteFrame"
+    ],
+    0,
+    [
+        {
+            "name": "Challenge_Basemap",
+            "rect": {
+                "x": 7,
+                "y": 6,
+                "width": 1155,
+                "height": 1373
+            },
+            "offset": {
+                "x": 0.5,
+                "y": 0
+            },
+            "originalSize": {
+                "width": 1168,
+                "height": 1385
+            },
+            "rotated": false,
+            "capInsets": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "packable": true
+        }
+    ],
+    [
+        0
+    ],
+    0,
+    [
+        0
+    ],
+    [
+        0
+    ],
+    [
+        0
+    ]
+]

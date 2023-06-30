@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Set up_Instagram",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 43,
+      "height": 44
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 43,
+      "height": 44
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "40d8b6bf-19b6-4108-9e25-c68b1161ecc3@6c48a",
+    "packable": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Integral_rank column",
+    "atlas": "",
+    "rect": {
+      "x": 2,
+      "y": 2,
+      "width": 912,
+      "height": 155
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 916,
+      "height": 159
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "1fc50af8-aad4-492d-a752-254874cfe276@6c48a",
+    "packable": true
+  }
+}

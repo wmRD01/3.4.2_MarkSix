@@ -1,0 +1,108 @@
+{
+  "__type__": "cc.BitmapFont",
+  "_name": "gold",
+  "_objFlags": 0,
+  "_native": "",
+  "fntDataStr": "",
+  "spriteFrame": {
+    "__uuid__": "75b704a2-6258-4b5e-aabe-781a26a9db52@f9941",
+    "__expectedType__": "cc.SpriteFrame"
+  },
+  "fontSize": 32,
+  "fntConfig": {
+    "commonHeight": 32,
+    "fontSize": 32,
+    "atlasName": "gold_0.png",
+    "fontDefDictionary": {
+      "65": {
+        "rect": {
+          "x": 171,
+          "y": 0,
+          "width": 74,
+          "height": 71
+        },
+        "xOffset": 0,
+        "yOffset": 0,
+        "xAdvance": 74
+      },
+      "71": {
+        "rect": {
+          "x": 246,
+          "y": 0,
+          "width": 74,
+          "height": 71
+        },
+        "xOffset": 0,
+        "yOffset": 0,
+        "xAdvance": 74
+      },
+      "73": {
+        "rect": {
+          "x": 512,
+          "y": 0,
+          "width": 38,
+          "height": 71
+        },
+        "xOffset": 0,
+        "yOffset": 0,
+        "xAdvance": 38
+      },
+      "78": {
+        "rect": {
+          "x": 92,
+          "y": 0,
+          "width": 78,
+          "height": 71
+        },
+        "xOffset": 0,
+        "yOffset": 0,
+        "xAdvance": 78
+      },
+      "82": {
+        "rect": {
+          "x": 321,
+          "y": 0,
+          "width": 70,
+          "height": 71
+        },
+        "xOffset": 0,
+        "yOffset": 0,
+        "xAdvance": 70
+      },
+      "83": {
+        "rect": {
+          "x": 392,
+          "y": 0,
+          "width": 59,
+          "height": 71
+        },
+        "xOffset": 0,
+        "yOffset": 0,
+        "xAdvance": 59
+      },
+      "84": {
+        "rect": {
+          "x": 452,
+          "y": 0,
+          "width": 59,
+          "height": 71
+        },
+        "xOffset": 0,
+        "yOffset": 0,
+        "xAdvance": 59
+      },
+      "87": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 91,
+          "height": 71
+        },
+        "xOffset": 0,
+        "yOffset": 0,
+        "xAdvance": 91
+      }
+    },
+    "kerningDict": {}
+  }
+}

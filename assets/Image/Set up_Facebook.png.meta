@@ -2,7 +2,7 @@
   "ver": "1.0.22",
   "importer": "image",
   "imported": true,
-  "uuid": "3690106d-a9d7-4ef2-bb32-2be8e3170c22",
+  "uuid": "7a5f7d50-6587-4b90-aed1-51dd0bf0c3ba",
   "files": [
     ".png",
     ".json"
@@ -10,8 +10,8 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "3690106d-a9d7-4ef2-bb32-2be8e3170c22@6c48a",
-      "displayName": "Set up_Facebook",
+      "uuid": "7a5f7d50-6587-4b90-aed1-51dd0bf0c3ba@6c48a",
+      "displayName": "Set up_facebook",
       "id": "6c48a",
       "name": "texture",
       "userData": {
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "3690106d-a9d7-4ef2-bb32-2be8e3170c22"
+        "imageUuidOrDatabaseUri": "7a5f7d50-6587-4b90-aed1-51dd0bf0c3ba"
       },
       "ver": "1.0.21",
       "imported": true,
@@ -33,8 +33,8 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "3690106d-a9d7-4ef2-bb32-2be8e3170c22@f9941",
-      "displayName": "Set up_Facebook",
+      "uuid": "7a5f7d50-6587-4b90-aed1-51dd0bf0c3ba@f9941",
+      "displayName": "Set up_facebook",
       "id": "f9941",
       "name": "spriteFrame",
       "userData": {
@@ -45,17 +45,17 @@
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 24,
-        "height": 43,
-        "rawWidth": 24,
-        "rawHeight": 43,
+        "width": 17,
+        "height": 30,
+        "rawWidth": 17,
+        "rawHeight": 30,
         "borderTop": 0,
         "borderBottom": 0,
         "borderLeft": 0,
         "borderRight": 0,
         "packable": true,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "3690106d-a9d7-4ef2-bb32-2be8e3170c22@6c48a",
+        "imageUuidOrDatabaseUri": "7a5f7d50-6587-4b90-aed1-51dd0bf0c3ba@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.9",
@@ -69,6 +69,6 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "3690106d-a9d7-4ef2-bb32-2be8e3170c22@f9941"
+    "redirect": "7a5f7d50-6587-4b90-aed1-51dd0bf0c3ba@f9941"
   }
 }

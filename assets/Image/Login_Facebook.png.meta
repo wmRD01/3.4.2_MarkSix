@@ -2,7 +2,7 @@
   "ver": "1.0.22",
   "importer": "image",
   "imported": true,
-  "uuid": "94ac12af-e37d-4c7e-b65e-cdbdc77dc448",
+  "uuid": "8143f9cf-e523-4abc-bd48-3f2d6ce5f7fa",
   "files": [
     ".png",
     ".json"
@@ -10,55 +10,21 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "94ac12af-e37d-4c7e-b65e-cdbdc77dc448@6c48a",
-      "displayName": "Login_Facebook",
+      "uuid": "8143f9cf-e523-4abc-bd48-3f2d6ce5f7fa@6c48a",
+      "displayName": "login_facebook",
       "id": "6c48a",
       "name": "texture",
       "userData": {
-        "wrapModeS": "clamp-to-edge",
-        "wrapModeT": "clamp-to-edge",
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
         "minfilter": "linear",
         "magfilter": "linear",
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "94ac12af-e37d-4c7e-b65e-cdbdc77dc448"
+        "imageUuidOrDatabaseUri": "8143f9cf-e523-4abc-bd48-3f2d6ce5f7fa"
       },
       "ver": "1.0.21",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "f9941": {
-      "importer": "sprite-frame",
-      "uuid": "94ac12af-e37d-4c7e-b65e-cdbdc77dc448@f9941",
-      "displayName": "Login_Facebook",
-      "id": "f9941",
-      "name": "spriteFrame",
-      "userData": {
-        "trimType": "auto",
-        "trimThreshold": 1,
-        "rotated": false,
-        "offsetX": 0,
-        "offsetY": 0,
-        "trimX": 0,
-        "trimY": 0,
-        "width": 140,
-        "height": 140,
-        "rawWidth": 140,
-        "rawHeight": 140,
-        "borderTop": 0,
-        "borderBottom": 0,
-        "borderLeft": 0,
-        "borderRight": 0,
-        "packable": true,
-        "isUuid": true,
-        "imageUuidOrDatabaseUri": "94ac12af-e37d-4c7e-b65e-cdbdc77dc448@6c48a",
-        "atlasUuid": ""
-      },
-      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json"
@@ -68,7 +34,7 @@
   },
   "userData": {
     "hasAlpha": true,
-    "type": "sprite-frame",
-    "redirect": "94ac12af-e37d-4c7e-b65e-cdbdc77dc448@f9941"
+    "type": "texture",
+    "redirect": "8143f9cf-e523-4abc-bd48-3f2d6ce5f7fa@6c48a"
   }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.22",
   "importer": "image",
   "imported": true,
-  "uuid": "980318b5-6a4b-4490-a816-ea754a10ca93",
+  "uuid": "75962847-ba4e-4ce0-b820-f94db161fb33",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "980318b5-6a4b-4490-a816-ea754a10ca93@6c48a",
+      "uuid": "75962847-ba4e-4ce0-b820-f94db161fb33@6c48a",
       "displayName": "Set up_button01",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "980318b5-6a4b-4490-a816-ea754a10ca93"
+        "imageUuidOrDatabaseUri": "75962847-ba4e-4ce0-b820-f94db161fb33"
       },
       "ver": "1.0.21",
       "imported": true,
@@ -33,7 +33,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "980318b5-6a4b-4490-a816-ea754a10ca93@f9941",
+      "uuid": "75962847-ba4e-4ce0-b820-f94db161fb33@f9941",
       "displayName": "Set up_button01",
       "id": "f9941",
       "name": "spriteFrame",
@@ -41,21 +41,21 @@
         "trimType": "auto",
         "trimThreshold": 1,
         "rotated": false,
-        "offsetX": 0.5,
-        "offsetY": 0.5,
-        "trimX": 3,
-        "trimY": 2,
-        "width": 474,
-        "height": 304,
-        "rawWidth": 479,
-        "rawHeight": 309,
+        "offsetX": 0,
+        "offsetY": -0.5,
+        "trimX": 2,
+        "trimY": 3,
+        "width": 325,
+        "height": 211,
+        "rawWidth": 329,
+        "rawHeight": 216,
         "borderTop": 0,
         "borderBottom": 0,
         "borderLeft": 0,
         "borderRight": 0,
         "packable": true,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "980318b5-6a4b-4490-a816-ea754a10ca93@6c48a",
+        "imageUuidOrDatabaseUri": "75962847-ba4e-4ce0-b820-f94db161fb33@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.9",
@@ -69,6 +69,6 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "980318b5-6a4b-4490-a816-ea754a10ca93@f9941"
+    "redirect": "75962847-ba4e-4ce0-b820-f94db161fb33@f9941"
   }
 }

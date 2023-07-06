@@ -1,4 +1,4 @@
-import { director, Node, UITransformComponent, Vec2, Vec3, _decorator } from "cc";
+import { director, Node, UITransform, Vec2, Vec3, _decorator } from "cc";
 import BaseSingleton from "../../Patten/Singleton/BaseSingleton";
 import MyMath from "../../Plug/MyMath";
 
@@ -11,9 +11,9 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
     to2DConvertOtherNodeSpaceAR(targetNode: Node, moveToNode: Node) {
         // console.log(pos);
         //轉成世界座標
-        let worldPoint = moveToNode.parent.getComponent(UITransformComponent).convertToWorldSpaceAR(moveToNode.position);
+        let worldPoint = moveToNode.parent.getComponent(UITransform).convertToWorldSpaceAR(moveToNode.position);
         // console.log(worldPoint);
-        return targetNode.parent.getComponent(UITransformComponent).convertToNodeSpaceAR(worldPoint);
+        return targetNode.parent.getComponent(UITransform).convertToNodeSpaceAR(worldPoint);
     }
     convertVec2ToVec3(vec2: Vec2) {
         return new Vec3(vec2.x, vec2.y, 0)

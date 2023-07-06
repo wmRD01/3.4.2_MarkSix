@@ -64,15 +64,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
   }
 
   function _reportPossibleCrUseOfPanelClientCoin(extras) {
-    _reporterNs.report("PanelClientCoin", "../Contorll/GameRoom/PanelClientCoin", _context.meta, extras);
+    _reporterNs.report("PanelClientCoin", "../Contorll/Lobby/PanelClientCoin", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfPanelGameMessage(extras) {
-    _reporterNs.report("PanelGameMessage", "../Contorll/GameRoom/PanelGameMessage", _context.meta, extras);
+    _reporterNs.report("PanelGameMessage", "../Contorll/Lobby/PanelGameMessage", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfPanelTimer(extras) {
-    _reporterNs.report("PanelTimer", "../Contorll/GameRoom/PanelTimer", _context.meta, extras);
+    _reporterNs.report("PanelTimer", "../Contorll/Lobby/PanelTimer", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfPanelLoading(extras) {

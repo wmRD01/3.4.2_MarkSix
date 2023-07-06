@@ -1,7 +1,9 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, UIOpacity, Vec3, GameEvent, EventMng, PublicData, PublicModel, _dec, _class, _crd, ccclass, property, BaseComponent;
+  var _reporterNs, _cclegacy, _decorator, Component, UIOpacity, Vec3, GameEvent, EventMng, PublicData, PublicModel, _dec, _class, _temp, _crd, ccclass, property, BaseComponent;
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
   function _reportPossibleCrUseOfGameEvent(extras) {
     _reporterNs.report("GameEvent", "../Enum/GameEvent", _context.meta, extras);
@@ -47,9 +49,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", BaseComponent = (_dec = ccclass('BaseComponent'), _dec(_class = class BaseComponent extends Component {
+      _export("default", BaseComponent = (_dec = ccclass('BaseComponent'), _dec(_class = (_temp = class BaseComponent extends Component {
         constructor(...any) {
           super();
+
+          _defineProperty(this, "zIndex", void 0);
         }
 
         onLoad() {
@@ -60,6 +64,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         start() {}
+
+        setZIndex() {
+          this.node.setSiblingIndex(this.zIndex);
+        }
 
         setLanguage() {
           this.deletEvent((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
@@ -109,7 +117,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.node.active = false;
         }
 
-      }) || _class));
+      }, _temp)) || _class));
 
       _cclegacy._RF.pop();
 

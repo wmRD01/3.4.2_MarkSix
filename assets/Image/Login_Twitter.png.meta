@@ -2,7 +2,7 @@
   "ver": "1.0.22",
   "importer": "image",
   "imported": true,
-  "uuid": "7142821a-ea6e-4331-a04c-67f10a2cbe46",
+  "uuid": "155d9c6f-4fa1-41ae-b38d-e9ba8812c78a",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "7142821a-ea6e-4331-a04c-67f10a2cbe46@6c48a",
+      "uuid": "155d9c6f-4fa1-41ae-b38d-e9ba8812c78a@6c48a",
       "displayName": "Login_Twitter",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "7142821a-ea6e-4331-a04c-67f10a2cbe46"
+        "imageUuidOrDatabaseUri": "155d9c6f-4fa1-41ae-b38d-e9ba8812c78a"
       },
       "ver": "1.0.21",
       "imported": true,
@@ -33,7 +33,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "7142821a-ea6e-4331-a04c-67f10a2cbe46@f9941",
+      "uuid": "155d9c6f-4fa1-41ae-b38d-e9ba8812c78a@f9941",
       "displayName": "Login_Twitter",
       "id": "f9941",
       "name": "spriteFrame",
@@ -45,17 +45,17 @@
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 141,
-        "height": 140,
-        "rawWidth": 141,
-        "rawHeight": 140,
+        "width": 94,
+        "height": 94,
+        "rawWidth": 94,
+        "rawHeight": 94,
         "borderTop": 0,
         "borderBottom": 0,
         "borderLeft": 0,
         "borderRight": 0,
         "packable": true,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "7142821a-ea6e-4331-a04c-67f10a2cbe46@6c48a",
+        "imageUuidOrDatabaseUri": "155d9c6f-4fa1-41ae-b38d-e9ba8812c78a@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.9",
@@ -69,6 +69,6 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "7142821a-ea6e-4331-a04c-67f10a2cbe46@f9941"
+    "redirect": "155d9c6f-4fa1-41ae-b38d-e9ba8812c78a@f9941"
   }
 }

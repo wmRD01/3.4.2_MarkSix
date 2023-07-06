@@ -2,7 +2,7 @@
   "ver": "1.0.22",
   "importer": "image",
   "imported": true,
-  "uuid": "04077151-6172-4ab0-818e-47d481ae0d30",
+  "uuid": "781e9d5e-9a4f-4c8c-ba2a-dd42e3122fce",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "04077151-6172-4ab0-818e-47d481ae0d30@6c48a",
+      "uuid": "781e9d5e-9a4f-4c8c-ba2a-dd42e3122fce@6c48a",
       "displayName": "Set up_Music",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "04077151-6172-4ab0-818e-47d481ae0d30"
+        "imageUuidOrDatabaseUri": "781e9d5e-9a4f-4c8c-ba2a-dd42e3122fce"
       },
       "ver": "1.0.21",
       "imported": true,
@@ -33,7 +33,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "04077151-6172-4ab0-818e-47d481ae0d30@f9941",
+      "uuid": "781e9d5e-9a4f-4c8c-ba2a-dd42e3122fce@f9941",
       "displayName": "Set up_Music",
       "id": "f9941",
       "name": "spriteFrame",
@@ -45,17 +45,17 @@
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 77,
-        "height": 82,
-        "rawWidth": 77,
-        "rawHeight": 82,
+        "width": 51,
+        "height": 56,
+        "rawWidth": 51,
+        "rawHeight": 56,
         "borderTop": 0,
         "borderBottom": 0,
         "borderLeft": 0,
         "borderRight": 0,
         "packable": true,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "04077151-6172-4ab0-818e-47d481ae0d30@6c48a",
+        "imageUuidOrDatabaseUri": "781e9d5e-9a4f-4c8c-ba2a-dd42e3122fce@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.9",
@@ -69,6 +69,6 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "04077151-6172-4ab0-818e-47d481ae0d30@f9941"
+    "redirect": "781e9d5e-9a4f-4c8c-ba2a-dd42e3122fce@f9941"
   }
 }

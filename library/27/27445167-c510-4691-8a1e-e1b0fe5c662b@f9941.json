@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "integral_page",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 721,
+      "height": 1036
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 721,
+      "height": 1036
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "27445167-c510-4691-8a1e-e1b0fe5c662b@6c48a",
+    "packable": true
+  }
+}

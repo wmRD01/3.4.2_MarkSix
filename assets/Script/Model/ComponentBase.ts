@@ -9,7 +9,7 @@ const { ccclass, property } = _decorator;
 
 @ccclass('BaseComponent')
 export default class BaseComponent extends Component {
-
+    zIndex: number;
     constructor(...any: any) {
         super()
 
@@ -20,6 +20,9 @@ export default class BaseComponent extends Component {
             this.getComponent(UIOpacity).opacity = 255
     }
     protected start(): void {
+    }
+    setZIndex() {
+        this.node.setSiblingIndex(this.zIndex);
     }
     setLanguage() {
         this.deletEvent(GameEvent.SetLanguage, this.setLanguage)

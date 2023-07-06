@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, director, Label, Node, tween, UITransformComponent, v3, _decorator, BaseComponent, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, testHTML;
+  var _reporterNs, _cclegacy, director, Label, Node, tween, UITransform, v3, _decorator, BaseComponent, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, testHTML;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -24,7 +24,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       Label = _cc.Label;
       Node = _cc.Node;
       tween = _cc.tween;
-      UITransformComponent = _cc.UITransformComponent;
+      UITransform = _cc.UITransform;
       v3 = _cc.v3;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
@@ -110,9 +110,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           var pos = targetNode.position; // console.log(pos);
           //轉成世界座標
 
-          var worldPoint = node.getComponent(UITransformComponent).convertToWorldSpaceAR(pos); // console.log(worldPoint);
+          var worldPoint = node.getComponent(UITransform).convertToWorldSpaceAR(pos); // console.log(worldPoint);
 
-          return targetNode.getComponent(UITransformComponent).convertToNodeSpaceAR(worldPoint);
+          return targetNode.getComponent(UITransform).convertToNodeSpaceAR(worldPoint);
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "label", [_dec2], {

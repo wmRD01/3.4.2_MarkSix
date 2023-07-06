@@ -12,9 +12,9 @@ import { gbet } from '../Contorll/Api/SendCommand';
 import SocketSetting from '../Socket/SocketSetting';
 import { GameEvent } from '../Enum/GameEvent';
 
-import PanelClientCoin from '../Contorll/GameRoom/PanelClientCoin';
-import PanelGameMessage from '../Contorll/GameRoom/PanelGameMessage';
-import PanelTimer from '../Contorll/GameRoom/PanelTimer';
+import PanelClientCoin from '../Contorll/Lobby/PanelClientCoin';
+import PanelGameMessage from '../Contorll/Lobby/PanelGameMessage';
+import PanelTimer from '../Contorll/Lobby/PanelTimer';
 
 import PanelLoading from '../Contorll/NoClearNode/PanelLoading';
 import SingletManager from '../../Patten/Singleton/SingletonManger';

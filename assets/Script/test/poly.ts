@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, Intersection2D, Event, EventTouch, PolygonCollider2D, UITransformComponent, v3, v2 } from 'cc';
+import { _decorator, Component, Node, Intersection2D, Event, EventTouch, PolygonCollider2D, UITransform, v3, v2 } from 'cc';
 const { ccclass, property } = _decorator;
 
 /**
@@ -24,7 +24,7 @@ export class poly extends Component {
     // serializableDummy = 0;
 
     start() {
-        
+
         // this.node.on(Node.EventType.TOUCH_START, (e: EventTouch) => {
         //     let bHit = this.checkBtnPolygonCollider(this.node, e)
         //     console.log(bHit);

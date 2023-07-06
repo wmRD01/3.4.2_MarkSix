@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "integral_ranking",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 556,
+      "height": 67
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 556,
+      "height": 67
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "df70976e-b7f1-464b-b0e3-b57d664a5f22@6c48a",
+    "packable": true
+  }
+}

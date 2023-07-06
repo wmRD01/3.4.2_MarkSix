@@ -2,7 +2,7 @@
   "ver": "1.0.22",
   "importer": "image",
   "imported": true,
-  "uuid": "86c6eb56-43c0-4c61-9e16-91825857da93",
+  "uuid": "2c3e5fa6-b408-418b-aa9d-1b053cd3613d",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "86c6eb56-43c0-4c61-9e16-91825857da93@6c48a",
+      "uuid": "2c3e5fa6-b408-418b-aa9d-1b053cd3613d@6c48a",
       "displayName": "Set up_sound effect",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "86c6eb56-43c0-4c61-9e16-91825857da93"
+        "imageUuidOrDatabaseUri": "2c3e5fa6-b408-418b-aa9d-1b053cd3613d"
       },
       "ver": "1.0.21",
       "imported": true,
@@ -33,7 +33,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "86c6eb56-43c0-4c61-9e16-91825857da93@f9941",
+      "uuid": "2c3e5fa6-b408-418b-aa9d-1b053cd3613d@f9941",
       "displayName": "Set up_sound effect",
       "id": "f9941",
       "name": "spriteFrame",
@@ -45,17 +45,17 @@
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 90,
-        "height": 72,
-        "rawWidth": 90,
-        "rawHeight": 72,
+        "width": 60,
+        "height": 48,
+        "rawWidth": 60,
+        "rawHeight": 48,
         "borderTop": 0,
         "borderBottom": 0,
         "borderLeft": 0,
         "borderRight": 0,
         "packable": true,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "86c6eb56-43c0-4c61-9e16-91825857da93@6c48a",
+        "imageUuidOrDatabaseUri": "2c3e5fa6-b408-418b-aa9d-1b053cd3613d@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.9",
@@ -69,6 +69,6 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "86c6eb56-43c0-4c61-9e16-91825857da93@f9941"
+    "redirect": "2c3e5fa6-b408-418b-aa9d-1b053cd3613d@f9941"
   }
 }

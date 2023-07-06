@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Set up_official website",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 29,
+      "height": 29
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 29,
+      "height": 29
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "255399f8-a7fb-4919-b2d9-81fc636cccaa@6c48a",
+    "packable": true
+  }
+}

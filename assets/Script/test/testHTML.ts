@@ -1,4 +1,4 @@
-import { director, Label, Node, tween, UITransformComponent, v3, _decorator } from "cc";
+import { director, Label, Node, tween, UITransform, v3, _decorator } from "cc";
 import BaseComponent from "../Model/ComponentBase";
 import PublicModel from "../Model/PublicModel";
 
@@ -86,8 +86,8 @@ export default class testHTML extends BaseComponent {
         let pos = targetNode.position;
         // console.log(pos);
         //轉成世界座標
-        let worldPoint = node.getComponent(UITransformComponent).convertToWorldSpaceAR(pos);
+        let worldPoint = node.getComponent(UITransform).convertToWorldSpaceAR(pos);
         // console.log(worldPoint);
-        return targetNode.getComponent(UITransformComponent).convertToNodeSpaceAR(worldPoint);
+        return targetNode.getComponent(UITransform).convertToNodeSpaceAR(worldPoint);
     }
 }

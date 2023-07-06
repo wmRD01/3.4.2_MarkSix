@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, view, ResolutionPolicy, find, UITransformComponent, screen, macro, size, sys, game, DelayTime, _dec, _class, _class2, _temp, _crd, ccclass, property, testAuto;
+  var _reporterNs, _cclegacy, _decorator, view, ResolutionPolicy, find, UITransform, screen, macro, size, sys, game, DelayTime, _dec, _class, _class2, _temp, _crd, ccclass, property, testAuto;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -22,7 +22,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       view = _cc.view;
       ResolutionPolicy = _cc.ResolutionPolicy;
       find = _cc.find;
-      UITransformComponent = _cc.UITransformComponent;
+      UITransform = _cc.UITransform;
       screen = _cc.screen;
       macro = _cc.macro;
       size = _cc.size;
@@ -84,7 +84,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         static AdjustViewPortrait() {
           var canvasSize = this.getWinSize();
           if (!this.curDR) this.curDR = view.getDesignResolutionSize();
-          var cvs = find('Canvas').getComponent(UITransformComponent);
+          var cvs = find('Canvas').getComponent(UITransform);
 
           if (canvasSize.width >= this.curDR.width || canvasSize.height / canvasSize.width <= this.curDR.height / this.curDR.width) {
             var width = canvasSize.width * (this.curDR.height / canvasSize.height);
@@ -98,7 +98,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         static AdjustViewLandscape() {
           var canvasSize = this.getWinSize();
           if (!this.curDR) this.curDR = view.getDesignResolutionSize();
-          var cvs = find('Canvas').getComponent(UITransformComponent);
+          var cvs = find('Canvas').getComponent(UITransform);
 
           if (canvasSize.height >= this.curDR.width || canvasSize.width / canvasSize.height <= this.curDR.height / this.curDR.width) {
             var width = canvasSize.height * (this.curDR.height / canvasSize.width);

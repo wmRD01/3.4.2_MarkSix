@@ -1,5 +1,5 @@
 
-import { _decorator, view, ResolutionPolicy, find, UITransformComponent, screen, Size, macro, size, sys, game, } from 'cc';
+import { _decorator, view, ResolutionPolicy, find, UITransform, screen, Size, macro, size, sys, game, } from 'cc';
 import DelayTime from '../../../Plug/DelayTime';
 const { ccclass, property } = _decorator;
 
@@ -47,7 +47,7 @@ export default class testAuto {
         let canvasSize = this.getWinSize();
         if (!this.curDR)
             this.curDR = view.getDesignResolutionSize()
-        let cvs = find('Canvas').getComponent(UITransformComponent);
+        let cvs = find('Canvas').getComponent(UITransform);
 
         if (canvasSize.width >= this.curDR.width || canvasSize.height / canvasSize.width <= (this.curDR.height / this.curDR.width)) {
             var width = canvasSize.width * (this.curDR.height / canvasSize.height);
@@ -63,7 +63,7 @@ export default class testAuto {
         let canvasSize = this.getWinSize();
         if (!this.curDR)
             this.curDR = view.getDesignResolutionSize()
-        let cvs = find('Canvas').getComponent(UITransformComponent);
+        let cvs = find('Canvas').getComponent(UITransform);
         if (canvasSize.height >= this.curDR.width || canvasSize.width / canvasSize.height <= (this.curDR.height / this.curDR.width)) {
             var width = canvasSize.height * (this.curDR.height / canvasSize.width);
             view.setDesignResolutionSize(1280, width, ResolutionPolicy.FIXED_WIDTH);

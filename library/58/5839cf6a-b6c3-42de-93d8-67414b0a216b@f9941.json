@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Personal_Background",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 720,
+      "height": 1067
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 720,
+      "height": 1067
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "5839cf6a-b6c3-42de-93d8-67414b0a216b@6c48a",
+    "packable": true
+  }
+}

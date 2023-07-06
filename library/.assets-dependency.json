@@ -1,13 +1,13 @@
 {
   "path": {
-    "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\gold.fnt": [
-      "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\gold_0.png"
+    "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_alpha.fnt": [
+      "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_alpha_0.png"
     ],
     "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver.fnt": [
       "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_0.png"
     ],
-    "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_alpha.fnt": [
-      "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_alpha_0.png"
+    "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\gold.fnt": [
+      "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\gold_0.png"
     ]
   }
 }

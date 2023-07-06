@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, view, ResolutionPolicy, find, UITransformComponent, DelayTime, PublicData, _dec, _class, _temp, _crd, ccclass, property, AutoView;
+  var _reporterNs, _cclegacy, _decorator, Component, view, ResolutionPolicy, find, UITransform, DelayTime, PublicData, _dec, _class, _temp, _crd, ccclass, property, AutoView;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -23,7 +23,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       view = _cc.view;
       ResolutionPolicy = _cc.ResolutionPolicy;
       find = _cc.find;
-      UITransformComponent = _cc.UITransformComponent;
+      UITransform = _cc.UITransform;
     }, function (_unresolved_2) {
       DelayTime = _unresolved_2.default;
     }, function (_unresolved_3) {
@@ -72,7 +72,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           let canvasSize = this.getWinSize();
           if (!this.curDR) this.curDR = view.getDesignResolutionSize();
           console.log(canvasSize);
-          let cvs = find('Canvas').getComponent(UITransformComponent);
+          let cvs = find('Canvas').getComponent(UITransform);
 
           if (canvasSize.width >= (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
             error: Error()
@@ -130,7 +130,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           let canvasSize = this.getWinSize();
           if (!this.curDR) this.curDR = view.getDesignResolutionSize(); // console.log(canvasSize);
 
-          let cvs = find('Canvas').getComponent(UITransformComponent);
+          let cvs = find('Canvas').getComponent(UITransform);
 
           if (canvasSize.width >= 720 || canvasSize.height / canvasSize.width <= 1280 / 720) {
             var width = canvasSize.width * (1280 / canvasSize.height);
@@ -177,7 +177,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         resize() {
           //根据屏幕大小决定适配策略
           //想明白原理，请阅读本文 https://blog.csdn.net/qq_36720848/article/details/89742451
-          let cvs = find('Canvas').getComponent(UITransformComponent);
+          let cvs = find('Canvas').getComponent(UITransform);
           if (!this.curDR) this.curDR = view.getDesignResolutionSize(); // console.log(screen);
 
           var s = view.getFrameSize(); // console.log(dr);

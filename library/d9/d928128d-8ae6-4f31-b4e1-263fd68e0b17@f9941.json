@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "red_ball",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 83,
+      "height": 82
+    },
+    "offset": {
+      "x": 0,
+      "y": 0.5
+    },
+    "originalSize": {
+      "width": 83,
+      "height": 83
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "d928128d-8ae6-4f31-b4e1-263fd68e0b17@6c48a",
+    "packable": true
+  }
+}

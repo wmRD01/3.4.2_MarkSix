@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, director, UITransformComponent, Vec2, Vec3, BaseSingleton, MyMath, PublicModel, _crd;
+  var _reporterNs, _cclegacy, director, UITransform, Vec2, Vec3, BaseSingleton, MyMath, PublicModel, _crd;
 
   function _reportPossibleCrUseOfBaseSingleton(extras) {
     _reporterNs.report("BaseSingleton", "../../Patten/Singleton/BaseSingleton", _context.meta, extras);
@@ -19,7 +19,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     }, function (_cc) {
       _cclegacy = _cc.cclegacy;
       director = _cc.director;
-      UITransformComponent = _cc.UITransformComponent;
+      UITransform = _cc.UITransform;
       Vec2 = _cc.Vec2;
       Vec3 = _cc.Vec3;
     }, function (_unresolved_2) {
@@ -43,9 +43,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         to2DConvertOtherNodeSpaceAR(targetNode, moveToNode) {
           // console.log(pos);
           //轉成世界座標
-          var worldPoint = moveToNode.parent.getComponent(UITransformComponent).convertToWorldSpaceAR(moveToNode.position); // console.log(worldPoint);
+          var worldPoint = moveToNode.parent.getComponent(UITransform).convertToWorldSpaceAR(moveToNode.position); // console.log(worldPoint);
 
-          return targetNode.parent.getComponent(UITransformComponent).convertToNodeSpaceAR(worldPoint);
+          return targetNode.parent.getComponent(UITransform).convertToNodeSpaceAR(worldPoint);
         }
 
         convertVec2ToVec3(vec2) {

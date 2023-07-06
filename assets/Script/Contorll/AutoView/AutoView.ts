@@ -1,5 +1,5 @@
 
-import { _decorator, Component, view, ResolutionPolicy, find, UITransformComponent, screen, Label, Size, sys } from 'cc';
+import { _decorator, Component, view, ResolutionPolicy, find, UITransform, screen, Label, Size, sys } from 'cc';
 import DelayTime from '../../../Plug/DelayTime';
 
 import PublicData from '../../Model/PublicData';
@@ -35,7 +35,7 @@ export default class AutoView extends Component {
             this.curDR = view.getDesignResolutionSize();
         console.log(canvasSize);
 
-        let cvs = find('Canvas').getComponent(UITransformComponent);
+        let cvs = find('Canvas').getComponent(UITransform);
         if (canvasSize.width >= PublicData.getInstance.BaseViewWidth || canvasSize.height / canvasSize.width <= (PublicData.getInstance.BaseViewHeight / PublicData.getInstance.BaseViewWidth)) {
             var width = canvasSize.width * (PublicData.getInstance.BaseViewHeight / canvasSize.height);
             view.setDesignResolutionSize(width, PublicData.getInstance.BaseViewHeight, ResolutionPolicy.FIXED_HEIGHT);
@@ -93,7 +93,7 @@ export default class AutoView extends Component {
             this.curDR = view.getDesignResolutionSize();
         // console.log(canvasSize);
 
-        let cvs = find('Canvas').getComponent(UITransformComponent);
+        let cvs = find('Canvas').getComponent(UITransform);
         if (canvasSize.width >= 720 || canvasSize.height / canvasSize.width <= (1280 / 720)) {
             var width = canvasSize.width * (1280 / canvasSize.height);
             view.setDesignResolutionSize(width, 1280, ResolutionPolicy.FIXED_HEIGHT);
@@ -151,7 +151,7 @@ export default class AutoView extends Component {
     public resize() {
         //根据屏幕大小决定适配策略
         //想明白原理，请阅读本文 https://blog.csdn.net/qq_36720848/article/details/89742451
-        let cvs = find('Canvas').getComponent(UITransformComponent);
+        let cvs = find('Canvas').getComponent(UITransform);
         if (!this.curDR)
             this.curDR = view.getDesignResolutionSize();
 

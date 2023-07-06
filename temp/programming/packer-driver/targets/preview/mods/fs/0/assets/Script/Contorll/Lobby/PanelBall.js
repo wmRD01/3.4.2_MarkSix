@@ -96,7 +96,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "isConfirm", void 0);
 
-          _initializerDefineProperty(this, "templabel", _descriptor5, this);
+          _initializerDefineProperty(this, "labelChooeseData", _descriptor5, this);
         }
 
         onLoad() {
@@ -116,7 +116,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             _this.spriteLayout.removeAllChildren();
 
-            _this.templabel.string = "\u5DF2\u9078\u64C7 0 / " + _this.MaxCount + " \u500B\u6578\u5B57";
+            _this.labelChooeseData.string = "\u5DF2\u9078\u64C7 0 / " + _this.MaxCount + " \u500B\u6578\u5B57";
 
             for (var V = 0; V < _this.Valign; V++) {
               var layout = instantiate(_this.layoutItem);
@@ -153,7 +153,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.tempChoose.indexOf(convert) > -1 || this.isChoose.indexOf(convert) > -1 || this.tempChoose.length + this.isChoose.length >= this.MaxCount) return;
           this.tempChoose.push(convert);
           this.mapBallNumber.get(convert).choose();
-          this.templabel.string = "\u5DF2\u9078\u64C7 " + this.tempChoose.length + " / " + this.MaxCount + " \u500B\u6578\u5B57";
+          this.labelChooeseData.string = "\u5DF2\u9078\u64C7 " + this.tempChoose.length + " / " + this.MaxCount + " \u500B\u6578\u5B57";
         }
 
         onResetChooese(e, customEventData) {
@@ -164,7 +164,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
 
           this.tempChoose = [];
-          this.templabel.string = "\u5DF2\u9078\u64C7 0 / " + this.MaxCount + " \u500B\u6578\u5B57";
+          this.labelChooeseData.string = "\u5DF2\u9078\u64C7 0 / " + this.MaxCount + " \u500B\u6578\u5B57";
         }
 
         onConfirmAttack(e, customEventData) {
@@ -205,7 +205,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "templabel", [_dec6], {
+      }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "labelChooeseData", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,

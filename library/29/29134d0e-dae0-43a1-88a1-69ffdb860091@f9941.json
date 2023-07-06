@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_setting",
+    "atlas": "",
+    "rect": {
+      "x": 8,
+      "y": 9,
+      "width": 62,
+      "height": 61
+    },
+    "offset": {
+      "x": 0,
+      "y": -0.5
+    },
+    "originalSize": {
+      "width": 78,
+      "height": 78
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "29134d0e-dae0-43a1-88a1-69ffdb860091@6c48a",
+    "packable": true
+  }
+}

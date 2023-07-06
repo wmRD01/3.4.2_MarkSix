@@ -92,7 +92,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "isConfirm", void 0);
 
-          _initializerDefineProperty(this, "templabel", _descriptor5, this);
+          _initializerDefineProperty(this, "labelChooeseData", _descriptor5, this);
         }
 
         async onLoad() {
@@ -106,7 +106,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), AssetType) : AssetType).Sprite);
           this.labelContent.removeAllChildren();
           this.spriteLayout.removeAllChildren();
-          this.templabel.string = `已選擇 0 / ${this.MaxCount} 個數字`;
+          this.labelChooeseData.string = `已選擇 0 / ${this.MaxCount} 個數字`;
 
           for (let V = 0; V < this.Valign; V++) {
             let layout = instantiate(this.layoutItem);
@@ -139,7 +139,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.tempChoose.indexOf(convert) > -1 || this.isChoose.indexOf(convert) > -1 || this.tempChoose.length + this.isChoose.length >= this.MaxCount) return;
           this.tempChoose.push(convert);
           this.mapBallNumber.get(convert).choose();
-          this.templabel.string = `已選擇 ${this.tempChoose.length} / ${this.MaxCount} 個數字`;
+          this.labelChooeseData.string = `已選擇 ${this.tempChoose.length} / ${this.MaxCount} 個數字`;
         }
 
         onResetChooese(e, customEventData) {
@@ -150,7 +150,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
 
           this.tempChoose = [];
-          this.templabel.string = `已選擇 0 / ${this.MaxCount} 個數字`;
+          this.labelChooeseData.string = `已選擇 0 / ${this.MaxCount} 個數字`;
         }
 
         onConfirmAttack(e, customEventData) {
@@ -191,7 +191,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "templabel", [_dec6], {
+      }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "labelChooeseData", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,

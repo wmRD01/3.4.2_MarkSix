@@ -1,6 +1,6 @@
 {
   "cce:/internal/x/cc": {
-    "mTimestamp": 5530.721600010991,
+    "mTimestamp": 5910.192999988794,
     "chunkId": "quick-pack:/cce/internal/x/cc.js",
     "imports": [
       {
@@ -191,7 +191,7 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 10498.622299998999,
+    "mTimestamp": 11857366.500799999,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
@@ -601,7 +601,7 @@
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/GameRoom/UI/PanelUI.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/GameRoom/UI/UIBetFunctionButton.ts",
         "rewritten": "__unresolved_29",
         "loc": {
           "start": {
@@ -610,12 +610,12 @@
           },
           "end": {
             "line": 33,
-            "column": 92
+            "column": 104
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/GameRoom/UI/UIBetFunctionButton.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Loading/PanelGameLoading.ts",
         "rewritten": "__unresolved_30",
         "loc": {
           "start": {
@@ -624,12 +624,12 @@
           },
           "end": {
             "line": 34,
-            "column": 104
+            "column": 97
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Loading/PanelGameLoading.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PageControll.ts",
         "rewritten": "__unresolved_31",
         "loc": {
           "start": {
@@ -638,7 +638,7 @@
           },
           "end": {
             "line": 35,
-            "column": 97
+            "column": 91
           }
         }
       },
@@ -657,7 +657,7 @@
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelClientCoin.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.ts",
         "rewritten": "__unresolved_33",
         "loc": {
           "start": {
@@ -666,12 +666,12 @@
           },
           "end": {
             "line": 37,
-            "column": 94
+            "column": 103
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelGameMessage.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelClientCoin.ts",
         "rewritten": "__unresolved_34",
         "loc": {
           "start": {
@@ -680,12 +680,12 @@
           },
           "end": {
             "line": 38,
-            "column": 95
+            "column": 94
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelTimer.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelGameMessage.ts",
         "rewritten": "__unresolved_35",
         "loc": {
           "start": {
@@ -694,12 +694,12 @@
           },
           "end": {
             "line": 39,
-            "column": 89
+            "column": 95
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/NoClearNode/CanvasControll.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelTimer.ts",
         "rewritten": "__unresolved_36",
         "loc": {
           "start": {
@@ -708,12 +708,12 @@
           },
           "end": {
             "line": 40,
-            "column": 99
+            "column": 89
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/NoClearNode/PanelLoading.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/NoClearNode/CanvasControll.ts",
         "rewritten": "__unresolved_37",
         "loc": {
           "start": {
@@ -722,12 +722,12 @@
           },
           "end": {
             "line": 41,
-            "column": 97
+            "column": 99
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/NoClearNode/PanelSystemMessage.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/NoClearNode/PanelLoading.ts",
         "rewritten": "__unresolved_38",
         "loc": {
           "start": {
@@ -736,12 +736,12 @@
           },
           "end": {
             "line": 42,
-            "column": 103
+            "column": 97
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/NoClearNode/PanelVersion.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/NoClearNode/PanelSystemMessage.ts",
         "rewritten": "__unresolved_39",
         "loc": {
           "start": {
@@ -750,12 +750,12 @@
           },
           "end": {
             "line": 43,
-            "column": 97
+            "column": 103
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelExchange.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/NoClearNode/PanelVersion.ts",
         "rewritten": "__unresolved_40",
         "loc": {
           "start": {
@@ -764,12 +764,12 @@
           },
           "end": {
             "line": 44,
-            "column": 129
+            "column": 97
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelFunctionMenu.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelExchange.ts",
         "rewritten": "__unresolved_41",
         "loc": {
           "start": {
@@ -778,12 +778,12 @@
           },
           "end": {
             "line": 45,
-            "column": 133
+            "column": 129
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelGameLoading.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelFunctionMenu.ts",
         "rewritten": "__unresolved_42",
         "loc": {
           "start": {
@@ -792,12 +792,12 @@
           },
           "end": {
             "line": 46,
-            "column": 132
+            "column": 133
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelSoundSet.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelGameLoading.ts",
         "rewritten": "__unresolved_43",
         "loc": {
           "start": {
@@ -806,12 +806,12 @@
           },
           "end": {
             "line": 47,
-            "column": 129
+            "column": 132
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/AssetType.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelSoundSet.ts",
         "rewritten": "__unresolved_44",
         "loc": {
           "start": {
@@ -820,12 +820,12 @@
           },
           "end": {
             "line": 48,
-            "column": 78
+            "column": 129
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/Asset_Prefab.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/AssetType.ts",
         "rewritten": "__unresolved_45",
         "loc": {
           "start": {
@@ -834,12 +834,12 @@
           },
           "end": {
             "line": 49,
-            "column": 81
+            "column": 78
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/CASTCommandType.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/Asset_Prefab.ts",
         "rewritten": "__unresolved_46",
         "loc": {
           "start": {
@@ -848,12 +848,12 @@
           },
           "end": {
             "line": 50,
-            "column": 84
+            "column": 81
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/CheckLoadingType.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/CASTCommandType.ts",
         "rewritten": "__unresolved_47",
         "loc": {
           "start": {
@@ -862,12 +862,12 @@
           },
           "end": {
             "line": 51,
-            "column": 85
+            "column": 84
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/CoinType.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/CheckLoadingType.ts",
         "rewritten": "__unresolved_48",
         "loc": {
           "start": {
@@ -876,12 +876,12 @@
           },
           "end": {
             "line": 52,
-            "column": 77
+            "column": 85
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/CommandType.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/CoinType.ts",
         "rewritten": "__unresolved_49",
         "loc": {
           "start": {
@@ -890,12 +890,12 @@
           },
           "end": {
             "line": 53,
-            "column": 80
+            "column": 77
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/Easing.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/CommandType.ts",
         "rewritten": "__unresolved_50",
         "loc": {
           "start": {
@@ -904,12 +904,12 @@
           },
           "end": {
             "line": 54,
-            "column": 75
+            "column": 80
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/EffectType.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/Easing.ts",
         "rewritten": "__unresolved_51",
         "loc": {
           "start": {
@@ -918,12 +918,12 @@
           },
           "end": {
             "line": 55,
-            "column": 79
+            "column": 75
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameEvent.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/EffectType.ts",
         "rewritten": "__unresolved_52",
         "loc": {
           "start": {
@@ -932,12 +932,12 @@
           },
           "end": {
             "line": 56,
-            "column": 78
+            "column": 79
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameSenceName.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameEvent.ts",
         "rewritten": "__unresolved_53",
         "loc": {
           "start": {
@@ -946,12 +946,12 @@
           },
           "end": {
             "line": 57,
-            "column": 82
+            "column": 78
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameStateEvent.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameSenceName.ts",
         "rewritten": "__unresolved_54",
         "loc": {
           "start": {
@@ -960,12 +960,12 @@
           },
           "end": {
             "line": 58,
-            "column": 83
+            "column": 82
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameType.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameStateEvent.ts",
         "rewritten": "__unresolved_55",
         "loc": {
           "start": {
@@ -974,12 +974,12 @@
           },
           "end": {
             "line": 59,
-            "column": 77
+            "column": 83
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameWinerResult.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameType.ts",
         "rewritten": "__unresolved_56",
         "loc": {
           "start": {
@@ -988,12 +988,12 @@
           },
           "end": {
             "line": 60,
-            "column": 84
+            "column": 77
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/LangType.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameWinerResult.ts",
         "rewritten": "__unresolved_57",
         "loc": {
           "start": {
@@ -1002,12 +1002,12 @@
           },
           "end": {
             "line": 61,
-            "column": 77
+            "column": 84
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/LisnerEditBox.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/LangType.ts",
         "rewritten": "__unresolved_58",
         "loc": {
           "start": {
@@ -1016,12 +1016,12 @@
           },
           "end": {
             "line": 62,
-            "column": 82
+            "column": 77
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/LisnerTouch.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/LisnerEditBox.ts",
         "rewritten": "__unresolved_59",
         "loc": {
           "start": {
@@ -1030,12 +1030,12 @@
           },
           "end": {
             "line": 63,
-            "column": 80
+            "column": 82
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/MessageCommend.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/LisnerTouch.ts",
         "rewritten": "__unresolved_60",
         "loc": {
           "start": {
@@ -1044,12 +1044,12 @@
           },
           "end": {
             "line": 64,
-            "column": 83
+            "column": 80
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/PlayerIdentity.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/MessageCommend.ts",
         "rewritten": "__unresolved_61",
         "loc": {
           "start": {
@@ -1063,7 +1063,7 @@
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/RoadType.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/PageAction.ts",
         "rewritten": "__unresolved_62",
         "loc": {
           "start": {
@@ -1072,12 +1072,12 @@
           },
           "end": {
             "line": 66,
-            "column": 77
+            "column": 79
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/ScrollViewEventType.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/PageMenu.ts",
         "rewritten": "__unresolved_63",
         "loc": {
           "start": {
@@ -1086,12 +1086,12 @@
           },
           "end": {
             "line": 67,
-            "column": 88
+            "column": 77
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/ServerGameSenceType.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/PlayerIdentity.ts",
         "rewritten": "__unresolved_64",
         "loc": {
           "start": {
@@ -1100,12 +1100,12 @@
           },
           "end": {
             "line": 68,
-            "column": 88
+            "column": 83
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/TextAnimationType.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/RoadType.ts",
         "rewritten": "__unresolved_65",
         "loc": {
           "start": {
@@ -1114,12 +1114,12 @@
           },
           "end": {
             "line": 69,
-            "column": 86
+            "column": 77
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/ViewIndex.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/ScrollViewEventType.ts",
         "rewritten": "__unresolved_66",
         "loc": {
           "start": {
@@ -1128,12 +1128,12 @@
           },
           "end": {
             "line": 70,
-            "column": 78
+            "column": 88
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/WebPlatform.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/ServerGameSenceType.ts",
         "rewritten": "__unresolved_67",
         "loc": {
           "start": {
@@ -1142,12 +1142,12 @@
           },
           "end": {
             "line": 71,
-            "column": 80
+            "column": 88
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/WebSocketEvent.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/TextAnimationType.ts",
         "rewritten": "__unresolved_68",
         "loc": {
           "start": {
@@ -1156,12 +1156,12 @@
           },
           "end": {
             "line": 72,
-            "column": 83
+            "column": 86
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Interface/IAsset.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/ViewIndex.ts",
         "rewritten": "__unresolved_69",
         "loc": {
           "start": {
@@ -1170,12 +1170,12 @@
           },
           "end": {
             "line": 73,
-            "column": 80
+            "column": 78
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Interface/IDtTimer.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/WebPlatform.ts",
         "rewritten": "__unresolved_70",
         "loc": {
           "start": {
@@ -1184,12 +1184,12 @@
           },
           "end": {
             "line": 74,
-            "column": 82
+            "column": 80
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/AssetMng.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/WebSocketEvent.ts",
         "rewritten": "__unresolved_71",
         "loc": {
           "start": {
@@ -1198,12 +1198,12 @@
           },
           "end": {
             "line": 75,
-            "column": 80
+            "column": 83
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/ButtonMng.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Interface/IAsset.ts",
         "rewritten": "__unresolved_72",
         "loc": {
           "start": {
@@ -1212,12 +1212,12 @@
           },
           "end": {
             "line": 76,
-            "column": 81
+            "column": 80
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/EditBoxMng.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Interface/IDtTimer.ts",
         "rewritten": "__unresolved_73",
         "loc": {
           "start": {
@@ -1231,7 +1231,7 @@
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/EventMng.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/AssetMng.ts",
         "rewritten": "__unresolved_74",
         "loc": {
           "start": {
@@ -1245,7 +1245,7 @@
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/MusicMng.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/ButtonMng.ts",
         "rewritten": "__unresolved_75",
         "loc": {
           "start": {
@@ -1254,12 +1254,12 @@
           },
           "end": {
             "line": 79,
-            "column": 80
+            "column": 81
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/NodePoolMng/CCNodePool.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/EditBoxMng.ts",
         "rewritten": "__unresolved_76",
         "loc": {
           "start": {
@@ -1268,12 +1268,12 @@
           },
           "end": {
             "line": 80,
-            "column": 94
+            "column": 82
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/NodePoolMng/IPool.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/EventMng.ts",
         "rewritten": "__unresolved_77",
         "loc": {
           "start": {
@@ -1282,12 +1282,12 @@
           },
           "end": {
             "line": 81,
-            "column": 89
+            "column": 80
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/NodePoolMng/NodePoolMng.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/MusicMng.ts",
         "rewritten": "__unresolved_78",
         "loc": {
           "start": {
@@ -1296,12 +1296,12 @@
           },
           "end": {
             "line": 82,
-            "column": 95
+            "column": 80
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/NodePoolMng/SelfPool.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/NodePoolMng/CCNodePool.ts",
         "rewritten": "__unresolved_79",
         "loc": {
           "start": {
@@ -1310,12 +1310,12 @@
           },
           "end": {
             "line": 83,
-            "column": 92
+            "column": 94
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/PanelMng/GamePanel.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/NodePoolMng/IPool.ts",
         "rewritten": "__unresolved_80",
         "loc": {
           "start": {
@@ -1324,12 +1324,12 @@
           },
           "end": {
             "line": 84,
-            "column": 90
+            "column": 89
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/PanelMng/GamePanelType.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/NodePoolMng/NodePoolMng.ts",
         "rewritten": "__unresolved_81",
         "loc": {
           "start": {
@@ -1338,12 +1338,12 @@
           },
           "end": {
             "line": 85,
-            "column": 94
+            "column": 95
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/PanelMng/LobbyPanel.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/NodePoolMng/SelfPool.ts",
         "rewritten": "__unresolved_82",
         "loc": {
           "start": {
@@ -1352,12 +1352,12 @@
           },
           "end": {
             "line": 86,
-            "column": 91
+            "column": 92
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/PanelMng/PanelMng.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/PanelMng/GamePanel.ts",
         "rewritten": "__unresolved_83",
         "loc": {
           "start": {
@@ -1366,12 +1366,12 @@
           },
           "end": {
             "line": 87,
-            "column": 89
+            "column": 90
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/RoadMng.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/PanelMng/GamePanelType.ts",
         "rewritten": "__unresolved_84",
         "loc": {
           "start": {
@@ -1380,12 +1380,12 @@
           },
           "end": {
             "line": 88,
-            "column": 79
+            "column": 94
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/BallData.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/PanelMng/LobbyPanel.ts",
         "rewritten": "__unresolved_85",
         "loc": {
           "start": {
@@ -1394,12 +1394,12 @@
           },
           "end": {
             "line": 89,
-            "column": 78
+            "column": 91
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/ButtonFunctionApi.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/PanelMng/PanelMng.ts",
         "rewritten": "__unresolved_86",
         "loc": {
           "start": {
@@ -1408,12 +1408,12 @@
           },
           "end": {
             "line": 90,
-            "column": 87
+            "column": 89
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/CheckLoading.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/RoadMng.ts",
         "rewritten": "__unresolved_87",
         "loc": {
           "start": {
@@ -1422,12 +1422,12 @@
           },
           "end": {
             "line": 91,
-            "column": 82
+            "column": 79
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/ComponentBase.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/BallData.ts",
         "rewritten": "__unresolved_88",
         "loc": {
           "start": {
@@ -1436,12 +1436,12 @@
           },
           "end": {
             "line": 92,
-            "column": 83
+            "column": 78
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/GameData.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/ButtonFunctionApi.ts",
         "rewritten": "__unresolved_89",
         "loc": {
           "start": {
@@ -1450,12 +1450,12 @@
           },
           "end": {
             "line": 93,
-            "column": 78
+            "column": 87
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/GameSenceText.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/CheckLoading.ts",
         "rewritten": "__unresolved_90",
         "loc": {
           "start": {
@@ -1464,12 +1464,12 @@
           },
           "end": {
             "line": 94,
-            "column": 83
+            "column": 82
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/JudgePlatform.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/ComponentBase.ts",
         "rewritten": "__unresolved_91",
         "loc": {
           "start": {
@@ -1483,7 +1483,7 @@
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/LabelAutoFollow.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/GameData.ts",
         "rewritten": "__unresolved_92",
         "loc": {
           "start": {
@@ -1492,12 +1492,12 @@
           },
           "end": {
             "line": 96,
-            "column": 85
+            "column": 78
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/MessageItem.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/GameSenceText.ts",
         "rewritten": "__unresolved_93",
         "loc": {
           "start": {
@@ -1506,12 +1506,12 @@
           },
           "end": {
             "line": 97,
-            "column": 81
+            "column": 83
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/Player.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/JudgePlatform.ts",
         "rewritten": "__unresolved_94",
         "loc": {
           "start": {
@@ -1520,12 +1520,12 @@
           },
           "end": {
             "line": 98,
-            "column": 76
+            "column": 83
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicData.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/LabelAutoFollow.ts",
         "rewritten": "__unresolved_95",
         "loc": {
           "start": {
@@ -1534,12 +1534,12 @@
           },
           "end": {
             "line": 99,
-            "column": 80
+            "column": 85
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicModel.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/MessageItem.ts",
         "rewritten": "__unresolved_96",
         "loc": {
           "start": {
@@ -1553,7 +1553,7 @@
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/ResponsGPG.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/Player.ts",
         "rewritten": "__unresolved_97",
         "loc": {
           "start": {
@@ -1562,12 +1562,12 @@
           },
           "end": {
             "line": 101,
-            "column": 80
+            "column": 76
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/RoomData.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicData.ts",
         "rewritten": "__unresolved_98",
         "loc": {
           "start": {
@@ -1576,12 +1576,12 @@
           },
           "end": {
             "line": 102,
-            "column": 78
+            "column": 80
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/SocketModel.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicModel.ts",
         "rewritten": "__unresolved_99",
         "loc": {
           "start": {
@@ -1595,7 +1595,7 @@
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/TestDelay.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/ResponsGPG.ts",
         "rewritten": "__unresolved_100",
         "loc": {
           "start": {
@@ -1604,12 +1604,12 @@
           },
           "end": {
             "line": 104,
-            "column": 79
+            "column": 80
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Socket/GameWebSocket.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/RoomData.ts",
         "rewritten": "__unresolved_101",
         "loc": {
           "start": {
@@ -1618,12 +1618,12 @@
           },
           "end": {
             "line": 105,
-            "column": 84
+            "column": 78
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Socket/SocketSetting.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/SocketModel.ts",
         "rewritten": "__unresolved_102",
         "loc": {
           "start": {
@@ -1632,12 +1632,12 @@
           },
           "end": {
             "line": 106,
-            "column": 84
+            "column": 81
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/State/GameState.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/TestDelay.ts",
         "rewritten": "__unresolved_103",
         "loc": {
           "start": {
@@ -1651,7 +1651,7 @@
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/State/LobbyState.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Socket/GameWebSocket.ts",
         "rewritten": "__unresolved_104",
         "loc": {
           "start": {
@@ -1660,12 +1660,12 @@
           },
           "end": {
             "line": 108,
-            "column": 80
+            "column": 84
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/State/MessageState.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Socket/SocketSetting.ts",
         "rewritten": "__unresolved_105",
         "loc": {
           "start": {
@@ -1674,12 +1674,12 @@
           },
           "end": {
             "line": 109,
-            "column": 82
+            "column": 84
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/State/PlayState.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/State/GameState.ts",
         "rewritten": "__unresolved_106",
         "loc": {
           "start": {
@@ -1693,7 +1693,7 @@
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/State/ViewState.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/State/LobbyState.ts",
         "rewritten": "__unresolved_107",
         "loc": {
           "start": {
@@ -1702,12 +1702,12 @@
           },
           "end": {
             "line": 111,
-            "column": 79
+            "column": 80
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/View/MainGame.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/State/MessageState.ts",
         "rewritten": "__unresolved_108",
         "loc": {
           "start": {
@@ -1716,12 +1716,12 @@
           },
           "end": {
             "line": 112,
-            "column": 77
+            "column": 82
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/View/MainLoading.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/State/PlayState.ts",
         "rewritten": "__unresolved_109",
         "loc": {
           "start": {
@@ -1730,12 +1730,12 @@
           },
           "end": {
             "line": 113,
-            "column": 80
+            "column": 79
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/View/MainLobby.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/State/ViewState.ts",
         "rewritten": "__unresolved_110",
         "loc": {
           "start": {
@@ -1744,12 +1744,12 @@
           },
           "end": {
             "line": 114,
-            "column": 78
+            "column": 79
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/test/colorTest.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/View/MainGame.ts",
         "rewritten": "__unresolved_111",
         "loc": {
           "start": {
@@ -1758,12 +1758,12 @@
           },
           "end": {
             "line": 115,
-            "column": 78
+            "column": 77
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/test/delayTest.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/View/MainLoading.ts",
         "rewritten": "__unresolved_112",
         "loc": {
           "start": {
@@ -1772,12 +1772,12 @@
           },
           "end": {
             "line": 116,
-            "column": 78
+            "column": 80
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/test/extentTest.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/View/MainLobby.ts",
         "rewritten": "__unresolved_113",
         "loc": {
           "start": {
@@ -1786,12 +1786,12 @@
           },
           "end": {
             "line": 117,
-            "column": 79
+            "column": 78
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/test/poly.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/test/colorTest.ts",
         "rewritten": "__unresolved_114",
         "loc": {
           "start": {
@@ -1800,12 +1800,12 @@
           },
           "end": {
             "line": 118,
-            "column": 73
+            "column": 78
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/test/regTtest.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/test/delayTest.ts",
         "rewritten": "__unresolved_115",
         "loc": {
           "start": {
@@ -1814,12 +1814,12 @@
           },
           "end": {
             "line": 119,
-            "column": 77
+            "column": 78
           }
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/test/testHTML.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/test/extentTest.ts",
         "rewritten": "__unresolved_116",
         "loc": {
           "start": {
@@ -1828,6 +1828,48 @@
           },
           "end": {
             "line": 120,
+            "column": 79
+          }
+        }
+      },
+      {
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/test/poly.ts",
+        "rewritten": "__unresolved_117",
+        "loc": {
+          "start": {
+            "line": 121,
+            "column": 7
+          },
+          "end": {
+            "line": 121,
+            "column": 73
+          }
+        }
+      },
+      {
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/test/regTtest.ts",
+        "rewritten": "__unresolved_118",
+        "loc": {
+          "start": {
+            "line": 122,
+            "column": 7
+          },
+          "end": {
+            "line": 122,
+            "column": 77
+          }
+        }
+      },
+      {
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/test/testHTML.ts",
+        "rewritten": "__unresolved_119",
+        "loc": {
+          "start": {
+            "line": 123,
+            "column": 7
+          },
+          "end": {
+            "line": 123,
             "column": 77
           }
         }
@@ -1955,10 +1997,6 @@
       },
       {
         "isExternal": false,
-        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/GameRoom/UI/PanelUI.ts"
-      },
-      {
-        "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/GameRoom/UI/UIBetFunctionButton.ts"
       },
       {
@@ -1967,7 +2005,15 @@
       },
       {
         "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PageControll.ts"
+      },
+      {
+        "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelBall.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.ts"
       },
       {
         "isExternal": false,
@@ -2080,6 +2126,14 @@
       {
         "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/MessageCommend.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/PageAction.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/PageMenu.ts"
       },
       {
         "isExternal": false,
@@ -4156,124 +4210,7 @@
       }
     ]
   },
-  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/GameRoom/UI/PanelUI.ts": {
-    "mTimestamp": {
-      "mtime": 1687921550537.7727,
-      "uuid": "284244bb-855b-4ec2-9526-3f8370660dc5"
-    },
-    "chunkId": "assets/Script/Contorll/GameRoom/UI/PanelUI.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 1,
-            "column": 27
-          },
-          "end": {
-            "line": 1,
-            "column": 31
-          }
-        }
-      },
-      {
-        "value": "../../../Enum/GameEvent",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 26
-          },
-          "end": {
-            "line": 2,
-            "column": 51
-          }
-        }
-      },
-      {
-        "value": "../../../Enum/GameStateEvent",
-        "rewritten": "__unresolved_2",
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 31
-          },
-          "end": {
-            "line": 3,
-            "column": 61
-          }
-        }
-      },
-      {
-        "value": "../../../Model/ComponentBase",
-        "rewritten": "__unresolved_3",
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 26
-          },
-          "end": {
-            "line": 4,
-            "column": 56
-          }
-        }
-      },
-      {
-        "value": "./UIBetFunctionButton",
-        "rewritten": "__unresolved_4",
-        "loc": {
-          "start": {
-            "line": 6,
-            "column": 32
-          },
-          "end": {
-            "line": 6,
-            "column": 55
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameEvent.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameStateEvent.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/ComponentBase.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/GameRoom/UI/UIBetFunctionButton.ts"
-      }
-    ]
-  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/GameRoom/UI/PanelUI.ts": null,
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Loading/PanelGameLoading.ts": {
     "mTimestamp": {
       "mtime": 1687919472259.9058,
@@ -7131,7 +7068,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelBall.ts": {
     "mTimestamp": {
-      "mtime": 1688114835793.1326,
+      "mtime": 1688609560725.7273,
       "uuid": "a8d3d7c8-481b-4cad-827d-6b802c078936"
     },
     "chunkId": "assets/Script/Contorll/Lobby/PanelBall.js",
@@ -10605,7 +10542,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/View/MainGame.ts": {
     "mTimestamp": {
-      "mtime": 1688349579407.7747,
+      "mtime": 1688638840225.2964,
       "uuid": "98592692-68de-4709-bad9-3c15f809c486"
     },
     "chunkId": "assets/Script/View/MainGame.js",
@@ -10618,7 +10555,7 @@
         "value": "cc"
       },
       {
-        "value": "../Contorll/GameRoom/UI/PanelUI",
+        "value": "../Contorll/Lobby/PanelBottomNavigationBar",
         "rewritten": "__unresolved_1",
         "loc": {
           "start": {
@@ -10627,7 +10564,7 @@
           },
           "end": {
             "line": 1,
-            "column": 53
+            "column": 64
           }
         }
       },
@@ -10980,7 +10917,7 @@
       },
       {
         "isExternal": false,
-        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/GameRoom/UI/PanelUI.ts"
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.ts"
       },
       {
         "isExternal": false,
@@ -11704,7 +11641,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Patten/Singleton/BaseSingletonComponent.ts": {
     "mTimestamp": {
-      "mtime": 1687144713843.1182,
+      "mtime": 1688638915008.0986,
       "uuid": "3df9f5ca-8cae-40d4-9e4b-6f76141e7d66"
     },
     "chunkId": "assets/Patten/Singleton/BaseSingletonComponent.js",
@@ -11806,7 +11743,7 @@
     ]
   },
   "cce:/internal/ml/cjs-loader.mjs": {
-    "mTimestamp": 1688609196325,
+    "mTimestamp": 1688627415302,
     "chunkId": "quick-pack:/cce/internal/ml/cjs-loader.js",
     "imports": [],
     "modLoMetadata": {
@@ -11815,7 +11752,7 @@
     "resolvedImports": []
   },
   "cce:/internal/code-quality/cr.mjs": {
-    "mTimestamp": 1688609196325,
+    "mTimestamp": 1688627415302,
     "chunkId": "quick-pack:/cce/internal/code-quality/cr.js",
     "imports": [],
     "modLoMetadata": {
@@ -12041,6 +11978,713 @@
       {
         "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/PanelMng/PanelMng.ts"
+      }
+    ]
+  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelBall-001.ts": {
+    "mTimestamp": {
+      "mtime": 1688609560725.7273,
+      "uuid": "60f67a4b-9587-4e29-81fa-bccfe498b47c"
+    },
+    "chunkId": "assets/Script/Contorll/Lobby/PanelBall-001.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 102
+          },
+          "end": {
+            "line": 1,
+            "column": 106
+          }
+        }
+      },
+      {
+        "value": "../../Enum/AssetType",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 26
+          },
+          "end": {
+            "line": 2,
+            "column": 48
+          }
+        }
+      },
+      {
+        "value": "../../Manager/AssetMng",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 21
+          },
+          "end": {
+            "line": 3,
+            "column": 45
+          }
+        }
+      },
+      {
+        "value": "../../Manager/ButtonMng",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 22
+          },
+          "end": {
+            "line": 4,
+            "column": 47
+          }
+        }
+      },
+      {
+        "value": "../../Model/BallData",
+        "rewritten": "__unresolved_4",
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 21
+          },
+          "end": {
+            "line": 5,
+            "column": 43
+          }
+        }
+      },
+      {
+        "value": "../../Model/ComponentBase",
+        "rewritten": "__unresolved_5",
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 26
+          },
+          "end": {
+            "line": 6,
+            "column": 53
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/AssetType.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/AssetMng.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/ButtonMng.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/BallData.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/ComponentBase.ts"
+      }
+    ]
+  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelBall-002.ts": {
+    "mTimestamp": {
+      "mtime": 1688609560725.7273,
+      "uuid": "3bf0c8f0-d0f5-4331-ae89-1b8d4185ab11"
+    },
+    "chunkId": "assets/Script/Contorll/Lobby/PanelBall-002.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 102
+          },
+          "end": {
+            "line": 1,
+            "column": 106
+          }
+        }
+      },
+      {
+        "value": "../../Enum/AssetType",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 26
+          },
+          "end": {
+            "line": 2,
+            "column": 48
+          }
+        }
+      },
+      {
+        "value": "../../Manager/AssetMng",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 21
+          },
+          "end": {
+            "line": 3,
+            "column": 45
+          }
+        }
+      },
+      {
+        "value": "../../Manager/ButtonMng",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 22
+          },
+          "end": {
+            "line": 4,
+            "column": 47
+          }
+        }
+      },
+      {
+        "value": "../../Model/BallData",
+        "rewritten": "__unresolved_4",
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 21
+          },
+          "end": {
+            "line": 5,
+            "column": 43
+          }
+        }
+      },
+      {
+        "value": "../../Model/ComponentBase",
+        "rewritten": "__unresolved_5",
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 26
+          },
+          "end": {
+            "line": 6,
+            "column": 53
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/AssetType.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/AssetMng.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/ButtonMng.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/BallData.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/ComponentBase.ts"
+      }
+    ]
+  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/test/moreColor.ts": {
+    "mTimestamp": {
+      "mtime": 1688624393225.1052,
+      "uuid": "06b2897e-07e0-4641-a581-a60f79ad06f2"
+    },
+    "chunkId": "assets/Script/test/moreColor.js",
+    "imports": [
+      {
+        "value": "cc"
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PageControll.ts": {
+    "mTimestamp": {
+      "mtime": 1688639058646.944,
+      "uuid": "02a2d8d9-c6de-43cd-87ef-f50a669ddc7c"
+    },
+    "chunkId": "assets/Script/Contorll/Lobby/PageControll.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 40
+          },
+          "end": {
+            "line": 1,
+            "column": 44
+          }
+        }
+      },
+      {
+        "value": "../../../Patten/Singleton/BaseSingletonComponent",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 35
+          },
+          "end": {
+            "line": 2,
+            "column": 85
+          }
+        }
+      },
+      {
+        "value": "../../Enum/PageAction",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 27
+          },
+          "end": {
+            "line": 3,
+            "column": 50
+          }
+        }
+      },
+      {
+        "value": "../../Enum/PageMenu",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 25
+          },
+          "end": {
+            "line": 4,
+            "column": 46
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Patten/Singleton/BaseSingletonComponent.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/PageAction.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/PageMenu.ts"
+      }
+    ]
+  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/PageAction.ts": {
+    "mTimestamp": {
+      "mtime": 1688628584526.332,
+      "uuid": "4327d69f-025a-458b-92d1-58b17f582ec2"
+    },
+    "chunkId": "assets/Script/Enum/PageAction.js",
+    "imports": [
+      {
+        "value": "cc"
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/PageMenu.ts": {
+    "mTimestamp": {
+      "mtime": 1688628772224.3545,
+      "uuid": "e7160070-213a-4d98-b311-4c4f6883733f"
+    },
+    "chunkId": "assets/Script/Enum/PageMenu.js",
+    "imports": [
+      {
+        "value": "cc"
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelUI.ts": {
+    "mTimestamp": {
+      "mtime": 1688629188631.166,
+      "uuid": "284244bb-855b-4ec2-9526-3f8370660dc5"
+    },
+    "chunkId": "assets/Script/Contorll/Lobby/PanelUI.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 27
+          },
+          "end": {
+            "line": 1,
+            "column": 31
+          }
+        }
+      },
+      {
+        "value": "../../Enum/GameEvent",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 26
+          },
+          "end": {
+            "line": 2,
+            "column": 48
+          }
+        }
+      },
+      {
+        "value": "../../Enum/GameStateEvent",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 31
+          },
+          "end": {
+            "line": 3,
+            "column": 58
+          }
+        }
+      },
+      {
+        "value": "../../Model/ComponentBase",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 26
+          },
+          "end": {
+            "line": 4,
+            "column": 53
+          }
+        }
+      },
+      {
+        "value": "../GameRoom/UI/UIBetFunctionButton",
+        "rewritten": "__unresolved_4",
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 32
+          },
+          "end": {
+            "line": 6,
+            "column": 68
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameEvent.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameStateEvent.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/ComponentBase.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/GameRoom/UI/UIBetFunctionButton.ts"
+      }
+    ]
+  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.ts": {
+    "mTimestamp": {
+      "mtime": 1688639271479.9502,
+      "uuid": "021b76e7-b0dc-49b1-8fae-b879e505b780"
+    },
+    "chunkId": "assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 64
+          },
+          "end": {
+            "line": 1,
+            "column": 68
+          }
+        }
+      },
+      {
+        "value": "../../Enum/PageAction",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 27
+          },
+          "end": {
+            "line": 2,
+            "column": 50
+          }
+        }
+      },
+      {
+        "value": "../../Manager/ButtonMng",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 22
+          },
+          "end": {
+            "line": 4,
+            "column": 47
+          }
+        }
+      },
+      {
+        "value": "../../Model/ComponentBase",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 26
+          },
+          "end": {
+            "line": 5,
+            "column": 53
+          }
+        }
+      },
+      {
+        "value": "../../Model/PublicData",
+        "rewritten": "__unresolved_4",
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 23
+          },
+          "end": {
+            "line": 6,
+            "column": 47
+          }
+        }
+      },
+      {
+        "value": "../../Model/PublicModel",
+        "rewritten": "__unresolved_5",
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 24
+          },
+          "end": {
+            "line": 7,
+            "column": 49
+          }
+        }
+      },
+      {
+        "value": "./PageControll",
+        "rewritten": "__unresolved_6",
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 25
+          },
+          "end": {
+            "line": 8,
+            "column": 41
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/PageAction.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/ButtonMng.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/ComponentBase.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicData.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicModel.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PageControll.ts"
       }
     ]
   }

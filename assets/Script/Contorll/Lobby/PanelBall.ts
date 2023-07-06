@@ -29,13 +29,13 @@ export default class PanelBall extends BaseComponent {
     isConfirm: boolean;
 
     @property(Label)
-    templabel: Label
+    labelChooeseData: Label
     async onLoad() {
         AssetMng.startLoad()
         await AssetMng.waitStateCheck(AssetType.Sprite)
         this.labelContent.removeAllChildren()
         this.spriteLayout.removeAllChildren()
-        this.templabel.string = `已選擇 0 / ${this.MaxCount} 個數字`
+        this.labelChooeseData.string = `已選擇 0 / ${this.MaxCount} 個數字`
         for (let V = 0; V < this.Valign; V++) {
             let layout = instantiate(this.layoutItem)
             this.spriteLayout.addChild(layout)
@@ -57,7 +57,7 @@ export default class PanelBall extends BaseComponent {
         if ((this.tempChoose.indexOf(convert) > -1 || this.isChoose.indexOf(convert) > -1) || this.tempChoose.length + this.isChoose.length >= this.MaxCount) return
         this.tempChoose.push(convert)
         this.mapBallNumber.get(convert).choose()
-        this.templabel.string = `已選擇 ${this.tempChoose.length} / ${this.MaxCount} 個數字`
+        this.labelChooeseData.string = `已選擇 ${this.tempChoose.length} / ${this.MaxCount} 個數字`
     }
     onResetChooese(e: EventTouch, customEventData?: string) {
         if (this.isConfirm) return
@@ -65,7 +65,7 @@ export default class PanelBall extends BaseComponent {
             this.mapBallNumber.get(this.tempChoose[index]).cancel()
         }
         this.tempChoose = []
-        this.templabel.string = `已選擇 0 / ${this.MaxCount} 個數字`
+        this.labelChooeseData.string = `已選擇 0 / ${this.MaxCount} 個數字`
     }
     onConfirmAttack(e: EventTouch, customEventData?: string) {
         if (this.isConfirm) return

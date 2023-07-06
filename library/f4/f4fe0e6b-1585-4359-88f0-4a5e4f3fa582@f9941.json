@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_radius22",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 80,
+      "height": 44
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 80,
+      "height": 44
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "f4fe0e6b-1585-4359-88f0-4a5e4f3fa582@6c48a",
+    "packable": true
+  }
+}

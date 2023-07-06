@@ -15,6 +15,8 @@ export default function BaseSingletonComponent<T>() {
         protected onLoad() {
             super.onLoad();
             SingletManager.instance.set(this);
+            console.log(SingletManager.instance);
+
         }
 
         /**

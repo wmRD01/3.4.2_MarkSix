@@ -24,6 +24,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         (_crd && SingletManager === void 0 ? (_reportPossibleCrUseOfSingletManager({
           error: Error()
         }), SingletManager) : SingletManager).instance.set(this);
+        console.log((_crd && SingletManager === void 0 ? (_reportPossibleCrUseOfSingletManager({
+          error: Error()
+        }), SingletManager) : SingletManager).instance);
       }
       /**
        * 清除單例物件

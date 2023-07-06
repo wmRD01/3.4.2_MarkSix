@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_setting_act",
+    "atlas": "",
+    "rect": {
+      "x": 7,
+      "y": 7,
+      "width": 64,
+      "height": 65
+    },
+    "offset": {
+      "x": 0,
+      "y": -0.5
+    },
+    "originalSize": {
+      "width": 78,
+      "height": 78
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "8680cf0d-fda3-40bf-a12a-da4ceee035b2@6c48a",
+    "packable": true
+  }
+}

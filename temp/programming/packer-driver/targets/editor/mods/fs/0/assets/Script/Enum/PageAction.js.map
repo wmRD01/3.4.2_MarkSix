@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/PageAction.ts"],"names":["PageAction"],"mappings":";;;;;;;;;;;;;;;;iBAAYA,U;AAAAA,QAAAA,U,CAAAA,U;SAAAA,U,0BAAAA,U","sourcesContent":["export enum PageAction {\r\n    ChangeTo,\r\n}"]}

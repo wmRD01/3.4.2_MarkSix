@@ -1,4 +1,4 @@
-import PanelUI from '../Contorll/GameRoom/UI/PanelUI';
+import PanelUI from '../Contorll/Lobby/PanelBottomNavigationBar';
 import { _decorator, director, Game, game, find, js, Node, profiler, setDisplayStats } from 'cc';
 import { CommandType } from '../Enum/CommandType';
 import { LangType } from '../Enum/LangType';

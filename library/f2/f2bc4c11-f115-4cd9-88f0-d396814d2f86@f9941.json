@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_bet_act",
+    "atlas": "",
+    "rect": {
+      "x": 8,
+      "y": 9,
+      "width": 62,
+      "height": 62
+    },
+    "offset": {
+      "x": 0,
+      "y": -1
+    },
+    "originalSize": {
+      "width": 78,
+      "height": 78
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "f2bc4c11-f115-4cd9-88f0-d396814d2f86@6c48a",
+    "packable": true
+  }
+}

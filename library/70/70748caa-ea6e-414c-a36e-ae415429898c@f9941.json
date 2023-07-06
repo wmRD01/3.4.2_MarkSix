@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_home_act",
+    "atlas": "",
+    "rect": {
+      "x": 8,
+      "y": 8,
+      "width": 62,
+      "height": 63
+    },
+    "offset": {
+      "x": 0,
+      "y": -0.5
+    },
+    "originalSize": {
+      "width": 78,
+      "height": 78
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "70748caa-ea6e-414c-a36e-ae415429898c@6c48a",
+    "packable": true
+  }
+}

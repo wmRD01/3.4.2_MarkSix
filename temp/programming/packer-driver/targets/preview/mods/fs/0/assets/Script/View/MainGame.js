@@ -16,7 +16,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
   function _reportPossibleCrUseOfPanelUI(extras) {
-    _reporterNs.report("PanelUI", "../Contorll/GameRoom/UI/PanelUI", _context.meta, extras);
+    _reporterNs.report("PanelUI", "../Contorll/Lobby/PanelBottomNavigationBar", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfCommandType(extras) {

@@ -26,6 +26,16 @@ export default class PanelBottomNavigationBar extends BaseComponent {
     nodeCircle: Node;
     circleY: number;
     mapButton: Map<number, Button> = new Map()
+    currentIndex: number = 0
+
+    //#region 動畫參數
+    isAction: boolean = false
+    actionDic: ActionDic = ActionDic.縮;
+    @property
+    speed: number = 3
+    goTarget: Vec3;
+    getCircleScale: number
+    //#endregion
     onLoad() {
         // PageControll.instance.pageEvnet.on(PageAction.ChangeTo, this.onMoveCircle, this)
 
@@ -42,20 +52,45 @@ export default class PanelBottomNavigationBar extends BaseComponent {
         }
     }
     onMoveCircle(e: Event, customEventData?: string) {
-
-        console.log(customEventData);
-        console.log(this.getButton(Number(customEventData)).node);
-
-
-        let getX = PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(this.nodeCircle, this.getButton(Number(customEventData)).node).x
-        console.log(v3(getX, this.circleY));
-
-        this.nodeCircle.position = v3(getX, this.circleY)
-        console.log(this.nodeCircle.position);
-
-        PageControll.instance.pageEvnet.emit(PageAction.ChangeTo, customEventData)
+        if (this.currentIndex == Number(customEventData)) return;
+        this.currentIndex = Number(customEventData)
+        let getX = PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(this.nodeCircle, this.getButton(this.currentIndex).node).x
+        this.goTarget = v3(getX, this.circleY)
+        this.startAction()
+        PageControll.instance.pageEvnet.emit(PageAction.ChangeTo, this.currentIndex)
     }
     getButton(index: number) {
         return this.mapButton.get(index)
     }
+    startAction() {
+        this.getCircleScale = this.nodeCircle.getScale().x
+        this.actionDic = ActionDic.縮
+        this.isAction = true
+    }
+    update(dt: number) {
+        if (this.isAction) {
+            switch (this.actionDic) {
+                case ActionDic.縮:
+                    this.getCircleScale = this.getCircleScale - (dt * this.speed)
+                    if (this.getCircleScale < 0) {
+                        this.getCircleScale = 0
+                        this.actionDic = ActionDic.放;
+                        this.nodeCircle.setPosition(this.goTarget)
+                    }
+                    break;
+                case ActionDic.放:
+                    this.getCircleScale = this.getCircleScale + (dt * this.speed)
+                    if (this.getCircleScale > 1) {
+                        this.getCircleScale = 1
+                        this.isAction = false
+                    }
+                    break;
+            }
+            this.nodeCircle.setScale(PublicModel.getInstance.oneSclaeVec3(this.getCircleScale))
+        }
+    }
+}
+enum ActionDic {
+    縮,
+    放
 }

@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, EventTarget, BaseSingletonComponent, PageAction, PageMenu, _dec, _class, _temp, _crd, ccclass, property, PageControll;
+  var _reporterNs, _cclegacy, _decorator, EventTarget, PageView, Node, BaseSingletonComponent, PageAction, _dec, _class, _temp, _crd, ccclass, property, PageControll;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -24,12 +24,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       _cclegacy = _cc.cclegacy;
       _decorator = _cc._decorator;
       EventTarget = _cc.EventTarget;
+      PageView = _cc.PageView;
+      Node = _cc.Node;
     }, function (_unresolved_2) {
       BaseSingletonComponent = _unresolved_2.default;
     }, function (_unresolved_3) {
       PageAction = _unresolved_3.PageAction;
-    }, function (_unresolved_4) {
-      PageMenu = _unresolved_4.PageMenu;
     }],
     execute: function () {
       _crd = true;
@@ -47,24 +47,39 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         constructor() {
           super(...arguments);
 
+          _defineProperty(this, "pageView", void 0);
+
           _defineProperty(this, "pageEvnet", new EventTarget());
         }
 
         onLoad() {
           super.onLoad(); // console.log(this.pageEvnet);
 
+          this.pageView = this.getComponent(PageView);
           this.pageEvnet.on((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
           }), PageAction) : PageAction).ChangeTo, this.onToPage, this); // console.log(this.pageEvnet);
         }
 
+        start() {
+          this.closeTouch(this.pageView);
+        }
+
+        closeTouch(target) {
+          //@ts-ignore
+          target.node.off(Node.EventType.TOUCH_START, target._onTouchBegan, target, true); //@ts-ignore
+
+          target.node.off(Node.EventType.TOUCH_MOVE, target._onTouchMoved, target, true); //@ts-ignore
+
+          target.node.off(Node.EventType.TOUCH_END, target._onTouchEnded, target, true); //@ts-ignore
+
+          target.node.off(Node.EventType.TOUCH_CANCEL, target._onTouchCancelled, target, true);
+        }
+        /**接收的值也是number，只是PageMenu是enum內存number */
+
+
         onToPage(index) {
-          switch (index) {
-            case (_crd && PageMenu === void 0 ? (_reportPossibleCrUseOfPageMenu({
-              error: Error()
-            }), PageMenu) : PageMenu).ChooeseBall:
-              break;
-          }
+          this.pageView.scrollToPage(index, 0);
         }
 
       }, _temp)) || _class));

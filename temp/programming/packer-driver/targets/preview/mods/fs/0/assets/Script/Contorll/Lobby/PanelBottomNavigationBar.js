@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Node, UITransform, v3, _decorator, PageAction, ButtonMng, BaseComponent, PublicData, PublicModel, PageControll, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _temp, _crd, ccclass, property, PanelBottomNavigationBar;
+  var _reporterNs, _cclegacy, Button, Node, UITransform, v3, _decorator, PageAction, ButtonMng, BaseComponent, PublicData, PublicModel, PageControll, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PanelBottomNavigationBar, ActionDic;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -91,8 +91,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "circleY", void 0);
 
           _defineProperty(this, "mapButton", new Map());
+
+          _defineProperty(this, "currentIndex", 0);
+
+          _defineProperty(this, "isAction", false);
+
+          _defineProperty(this, "actionDic", ActionDic.縮);
+
+          _initializerDefineProperty(this, "speed", _descriptor8, this);
+
+          _defineProperty(this, "goTarget", void 0);
+
+          _defineProperty(this, "getCircleScale", void 0);
         }
 
+        //#endregion
         onLoad() {
           // PageControll.instance.pageEvnet.on(PageAction.ChangeTo, this.onMoveCircle, this)
           this.mapButton.set(0, this.btnHome);
@@ -114,23 +127,59 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onMoveCircle(e, customEventData) {
-          console.log(customEventData);
-          console.log(this.getButton(Number(customEventData)).node);
+          if (this.currentIndex == Number(customEventData)) return;
+          this.currentIndex = Number(customEventData);
           var getX = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
-          }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(this.nodeCircle, this.getButton(Number(customEventData)).node).x;
-          console.log(v3(getX, this.circleY));
-          this.nodeCircle.position = v3(getX, this.circleY);
-          console.log(this.nodeCircle.position);
+          }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(this.nodeCircle, this.getButton(this.currentIndex).node).x;
+          this.goTarget = v3(getX, this.circleY);
+          this.startAction();
           (_crd && PageControll === void 0 ? (_reportPossibleCrUseOfPageControll({
             error: Error()
           }), PageControll) : PageControll).instance.pageEvnet.emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
-          }), PageAction) : PageAction).ChangeTo, customEventData);
+          }), PageAction) : PageAction).ChangeTo, this.currentIndex);
         }
 
         getButton(index) {
           return this.mapButton.get(index);
+        }
+
+        startAction() {
+          this.getCircleScale = this.nodeCircle.getScale().x;
+          this.actionDic = ActionDic.縮;
+          this.isAction = true;
+        }
+
+        update(dt) {
+          if (this.isAction) {
+            switch (this.actionDic) {
+              case ActionDic.縮:
+                this.getCircleScale = this.getCircleScale - dt * this.speed;
+
+                if (this.getCircleScale < 0) {
+                  this.getCircleScale = 0;
+                  this.actionDic = ActionDic.放;
+                  this.nodeCircle.setPosition(this.goTarget);
+                }
+
+                break;
+
+              case ActionDic.放:
+                this.getCircleScale = this.getCircleScale + dt * this.speed;
+
+                if (this.getCircleScale > 1) {
+                  this.getCircleScale = 1;
+                  this.isAction = false;
+                }
+
+                break;
+            }
+
+            this.nodeCircle.setScale((_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.oneSclaeVec3(this.getCircleScale));
+          }
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "btnHome", [_dec2], {
@@ -168,7 +217,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "speed", [property], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return 3;
+        }
       })), _class2)) || _class));
+
+      (function (ActionDic) {
+        ActionDic[ActionDic["\u7E2E"] = 0] = "\u7E2E";
+        ActionDic[ActionDic["\u653E"] = 1] = "\u653E";
+      })(ActionDic || (ActionDic = {}));
 
       _cclegacy._RF.pop();
 

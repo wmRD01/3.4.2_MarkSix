@@ -117,6 +117,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.node.active = false;
         }
 
+        reProcessing() {}
+
       }, _temp)) || _class));
 
       _cclegacy._RF.pop();

@@ -1,14 +1,5 @@
 {
   "path": {
-    "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_alpha.fnt": [
-      "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_alpha_0.png"
-    ],
-    "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver.fnt": [
-      "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_0.png"
-    ],
-    "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\gold.fnt": [
-      "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\gold_0.png"
-    ],
     "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\見色\\testef.effect": [
       "C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
       "C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\cc-global.chunk",
@@ -24,11 +15,19 @@
       "C:\\CocosProject\\3.4.2_MarkSix\\assets\\chunks\\sprite-fs.chunk",
       "C:\\CocosProject\\3.4.2_MarkSix\\assets\\chunks\\embedded-alpha.chunk",
       "C:\\CocosProject\\3.4.2_MarkSix\\assets\\chunks\\alpha-test.chunk"
+    ],
+    "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_alpha.fnt": [
+      "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_alpha_0.png"
+    ],
+    "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver.fnt": [
+      "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_0.png"
+    ],
+    "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\gold.fnt": [
+      "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\gold_0.png"
     ]
   },
   "uuid": {
     "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\見色\\test.mtl": [
-      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
       "271ebef6-bd75-4d63-9155-661af8dbbfba"
     ]
   }

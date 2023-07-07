@@ -12,14 +12,11 @@ import { gbet } from '../Contorll/Api/SendCommand';
 import SocketSetting from '../Socket/SocketSetting';
 import { GameEvent } from '../Enum/GameEvent';
 
-import PanelClientCoin from '../Contorll/Lobby/PanelClientCoin';
 import PanelGameMessage from '../Contorll/Lobby/PanelGameMessage';
-import PanelTimer from '../Contorll/Lobby/PanelTimer';
 
 import PanelLoading from '../Contorll/NoClearNode/PanelLoading';
 import SingletManager from '../../Patten/Singleton/SingletonManger';
 import { DEV } from 'cc/env';
-import PanelTextAnimation from '../Contorll/GameRoom/PanelTextAnimation/PanelTextAnimation';
 import AssetMng from '../Manager/AssetMng';
 import { AssetType } from '../Enum/AssetType';
 import Player from '../Model/Player';
@@ -31,19 +28,13 @@ const { ccclass, property } = _decorator;
 @ccclass('MainGame')
 export class MainGame extends BaseSingletonComponent<MainGame>() {
 
-    @property(PanelClientCoin)
-    panelClientCoin: PanelClientCoin
     @property(PanelGameMessage)
     panelGameMessage: PanelGameMessage
 
-    @property(PanelTimer)
-    panelTimer: PanelTimer
 
     @property(PanelUI)
     panelUI: PanelUI;
 
-    @property(PanelTextAnimation)
-    panelTextAnimation: PanelTextAnimation;
     onLoad(): void {
         // console.error(DEV);
 
@@ -94,7 +85,6 @@ export class MainGame extends BaseSingletonComponent<MainGame>() {
         }
         /** forCAST用 */
         if (Player.getInstance.identity == PlayerIdentity.Guest) {
-            this.panelClientCoin.hide()
             this.panelUI.hide()
             CanvasControll.instance.node.on(Node.EventType.TOUCH_END, this.eventPushNotificationGuset, this)
         }

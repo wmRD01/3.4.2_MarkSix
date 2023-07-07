@@ -48,7 +48,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     execute: function () {
       _crd = true;
 
-      _cclegacy._RF.push({}, "e764dzmf5xK9r4RjSm9eHTf", "PanelGameMessage", undefined);
+      _cclegacy._RF.push({}, "c0ff4hXkwZFsLCkCn3hKEvP", "PanelGameMessage", undefined);
 
       ({
         ccclass,

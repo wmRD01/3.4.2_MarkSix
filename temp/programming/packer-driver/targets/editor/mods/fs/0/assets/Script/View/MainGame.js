@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16", "__unresolved_17", "cc/env", "__unresolved_18", "__unresolved_19", "__unresolved_20", "__unresolved_21", "__unresolved_22", "__unresolved_23"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "cc/env", "__unresolved_16", "__unresolved_17", "__unresolved_18", "__unresolved_19", "__unresolved_20"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, PanelUI, _decorator, director, find, js, Node, CommandType, LangType, CheckLoadingType, PublicData, WebSocketEvent, CheckLoading, BaseSingletonComponent, GameSceneName, gbet, SocketSetting, GameEvent, PanelClientCoin, PanelGameMessage, PanelTimer, PanelLoading, SingletManager, DEV, PanelTextAnimation, AssetMng, AssetType, Player, PlayerIdentity, CanvasControll, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, MainGame;
+  var _reporterNs, _cclegacy, PanelUI, _decorator, director, find, js, Node, CommandType, LangType, CheckLoadingType, PublicData, WebSocketEvent, CheckLoading, BaseSingletonComponent, GameSceneName, gbet, SocketSetting, GameEvent, PanelGameMessage, PanelLoading, SingletManager, DEV, AssetMng, AssetType, Player, PlayerIdentity, CanvasControll, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, MainGame;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -59,16 +59,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("GameEvent", "../Enum/GameEvent", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfPanelClientCoin(extras) {
-    _reporterNs.report("PanelClientCoin", "../Contorll/Lobby/PanelClientCoin", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfPanelGameMessage(extras) {
     _reporterNs.report("PanelGameMessage", "../Contorll/Lobby/PanelGameMessage", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfPanelTimer(extras) {
-    _reporterNs.report("PanelTimer", "../Contorll/Lobby/PanelTimer", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfPanelLoading(extras) {
@@ -77,10 +69,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfSingletManager(extras) {
     _reporterNs.report("SingletManager", "../../Patten/Singleton/SingletonManger", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfPanelTextAnimation(extras) {
-    _reporterNs.report("PanelTextAnimation", "../Contorll/GameRoom/PanelTextAnimation/PanelTextAnimation", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfAssetMng(extras) {
@@ -138,29 +126,23 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_13) {
       GameEvent = _unresolved_13.GameEvent;
     }, function (_unresolved_14) {
-      PanelClientCoin = _unresolved_14.default;
+      PanelGameMessage = _unresolved_14.default;
     }, function (_unresolved_15) {
-      PanelGameMessage = _unresolved_15.default;
+      PanelLoading = _unresolved_15.default;
     }, function (_unresolved_16) {
-      PanelTimer = _unresolved_16.default;
-    }, function (_unresolved_17) {
-      PanelLoading = _unresolved_17.default;
-    }, function (_unresolved_18) {
-      SingletManager = _unresolved_18.default;
+      SingletManager = _unresolved_16.default;
     }, function (_ccEnv) {
       DEV = _ccEnv.DEV;
+    }, function (_unresolved_17) {
+      AssetMng = _unresolved_17.default;
+    }, function (_unresolved_18) {
+      AssetType = _unresolved_18.AssetType;
     }, function (_unresolved_19) {
-      PanelTextAnimation = _unresolved_19.default;
+      Player = _unresolved_19.default;
     }, function (_unresolved_20) {
-      AssetMng = _unresolved_20.default;
+      PlayerIdentity = _unresolved_20.PlayerIdentity;
     }, function (_unresolved_21) {
-      AssetType = _unresolved_21.AssetType;
-    }, function (_unresolved_22) {
-      Player = _unresolved_22.default;
-    }, function (_unresolved_23) {
-      PlayerIdentity = _unresolved_23.PlayerIdentity;
-    }, function (_unresolved_24) {
-      CanvasControll = _unresolved_24.default;
+      CanvasControll = _unresolved_21.default;
     }],
     execute: function () {
       _crd = true;
@@ -172,31 +154,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("MainGame", MainGame = (_dec = ccclass('MainGame'), _dec2 = property(_crd && PanelClientCoin === void 0 ? (_reportPossibleCrUseOfPanelClientCoin({
+      _export("MainGame", MainGame = (_dec = ccclass('MainGame'), _dec2 = property(_crd && PanelGameMessage === void 0 ? (_reportPossibleCrUseOfPanelGameMessage({
         error: Error()
-      }), PanelClientCoin) : PanelClientCoin), _dec3 = property(_crd && PanelGameMessage === void 0 ? (_reportPossibleCrUseOfPanelGameMessage({
+      }), PanelGameMessage) : PanelGameMessage), _dec3 = property(_crd && PanelUI === void 0 ? (_reportPossibleCrUseOfPanelUI({
         error: Error()
-      }), PanelGameMessage) : PanelGameMessage), _dec4 = property(_crd && PanelTimer === void 0 ? (_reportPossibleCrUseOfPanelTimer({
-        error: Error()
-      }), PanelTimer) : PanelTimer), _dec5 = property(_crd && PanelUI === void 0 ? (_reportPossibleCrUseOfPanelUI({
-        error: Error()
-      }), PanelUI) : PanelUI), _dec6 = property(_crd && PanelTextAnimation === void 0 ? (_reportPossibleCrUseOfPanelTextAnimation({
-        error: Error()
-      }), PanelTextAnimation) : PanelTextAnimation), _dec(_class = (_class2 = (_temp = class MainGame extends (_crd && BaseSingletonComponent === void 0 ? (_reportPossibleCrUseOfBaseSingletonComponent({
+      }), PanelUI) : PanelUI), _dec(_class = (_class2 = (_temp = class MainGame extends (_crd && BaseSingletonComponent === void 0 ? (_reportPossibleCrUseOfBaseSingletonComponent({
         error: Error()
       }), BaseSingletonComponent) : BaseSingletonComponent)() {
         constructor(...args) {
           super(...args);
 
-          _initializerDefineProperty(this, "panelClientCoin", _descriptor, this);
+          _initializerDefineProperty(this, "panelGameMessage", _descriptor, this);
 
-          _initializerDefineProperty(this, "panelGameMessage", _descriptor2, this);
-
-          _initializerDefineProperty(this, "panelTimer", _descriptor3, this);
-
-          _initializerDefineProperty(this, "panelUI", _descriptor4, this);
-
-          _initializerDefineProperty(this, "panelTextAnimation", _descriptor5, this);
+          _initializerDefineProperty(this, "panelUI", _descriptor2, this);
         }
 
         onLoad() {
@@ -293,7 +263,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), Player) : Player).getInstance.identity == (_crd && PlayerIdentity === void 0 ? (_reportPossibleCrUseOfPlayerIdentity({
             error: Error()
           }), PlayerIdentity) : PlayerIdentity).Guest) {
-            this.panelClientCoin.hide();
             this.panelUI.hide();
             (_crd && CanvasControll === void 0 ? (_reportPossibleCrUseOfCanvasControll({
               error: Error()
@@ -470,27 +439,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), GameSceneName) : GameSceneName).GameRoom);
         }
 
-      }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "panelClientCoin", [_dec2], {
+      }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "panelGameMessage", [_dec2], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "panelGameMessage", [_dec3], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "panelTimer", [_dec4], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "panelUI", [_dec5], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "panelTextAnimation", [_dec6], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "panelUI", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,

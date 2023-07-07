@@ -9,7 +9,7 @@
         "id": "1654667623042",
         "progress": 1,
         "state": "success",
-        "message": "2023-7-7 10:01 Build success in 13694 ms!",
+        "message": "2023-7-7 10:30 Build success in 23535 ms!",
         "options": {
           "name": "Baccarat",
           "platform": "web-mobile",
@@ -24,11 +24,11 @@
           "experimentalEraseModules": false,
           "compressTexture": true,
           "packAutoAtlas": false,
-          "startScene": "a6be183e-e1e8-49c5-81b4-6d6021a69d89",
+          "startScene": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
           "scenes": [
             {
               "url": "db://assets/Scene/Lobby.scene",
-              "uuid": "a6be183e-e1e8-49c5-81b4-6d6021a69d89",
+              "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
               "inBundle": false
             }
           ],
@@ -47,7 +47,7 @@
             }
           }
         },
-        "time": "2023-7-7 10:01",
+        "time": "2023-7-7 10:30",
         "dirty": false
       },
       "1659321737563": {
@@ -190,11 +190,11 @@
     "sourceMaps": false,
     "name": "Baccarat",
     "debug": false,
-    "startScene": "a6be183e-e1e8-49c5-81b4-6d6021a69d89",
+    "startScene": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
     "scenes": [
       {
-        "url": "db://assets/Scene/Lobby.scene",
-        "uuid": "a6be183e-e1e8-49c5-81b4-6d6021a69d89"
+        "url": "db://assets/Scene/Lobby_.scene",
+        "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc"
       }
     ],
     "mainBundleIsRemote": false

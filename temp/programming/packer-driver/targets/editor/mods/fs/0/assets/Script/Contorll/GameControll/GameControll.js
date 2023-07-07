@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16", "__unresolved_17", "__unresolved_18", "__unresolved_19", "__unresolved_20", "__unresolved_21", "__unresolved_22", "__unresolved_23"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16", "__unresolved_17", "__unresolved_18", "__unresolved_19", "__unresolved_20", "__unresolved_21", "__unresolved_22"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, CommandType, GameEvent, EventMng, PublicData, GameState, LobbyState, MessageState, PlayerState, ViewState, AccountLogIn, ChangeNickname, InGame, InLobby, InRoomLevel, BackBet, ClearBet, OwnerBet, ReferLastBet, SquintEnd, SquintProcess, UpdateCoin, GameCloseView, GameOpenView, LobbyCloseView, LobbyOpenView, PlayerInRoom, PlayerExitRoom, RefreshBankerBetList, RefreshPlayerBetList, GetGameRoomData, BackHomeMessage, ShowConfirmMessage, MessageCommend, LangType, ServerGameSenceType, BaseSingleton, SocketSetting, CloseBet, OpenNewGame, PlayerSendCardSquintStart, PlayerSendCardSquintEnd, ReadyBet, SendCards, ShuffleCrads, WaitOrEnd, BankerSendCardSquintStart, BankerSendCardSquintEnd, PlayerRepairCard, PlayerRepairCardSquintStart, PlayerRepairCardSquintEnd, BankerRepairCard, BankerRepairCardSquintStart, BankerRepairCardSquintEnd, ShowResoult, EndRound, EndBoot, StartBoot, RefreshRoomState, RefreshTabelData, Game, game, GameSceneName, RoomData, PanelLoading, GameStateEvent, GameSenceText, GameData, CheckLoading, CheckLoadingType, GameControll, _crd;
+  var _reporterNs, _cclegacy, CommandType, GameEvent, EventMng, PublicData, LobbyState, MessageState, PlayerState, ViewState, AccountLogIn, ChangeNickname, InGame, InLobby, InRoomLevel, BackBet, ClearBet, OwnerBet, ReferLastBet, SquintEnd, SquintProcess, UpdateCoin, GameCloseView, GameOpenView, LobbyCloseView, LobbyOpenView, PlayerInRoom, PlayerExitRoom, RefreshBankerBetList, RefreshPlayerBetList, GetGameRoomData, BackHomeMessage, ShowConfirmMessage, MessageCommend, LangType, ServerGameSenceType, BaseSingleton, SocketSetting, Game, game, GameSceneName, RoomData, PanelLoading, GameStateEvent, GameSenceText, GameData, CheckLoading, CheckLoadingType, GameControll, _crd;
 
   function _reportPossibleCrUseOfCommandType(extras) {
     _reporterNs.report("CommandType", "../../Enum/CommandType", _context.meta, extras);
@@ -17,10 +17,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfPublicData(extras) {
     _reporterNs.report("PublicData", "../../Model/PublicData", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfGameState(extras) {
-    _reporterNs.report("GameState", "../../../Patten/StatePatten", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfLobbyState(extras) {
@@ -151,94 +147,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("SocketSetting", "../../Socket/SocketSetting", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfCloseBet(extras) {
-    _reporterNs.report("CloseBet", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfOpenNewGame(extras) {
-    _reporterNs.report("OpenNewGame", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfPlayerSendCardSquintStart(extras) {
-    _reporterNs.report("PlayerSendCardSquintStart", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfPlayerSendCardSquintEnd(extras) {
-    _reporterNs.report("PlayerSendCardSquintEnd", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfReadyBet(extras) {
-    _reporterNs.report("ReadyBet", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfSendCards(extras) {
-    _reporterNs.report("SendCards", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfShuffleCrads(extras) {
-    _reporterNs.report("ShuffleCrads", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfWaitOrEnd(extras) {
-    _reporterNs.report("WaitOrEnd", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfBankerSendCardSquintStart(extras) {
-    _reporterNs.report("BankerSendCardSquintStart", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfBankerSendCardSquintEnd(extras) {
-    _reporterNs.report("BankerSendCardSquintEnd", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfPlayerRepairCard(extras) {
-    _reporterNs.report("PlayerRepairCard", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfPlayerRepairCardSquintStart(extras) {
-    _reporterNs.report("PlayerRepairCardSquintStart", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfPlayerRepairCardSquintEnd(extras) {
-    _reporterNs.report("PlayerRepairCardSquintEnd", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfBankerRepairCard(extras) {
-    _reporterNs.report("BankerRepairCard", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfBankerRepairCardSquintStart(extras) {
-    _reporterNs.report("BankerRepairCardSquintStart", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfBankerRepairCardSquintEnd(extras) {
-    _reporterNs.report("BankerRepairCardSquintEnd", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfShowResoult(extras) {
-    _reporterNs.report("ShowResoult", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfEndRound(extras) {
-    _reporterNs.report("EndRound", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfEndBoot(extras) {
-    _reporterNs.report("EndBoot", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfStartBoot(extras) {
-    _reporterNs.report("StartBoot", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfRefreshRoomState(extras) {
-    _reporterNs.report("RefreshRoomState", "../../State/GameState", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfRefreshTabelData(extras) {
-    _reporterNs.report("RefreshTabelData", "../../State/GameState", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfGameSceneName(extras) {
     _reporterNs.report("GameSceneName", "../../Enum/GameSenceName", _context.meta, extras);
   }
@@ -289,7 +197,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_5) {
       PublicData = _unresolved_5.default;
     }, function (_unresolved_6) {
-      GameState = _unresolved_6.GameState;
       LobbyState = _unresolved_6.LobbyState;
       MessageState = _unresolved_6.MessageState;
       PlayerState = _unresolved_6.PlayerState;
@@ -332,44 +239,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_15) {
       SocketSetting = _unresolved_15.default;
     }, function (_unresolved_16) {
-      CloseBet = _unresolved_16.CloseBet;
-      OpenNewGame = _unresolved_16.OpenNewGame;
-      PlayerSendCardSquintStart = _unresolved_16.PlayerSendCardSquintStart;
-      PlayerSendCardSquintEnd = _unresolved_16.PlayerSendCardSquintEnd;
-      ReadyBet = _unresolved_16.ReadyBet;
-      SendCards = _unresolved_16.SendCards;
-      ShuffleCrads = _unresolved_16.ShuffleCrads;
-      WaitOrEnd = _unresolved_16.WaitOrEnd;
-      BankerSendCardSquintStart = _unresolved_16.BankerSendCardSquintStart;
-      BankerSendCardSquintEnd = _unresolved_16.BankerSendCardSquintEnd;
-      PlayerRepairCard = _unresolved_16.PlayerRepairCard;
-      PlayerRepairCardSquintStart = _unresolved_16.PlayerRepairCardSquintStart;
-      PlayerRepairCardSquintEnd = _unresolved_16.PlayerRepairCardSquintEnd;
-      BankerRepairCard = _unresolved_16.BankerRepairCard;
-      BankerRepairCardSquintStart = _unresolved_16.BankerRepairCardSquintStart;
-      BankerRepairCardSquintEnd = _unresolved_16.BankerRepairCardSquintEnd;
-      ShowResoult = _unresolved_16.ShowResoult;
-      EndRound = _unresolved_16.EndRound;
-      EndBoot = _unresolved_16.EndBoot;
-      StartBoot = _unresolved_16.StartBoot;
-      RefreshRoomState = _unresolved_16.RefreshRoomState;
-      RefreshTabelData = _unresolved_16.RefreshTabelData;
+      GameSceneName = _unresolved_16.GameSceneName;
     }, function (_unresolved_17) {
-      GameSceneName = _unresolved_17.GameSceneName;
+      RoomData = _unresolved_17.default;
     }, function (_unresolved_18) {
-      RoomData = _unresolved_18.default;
+      PanelLoading = _unresolved_18.default;
     }, function (_unresolved_19) {
-      PanelLoading = _unresolved_19.default;
+      GameStateEvent = _unresolved_19.GameStateEvent;
     }, function (_unresolved_20) {
-      GameStateEvent = _unresolved_20.GameStateEvent;
+      GameSenceText = _unresolved_20.default;
     }, function (_unresolved_21) {
-      GameSenceText = _unresolved_21.default;
+      GameData = _unresolved_21.default;
     }, function (_unresolved_22) {
-      GameData = _unresolved_22.default;
+      CheckLoading = _unresolved_22.default;
     }, function (_unresolved_23) {
-      CheckLoading = _unresolved_23.default;
-    }, function (_unresolved_24) {
-      CheckLoadingType = _unresolved_24.CheckLoadingType;
+      CheckLoadingType = _unresolved_23.CheckLoadingType;
     }],
     execute: function () {
       _crd = true;
@@ -773,227 +657,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), GameStateEvent) : GameStateEvent).UpdataSence, senceText);
 
-          switch (cmd) {
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).ggs:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && RefreshRoomState === void 0 ? (_reportPossibleCrUseOfRefreshRoomState({
-                error: Error()
-              }), RefreshRoomState) : RefreshRoomState, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gbal:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && RefreshTabelData === void 0 ? (_reportPossibleCrUseOfRefreshTabelData({
-                error: Error()
-              }), RefreshTabelData) : RefreshTabelData, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs1:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && WaitOrEnd === void 0 ? (_reportPossibleCrUseOfWaitOrEnd({
-                error: Error()
-              }), WaitOrEnd) : WaitOrEnd, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs8:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && StartBoot === void 0 ? (_reportPossibleCrUseOfStartBoot({
-                error: Error()
-              }), StartBoot) : StartBoot, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs9:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && ShuffleCrads === void 0 ? (_reportPossibleCrUseOfShuffleCrads({
-                error: Error()
-              }), ShuffleCrads) : ShuffleCrads, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs10:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && OpenNewGame === void 0 ? (_reportPossibleCrUseOfOpenNewGame({
-                error: Error()
-              }), OpenNewGame) : OpenNewGame, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs11:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && ReadyBet === void 0 ? (_reportPossibleCrUseOfReadyBet({
-                error: Error()
-              }), ReadyBet) : ReadyBet, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs12:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && CloseBet === void 0 ? (_reportPossibleCrUseOfCloseBet({
-                error: Error()
-              }), CloseBet) : CloseBet, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs13:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && SendCards === void 0 ? (_reportPossibleCrUseOfSendCards({
-                error: Error()
-              }), SendCards) : SendCards, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs14:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && PlayerSendCardSquintStart === void 0 ? (_reportPossibleCrUseOfPlayerSendCardSquintStart({
-                error: Error()
-              }), PlayerSendCardSquintStart) : PlayerSendCardSquintStart, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs15:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && PlayerSendCardSquintEnd === void 0 ? (_reportPossibleCrUseOfPlayerSendCardSquintEnd({
-                error: Error()
-              }), PlayerSendCardSquintEnd) : PlayerSendCardSquintEnd, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs16:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && BankerSendCardSquintStart === void 0 ? (_reportPossibleCrUseOfBankerSendCardSquintStart({
-                error: Error()
-              }), BankerSendCardSquintStart) : BankerSendCardSquintStart, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs17:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && BankerSendCardSquintEnd === void 0 ? (_reportPossibleCrUseOfBankerSendCardSquintEnd({
-                error: Error()
-              }), BankerSendCardSquintEnd) : BankerSendCardSquintEnd, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs18:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && PlayerRepairCard === void 0 ? (_reportPossibleCrUseOfPlayerRepairCard({
-                error: Error()
-              }), PlayerRepairCard) : PlayerRepairCard, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs19:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && PlayerRepairCardSquintStart === void 0 ? (_reportPossibleCrUseOfPlayerRepairCardSquintStart({
-                error: Error()
-              }), PlayerRepairCardSquintStart) : PlayerRepairCardSquintStart, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs20:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && PlayerRepairCardSquintEnd === void 0 ? (_reportPossibleCrUseOfPlayerRepairCardSquintEnd({
-                error: Error()
-              }), PlayerRepairCardSquintEnd) : PlayerRepairCardSquintEnd, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs21:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && BankerRepairCard === void 0 ? (_reportPossibleCrUseOfBankerRepairCard({
-                error: Error()
-              }), BankerRepairCard) : BankerRepairCard, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs22:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && BankerRepairCardSquintStart === void 0 ? (_reportPossibleCrUseOfBankerRepairCardSquintStart({
-                error: Error()
-              }), BankerRepairCardSquintStart) : BankerRepairCardSquintStart, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs23:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && BankerRepairCardSquintEnd === void 0 ? (_reportPossibleCrUseOfBankerRepairCardSquintEnd({
-                error: Error()
-              }), BankerRepairCardSquintEnd) : BankerRepairCardSquintEnd, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs24:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && ShowResoult === void 0 ? (_reportPossibleCrUseOfShowResoult({
-                error: Error()
-              }), ShowResoult) : ShowResoult, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs25:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && EndRound === void 0 ? (_reportPossibleCrUseOfEndRound({
-                error: Error()
-              }), EndRound) : EndRound, data);
-              break;
-
-            case (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
-              error: Error()
-            }), ServerGameSenceType) : ServerGameSenceType).gs30:
-              (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
-                error: Error()
-              }), GameState) : GameState).getInstance.transitionTo(_crd && EndBoot === void 0 ? (_reportPossibleCrUseOfEndBoot({
-                error: Error()
-              }), EndBoot) : EndBoot, data);
-              break;
-          } // if (!GameState.isStateing)
+          switch (cmd) {} // if (!GameState.isStateing)
           // else
           //     GameState.requestStay()
 

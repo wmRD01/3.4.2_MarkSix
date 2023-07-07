@@ -2,7 +2,7 @@
   "ver": "1.0.22",
   "importer": "image",
   "imported": true,
-  "uuid": "c1bbeba6-b41c-4e61-91f2-220fe1ef7ce5",
+  "uuid": "18883870-75ba-454f-918b-eea8f5531445",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "c1bbeba6-b41c-4e61-91f2-220fe1ef7ce5@6c48a",
+      "uuid": "18883870-75ba-454f-918b-eea8f5531445@6c48a",
       "displayName": "Challenge_BlueBall",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "c1bbeba6-b41c-4e61-91f2-220fe1ef7ce5"
+        "imageUuidOrDatabaseUri": "18883870-75ba-454f-918b-eea8f5531445"
       },
       "ver": "1.0.21",
       "imported": true,
@@ -33,7 +33,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "c1bbeba6-b41c-4e61-91f2-220fe1ef7ce5@f9941",
+      "uuid": "18883870-75ba-454f-918b-eea8f5531445@f9941",
       "displayName": "Challenge_BlueBall",
       "id": "f9941",
       "name": "spriteFrame",
@@ -41,21 +41,21 @@
         "trimType": "auto",
         "trimThreshold": 1,
         "rotated": false,
-        "offsetX": 0,
-        "offsetY": 0,
-        "trimX": 0,
+        "offsetX": 0.5,
+        "offsetY": 0.5,
+        "trimX": 1,
         "trimY": 0,
-        "width": 92,
-        "height": 92,
-        "rawWidth": 92,
-        "rawHeight": 92,
+        "width": 82,
+        "height": 82,
+        "rawWidth": 83,
+        "rawHeight": 83,
         "borderTop": 0,
         "borderBottom": 0,
         "borderLeft": 0,
         "borderRight": 0,
         "packable": true,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "c1bbeba6-b41c-4e61-91f2-220fe1ef7ce5@6c48a",
+        "imageUuidOrDatabaseUri": "18883870-75ba-454f-918b-eea8f5531445@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.9",
@@ -69,6 +69,6 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "c1bbeba6-b41c-4e61-91f2-220fe1ef7ce5@f9941"
+    "redirect": "18883870-75ba-454f-918b-eea8f5531445@f9941"
   }
 }

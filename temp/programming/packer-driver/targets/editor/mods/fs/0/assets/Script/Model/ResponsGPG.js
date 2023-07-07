@@ -53,9 +53,9 @@ System.register(["cc"], function (_export, _context) {
 
           _Body.ValidateContactInfo = ValidateContactInfo;
 
-          class test {}
+          class RankList {}
 
-          _Body.test = test;
+          _Body.RankList = RankList;
         })(Body || (Body = _RequestGPG.Body || (_RequestGPG.Body = {})));
 
         let Method;

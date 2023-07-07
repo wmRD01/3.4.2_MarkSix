@@ -1,9 +1,15 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, EventTarget, PageView, Node, BaseSingletonComponent, PageAction, _dec, _class, _temp, _crd, ccclass, property, PageControll;
+  var _reporterNs, _cclegacy, _decorator, EventTarget, PageView, Node, BaseSingletonComponent, PageAction, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PageControll;
+
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
   function _reportPossibleCrUseOfBaseSingletonComponent(extras) {
     _reporterNs.report("BaseSingletonComponent", "../../../Patten/Singleton/BaseSingletonComponent", _context.meta, extras);
@@ -34,14 +40,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     execute: function () {
       _crd = true;
 
-      _cclegacy._RF.push({}, "02a2djZxt5DzYfv9Qpmndx8", "PageControll", undefined);
+      _cclegacy._RF.push({}, "28a30iNwftHVY665ygoSNkr", "PageControll", undefined);
 
       ({
         ccclass,
         property
       } = _decorator);
 
-      _export("default", PageControll = (_dec = ccclass('PageControll'), _dec(_class = (_temp = class PageControll extends (_crd && BaseSingletonComponent === void 0 ? (_reportPossibleCrUseOfBaseSingletonComponent({
+      _export("default", PageControll = (_dec = ccclass('PageControll'), _dec2 = property(Node), _dec(_class = (_class2 = (_temp = class PageControll extends (_crd && BaseSingletonComponent === void 0 ? (_reportPossibleCrUseOfBaseSingletonComponent({
         error: Error()
       }), BaseSingletonComponent) : BaseSingletonComponent)() {
         constructor() {
@@ -49,7 +55,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           _defineProperty(this, "pageView", void 0);
 
+          _initializerDefineProperty(this, "page", _descriptor, this);
+
           _defineProperty(this, "pageEvnet", new EventTarget());
+
+          _defineProperty(this, "currnetIndex", 0);
         }
 
         onLoad() {
@@ -63,6 +73,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
         start() {
           this.closeTouch(this.pageView);
+
+          for (var index = 0; index < this.page.length; index++) {
+            this.page[index].active = false;
+          }
+
+          this.onToPage(0);
         }
 
         closeTouch(target) {
@@ -79,10 +95,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
 
         onToPage(index) {
+          this.page[this.currnetIndex].active = false;
+          this.currnetIndex = index;
+          this.page[this.currnetIndex].active = true;
           this.pageView.scrollToPage(index, 0);
         }
 
-      }, _temp)) || _class));
+      }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "page", [_dec2], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return [];
+        }
+      })), _class2)) || _class));
 
       _cclegacy._RF.pop();
 

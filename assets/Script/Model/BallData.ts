@@ -1,36 +1,47 @@
-import { Button, Color, color, Label, Sprite, Tween, tween, Vec3, _decorator } from 'cc';
+import { Button, Color, color, Label, Node, Sprite, Tween, tween, Vec3, _decorator } from 'cc';
 import { AssetType } from '../Enum/AssetType';
 import AssetMng from '../Manager/AssetMng';
 import BaseComponent from './ComponentBase';
 import LabelAutoFollow from './LabelAutoFollow';
+import PublicModel from './PublicModel';
 const { ccclass, property } = _decorator;
 @ccclass('BallData')
 export default class BallData extends BaseComponent {
-    /**compo */
+    /**comp */
+    @property(Label)
     label: Label;
+    @property(Button)
     button: Button;
+    @property(Sprite)
     spriteBG: Sprite;
     /**data */
-    ballNumber: number;
-    type: number;
+    @property(Node)
+    nodeEffect: Node;
+    ballNumber: number = 0;
+    type: number = 0;
     init(_ballNumber: number) {
+        console.log(_ballNumber);
+
         this.ballNumber = _ballNumber
         this.node.position = Vec3.ZERO
         this.type = _ballNumber % 6
-        this.spriteBG = this.node.getComponent(Sprite)
-        this.button = this.node.getComponent(Button)
-        this.label = this.node.children[0].getComponent(Label)
         this.label.addComponent(LabelAutoFollow).setTarget(this.node)
         this.label.string = this.ballNumber.toString()
         this.label.color = color().fromHEX(this.getColor())
+        this.spriteBG.spriteFrame = AssetMng.AssetClass.get(AssetType.Sprite).data.get(this.getBGData())
+        this.setEffect(false)
         return this
     }
     // reset() {
 
     // }
     choose() {
-        this.spriteBG.spriteFrame = AssetMng.AssetClass.get(AssetType.Sprite).data.get(this.getBGData())
-        this.spriteBG.color = Color.WHITE
+        // this.spriteBG.spriteFrame = AssetMng.AssetClass.get(AssetType.Sprite).data.get(this.getBGData())
+        // this.spriteBG.color = Color.WHITE
+        this.node.setScale(PublicModel.getInstance.oneSclaeVec3(1.2))
+        // let rotai = tween()
+        //     .set({ angle: 0 })
+        //     .to(5, { angle: -360 })
         tween(this.node)
             .repeatForever(tween()
                 .set({ angle: 0 })
@@ -38,9 +49,14 @@ export default class BallData extends BaseComponent {
             .start()
     }
     cancel() {
-        this.spriteBG.spriteFrame = AssetMng.AssetClass.get(AssetType.Sprite).data.get(SpirteData.空白)
-        this.spriteBG.color = color().fromHEX(this.getColor())
+        // this.spriteBG.spriteFrame = AssetMng.AssetClass.get(AssetType.Sprite).data.get(SpirteData.空白)
+        // this.spriteBG.color = color().fromHEX(this.getColor())
+        this.node.setScale(PublicModel.getInstance.oneSclaeVec3(1))
+        this.node.eulerAngles = Vec3.ZERO
         Tween.stopAllByTarget(this.node)
+    }
+    setEffect(bool: boolean) {
+        this.nodeEffect.active = bool
     }
     private getColor() {
         switch (this.type) {

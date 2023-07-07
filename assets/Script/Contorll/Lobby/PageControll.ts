@@ -6,17 +6,26 @@ const { ccclass, property } = _decorator;
 @ccclass('PageControll')
 export default class PageControll extends BaseSingletonComponent<PageControll>() {
     pageView: PageView;
+    @property(Node)
+    page: Node[] = []
     pageEvnet: EventTarget = new EventTarget();
+
+    currnetIndex: number = 0;
     onLoad() {
         super.onLoad()
         // console.log(this.pageEvnet);
         this.pageView = this.getComponent(PageView)
-
         this.pageEvnet.on(PageAction.ChangeTo, this.onToPage, this)
         // console.log(this.pageEvnet);
     }
     start() {
         this.closeTouch(this.pageView)
+        for (let index = 0; index < this.page.length; index++) {
+            this.page[index].active = false
+
+        }
+        this.onToPage(0)
+
     }
     closeTouch(target: PageView) {
         //@ts-ignore
@@ -30,7 +39,10 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
     }
     /**接收的值也是number，只是PageMenu是enum內存number */
     onToPage(index: PageMenu) {
+        this.page[this.currnetIndex].active = false
+        this.currnetIndex = index
+        this.page[this.currnetIndex].active = true
         this.pageView.scrollToPage(index, 0)
-    
+
     }
 }

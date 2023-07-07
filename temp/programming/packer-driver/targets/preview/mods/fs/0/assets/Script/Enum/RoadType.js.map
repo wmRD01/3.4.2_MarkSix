@@ -1,1 +1,0 @@
-{"version":3,"sources":["file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/RoadType.ts"],"names":["RoadType"],"mappings":";;;;;;;;;;;;;;;;iBAAYA,Q;AAAAA,QAAAA,Q;AAAAA,QAAAA,Q;AAAAA,QAAAA,Q;SAAAA,Q,wBAAAA,Q","sourcesContent":["export enum RoadType {\r\n    BigEyeBoyRoad = \"BigEyeBoyRoad\",\r\n    SmallRoad = \"SmallRoad\",\r\n    CockroachRoad = \"CockroachRoad\",\r\n}"]}

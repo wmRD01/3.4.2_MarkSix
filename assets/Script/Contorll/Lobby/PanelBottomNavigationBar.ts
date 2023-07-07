@@ -8,7 +8,7 @@ import PublicModel from "../../Model/PublicModel";
 import PageControll from "./PageControll";
 
 const { ccclass, property } = _decorator;
-@ccclass('PanelUI')
+@ccclass('PanelBottomNavigationBar')
 export default class PanelBottomNavigationBar extends BaseComponent {
     @property(Button)
     btnHome: Button;
@@ -47,9 +47,9 @@ export default class PanelBottomNavigationBar extends BaseComponent {
         this.circleY = -(PublicData.getInstance.BaseViewHeight / 2) + (this.nodeCircle.getComponent(UITransform).height / 2)
     }
     start() {
-        for (let index = 0; index < this.btnLayout.children.length; index++) {
-            ButtonMng.addEvent(this, "onMoveCircle", this.getButton(index), index.toString())
-        }
+        // for (let index = 0; index < this.btnLayout.children.length; index++) {
+        //     ButtonMng.addEvent(this, "onMoveCircle", this.getButton(index), index.toString())
+        // }
     }
     onMoveCircle(e: Event, customEventData?: string) {
         if (this.currentIndex == Number(customEventData)) return;

@@ -57,7 +57,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     execute: function () {
       _crd = true;
 
-      _cclegacy._RF.push({}, "5da5dNboMpC7ZHw9reouMyQ", "PanelTimer", undefined);
+      _cclegacy._RF.push({}, "4ca98m/KzxBjL/EfQcp2+d5", "PanelTimer", undefined);
 
       ({
         ccclass,
@@ -142,8 +142,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           Tween.stopAllByTarget(this.labelTime);
         }
 
-        changeState(str) {
-          this.labelState.string = str;
+        changeState(str) {// this.labelState.string = str
         }
 
         setTimer(_gs11) {

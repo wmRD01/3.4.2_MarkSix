@@ -12,7 +12,6 @@ import { LangType } from "../../Enum/LangType";
 import { ServerGameSenceType } from "../../Enum/ServerGameSenceType";
 import BaseSingleton from "../../../Patten/Singleton/BaseSingleton";
 import SocketSetting from "../../Socket/SocketSetting";
-import { CloseBet, OpenNewGame, PlayerSendCardSquintStart, PlayerSendCardSquintEnd, ReadyBet, SendCards, ShuffleCrads, WaitOrEnd, BankerSendCardSquintStart, BankerSendCardSquintEnd, PlayerRepairCard, PlayerRepairCardSquintStart, PlayerRepairCardSquintEnd, BankerRepairCard, BankerRepairCardSquintStart, BankerRepairCardSquintEnd, ShowResoult, EndRound, EndBoot, StartBoot, RefreshRoomState, RefreshTabelData } from "../../State/GameState";
 import { Game, game } from "cc";
 import { GameSceneName } from "../../Enum/GameSenceName";
 import RoomData from "../../Model/RoomData";
@@ -181,72 +180,6 @@ export default class GameControll extends BaseSingleton<GameControll>() {
             EventMng.emit(GameStateEvent.UpdataSence, senceText)
         switch (cmd) {
 
-            case ServerGameSenceType.ggs:
-                GameState.getInstance.transitionTo(RefreshRoomState, data)
-                break
-            case ServerGameSenceType.gbal:
-                GameState.getInstance.transitionTo(RefreshTabelData, data)
-                break
-            case ServerGameSenceType.gs1:
-                GameState.getInstance.transitionTo(WaitOrEnd, data)
-                break
-            case ServerGameSenceType.gs8:
-                GameState.getInstance.transitionTo(StartBoot, data)
-                break
-            case ServerGameSenceType.gs9:
-                GameState.getInstance.transitionTo(ShuffleCrads, data)
-                break
-            case ServerGameSenceType.gs10:
-                GameState.getInstance.transitionTo(OpenNewGame, data)
-                break
-            case ServerGameSenceType.gs11:
-                GameState.getInstance.transitionTo(ReadyBet, data)
-                break
-            case ServerGameSenceType.gs12:
-                GameState.getInstance.transitionTo(CloseBet, data)
-                break
-            case ServerGameSenceType.gs13:
-                GameState.getInstance.transitionTo(SendCards, data)
-                break
-            case ServerGameSenceType.gs14:
-                GameState.getInstance.transitionTo(PlayerSendCardSquintStart, data)
-                break
-            case ServerGameSenceType.gs15:
-                GameState.getInstance.transitionTo(PlayerSendCardSquintEnd, data)
-                break
-            case ServerGameSenceType.gs16:
-                GameState.getInstance.transitionTo(BankerSendCardSquintStart, data)
-                break
-            case ServerGameSenceType.gs17:
-                GameState.getInstance.transitionTo(BankerSendCardSquintEnd, data)
-                break
-            case ServerGameSenceType.gs18:
-                GameState.getInstance.transitionTo(PlayerRepairCard, data)
-                break
-            case ServerGameSenceType.gs19:
-                GameState.getInstance.transitionTo(PlayerRepairCardSquintStart, data)
-                break
-            case ServerGameSenceType.gs20:
-                GameState.getInstance.transitionTo(PlayerRepairCardSquintEnd, data)
-                break
-            case ServerGameSenceType.gs21:
-                GameState.getInstance.transitionTo(BankerRepairCard, data)
-                break
-            case ServerGameSenceType.gs22:
-                GameState.getInstance.transitionTo(BankerRepairCardSquintStart, data)
-                break
-            case ServerGameSenceType.gs23:
-                GameState.getInstance.transitionTo(BankerRepairCardSquintEnd, data)
-                break
-            case ServerGameSenceType.gs24:
-                GameState.getInstance.transitionTo(ShowResoult, data)
-                break
-            case ServerGameSenceType.gs25:
-                GameState.getInstance.transitionTo(EndRound, data)
-                break
-            case ServerGameSenceType.gs30:
-                GameState.getInstance.transitionTo(EndBoot, data)
-                break
 
         }
         // if (!GameState.isStateing)

@@ -1,7 +1,7 @@
 {
   "__type__": "cc.SpriteFrame",
   "content": {
-    "name": "blue_ball",
+    "name": "Challenge_BlueBall",
     "atlas": "",
     "rect": {
       "x": 1,

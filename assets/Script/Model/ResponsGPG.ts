@@ -15,7 +15,7 @@ export namespace RequestGPG {
         export class ValidateContactInfo {
             Phone: string
         }
-        export class test {
+        export class RankList {
 
         }
     }

@@ -55,6 +55,9 @@ export default class BaseComponent extends Component {
     hide(): void {
         this.node.active = false
     }
+    reProcessing() {
+
+    }
 }
 
 // export  class ComponentBase2 extends BaseComponent{

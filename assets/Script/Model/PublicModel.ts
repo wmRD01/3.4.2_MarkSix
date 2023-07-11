@@ -1,4 +1,4 @@
-import { director, Node, UITransform, Vec2, Vec3, _decorator } from "cc";
+import { director, dynamicAtlasManager, Node, UITransform, Vec2, Vec3, _decorator } from "cc";
 import BaseSingleton from "../../Patten/Singleton/BaseSingleton";
 import MyMath from "../../Plug/MyMath";
 
@@ -113,6 +113,7 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         for (var i = 0; i < len; i++) {
             bytes[i] = binary_string.charCodeAt(i);
         }
+
         return bytes;
     }
     /**將Byte轉換成Binary */
@@ -157,6 +158,29 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         }
         // console.warn(format + suffixes[exp - 1]);
         return format + suffixes[exp - 1]
+    }
+    /**只能回傳num */
+    getEnumValueFromString<T>(str: string, enumObject: T): T[keyof T] | undefined {
+        const enumValues = Object.keys(enumObject).filter(k => typeof enumObject[k as keyof T] === 'number');
+        for (const value of enumValues) {
+            if (value.toLowerCase() === str.toLowerCase()) {
+                return enumObject[value as keyof T];
+            }
+        }
+        return undefined;
+    }
+    /*可回傳num與str(須測試) */
+    getEnumValue<T>(str: string, enumObject: T): T[keyof T] | undefined {
+        const enumValues = Object.keys(enumObject);
+        for (const value of enumValues) {
+            if (value.toLowerCase() === str.toLowerCase()) {
+                return enumObject[value as keyof T];
+            }
+        }
+        return undefined;
+    }
+    openShader() {
+        dynamicAtlasManager.enabled = false//打開Shader合批(????)
     }
 }
 

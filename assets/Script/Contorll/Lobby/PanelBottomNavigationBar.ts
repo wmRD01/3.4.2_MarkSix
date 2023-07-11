@@ -46,10 +46,19 @@ export default class PanelBottomNavigationBar extends BaseComponent {
         this.mapButton.set(4, this.btnSetting);
         this.circleY = -(PublicData.getInstance.BaseViewHeight / 2) + (this.nodeCircle.getComponent(UITransform).height / 2)
     }
+    onEnable() {
+        PageControll.instance.pageEvnet.on(PageAction.ChangeTo, this.onEventChangeTo, this)
+    }
+    onDisable() {
+        PageControll.instance.pageEvnet.off(PageAction.ChangeTo, this.onEventChangeTo, this)
+    }
     start() {
         // for (let index = 0; index < this.btnLayout.children.length; index++) {
         //     ButtonMng.addEvent(this, "onMoveCircle", this.getButton(index), index.toString())
         // }
+    }
+    onEventChangeTo(index: PageMenu) {
+        this.onMoveCircle(null, index.toString())
     }
     onMoveCircle(e: Event, customEventData?: string) {
         if (this.currentIndex == Number(customEventData)) return;

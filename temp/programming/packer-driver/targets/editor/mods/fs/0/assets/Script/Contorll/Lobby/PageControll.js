@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, EventTarget, PageView, Node, BaseSingletonComponent, PageAction, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PageControll;
+  var _reporterNs, _cclegacy, _decorator, EventTarget, PageView, Node, BaseSingletonComponent, PageAction, AssetMng, MusicMng, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PageControll, test;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -23,6 +23,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     _reporterNs.report("PageMenu", "../../Enum/PageMenu", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfAssetMng(extras) {
+    _reporterNs.report("AssetMng", "../../Manager/AssetMng", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfMusicMng(extras) {
+    _reporterNs.report("MusicMng", "../../Manager/MusicMng", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -36,6 +44,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       BaseSingletonComponent = _unresolved_2.default;
     }, function (_unresolved_3) {
       PageAction = _unresolved_3.PageAction;
+    }, function (_unresolved_4) {
+      AssetMng = _unresolved_4.default;
+    }, function (_unresolved_5) {
+      MusicMng = _unresolved_5.default;
     }],
     execute: function () {
       _crd = true;
@@ -63,6 +75,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         onLoad() {
+          /**現階段測試 正是要往Loading移動 */
+          (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
+            error: Error()
+          }), AssetMng) : AssetMng).startLoad();
+          (_crd && MusicMng === void 0 ? (_reportPossibleCrUseOfMusicMng({
+            error: Error()
+          }), MusicMng) : MusicMng).init();
           super.onLoad(); // console.log(this.pageEvnet);
 
           this.pageView = this.getComponent(PageView);
@@ -109,6 +128,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           return [];
         }
       })), _class2)) || _class));
+
+      (function (test) {
+        test[test["MEEE"] = 0] = "MEEE";
+        test[test["HANA"] = 1] = "HANA";
+      })(test || (test = {}));
 
       _cclegacy._RF.pop();
 

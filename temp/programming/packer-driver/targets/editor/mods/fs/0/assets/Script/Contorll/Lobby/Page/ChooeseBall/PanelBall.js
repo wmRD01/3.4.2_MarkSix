@@ -105,13 +105,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "isConfirm", void 0);
         }
 
-        async onLoad() {
-          super.onLoad();
-          (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
-            error: Error()
-          }), AssetMng) : AssetMng).startLoad();
-        }
-
         async start() {
           await (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
             error: Error()

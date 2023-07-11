@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, director, UITransform, Vec2, Vec3, BaseSingleton, MyMath, PublicModel, _crd;
+  var _reporterNs, _cclegacy, director, dynamicAtlasManager, UITransform, Vec2, Vec3, BaseSingleton, MyMath, PublicModel, _crd;
 
   function _reportPossibleCrUseOfBaseSingleton(extras) {
     _reporterNs.report("BaseSingleton", "../../Patten/Singleton/BaseSingleton", _context.meta, extras);
@@ -19,6 +19,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     }, function (_cc) {
       _cclegacy = _cc.cclegacy;
       director = _cc.director;
+      dynamicAtlasManager = _cc.dynamicAtlasManager;
       UITransform = _cc.UITransform;
       Vec2 = _cc.Vec2;
       Vec3 = _cc.Vec3;
@@ -224,6 +225,38 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
 
           return format + suffixes[exp - 1];
+        }
+        /**只能回傳num */
+
+
+        getEnumValueFromString(str, enumObject) {
+          var enumValues = Object.keys(enumObject).filter(k => typeof enumObject[k] === 'number');
+
+          for (var value of enumValues) {
+            if (value.toLowerCase() === str.toLowerCase()) {
+              return enumObject[value];
+            }
+          }
+
+          return undefined;
+        }
+        /*可回傳num與str(須測試) */
+
+
+        getEnumValue(str, enumObject) {
+          var enumValues = Object.keys(enumObject);
+
+          for (var value of enumValues) {
+            if (value.toLowerCase() === str.toLowerCase()) {
+              return enumObject[value];
+            }
+          }
+
+          return undefined;
+        }
+
+        openShader() {
+          dynamicAtlasManager.enabled = false; //打開Shader合批(????)
         }
 
       });

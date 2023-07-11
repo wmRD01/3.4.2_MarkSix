@@ -109,21 +109,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "isConfirm", void 0);
         }
 
-        onLoad() {
-          var _superprop_getOnLoad = () => super.onLoad,
-              _this = this;
-
-          return _asyncToGenerator(function* () {
-            _superprop_getOnLoad().call(_this);
-
-            (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
-              error: Error()
-            }), AssetMng) : AssetMng).startLoad();
-          })();
-        }
-
         start() {
-          var _this2 = this;
+          var _this = this;
 
           return _asyncToGenerator(function* () {
             yield (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
@@ -132,32 +119,32 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), AssetType) : AssetType).Sprite);
 
-            _this2.labelContent.removeAllChildren();
+            _this.labelContent.removeAllChildren();
 
-            _this2.HorLayout.removeAllChildren();
+            _this.HorLayout.removeAllChildren();
 
             var isEnd = false;
 
-            for (var V = 0; V < _this2.Valign; V++) {
-              var layout = instantiate(_this2.layoutItem);
+            for (var V = 0; V < _this.Valign; V++) {
+              var layout = instantiate(_this.layoutItem);
 
-              _this2.HorLayout.addChild(layout);
+              _this.HorLayout.addChild(layout);
 
-              for (var H = 1; H <= _this2.Halign; H++) {
-                var count = V * _this2.Halign + H;
+              for (var H = 1; H <= _this.Halign; H++) {
+                var count = V * _this.Halign + H;
 
                 if (count > 49) {
                   isEnd = true;
                   break;
                 }
 
-                var _node = instantiate(_this2.ballItem);
+                var _node = instantiate(_this.ballItem);
 
                 var _class = _node.getComponent(_crd && BallData === void 0 ? (_reportPossibleCrUseOfBallData({
                   error: Error()
                 }), BallData) : BallData);
 
-                _this2.mapBallNumber.set(count, _class);
+                _this.mapBallNumber.set(count, _class);
 
                 layout.addChild(_node);
 
@@ -165,9 +152,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
                 (_crd && ButtonMng === void 0 ? (_reportPossibleCrUseOfButtonMng({
                   error: Error()
-                }), ButtonMng) : ButtonMng).addEvent(_this2, "onChooeseBall", _class.button, count.toString());
+                }), ButtonMng) : ButtonMng).addEvent(_this, "onChooeseBall", _class.button, count.toString());
 
-                _this2.labelContent.addChild(_class.label.node);
+                _this.labelContent.addChild(_class.label.node);
               }
             }
 
@@ -175,9 +162,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), DelayTime) : DelayTime).getInstance.StartDT(.016);
 
-            for (var index = 0; index < _this2.HorLayout.children.length; index++) {
+            for (var index = 0; index < _this.HorLayout.children.length; index++) {
               //球往上飛所以不能讓他自動排版
-              _this2.HorLayout.children[index].getComponent(Layout).enabled = false;
+              _this.HorLayout.children[index].getComponent(Layout).enabled = false;
             }
           })();
         }
@@ -215,38 +202,38 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onConfirmAttack(e, customEventData) {
-          var _this3 = this;
+          var _this2 = this;
 
           return _asyncToGenerator(function* () {
-            if (_this3.isConfirm) return;
+            if (_this2.isConfirm) return;
 
-            if (_this3.tempChoose.length < _this3.MaxCount) {
+            if (_this2.tempChoose.length < _this2.MaxCount) {
               return;
             }
 
-            console.log(_this3.tempChoose);
-            var len = _this3.tempChoose.length;
+            console.log(_this2.tempChoose);
+            var len = _this2.tempChoose.length;
 
             for (var index = 0; index < len; index++) {
-              _this3.isChoose.push(_this3.tempChoose.shift());
+              _this2.isChoose.push(_this2.tempChoose.shift());
             }
 
-            _this3.isChoose.sort((a, b) => a - b);
+            _this2.isChoose.sort((a, b) => a - b);
 
-            console.log(_this3.isChoose);
+            console.log(_this2.isChoose);
 
-            for (var _index = 0; _index < _this3.isChoose.length; _index++) {
-              _this3.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            for (var _index = 0; _index < _this2.isChoose.length; _index++) {
+              _this2.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
                 error: Error()
-              }), LobbyStateEvent) : LobbyStateEvent).BallChooeseAction, _this3.mapBallNumber.get(_this3.isChoose[_index]).node, _index);
+              }), LobbyStateEvent) : LobbyStateEvent).BallChooeseAction, _this2.mapBallNumber.get(_this2.isChoose[_index]).node, _index);
 
               yield (_crd && DelayTime === void 0 ? (_reportPossibleCrUseOfDelayTime({
                 error: Error()
               }), DelayTime) : DelayTime).getInstance.StartDT(.1);
             }
 
-            _this3.tempChoose = [];
-            _this3.isConfirm = true;
+            _this2.tempChoose = [];
+            _this2.isConfirm = true;
             /**推波訊息 */
           })();
         }

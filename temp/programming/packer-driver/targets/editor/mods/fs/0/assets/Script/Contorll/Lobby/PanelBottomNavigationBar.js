@@ -15,6 +15,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("PageAction", "../../Enum/PageAction", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfPageMenu(extras) {
+    _reporterNs.report("PageMenu", "../../Enum/PageMenu", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfBaseComponent(extras) {
     _reporterNs.report("BaseComponent", "../../Model/ComponentBase", _context.meta, extras);
   }
@@ -112,9 +116,29 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), PublicData) : PublicData).getInstance.BaseViewHeight / 2) + this.nodeCircle.getComponent(UITransform).height / 2;
         }
 
+        onEnable() {
+          (_crd && PageControll === void 0 ? (_reportPossibleCrUseOfPageControll({
+            error: Error()
+          }), PageControll) : PageControll).instance.pageEvnet.on((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+            error: Error()
+          }), PageAction) : PageAction).ChangeTo, this.onEventChangeTo, this);
+        }
+
+        onDisable() {
+          (_crd && PageControll === void 0 ? (_reportPossibleCrUseOfPageControll({
+            error: Error()
+          }), PageControll) : PageControll).instance.pageEvnet.off((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+            error: Error()
+          }), PageAction) : PageAction).ChangeTo, this.onEventChangeTo, this);
+        }
+
         start() {// for (let index = 0; index < this.btnLayout.children.length; index++) {
           //     ButtonMng.addEvent(this, "onMoveCircle", this.getButton(index), index.toString())
           // }
+        }
+
+        onEventChangeTo(index) {
+          this.onMoveCircle(null, index.toString());
         }
 
         onMoveCircle(e, customEventData) {

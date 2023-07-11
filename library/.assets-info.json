@@ -5,7 +5,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image": {
-    "time": 1688719308214.5132,
+    "time": 1689045733117.942,
     "uuid": "6e71966d-73ec-46ee-84f1-7fe64bc8e090",
     "missing": false
   },
@@ -214,16 +214,6 @@
     "uuid": "ed469fd5-aa7a-4a30-9b18-e0cbadb9865e",
     "missing": false
   },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Set up_button00.png": {
-    "time": 1688542138000,
-    "uuid": "fe76553f-ad78-4df4-ab28-e471666c5111",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Set up_button01.png": {
-    "time": 1688542138000,
-    "uuid": "75962847-ba4e-4ce0-b820-f94db161fb33",
-    "missing": false
-  },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Set up_facebook.png": {
     "time": 1688542138000,
     "uuid": "7a5f7d50-6587-4b90-aed1-51dd0bf0c3ba",
@@ -305,7 +295,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\GameRoom": {
-    "time": 1688706866993.203,
+    "time": 1688965706087.2556,
     "uuid": "32a587f2-114a-4aea-b89c-922d8cb33c10",
     "missing": false
   },
@@ -335,7 +325,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite": {
-    "time": 1688719326872.6062,
+    "time": 1689046935289.2302,
     "uuid": "907dc629-2dea-48e2-8920-457392a38cc5",
     "missing": false
   },
@@ -350,7 +340,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Lobby.scene": {
-    "time": 1688723027958.3613,
+    "time": 1689053907478.2715,
     "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
     "missing": false
   },
@@ -405,7 +395,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test": {
-    "time": 1688624404873.2744,
+    "time": 1689044028381.8374,
     "uuid": "61368de0-cd41-4536-beb2-4c0ecadb86d0",
     "missing": false
   },
@@ -739,11 +729,6 @@
     "uuid": "18883870-75ba-454f-918b-eea8f5531445",
     "missing": false
   },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\Challenge_Frame.png": {
-    "time": 1688036795427.2383,
-    "uuid": "04be14d0-c83c-4e67-aa79-80f988284df7",
-    "missing": false
-  },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\Challenge_GreenBall.png": {
     "time": 1688553357928.4666,
     "uuid": "ee30a148-3d6f-42e8-98f4-63fb02467490",
@@ -1070,7 +1055,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PublicModel.ts": {
-    "time": 1688355478530.1912,
+    "time": 1689044595635.6235,
     "uuid": "e67ebe82-8c49-4ffb-b7df-3ca593669e05",
     "missing": false
   },
@@ -1172,11 +1157,6 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\testHTML.ts": {
     "time": 1688355478509.1863,
     "uuid": "920e9d08-8f78-476f-8d3e-1670eaf4c005",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\見色": {
-    "time": 1688624348873.9753,
-    "uuid": "45a48f1c-657a-4570-a43b-d5f8658e793b",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\View\\MainGame.ts": {
@@ -1914,16 +1894,6 @@
     "uuid": "db7348b5-d75f-40db-97c2-f9bfbb84b8ef",
     "missing": false
   },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\見色\\test.mtl": {
-    "time": 1688625286754.8926,
-    "uuid": "5154e56a-e4be-4246-8867-b436aa571b9b",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\見色\\testef.effect": {
-    "time": 1688624798496.9814,
-    "uuid": "271ebef6-bd75-4d63-9155-661af8dbbfba",
-    "missing": false
-  },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Data\\Panel\\DataExchange.ts": {
     "time": 1687921279516.2205,
     "uuid": "8ef382a0-b74b-4980-9c3b-cb4be22b167a",
@@ -2062,17 +2032,11 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Pick_Button01.png.meta": {
     "time": 1688547282341.2957
   },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Set up_button00.png.meta": {
-    "time": 1688627522554.4622
-  },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\pick_background.png.meta": {
     "time": 1688547282340.2954
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\pick_choose.png.meta": {
     "time": 1688547282337.294
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Set up_button01.png.meta": {
-    "time": 1688627102643.5923
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Set up_facebook.png.meta": {
     "time": 1688548872819.7686
@@ -2270,7 +2234,7 @@
     "time": 1688622722259.8235
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Main\\btn_radius22.png.meta": {
-    "time": 1688622722248.6853
+    "time": 1688960659136.9583
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Main\\btn_more01.png.meta": {
     "time": 1688622722250.6853
@@ -2433,9 +2397,6 @@
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\OldPj.meta": {
     "time": 1687920653464.9082
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\Challenge_Frame.png.meta": {
-    "time": 1688095413727.736
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\AssetType.ts.meta": {
     "time": 1687144714059.1663
@@ -2631,9 +2592,6 @@
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\extentTest.ts.meta": {
     "time": 1687144714186.197
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\見色.meta": {
-    "time": 1688624293482.4768
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\poly.ts.meta": {
     "time": 1687144714187.1956
@@ -3097,12 +3055,6 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Data\\Panel\\DataSoundSet.ts.meta": {
     "time": 1687144714180.1956
   },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\見色\\testef.effect.meta": {
-    "time": 1688624799464.6719
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\見色\\test.mtl.meta": {
-    "time": 1688624799475.8286
-  },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby\\Item\\PointItem.prefab.meta": {
     "time": 1688707588883.7317
   },
@@ -3155,7 +3107,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Home": {
-    "time": 1688715343713.5269,
+    "time": 1688966954833.9043,
     "uuid": "8b51d516-9571-4c08-9efa-b3a6892acf8b",
     "missing": false
   },
@@ -3181,12 +3133,12 @@
     "time": 1688715279473.2617
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\PageControll.ts": {
-    "time": 1688721676073.7524,
+    "time": 1689046648183.7966,
     "uuid": "28a3088d-c1fb-4755-8eba-e7282848d92b",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\PanelBottomNavigationBar.ts": {
-    "time": 1688715249392,
+    "time": 1688972235821.2405,
     "uuid": "ce6eeeec-c458-44b6-8308-5d86e25444c0",
     "missing": false
   },
@@ -3206,7 +3158,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Setting": {
-    "time": 1688715224743.211,
+    "time": 1689053143247.8442,
     "uuid": "5c40d3f5-43c4-401c-849f-2d619e4c20db",
     "missing": false
   },
@@ -3230,7 +3182,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ChooeseBall\\PanelBall.ts": {
-    "time": 1688718594903.6426,
+    "time": 1689046670607.8442,
     "uuid": "d2f08cfc-f861-4fd1-8212-bea888090d2b",
     "missing": false
   },
@@ -3293,6 +3245,94 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\integral_3.png": {
     "time": 1688542140000,
     "uuid": "7f831bd0-fa61-4148-94b1-d1cb19d456e2",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Home\\PanelHome.ts.meta": {
+    "time": 1688966954847.9077
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Home\\PanelHome.ts": {
+    "time": 1688972282160.2021,
+    "uuid": "b8492fab-e86b-4b04-87cf-33d6acb68979",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Setting\\PanelSetting.ts.meta": {
+    "time": 1688973429780.564
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Setting\\PanelSetting.ts": {
+    "time": 1689053374487.042,
+    "uuid": "5101e061-b8b2-4daf-a3f0-fcd5e6ef3f8b",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\color.meta": {
+    "time": 1688624293482.4768
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\color": {
+    "time": 1688624348873.9753,
+    "uuid": "45a48f1c-657a-4570-a43b-d5f8658e793b",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\color\\test.mtl.meta": {
+    "time": 1689044028486.708
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\color\\test.mtl": {
+    "time": 1689044145490.9011,
+    "uuid": "5154e56a-e4be-4246-8867-b436aa571b9b",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\color\\testef.effect.meta": {
+    "time": 1688624799464.6719
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\test\\color\\testef.effect": {
+    "time": 1688624798496.9814,
+    "uuid": "271ebef6-bd75-4d63-9155-661af8dbbfba",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\auto-atlas.pac.meta": {
+    "time": 1689045153143.0198
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\auto-atlas.pac": {
+    "time": 1689045153135.5337,
+    "uuid": "db6569d4-4bae-4ec2-9cc9-46db7ac464ea",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\Setup_button01.png.meta": {
+    "time": 1689046932317.8452
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\Setup_button01.png": {
+    "time": 1688542138000,
+    "uuid": "fe76553f-ad78-4df4-ab28-e471666c5111",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\Setup_button00.png.meta": {
+    "time": 1689046935303.375
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\Setup_button00.png": {
+    "time": 1688542138000,
+    "uuid": "75962847-ba4e-4ce0-b820-f94db161fb33",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Setting\\PanelLink.ts.meta": {
+    "time": 1689052938706.9788
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Setting\\PanelLink.ts": {
+    "time": 1689053164870.23,
+    "uuid": "da3bde9c-1a28-40e0-b5c5-405face3a76f",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Setting\\ItemLink.ts.meta": {
+    "time": 1689053143268.8496
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Setting\\ItemSetting.ts.meta": {
+    "time": 1689053143271.849
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Setting\\ItemLink.ts": {
+    "time": 1689053843036.8467,
+    "uuid": "2953dca7-87d6-4f43-a134-df3beb8d852b",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Setting\\ItemSetting.ts": {
+    "time": 1689053015103.3484,
+    "uuid": "e7f9b014-29a7-45a6-a75e-ac4e1a8a42c1",
     "missing": false
   }
 }

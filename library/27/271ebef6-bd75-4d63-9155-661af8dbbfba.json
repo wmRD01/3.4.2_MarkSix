@@ -1,6 +1,6 @@
 {
   "__type__": "cc.EffectAsset",
-  "_name": "../Script/test/見色/testef",
+  "_name": "../Script/test/color/testef",
   "_objFlags": 0,
   "_native": "",
   "techniques": [
@@ -20,7 +20,7 @@
           "rasterizerState": {
             "cullMode": 0
           },
-          "program": "../Script/test/見色/testef|sprite-vs:vert|sprite-fs:frag",
+          "program": "../Script/test/color/testef|sprite-vs:vert|sprite-fs:frag",
           "depthStencilState": {
             "depthTest": false,
             "depthWrite": false
@@ -256,7 +256,7 @@
           "defines": []
         }
       ],
-      "name": "../Script/test/見色/testef|sprite-vs:vert|sprite-fs:frag"
+      "name": "../Script/test/color/testef|sprite-vs:vert|sprite-fs:frag"
     }
   ],
   "combinations": [],

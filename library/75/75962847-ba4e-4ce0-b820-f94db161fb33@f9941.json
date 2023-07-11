@@ -1,7 +1,7 @@
 {
   "__type__": "cc.SpriteFrame",
   "content": {
-    "name": "Set up_button01",
+    "name": "Setup_button00",
     "atlas": "",
     "rect": {
       "x": 2,

@@ -28,12 +28,6 @@ export default class PanelBall extends BaseComponent {
     MaxCount: number = 6
     isConfirm: boolean;
 
-
-    async onLoad() {
-        super.onLoad()
-        AssetMng.startLoad()
-
-    }
     async start() {
         await AssetMng.waitStateCheck(AssetType.Sprite)
         this.labelContent.removeAllChildren()

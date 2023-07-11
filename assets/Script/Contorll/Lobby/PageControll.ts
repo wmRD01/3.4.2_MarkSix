@@ -2,6 +2,9 @@ import { _decorator, EventTarget, PageView, Node } from 'cc';
 import BaseSingletonComponent from '../../../Patten/Singleton/BaseSingletonComponent';
 import { PageAction } from '../../Enum/PageAction';
 import { PageMenu } from '../../Enum/PageMenu';
+import AssetMng from '../../Manager/AssetMng';
+import MusicMng from '../../Manager/MusicMng';
+import PublicModel from '../../Model/PublicModel';
 const { ccclass, property } = _decorator;
 @ccclass('PageControll')
 export default class PageControll extends BaseSingletonComponent<PageControll>() {
@@ -12,6 +15,9 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
 
     currnetIndex: number = 0;
     onLoad() {
+        /**現階段測試 正是要往Loading移動 */
+        AssetMng.startLoad()
+        MusicMng.init()
         super.onLoad()
         // console.log(this.pageEvnet);
         this.pageView = this.getComponent(PageView)
@@ -19,6 +25,7 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
         // console.log(this.pageEvnet);
     }
     start() {
+
         this.closeTouch(this.pageView)
         for (let index = 0; index < this.page.length; index++) {
             this.page[index].active = false
@@ -45,4 +52,8 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
         this.pageView.scrollToPage(index, 0)
 
     }
+}
+enum test {
+    MEEE,
+    HANA
 }

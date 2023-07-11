@@ -1,6 +1,6 @@
 {
   "cce:/internal/x/cc": {
-    "mTimestamp": 6349.064399957657,
+    "mTimestamp": 6903.953899979591,
     "chunkId": "quick-pack:/cce/internal/x/cc.js",
     "imports": [
       {
@@ -389,7 +389,7 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 1545147.594999969,
+    "mTimestamp": 12449.299999952316,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
@@ -4581,7 +4581,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/Page/Point/PanelPoint.ts": {
     "mTimestamp": {
-      "mtime": 1688720269143.2139,
+      "mtime": 1689057157898.4197,
       "uuid": "303d6930-d3b3-4ed5-a888-f81a6a4a03cc"
     },
     "chunkId": "assets/Script/Contorll/Lobby/Page/Point/PanelPoint.js",
@@ -5489,7 +5489,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelGameMessage.ts": {
     "mTimestamp": {
-      "mtime": 1688715249668.9998,
+      "mtime": 1689057157899.42,
       "uuid": "c0ff4857-9306-45b0-b0a4-0a7de1284bcf"
     },
     "chunkId": "assets/Script/Contorll/Lobby/PanelGameMessage.js",
@@ -8967,7 +8967,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/MessageItem.ts": {
     "mTimestamp": {
-      "mtime": 1687329149204.8704,
+      "mtime": 1689057157900.4202,
       "uuid": "49203000-7271-450d-a5e2-fbc6afdb3b0b"
     },
     "chunkId": "assets/Script/Model/MessageItem.js",
@@ -9149,7 +9149,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PointItemData.ts": {
     "mTimestamp": {
-      "mtime": 1688718267042.308,
+      "mtime": 1689057157901.4204,
       "uuid": "f131d57a-314f-48b1-af87-1e0cac6d55c0"
     },
     "chunkId": "assets/Script/Model/PointItemData.js",
@@ -12186,7 +12186,7 @@
     ]
   },
   "cce:/internal/code-quality/cr.mjs": {
-    "mTimestamp": 1689053264551,
+    "mTimestamp": 1689057171252,
     "chunkId": "quick-pack:/cce/internal/code-quality/cr.js",
     "imports": [],
     "modLoMetadata": {
@@ -12195,7 +12195,7 @@
     "resolvedImports": []
   },
   "cce:/internal/ml/cjs-loader.mjs": {
-    "mTimestamp": 1689053264551,
+    "mTimestamp": 1689057171252,
     "chunkId": "quick-pack:/cce/internal/ml/cjs-loader.js",
     "imports": [],
     "modLoMetadata": {

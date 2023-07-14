@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Node, Sprite, _decorator, AssetType, AssetMng, BaseComponent, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _temp, _crd, ccclass, property, PanelPageButton, PageType, OnOffData;
+  var _reporterNs, _cclegacy, Button, Node, Sprite, _decorator, AssetType, LobbyStateEvent, AssetMng, BaseComponent, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _temp, _crd, ccclass, property, PanelPageButton, PageType, OnOffData;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -17,6 +17,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfAssetType(extras) {
     _reporterNs.report("AssetType", "../../../../Enum/AssetType", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfLobbyStateEvent(extras) {
+    _reporterNs.report("LobbyStateEvent", "../../../../Enum/LobbyStateEvent", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfAssetMng(extras) {
@@ -39,9 +43,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_2) {
       AssetType = _unresolved_2.AssetType;
     }, function (_unresolved_3) {
-      AssetMng = _unresolved_3.default;
+      LobbyStateEvent = _unresolved_3.LobbyStateEvent;
     }, function (_unresolved_4) {
-      BaseComponent = _unresolved_4.default;
+      AssetMng = _unresolved_4.default;
+    }, function (_unresolved_5) {
+      BaseComponent = _unresolved_5.default;
     }],
     execute: function () {
       _crd = true;
@@ -85,6 +91,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.panelRank.active = false;
           this.panelPoint.active = false;
           this.onChangePanel(null, PageType.Point.toString());
+          this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).ChangePointPage, this.onChangePanel);
         }
 
         onChangePanel(e, customEventData) {

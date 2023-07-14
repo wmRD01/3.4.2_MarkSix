@@ -85,17 +85,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             _this.layoutRank.removeAllChildren();
 
             for (var index = 0; index < 20; index++) {
-              var _node = instantiate(_this.prefabRankItem);
-
-              var _class = _node.getComponent(_crd && RankItmeData === void 0 ? (_reportPossibleCrUseOfRankItmeData({
-                error: Error()
-              }), RankItmeData) : RankItmeData);
-
-              _class.init(1);
-
-              _this.layoutRank.addChild(_node);
+              _this.RankData();
             }
           })();
+        }
+
+        RankData() {
+          var _node = instantiate(this.prefabRankItem);
+
+          var _class = _node.getComponent(_crd && RankItmeData === void 0 ? (_reportPossibleCrUseOfRankItmeData({
+            error: Error()
+          }), RankItmeData) : RankItmeData);
+
+          _class.init(1);
+
+          this.layoutRank.addChild(_node);
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class3.prototype, "prefabRankItem", [_dec2], {

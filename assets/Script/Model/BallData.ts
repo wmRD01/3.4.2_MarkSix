@@ -1,6 +1,7 @@
-import { Button, Color, color, Label, Node, Sprite, Tween, tween, Vec3, _decorator } from 'cc';
+import { Button, Color, color, Label, Node, Sprite, Tween, tween, v3, Vec3, _decorator } from 'cc';
 import { AssetType } from '../Enum/AssetType';
 import AssetMng from '../Manager/AssetMng';
+import { colorTest } from '../test/colorTest';
 import BaseComponent from './ComponentBase';
 import LabelAutoFollow from './LabelAutoFollow';
 import PublicModel from './PublicModel';
@@ -19,6 +20,7 @@ export default class BallData extends BaseComponent {
     nodeEffect: Node;
     ballNumber: number = 0;
     type: number = 0;
+    orgV3: Vec3;
     init(_ballNumber: number) {
         console.log(_ballNumber);
 
@@ -28,9 +30,17 @@ export default class BallData extends BaseComponent {
         this.label.addComponent(LabelAutoFollow).setTarget(this.node)
         this.label.string = this.ballNumber.toString()
         this.label.color = color().fromHEX(this.getColor())
+        console.log(AssetMng.AssetClass.get(AssetType.Sprite).data.get(this.getBGData()));
+
         this.spriteBG.spriteFrame = AssetMng.AssetClass.get(AssetType.Sprite).data.get(this.getBGData())
         this.setEffect(false)
+
+
         return this
+    }
+    getOrg() {
+        this.orgV3 = new Vec3(this.node.position)
+
     }
     // reset() {
 
@@ -54,11 +64,25 @@ export default class BallData extends BaseComponent {
         this.node.setScale(PublicModel.getInstance.oneSclaeVec3(1))
         this.node.eulerAngles = Vec3.ZERO
         Tween.stopAllByTarget(this.node)
+        this.enabledBall(true)
+    }
+    backPosition() {
+        Tween.stopAllByTarget(this.node)
+        console.log(this.node.position);
+
+        this.node.position = this.orgV3
+        console.log(this.node.position, this.orgV3);
+
+    }
+    enabledBall(bool: boolean) {
+        this.spriteBG.color = bool ? color().fromHEX(ColorType.白) : color().fromHEX(ColorType.灰);
     }
     setEffect(bool: boolean) {
         this.nodeEffect.active = bool
     }
     private getColor() {
+
+        return ColorType.黑
         switch (this.type) {
             case 0:
             case 5:
@@ -89,7 +113,10 @@ enum ColorType {
     紅 = "#FF3D3D",
     藍 = "#334BD3",
     綠 = "#61BFAD",
-    灰 = "#969696",
+    灰 = "#797979FD",
+    白 = "#FFFFFF",
+    黑 = "#000000",
+
 }
 enum SpirteData {
     紅 = "Challenge_RedBall",

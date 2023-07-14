@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "台灣六合彩APP PART2-04",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1920
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 1080,
+      "height": 1920
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "50c2f2b3-fe1b-4279-9947-dd180c2803ed@6c48a",
+    "packable": true
+  }
+}

@@ -1,0 +1,53 @@
+[
+    1,
+    [
+        "6bMToiCS9Coarb+ZBuk2+U@6c48a"
+    ],
+    [
+        "_textureSource"
+    ],
+    [
+        "cc.SpriteFrame"
+    ],
+    0,
+    [
+        {
+            "name": "pick_background",
+            "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 720,
+                "height": 1067
+            },
+            "offset": {
+                "x": 0,
+                "y": 0
+            },
+            "originalSize": {
+                "width": 720,
+                "height": 1067
+            },
+            "rotated": false,
+            "capInsets": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "packable": true
+        }
+    ],
+    [
+        0
+    ],
+    0,
+    [
+        0
+    ],
+    [
+        0
+    ],
+    [
+        0
+    ]
+]

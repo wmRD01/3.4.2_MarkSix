@@ -1,6 +1,8 @@
-import { Button, Node, UITransform, v3, Vec3, _decorator } from "cc";
+import { Button, Node, Sprite, UITransform, v3, Vec3, _decorator } from "cc";
+import { AssetType } from "../../Enum/AssetType";
 import { PageAction } from "../../Enum/PageAction";
 import { PageMenu } from "../../Enum/PageMenu";
+import AssetMng from "../../Manager/AssetMng";
 import ButtonMng from "../../Manager/ButtonMng";
 import BaseComponent from "../../Model/ComponentBase";
 import PublicData from "../../Model/PublicData";
@@ -11,22 +13,16 @@ const { ccclass, property } = _decorator;
 @ccclass('PanelBottomNavigationBar')
 export default class PanelBottomNavigationBar extends BaseComponent {
     @property(Button)
-    btnHome: Button;
-    @property(Button)
-    btnPoint: Button;
-    @property(Button)
-    btnChooeseBall: Button;
-    @property(Button)
-    btnClientInfo: Button;
-    @property(Button)
-    btnSetting: Button;
+    btns: Button[] = []
+
     @property(Node)
     btnLayout: Node;
     @property(Node)
     nodeCircle: Node;
     circleY: number;
-    mapButton: Map<number, Button> = new Map()
-    currentIndex: number = 0
+    mapButton: Map<number, Page> = new Map()
+    currentIndex: number = -1
+    lastIndex: number = -1
 
     //#region 動畫參數
     isAction: boolean = false
@@ -36,14 +32,16 @@ export default class PanelBottomNavigationBar extends BaseComponent {
     goTarget: Vec3;
     getCircleScale: number
     //#endregion
-    onLoad() {
+    async onLoad() {
+        super.onLoad()
+        await AssetMng.waitStateCheck(AssetType.Sprite)
         // PageControll.instance.pageEvnet.on(PageAction.ChangeTo, this.onMoveCircle, this)
+        for (let index = 0; index < this.btns.length; index++) {
+            let _page = new Page(this.btns[index], index)
+            _page.change(false)
+            this.mapButton.set(index, _page)
+        }
 
-        this.mapButton.set(0, this.btnHome);
-        this.mapButton.set(1, this.btnPoint);
-        this.mapButton.set(2, this.btnChooeseBall);
-        this.mapButton.set(3, this.btnClientInfo);
-        this.mapButton.set(4, this.btnSetting);
         this.circleY = -(PublicData.getInstance.BaseViewHeight / 2) + (this.nodeCircle.getComponent(UITransform).height / 2)
     }
     onEnable() {
@@ -52,16 +50,15 @@ export default class PanelBottomNavigationBar extends BaseComponent {
     onDisable() {
         PageControll.instance.pageEvnet.off(PageAction.ChangeTo, this.onEventChangeTo, this)
     }
-    start() {
-        // for (let index = 0; index < this.btnLayout.children.length; index++) {
-        //     ButtonMng.addEvent(this, "onMoveCircle", this.getButton(index), index.toString())
-        // }
-    }
+
     onEventChangeTo(index: PageMenu) {
         this.onMoveCircle(null, index.toString())
     }
-    onMoveCircle(e: Event, customEventData?: string) {
+    async onMoveCircle(e: Event, customEventData?: string) {
+        await AssetMng.waitStateCheck(AssetType.Sprite)
+
         if (this.currentIndex == Number(customEventData)) return;
+        this.lastIndex = this.currentIndex
         this.currentIndex = Number(customEventData)
         let getX = PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(this.nodeCircle, this.getButton(this.currentIndex).node).x
         this.goTarget = v3(getX, this.circleY)
@@ -69,7 +66,7 @@ export default class PanelBottomNavigationBar extends BaseComponent {
         PageControll.instance.pageEvnet.emit(PageAction.ChangeTo, this.currentIndex)
     }
     getButton(index: number) {
-        return this.mapButton.get(index)
+        return this.mapButton.get(index).getButton()
     }
     startAction() {
         this.getCircleScale = this.nodeCircle.getScale().x
@@ -85,6 +82,9 @@ export default class PanelBottomNavigationBar extends BaseComponent {
                         this.getCircleScale = 0
                         this.actionDic = ActionDic.放;
                         this.nodeCircle.setPosition(this.goTarget)
+                        /**初始畫會是-1 就不做事情 */
+                        if (this.mapButton.has(this.lastIndex)) this.mapButton.get(this.lastIndex).change(false)
+                        this.mapButton.get(this.currentIndex).change(true)
                     }
                     break;
                 case ActionDic.放:
@@ -102,4 +102,24 @@ export default class PanelBottomNavigationBar extends BaseComponent {
 enum ActionDic {
     縮,
     放
+}
+
+class Page {
+    private button: Button
+    private BG: Sprite
+    private type: PageMenu
+    private spriteData: string[] = ["icon_home", "icon_rank", "icon_bet", "icon_user", "icon_setting"]
+    constructor(_btn: Button, _type: number) {
+        this.button = _btn;
+        this.BG = this.button.getComponentInChildren(Sprite);
+        this.type = _type
+    }
+    change(bool: boolean) {
+        let sprite: string = this.spriteData[this.type]
+        if (bool) sprite = sprite + "_act"
+        this.BG.spriteFrame = AssetMng.AssetClass.get(AssetType.Sprite).data.get(sprite)
+    }
+    getButton() {
+        return this.button
+    }
 }

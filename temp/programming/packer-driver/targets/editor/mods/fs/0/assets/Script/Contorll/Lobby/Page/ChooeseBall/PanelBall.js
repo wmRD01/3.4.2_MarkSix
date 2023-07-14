@@ -103,6 +103,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "MaxCount", 6);
 
           _defineProperty(this, "isConfirm", void 0);
+
+          _defineProperty(this, "isFullBall", void 0);
         }
 
         async start() {
@@ -153,6 +155,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             //球往上飛所以不能讓他自動排版
             this.HorLayout.children[index].getComponent(Layout).enabled = false;
           }
+
+          this.mapBallNumber.forEach(element => {
+            element.getOrg();
+          });
         }
 
         onRandomNumber(e, customEventData) {
@@ -172,16 +178,54 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         onChooeseBall(e, customEventData) {
           if (this.isConfirm) return;
           let convert = Number(customEventData);
-          if (this.tempChoose.indexOf(convert) > -1 || this.isChoose.indexOf(convert) > -1 || this.tempChoose.length + this.isChoose.length >= this.MaxCount) return;
+
+          if (this.tempChoose.indexOf(convert) > -1) {
+            this.tempChoose.splice(this.tempChoose.indexOf(convert), 1)[0];
+            this.mapBallNumber.get(convert).cancel();
+            if (this.isFullBall) this.fullResetBallColor(true);
+            return;
+          }
+
+          if (this.tempChoose.length >= this.MaxCount) return;
           this.tempChoose.push(convert);
           this.mapBallNumber.get(convert).choose();
+
+          if (this.tempChoose.length === this.MaxCount) {
+            this.isFullBall = true;
+            this.mapBallNumber.forEach(element => {
+              //代表沒被選種
+              if (this.tempChoose.indexOf(element.ballNumber) == -1) {
+                element.enabledBall(false);
+              }
+            });
+          }
+        }
+
+        onTestReset(e, customEventData) {
+          this.isChoose = [];
+          this.tempChoose = [];
+          /**選擇球數最大值 */
+
+          this.MaxCount = 6;
+          this.isConfirm = false;
+          this.isFullBall = false;
+          this.mapBallNumber.forEach(element => {
+            element.cancel();
+            element.backPosition();
+          });
         }
 
         onResetChooese(e, customEventData) {
           if (this.isConfirm) return;
 
-          for (let index = 0; index < this.tempChoose.length; index++) {
-            this.mapBallNumber.get(this.tempChoose[index]).cancel();
+          if (this.tempChoose.length === this.MaxCount) {
+            this.mapBallNumber.forEach(element => {
+              element.cancel();
+            });
+          } else {
+            for (let index = 0; index < this.tempChoose.length; index++) {
+              this.mapBallNumber.get(this.tempChoose[index]).cancel();
+            }
           }
 
           this.tempChoose = [];
@@ -194,7 +238,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             return;
           }
 
-          console.log(this.tempChoose);
           let len = this.tempChoose.length;
 
           for (let index = 0; index < len; index++) {
@@ -202,7 +245,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
 
           this.isChoose.sort((a, b) => a - b);
-          console.log(this.isChoose);
 
           for (let index = 0; index < this.isChoose.length; index++) {
             this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
@@ -216,6 +258,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.tempChoose = [];
           this.isConfirm = true;
           /**推波訊息 */
+        }
+
+        fullResetBallColor(bool) {
+          this.mapBallNumber.forEach(element => {
+            element.enabledBall(bool);
+          });
+          this.isFullBall = !bool;
         }
 
         reProcessing() {}

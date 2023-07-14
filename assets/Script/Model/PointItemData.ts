@@ -1,6 +1,4 @@
 import { instantiate, Label, Node, Prefab, _decorator } from 'cc';
-import { AssetType } from '../Enum/AssetType';
-import AssetMng from '../Manager/AssetMng';
 import BallData from './BallData';
 import BaseComponent from './ComponentBase';
 const { ccclass, property } = _decorator;
@@ -18,11 +16,10 @@ export default class PointItemData extends BaseComponent {
     labelDayData: Label;
     @property(Node)
     labelContent: Node
-    start() {
+    onLoad() {
         this.clientPointLayout.removeAllChildren()
     }
-    async init(data) {
-        await AssetMng.waitStateCheck(AssetType.Sprite)
+    init(data) {
         this.labelDayData.string = `112/4/9(一) 第123456789期`
         this.labelPoint.string = `+ ${Math.floor(Math.random() * 200)}`
 

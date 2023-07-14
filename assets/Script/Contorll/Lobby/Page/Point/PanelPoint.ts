@@ -1,7 +1,8 @@
 import { instantiate, Node, Prefab, Vec3, _decorator } from 'cc';
-import DelayTime from '../../../../../Plug/DelayTime';
 import BaseComponent from '../../../../Model/ComponentBase';
 import PointItemData from '../../../../Model/PointItemData';
+import { AssetType } from '../../../../Enum/AssetType';
+import AssetMng from '../../../../Manager/AssetMng';
 const { ccclass, property } = _decorator;
 @ccclass('PanelPoint')
 export default class PanelPoint extends BaseComponent {
@@ -11,14 +12,14 @@ export default class PanelPoint extends BaseComponent {
     layoutContent: Node;
 
 
-    start() {
+    async start() {
+        await AssetMng.waitStateCheck(AssetType.Sprite)
         this.layoutContent.removeAllChildren()
         for (let index = 0; index < 3; index++) {
-            this.onClientData(123)
-
+            this.ClientData(123)
         }
     }
-    onClientData(data) {
+    ClientData(data) {
         let _node = instantiate(this.item)
         let _class = _node.getComponent(PointItemData)
         _node.setPosition(Vec3.ZERO)

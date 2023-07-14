@@ -26,6 +26,32 @@ System.register(["cc"], function (_export, _context) {
             _defineProperty(this, "body", void 0);
           }
 
+          setMethod(_method) {
+            this.method = _method;
+            return this;
+          }
+
+          setHeaders(_headers) {
+            this.headers = _headers;
+            return this;
+          }
+
+          setToken(str) {
+            this.headers.Authorization = str;
+            return this;
+          }
+
+          setBody(_body) {
+            this.body = _body;
+            return this;
+          }
+
+          async fetchData(_url, callback) {
+            return new Promise((resolve, reject) => {
+              fetch(_url, this).then(response => response.json()).then(response => callback(response)).then(resolve);
+            });
+          }
+
         }
 
         _RequestGPG.Request = Request;
@@ -44,19 +70,130 @@ System.register(["cc"], function (_export, _context) {
         let Body;
 
         (function (_Body) {
-          class ValidateContactInfo {
+          class ValidateContactInfo_Phone {
             constructor() {
               _defineProperty(this, "Phone", void 0);
             }
 
           }
 
-          _Body.ValidateContactInfo = ValidateContactInfo;
+          _Body.ValidateContactInfo_Phone = ValidateContactInfo_Phone;
+
+          class ValidateContactInfo_Email {
+            constructor() {
+              _defineProperty(this, "Email", void 0);
+            }
+
+          }
+
+          _Body.ValidateContactInfo_Email = ValidateContactInfo_Email;
 
           class RankList {}
 
           _Body.RankList = RankList;
+
+          class MemberInfo {
+            constructor() {
+              _defineProperty(this, "sign", void 0);
+            }
+
+          }
+
+          _Body.MemberInfo = MemberInfo;
         })(Body || (Body = _RequestGPG.Body || (_RequestGPG.Body = {})));
+
+        let ResponseDataMyInfo;
+
+        (function (_ResponseDataMyInfo) {
+          class MyInfo {
+            constructor() {
+              _defineProperty(this, "Status", new State());
+
+              _defineProperty(this, "data", new Data());
+            }
+
+          }
+
+          _ResponseDataMyInfo.MyInfo = MyInfo;
+
+          class State {
+            constructor() {
+              _defineProperty(this, "Code", "0");
+
+              _defineProperty(this, "Message", "Success");
+            }
+
+          }
+
+          class Data {
+            constructor() {
+              _defineProperty(this, "friendCount", void 0);
+
+              _defineProperty(this, "introduceCode", void 0);
+
+              _defineProperty(this, "isTrial", void 0);
+
+              _defineProperty(this, "memberID", void 0);
+
+              _defineProperty(this, "nickName", void 0);
+
+              _defineProperty(this, "phoneNumber", void 0);
+
+              _defineProperty(this, "photo", void 0);
+
+              _defineProperty(this, "promotionCode", void 0);
+
+              _defineProperty(this, "promotionUrl", void 0);
+
+              _defineProperty(this, "registerSource", void 0);
+
+              _defineProperty(this, "vip", void 0);
+            }
+
+          }
+
+          class Photo {
+            constructor() {
+              _defineProperty(this, "frame", void 0);
+
+              _defineProperty(this, "headPhoto", void 0);
+            }
+
+          }
+
+          class VIP {
+            constructor() {
+              _defineProperty(this, "experience", void 0);
+
+              _defineProperty(this, "level", void 0);
+
+              _defineProperty(this, "nextExperience", void 0);
+            }
+
+          }
+        })(ResponseDataMyInfo || (ResponseDataMyInfo = _RequestGPG.ResponseDataMyInfo || (_RequestGPG.ResponseDataMyInfo = {})));
+
+        let ResponseDataValidateContactInfo;
+
+        (function (_ResponseDataValidateContactInfo) {
+          class ValidateContactInfo {
+            constructor() {
+              _defineProperty(this, "Status", new State());
+            }
+
+          }
+
+          _ResponseDataValidateContactInfo.ValidateContactInfo = ValidateContactInfo;
+
+          class State {
+            constructor() {
+              _defineProperty(this, "Code", "0");
+
+              _defineProperty(this, "Message", "Success");
+            }
+
+          }
+        })(ResponseDataValidateContactInfo || (ResponseDataValidateContactInfo = _RequestGPG.ResponseDataValidateContactInfo || (_RequestGPG.ResponseDataValidateContactInfo = {})));
 
         let Method;
 

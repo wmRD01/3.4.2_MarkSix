@@ -3,7 +3,7 @@ import MyMath from '../../../Plug/MyMath';
 import { GameEvent } from '../../Enum/GameEvent';
 import { GameSceneName } from '../../Enum/GameSenceName';
 import BaseComponent from '../../Model/ComponentBase';
-import { RequestGPG as RequestGPG } from '../../Model/ResponsGPG';
+import { RequestGPG as RequestGPG } from '../Api/GPGAPI/RequestGPG';
 const { ccclass, property } = _decorator;
 
 

@@ -1,0 +1,53 @@
+[
+    1,
+    [
+        "c0ad8+EsdNwZcpVIdlyPvy@6c48a"
+    ],
+    [
+        "_textureSource"
+    ],
+    [
+        "cc.SpriteFrame"
+    ],
+    0,
+    [
+        {
+            "name": "Pick_Button00",
+            "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 186,
+                "height": 57
+            },
+            "offset": {
+                "x": 0,
+                "y": 0
+            },
+            "originalSize": {
+                "width": 186,
+                "height": 57
+            },
+            "rotated": false,
+            "capInsets": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "packable": true
+        }
+    ],
+    [
+        0
+    ],
+    0,
+    [
+        0
+    ],
+    [
+        0
+    ],
+    [
+        0
+    ]
+]

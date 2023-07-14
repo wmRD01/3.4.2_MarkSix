@@ -1,5 +1,6 @@
 import { Button, EventTouch, Node, Sprite, _decorator } from 'cc';
 import { AssetType } from '../../../../Enum/AssetType';
+import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import AssetMng from '../../../../Manager/AssetMng';
 import BaseComponent from '../../../../Model/ComponentBase';
 const { ccclass, property } = _decorator;
@@ -31,6 +32,7 @@ export default class PanelPageButton extends BaseComponent {
         this.panelRank.active = false;
         this.panelPoint.active = false
         this.onChangePanel(null, PageType.Point.toString());
+        this.setEvent(LobbyStateEvent.ChangePointPage, this.onChangePanel)
     }
     async onChangePanel(e: EventTouch, customEventData?: string) {
         await AssetMng.waitStateCheck(AssetType.Sprite)

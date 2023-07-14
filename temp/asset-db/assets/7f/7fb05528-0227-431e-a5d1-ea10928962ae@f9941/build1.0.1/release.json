@@ -1,0 +1,53 @@
+[
+    1,
+    [
+        "7fsFUoAidDHqXR6hCSiWKu@6c48a"
+    ],
+    [
+        "_textureSource"
+    ],
+    [
+        "cc.SpriteFrame"
+    ],
+    0,
+    [
+        {
+            "name": "integral_personal score color ball column",
+            "rect": {
+                "x": 3,
+                "y": 2,
+                "width": 456,
+                "height": 113
+            },
+            "offset": {
+                "x": 0,
+                "y": 0
+            },
+            "originalSize": {
+                "width": 462,
+                "height": 117
+            },
+            "rotated": false,
+            "capInsets": [
+                71,
+                0,
+                58,
+                0
+            ],
+            "packable": true
+        }
+    ],
+    [
+        0
+    ],
+    0,
+    [
+        0
+    ],
+    [
+        0
+    ],
+    [
+        0
+    ]
+]

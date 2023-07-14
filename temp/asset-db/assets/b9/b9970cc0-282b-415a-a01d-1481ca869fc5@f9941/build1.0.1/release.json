@@ -1,0 +1,53 @@
+[
+    1,
+    [
+        "b9lwzAKCtBWqAdFIHKhp/F@6c48a"
+    ],
+    [
+        "_textureSource"
+    ],
+    [
+        "cc.SpriteFrame"
+    ],
+    0,
+    [
+        {
+            "name": "btn_howtoplay",
+            "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 688,
+                "height": 308
+            },
+            "offset": {
+                "x": 0,
+                "y": 0
+            },
+            "originalSize": {
+                "width": 688,
+                "height": 308
+            },
+            "rotated": false,
+            "capInsets": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "packable": true
+        }
+    ],
+    [
+        0
+    ],
+    0,
+    [
+        0
+    ],
+    [
+        0
+    ],
+    [
+        0
+    ]
+]

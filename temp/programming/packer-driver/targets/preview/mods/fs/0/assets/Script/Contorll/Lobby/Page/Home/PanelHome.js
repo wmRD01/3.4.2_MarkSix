@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Label, _decorator, PageAction, BaseComponent, PageControll, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _temp, _crd, ccclass, property, PanelHome;
+  var _reporterNs, _cclegacy, Button, Label, _decorator, LobbyStateEvent, PageAction, BaseComponent, PageControll, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _temp, _crd, ccclass, property, PanelHome;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -10,6 +10,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
   function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  function _reportPossibleCrUseOfLobbyStateEvent(extras) {
+    _reporterNs.report("LobbyStateEvent", "../../../../Enum/LobbyStateEvent", _context.meta, extras);
+  }
 
   function _reportPossibleCrUseOfPageAction(extras) {
     _reporterNs.report("PageAction", "../../../../Enum/PageAction", _context.meta, extras);
@@ -32,11 +36,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Label = _cc.Label;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
-      PageAction = _unresolved_2.PageAction;
+      LobbyStateEvent = _unresolved_2.LobbyStateEvent;
     }, function (_unresolved_3) {
-      BaseComponent = _unresolved_3.default;
+      PageAction = _unresolved_3.PageAction;
     }, function (_unresolved_4) {
-      PageControll = _unresolved_4.default;
+      BaseComponent = _unresolved_4.default;
+    }, function (_unresolved_5) {
+      PageControll = _unresolved_5.default;
     }],
     execute: function () {
       _crd = true;
@@ -86,12 +92,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onGoPage(e, customEventData) {
-          if (isNaN(Number(customEventData))) console.error("錯誤啦!!!是不是忘記設定");
+          var split = customEventData.split('-');
+          if (isNaN(Number(split[0]))) console.error("錯誤啦!!!是不是忘記設定");
+          this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).ChangePointPage, null, split[1]);
           (_crd && PageControll === void 0 ? (_reportPossibleCrUseOfPageControll({
             error: Error()
           }), PageControll) : PageControll).instance.pageEvnet.emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
-          }), PageAction) : PageAction).ChangeTo, Number(customEventData));
+          }), PageAction) : PageAction).ChangeTo, Number(split[0]));
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "labelTime", [_dec2], {

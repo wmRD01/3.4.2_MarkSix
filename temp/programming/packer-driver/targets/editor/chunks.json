@@ -1,262 +1,240 @@
 {
   "assets/Patten/Singleton/BaseSingleton.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Patten/Singleton/SingletonManger.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Patten/Singleton/SingletonManger.js"
     },
     "physicalLocation": "fs/0/assets/Patten/Singleton/BaseSingleton.js",
-    "mTimestamp": 1688722640414
+    "mTimestamp": 1689235849185
   },
   "assets/Patten/Singleton/BaseSingletonComponent.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "__unresolved_2": "assets/Patten/Singleton/SingletonManger.js",
-      "__unresolved_1": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Script/Model/ComponentBase.js"
     },
     "physicalLocation": "fs/0/assets/Patten/Singleton/BaseSingletonComponent.js",
-    "mTimestamp": 1688722640200
+    "mTimestamp": 1689235849212
   },
   "assets/Patten/Singleton/SingletonManger.js": {
     "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Patten/Singleton/SingletonManger.js",
-    "mTimestamp": 1688722640355
+    "mTimestamp": 1689235849235
   },
   "assets/Patten/StatePatten.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Patten/Singleton/BaseSingleton.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Patten/Singleton/BaseSingleton.js"
     },
     "physicalLocation": "fs/0/assets/Patten/StatePatten.js",
-    "mTimestamp": 1688722640324
+    "mTimestamp": 1689235849273
   },
   "assets/Patten/Singleton/IBaseSingleton.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Patten/Singleton/IBaseSingleton.js",
-    "mTimestamp": 1688722640428
+    "mTimestamp": 1689235849087
   },
   "assets/Plug/MyAnimatinoPlay.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Plug/MyAnimatinoPlay.js",
-    "mTimestamp": 1688722640514
+    "mTimestamp": 1689235849245
   },
   "assets/Plug/Image.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Plug/Image.js",
-    "mTimestamp": 1688722640394
+    "mTimestamp": 1689235849349
   },
   "assets/Plug/DelayTime.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Patten/Singleton/BaseSingleton.js",
       "__unresolved_3": "assets/Script/Enum/CommandType.js",
       "__unresolved_4": "assets/Script/Enum/WebSocketEvent.js",
-      "__unresolved_2": "assets/Script/Manager/EventMng.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_2": "assets/Script/Manager/EventMng.js"
     },
     "physicalLocation": "fs/0/assets/Plug/DelayTime.js",
-    "mTimestamp": 1688722640465
+    "mTimestamp": 1689235849312
   },
   "assets/Plug/MyMath.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Plug/MyMath.js",
-    "mTimestamp": 1688722640485
+    "mTimestamp": 1689235849423
   },
   "assets/Script/Asset/BundleAsset.js": {
     "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Asset/BundleAsset.js",
-    "mTimestamp": 1688722640505
+    "mTimestamp": 1689235849391
   },
   "assets/Plug/MyEditBox.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Plug/MyEditBox.js",
-    "mTimestamp": 1688722640540
+    "mTimestamp": 1689235849378
   },
   "assets/Script/Asset/MusicAsset.js": {
     "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Asset/MusicAsset.js",
-    "mTimestamp": 1688722640554
+    "mTimestamp": 1689235849404
   },
   "assets/Script/Asset/SpineAsset.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Asset/SpineAsset.js",
-    "mTimestamp": 1688722640562
+    "mTimestamp": 1689235849411
   },
   "assets/Script/Asset/SpriteAsset.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Script/Enum/GameEvent.js",
-      "__unresolved_2": "assets/Script/Manager/EventMng.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_2": "assets/Script/Manager/EventMng.js"
     },
     "physicalLocation": "fs/0/assets/Script/Asset/SpriteAsset.js",
-    "mTimestamp": 1688722640642
+    "mTimestamp": 1689235849580
   },
   "assets/Script/Asset/PrefabAsset.js": {
     "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Asset/PrefabAsset.js",
-    "mTimestamp": 1688722640578
+    "mTimestamp": 1689235849439
   },
   "assets/Script/Asset/SpriteAtlasAsset.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Plug/Image.js",
       "__unresolved_2": "assets/Script/Enum/GameEvent.js",
-      "__unresolved_3": "assets/Script/Manager/EventMng.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_3": "assets/Script/Manager/EventMng.js"
     },
     "physicalLocation": "fs/0/assets/Script/Asset/SpriteAtlasAsset.js",
-    "mTimestamp": 1688722640605
+    "mTimestamp": 1689235849639
   },
   "assets/Script/Contorll/Api/CASTAPI.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Script/Enum/CASTCommandType.js",
       "__unresolved_2": "assets/Script/Enum/GameEvent.js",
-      "__unresolved_3": "assets/Script/Manager/EventMng.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_3": "assets/Script/Manager/EventMng.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/Api/CASTAPI.js",
-    "mTimestamp": 1688722640661
+    "mTimestamp": 1689235849598
   },
   "assets/Script/Contorll/Api/SendCommand.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/Api/SendCommand.js",
-    "mTimestamp": 1688722640770
+    "mTimestamp": 1689235849674
   },
   "assets/Script/Contorll/Api/ResponeCommand.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/Api/ResponeCommand.js",
-    "mTimestamp": 1688722640735
+    "mTimestamp": 1689235849511
   },
   "assets/Script/Contorll/Data/DataMusic.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/Data/DataMusic.js",
-    "mTimestamp": 1688722640831
-  },
-  "assets/Script/Contorll/AutoView/AutoView.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Plug/DelayTime.js",
-      "__unresolved_2": "assets/Script/Model/PublicData.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Contorll/AutoView/AutoView.js",
-    "mTimestamp": 1688722640816
+    "mTimestamp": 1689235849920
   },
   "assets/Script/Contorll/AutoView/testauto.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Plug/DelayTime.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Plug/DelayTime.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/AutoView/testauto.js",
-    "mTimestamp": 1688722640895
+    "mTimestamp": 1689235849730
   },
   "assets/Script/Contorll/Data/Panel/DataFunctionMenu.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Script/Model/ComponentBase.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/Data/Panel/DataFunctionMenu.js",
-    "mTimestamp": 1688722641090
+    "mTimestamp": 1689235849836
   },
   "assets/Script/Contorll/Data/Panel/DataExchange.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Script/Model/ComponentBase.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/Data/Panel/DataExchange.js",
-    "mTimestamp": 1688722640851
-  },
-  "assets/Script/Contorll/Loading/PanelGameLoading.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Plug/MyMath.js",
-      "__unresolved_2": "assets/Script/Enum/GameEvent.js",
-      "__unresolved_3": "assets/Script/Enum/GameSenceName.js",
-      "__unresolved_4": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_5": "assets/Script/Model/ResponsGPG.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Contorll/Loading/PanelGameLoading.js",
-    "mTimestamp": 1688722641080
+    "mTimestamp": 1689235849859
   },
   "assets/Script/Contorll/Data/Panel/DataSoundSet.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_2": "assets/Script/Model/PublicModel.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_2": "assets/Script/Model/PublicModel.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/Data/Panel/DataSoundSet.js",
-    "mTimestamp": 1688722640942
+    "mTimestamp": 1689235849906
   },
   "assets/Script/Contorll/NoClearNode/CanvasControll.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Patten/Singleton/BaseSingletonComponent.js",
-      "__unresolved_2": "assets/Script/Model/PublicData.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_2": "assets/Script/Model/PublicData.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/NoClearNode/CanvasControll.js",
-    "mTimestamp": 1688722641350
+    "mTimestamp": 1689235850457
   },
   "assets/Script/Contorll/NoClearNode/PanelLoading.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Patten/Singleton/BaseSingletonComponent.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Patten/Singleton/BaseSingletonComponent.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/NoClearNode/PanelLoading.js",
-    "mTimestamp": 1688722641374
+    "mTimestamp": 1689235850516
   },
   "assets/Script/Contorll/NoClearNode/PanelVersion.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Patten/Singleton/BaseSingletonComponent.js",
-      "__unresolved_2": "assets/Script/Model/PublicData.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_2": "assets/Script/Model/PublicData.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/NoClearNode/PanelVersion.js",
-    "mTimestamp": 1688722641335
+    "mTimestamp": 1689235850528
   },
   "assets/Script/Contorll/NoClearNode/PanelSystemMessage.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_2": "assets/Plug/MyMath.js",
       "__unresolved_7": "assets/Patten/Singleton/BaseSingletonComponent.js",
@@ -264,14 +242,14 @@
       "__unresolved_5": "assets/Script/Enum/LangType.js",
       "__unresolved_6": "assets/Script/Enum/WebSocketEvent.js",
       "__unresolved_1": "assets/Script/Manager/ButtonMng.js",
-      "__unresolved_4": "assets/Script/Socket/SocketSetting.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_4": "assets/Script/Socket/SocketSetting.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/NoClearNode/PanelSystemMessage.js",
-    "mTimestamp": 1688722641414
+    "mTimestamp": 1689235850500
   },
   "assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelExchange.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_8": "assets/Plug/MyMath.js",
       "__unresolved_10": "assets/Script/Contorll/Api/SendCommand.js",
@@ -283,20 +261,20 @@
       "__unresolved_7": "assets/Script/Enum/LangType.js",
       "__unresolved_1": "assets/Script/Enum/LisnerEditBox.js",
       "__unresolved_11": "assets/Script/Enum/WebSocketEvent.js",
-      "__unresolved_3": "assets/Script/Manager/EditBoxMng.js",
       "__unresolved_2": "assets/Script/Manager/ButtonMng.js",
+      "__unresolved_3": "assets/Script/Manager/EditBoxMng.js",
       "__unresolved_15": "assets/Script/Model/CheckLoading.js",
       "__unresolved_12": "assets/Script/Model/GameData.js",
       "__unresolved_4": "assets/Script/Model/PublicData.js",
       "__unresolved_13": "assets/Script/Model/PublicModel.js",
-      "__unresolved_6": "assets/Script/Socket/SocketSetting.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_6": "assets/Script/Socket/SocketSetting.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelExchange.js",
-    "mTimestamp": 1688722641488
+    "mTimestamp": 1689235850602
   },
   "assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelFunctionMenu.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Script/Contorll/Data/Panel/DataFunctionMenu.js",
       "__unresolved_6": "assets/Script/Contorll/Api/SendCommand.js",
@@ -307,262 +285,248 @@
       "__unresolved_4": "assets/Script/Manager/ButtonMng.js",
       "__unresolved_9": "assets/Script/Model/GameData.js",
       "__unresolved_10": "assets/Script/Model/PublicModel.js",
-      "__unresolved_5": "assets/Script/Socket/SocketSetting.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_5": "assets/Script/Socket/SocketSetting.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelFunctionMenu.js",
-    "mTimestamp": 1688722641557
+    "mTimestamp": 1689235850645
   },
   "assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelGameLoading.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_2": "assets/Plug/MyMath.js",
       "__unresolved_1": "assets/Script/Enum/GameEvent.js",
-      "__unresolved_3": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_3": "assets/Script/Model/ComponentBase.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelGameLoading.js",
-    "mTimestamp": 1688722641509
+    "mTimestamp": 1689235850668
   },
   "assets/Script/Enum/Asset_Prefab.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/Asset_Prefab.js",
-    "mTimestamp": 1688722641562
+    "mTimestamp": 1689235850702
   },
   "assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelSoundSet.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_6": "assets/Script/Contorll/Data/Panel/DataSoundSet.js",
       "__unresolved_1": "assets/Script/Enum/GameEvent.js",
       "__unresolved_2": "assets/Script/Enum/LangType.js",
       "__unresolved_3": "assets/Script/Manager/ButtonMng.js",
       "__unresolved_4": "assets/Script/Manager/MusicMng.js",
-      "__unresolved_5": "assets/Script/Socket/SocketSetting.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_5": "assets/Script/Socket/SocketSetting.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelSoundSet.js",
-    "mTimestamp": 1688722641589
+    "mTimestamp": 1689235850696
   },
   "assets/Script/Enum/CASTCommandType.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/CASTCommandType.js",
-    "mTimestamp": 1688722641595
+    "mTimestamp": 1689235850673
   },
   "assets/Script/Enum/AssetType.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/AssetType.js",
-    "mTimestamp": 1688722641516
+    "mTimestamp": 1689235850716
   },
   "assets/Script/Enum/CheckLoadingType.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/CheckLoadingType.js",
-    "mTimestamp": 1688722641684
+    "mTimestamp": 1689235850726
   },
   "assets/Script/Enum/CoinType.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/CoinType.js",
-    "mTimestamp": 1688722641621
+    "mTimestamp": 1689235850733
   },
   "assets/Script/Enum/Easing.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/Easing.js",
-    "mTimestamp": 1688722641628
+    "mTimestamp": 1689235850741
   },
   "assets/Script/Enum/CommandType.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/CommandType.js",
-    "mTimestamp": 1688722641603
+    "mTimestamp": 1689235850754
   },
   "assets/Script/Enum/EffectType.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/EffectType.js",
-    "mTimestamp": 1688722641634
+    "mTimestamp": 1689235850747
   },
   "assets/Script/Enum/GameSenceName.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/GameSenceName.js",
-    "mTimestamp": 1688722641639
+    "mTimestamp": 1689235850767
   },
   "assets/Script/Enum/GameEvent.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/GameEvent.js",
-    "mTimestamp": 1688722641610
+    "mTimestamp": 1689235850776
   },
   "assets/Script/Enum/GameType.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/GameType.js",
-    "mTimestamp": 1688722641644
-  },
-  "assets/Script/Enum/GameStateEvent.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Enum/GameStateEvent.js",
-    "mTimestamp": 1688722641651
+    "mTimestamp": 1689235850762
   },
   "assets/Script/Enum/LangType.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/LangType.js",
-    "mTimestamp": 1688722641690
+    "mTimestamp": 1689235850782
   },
   "assets/Script/Enum/GameWinerResult.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/GameWinerResult.js",
-    "mTimestamp": 1688722641659
-  },
-  "assets/Script/Enum/LobbyStateEvent.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Enum/LobbyStateEvent.js",
-    "mTimestamp": 1688722641696
+    "mTimestamp": 1689235850787
   },
   "assets/Script/Enum/LisnerTouch.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/LisnerTouch.js",
-    "mTimestamp": 1688722641668
+    "mTimestamp": 1689235850793
   },
   "assets/Script/Enum/LisnerEditBox.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/LisnerEditBox.js",
-    "mTimestamp": 1688722641674
+    "mTimestamp": 1689235850812
   },
   "assets/Script/Enum/MessageCommend.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/MessageCommend.js",
-    "mTimestamp": 1688722641678
+    "mTimestamp": 1689235850819
   },
   "assets/Script/Enum/PageAction.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/PageAction.js",
-    "mTimestamp": 1688722641701
+    "mTimestamp": 1689235850804
   },
   "assets/Script/Enum/PageMenu.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/PageMenu.js",
-    "mTimestamp": 1688722641714
+    "mTimestamp": 1689235850825
   },
   "assets/Script/Enum/PlayerIdentity.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/PlayerIdentity.js",
-    "mTimestamp": 1688722641706
+    "mTimestamp": 1689235850841
   },
   "assets/Script/Enum/ViewIndex.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/ViewIndex.js",
-    "mTimestamp": 1688722641724
+    "mTimestamp": 1689235850877
   },
   "assets/Script/Enum/ScrollViewEventType.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/ScrollViewEventType.js",
-    "mTimestamp": 1688722641729
+    "mTimestamp": 1689235850857
   },
   "assets/Script/Enum/ServerGameSenceType.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/ServerGameSenceType.js",
-    "mTimestamp": 1688722641738
+    "mTimestamp": 1689235850849
   },
   "assets/Script/Enum/WebSocketEvent.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/WebSocketEvent.js",
-    "mTimestamp": 1688722641750
+    "mTimestamp": 1689235850882
   },
   "assets/Script/Enum/WebPlatform.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Enum/WebPlatform.js",
-    "mTimestamp": 1688722641743
+    "mTimestamp": 1689235850867
   },
   "assets/Script/Manager/AssetMng.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Script/Asset/MusicAsset.js",
       "__unresolved_2": "assets/Script/Asset/SpriteAsset.js",
       "__unresolved_3": "assets/Script/Asset/SpriteAtlasAsset.js",
       "__unresolved_4": "assets/Script/Enum/AssetType.js",
-      "__unresolved_5": "assets/Script/Asset/PrefabAsset.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_5": "assets/Script/Asset/PrefabAsset.js"
     },
     "physicalLocation": "fs/0/assets/Script/Manager/AssetMng.js",
-    "mTimestamp": 1688722641796
+    "mTimestamp": 1689235850943
   },
   "assets/Script/Interface/IDtTimer.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Interface/IDtTimer.js",
-    "mTimestamp": 1688722641780
+    "mTimestamp": 1689235850896
   },
   "assets/Script/Interface/IAsset.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Interface/IAsset.js",
-    "mTimestamp": 1688722641755
+    "mTimestamp": 1689235850871
   },
   "assets/Script/Manager/ButtonMng.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Manager/ButtonMng.js",
-    "mTimestamp": 1688722641774
+    "mTimestamp": 1689235850925
   },
   "assets/Script/Manager/EventMng.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Manager/EventMng.js",
-    "mTimestamp": 1688722641819
+    "mTimestamp": 1689235850948
   },
   "assets/Script/Manager/MusicMng.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Script/Contorll/Data/DataMusic.js",
       "__unresolved_2": "assets/Script/Enum/AssetType.js",
@@ -570,263 +534,235 @@
       "__unresolved_7": "assets/Script/Manager/AssetMng.js",
       "__unresolved_4": "assets/Script/Model/CheckLoading.js",
       "__unresolved_5": "assets/Script/Model/GameData.js",
-      "__unresolved_6": "assets/Script/Model/PublicData.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_6": "assets/Script/Model/PublicData.js"
     },
     "physicalLocation": "fs/0/assets/Script/Manager/MusicMng.js",
-    "mTimestamp": 1688722641873
+    "mTimestamp": 1689235850991
   },
   "assets/Script/Manager/EditBoxMng.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Enum/LisnerEditBox.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Script/Enum/LisnerEditBox.js"
     },
     "physicalLocation": "fs/0/assets/Script/Manager/EditBoxMng.js",
-    "mTimestamp": 1688722641811
+    "mTimestamp": 1689235850912
   },
   "assets/Script/Manager/NodePoolMng/CCNodePool.js": {
     "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Manager/NodePoolMng/CCNodePool.js",
-    "mTimestamp": 1688722641831
+    "mTimestamp": 1689235851001
   },
   "assets/Script/Manager/NodePoolMng/IPool.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Manager/NodePoolMng/IPool.js",
-    "mTimestamp": 1688722641880
+    "mTimestamp": 1689235850953
   },
   "assets/Script/Manager/PanelMng/LobbyPanel.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Manager/PanelMng/PanelMng.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Script/Manager/PanelMng/PanelMng.js"
     },
     "physicalLocation": "fs/0/assets/Script/Manager/PanelMng/LobbyPanel.js",
-    "mTimestamp": 1688722641955
+    "mTimestamp": 1689235851066
   },
   "assets/Script/Manager/NodePoolMng/SelfPool.js": {
     "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Manager/NodePoolMng/SelfPool.js",
-    "mTimestamp": 1688722641891
+    "mTimestamp": 1689235851030
   },
   "assets/Script/Manager/NodePoolMng/NodePoolMng.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Patten/Singleton/BaseSingleton.js",
       "__unresolved_2": "assets/Script/Manager/NodePoolMng/CCNodePool.js",
-      "__unresolved_3": "assets/Script/Manager/NodePoolMng/SelfPool.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_3": "assets/Script/Manager/NodePoolMng/SelfPool.js"
     },
     "physicalLocation": "fs/0/assets/Script/Manager/NodePoolMng/NodePoolMng.js",
-    "mTimestamp": 1688722641917
+    "mTimestamp": 1689235851020
   },
   "assets/Script/Manager/PanelMng/GamePanelType.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Manager/PanelMng/GamePanelType.js",
-    "mTimestamp": 1688722641924
+    "mTimestamp": 1689235851038
   },
   "assets/Script/Manager/PanelMng/PanelMng.js": {
     "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Manager/PanelMng/PanelMng.js",
-    "mTimestamp": 1688722641944
+    "mTimestamp": 1689235851083
   },
   "assets/Script/Manager/PanelMng/GamePanel.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Manager/PanelMng/PanelMng.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Script/Manager/PanelMng/PanelMng.js"
     },
     "physicalLocation": "fs/0/assets/Script/Manager/PanelMng/GamePanel.js",
-    "mTimestamp": 1688722641900
+    "mTimestamp": 1689235851048
   },
   "assets/Script/Manager/RoadMng.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Manager/RoadMng.js",
-    "mTimestamp": 1688722641928
+    "mTimestamp": 1689235851057
   },
   "assets/Script/Model/CheckLoading.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Patten/Singleton/BaseSingleton.js",
-      "__unresolved_2": "assets/Script/Enum/CheckLoadingType.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_2": "assets/Script/Enum/CheckLoadingType.js"
     },
     "physicalLocation": "fs/0/assets/Script/Model/CheckLoading.js",
-    "mTimestamp": 1688722641997
+    "mTimestamp": 1689235851104
   },
   "assets/Script/Model/ButtonFunctionApi.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Model/ButtonFunctionApi.js",
-    "mTimestamp": 1688722642004
+    "mTimestamp": 1689235851090
   },
   "assets/Script/Model/ComponentBase.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Script/Enum/GameEvent.js",
       "__unresolved_2": "assets/Script/Manager/EventMng.js",
       "__unresolved_3": "assets/Script/Model/PublicData.js",
-      "__unresolved_4": "assets/Script/Model/PublicModel.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_4": "assets/Script/Model/PublicModel.js"
     },
     "physicalLocation": "fs/0/assets/Script/Model/ComponentBase.js",
-    "mTimestamp": 1688722642043
+    "mTimestamp": 1689235851158
   },
   "assets/Script/Model/GameSenceText.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Script/Enum/LangType.js",
       "__unresolved_2": "assets/Script/Enum/ServerGameSenceType.js",
       "__unresolved_4": "assets/Script/Model/RoomData.js",
-      "__unresolved_3": "assets/Script/Socket/SocketSetting.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_3": "assets/Script/Socket/SocketSetting.js"
     },
     "physicalLocation": "fs/0/assets/Script/Model/GameSenceText.js",
-    "mTimestamp": 1688722642086
+    "mTimestamp": 1689235851189
   },
   "assets/Script/Model/GameData.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Patten/Singleton/BaseSingleton.js",
       "__unresolved_2": "assets/Script/Enum/CoinType.js",
-      "__unresolved_3": "assets/Script/Enum/GameType.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_3": "assets/Script/Enum/GameType.js"
     },
     "physicalLocation": "fs/0/assets/Script/Model/GameData.js",
-    "mTimestamp": 1688722642021
+    "mTimestamp": 1689235851215
   },
   "assets/Script/Model/JudgePlatform.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/Model/JudgePlatform.js",
-    "mTimestamp": 1688722642098
+    "mTimestamp": 1689235851225
   },
   "assets/Script/Model/LabelAutoFollow.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_2": "assets/Script/Model/PublicModel.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_2": "assets/Script/Model/PublicModel.js"
     },
     "physicalLocation": "fs/0/assets/Script/Model/LabelAutoFollow.js",
-    "mTimestamp": 1688722642055
+    "mTimestamp": 1689235851200
   },
   "assets/Script/Model/Player.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Patten/Singleton/BaseSingleton.js",
       "__unresolved_2": "assets/Script/Enum/CoinType.js",
       "__unresolved_3": "assets/Script/Enum/PlayerIdentity.js",
-      "__unresolved_4": "assets/Script/Model/GameData.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_4": "assets/Script/Model/GameData.js"
     },
     "physicalLocation": "fs/0/assets/Script/Model/Player.js",
-    "mTimestamp": 1688722642111
+    "mTimestamp": 1689235851243
   },
   "assets/Script/Model/RoomData.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Patten/Singleton/BaseSingleton.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Patten/Singleton/BaseSingleton.js"
     },
     "physicalLocation": "fs/0/assets/Script/Model/RoomData.js",
-    "mTimestamp": 1688722642237
+    "mTimestamp": 1689235851312
   },
   "assets/Script/Model/SocketModel.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_2": "assets/Script/Model/JudgePlatform.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_2": "assets/Script/Model/JudgePlatform.js"
     },
     "physicalLocation": "fs/0/assets/Script/Model/SocketModel.js",
-    "mTimestamp": 1688722642272
+    "mTimestamp": 1689235851395
   },
   "assets/Script/Socket/SocketSetting.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Enum/LangType.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Script/Enum/LangType.js"
     },
     "physicalLocation": "fs/0/assets/Script/Socket/SocketSetting.js",
-    "mTimestamp": 1688722642294
+    "mTimestamp": 1689235851413
   },
   "assets/Script/Model/TestDelay.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Script/Model/ComponentBase.js"
     },
     "physicalLocation": "fs/0/assets/Script/Model/TestDelay.js",
-    "mTimestamp": 1688722642280
-  },
-  "assets/Script/Socket/GameWebSocket.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Contorll/Api/SendCommand.js",
-      "__unresolved_2": "assets/Script/Enum/MessageCommend.js",
-      "__unresolved_3": "assets/Script/Enum/LangType.js",
-      "__unresolved_4": "assets/Script/Enum/CheckLoadingType.js",
-      "__unresolved_5": "assets/Script/Enum/CommandType.js",
-      "__unresolved_6": "assets/Script/Enum/WebSocketEvent.js",
-      "__unresolved_7": "assets/Script/Model/PublicData.js",
-      "__unresolved_8": "assets/Script/Model/SocketModel.js",
-      "__unresolved_10": "assets/Plug/DelayTime.js",
-      "__unresolved_11": "assets/Script/Model/CheckLoading.js",
-      "__unresolved_12": "assets/Script/Model/GameData.js",
-      "__unresolved_13": "assets/Script/Model/Player.js",
-      "__unresolved_14": "assets/Script/Model/PublicModel.js",
-      "__unresolved_15": "assets/Script/Contorll/GameControll/GameControll.js",
-      "__unresolved_16": "assets/Script/Contorll/Api/CASTAPI.js",
-      "__unresolved_17": "assets/Script/Enum/PlayerIdentity.js",
-      "__unresolved_18": "assets/Script/Enum/WebPlatform.js",
-      "__unresolved_19": "assets/Script/Manager/AssetMng.js",
-      "__unresolved_9": "assets/Script/Socket/SocketSetting.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Socket/GameWebSocket.js",
-    "mTimestamp": 1688722642406
+    "mTimestamp": 1689235851324
   },
   "assets/Script/State/MessageState.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Patten/StatePatten.js",
       "__unresolved_2": "assets/Script/Contorll/NoClearNode/PanelSystemMessage.js",
       "__unresolved_3": "assets/Script/Enum/GameStateEvent.js",
       "__unresolved_4": "assets/Script/Manager/EventMng.js",
-      "__unresolved_5": "assets/Script/Model/ButtonFunctionApi.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_5": "assets/Script/Model/ButtonFunctionApi.js"
     },
     "physicalLocation": "fs/0/assets/Script/State/MessageState.js",
-    "mTimestamp": 1688722642316
+    "mTimestamp": 1689235851491
   },
   "assets/Script/State/PlayState.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Patten/StatePatten.js",
       "__unresolved_2": "assets/Script/Enum/GameStateEvent.js",
-      "__unresolved_3": "assets/Script/Manager/EventMng.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_3": "assets/Script/Manager/EventMng.js"
     },
     "physicalLocation": "fs/0/assets/Script/State/PlayState.js",
-    "mTimestamp": 1688722642526
+    "mTimestamp": 1689235851601
   },
   "assets/Script/State/GameState.js": {
     "imports": {
@@ -846,6 +782,7 @@
   },
   "assets/Script/State/LobbyState.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Script/Model/PublicData.js",
       "__unresolved_2": "assets/Patten/StatePatten.js",
@@ -859,14 +796,14 @@
       "__unresolved_11": "assets/Script/Enum/WebSocketEvent.js",
       "__unresolved_12": "assets/Script/Enum/CommandType.js",
       "__unresolved_13": "assets/Script/Model/PublicModel.js",
-      "__unresolved_8": "assets/Script/View/MainLobby.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_8": "assets/Script/View/MainLobby.js"
     },
     "physicalLocation": "fs/0/assets/Script/State/LobbyState.js",
-    "mTimestamp": 1688722642441
+    "mTimestamp": 1689235851653
   },
   "assets/Script/State/ViewState.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Script/Contorll/Api/ResponeCommand.js",
       "__unresolved_2": "assets/Script/Model/PublicData.js",
@@ -887,28 +824,28 @@
       "__unresolved_17": "assets/Script/Socket/SocketSetting.js",
       "__unresolved_18": "assets/Script/Enum/LangType.js",
       "__unresolved_19": "assets/Script/Model/CheckLoading.js",
-      "__unresolved_20": "assets/Script/Enum/CheckLoadingType.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_20": "assets/Script/Enum/CheckLoadingType.js"
     },
     "physicalLocation": "fs/0/assets/Script/State/ViewState.js",
-    "mTimestamp": 1688722642581
+    "mTimestamp": 1689235851757
   },
   "assets/Script/View/MainLoading.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Patten/Singleton/BaseSingletonComponent.js",
       "__unresolved_2": "assets/Script/Contorll/NoClearNode/PanelLoading.js",
       "__unresolved_3": "assets/Script/Enum/GameSenceName.js",
       "__unresolved_4": "assets/Script/Manager/AssetMng.js",
       "__unresolved_5": "assets/Script/Manager/MusicMng.js",
-      "__unresolved_6": "assets/Script/Model/PublicData.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_6": "assets/Script/Model/PublicData.js"
     },
     "physicalLocation": "fs/0/assets/Script/View/MainLoading.js",
-    "mTimestamp": 1688722642656
+    "mTimestamp": 1689235851671
   },
   "assets/Script/View/MainLobby.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Patten/Singleton/BaseSingletonComponent.js",
       "__unresolved_2": "assets/Script/Contorll/Api/SendCommand.js",
@@ -920,80 +857,80 @@
       "__unresolved_8": "assets/Script/Model/GameData.js",
       "__unresolved_9": "assets/Script/Model/Player.js",
       "__unresolved_10": "assets/Script/Model/PublicData.js",
-      "__unresolved_11": "assets/Script/Model/RoomData.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_11": "assets/Script/Model/RoomData.js"
     },
     "physicalLocation": "fs/0/assets/Script/View/MainLobby.js",
-    "mTimestamp": 1688722642614
+    "mTimestamp": 1689235851857
   },
   "assets/Script/test/colorTest.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/test/colorTest.js",
-    "mTimestamp": 1688722642636
+    "mTimestamp": 1689235851813
   },
   "assets/Script/test/extentTest.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Script/Model/ComponentBase.js"
     },
     "physicalLocation": "fs/0/assets/Script/test/extentTest.js",
-    "mTimestamp": 1688722642673
+    "mTimestamp": 1689235851872
   },
   "assets/Script/test/regTtest.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/test/extentTest.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Script/test/extentTest.js"
     },
     "physicalLocation": "fs/0/assets/Script/test/regTtest.js",
-    "mTimestamp": 1688722642719
+    "mTimestamp": 1689235851976
   },
   "assets/Script/test/poly.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/test/poly.js",
-    "mTimestamp": 1688722642683
+    "mTimestamp": 1689235851961
   },
   "assets/Script/test/testHTML.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Script/Model/ComponentBase.js"
     },
     "physicalLocation": "fs/0/assets/Script/test/testHTML.js",
-    "mTimestamp": 1688722642709
+    "mTimestamp": 1689235851953
   },
   "assets/Script/test/delayTest.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Script/test/delayTest.js",
-    "mTimestamp": 1688722642622
+    "mTimestamp": 1689235851821
   },
   "assets/Plug/EditSpine.proxy.js?cjs&original=.js": {
     "imports": {
       "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "__unresolved_2": "quick-pack:/cce/internal/ml/cjs-loader.js",
       "__unresolved_1": "assets/Plug/EditSpine.js",
       "__unresolved_3": "assets/Plug/EditSpine.js",
-      "__unresolved_4": "assets/Plug/EditSpine.js",
-      "__unresolved_2": "quick-pack:/cce/internal/ml/cjs-loader.js"
+      "__unresolved_4": "assets/Plug/EditSpine.js"
     },
     "physicalLocation": "fs/0/assets/Plug/EditSpine.proxy.js@63cjs&original=.js",
-    "mTimestamp": 1688722642753
+    "mTimestamp": 1689235851891
   },
   "assets/Plug/EditSpine.js": {
     "imports": {
       "__unresolved_0": "quick-pack:/cce/internal/ml/cjs-loader.js"
     },
     "physicalLocation": "fs/0/assets/Plug/EditSpine.js",
-    "mTimestamp": 1688722643097
+    "mTimestamp": 1689235852260
   },
   "assets/Script/Contorll/GameControll/GameControll.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_5": "assets/Patten/StatePatten.js",
       "__unresolved_13": "assets/Patten/Singleton/BaseSingleton.js",
@@ -1016,40 +953,10 @@
       "__unresolved_6": "assets/Script/State/LobbyState.js",
       "__unresolved_9": "assets/Script/State/MessageState.js",
       "__unresolved_7": "assets/Script/State/PlayState.js",
-      "__unresolved_8": "assets/Script/State/ViewState.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_8": "assets/Script/State/ViewState.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/GameControll/GameControll.js",
-    "mTimestamp": 1688722641049
-  },
-  "assets/Script/Model/ResponsGPG.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Model/ResponsGPG.js",
-    "mTimestamp": 1688722642246
-  },
-  "assets/Script/Contorll/Api/FetchApi.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Model/ResponsGPG.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Contorll/Api/FetchApi.js",
-    "mTimestamp": 1688722640619
-  },
-  "assets/Script/Model/BallData.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Enum/AssetType.js",
-      "__unresolved_2": "assets/Script/Manager/AssetMng.js",
-      "__unresolved_3": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_4": "assets/Script/Model/LabelAutoFollow.js",
-      "__unresolved_5": "assets/Script/Model/PublicModel.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Model/BallData.js",
-    "mTimestamp": 1688722641982
+    "mTimestamp": 1689235850060
   },
   "assets/Script/Contorll/Lobby/PanelBall.js": {
     "imports": {
@@ -1170,17 +1077,6 @@
     "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/PanelChooeseBall.js",
     "mTimestamp": 1688715279684
   },
-  "assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelChooeseBall.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Enum/LobbyStateEvent.js",
-      "__unresolved_2": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_3": "assets/Script/Model/PublicModel.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelChooeseBall.js",
-    "mTimestamp": 1688722641254
-  },
   "assets/Script/Contorll/Lobby/Page/Point/PanelClientPointRecord.js": {
     "imports": {
       "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
@@ -1191,17 +1087,6 @@
     "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelClientPointRecord.js",
     "mTimestamp": 1688716625254
   },
-  "assets/Script/Contorll/Lobby/Page/Point/PanelPageButton.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Enum/AssetType.js",
-      "__unresolved_2": "assets/Script/Manager/AssetMng.js",
-      "__unresolved_3": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelPageButton.js",
-    "mTimestamp": 1688722641215
-  },
   "assets/Script/Contorll/Lobby/Page/Point/PanelRank.js": {
     "imports": {
       "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
@@ -1211,33 +1096,21 @@
     "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelRank.js",
     "mTimestamp": 1688718701385
   },
-  "assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Enum/AssetType.js",
-      "__unresolved_2": "assets/Script/Manager/AssetMng.js",
-      "__unresolved_3": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_4": "assets/Script/Model/RankItmeData.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js",
-    "mTimestamp": 1688722641136
-  },
   "assets/Script/Model/RankItmeData.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Script/Enum/AssetType.js",
       "__unresolved_2": "assets/Script/Manager/AssetMng.js",
-      "__unresolved_3": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_3": "assets/Script/Model/ComponentBase.js"
     },
     "physicalLocation": "fs/0/assets/Script/Model/RankItmeData.js",
-    "mTimestamp": 1688722642160
+    "mTimestamp": 1689235851345
   },
   "assets/Script/View/MainGame.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js",
       "__unresolved_2": "assets/Script/Enum/CommandType.js",
       "__unresolved_3": "assets/Script/Enum/LangType.js",
       "__unresolved_4": "assets/Script/Enum/CheckLoadingType.js",
@@ -1249,6 +1122,7 @@
       "__unresolved_10": "assets/Script/Contorll/Api/SendCommand.js",
       "__unresolved_11": "assets/Script/Socket/SocketSetting.js",
       "__unresolved_12": "assets/Script/Enum/GameEvent.js",
+      "__unresolved_13": "assets/Script/Contorll/Lobby/PanelGameMessage.js",
       "__unresolved_14": "assets/Script/Contorll/NoClearNode/PanelLoading.js",
       "__unresolved_15": "assets/Patten/Singleton/SingletonManger.js",
       "__unresolved_16": "assets/Script/Manager/AssetMng.js",
@@ -1256,35 +1130,10 @@
       "__unresolved_18": "assets/Script/Model/Player.js",
       "__unresolved_19": "assets/Script/Enum/PlayerIdentity.js",
       "__unresolved_20": "assets/Script/Contorll/NoClearNode/CanvasControll.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "__unresolved_13": "assets/Script/Contorll/Lobby/PanelGameMessage.js"
+      "__unresolved_1": "assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js"
     },
     "physicalLocation": "fs/0/assets/Script/View/MainGame.js",
-    "mTimestamp": 1688722670793
-  },
-  "assets/Script/Contorll/Lobby/Page/Home/PanelHome.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_3": "assets/Script/Contorll/Lobby/PageControll.js",
-      "__unresolved_1": "assets/Script/Enum/PageAction.js",
-      "__unresolved_2": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js",
-    "mTimestamp": 1688972284002
-  },
-  "assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_5": "assets/Script/Contorll/Lobby/PageControll.js",
-      "__unresolved_1": "assets/Script/Enum/PageAction.js",
-      "__unresolved_2": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_3": "assets/Script/Model/PublicData.js",
-      "__unresolved_4": "assets/Script/Model/PublicModel.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js",
-    "mTimestamp": 1688972284095
+    "mTimestamp": 1689235851473
   },
   "assets/Script/Contorll/Lobby/Page/Setting/PanelSettingItem.js": {
     "imports": {
@@ -1294,43 +1143,6 @@
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/Setting/PanelSettingItem.js",
     "mTimestamp": 1688973411104
-  },
-  "assets/Script/Model/PublicModel.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Patten/Singleton/BaseSingleton.js",
-      "__unresolved_2": "assets/Plug/MyMath.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Model/PublicModel.js",
-    "mTimestamp": 1689045142131
-  },
-  "assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Plug/DelayTime.js",
-      "__unresolved_2": "assets/Script/Enum/AssetType.js",
-      "__unresolved_3": "assets/Script/Enum/LobbyStateEvent.js",
-      "__unresolved_4": "assets/Script/Manager/AssetMng.js",
-      "__unresolved_5": "assets/Script/Manager/ButtonMng.js",
-      "__unresolved_6": "assets/Script/Model/BallData.js",
-      "__unresolved_7": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js",
-    "mTimestamp": 1689046738912
-  },
-  "assets/Script/Contorll/Lobby/PageControll.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Patten/Singleton/BaseSingletonComponent.js",
-      "__unresolved_2": "assets/Script/Enum/PageAction.js",
-      "__unresolved_3": "assets/Script/Manager/AssetMng.js",
-      "__unresolved_4": "assets/Script/Manager/MusicMng.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/PageControll.js",
-    "mTimestamp": 1689046739023
   },
   "assets/Script/Contorll/Lobby/Page/Setting/SettingItem.js": {
     "imports": {
@@ -1357,59 +1169,285 @@
   },
   "assets/Script/Contorll/Lobby/Page/Setting/ItemSetting.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Script/Enum/AssetType.js",
       "__unresolved_2": "assets/Script/Manager/AssetMng.js",
       "__unresolved_3": "assets/Script/Manager/MusicMng.js",
       "__unresolved_4": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_5": "assets/Script/Model/PublicModel.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_5": "assets/Script/Model/PublicModel.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/Setting/ItemSetting.js",
-    "mTimestamp": 1689053143585
+    "mTimestamp": 1689235850200
   },
   "assets/Script/Contorll/Lobby/Page/Setting/PanelLink.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_2": "assets/Script/Contorll/Lobby/Page/Setting/ItemLink.js",
-      "__unresolved_1": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_1": "assets/Script/Model/ComponentBase.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/Setting/PanelLink.js",
-    "mTimestamp": 1689053165798
+    "mTimestamp": 1689235850318
   },
   "assets/Script/Contorll/Lobby/Page/Setting/PanelSetting.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_4": "assets/Script/Contorll/Lobby/Page/Setting/ItemSetting.js",
       "__unresolved_1": "assets/Script/Enum/AssetType.js",
       "__unresolved_2": "assets/Script/Manager/AssetMng.js",
-      "__unresolved_3": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_3": "assets/Script/Model/ComponentBase.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/Setting/PanelSetting.js",
-    "mTimestamp": 1689053375627
+    "mTimestamp": 1689235850336
   },
   "assets/Script/Contorll/Lobby/Page/Setting/ItemLink.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_2": "assets/Script/Model/PublicModel.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_2": "assets/Script/Model/PublicModel.js"
     },
     "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/Setting/ItemLink.js",
-    "mTimestamp": 1689053844753
+    "mTimestamp": 1689235850267
   },
-  "assets/Script/Model/PublicData.js": {
+  "assets/Script/Contorll/Lobby/PanelGameMessage.js": {
     "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Script/Enum/GameEvent.js",
+      "__unresolved_2": "assets/Script/Enum/GameStateEvent.js",
+      "__unresolved_3": "assets/Script/Model/ComponentBase.js",
+      "__unresolved_4": "assets/Script/Model/MessageItem.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/PanelGameMessage.js",
+    "mTimestamp": 1689235850408
+  },
+  "assets/Script/Model/MessageItem.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Script/Model/ComponentBase.js",
+      "__unresolved_2": "assets/Script/Model/PublicModel.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Model/MessageItem.js",
+    "mTimestamp": 1689235851264
+  },
+  "assets/Script/Socket/GameWebSocket.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Script/Contorll/Api/SendCommand.js",
+      "__unresolved_2": "assets/Script/Enum/MessageCommend.js",
+      "__unresolved_3": "assets/Script/Enum/LangType.js",
+      "__unresolved_4": "assets/Script/Enum/CheckLoadingType.js",
+      "__unresolved_5": "assets/Script/Enum/CommandType.js",
+      "__unresolved_6": "assets/Script/Enum/WebSocketEvent.js",
+      "__unresolved_7": "assets/Script/Model/PublicData.js",
+      "__unresolved_8": "assets/Script/Model/SocketModel.js",
+      "__unresolved_10": "assets/Plug/DelayTime.js",
+      "__unresolved_11": "assets/Script/Model/CheckLoading.js",
+      "__unresolved_12": "assets/Script/Model/GameData.js",
+      "__unresolved_13": "assets/Script/Model/Player.js",
+      "__unresolved_14": "assets/Script/Model/PublicModel.js",
+      "__unresolved_15": "assets/Script/Contorll/GameControll/GameControll.js",
+      "__unresolved_16": "assets/Script/Contorll/Api/CASTAPI.js",
+      "__unresolved_17": "assets/Script/Enum/PlayerIdentity.js",
+      "__unresolved_18": "assets/Script/Enum/WebPlatform.js",
+      "__unresolved_19": "assets/Script/Manager/AssetMng.js",
+      "__unresolved_9": "assets/Script/Socket/SocketSetting.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Socket/GameWebSocket.js",
+    "mTimestamp": 1689235851576
+  },
+  "assets/Script/Contorll/Lobby/Page/Point/PanelPageButton.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Script/Enum/AssetType.js",
+      "__unresolved_2": "assets/Script/Enum/LobbyStateEvent.js",
+      "__unresolved_3": "assets/Script/Manager/AssetMng.js",
+      "__unresolved_4": "assets/Script/Model/ComponentBase.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelPageButton.js",
+    "mTimestamp": 1689235850297
+  },
+  "assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Script/Enum/AssetType.js",
+      "__unresolved_2": "assets/Script/Manager/AssetMng.js",
+      "__unresolved_3": "assets/Script/Model/ComponentBase.js",
+      "__unresolved_4": "assets/Script/Model/RankItmeData.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js",
+    "mTimestamp": 1689235850226
+  },
+  "assets/Script/Contorll/Lobby/Page/Home/PanelHome.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_4": "assets/Script/Contorll/Lobby/PageControll.js",
+      "__unresolved_1": "assets/Script/Enum/LobbyStateEvent.js",
+      "__unresolved_2": "assets/Script/Enum/PageAction.js",
+      "__unresolved_3": "assets/Script/Model/ComponentBase.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js",
+    "mTimestamp": 1689235850145
+  },
+  "assets/Script/Enum/GameStateEvent.js": {
+    "imports": {
+      "cc": "quick-pack:/cce/internal/x/cc.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Enum/GameStateEvent.js",
+    "mTimestamp": 1689235850835
+  },
+  "assets/Script/Enum/LobbyStateEvent.js": {
+    "imports": {
+      "cc": "quick-pack:/cce/internal/x/cc.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Enum/LobbyStateEvent.js",
+    "mTimestamp": 1689235850798
+  },
+  "assets/Script/Contorll/Lobby/Page/Point/PanelPoint.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_3": "assets/Script/Enum/AssetType.js",
+      "__unresolved_4": "assets/Script/Manager/AssetMng.js",
+      "__unresolved_1": "assets/Script/Model/ComponentBase.js",
+      "__unresolved_2": "assets/Script/Model/PointItemData.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelPoint.js",
+    "mTimestamp": 1689235850250
+  },
+  "assets/Script/Model/PointItemData.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Script/Model/BallData.js",
+      "__unresolved_2": "assets/Script/Model/ComponentBase.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Model/PointItemData.js",
+    "mTimestamp": 1689235851302
+  },
+  "assets/Script/Contorll/Lobby/Page/ClientInfo/PanelClinetInfo.js": {
+    "imports": {
+      "cc": "quick-pack:/cce/internal/x/cc.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/ClientInfo/PanelClinetInfo.js",
+    "mTimestamp": 1689068655651
+  },
+  "assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelChooeseBall.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Script/Enum/LobbyStateEvent.js",
+      "__unresolved_2": "assets/Script/Model/ComponentBase.js",
+      "__unresolved_3": "assets/Script/Model/PublicModel.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelChooeseBall.js",
+    "mTimestamp": 1689235850163
+  },
+  "assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Plug/DelayTime.js",
+      "__unresolved_2": "assets/Script/Enum/AssetType.js",
+      "__unresolved_3": "assets/Script/Enum/LobbyStateEvent.js",
+      "__unresolved_4": "assets/Script/Manager/AssetMng.js",
+      "__unresolved_5": "assets/Script/Manager/ButtonMng.js",
+      "__unresolved_6": "assets/Script/Model/BallData.js",
+      "__unresolved_7": "assets/Script/Model/ComponentBase.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js",
+    "mTimestamp": 1689235850110
+  },
+  "assets/Script/Contorll/Lobby/PanelLobbyTest.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Script/Model/ComponentBase.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/PanelLobbyTest.js",
+    "mTimestamp": 1689235850381
+  },
+  "assets/Script/Model/BallData.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Script/Enum/AssetType.js",
+      "__unresolved_2": "assets/Script/Manager/AssetMng.js",
+      "__unresolved_3": "assets/Script/Model/ComponentBase.js",
+      "__unresolved_4": "assets/Script/Model/LabelAutoFollow.js",
+      "__unresolved_5": "assets/Script/Model/PublicModel.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Model/BallData.js",
+    "mTimestamp": 1689235851136
+  },
+  "assets/Script/Contorll/AutoView/AutoView.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Plug/DelayTime.js",
+      "__unresolved_2": "assets/Script/Model/PublicData.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/AutoView/AutoView.js",
+    "mTimestamp": 1689235849795
+  },
+  "assets/Script/Model/PublicModel.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
       "cc": "quick-pack:/cce/internal/x/cc.js",
       "__unresolved_1": "assets/Patten/Singleton/BaseSingleton.js",
-      "__unresolved_2": "assets/Script/Enum/GameSenceName.js",
-      "__unresolved_3": "assets/Script/Model/CheckLoading.js",
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
+      "__unresolved_2": "assets/Plug/MyMath.js"
     },
-    "physicalLocation": "fs/0/assets/Script/Model/PublicData.js",
-    "mTimestamp": 1689054809731
+    "physicalLocation": "fs/0/assets/Script/Model/PublicModel.js",
+    "mTimestamp": 1689235851372
+  },
+  "assets/Script/Model/ResponsGPG.js": {
+    "imports": {
+      "cc": "quick-pack:/cce/internal/x/cc.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Model/ResponsGPG.js",
+    "mTimestamp": 1689229298203
+  },
+  "assets/Script/Contorll/Loading/PanelGameLoading.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Plug/MyMath.js",
+      "__unresolved_5": "assets/Script/Contorll/Api/GPGAPI/RequestGPG.js",
+      "__unresolved_2": "assets/Script/Enum/GameEvent.js",
+      "__unresolved_3": "assets/Script/Enum/GameSenceName.js",
+      "__unresolved_4": "assets/Script/Model/ComponentBase.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Loading/PanelGameLoading.js",
+    "mTimestamp": 1689235849823
+  },
+  "assets/Script/Contorll/Api/FetchApi.js": {
+    "imports": {
+      "cc": "quick-pack:/cce/internal/x/cc.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Api/FetchApi.js",
+    "mTimestamp": 1689231857186
+  },
+  "assets/Script/Model/GPGAPI/ResponseGPG.js": {
+    "imports": {
+      "cc": "quick-pack:/cce/internal/x/cc.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Model/GPGAPI/ResponseGPG.js",
+    "mTimestamp": 1689231857268
+  },
+  "assets/Script/Contorll/Api/GPGAPI/ResponseGPG.js": {
+    "imports": {
+      "cc": "quick-pack:/cce/internal/x/cc.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Api/GPGAPI/ResponseGPG.js",
+    "mTimestamp": 1689235849558
   },
   "quick-pack:/cce/internal/x/cc.js": {
     "imports": {
@@ -1499,195 +1537,218 @@
       }
     },
     "physicalLocation": "cce/internal/x/cc.js",
-    "mTimestamp": 1689057183656,
+    "mTimestamp": 1689235923419,
     "isEntry": true,
     "exposeAs": "cce:/internal/x/cc"
-  },
-  "quick-pack:/cce/internal/x/prerequisite-imports.js": {
-    "imports": {
-      "__unresolved_0": "assets/Patten/Singleton/BaseSingleton.js",
-      "__unresolved_1": "assets/Patten/Singleton/BaseSingletonComponent.js",
-      "__unresolved_2": "assets/Patten/Singleton/IBaseSingleton.js",
-      "__unresolved_4": "assets/Patten/StatePatten.js",
-      "__unresolved_3": "assets/Patten/Singleton/SingletonManger.js",
-      "__unresolved_5": "assets/Plug/DelayTime.js",
-      "__unresolved_7": "assets/Plug/Image.js",
-      "__unresolved_8": "assets/Plug/MyAnimatinoPlay.js",
-      "__unresolved_10": "assets/Plug/MyMath.js",
-      "__unresolved_9": "assets/Plug/MyEditBox.js",
-      "__unresolved_11": "assets/Script/Asset/BundleAsset.js",
-      "__unresolved_13": "assets/Script/Asset/PrefabAsset.js",
-      "__unresolved_12": "assets/Script/Asset/MusicAsset.js",
-      "__unresolved_14": "assets/Script/Asset/SpineAsset.js",
-      "__unresolved_16": "assets/Script/Asset/SpriteAtlasAsset.js",
-      "__unresolved_15": "assets/Script/Asset/SpriteAsset.js",
-      "__unresolved_17": "assets/Script/Contorll/Api/CASTAPI.js",
-      "__unresolved_19": "assets/Script/Contorll/Api/ResponeCommand.js",
-      "__unresolved_18": "assets/Script/Contorll/Api/FetchApi.js",
-      "__unresolved_20": "assets/Script/Contorll/Api/SendCommand.js",
-      "__unresolved_21": "assets/Script/Contorll/AutoView/AutoView.js",
-      "__unresolved_22": "assets/Script/Contorll/AutoView/testauto.js",
-      "__unresolved_23": "assets/Script/Contorll/Data/DataMusic.js",
-      "__unresolved_24": "assets/Script/Contorll/Data/Panel/DataExchange.js",
-      "__unresolved_25": "assets/Script/Contorll/Data/Panel/DataFunctionMenu.js",
-      "__unresolved_26": "assets/Script/Contorll/Data/Panel/DataSoundSet.js",
-      "__unresolved_27": "assets/Script/Contorll/GameControll/GameControll.js",
-      "__unresolved_28": "assets/Script/Contorll/Loading/PanelGameLoading.js",
-      "__unresolved_29": "assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js",
-      "__unresolved_30": "assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelChooeseBall.js",
-      "__unresolved_32": "assets/Script/Contorll/Lobby/Page/Point/PanelPageButton.js",
-      "__unresolved_31": "assets/Script/Contorll/Lobby/Page/Home/PanelHome.js",
-      "__unresolved_34": "assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js",
-      "__unresolved_35": "assets/Script/Contorll/Lobby/Page/Setting/ItemLink.js",
-      "__unresolved_37": "assets/Script/Contorll/Lobby/Page/Setting/PanelLink.js",
-      "__unresolved_38": "assets/Script/Contorll/Lobby/Page/Setting/PanelSetting.js",
-      "__unresolved_36": "assets/Script/Contorll/Lobby/Page/Setting/ItemSetting.js",
-      "__unresolved_40": "assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js",
-      "__unresolved_39": "assets/Script/Contorll/Lobby/PageControll.js",
-      "__unresolved_43": "assets/Script/Contorll/NoClearNode/PanelLoading.js",
-      "__unresolved_42": "assets/Script/Contorll/NoClearNode/CanvasControll.js",
-      "__unresolved_44": "assets/Script/Contorll/NoClearNode/PanelSystemMessage.js",
-      "__unresolved_45": "assets/Script/Contorll/NoClearNode/PanelVersion.js",
-      "__unresolved_46": "assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelExchange.js",
-      "__unresolved_47": "assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelFunctionMenu.js",
-      "__unresolved_48": "assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelGameLoading.js",
-      "__unresolved_49": "assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelSoundSet.js",
-      "__unresolved_50": "assets/Script/Enum/AssetType.js",
-      "__unresolved_51": "assets/Script/Enum/Asset_Prefab.js",
-      "__unresolved_52": "assets/Script/Enum/CASTCommandType.js",
-      "__unresolved_54": "assets/Script/Enum/CoinType.js",
-      "__unresolved_53": "assets/Script/Enum/CheckLoadingType.js",
-      "__unresolved_55": "assets/Script/Enum/CommandType.js",
-      "__unresolved_56": "assets/Script/Enum/Easing.js",
-      "__unresolved_57": "assets/Script/Enum/EffectType.js",
-      "__unresolved_58": "assets/Script/Enum/GameEvent.js",
-      "__unresolved_59": "assets/Script/Enum/GameSenceName.js",
-      "__unresolved_60": "assets/Script/Enum/GameStateEvent.js",
-      "__unresolved_61": "assets/Script/Enum/GameType.js",
-      "__unresolved_62": "assets/Script/Enum/GameWinerResult.js",
-      "__unresolved_63": "assets/Script/Enum/LangType.js",
-      "__unresolved_64": "assets/Script/Enum/LisnerEditBox.js",
-      "__unresolved_65": "assets/Script/Enum/LisnerTouch.js",
-      "__unresolved_66": "assets/Script/Enum/LobbyStateEvent.js",
-      "__unresolved_67": "assets/Script/Enum/MessageCommend.js",
-      "__unresolved_68": "assets/Script/Enum/PageAction.js",
-      "__unresolved_69": "assets/Script/Enum/PageMenu.js",
-      "__unresolved_70": "assets/Script/Enum/PlayerIdentity.js",
-      "__unresolved_71": "assets/Script/Enum/ScrollViewEventType.js",
-      "__unresolved_72": "assets/Script/Enum/ServerGameSenceType.js",
-      "__unresolved_73": "assets/Script/Enum/ViewIndex.js",
-      "__unresolved_74": "assets/Script/Enum/WebPlatform.js",
-      "__unresolved_75": "assets/Script/Enum/WebSocketEvent.js",
-      "__unresolved_76": "assets/Script/Interface/IAsset.js",
-      "__unresolved_77": "assets/Script/Interface/IDtTimer.js",
-      "__unresolved_78": "assets/Script/Manager/AssetMng.js",
-      "__unresolved_80": "assets/Script/Manager/EditBoxMng.js",
-      "__unresolved_79": "assets/Script/Manager/ButtonMng.js",
-      "__unresolved_81": "assets/Script/Manager/EventMng.js",
-      "__unresolved_82": "assets/Script/Manager/MusicMng.js",
-      "__unresolved_83": "assets/Script/Manager/NodePoolMng/CCNodePool.js",
-      "__unresolved_84": "assets/Script/Manager/NodePoolMng/IPool.js",
-      "__unresolved_85": "assets/Script/Manager/NodePoolMng/NodePoolMng.js",
-      "__unresolved_86": "assets/Script/Manager/NodePoolMng/SelfPool.js",
-      "__unresolved_87": "assets/Script/Manager/PanelMng/GamePanel.js",
-      "__unresolved_88": "assets/Script/Manager/PanelMng/GamePanelType.js",
-      "__unresolved_89": "assets/Script/Manager/PanelMng/LobbyPanel.js",
-      "__unresolved_90": "assets/Script/Manager/PanelMng/PanelMng.js",
-      "__unresolved_91": "assets/Script/Manager/RoadMng.js",
-      "__unresolved_92": "assets/Script/Model/BallData.js",
-      "__unresolved_93": "assets/Script/Model/ButtonFunctionApi.js",
-      "__unresolved_94": "assets/Script/Model/CheckLoading.js",
-      "__unresolved_95": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_96": "assets/Script/Model/GameData.js",
-      "__unresolved_97": "assets/Script/Model/GameSenceText.js",
-      "__unresolved_98": "assets/Script/Model/JudgePlatform.js",
-      "__unresolved_99": "assets/Script/Model/LabelAutoFollow.js",
-      "__unresolved_101": "assets/Script/Model/Player.js",
-      "__unresolved_103": "assets/Script/Model/PublicData.js",
-      "__unresolved_104": "assets/Script/Model/PublicModel.js",
-      "__unresolved_105": "assets/Script/Model/RankItmeData.js",
-      "__unresolved_107": "assets/Script/Model/RoomData.js",
-      "__unresolved_106": "assets/Script/Model/ResponsGPG.js",
-      "__unresolved_109": "assets/Script/Model/TestDelay.js",
-      "__unresolved_108": "assets/Script/Model/SocketModel.js",
-      "__unresolved_110": "assets/Script/Socket/GameWebSocket.js",
-      "__unresolved_111": "assets/Script/Socket/SocketSetting.js",
-      "__unresolved_112": "assets/Script/State/LobbyState.js",
-      "__unresolved_113": "assets/Script/State/MessageState.js",
-      "__unresolved_114": "assets/Script/State/PlayState.js",
-      "__unresolved_115": "assets/Script/State/ViewState.js",
-      "__unresolved_116": "assets/Script/View/MainGame.js",
-      "__unresolved_117": "assets/Script/View/MainLoading.js",
-      "__unresolved_118": "assets/Script/View/MainLobby.js",
-      "__unresolved_119": "assets/Script/test/colorTest.js",
-      "__unresolved_120": "assets/Script/test/delayTest.js",
-      "__unresolved_121": "assets/Script/test/extentTest.js",
-      "__unresolved_122": "assets/Script/test/poly.js",
-      "__unresolved_123": "assets/Script/test/regTtest.js",
-      "__unresolved_124": "assets/Script/test/testHTML.js",
-      "__unresolved_6": "assets/Plug/EditSpine.proxy.js?cjs&original=.js",
-      "__unresolved_33": "assets/Script/Contorll/Lobby/Page/Point/PanelPoint.js",
-      "__unresolved_41": "assets/Script/Contorll/Lobby/PanelGameMessage.js",
-      "__unresolved_102": "assets/Script/Model/PointItemData.js",
-      "__unresolved_100": "assets/Script/Model/MessageItem.js"
-    },
-    "physicalLocation": "cce/internal/x/prerequisite-imports.js",
-    "mTimestamp": 1689057183741,
-    "isEntry": true,
-    "exposeAs": "cce:/internal/x/prerequisite-imports"
   },
   "quick-pack:/cce/internal/code-quality/cr.js": {
     "imports": {},
     "physicalLocation": "cce/internal/code-quality/cr.js",
-    "mTimestamp": 1689057183784
-  },
-  "assets/Script/Contorll/Lobby/Page/Point/PanelPoint.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_2": "assets/Script/Model/PointItemData.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelPoint.js",
-    "mTimestamp": 1689057183912
-  },
-  "assets/Script/Contorll/Lobby/PanelGameMessage.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Enum/GameEvent.js",
-      "__unresolved_2": "assets/Script/Enum/GameStateEvent.js",
-      "__unresolved_3": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_4": "assets/Script/Model/MessageItem.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/PanelGameMessage.js",
-    "mTimestamp": 1689057183966
-  },
-  "assets/Script/Model/PointItemData.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Enum/AssetType.js",
-      "__unresolved_2": "assets/Script/Manager/AssetMng.js",
-      "__unresolved_4": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_3": "assets/Script/Model/BallData.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Model/PointItemData.js",
-    "mTimestamp": 1689057184024
-  },
-  "assets/Script/Model/MessageItem.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Script/Model/ComponentBase.js",
-      "__unresolved_2": "assets/Script/Model/PublicModel.js"
-    },
-    "physicalLocation": "fs/0/assets/Script/Model/MessageItem.js",
-    "mTimestamp": 1689057184063
+    "mTimestamp": 1689235923551
   },
   "quick-pack:/cce/internal/ml/cjs-loader.js": {
     "imports": {},
     "physicalLocation": "cce/internal/ml/cjs-loader.js",
-    "mTimestamp": 1689057184093
+    "mTimestamp": 1689235923591
+  },
+  "assets/Script/Contorll/Lobby/Page/ClientInfo/PanelClientInfo.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_2": "assets/Script/Contorll/Api/GPGAPI/RequestGPG.js",
+      "__unresolved_1": "assets/Script/Model/ComponentBase.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/Page/ClientInfo/PanelClientInfo.js",
+    "mTimestamp": 1689239658383
+  },
+  "assets/Script/Contorll/Api/GPGAPI/RequestGPG.js": {
+    "imports": {
+      "cc": "quick-pack:/cce/internal/x/cc.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Api/GPGAPI/RequestGPG.js",
+    "mTimestamp": 1689239658414
+  },
+  "assets/Script/Model/PublicData.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Patten/Singleton/BaseSingleton.js",
+      "__unresolved_2": "assets/Script/Enum/GameSenceName.js",
+      "__unresolved_3": "assets/Script/Model/CheckLoading.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Model/PublicData.js",
+    "mTimestamp": 1689242050016
+  },
+  "assets/Script/Contorll/Lobby/PageControll.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Patten/Singleton/BaseSingletonComponent.js",
+      "__unresolved_2": "assets/Script/Enum/PageAction.js",
+      "__unresolved_3": "assets/Script/Manager/AssetMng.js",
+      "__unresolved_4": "assets/Script/Manager/MusicMng.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/PageControll.js",
+    "mTimestamp": 1689242214381
+  },
+  "assets/Script/Contorll/NoClearNode/PanelMask.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Script/Model/ComponentBase.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/NoClearNode/PanelMask.js",
+    "mTimestamp": 1689299692939
+  },
+  "quick-pack:/cce/internal/x/prerequisite-imports.js": {
+    "imports": {
+      "__unresolved_2": "assets/Patten/Singleton/IBaseSingleton.js",
+      "__unresolved_1": "assets/Patten/Singleton/BaseSingletonComponent.js",
+      "__unresolved_3": "assets/Patten/Singleton/SingletonManger.js",
+      "__unresolved_0": "assets/Patten/Singleton/BaseSingleton.js",
+      "__unresolved_4": "assets/Patten/StatePatten.js",
+      "__unresolved_5": "assets/Plug/DelayTime.js",
+      "__unresolved_7": "assets/Plug/Image.js",
+      "__unresolved_8": "assets/Plug/MyAnimatinoPlay.js",
+      "__unresolved_9": "assets/Plug/MyEditBox.js",
+      "__unresolved_10": "assets/Plug/MyMath.js",
+      "__unresolved_11": "assets/Script/Asset/BundleAsset.js",
+      "__unresolved_12": "assets/Script/Asset/MusicAsset.js",
+      "__unresolved_14": "assets/Script/Asset/SpineAsset.js",
+      "__unresolved_13": "assets/Script/Asset/PrefabAsset.js",
+      "__unresolved_16": "assets/Script/Asset/SpriteAtlasAsset.js",
+      "__unresolved_15": "assets/Script/Asset/SpriteAsset.js",
+      "__unresolved_17": "assets/Script/Contorll/Api/CASTAPI.js",
+      "__unresolved_18": "assets/Script/Contorll/Api/GPGAPI/RequestGPG.js",
+      "__unresolved_19": "assets/Script/Contorll/Api/GPGAPI/ResponseGPG.js",
+      "__unresolved_20": "assets/Script/Contorll/Api/ResponeCommand.js",
+      "__unresolved_21": "assets/Script/Contorll/Api/SendCommand.js",
+      "__unresolved_23": "assets/Script/Contorll/AutoView/testauto.js",
+      "__unresolved_22": "assets/Script/Contorll/AutoView/AutoView.js",
+      "__unresolved_24": "assets/Script/Contorll/Data/DataMusic.js",
+      "__unresolved_25": "assets/Script/Contorll/Data/Panel/DataExchange.js",
+      "__unresolved_26": "assets/Script/Contorll/Data/Panel/DataFunctionMenu.js",
+      "__unresolved_27": "assets/Script/Contorll/Data/Panel/DataSoundSet.js",
+      "__unresolved_28": "assets/Script/Contorll/GameControll/GameControll.js",
+      "__unresolved_29": "assets/Script/Contorll/Loading/PanelGameLoading.js",
+      "__unresolved_30": "assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js",
+      "__unresolved_31": "assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelChooeseBall.js",
+      "__unresolved_33": "assets/Script/Contorll/Lobby/Page/Home/PanelHome.js",
+      "__unresolved_32": "assets/Script/Contorll/Lobby/Page/ClientInfo/PanelClientInfo.js",
+      "__unresolved_34": "assets/Script/Contorll/Lobby/Page/Point/PanelPageButton.js",
+      "__unresolved_36": "assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js",
+      "__unresolved_35": "assets/Script/Contorll/Lobby/Page/Point/PanelPoint.js",
+      "__unresolved_37": "assets/Script/Contorll/Lobby/Page/Setting/ItemLink.js",
+      "__unresolved_38": "assets/Script/Contorll/Lobby/Page/Setting/ItemSetting.js",
+      "__unresolved_41": "assets/Script/Contorll/Lobby/PageControll.js",
+      "__unresolved_39": "assets/Script/Contorll/Lobby/Page/Setting/PanelLink.js",
+      "__unresolved_40": "assets/Script/Contorll/Lobby/Page/Setting/PanelSetting.js",
+      "__unresolved_43": "assets/Script/Contorll/Lobby/PanelGameMessage.js",
+      "__unresolved_45": "assets/Script/Contorll/NoClearNode/CanvasControll.js",
+      "__unresolved_44": "assets/Script/Contorll/Lobby/PanelLobbyTest.js",
+      "__unresolved_46": "assets/Script/Contorll/NoClearNode/PanelLoading.js",
+      "__unresolved_47": "assets/Script/Contorll/NoClearNode/PanelMask.js",
+      "__unresolved_48": "assets/Script/Contorll/NoClearNode/PanelSystemMessage.js",
+      "__unresolved_49": "assets/Script/Contorll/NoClearNode/PanelVersion.js",
+      "__unresolved_50": "assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelExchange.js",
+      "__unresolved_51": "assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelFunctionMenu.js",
+      "__unresolved_52": "assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelGameLoading.js",
+      "__unresolved_55": "assets/Script/Enum/Asset_Prefab.js",
+      "__unresolved_56": "assets/Script/Enum/CASTCommandType.js",
+      "__unresolved_54": "assets/Script/Enum/AssetType.js",
+      "__unresolved_53": "assets/Script/Contorll/OldPj/%E6%9A%AB%E6%99%82%E4%B8%8D%E7%94%A8_PanelSoundSet.js",
+      "__unresolved_57": "assets/Script/Enum/CheckLoadingType.js",
+      "__unresolved_58": "assets/Script/Enum/CoinType.js",
+      "__unresolved_59": "assets/Script/Enum/CommandType.js",
+      "__unresolved_60": "assets/Script/Enum/Easing.js",
+      "__unresolved_61": "assets/Script/Enum/EffectType.js",
+      "__unresolved_62": "assets/Script/Enum/GameEvent.js",
+      "__unresolved_63": "assets/Script/Enum/GameSenceName.js",
+      "__unresolved_64": "assets/Script/Enum/GameStateEvent.js",
+      "__unresolved_65": "assets/Script/Enum/GameType.js",
+      "__unresolved_66": "assets/Script/Enum/GameWinerResult.js",
+      "__unresolved_67": "assets/Script/Enum/LangType.js",
+      "__unresolved_68": "assets/Script/Enum/LisnerEditBox.js",
+      "__unresolved_69": "assets/Script/Enum/LisnerTouch.js",
+      "__unresolved_70": "assets/Script/Enum/LobbyStateEvent.js",
+      "__unresolved_71": "assets/Script/Enum/MessageCommend.js",
+      "__unresolved_72": "assets/Script/Enum/PageAction.js",
+      "__unresolved_73": "assets/Script/Enum/PageMenu.js",
+      "__unresolved_74": "assets/Script/Enum/PlayerIdentity.js",
+      "__unresolved_75": "assets/Script/Enum/ScrollViewEventType.js",
+      "__unresolved_76": "assets/Script/Enum/ServerGameSenceType.js",
+      "__unresolved_77": "assets/Script/Enum/ViewIndex.js",
+      "__unresolved_78": "assets/Script/Enum/WebPlatform.js",
+      "__unresolved_79": "assets/Script/Enum/WebSocketEvent.js",
+      "__unresolved_80": "assets/Script/Interface/IAsset.js",
+      "__unresolved_81": "assets/Script/Interface/IDtTimer.js",
+      "__unresolved_82": "assets/Script/Manager/AssetMng.js",
+      "__unresolved_83": "assets/Script/Manager/ButtonMng.js",
+      "__unresolved_84": "assets/Script/Manager/EditBoxMng.js",
+      "__unresolved_85": "assets/Script/Manager/EventMng.js",
+      "__unresolved_86": "assets/Script/Manager/MusicMng.js",
+      "__unresolved_87": "assets/Script/Manager/NodePoolMng/CCNodePool.js",
+      "__unresolved_88": "assets/Script/Manager/NodePoolMng/IPool.js",
+      "__unresolved_89": "assets/Script/Manager/NodePoolMng/NodePoolMng.js",
+      "__unresolved_90": "assets/Script/Manager/NodePoolMng/SelfPool.js",
+      "__unresolved_91": "assets/Script/Manager/PanelMng/GamePanel.js",
+      "__unresolved_94": "assets/Script/Manager/PanelMng/PanelMng.js",
+      "__unresolved_92": "assets/Script/Manager/PanelMng/GamePanelType.js",
+      "__unresolved_93": "assets/Script/Manager/PanelMng/LobbyPanel.js",
+      "__unresolved_95": "assets/Script/Manager/RoadMng.js",
+      "__unresolved_96": "assets/Script/Model/BallData.js",
+      "__unresolved_97": "assets/Script/Model/ButtonFunctionApi.js",
+      "__unresolved_98": "assets/Script/Model/CheckLoading.js",
+      "__unresolved_99": "assets/Script/Model/ComponentBase.js",
+      "__unresolved_100": "assets/Script/Model/GameData.js",
+      "__unresolved_101": "assets/Script/Model/GameSenceText.js",
+      "__unresolved_102": "assets/Script/Model/JudgePlatform.js",
+      "__unresolved_103": "assets/Script/Model/LabelAutoFollow.js",
+      "__unresolved_104": "assets/Script/Model/MessageItem.js",
+      "__unresolved_106": "assets/Script/Model/PointItemData.js",
+      "__unresolved_105": "assets/Script/Model/Player.js",
+      "__unresolved_107": "assets/Script/Model/PublicData.js",
+      "__unresolved_108": "assets/Script/Model/PublicModel.js",
+      "__unresolved_109": "assets/Script/Model/RankItmeData.js",
+      "__unresolved_110": "assets/Script/Model/RoomData.js",
+      "__unresolved_111": "assets/Script/Model/SocketModel.js",
+      "__unresolved_112": "assets/Script/Model/TestDelay.js",
+      "__unresolved_113": "assets/Script/Socket/GameWebSocket.js",
+      "__unresolved_114": "assets/Script/Socket/SocketSetting.js",
+      "__unresolved_115": "assets/Script/State/LobbyState.js",
+      "__unresolved_116": "assets/Script/State/MessageState.js",
+      "__unresolved_117": "assets/Script/State/PlayState.js",
+      "__unresolved_118": "assets/Script/State/ViewState.js",
+      "__unresolved_119": "assets/Script/View/MainGame.js",
+      "__unresolved_120": "assets/Script/View/MainLoading.js",
+      "__unresolved_121": "assets/Script/View/MainLobby.js",
+      "__unresolved_122": "assets/Script/test/colorTest.js",
+      "__unresolved_123": "assets/Script/test/delayTest.js",
+      "__unresolved_124": "assets/Script/test/extentTest.js",
+      "__unresolved_125": "assets/Script/test/poly.js",
+      "__unresolved_126": "assets/Script/test/regTtest.js",
+      "__unresolved_127": "assets/Script/test/testHTML.js",
+      "__unresolved_6": "assets/Plug/EditSpine.proxy.js?cjs&original=.js",
+      "__unresolved_42": "assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js"
+    },
+    "physicalLocation": "cce/internal/x/prerequisite-imports.js",
+    "mTimestamp": 1689302384816,
+    "isEntry": true,
+    "exposeAs": "cce:/internal/x/prerequisite-imports"
+  },
+  "assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_2": "assets/Script/Enum/PageAction.js",
+      "__unresolved_1": "assets/Script/Enum/AssetType.js",
+      "__unresolved_3": "assets/Script/Manager/AssetMng.js",
+      "__unresolved_6": "assets/Script/Model/PublicModel.js",
+      "__unresolved_5": "assets/Script/Model/PublicData.js",
+      "__unresolved_4": "assets/Script/Model/ComponentBase.js",
+      "__unresolved_7": "assets/Script/Contorll/Lobby/PageControll.js"
+    },
+    "physicalLocation": "fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js",
+    "mTimestamp": 1689302384931
   }
 }

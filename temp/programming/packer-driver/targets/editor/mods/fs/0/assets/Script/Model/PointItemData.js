@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Label, Node, Prefab, _decorator, AssetType, AssetMng, BallData, BaseComponent, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _temp, _crd, ccclass, property, PointItemData;
+  var _reporterNs, _cclegacy, instantiate, Label, Node, Prefab, _decorator, BallData, BaseComponent, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _temp, _crd, ccclass, property, PointItemData;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -10,14 +10,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
   function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
-
-  function _reportPossibleCrUseOfAssetType(extras) {
-    _reporterNs.report("AssetType", "../Enum/AssetType", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfAssetMng(extras) {
-    _reporterNs.report("AssetMng", "../Manager/AssetMng", _context.meta, extras);
-  }
 
   function _reportPossibleCrUseOfBallData(extras) {
     _reporterNs.report("BallData", "./BallData", _context.meta, extras);
@@ -38,13 +30,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Prefab = _cc.Prefab;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
-      AssetType = _unresolved_2.AssetType;
+      BallData = _unresolved_2.default;
     }, function (_unresolved_3) {
-      AssetMng = _unresolved_3.default;
-    }, function (_unresolved_4) {
-      BallData = _unresolved_4.default;
-    }, function (_unresolved_5) {
-      BaseComponent = _unresolved_5.default;
+      BaseComponent = _unresolved_3.default;
     }],
     execute: function () {
       _crd = true;
@@ -75,16 +63,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "labelContent", _descriptor6, this);
         }
 
-        start() {
+        onLoad() {
           this.clientPointLayout.removeAllChildren();
         }
 
-        async init(data) {
-          await (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
-            error: Error()
-          }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
-            error: Error()
-          }), AssetType) : AssetType).Sprite);
+        init(data) {
           this.labelDayData.string = `112/4/9(一) 第123456789期`;
           this.labelPoint.string = `+ ${Math.floor(Math.random() * 200)}`;
 

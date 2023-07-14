@@ -1,4 +1,5 @@
 import { Button, EventTouch, Label, Node, _decorator } from 'cc';
+import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import { PageAction } from '../../../../Enum/PageAction';
 import BaseComponent from '../../../../Model/ComponentBase';
 import { goin } from '../../../Api/ResponeCommand';
@@ -36,9 +37,10 @@ export default class PanelHome extends BaseComponent {
     @property(Button)
     btnGoChooese: Button;
     onGoPage(e: EventTouch, customEventData?: string) {
-        if (isNaN(Number(customEventData)))
+        let split = customEventData.split('-')
+        if (isNaN(Number(split[0])))
             console.error("錯誤啦!!!是不是忘記設定");
-
-        PageControll.instance.pageEvnet.emit(PageAction.ChangeTo, Number(customEventData))
+        this.eventEmit(LobbyStateEvent.ChangePointPage, null, split[1])
+        PageControll.instance.pageEvnet.emit(PageAction.ChangeTo, Number(split[0]))
     }
 }

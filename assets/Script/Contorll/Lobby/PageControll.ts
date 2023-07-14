@@ -1,4 +1,5 @@
 import { _decorator, EventTarget, PageView, Node } from 'cc';
+import { DEV } from 'cc/env';
 import BaseSingletonComponent from '../../../Patten/Singleton/BaseSingletonComponent';
 import { PageAction } from '../../Enum/PageAction';
 import { PageMenu } from '../../Enum/PageMenu';
@@ -22,17 +23,19 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
         // console.log(this.pageEvnet);
         this.pageView = this.getComponent(PageView)
         this.pageEvnet.on(PageAction.ChangeTo, this.onToPage, this)
+        for (let index = 0; index < this.page.length; index++) {
+            this.page[index].active = false
+        }
         // console.log(this.pageEvnet);
     }
     start() {
-
         this.closeTouch(this.pageView)
-        for (let index = 0; index < this.page.length; index++) {
-            this.page[index].active = false
+        console.log("欸我已經送了欸");
 
-        }
-        this.onToPage(0)
-
+        if (DEV)
+            this.pageEvnet.emit(PageAction.ChangeTo, 0);
+        else
+            this.pageEvnet.emit(PageAction.ChangeTo, 0);
     }
     closeTouch(target: PageView) {
         //@ts-ignore
@@ -50,10 +53,7 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
         this.currnetIndex = index
         this.page[this.currnetIndex].active = true
         this.pageView.scrollToPage(index, 0)
-
     }
 }
-enum test {
-    MEEE,
-    HANA
-}
+
+

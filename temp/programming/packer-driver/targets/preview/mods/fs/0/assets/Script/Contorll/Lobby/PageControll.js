@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, EventTarget, PageView, Node, BaseSingletonComponent, PageAction, AssetMng, MusicMng, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PageControll, test;
+  var _reporterNs, _cclegacy, _decorator, EventTarget, PageView, Node, DEV, BaseSingletonComponent, PageAction, AssetMng, MusicMng, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PageControll;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -40,6 +40,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       EventTarget = _cc.EventTarget;
       PageView = _cc.PageView;
       Node = _cc.Node;
+    }, function (_ccEnv) {
+      DEV = _ccEnv.DEV;
     }, function (_unresolved_2) {
       BaseSingletonComponent = _unresolved_2.default;
     }, function (_unresolved_3) {
@@ -87,17 +89,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.pageView = this.getComponent(PageView);
           this.pageEvnet.on((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
-          }), PageAction) : PageAction).ChangeTo, this.onToPage, this); // console.log(this.pageEvnet);
+          }), PageAction) : PageAction).ChangeTo, this.onToPage, this);
+
+          for (var index = 0; index < this.page.length; index++) {
+            this.page[index].active = false;
+          } // console.log(this.pageEvnet);
+
         }
 
         start() {
           this.closeTouch(this.pageView);
-
-          for (var index = 0; index < this.page.length; index++) {
-            this.page[index].active = false;
-          }
-
-          this.onToPage(0);
+          console.log("欸我已經送了欸");
+          if (DEV) this.pageEvnet.emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+            error: Error()
+          }), PageAction) : PageAction).ChangeTo, 0);else this.pageEvnet.emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+            error: Error()
+          }), PageAction) : PageAction).ChangeTo, 0);
         }
 
         closeTouch(target) {
@@ -128,11 +135,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           return [];
         }
       })), _class2)) || _class));
-
-      (function (test) {
-        test[test["MEEE"] = 0] = "MEEE";
-        test[test["HANA"] = 1] = "HANA";
-      })(test || (test = {}));
 
       _cclegacy._RF.pop();
 

@@ -49,7 +49,7 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         return MyMath.divide(num, 1000)
     }
     /*
-    *確認匿名條件式
+    *確認匿名條件式是否在數字、分數、箭頭、數學運算符號、技術符號以及字母符號的 Unicode 字元
     */
     checkNicknameCondition(str: string) {
         let rex = /[\p{P}+\u2100-\u214F]/u

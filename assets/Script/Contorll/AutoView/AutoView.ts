@@ -47,8 +47,8 @@ export default class AutoView extends Component {
         }
         else {
             var height = canvasSize.height * (PublicData.getInstance.BaseViewWidth / canvasSize.width);
-            if (height > PublicData.getInstance.BaseViewHeight)
-                height = PublicData.getInstance.BaseViewHeight
+            // if (height > PublicData.getInstance.BaseViewHeight)
+            //     height = PublicData.getInstance.BaseViewHeight
 
             view.setDesignResolutionSize(PublicData.getInstance.BaseViewWidth, height, ResolutionPolicy.FIXED_HEIGHT)
 

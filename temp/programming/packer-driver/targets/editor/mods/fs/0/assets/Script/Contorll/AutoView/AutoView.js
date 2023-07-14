@@ -92,12 +92,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           } else {
             var height = canvasSize.height * ((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
               error: Error()
-            }), PublicData) : PublicData).getInstance.BaseViewWidth / canvasSize.width);
-            if (height > (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-              error: Error()
-            }), PublicData) : PublicData).getInstance.BaseViewHeight) height = (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-              error: Error()
-            }), PublicData) : PublicData).getInstance.BaseViewHeight;
+            }), PublicData) : PublicData).getInstance.BaseViewWidth / canvasSize.width); // if (height > PublicData.getInstance.BaseViewHeight)
+            //     height = PublicData.getInstance.BaseViewHeight
+
             view.setDesignResolutionSize((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
               error: Error()
             }), PublicData) : PublicData).getInstance.BaseViewWidth, height, ResolutionPolicy.FIXED_HEIGHT);

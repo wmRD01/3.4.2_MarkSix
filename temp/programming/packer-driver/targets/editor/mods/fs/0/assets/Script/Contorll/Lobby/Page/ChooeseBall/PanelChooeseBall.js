@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Node, tween, Vec3, _decorator, LobbyStateEvent, BaseComponent, PublicModel, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PanelChooeseBall;
+  var _reporterNs, _cclegacy, Node, Tween, tween, Vec3, _decorator, LobbyStateEvent, BaseComponent, PublicModel, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PanelChooeseBall;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -29,6 +29,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_cc) {
       _cclegacy = _cc.cclegacy;
       Node = _cc.Node;
+      Tween = _cc.Tween;
       tween = _cc.tween;
       Vec3 = _cc.Vec3;
       _decorator = _cc._decorator;
@@ -72,6 +73,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _node.setScale(Vec3.ONE);
 
           _node.angle = 0;
+          Tween.stopAllByTarget(_node);
           tween(_node).to(.5, {
             position: goMoveTo
           }).start();

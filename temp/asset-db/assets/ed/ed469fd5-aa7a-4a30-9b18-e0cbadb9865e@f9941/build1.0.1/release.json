@@ -1,0 +1,53 @@
+[
+    1,
+    [
+        "edRp/VqnpKMJsY4MutuYZe@6c48a"
+    ],
+    [
+        "_textureSource"
+    ],
+    [
+        "cc.SpriteFrame"
+    ],
+    0,
+    [
+        {
+            "name": "pick_choose",
+            "rect": {
+                "x": 2,
+                "y": 2,
+                "width": 557,
+                "height": 148
+            },
+            "offset": {
+                "x": 0,
+                "y": 0
+            },
+            "originalSize": {
+                "width": 561,
+                "height": 152
+            },
+            "rotated": false,
+            "capInsets": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "packable": true
+        }
+    ],
+    [
+        0
+    ],
+    0,
+    [
+        0
+    ],
+    [
+        0
+    ],
+    [
+        0
+    ]
+]

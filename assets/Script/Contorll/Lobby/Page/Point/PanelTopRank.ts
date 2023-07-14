@@ -16,12 +16,15 @@ export default class PanelTopRank extends BaseComponent {
         await AssetMng.waitStateCheck(AssetType.Sprite)
         this.layoutRank.removeAllChildren()
         for (let index = 0; index < 20; index++) {
-            let _node = instantiate(this.prefabRankItem)
-            let _class = _node.getComponent(RankItmeData)
-            _class.init(1)
-            this.layoutRank.addChild(_node)
+            this.RankData()
 
         }
+    }
+    RankData() {
+        let _node = instantiate(this.prefabRankItem)
+        let _class = _node.getComponent(RankItmeData)
+        _class.init(1)
+        this.layoutRank.addChild(_node)
     }
 
 }

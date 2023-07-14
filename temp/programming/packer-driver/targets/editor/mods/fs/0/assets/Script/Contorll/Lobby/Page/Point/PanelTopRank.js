@@ -77,16 +77,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.layoutRank.removeAllChildren();
 
           for (let index = 0; index < 20; index++) {
-            let _node = instantiate(this.prefabRankItem);
-
-            let _class = _node.getComponent(_crd && RankItmeData === void 0 ? (_reportPossibleCrUseOfRankItmeData({
-              error: Error()
-            }), RankItmeData) : RankItmeData);
-
-            _class.init(1);
-
-            this.layoutRank.addChild(_node);
+            this.RankData();
           }
+        }
+
+        RankData() {
+          let _node = instantiate(this.prefabRankItem);
+
+          let _class = _node.getComponent(_crd && RankItmeData === void 0 ? (_reportPossibleCrUseOfRankItmeData({
+            error: Error()
+          }), RankItmeData) : RankItmeData);
+
+          _class.init(1);
+
+          this.layoutRank.addChild(_node);
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class3.prototype, "prefabRankItem", [_dec2], {

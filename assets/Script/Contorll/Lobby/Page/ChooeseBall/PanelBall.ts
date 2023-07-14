@@ -6,6 +6,7 @@ import AssetMng from '../../../../Manager/AssetMng';
 import ButtonMng from '../../../../Manager/ButtonMng';
 import BallData from '../../../../Model/BallData';
 import BaseComponent from '../../../../Model/ComponentBase';
+import { InRoomLevel } from '../../../../State/LobbyState';
 const { ccclass, property } = _decorator;
 @ccclass('PanelBall')
 export default class PanelBall extends BaseComponent {
@@ -17,6 +18,7 @@ export default class PanelBall extends BaseComponent {
     layoutItem: Prefab;
     @property(Prefab)
     ballItem: Prefab;
+    
     Halign: number = 10;
     Valign: number = 5;
     totalCount: number = 49
@@ -27,6 +29,7 @@ export default class PanelBall extends BaseComponent {
     /**選擇球數最大值 */
     MaxCount: number = 6
     isConfirm: boolean;
+    isFullBall: boolean;
 
     async start() {
         await AssetMng.waitStateCheck(AssetType.Sprite)
@@ -56,7 +59,11 @@ export default class PanelBall extends BaseComponent {
         for (let index = 0; index < this.HorLayout.children.length; index++) {
             //球往上飛所以不能讓他自動排版
             this.HorLayout.children[index].getComponent(Layout).enabled = false
+
         }
+        this.mapBallNumber.forEach(element => {
+            element.getOrg()
+        });
     }
     onRandomNumber(e: EventTouch, customEventData?: string) {
         this.onResetChooese(null)
@@ -72,15 +79,54 @@ export default class PanelBall extends BaseComponent {
     onChooeseBall(e: EventTouch, customEventData?: string) {
         if (this.isConfirm) return
         let convert = Number(customEventData)
-        if ((this.tempChoose.indexOf(convert) > -1 || this.isChoose.indexOf(convert) > -1) || this.tempChoose.length + this.isChoose.length >= this.MaxCount) return
+        if (this.tempChoose.indexOf(convert) > -1) {
+            this.tempChoose.splice(this.tempChoose.indexOf(convert), 1)[0];
+            this.mapBallNumber.get(convert).cancel()
+            if (this.isFullBall)
+                this.fullResetBallColor(true)
+            return
+        }
+        if (this.tempChoose.length >= this.MaxCount) return
         this.tempChoose.push(convert)
         this.mapBallNumber.get(convert).choose()
+        if (this.tempChoose.length === this.MaxCount) {
+            this.isFullBall = true;
+            this.mapBallNumber.forEach(element => {
+                //代表沒被選種
+                if (this.tempChoose.indexOf(element.ballNumber) == -1) {
+                    element.enabledBall(false)
+                }
+            })
+        }
+
+    }
+    onTestReset(e: EventTouch, customEventData?: string) {
+
+        this.isChoose = []
+        this.tempChoose = []
+        /**選擇球數最大值 */
+        this.MaxCount = 6
+        this.isConfirm = false
+        this.isFullBall = false
+        this.mapBallNumber.forEach(element => {
+            element.cancel()
+            element.backPosition()
+        })
     }
     onResetChooese(e: EventTouch, customEventData?: string) {
         if (this.isConfirm) return
-        for (let index = 0; index < this.tempChoose.length; index++) {
-            this.mapBallNumber.get(this.tempChoose[index]).cancel()
+        if (this.tempChoose.length === this.MaxCount) {
+            this.mapBallNumber.forEach(element => {
+                element.cancel()
+            })
         }
+
+        else {
+            for (let index = 0; index < this.tempChoose.length; index++) {
+                this.mapBallNumber.get(this.tempChoose[index]).cancel()
+            }
+        }
+
         this.tempChoose = []
     }
     async onConfirmAttack(e: EventTouch, customEventData?: string) {
@@ -88,13 +134,11 @@ export default class PanelBall extends BaseComponent {
         if (this.tempChoose.length < this.MaxCount) {
             return
         }
-        console.log(this.tempChoose);
         let len = this.tempChoose.length
         for (let index = 0; index < len; index++) {
             this.isChoose.push(this.tempChoose.shift())
         }
         this.isChoose.sort((a, b) => a - b)
-        console.log(this.isChoose);
 
         for (let index = 0; index < this.isChoose.length; index++) {
             this.eventEmit(LobbyStateEvent.BallChooeseAction, this.mapBallNumber.get(this.isChoose[index]).node, index)
@@ -104,6 +148,12 @@ export default class PanelBall extends BaseComponent {
 
         this.isConfirm = true
         /**推波訊息 */
+    }
+    fullResetBallColor(bool: boolean) {
+        this.mapBallNumber.forEach(element => {
+            element.enabledBall(bool)
+        })
+        this.isFullBall = !bool;
     }
     reProcessing() {
 

@@ -1,7 +1,11 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Node, Prefab, Vec3, _decorator, BaseComponent, PointItemData, _dec, _dec2, _dec3, _class2, _class3, _descriptor, _descriptor2, _temp, _crd, ccclass, property, PanelPoint;
+  var _reporterNs, _cclegacy, instantiate, Node, Prefab, Vec3, _decorator, BaseComponent, PointItemData, AssetType, AssetMng, _dec, _dec2, _dec3, _class2, _class3, _descriptor, _descriptor2, _temp, _crd, ccclass, property, PanelPoint;
+
+  function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+  function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -19,6 +23,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     _reporterNs.report("PointItemData", "../../../../Model/PointItemData", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfAssetType(extras) {
+    _reporterNs.report("AssetType", "../../../../Enum/AssetType", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfAssetMng(extras) {
+    _reporterNs.report("AssetMng", "../../../../Manager/AssetMng", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -33,6 +45,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       BaseComponent = _unresolved_2.default;
     }, function (_unresolved_3) {
       PointItemData = _unresolved_3.default;
+    }, function (_unresolved_4) {
+      AssetType = _unresolved_4.AssetType;
+    }, function (_unresolved_5) {
+      AssetMng = _unresolved_5.default;
     }],
     execute: function () {
       _crd = true;
@@ -56,14 +72,24 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         start() {
-          this.layoutContent.removeAllChildren();
+          var _this = this;
 
-          for (var index = 0; index < 3; index++) {
-            this.onClientData(123);
-          }
+          return _asyncToGenerator(function* () {
+            yield (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
+              error: Error()
+            }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
+              error: Error()
+            }), AssetType) : AssetType).Sprite);
+
+            _this.layoutContent.removeAllChildren();
+
+            for (var index = 0; index < 3; index++) {
+              _this.ClientData(123);
+            }
+          })();
         }
 
-        onClientData(data) {
+        ClientData(data) {
           var _node = instantiate(this.item);
 
           var _class = _node.getComponent(_crd && PointItemData === void 0 ? (_reportPossibleCrUseOfPointItemData({

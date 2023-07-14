@@ -22,7 +22,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
   }
 
   function _reportPossibleCrUseOfRequestGPG(extras) {
-    _reporterNs.report("RequestGPG", "../../Model/ResponsGPG", _context.meta, extras);
+    _reporterNs.report("RequestGPG", "../Api/GPGAPI/RequestGPG", _context.meta, extras);
   }
 
   return {

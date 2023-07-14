@@ -83,6 +83,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "ballNumber", 0);
 
           _defineProperty(this, "type", 0);
+
+          _defineProperty(this, "orgV3", void 0);
         }
 
         init(_ballNumber) {
@@ -95,6 +97,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), LabelAutoFollow) : LabelAutoFollow).setTarget(this.node);
           this.label.string = this.ballNumber.toString();
           this.label.color = color().fromHEX(this.getColor());
+          console.log((_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
+            error: Error()
+          }), AssetMng) : AssetMng).AssetClass.get((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
+            error: Error()
+          }), AssetType) : AssetType).Sprite).data.get(this.getBGData()));
           this.spriteBG.spriteFrame = (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
             error: Error()
           }), AssetMng) : AssetMng).AssetClass.get((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
@@ -102,6 +109,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), AssetType) : AssetType).Sprite).data.get(this.getBGData());
           this.setEffect(false);
           return this;
+        }
+
+        getOrg() {
+          this.orgV3 = new Vec3(this.node.position);
         } // reset() {
         // }
 
@@ -130,6 +141,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), PublicModel) : PublicModel).getInstance.oneSclaeVec3(1));
           this.node.eulerAngles = Vec3.ZERO;
           Tween.stopAllByTarget(this.node);
+          this.enabledBall(true);
+        }
+
+        backPosition() {
+          Tween.stopAllByTarget(this.node);
+          console.log(this.node.position);
+          this.node.position = this.orgV3;
+          console.log(this.node.position, this.orgV3);
+        }
+
+        enabledBall(bool) {
+          this.spriteBG.color = bool ? color().fromHEX(ColorType.白) : color().fromHEX(ColorType.灰);
         }
 
         setEffect(bool) {
@@ -137,6 +160,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         getColor() {
+          return ColorType.黑;
+
           switch (this.type) {
             case 0:
             case 5:
@@ -194,7 +219,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         ColorType["\u7D05"] = "#FF3D3D";
         ColorType["\u85CD"] = "#334BD3";
         ColorType["\u7DA0"] = "#61BFAD";
-        ColorType["\u7070"] = "#969696";
+        ColorType["\u7070"] = "#797979FD";
+        ColorType["\u767D"] = "#FFFFFF";
+        ColorType["\u9ED1"] = "#000000";
       })(ColorType || (ColorType = {}));
 
       (function (SpirteData) {

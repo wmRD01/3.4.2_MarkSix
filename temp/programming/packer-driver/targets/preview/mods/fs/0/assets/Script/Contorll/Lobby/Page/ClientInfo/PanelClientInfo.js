@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "crypto-es"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, assetManager, Label, Sprite, SpriteFrame, sys, _decorator, BaseComponent, RequestGPG, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, PanelClientInfo;
+  var _reporterNs, _cclegacy, assetManager, Label, Sprite, SpriteFrame, _decorator, BaseComponent, Player, RequestGPG, CryptoES, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp2, _crd, ccclass, property, PanelClientInfo;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -19,12 +19,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     _reporterNs.report("BaseComponent", "../../../../Model/ComponentBase", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfPlayer(extras) {
+    _reporterNs.report("Player", "../../../../Model/Player", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfRequestGPG(extras) {
     _reporterNs.report("RequestGPG", "../../../Api/GPGAPI/RequestGPG", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfResponseGPG(extras) {
     _reporterNs.report("ResponseGPG", "../../../Api/GPGAPI/ResponseGPG", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfCryptoES(extras) {
+    _reporterNs.report("CryptoES", "crypto-es", _context.meta, extras);
   }
 
   return {
@@ -36,12 +44,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       Label = _cc.Label;
       Sprite = _cc.Sprite;
       SpriteFrame = _cc.SpriteFrame;
-      sys = _cc.sys;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
       BaseComponent = _unresolved_2.default;
     }, function (_unresolved_3) {
-      RequestGPG = _unresolved_3.RequestGPG;
+      Player = _unresolved_3.default;
+    }, function (_unresolved_4) {
+      RequestGPG = _unresolved_4.RequestGPG;
+    }, function (_cryptoEs) {
+      CryptoES = _cryptoEs.default;
     }],
     execute: function () {
       _crd = true;
@@ -53,7 +64,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         property
       } = _decorator);
 
-      _export("default", PanelClientInfo = (_dec = ccclass('PanelClientInfo'), _dec2 = property(Sprite), _dec3 = property(Label), _dec4 = property(Label), _dec(_class = (_class2 = (_temp = class PanelClientInfo extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelClientInfo = (_dec = ccclass('PanelClientInfo'), _dec2 = property(Sprite), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec(_class = (_class2 = (_temp2 = class PanelClientInfo extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor() {
@@ -68,12 +79,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           _initializerDefineProperty(this, "labelPlayerName", _descriptor2, this);
 
           _initializerDefineProperty(this, "labelNickName", _descriptor3, this);
+
+          _initializerDefineProperty(this, "tempText", _descriptor4, this);
         }
 
         start() {
           this.isData = false;
-          this.isLoading = false;
-          console.log(sys.browserType, sys.os);
+          this.isLoading = false; // console.log(sys.browserType, sys.os);
+          // console.log(md5("12315235"));
         }
 
         onEnable() {
@@ -84,7 +97,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             _this.isLoading = true;
             yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
-            }), RequestGPG) : RequestGPG).Request().setToken("Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjExMkVFRDgwNzBBMEY5RkIzRUI3RDc3RkU3NjAxMTU0IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2ODkxMjkzNjEsImV4cCI6MTY5MTcyMTM2MSwiaXNzIjoiaHR0cHM6Ly9pZHMuY2Vpcy50dyIsImNsaWVudF9pZCI6Im1hcmtfc2l4Iiwic3ViIjoiMjMyNCIsImF1dGhfdGltZSI6MTY4OTEyOTM2MSwiaWRwIjoibG9jYWwiLCJNZW1iZXJJRCI6IjIzMjQiLCJqdGkiOiI3RkNCM0QzQ0NDOUE3MjRGOUQ5M0YwNDZDMjNGODA1NCIsImlhdCI6MTY4OTEyOTM2MSwic2NvcGUiOlsibWVtYmVyLmluZm8udXNlciJdLCJhbXIiOlsibWtfcGhvbmUiXX0.agzZ_DHtp_dQQKfa1fRhJRwQAh8NnLk98jmqspD8RrnRq5TNqE-dTaf-53d61BraahHl2IO6qwPRk7wJr_RP6nuWYcoiVj4k3WGYG1qnpjuYA5vlq1Iyq2pPIr4eNq2pRV9mJAdKzsMVi1zVi5s7tz38sjpr470xa4QL4zXLluGIg-562pqnSAOtKiPQhCoCAzPSixI16BM3Ite90kw3a3gTcP_m7jA-ELfZxwS-pTHHSqQzhBTqCeMQk9uC3Rcuook_SseYN7cJoYOi_oc0wnNoMhalyLMbdhZKcktAMJ6ExuN0fj_RIxvAJT4lJrQictihPBE43qe7djkWV9uRUQ").fetchData("https://play-api.ceis.tw/Member/MyInfo?sign=47b436c2cad162edc9a8035afc3c673f", _this.responseMyInfo.bind(_this));
+            }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+              error: Error()
+            }), Player) : Player).getInstance.gpgToken).fetchData("https://play-api.ceis.tw/Member/MyInfo?sign=47b436c2cad162edc9a8035afc3c673f", _this.responseMyInfo.bind(_this));
 
             _this.onValidateContactInfo();
 
@@ -103,7 +118,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             /** */
             var body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
-            }), RequestGPG) : RequestGPG).Body.ValidateContactInfo();
+            }), RequestGPG) : RequestGPG).Body.NotNeedToken.ValidateContactInfo();
             body.Email = "wm.rd01@gmail.com";
             yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
@@ -121,15 +136,32 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           return _asyncToGenerator(function* () {
             var body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
-            }), RequestGPG) : RequestGPG).Body.Certification();
-            body.Email = "wm.rd01@gmail.com";
-            body.VerifyCode = "123124";
-            body.sign = "47b436c2cad162edc9a8035afc3c673f";
+            }), RequestGPG) : RequestGPG).Body.NeedToken.CertifiedEmail();
+            body.email = "wm.rd01@gmail.com";
+            body.verifyCode = _this3.tempText.string; // 合併 data 和 apiKey
+
+            var _temp = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Body.NeedToken.temp();
+
+            _temp.email = "wm.rd01@gmail.com";
+            _temp.verifyCode = _this3.tempText.string;
+            var dataWithApiKey = new URLSearchParams(_temp).toString() + "5gh394D";
+            console.log(dataWithApiKey);
+            console.log((_crd && CryptoES === void 0 ? (_reportPossibleCrUseOfCryptoES({
+              error: Error()
+            }), CryptoES) : CryptoES).MD5(dataWithApiKey).toString());
+            body.sign = (_crd && CryptoES === void 0 ? (_reportPossibleCrUseOfCryptoES({
+              error: Error()
+            }), CryptoES) : CryptoES).MD5(dataWithApiKey).toString();
+            console.log(body);
             yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
             }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
-            }), RequestGPG) : RequestGPG).Method.POST).setBody(JSON.stringify(body)).fetchData("https://ids.ceis.tw/Member/Certification", _this3.responseSendLoginVerification.bind(_this3));
+            }), RequestGPG) : RequestGPG).Method.POST).setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+              error: Error()
+            }), Player) : Player).getInstance.gpgToken).setBody(JSON.stringify(body)).fetchData("https://play-api.ceis.tw/Member/CertifiedEmail", _this3.responseSendLoginVerification.bind(_this3));
           })();
         }
 
@@ -148,13 +180,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
               var sendBody = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
                 error: Error()
-              }), RequestGPG) : RequestGPG).Body.SendLoginVerification();
+              }), RequestGPG) : RequestGPG).Body.NotNeedToken.SendLoginVerification();
               sendBody.Email = "wm.rd01@gmail.com";
               yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
                 error: Error()
               }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
                 error: Error()
-              }), RequestGPG) : RequestGPG).Method.POST).setBody(JSON.stringify(sendBody)).fetchData("https://ids.ceis.tw/Token/SendLoginVerification", _this4.responseSendLoginVerification.bind(_this4));
+              }), RequestGPG) : RequestGPG).Method.POST).setBody(JSON.stringify(sendBody)).fetchData("https://ids.ceis.tw/Token/SendRegisterVerification", _this4.responseSendLoginVerification.bind(_this4));
             }
           })();
         }
@@ -163,7 +195,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           var _this5 = this;
 
           return _asyncToGenerator(function* () {
-            console.log("MyInfo", response); // response.data.photo
+            console.log("MyInfo", response);
+            (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+              error: Error()
+            }), Player) : Player).getInstance.gppInfo = response; // response.data.photo
 
             assetManager.loadRemote("https://img.ceis.tw/Member/Avatar/2.jpg", (err, image) => {
               if (err) {
@@ -182,14 +217,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
 
         responseSendLoginVerification(response) {
-          console.log("SendLoginVerification", response);
+          console.log("SendRegisterVerification", response);
 
           if (response.Status.Code == "0") {
             console.log("過關惹");
           }
         }
 
-      }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "spritePlayer", [_dec2], {
+      }, _temp2), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "spritePlayer", [_dec2], {
         configurable: true,
         enumerable: true,
         writable: true,
@@ -200,6 +235,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         writable: true,
         initializer: null
       }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "labelNickName", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "tempText", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,

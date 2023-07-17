@@ -41,7 +41,7 @@ export default class BaseComponent extends Component {
 
     }
     setEvent(name: string, callback: any | Function) {
-        EventMng.on(name, callback, this);
+      EventMng.on(name, callback, this);
     }
     eventEmit(name: string, ...any: any[]) {
         EventMng.emit(name, ...any);

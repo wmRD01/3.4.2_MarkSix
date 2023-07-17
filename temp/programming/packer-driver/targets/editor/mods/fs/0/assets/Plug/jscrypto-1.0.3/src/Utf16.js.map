@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///C:/CocosProject/3.4.2_MarkSix/assets/Plug/jscrypto-1.0.3/src/Utf16.ts"],"names":["Utf16LE","Utf16BE","Utf16"],"mappings":";;;;;;;;;;8BAAQA,O;8BAASC,O;4BAASC","sourcesContent":["export {Utf16LE, Utf16BE, Utf16} from \"./lib/encoder/Utf16\";\n"]}

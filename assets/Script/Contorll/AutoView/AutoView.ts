@@ -193,5 +193,29 @@ export default class AutoView extends Component {
         return { width: window.innerWidth, height: window.innerHeight };
     }
 
+
+    public AdjustView_() {
+
+        let canvasSize = this.getWinSize();
+        if (!this.curDR)
+            this.curDR = view.getDesignResolutionSize();
+        console.log(canvasSize);
+
+        let cvs = find('Canvas').getComponent(UITransform);
+        if (canvasSize.width >= PublicData.getInstance.BaseViewWidth || canvasSize.height / canvasSize.width <= (PublicData.getInstance.BaseViewHeight / PublicData.getInstance.BaseViewWidth)) {
+            var width = canvasSize.width * (PublicData.getInstance.BaseViewHeight / canvasSize.height);
+            view.setDesignResolutionSize(width, PublicData.getInstance.BaseViewHeight, ResolutionPolicy.FIXED_HEIGHT);
+
+        }
+        else {
+            var height = canvasSize.height * (PublicData.getInstance.BaseViewWidth / canvasSize.width);
+
+            view.setDesignResolutionSize(PublicData.getInstance.BaseViewWidth, height, ResolutionPolicy.FIXED_HEIGHT)
+
+        }
+        let str: string = `window寬:${canvasSize.width}\n\rwindow高:${canvasSize.height}\n\rcocos寬:${this.curDR.width}\n\rcocos高:${this.curDR.height}`
+        console.log(str);
+
+    }
 }
 

@@ -39,27 +39,39 @@ export namespace RequestGPG {
     }
 
     export namespace Body {
-        export class ValidateContactInfo {
-            Phone: string
-            Email: string
+        export namespace NeedToken {
+            export class temp {
+                [x: string]: string;
+                verifyCode: string;
+                email: string;
+            }
+            /**需要token在思考如何切出 */
+            export class CertifiedEmail {
+                [x: string]: string;
+                verifyCode: string;
+                email: string;
+                sign: string;
+            }
+            /**需要token在思考如何切出 */
+            export class MemberInfo {
+                sign: string;
+            }
         }
-        export class RankList {
+        export namespace NotNeedToken {
+            export class ValidateContactInfo {
+                Phone: string
+                Email: string
+            }
+            export class RankList {
+
+            }
+            export class SendLoginVerification {
+                Locale: string = "zh-TW";
+                Email: string;
+            }
 
         }
-        /**需要token在思考如何切出 */
-        export class MemberInfo {
-            sign: string;
-        }
-        export class SendLoginVerification {
-            Locale: string = "zh-TW";
-            Email: string;
-        }
-        /**需要token在思考如何切出 */
-        export class Certification {
-            VerifyCode: string;
-            Email: string;
-            sign: string;
-        }
+
     }
 
     export enum Method {
@@ -67,6 +79,8 @@ export namespace RequestGPG {
         POST = "POST",
     }
 
-
+    export enum APIUrl {
+        ValidateContactInfo = ""
+    }
 }
 

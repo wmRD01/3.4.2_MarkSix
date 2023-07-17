@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///C:/CocosProject/3.4.2_MarkSix/assets/Plug/jscrypto-1.0.3/test/setup.js"],"names":["crypto","require","global"],"mappings":";;;;;;;;;;;;;;;;;;;;AAAA,gBAAMA,MAAM,GAAGC,OAAO,CAAC,QAAD,CAAtB;;AACAC,UAAAA,MAAM,CAACF,MAAP,GAAgBA,MAAhB","sourcesContent":["const crypto = require(\"crypto\");\nglobal.crypto = crypto;\n"]}

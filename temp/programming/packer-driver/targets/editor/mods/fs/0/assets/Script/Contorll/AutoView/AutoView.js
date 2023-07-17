@@ -211,6 +211,38 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           };
         }
 
+        AdjustView_() {
+          let canvasSize = this.getWinSize();
+          if (!this.curDR) this.curDR = view.getDesignResolutionSize();
+          console.log(canvasSize);
+          let cvs = find('Canvas').getComponent(UITransform);
+
+          if (canvasSize.width >= (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.BaseViewWidth || canvasSize.height / canvasSize.width <= (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.BaseViewHeight / (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.BaseViewWidth) {
+            var width = canvasSize.width * ((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.BaseViewHeight / canvasSize.height);
+            view.setDesignResolutionSize(width, (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.BaseViewHeight, ResolutionPolicy.FIXED_HEIGHT);
+          } else {
+            var height = canvasSize.height * ((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.BaseViewWidth / canvasSize.width);
+            view.setDesignResolutionSize((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.BaseViewWidth, height, ResolutionPolicy.FIXED_HEIGHT);
+          }
+
+          let str = `window寬:${canvasSize.width}\n\rwindow高:${canvasSize.height}\n\rcocos寬:${this.curDR.width}\n\rcocos高:${this.curDR.height}`;
+          console.log(str);
+        }
+
       }, _temp)) || _class));
 
       _cclegacy._RF.pop();

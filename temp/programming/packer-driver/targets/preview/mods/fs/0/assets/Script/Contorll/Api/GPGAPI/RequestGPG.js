@@ -78,53 +78,72 @@ System.register(["cc"], function (_export, _context) {
         var Body;
 
         (function (_Body) {
-          class ValidateContactInfo {
-            constructor() {
-              _defineProperty(this, "Phone", void 0);
+          var NeedToken;
 
-              _defineProperty(this, "Email", void 0);
+          (function (_NeedToken) {
+            class temp {
+              constructor() {
+                _defineProperty(this, "verifyCode", void 0);
+
+                _defineProperty(this, "email", void 0);
+              }
+
             }
 
-          }
+            _NeedToken.temp = temp;
 
-          _Body.ValidateContactInfo = ValidateContactInfo;
+            class CertifiedEmail {
+              constructor() {
+                _defineProperty(this, "verifyCode", void 0);
 
-          class RankList {}
+                _defineProperty(this, "email", void 0);
 
-          _Body.RankList = RankList;
+                _defineProperty(this, "sign", void 0);
+              }
 
-          class MemberInfo {
-            constructor() {
-              _defineProperty(this, "sign", void 0);
             }
 
-          }
+            _NeedToken.CertifiedEmail = CertifiedEmail;
 
-          _Body.MemberInfo = MemberInfo;
+            class MemberInfo {
+              constructor() {
+                _defineProperty(this, "sign", void 0);
+              }
 
-          class SendLoginVerification {
-            constructor() {
-              _defineProperty(this, "Locale", "zh-TW");
-
-              _defineProperty(this, "Email", void 0);
             }
 
-          }
+            _NeedToken.MemberInfo = MemberInfo;
+          })(NeedToken || (NeedToken = _Body.NeedToken || (_Body.NeedToken = {})));
 
-          _Body.SendLoginVerification = SendLoginVerification;
+          var NotNeedToken;
 
-          class Certification {
-            constructor() {
-              _defineProperty(this, "VerifyCode", void 0);
+          (function (_NotNeedToken) {
+            class ValidateContactInfo {
+              constructor() {
+                _defineProperty(this, "Phone", void 0);
 
-              _defineProperty(this, "Email", void 0);
+                _defineProperty(this, "Email", void 0);
+              }
 
-              _defineProperty(this, "sign", void 0);
             }
 
-          }
+            _NotNeedToken.ValidateContactInfo = ValidateContactInfo;
 
-          _Body.Certification = Certification;
+            class RankList {}
+
+            _NotNeedToken.RankList = RankList;
+
+            class SendLoginVerification {
+              constructor() {
+                _defineProperty(this, "Locale", "zh-TW");
+
+                _defineProperty(this, "Email", void 0);
+              }
+
+            }
+
+            _NotNeedToken.SendLoginVerification = SendLoginVerification;
+          })(NotNeedToken || (NotNeedToken = _Body.NotNeedToken || (_Body.NotNeedToken = {})));
         })(Body || (Body = _RequestGPG.Body || (_RequestGPG.Body = {})));
 
         var Method;
@@ -135,6 +154,13 @@ System.register(["cc"], function (_export, _context) {
         })(Method || (Method = {}));
 
         _RequestGPG.Method = Method;
+        var APIUrl;
+
+        (function (APIUrl) {
+          APIUrl["ValidateContactInfo"] = "";
+        })(APIUrl || (APIUrl = {}));
+
+        _RequestGPG.APIUrl = APIUrl;
       })(RequestGPG || _export("RequestGPG", RequestGPG = {}));
 
       _cclegacy._RF.pop();

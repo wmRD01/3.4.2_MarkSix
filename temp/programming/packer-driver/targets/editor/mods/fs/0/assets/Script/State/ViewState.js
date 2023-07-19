@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16", "__unresolved_17", "__unresolved_18", "__unresolved_19", "__unresolved_20"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16", "__unresolved_17", "__unresolved_18", "__unresolved_19", "__unresolved_20", "__unresolved_21"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, RP, PublicData, State, DelayTime, CommandType, EventMng, MusicMng, WebSocketEvent, PanelLoading, PublicModel, GameEvent, RoomData, GameStateEvent, ServerGameSenceType, MyMath, GameSenceText, SocketSetting, LangType, CheckLoading, CheckLoadingType, GetGameRoomData, PlayerInRoom, PlayerExitRoom, RefreshPlayerBetList, RefreshBankerBetList, LobbyCloseView, LobbyOpenView, GameCloseView, GameOpenView, _crd;
+  var _reporterNs, _cclegacy, RP, PublicData, State, DelayTime, CommandType, EventMng, MusicMng, WebSocketEvent, PanelLoading, PublicModel, GameEvent, RoomData, GameStateEvent, ServerGameSenceType, MyMath, GameSenceText, SocketSetting, LangType, CheckLoading, CheckLoadingType, EvnetType, GetGameRoomData, PlayerInRoom, PlayerExitRoom, RefreshPlayerBetList, RefreshBankerBetList, LobbyCloseView, LobbyOpenView, GameCloseView, GameOpenView, _crd;
 
   function _reportPossibleCrUseOfPublicData(extras) {
     _reporterNs.report("PublicData", "../Model/PublicData", _context.meta, extras);
@@ -79,6 +79,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("CheckLoadingType", "../Enum/CheckLoadingType", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfEvnetType(extras) {
+    _reporterNs.report("EvnetType", "../Enum/EvnetType", _context.meta, extras);
+  }
+
   _export({
     GetGameRoomData: void 0,
     PlayerInRoom: void 0,
@@ -136,6 +140,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       CheckLoading = _unresolved_20.default;
     }, function (_unresolved_21) {
       CheckLoadingType = _unresolved_21.CheckLoadingType;
+    }, function (_unresolved_22) {
+      EvnetType = _unresolved_22.EvnetType;
     }],
     execute: function () {
       _crd = true;
@@ -180,7 +186,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.senceProcessing(data);
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
             error: Error()
           }), GameStateEvent) : GameStateEvent).ReProcessing, data);
           console.log("結束處理Sence");
@@ -193,7 +201,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           console.log(`當前狀態：${data.nowStage}`);
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
             error: Error()
           }), GameStateEvent) : GameStateEvent).UpdataSence, new (_crd && GameSenceText === void 0 ? (_reportPossibleCrUseOfGameSenceText({
             error: Error()
@@ -208,14 +218,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               changeData.status = data.roomStatus;
               (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
                 error: Error()
-              }), EventMng) : EventMng).emit((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
+              }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+                error: Error()
+              }), EvnetType) : EvnetType).Pulic).emit((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
                 error: Error()
               }), GameEvent) : GameEvent).ControllSandCommend, (_crd && ServerGameSenceType === void 0 ? (_reportPossibleCrUseOfServerGameSenceType({
                 error: Error()
               }), ServerGameSenceType) : ServerGameSenceType).ggs, changeData);
               (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
                 error: Error()
-              }), EventMng) : EventMng).emit((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
+              }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+                error: Error()
+              }), EvnetType) : EvnetType).Pulic).emit((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
                 error: Error()
               }), GameEvent) : GameEvent).ControllSandCommend, data.nowStage, changeData);
               break;
@@ -240,7 +254,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               }), MyMath) : MyMath).divide(data.remainTime, 1000);
               (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
                 error: Error()
-              }), EventMng) : EventMng).emit((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
+              }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+                error: Error()
+              }), EvnetType) : EvnetType).Pulic).emit((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
                 error: Error()
               }), GameEvent) : GameEvent).ControllSandCommend, data.nowStage, changeData);
               break;
@@ -333,7 +349,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       }), State) : State) {
         changeState(data) {// DelayTime.getInstance.StopGameHeartrate()
           // if (PublicData.getInstance.isSystemDis || !PublicData.getInstance.isInGameRoom) return;
-          // EventMng.emit(GameEvent.ResetView)
+          // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameEvent.ResetView)
           // MusicMng.effectStopAll();
           // PanelLoading.instance.openLoading()
           // PublicData.getInstance.isResetView = true;
@@ -349,7 +365,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       }), State) : State) {
         async changeState(data) {// if (PublicData.getInstance.isSystemDis || !PublicData.getInstance.isInGameRoom) return;
           // console.log("載資料")
-          // EventMng.emit(WebSocketEvent.WebSocketSendCommand, CommandType.gori)
+          // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(WebSocketEvent.WebSocketSendCommand, CommandType.gori)
         }
 
       });
@@ -372,7 +388,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), CheckLoadingType) : CheckLoadingType).isGameSence)) return;
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).emit((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Pulic).emit((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
             error: Error()
           }), GameEvent) : GameEvent).ResetView);
           (_crd && MusicMng === void 0 ? (_reportPossibleCrUseOfMusicMng({
@@ -415,7 +433,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           console.log("載資料");
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).emit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Pulic).emit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
             error: Error()
           }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
             error: Error()

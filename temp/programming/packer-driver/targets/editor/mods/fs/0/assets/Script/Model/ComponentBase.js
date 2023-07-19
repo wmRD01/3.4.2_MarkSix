@@ -1,9 +1,13 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, UIOpacity, Vec3, GameEvent, EventMng, PublicData, PublicModel, _dec, _class, _temp, _crd, ccclass, property, BaseComponent;
+  var _reporterNs, _cclegacy, _decorator, Component, UIOpacity, Vec3, EvnetType, GameEvent, EventMng, PublicData, PublicModel, _dec, _class, _temp, _crd, ccclass, property, BaseComponent;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _reportPossibleCrUseOfEvnetType(extras) {
+    _reporterNs.report("EvnetType", "../Enum/EvnetType", _context.meta, extras);
+  }
 
   function _reportPossibleCrUseOfGameEvent(extras) {
     _reporterNs.report("GameEvent", "../Enum/GameEvent", _context.meta, extras);
@@ -31,13 +35,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       UIOpacity = _cc.UIOpacity;
       Vec3 = _cc.Vec3;
     }, function (_unresolved_2) {
-      GameEvent = _unresolved_2.GameEvent;
+      EvnetType = _unresolved_2.EvnetType;
     }, function (_unresolved_3) {
-      EventMng = _unresolved_3.default;
+      GameEvent = _unresolved_3.GameEvent;
     }, function (_unresolved_4) {
-      PublicData = _unresolved_4.default;
+      EventMng = _unresolved_4.default;
     }, function (_unresolved_5) {
-      PublicModel = _unresolved_5.default;
+      PublicData = _unresolved_5.default;
+    }, function (_unresolved_6) {
+      PublicModel = _unresolved_6.default;
     }],
     execute: function () {
       _crd = true;
@@ -94,19 +100,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         setEvent(name, callback) {
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).on(name, callback, this);
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Pulic).on(name, callback, this);
         }
 
         eventEmit(name, ...any) {
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).emit(name, ...any);
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Pulic).emit(name, ...any);
         }
 
         deletEvent(name, callback) {
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).off(name, callback, this);
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Pulic).off(name, callback, this);
         }
 
         show(...any) {

@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, EventTarget, PageView, Node, DEV, BaseSingletonComponent, PageAction, AssetMng, MusicMng, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PageControll;
+  var _reporterNs, _cclegacy, _decorator, PageView, Node, DEV, BaseSingletonComponent, EvnetType, PageAction, EventMng, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PageControll;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -15,6 +15,10 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
     _reporterNs.report("BaseSingletonComponent", "../../../Patten/Singleton/BaseSingletonComponent", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfEvnetType(extras) {
+    _reporterNs.report("EvnetType", "../../Enum/EvnetType", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfPageAction(extras) {
     _reporterNs.report("PageAction", "../../Enum/PageAction", _context.meta, extras);
   }
@@ -23,12 +27,8 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
     _reporterNs.report("PageMenu", "../../Enum/PageMenu", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfAssetMng(extras) {
-    _reporterNs.report("AssetMng", "../../Manager/AssetMng", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfMusicMng(extras) {
-    _reporterNs.report("MusicMng", "../../Manager/MusicMng", _context.meta, extras);
+  function _reportPossibleCrUseOfEventMng(extras) {
+    _reporterNs.report("EventMng", "../../Manager/EventMng", _context.meta, extras);
   }
 
   return {
@@ -37,7 +37,6 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
     }, function (_cc) {
       _cclegacy = _cc.cclegacy;
       _decorator = _cc._decorator;
-      EventTarget = _cc.EventTarget;
       PageView = _cc.PageView;
       Node = _cc.Node;
     }, function (_ccEnv) {
@@ -45,11 +44,11 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
     }, function (_unresolved_2) {
       BaseSingletonComponent = _unresolved_2.default;
     }, function (_unresolved_3) {
-      PageAction = _unresolved_3.PageAction;
+      EvnetType = _unresolved_3.EvnetType;
     }, function (_unresolved_4) {
-      AssetMng = _unresolved_4.default;
+      PageAction = _unresolved_4.PageAction;
     }, function (_unresolved_5) {
-      MusicMng = _unresolved_5.default;
+      EventMng = _unresolved_5.default;
     }],
     execute: function () {
       _crd = true;
@@ -71,23 +70,19 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
 
           _initializerDefineProperty(this, "page", _descriptor, this);
 
-          _defineProperty(this, "pageEvnet", new EventTarget());
-
           _defineProperty(this, "currnetIndex", 0);
         }
 
         onLoad() {
           /**現階段測試 正是要往Loading移動 */
-          (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
-            error: Error()
-          }), AssetMng) : AssetMng).startLoad();
-          (_crd && MusicMng === void 0 ? (_reportPossibleCrUseOfMusicMng({
-            error: Error()
-          }), MusicMng) : MusicMng).init();
           super.onLoad(); // console.log(this.pageEvnet);
 
           this.pageView = this.getComponent(PageView);
-          this.pageEvnet.on((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+            error: Error()
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Page).on((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
           }), PageAction) : PageAction).ChangeTo, this.onToPage, this);
 
@@ -100,9 +95,17 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
         start() {
           this.closeTouch(this.pageView);
           console.log("欸我已經送了欸");
-          if (DEV) this.pageEvnet.emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+          if (DEV) (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), PageAction) : PageAction).ChangeTo, 0);else this.pageEvnet.emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+            error: Error()
+          }), PageAction) : PageAction).ChangeTo, 0);else (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+            error: Error()
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
           }), PageAction) : PageAction).ChangeTo, 0);
         }

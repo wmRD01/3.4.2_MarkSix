@@ -1,12 +1,16 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, CASTCommandType, GameEvent, EventMng, CASTAPI, Pakege, _crd;
+  var _reporterNs, _cclegacy, CASTCommandType, EvnetType, GameEvent, EventMng, CASTAPI, Pakege, _crd;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
   function _reportPossibleCrUseOfCASTCommandType(extras) {
     _reporterNs.report("CASTCommandType", "../../Enum/CASTCommandType", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfEvnetType(extras) {
+    _reporterNs.report("EvnetType", "../../Enum/EvnetType", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfGameEvent(extras) {
@@ -27,9 +31,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_2) {
       CASTCommandType = _unresolved_2.CASTCommandType;
     }, function (_unresolved_3) {
-      GameEvent = _unresolved_3.GameEvent;
+      EvnetType = _unresolved_3.EvnetType;
     }, function (_unresolved_4) {
-      EventMng = _unresolved_4.default;
+      GameEvent = _unresolved_4.GameEvent;
+    }, function (_unresolved_5) {
+      EventMng = _unresolved_5.default;
     }],
     execute: function () {
       _crd = true;
@@ -59,7 +65,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), CASTCommandType) : CASTCommandType).Orientation:
               (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
                 error: Error()
-              }), EventMng) : EventMng).emit((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
+              }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+                error: Error()
+              }), EvnetType) : EvnetType).Pulic).emit((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
                 error: Error()
               }), GameEvent) : GameEvent).SetOrientation, event.data.orientation);
               break;

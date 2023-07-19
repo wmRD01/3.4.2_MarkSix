@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Label, _decorator, LobbyStateEvent, PageAction, BaseComponent, PageControll, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _temp, _crd, ccclass, property, PanelHome;
+  var _reporterNs, _cclegacy, Button, Label, _decorator, EvnetType, LobbyStateEvent, PageAction, EventMng, BaseComponent, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _temp, _crd, ccclass, property, PanelHome;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -11,6 +11,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
+  function _reportPossibleCrUseOfEvnetType(extras) {
+    _reporterNs.report("EvnetType", "../../../../Enum/EvnetType", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfLobbyStateEvent(extras) {
     _reporterNs.report("LobbyStateEvent", "../../../../Enum/LobbyStateEvent", _context.meta, extras);
   }
@@ -19,12 +23,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("PageAction", "../../../../Enum/PageAction", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfBaseComponent(extras) {
-    _reporterNs.report("BaseComponent", "../../../../Model/ComponentBase", _context.meta, extras);
+  function _reportPossibleCrUseOfEventMng(extras) {
+    _reporterNs.report("EventMng", "../../../../Manager/EventMng", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfPageControll(extras) {
-    _reporterNs.report("PageControll", "../../PageControll", _context.meta, extras);
+  function _reportPossibleCrUseOfBaseComponent(extras) {
+    _reporterNs.report("BaseComponent", "../../../../Model/ComponentBase", _context.meta, extras);
   }
 
   return {
@@ -36,13 +40,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Label = _cc.Label;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
-      LobbyStateEvent = _unresolved_2.LobbyStateEvent;
+      EvnetType = _unresolved_2.EvnetType;
     }, function (_unresolved_3) {
-      PageAction = _unresolved_3.PageAction;
+      LobbyStateEvent = _unresolved_3.LobbyStateEvent;
     }, function (_unresolved_4) {
-      BaseComponent = _unresolved_4.default;
+      PageAction = _unresolved_4.PageAction;
     }, function (_unresolved_5) {
-      PageControll = _unresolved_5.default;
+      EventMng = _unresolved_5.default;
+    }, function (_unresolved_6) {
+      BaseComponent = _unresolved_6.default;
     }],
     execute: function () {
       _crd = true;
@@ -97,9 +103,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).ChangePointPage, null, split[1]);
-          (_crd && PageControll === void 0 ? (_reportPossibleCrUseOfPageControll({
+          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), PageControll) : PageControll).instance.pageEvnet.emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
           }), PageAction) : PageAction).ChangeTo, Number(split[0]));
         }

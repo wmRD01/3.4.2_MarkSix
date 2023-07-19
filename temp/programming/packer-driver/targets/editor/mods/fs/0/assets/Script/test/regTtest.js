@@ -39,8 +39,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         error: Error()
       }), extentTest) : extentTest) {
         onLoad() {
-          console.log(this.testfun1.prototype); // EventMng.getInstance.eventMng.on("test", this.testfun1, this)
-          // EventMng.getInstance.eventMng.on("test", this.testfun2, this)
+          console.log(this.testfun1.prototype); // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).getInstance.EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).on("test", this.testfun1, this)
+          // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).getInstance.EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).on("test", this.testfun2, this)
 
           let str = "123HLKAD"; // str = str.replace(/[\u2200-\u22FF]/, "")
           // str = str.replace(/^[0-9]*$/, "")
@@ -58,10 +58,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           // console.log(str.match(/^[0-9]*$/));
         }
 
-        start() {// EventMng.getInstance.eventMng.emit("test")
-          // EventMng.getInstance.eventMng.removeAll("test");
-          // EventMng.getInstance.eventMng.off("test", this.testfun1,this)
-          // EventMng.getInstance.eventMng.emit("test")
+        start() {// EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).getInstance.EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit("test")
+          // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).getInstance.EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).removeAll("test");
+          // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).getInstance.EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).off("test", this.testfun1,this)
+          // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).getInstance.EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit("test")
         }
 
         testfun1() {

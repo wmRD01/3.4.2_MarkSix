@@ -1,10 +1,14 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, State, GameStateEvent, EventMng, OwnerBet, ClearBet, BackBet, ReferLastBet, SquintProcess, SquintEnd, UpdateCoin, _crd;
+  var _reporterNs, _cclegacy, State, EvnetType, GameStateEvent, EventMng, OwnerBet, ClearBet, BackBet, ReferLastBet, SquintProcess, SquintEnd, UpdateCoin, _crd;
 
   function _reportPossibleCrUseOfState(extras) {
     _reporterNs.report("State", "../../Patten/StatePatten", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfEvnetType(extras) {
+    _reporterNs.report("EvnetType", "../Enum/EvnetType", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfGameStateEvent(extras) {
@@ -33,9 +37,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_2) {
       State = _unresolved_2.State;
     }, function (_unresolved_3) {
-      GameStateEvent = _unresolved_3.GameStateEvent;
+      EvnetType = _unresolved_3.EvnetType;
     }, function (_unresolved_4) {
-      EventMng = _unresolved_4.default;
+      GameStateEvent = _unresolved_4.GameStateEvent;
+    }, function (_unresolved_5) {
+      EventMng = _unresolved_5.default;
     }],
     execute: function () {
       _crd = true;
@@ -56,12 +62,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (data.code == 0) {
             (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
               error: Error()
-            }), EventMng) : EventMng).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
+            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+              error: Error()
+            }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
               error: Error()
             }), GameStateEvent) : GameStateEvent).UpdateCoin, data.credit);
             (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
               error: Error()
-            }), EventMng) : EventMng).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
+            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+              error: Error()
+            }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
               error: Error()
             }), GameStateEvent) : GameStateEvent).ClientBet, data);
           }
@@ -77,12 +87,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         changeState(data) {
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
             error: Error()
           }), GameStateEvent) : GameStateEvent).BetClear);
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
             error: Error()
           }), GameStateEvent) : GameStateEvent).UpdateCoin, data.credit);
         }
@@ -98,7 +112,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (data.kind == -1) return;
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
             error: Error()
           }), GameStateEvent) : GameStateEvent).BackBet, data);
         }
@@ -138,7 +154,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         changeState(data) {
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
             error: Error()
           }), GameStateEvent) : GameStateEvent).UpdateCoin, data.money);
         }

@@ -83,6 +83,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "isClickScreen", false);
 
           _defineProperty(this, "castAPI", void 0);
+
+          _defineProperty(this, "gpgApi", "5gh394D");
         }
 
       });

@@ -1,4 +1,5 @@
 export namespace RequestGPG {
+
     export class Request {
         method: Method = Method.Get;
         headers: Headers = new Headers();
@@ -40,24 +41,29 @@ export namespace RequestGPG {
 
     export namespace Body {
         export namespace NeedToken {
-            export class temp {
+            export class base {
+                sign: string;
+            }
+
+            export class CertifiedEmail extends base {
                 [x: string]: string;
                 verifyCode: string;
                 email: string;
             }
-            /**需要token在思考如何切出 */
-            export class CertifiedEmail {
+            export class MyInfo extends base {
                 [x: string]: string;
-                verifyCode: string;
-                email: string;
-                sign: string;
             }
-            /**需要token在思考如何切出 */
-            export class MemberInfo {
-                sign: string;
+            export class Nickname extends base {
+                nickname: string;
             }
+
         }
         export namespace NotNeedToken {
+            // export class EmailSign {
+            //     [x: string]: string;
+            //     verifyCode: string;
+            //     email: string;
+            // }
             export class ValidateContactInfo {
                 Phone: string
                 Email: string
@@ -65,10 +71,11 @@ export namespace RequestGPG {
             export class RankList {
 
             }
-            export class SendLoginVerification {
+            export class SendRegisterVerification {
                 Locale: string = "zh-TW";
                 Email: string;
             }
+
 
         }
 
@@ -80,7 +87,15 @@ export namespace RequestGPG {
     }
 
     export enum APIUrl {
-        ValidateContactInfo = ""
+        playAPI = "https://play-api.ceis.tw",
+        ids = "https://ids.ceis.tw"
+    }
+    export enum API {
+        CertifiedEmall = "/Member/CertifiedEmail",
+        SendRegisterVerification = "/Token/SendRegisterVerification",
+        ValidateContactInfo = "/Token/ValidateContactInfo",
+        MyInfo = "/Member/MyInfo",
+        Nickname = "/Member/Nickname"
     }
 }
 

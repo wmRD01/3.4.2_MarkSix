@@ -14,6 +14,7 @@ import { WebSocketEvent } from "../Enum/WebSocketEvent";
 import { CommandType } from "../Enum/CommandType";
 import { DEV } from "cc/env";
 import PublicModel from "../Model/PublicModel";
+import { EvnetType } from "../Enum/EvnetType";
 /**登入 */
 export class AccountLogIn extends State {
     public changeState(data: RP.ln): void {
@@ -22,7 +23,7 @@ export class AccountLogIn extends State {
         // console.log(PublicData.getInstance);
         // console.log(GameData.getInstance.isFastInGame);
         /**更新部分資料 */
-        PublicModel.getInstance.TwoClassCheckData(Player.getInstance,data)
+        PublicModel.getInstance.TwoClassCheckData(Player.getInstance, data)
         if (GameData.getInstance.isFastInGame) {
             director.preloadScene(GameSceneName.GameRoom, () => {
                 let _lbsr = new lbsr()
@@ -30,7 +31,7 @@ export class AccountLogIn extends State {
                 _lbsr.contentId = GameData.getInstance.contentId
                 _lbsr.seatNo = RoomData.getInstance.seatNo
                 _lbsr.password = Player.getInstance.password
-                EventMng.emit(WebSocketEvent.WebSocketSendCommand, CommandType.lbsr, _lbsr)
+                EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(WebSocketEvent.WebSocketSendCommand, CommandType.lbsr, _lbsr)
             })
         }
         else {
@@ -38,7 +39,7 @@ export class AccountLogIn extends State {
                 director.loadScene(GameSceneName.Lobby)
             })
         }
-        // EventMng.emit(GameEvent.CloseGameLoad)
+        // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameEvent.CloseGameLoad)
         // //如果Server通知幣別時更新，如無則預設或者適應舊系統
         // if (data.coinType) GameData.getInstance.coinType = data.coinType
 
@@ -69,7 +70,7 @@ export class InLobby extends State {
         // director.preloadScene(GameSenceName.Lobby, () => {
         //     director.loadScene(GameSenceName.Lobby)
         // })
-        // EventMng.emit(WebSocketEvent.SendCommand, CommandType.lbrl)
+        // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(WebSocketEvent.SendCommand, CommandType.lbrl)
     }
 }
 /**進入房間級別 */
@@ -77,7 +78,7 @@ export class InRoomLevel extends State {
     public changeState(data: RP.lbrl): void {
         /**顯示Level */
         // MainLobby.instance.inRoomLevel()
-        // EventMng.emit(WebSocketEvent.SendCommand, CommandType.lbsr)
+        // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(WebSocketEvent.SendCommand, CommandType.lbsr)
         if (DEV) {
             MainLobby.instance.inGame(data.rooms[0].roomNo)
         }
@@ -98,7 +99,7 @@ export class InGame extends State {
             data.betOptions = [10, 200, 500, 1000, 10000]
             data.thinkSecond = 10
             data.playMinute = 1440
-            EventMng.emit(WebSocketEvent.WebSocketSendCommand, CommandType.vlcr, data)
+            EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(WebSocketEvent.WebSocketSendCommand, CommandType.vlcr, data)
         }
         else {
             director.loadScene(GameSceneName.GameRoom)

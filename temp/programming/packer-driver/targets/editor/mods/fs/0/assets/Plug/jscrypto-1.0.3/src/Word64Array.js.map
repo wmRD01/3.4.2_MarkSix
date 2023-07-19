@@ -1,1 +1,0 @@
-{"version":3,"sources":["file:///C:/CocosProject/3.4.2_MarkSix/assets/Plug/jscrypto-1.0.3/src/Word64Array.ts"],"names":["Word64","Word64Array"],"mappings":";;;;;;;;;;6BAAQA,M;kCAAQC","sourcesContent":["export {Word64, Word64Array} from \"./lib/Word64Array\";\n"]}

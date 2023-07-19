@@ -42,6 +42,8 @@ System.register(["cc"], function (_export, _context) {
 
           class Data {
             constructor() {
+              _defineProperty(this, "email", void 0);
+
               _defineProperty(this, "friendCount", void 0);
 
               _defineProperty(this, "introduceCode", void 0);
@@ -110,9 +112,9 @@ System.register(["cc"], function (_export, _context) {
           }
         })(ValidateContactInfo || (ValidateContactInfo = _ResponseGPG.ValidateContactInfo || (_ResponseGPG.ValidateContactInfo = {})));
 
-        var SendLoginVerification;
+        var SendRegisterVerification;
 
-        (function (_SendLoginVerification) {
+        (function (_SendRegisterVerification) {
           class DataClass {
             constructor() {
               _defineProperty(this, "Status", new State());
@@ -120,7 +122,7 @@ System.register(["cc"], function (_export, _context) {
 
           }
 
-          _SendLoginVerification.DataClass = DataClass;
+          _SendRegisterVerification.DataClass = DataClass;
 
           class State {
             constructor() {
@@ -130,7 +132,7 @@ System.register(["cc"], function (_export, _context) {
             }
 
           }
-        })(SendLoginVerification || (SendLoginVerification = _ResponseGPG.SendLoginVerification || (_ResponseGPG.SendLoginVerification = {})));
+        })(SendRegisterVerification || (SendRegisterVerification = _ResponseGPG.SendRegisterVerification || (_ResponseGPG.SendRegisterVerification = {})));
 
         var Certification;
 

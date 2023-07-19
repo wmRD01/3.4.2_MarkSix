@@ -11,8 +11,10 @@ export default class LabelAutoFollow extends BaseComponent {
     update() {
         if (this.node.position.equals(PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(this.node, this.target))) return
         console.log("改座標");
-
         this.node.scale = this.node.scale
         this.node.position = PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(this.node, this.target)
+
+        if (this.target.active != this.node.active)
+            this.target.active = this.node.active
     }
 }

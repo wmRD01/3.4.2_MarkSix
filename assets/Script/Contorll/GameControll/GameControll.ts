@@ -21,13 +21,14 @@ import GameSenceText from "../../Model/GameSenceText";
 import GameData from "../../Model/GameData";
 import CheckLoading from "../../Model/CheckLoading";
 import { CheckLoadingType } from "../../Enum/CheckLoadingType";
+import { EvnetType } from "../../Enum/EvnetType";
 
 export default class GameControll extends BaseSingleton<GameControll>() {
     //利用推波方式去call Function 
     setControllEvent() {
         game.on(Game.EVENT_HIDE, this.resetView.bind(this))
         game.on(Game.EVENT_SHOW, this.resetWait.bind(this))
-        EventMng.on(GameEvent.ControllSandCommend, this.serverRespond, this)
+        EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).on(GameEvent.ControllSandCommend, this.serverRespond, this)
     }
     serverRespond(cmd: string, data: any) {
         // console.log(cmd, data);
@@ -177,7 +178,7 @@ export default class GameControll extends BaseSingleton<GameControll>() {
         let senceText = new GameSenceText().change(cmd)
         // console.log(senceText);
         if (senceText != undefined)
-            EventMng.emit(GameStateEvent.UpdataSence, senceText)
+            EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameStateEvent.UpdataSence, senceText)
         switch (cmd) {
 
 

@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, BaseSingleton, EventMng, CommandType, WebSocketEvent, DelayTime, _crd;
+  var _reporterNs, _cclegacy, BaseSingleton, EventMng, CommandType, WebSocketEvent, EvnetType, DelayTime, _crd;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -25,6 +25,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("WebSocketEvent", "../Script/Enum/WebSocketEvent", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfEvnetType(extras) {
+    _reporterNs.report("EvnetType", "../Script/Enum/EvnetType", _context.meta, extras);
+  }
+
   _export("default", void 0);
 
   return {
@@ -40,6 +44,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       CommandType = _unresolved_4.CommandType;
     }, function (_unresolved_5) {
       WebSocketEvent = _unresolved_5.WebSocketEvent;
+    }, function (_unresolved_6) {
+      EvnetType = _unresolved_6.EvnetType;
     }],
     execute: function () {
       _crd = true;
@@ -117,7 +123,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             // console.error("送心跳");
             (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
               error: Error()
-            }), EventMng) : EventMng).emit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+              error: Error()
+            }), EvnetType) : EvnetType).Pulic).emit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
               error: Error()
             }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
               error: Error()

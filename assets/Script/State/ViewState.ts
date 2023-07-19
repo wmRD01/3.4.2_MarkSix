@@ -20,6 +20,7 @@ import { LangType } from "../Enum/LangType";
 import CheckLoading from "../Model/CheckLoading";
 import { CheckLoadingType } from "../Enum/CheckLoadingType";
 import Player from "../Model/Player";
+import { EvnetType } from "../Enum/EvnetType";
 
 /**更新房間狀態 */
 export class GetGameRoomData extends State {
@@ -45,7 +46,7 @@ export class GetGameRoomData extends State {
         console.log("開始處理Sence");
         PublicData.getInstance.isResetView = false
         this.senceProcessing(data)
-        EventMng.emit(GameStateEvent.ReProcessing, data)
+        EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameStateEvent.ReProcessing, data)
         console.log("結束處理Sence");
         /**畫面更新完成，關閉重製畫面判斷 */
 
@@ -55,14 +56,14 @@ export class GetGameRoomData extends State {
         /**避免推波事件時造成程序卡住，不可為Null與undifind */
         let changeData: any = {};
         console.log(`當前狀態：${data.nowStage}`);
-        EventMng.emit(GameStateEvent.UpdataSence, new GameSenceText().change(data.nowStage))
+        EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameStateEvent.UpdataSence, new GameSenceText().change(data.nowStage))
         switch (data.nowStage) {
             case ServerGameSenceType.gs1:
                 changeData = new RP.ggs();
                 (changeData as RP.ggs).time = data.roomTime;
                 (changeData as RP.ggs).status = data.roomStatus
-                EventMng.emit(GameEvent.ControllSandCommend, ServerGameSenceType.ggs, changeData)
-                EventMng.emit(GameEvent.ControllSandCommend, data.nowStage, changeData)
+                EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameEvent.ControllSandCommend, ServerGameSenceType.ggs, changeData)
+                EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameEvent.ControllSandCommend, data.nowStage, changeData)
                 break;
             case ServerGameSenceType.gs8:
             case ServerGameSenceType.gs9:
@@ -71,7 +72,7 @@ export class GetGameRoomData extends State {
             case ServerGameSenceType.gs11:
                 changeData = new RP.gs11();
                 (changeData as RP.gs11).betTime = MyMath.divide(data.remainTime, 1000);
-                EventMng.emit(GameEvent.ControllSandCommend, data.nowStage, changeData)
+                EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameEvent.ControllSandCommend, data.nowStage, changeData)
                 break;
             case ServerGameSenceType.gs13:
             case ServerGameSenceType.gs14:
@@ -128,7 +129,7 @@ export class LobbyCloseView extends State {
     public changeState(data: RP.gori): void {
         // DelayTime.getInstance.StopGameHeartrate()
         // if (PublicData.getInstance.isSystemDis || !PublicData.getInstance.isInGameRoom) return;
-        // EventMng.emit(GameEvent.ResetView)
+        // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameEvent.ResetView)
         // MusicMng.effectStopAll();
         // PanelLoading.instance.openLoading()
         // PublicData.getInstance.isResetView = true;
@@ -143,7 +144,7 @@ export class LobbyOpenView extends State {
     public async changeState(data: RP.gori): Promise<void> {
         // if (PublicData.getInstance.isSystemDis || !PublicData.getInstance.isInGameRoom) return;
         // console.log("載資料")
-        // EventMng.emit(WebSocketEvent.WebSocketSendCommand, CommandType.gori)
+        // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(WebSocketEvent.WebSocketSendCommand, CommandType.gori)
     }
 
 }
@@ -154,7 +155,7 @@ export class GameCloseView extends State {
     public changeState(data: RP.gori): void {
         DelayTime.getInstance.StopGameHeartrate()
         if (!CheckLoading.getInstance.checkState(CheckLoadingType.isWebSocketOpen) || !CheckLoading.getInstance.checkState(CheckLoadingType.isGameSence)) return;
-        EventMng.emit(GameEvent.ResetView)
+        EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameEvent.ResetView)
         MusicMng.effectStopAll();
         PanelLoading.instance.openLoading(SocketSetting.t("E_0004", LangType.Game))
         PublicData.getInstance.isResetProcessing = true
@@ -171,7 +172,7 @@ export class GameOpenView extends State {
 
         if (!CheckLoading.getInstance.checkState(CheckLoadingType.isWebSocketOpen) || !CheckLoading.getInstance.checkState(CheckLoadingType.isGameSence)) return;
         console.log("載資料")
-        EventMng.emit(WebSocketEvent.WebSocketSendCommand, CommandType.gori)
+        EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(WebSocketEvent.WebSocketSendCommand, CommandType.gori)
     }
 
 }

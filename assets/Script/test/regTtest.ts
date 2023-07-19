@@ -19,8 +19,8 @@ export default class regTtest extends extentTest {
     onLoad() {
         console.log(this.testfun1.prototype);
 
-        // EventMng.getInstance.eventMng.on("test", this.testfun1, this)
-        // EventMng.getInstance.eventMng.on("test", this.testfun2, this)
+        // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).getInstance.EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).on("test", this.testfun1, this)
+        // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).getInstance.EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).on("test", this.testfun2, this)
         let str = "123HLKAD"
         // str = str.replace(/[\u2200-\u22FF]/, "")
         // str = str.replace(/^[0-9]*$/, "")
@@ -43,10 +43,10 @@ export default class regTtest extends extentTest {
 
     }
     start() {
-        // EventMng.getInstance.eventMng.emit("test")
-        // EventMng.getInstance.eventMng.removeAll("test");
-        // EventMng.getInstance.eventMng.off("test", this.testfun1,this)
-        // EventMng.getInstance.eventMng.emit("test")
+        // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).getInstance.EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit("test")
+        // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).getInstance.EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).removeAll("test");
+        // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).getInstance.EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).off("test", this.testfun1,this)
+        // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).getInstance.EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit("test")
     }
     testfun1() {
         console.log("11");

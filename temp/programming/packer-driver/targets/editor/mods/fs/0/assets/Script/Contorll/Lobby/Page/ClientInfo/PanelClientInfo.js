@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "crypto-es"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "crypto-es", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, assetManager, Label, Sprite, SpriteFrame, _decorator, BaseComponent, Player, RequestGPG, CryptoES, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp2, _crd, ccclass, property, PanelClientInfo;
+  var _reporterNs, _cclegacy, assetManager, Label, Sprite, SpriteFrame, _decorator, BaseComponent, Player, RequestGPG, CryptoES, EventMng, EvnetType, LobbyStateEvent, PublicData, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, PanelClientInfo;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -31,6 +31,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("CryptoES", "crypto-es", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfEventMng(extras) {
+    _reporterNs.report("EventMng", "../../../../Manager/EventMng", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfEvnetType(extras) {
+    _reporterNs.report("EvnetType", "../../../../Enum/EvnetType", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfLobbyStateEvent(extras) {
+    _reporterNs.report("LobbyStateEvent", "../../../../Enum/LobbyStateEvent", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPublicData(extras) {
+    _reporterNs.report("PublicData", "../../../../Model/PublicData", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -49,6 +65,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       RequestGPG = _unresolved_4.RequestGPG;
     }, function (_cryptoEs) {
       CryptoES = _cryptoEs.default;
+    }, function (_unresolved_5) {
+      EventMng = _unresolved_5.default;
+    }, function (_unresolved_6) {
+      EvnetType = _unresolved_6.EvnetType;
+    }, function (_unresolved_7) {
+      LobbyStateEvent = _unresolved_7.LobbyStateEvent;
+    }, function (_unresolved_8) {
+      PublicData = _unresolved_8.default;
     }],
     execute: function () {
       _crd = true;
@@ -60,150 +84,147 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", PanelClientInfo = (_dec = ccclass('PanelClientInfo'), _dec2 = property(Sprite), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec(_class = (_class2 = (_temp2 = class PanelClientInfo extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelClientInfo = (_dec = ccclass('PanelClientInfo'), _dec2 = property(Sprite), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec(_class = (_class2 = (_temp = class PanelClientInfo extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {
           super(...args);
 
-          _defineProperty(this, "isData", false);
+          _defineProperty(this, "isNeedUpdata", true);
 
           _defineProperty(this, "isLoading", false);
 
           _initializerDefineProperty(this, "spritePlayer", _descriptor, this);
 
-          _initializerDefineProperty(this, "labelPlayerName", _descriptor2, this);
+          _initializerDefineProperty(this, "labelPhone", _descriptor2, this);
 
           _initializerDefineProperty(this, "labelNickName", _descriptor3, this);
 
-          _initializerDefineProperty(this, "tempText", _descriptor4, this);
+          _initializerDefineProperty(this, "labelEmail", _descriptor4, this);
+
+          _initializerDefineProperty(this, "tempText", _descriptor5, this);
         }
 
-        start() {
-          this.isData = false;
-          this.isLoading = false; // console.log(sys.browserType, sys.os);
+        async start() {
+          this.show();
+          this.isNeedUpdata = true;
+          this.isLoading = false;
+          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+            error: Error()
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).ActivePanelClientInfo, this.activePanel, this);
+          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+            error: Error()
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).ChangePlayerPicture, this.onChangePlayerPicture, this);
+          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+            error: Error()
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).UpDataPlayer, this.onUpdataPlayer, this); // console.log(sys.browserType, sys.os);
           // console.log(md5("12315235"));
         }
 
+        testGet(repon) {
+          console.log(repon);
+        }
+
         async onEnable() {
-          if (this.isData || this.isLoading) return;
+          if (!this.isNeedUpdata || this.isLoading) return;
           this.isLoading = true;
+          const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+            error: Error()
+          }), RequestGPG) : RequestGPG).Body.NeedToken.MyInfo();
+          body.sign = (_crd && CryptoES === void 0 ? (_reportPossibleCrUseOfCryptoES({
+            error: Error()
+          }), CryptoES) : CryptoES).MD5((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.gpgApi).toString();
+          let convert = new URLSearchParams(body).toString();
           await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
           }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
             error: Error()
-          }), Player) : Player).getInstance.gpgToken).fetchData("https://play-api.ceis.tw/Member/MyInfo?sign=47b436c2cad162edc9a8035afc3c673f", this.responseMyInfo.bind(this));
-          this.onValidateContactInfo();
+          }), Player) : Player).getInstance.gpgToken).fetchData(`${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+            error: Error()
+          }), RequestGPG) : RequestGPG).APIUrl.playAPI}${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+            error: Error()
+          }), RequestGPG) : RequestGPG).API.MyInfo}?${convert}`, this.responseMyInfo.bind(this));
           this.isLoading = false;
         }
 
         onDisable() {}
-        /**進行發送驗證碼時，必須先通過確認手機是否被註冊過，確認沒有驗證過就會SendLog */
 
-
-        async onValidateContactInfo() {
-          /** */
-          let body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+        onActivePanel(e, customEventData) {
+          this.hide();
+          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), RequestGPG) : RequestGPG).Body.NotNeedToken.ValidateContactInfo();
-          body.Email = "wm.rd01@gmail.com";
-          await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
             error: Error()
-          }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+          }), EvnetType) : EvnetType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
-          }), RequestGPG) : RequestGPG).Method.POST).setBody(JSON.stringify(body)).fetchData("https://ids.ceis.tw/Token/ValidateContactInfo", this.responseValidateContactInfo.bind(this));
-        }
-        /**送出前須確認驗證碼的正確性，但前題是他必須得先需要註冊信箱時才會接這個function */
-
-
-        async onCertification() {
-          const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+          }), LobbyStateEvent) : LobbyStateEvent).ChangePlayerPicture, this.spritePlayer.spriteFrame);
+          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), RequestGPG) : RequestGPG).Body.NeedToken.CertifiedEmail();
-          body.email = "wm.rd01@gmail.com";
-          body.verifyCode = this.tempText.string; // 合併 data 和 apiKey
-
-          const _temp = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
             error: Error()
-          }), RequestGPG) : RequestGPG).Body.NeedToken.temp();
-
-          _temp.email = "wm.rd01@gmail.com";
-          _temp.verifyCode = this.tempText.string;
-          const dataWithApiKey = new URLSearchParams(_temp).toString() + "5gh394D";
-          console.log(dataWithApiKey);
-          console.log((_crd && CryptoES === void 0 ? (_reportPossibleCrUseOfCryptoES({
+          }), EvnetType) : EvnetType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
-          }), CryptoES) : CryptoES).MD5(dataWithApiKey).toString());
-          body.sign = (_crd && CryptoES === void 0 ? (_reportPossibleCrUseOfCryptoES({
-            error: Error()
-          }), CryptoES) : CryptoES).MD5(dataWithApiKey).toString();
-          console.log(body);
-          await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-            error: Error()
-          }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-            error: Error()
-          }), RequestGPG) : RequestGPG).Method.POST).setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
-            error: Error()
-          }), Player) : Player).getInstance.gpgToken).setBody(JSON.stringify(body)).fetchData("https://play-api.ceis.tw/Member/CertifiedEmail", this.responseSendLoginVerification.bind(this));
+          }), LobbyStateEvent) : LobbyStateEvent).ActivePanelClientEdit, true);
         }
 
-        async responseValidateContactInfo(response) {
-          console.log("ValidateContactInfo", response);
-          /**代表此已經綁定過不可以綁定! */
+        onUpdataPlayer() {
+          this.isNeedUpdata = true;
+        }
 
-          if (response.Status.Code == "0") {
-            console.log("已存在請重新換組");
-            return;
-          } else {
-            console.log("恭喜信箱不存在，可繼續註冊"); //*要改成手動送驗證碼
-
-            const sendBody = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-              error: Error()
-            }), RequestGPG) : RequestGPG).Body.NotNeedToken.SendLoginVerification();
-            sendBody.Email = "wm.rd01@gmail.com";
-            await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-              error: Error()
-            }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-              error: Error()
-            }), RequestGPG) : RequestGPG).Method.POST).setBody(JSON.stringify(sendBody)).fetchData("https://ids.ceis.tw/Token/SendRegisterVerification", this.responseSendLoginVerification.bind(this));
-          }
+        activePanel(bool) {
+          bool ? this.show() : this.hide();
         }
 
         async responseMyInfo(response) {
           console.log("MyInfo", response);
           (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
             error: Error()
-          }), Player) : Player).getInstance.gppInfo = response; // response.data.photo
+          }), Player) : Player).getInstance.gpgInfo = response; // response.data.photo
 
-          assetManager.loadRemote("https://img.ceis.tw/Member/Avatar/2.jpg", (err, image) => {
+          assetManager.loadRemote(response.data.photo.headPhoto, (err, image) => {
             if (err) {
               console.error(err.message);
               return;
             }
 
-            this.spritePlayer.spriteFrame = SpriteFrame.createWithImage(image); // this.labelNickName.string= response.data.nickName
-            // this.labelPlayerName.string= response.data.
-
-            this.isData = true;
+            (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+              error: Error()
+            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+              error: Error()
+            }), EvnetType) : EvnetType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+              error: Error()
+            }), LobbyStateEvent) : LobbyStateEvent).ChangePlayerPicture, SpriteFrame.createWithImage(image));
+            this.isNeedUpdata = false;
           });
-        }
-        /**驗證碼發送是否成功 */
-
-
-        responseSendLoginVerification(response) {
-          console.log("SendRegisterVerification", response);
-
-          if (response.Status.Code == "0") {
-            console.log("過關惹");
-          }
+          this.labelNickName.string = response.data.nickName;
+          this.labelPhone.string = response.data.phoneNumber;
+          this.labelEmail.string = response.data.email;
         }
 
-      }, _temp2), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "spritePlayer", [_dec2], {
+        onChangePlayerPicture(_spriteFrame) {
+          this.spritePlayer.spriteFrame = _spriteFrame;
+        }
+
+      }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "spritePlayer", [_dec2], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "labelPlayerName", [_dec3], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "labelPhone", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,
@@ -213,7 +234,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "tempText", [_dec5], {
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "labelEmail", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "tempText", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,

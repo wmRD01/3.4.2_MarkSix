@@ -4,6 +4,7 @@ import BaseSingleton from "../Patten/Singleton/BaseSingleton";
 import EventMng from "../Script/Manager/EventMng";
 import { CommandType } from "../Script/Enum/CommandType";
 import { WebSocketEvent } from "../Script/Enum/WebSocketEvent";
+import { EvnetType } from "../Script/Enum/EvnetType";
 
 //#endregion
 export default class DelayTime extends BaseSingleton<DelayTime>() {
@@ -55,7 +56,7 @@ export default class DelayTime extends BaseSingleton<DelayTime>() {
         this.HeartrateNum = setInterval(() => {
             // console.error("送心跳");
 
-            EventMng.emit(WebSocketEvent.WebSocketSendCommand, CommandType.sschk, {})
+            EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(WebSocketEvent.WebSocketSendCommand, CommandType.sschk, {})
         }, setSecond * 1000)
     }
     StopGameHeartrate() {

@@ -1,5 +1,6 @@
 import { State } from "../../Patten/StatePatten";
 import * as RP from "../Contorll/Api/ResponeCommand";
+import { EvnetType } from "../Enum/EvnetType";
 import { GameStateEvent } from "../Enum/GameStateEvent";
 import EventMng from "../Manager/EventMng";
 // /**自己入房 */
@@ -12,8 +13,8 @@ import EventMng from "../Manager/EventMng";
 export class OwnerBet extends State {
     public changeState(data: RP.gbet): void {
         if (data.code == 0) {
-            EventMng.emit(GameStateEvent.UpdateCoin, data.credit)
-            EventMng.emit(GameStateEvent.ClientBet, data)
+            EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameStateEvent.UpdateCoin, data.credit)
+            EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameStateEvent.ClientBet, data)
         }
     }
 
@@ -22,8 +23,8 @@ export class OwnerBet extends State {
 /**下注清除 */
 export class ClearBet extends State {
     public changeState(data: RP.gbcl): void {
-        EventMng.emit(GameStateEvent.BetClear)
-        EventMng.emit(GameStateEvent.UpdateCoin, data.credit)
+        EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameStateEvent.BetClear)
+        EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameStateEvent.UpdateCoin, data.credit)
     }
 
 }
@@ -31,7 +32,7 @@ export class ClearBet extends State {
 export class BackBet extends State {
     public changeState(data: RP.gbbk): void {
         if (data.kind == -1) return
-        EventMng.emit(GameStateEvent.BackBet, data)
+        EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameStateEvent.BackBet, data)
     }
 
 }
@@ -56,7 +57,7 @@ export class SquintEnd extends State {
 
 export class UpdateCoin extends State {
     public changeState(data: RP.gonm): void {
-        EventMng.emit(GameStateEvent.UpdateCoin,data.money)
+        EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameStateEvent.UpdateCoin, data.money)
     }
 }
 

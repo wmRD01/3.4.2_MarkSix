@@ -9,6 +9,7 @@ export namespace ResponseGPG {
             Message: string = "Success"
         }
         class Data {
+            email: string;
             friendCount: number;
             introduceCode: string;
             isTrial: false;
@@ -41,7 +42,7 @@ export namespace ResponseGPG {
         }
 
     }
-    export namespace SendLoginVerification {
+    export namespace SendRegisterVerification {
         export class DataClass {
             Status: State = new State();
         }

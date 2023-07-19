@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Node, Sprite, UITransform, v3, _decorator, AssetType, PageAction, AssetMng, BaseComponent, PublicData, PublicModel, PageControll, Page, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, PanelBottomNavigationBar, ActionDic;
+  var _reporterNs, _cclegacy, Button, Node, Sprite, UITransform, v3, _decorator, AssetType, EvnetType, PageAction, AssetMng, EventMng, BaseComponent, PublicData, PublicModel, Page, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, PanelBottomNavigationBar, ActionDic;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -13,6 +13,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfAssetType(extras) {
     _reporterNs.report("AssetType", "../../Enum/AssetType", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfEvnetType(extras) {
+    _reporterNs.report("EvnetType", "../../Enum/EvnetType", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfPageAction(extras) {
@@ -27,6 +31,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("AssetMng", "../../Manager/AssetMng", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfEventMng(extras) {
+    _reporterNs.report("EventMng", "../../Manager/EventMng", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfBaseComponent(extras) {
     _reporterNs.report("BaseComponent", "../../Model/ComponentBase", _context.meta, extras);
   }
@@ -37,10 +45,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfPublicModel(extras) {
     _reporterNs.report("PublicModel", "../../Model/PublicModel", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfPageControll(extras) {
-    _reporterNs.report("PageControll", "./PageControll", _context.meta, extras);
   }
 
   return {
@@ -57,17 +61,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_2) {
       AssetType = _unresolved_2.AssetType;
     }, function (_unresolved_3) {
-      PageAction = _unresolved_3.PageAction;
+      EvnetType = _unresolved_3.EvnetType;
     }, function (_unresolved_4) {
-      AssetMng = _unresolved_4.default;
+      PageAction = _unresolved_4.PageAction;
     }, function (_unresolved_5) {
-      BaseComponent = _unresolved_5.default;
+      AssetMng = _unresolved_5.default;
     }, function (_unresolved_6) {
-      PublicData = _unresolved_6.default;
+      EventMng = _unresolved_6.default;
     }, function (_unresolved_7) {
-      PublicModel = _unresolved_7.default;
+      BaseComponent = _unresolved_7.default;
     }, function (_unresolved_8) {
-      PageControll = _unresolved_8.default;
+      PublicData = _unresolved_8.default;
+    }, function (_unresolved_9) {
+      PublicModel = _unresolved_9.default;
     }],
     execute: function () {
       _crd = true;
@@ -133,17 +139,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onEnable() {
-          (_crd && PageControll === void 0 ? (_reportPossibleCrUseOfPageControll({
+          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), PageControll) : PageControll).instance.pageEvnet.on((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Page).on((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
           }), PageAction) : PageAction).ChangeTo, this.onEventChangeTo, this);
         }
 
         onDisable() {
-          (_crd && PageControll === void 0 ? (_reportPossibleCrUseOfPageControll({
+          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), PageControll) : PageControll).instance.pageEvnet.off((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Page).off((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
           }), PageAction) : PageAction).ChangeTo, this.onEventChangeTo, this);
         }
@@ -166,9 +176,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(this.nodeCircle, this.getButton(this.currentIndex).node).x;
           this.goTarget = v3(getX, this.circleY);
           this.startAction();
-          (_crd && PageControll === void 0 ? (_reportPossibleCrUseOfPageControll({
+          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), PageControll) : PageControll).instance.pageEvnet.emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
           }), PageAction) : PageAction).ChangeTo, this.currentIndex);
         }

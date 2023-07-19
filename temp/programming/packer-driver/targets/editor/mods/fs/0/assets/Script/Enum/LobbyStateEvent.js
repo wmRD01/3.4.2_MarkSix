@@ -17,6 +17,10 @@ System.register(["cc"], function (_export, _context) {
       (function (LobbyStateEvent) {
         LobbyStateEvent["BallChooeseAction"] = "BallChooeseAction";
         LobbyStateEvent["ChangePointPage"] = "ChangePointPage";
+        LobbyStateEvent["ActivePanelClientInfo"] = "ActivePanelClientInfo";
+        LobbyStateEvent["ActivePanelClientEdit"] = "ActivePanelClientEdit";
+        LobbyStateEvent["ChangePlayerPicture"] = "ChangePlayerPicture";
+        LobbyStateEvent["UpDataPlayer"] = "UpDataPlayer";
       })(LobbyStateEvent || _export("LobbyStateEvent", LobbyStateEvent = {}));
 
       _cclegacy._RF.pop();

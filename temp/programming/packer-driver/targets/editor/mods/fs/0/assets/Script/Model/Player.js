@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, BaseSingleton, CoinType, PlayerIdentity, GameData, Player, _crd;
+  var _reporterNs, _cclegacy, BaseSingleton, ResponseGPG, CoinType, PlayerIdentity, GameData, Player, _crd;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -35,11 +35,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_2) {
       BaseSingleton = _unresolved_2.default;
     }, function (_unresolved_3) {
-      CoinType = _unresolved_3.CoinType;
+      ResponseGPG = _unresolved_3.ResponseGPG;
     }, function (_unresolved_4) {
-      PlayerIdentity = _unresolved_4.PlayerIdentity;
+      CoinType = _unresolved_4.CoinType;
     }, function (_unresolved_5) {
-      GameData = _unresolved_5.default;
+      PlayerIdentity = _unresolved_5.PlayerIdentity;
+    }, function (_unresolved_6) {
+      GameData = _unresolved_6.default;
     }],
     execute: function () {
       _crd = true;
@@ -72,9 +74,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), PlayerIdentity) : PlayerIdentity).Member);
 
-          _defineProperty(this, "gppInfo", void 0);
+          _defineProperty(this, "gpgInfo", new (_crd && ResponseGPG === void 0 ? (_reportPossibleCrUseOfResponseGPG({
+            error: Error()
+          }), ResponseGPG) : ResponseGPG).MyInfo.DataClass());
 
-          _defineProperty(this, "gpgToken", "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjExMkVFRDgwNzBBMEY5RkIzRUI3RDc3RkU3NjAxMTU0IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2ODkxMjkzNjEsImV4cCI6MTY5MTcyMTM2MSwiaXNzIjoiaHR0cHM6Ly9pZHMuY2Vpcy50dyIsImNsaWVudF9pZCI6Im1hcmtfc2l4Iiwic3ViIjoiMjMyNCIsImF1dGhfdGltZSI6MTY4OTEyOTM2MSwiaWRwIjoibG9jYWwiLCJNZW1iZXJJRCI6IjIzMjQiLCJqdGkiOiI3RkNCM0QzQ0NDOUE3MjRGOUQ5M0YwNDZDMjNGODA1NCIsImlhdCI6MTY4OTEyOTM2MSwic2NvcGUiOlsibWVtYmVyLmluZm8udXNlciJdLCJhbXIiOlsibWtfcGhvbmUiXX0.agzZ_DHtp_dQQKfa1fRhJRwQAh8NnLk98jmqspD8RrnRq5TNqE-dTaf-53d61BraahHl2IO6qwPRk7wJr_RP6nuWYcoiVj4k3WGYG1qnpjuYA5vlq1Iyq2pPIr4eNq2pRV9mJAdKzsMVi1zVi5s7tz38sjpr470xa4QL4zXLluGIg-562pqnSAOtKiPQhCoCAzPSixI16BM3Ite90kw3a3gTcP_m7jA-ELfZxwS-pTHHSqQzhBTqCeMQk9uC3Rcuook_SseYN7cJoYOi_oc0wnNoMhalyLMbdhZKcktAMJ6ExuN0fj_RIxvAJT4lJrQictihPBE43qe7djkWV9uRUQ");
+          _defineProperty(this, "gpgToken", "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjExMkVFRDgwNzBBMEY5RkIzRUI3RDc3RkU3NjAxMTU0IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2ODk3NTg4NzMsImV4cCI6MTY5MjM1MDg3MywiaXNzIjoiaHR0cHM6Ly9pZHMuY2Vpcy50dyIsImNsaWVudF9pZCI6Im1hcmtfc2l4Iiwic3ViIjoiMjMyNCIsImF1dGhfdGltZSI6MTY4OTc1ODg3MywiaWRwIjoibG9jYWwiLCJNZW1iZXJJRCI6IjIzMjQiLCJqdGkiOiIxMDM4QkU5QTcyMDJFNTA2RkMxRTNDQ0QyMjNBNDI5MSIsImlhdCI6MTY4OTc1ODg3Mywic2NvcGUiOlsibWVtYmVyLmluZm8udXNlciJdLCJhbXIiOlsibWtfcGhvbmUiXX0.SJ5XYSfZBlhuGtAeRgtwEapeJthw9Lx-Gskfd2k9vZ-eqmYzvezS9VYYRzxZEHmUPDYowVzTng5vGkIhax_RmiVfHbE74IEdJ3hKXd35TiXxWwiokBr8NsevlK9LueychO2sH0TVQx5MTMHMDoEzc_M3mdnkrxpEvmr5Wz2PZ-qPI5ZfHiGvGaPSMVB9RxN10ZmtCTwxonSUI7tQCJOaquEm0Cvjwub69s62MaSZJ9Rz8m4fthfaTEgtfRXdmHdS4deFjMzPKEJPT29IULdkVoHF9BOGJAJRhxJM75hmL59kIFptt1MOz_7x6q7Gv7w_y6BvTzQOtQ56NVARQ9JA5Q");
         }
 
         /// 相關資訊.

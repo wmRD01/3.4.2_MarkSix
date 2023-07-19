@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16", "__unresolved_17", "__unresolved_18", "__unresolved_19", "__unresolved_20", "__unresolved_21", "__unresolved_22"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16", "__unresolved_17", "__unresolved_18", "__unresolved_19", "__unresolved_20", "__unresolved_21", "__unresolved_22", "__unresolved_23"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, CommandType, GameEvent, EventMng, PublicData, LobbyState, MessageState, PlayerState, ViewState, AccountLogIn, ChangeNickname, InGame, InLobby, InRoomLevel, BackBet, ClearBet, OwnerBet, ReferLastBet, SquintEnd, SquintProcess, UpdateCoin, GameCloseView, GameOpenView, LobbyCloseView, LobbyOpenView, PlayerInRoom, PlayerExitRoom, RefreshBankerBetList, RefreshPlayerBetList, GetGameRoomData, BackHomeMessage, ShowConfirmMessage, MessageCommend, LangType, ServerGameSenceType, BaseSingleton, SocketSetting, Game, game, GameSceneName, RoomData, PanelLoading, GameStateEvent, GameSenceText, GameData, CheckLoading, CheckLoadingType, GameControll, _crd;
+  var _reporterNs, _cclegacy, CommandType, GameEvent, EventMng, PublicData, LobbyState, MessageState, PlayerState, ViewState, AccountLogIn, ChangeNickname, InGame, InLobby, InRoomLevel, BackBet, ClearBet, OwnerBet, ReferLastBet, SquintEnd, SquintProcess, UpdateCoin, GameCloseView, GameOpenView, LobbyCloseView, LobbyOpenView, PlayerInRoom, PlayerExitRoom, RefreshBankerBetList, RefreshPlayerBetList, GetGameRoomData, BackHomeMessage, ShowConfirmMessage, MessageCommend, LangType, ServerGameSenceType, BaseSingleton, SocketSetting, Game, game, GameSceneName, RoomData, PanelLoading, GameStateEvent, GameSenceText, GameData, CheckLoading, CheckLoadingType, EvnetType, GameControll, _crd;
 
   function _reportPossibleCrUseOfCommandType(extras) {
     _reporterNs.report("CommandType", "../../Enum/CommandType", _context.meta, extras);
@@ -179,6 +179,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("CheckLoadingType", "../../Enum/CheckLoadingType", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfEvnetType(extras) {
+    _reporterNs.report("EvnetType", "../../Enum/EvnetType", _context.meta, extras);
+  }
+
   _export("default", void 0);
 
   return {
@@ -254,6 +258,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       CheckLoading = _unresolved_22.default;
     }, function (_unresolved_23) {
       CheckLoadingType = _unresolved_23.CheckLoadingType;
+    }, function (_unresolved_24) {
+      EvnetType = _unresolved_24.EvnetType;
     }],
     execute: function () {
       _crd = true;
@@ -269,7 +275,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           game.on(Game.EVENT_SHOW, this.resetWait.bind(this));
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).on((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Pulic).on((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
             error: Error()
           }), GameEvent) : GameEvent).ControllSandCommend, this.serverRespond, this);
         }
@@ -653,7 +661,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (senceText != undefined) (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
             error: Error()
           }), GameStateEvent) : GameStateEvent).UpdataSence, senceText);
 

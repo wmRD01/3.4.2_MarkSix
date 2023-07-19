@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "cc/env", "__unresolved_13"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "cc/env", "__unresolved_13", "__unresolved_14"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, PublicData, State, EventMng, GameData, Player, director, random, GameSceneName, DelayTime, MainLobby, lbsr, RoomData, WebSocketEvent, CommandType, DEV, PublicModel, AccountLogIn, InLobby, InRoomLevel, InGame, CreatorRoomData, ChangeNickname, _crd;
+  var _reporterNs, _cclegacy, PublicData, State, EventMng, GameData, Player, director, random, GameSceneName, DelayTime, MainLobby, lbsr, RoomData, WebSocketEvent, CommandType, DEV, PublicModel, EvnetType, AccountLogIn, InLobby, InRoomLevel, InGame, CreatorRoomData, ChangeNickname, _crd;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -65,6 +65,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("PublicModel", "../Model/PublicModel", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfEvnetType(extras) {
+    _reporterNs.report("EvnetType", "../Enum/EvnetType", _context.meta, extras);
+  }
+
   _export({
     AccountLogIn: void 0,
     InLobby: void 0,
@@ -108,6 +112,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       DEV = _ccEnv.DEV;
     }, function (_unresolved_14) {
       PublicModel = _unresolved_14.default;
+    }, function (_unresolved_15) {
+      EvnetType = _unresolved_15.EvnetType;
     }],
     execute: function () {
       _crd = true;
@@ -159,7 +165,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               }), Player) : Player).getInstance.password;
               (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
                 error: Error()
-              }), EventMng) : EventMng).emit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+              }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+                error: Error()
+              }), EvnetType) : EvnetType).Pulic).emit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
                 error: Error()
               }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
                 error: Error()
@@ -173,7 +181,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 error: Error()
               }), GameSceneName) : GameSceneName).Lobby);
             });
-          } // EventMng.emit(GameEvent.CloseGameLoad)
+          } // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameEvent.CloseGameLoad)
           // //如果Server通知幣別時更新，如無則預設或者適應舊系統
           // if (data.coinType) GameData.getInstance.coinType = data.coinType
           // let getWallet = data.coinType == CoinType.Gold ? data.pointGold : data.pointSilver
@@ -204,7 +212,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // director.preloadScene(GameSenceName.Lobby, () => {
           //     director.loadScene(GameSenceName.Lobby)
           // })
-          // EventMng.emit(WebSocketEvent.SendCommand, CommandType.lbrl)
+          // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(WebSocketEvent.SendCommand, CommandType.lbrl)
         }
 
       });
@@ -217,7 +225,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         changeState(data) {
           /**顯示Level */
           // MainLobby.instance.inRoomLevel()
-          // EventMng.emit(WebSocketEvent.SendCommand, CommandType.lbsr)
+          // EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(WebSocketEvent.SendCommand, CommandType.lbsr)
           if (DEV) {
             (_crd && MainLobby === void 0 ? (_reportPossibleCrUseOfMainLobby({
               error: Error()
@@ -247,7 +255,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             _data.playMinute = 1440;
             (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
               error: Error()
-            }), EventMng) : EventMng).emit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+              error: Error()
+            }), EvnetType) : EvnetType).Pulic).emit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
               error: Error()
             }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
               error: Error()

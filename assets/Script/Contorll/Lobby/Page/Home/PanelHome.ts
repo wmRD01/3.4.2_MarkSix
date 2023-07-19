@@ -1,6 +1,8 @@
 import { Button, EventTouch, Label, Node, _decorator } from 'cc';
+import { EvnetType } from '../../../../Enum/EvnetType';
 import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import { PageAction } from '../../../../Enum/PageAction';
+import EventMng from '../../../../Manager/EventMng';
 import BaseComponent from '../../../../Model/ComponentBase';
 import { goin } from '../../../Api/ResponeCommand';
 import PageControll from '../../PageControll';
@@ -41,6 +43,6 @@ export default class PanelHome extends BaseComponent {
         if (isNaN(Number(split[0])))
             console.error("錯誤啦!!!是不是忘記設定");
         this.eventEmit(LobbyStateEvent.ChangePointPage, null, split[1])
-        PageControll.instance.pageEvnet.emit(PageAction.ChangeTo, Number(split[0]))
+        EventMng.getInstance.mapEvnet.get(EvnetType.Page).emit(PageAction.ChangeTo, Number(split[0]))
     }
 }

@@ -1,4 +1,5 @@
 import { _decorator, Component, UIOpacity, Vec3 } from "cc";
+import { EvnetType } from "../Enum/EvnetType";
 import { GameEvent } from "../Enum/GameEvent";
 import EventMng from "../Manager/EventMng";
 import PublicData from "./PublicData";
@@ -41,13 +42,13 @@ export default class BaseComponent extends Component {
 
     }
     setEvent(name: string, callback: any | Function) {
-      EventMng.on(name, callback, this);
+        EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).on(name, callback, this);
     }
     eventEmit(name: string, ...any: any[]) {
-        EventMng.emit(name, ...any);
+        EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(name, ...any);
     }
     deletEvent(name: string, callback: any | Function) {
-        EventMng.off(name, callback, this);
+        EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).off(name, callback, this);
     }
     show(...any: any[]): void {
         this.node.active = true

@@ -1,9 +1,39 @@
 
-import { _decorator, Component, Node, EditBox, Label, VerticalTextAlignment } from 'cc';
+import { _decorator, Component, Node, EditBox, Label, VerticalTextAlignment, Size, Sprite } from 'cc';
 const { ccclass, property } = _decorator;
-
+const LEFT_PADDING = 2;
 @ccclass('MyEditBox')
 export class MyEditBox extends EditBox {
+    @property(Sprite)
+    spriteBG:Sprite;
+    @property
+    isAutoOff: boolean = true;
+    protected _updateLabelPosition(size: Size): void {
+        if (!this.isAutoOff) return
+        const trans = this.node._uiProps.uiTransformComp!;
+        const offX = -trans.anchorX * trans.width;
+        const offY = -trans.anchorY * trans.height;
+
+        const placeholderLabel = this._placeholderLabel;
+        const textLabel = this._textLabel;
+        if (textLabel) {
+            textLabel.node._uiProps.uiTransformComp!.setContentSize(size.width - LEFT_PADDING, size.height);
+            textLabel.node.setPosition(offX + LEFT_PADDING, offY + size.height, textLabel.node.position.z);
+            if (this._inputMode === 0) {
+                // textLabel.verticalAlign = VerticalTextAlignment.TOP;
+            }
+            // textLabel.enableWrapText = this._inputMode === InputMode.ANY;
+            textLabel.enableWrapText = this._inputMode === 0;
+        }
+
+        if (placeholderLabel) {
+            placeholderLabel.node._uiProps.uiTransformComp!.setContentSize(size.width - LEFT_PADDING, size.height);
+            placeholderLabel.lineHeight = size.height;
+            placeholderLabel.node.setPosition(offX + LEFT_PADDING, offY + size.height, placeholderLabel.node.position.z);
+            // placeholderLabel.enableWrapText = this._inputMode === InputMode.ANY;
+            placeholderLabel.enableWrapText = this._inputMode === 0;
+        }
+    }
     _updateTextLabel() {
         let textLabel = this._textLabel; // If textLabel doesn't exist, create one.
 

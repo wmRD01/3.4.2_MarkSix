@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/EvnetType.ts"],"names":["EvnetType"],"mappings":";;;;;;;;;;;;;;;;iBAAYA,S;AAAAA,QAAAA,S,CAAAA,S;AAAAA,QAAAA,S,CAAAA,S;AAAAA,QAAAA,S,CAAAA,S;SAAAA,S,yBAAAA,S","sourcesContent":["export enum EvnetType {\r\n    Pulic,\r\n    Page,\r\n    Panel,\r\n}"]}

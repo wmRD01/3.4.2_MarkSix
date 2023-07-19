@@ -1,9 +1,11 @@
 import { Button, Node, Sprite, UITransform, v3, Vec3, _decorator } from "cc";
 import { AssetType } from "../../Enum/AssetType";
+import { EvnetType } from "../../Enum/EvnetType";
 import { PageAction } from "../../Enum/PageAction";
 import { PageMenu } from "../../Enum/PageMenu";
 import AssetMng from "../../Manager/AssetMng";
 import ButtonMng from "../../Manager/ButtonMng";
+import EventMng from "../../Manager/EventMng";
 import BaseComponent from "../../Model/ComponentBase";
 import PublicData from "../../Model/PublicData";
 import PublicModel from "../../Model/PublicModel";
@@ -45,10 +47,10 @@ export default class PanelBottomNavigationBar extends BaseComponent {
         this.circleY = -(PublicData.getInstance.BaseViewHeight / 2) + (this.nodeCircle.getComponent(UITransform).height / 2)
     }
     onEnable() {
-        PageControll.instance.pageEvnet.on(PageAction.ChangeTo, this.onEventChangeTo, this)
+        EventMng.getInstance.mapEvnet.get(EvnetType.Page).on(PageAction.ChangeTo, this.onEventChangeTo, this)
     }
     onDisable() {
-        PageControll.instance.pageEvnet.off(PageAction.ChangeTo, this.onEventChangeTo, this)
+        EventMng.getInstance.mapEvnet.get(EvnetType.Page).off(PageAction.ChangeTo, this.onEventChangeTo, this)
     }
 
     onEventChangeTo(index: PageMenu) {
@@ -63,7 +65,8 @@ export default class PanelBottomNavigationBar extends BaseComponent {
         let getX = PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(this.nodeCircle, this.getButton(this.currentIndex).node).x
         this.goTarget = v3(getX, this.circleY)
         this.startAction()
-        PageControll.instance.pageEvnet.emit(PageAction.ChangeTo, this.currentIndex)
+
+        EventMng.getInstance.mapEvnet.get(EvnetType.Page).emit(PageAction.ChangeTo, this.currentIndex)
     }
     getButton(index: number) {
         return this.mapButton.get(index).getButton()

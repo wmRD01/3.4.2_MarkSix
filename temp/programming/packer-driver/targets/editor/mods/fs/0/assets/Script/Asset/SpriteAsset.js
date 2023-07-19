@@ -1,9 +1,13 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, resources, SpriteAtlas, SpriteFrame, GameEvent, EventMng, SpriteAsset, _crd;
+  var _reporterNs, _cclegacy, resources, SpriteAtlas, SpriteFrame, EvnetType, GameEvent, EventMng, SpriteAsset, _crd;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _reportPossibleCrUseOfEvnetType(extras) {
+    _reporterNs.report("EvnetType", "../Enum/EvnetType", _context.meta, extras);
+  }
 
   function _reportPossibleCrUseOfGameEvent(extras) {
     _reporterNs.report("GameEvent", "../Enum/GameEvent", _context.meta, extras);
@@ -26,9 +30,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       SpriteAtlas = _cc.SpriteAtlas;
       SpriteFrame = _cc.SpriteFrame;
     }, function (_unresolved_2) {
-      GameEvent = _unresolved_2.GameEvent;
+      EvnetType = _unresolved_2.EvnetType;
     }, function (_unresolved_3) {
-      EventMng = _unresolved_3.default;
+      GameEvent = _unresolved_3.GameEvent;
+    }, function (_unresolved_4) {
+      EventMng = _unresolved_4.default;
     }],
     execute: function () {
       _crd = true;
@@ -81,7 +87,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             console.log(this.data);
             (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
               error: Error()
-            }), EventMng) : EventMng).emit((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
+            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+              error: Error()
+            }), EvnetType) : EvnetType).Pulic).emit((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
               error: Error()
             }), GameEvent) : GameEvent).SetLogo, this.data.get("logo"));
           });

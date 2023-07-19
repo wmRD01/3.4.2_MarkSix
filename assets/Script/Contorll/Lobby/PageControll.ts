@@ -1,9 +1,11 @@
 import { _decorator, EventTarget, PageView, Node } from 'cc';
 import { DEV } from 'cc/env';
 import BaseSingletonComponent from '../../../Patten/Singleton/BaseSingletonComponent';
+import { EvnetType } from '../../Enum/EvnetType';
 import { PageAction } from '../../Enum/PageAction';
 import { PageMenu } from '../../Enum/PageMenu';
 import AssetMng from '../../Manager/AssetMng';
+import EventMng from '../../Manager/EventMng';
 import MusicMng from '../../Manager/MusicMng';
 import PublicModel from '../../Model/PublicModel';
 const { ccclass, property } = _decorator;
@@ -12,17 +14,16 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
     pageView: PageView;
     @property(Node)
     page: Node[] = []
-    pageEvnet: EventTarget = new EventTarget();
 
     currnetIndex: number = 0;
     onLoad() {
         /**現階段測試 正是要往Loading移動 */
-        AssetMng.startLoad()
-        MusicMng.init()
+
         super.onLoad()
         // console.log(this.pageEvnet);
         this.pageView = this.getComponent(PageView)
-        this.pageEvnet.on(PageAction.ChangeTo, this.onToPage, this)
+
+        EventMng.getInstance.mapEvnet.get(EvnetType.Page).on(PageAction.ChangeTo, this.onToPage, this)
         for (let index = 0; index < this.page.length; index++) {
             this.page[index].active = false
         }
@@ -33,9 +34,9 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
         console.log("欸我已經送了欸");
 
         if (DEV)
-            this.pageEvnet.emit(PageAction.ChangeTo, 0);
+            EventMng.getInstance.mapEvnet.get(EvnetType.Page).emit(PageAction.ChangeTo, 0);
         else
-            this.pageEvnet.emit(PageAction.ChangeTo, 0);
+            EventMng.getInstance.mapEvnet.get(EvnetType.Page).emit(PageAction.ChangeTo, 0);
     }
     closeTouch(target: PageView) {
         //@ts-ignore

@@ -81,38 +81,42 @@ System.register(["cc"], function (_export, _context) {
           var NeedToken;
 
           (function (_NeedToken) {
-            class temp {
+            class base {
               constructor() {
-                _defineProperty(this, "verifyCode", void 0);
-
-                _defineProperty(this, "email", void 0);
+                _defineProperty(this, "sign", void 0);
               }
 
             }
 
-            _NeedToken.temp = temp;
+            _NeedToken.base = base;
 
-            class CertifiedEmail {
+            class CertifiedEmail extends base {
               constructor() {
+                super(...arguments);
+
                 _defineProperty(this, "verifyCode", void 0);
 
                 _defineProperty(this, "email", void 0);
-
-                _defineProperty(this, "sign", void 0);
               }
 
             }
 
             _NeedToken.CertifiedEmail = CertifiedEmail;
 
-            class MemberInfo {
+            class MyInfo extends base {}
+
+            _NeedToken.MyInfo = MyInfo;
+
+            class Nickname extends base {
               constructor() {
-                _defineProperty(this, "sign", void 0);
+                super(...arguments);
+
+                _defineProperty(this, "nickname", void 0);
               }
 
             }
 
-            _NeedToken.MemberInfo = MemberInfo;
+            _NeedToken.Nickname = Nickname;
           })(NeedToken || (NeedToken = _Body.NeedToken || (_Body.NeedToken = {})));
 
           var NotNeedToken;
@@ -133,7 +137,7 @@ System.register(["cc"], function (_export, _context) {
 
             _NotNeedToken.RankList = RankList;
 
-            class SendLoginVerification {
+            class SendRegisterVerification {
               constructor() {
                 _defineProperty(this, "Locale", "zh-TW");
 
@@ -142,7 +146,7 @@ System.register(["cc"], function (_export, _context) {
 
             }
 
-            _NotNeedToken.SendLoginVerification = SendLoginVerification;
+            _NotNeedToken.SendRegisterVerification = SendRegisterVerification;
           })(NotNeedToken || (NotNeedToken = _Body.NotNeedToken || (_Body.NotNeedToken = {})));
         })(Body || (Body = _RequestGPG.Body || (_RequestGPG.Body = {})));
 
@@ -157,10 +161,22 @@ System.register(["cc"], function (_export, _context) {
         var APIUrl;
 
         (function (APIUrl) {
-          APIUrl["ValidateContactInfo"] = "";
+          APIUrl["playAPI"] = "https://play-api.ceis.tw";
+          APIUrl["ids"] = "https://ids.ceis.tw";
         })(APIUrl || (APIUrl = {}));
 
         _RequestGPG.APIUrl = APIUrl;
+        var API;
+
+        (function (API) {
+          API["CertifiedEmall"] = "/Member/CertifiedEmail";
+          API["SendRegisterVerification"] = "/Token/SendRegisterVerification";
+          API["ValidateContactInfo"] = "/Token/ValidateContactInfo";
+          API["MyInfo"] = "/Member/MyInfo";
+          API["Nickname"] = "/Member/Nickname";
+        })(API || (API = {}));
+
+        _RequestGPG.API = API;
       })(RequestGPG || _export("RequestGPG", RequestGPG = {}));
 
       _cclegacy._RF.pop();

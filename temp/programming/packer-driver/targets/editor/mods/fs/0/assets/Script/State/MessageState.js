@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, find, State, PanelSystemMessage, GameStateEvent, EventMng, ButtonFunctionApi, ShowConfirmMessage, BackHomeMessage, DefaultlMessage, _crd;
+  var _reporterNs, _cclegacy, find, State, PanelSystemMessage, EvnetType, GameStateEvent, EventMng, ButtonFunctionApi, ShowConfirmMessage, BackHomeMessage, DefaultlMessage, _crd;
 
   function _reportPossibleCrUseOfState(extras) {
     _reporterNs.report("State", "../../Patten/StatePatten", _context.meta, extras);
@@ -9,6 +9,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfPanelSystemMessage(extras) {
     _reporterNs.report("PanelSystemMessage", "../Contorll/NoClearNode/PanelSystemMessage", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfEvnetType(extras) {
+    _reporterNs.report("EvnetType", "../Enum/EvnetType", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfGameStateEvent(extras) {
@@ -40,11 +44,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_3) {
       PanelSystemMessage = _unresolved_3.default;
     }, function (_unresolved_4) {
-      GameStateEvent = _unresolved_4.GameStateEvent;
+      EvnetType = _unresolved_4.EvnetType;
     }, function (_unresolved_5) {
-      EventMng = _unresolved_5.default;
+      GameStateEvent = _unresolved_5.GameStateEvent;
     }, function (_unresolved_6) {
-      ButtonFunctionApi = _unresolved_6.default;
+      EventMng = _unresolved_6.default;
+    }, function (_unresolved_7) {
+      ButtonFunctionApi = _unresolved_7.default;
     }],
     execute: function () {
       _crd = true;
@@ -63,7 +69,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // }
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            error: Error()
+          }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
             error: Error()
           }), GameStateEvent) : GameStateEvent).GameMessage, caption);
         }

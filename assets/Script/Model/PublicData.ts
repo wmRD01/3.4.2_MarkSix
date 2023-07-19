@@ -25,4 +25,5 @@ export default class PublicData extends BaseSingleton<PublicData>() {
     isClickScreen: boolean = false
 
     castAPI: CASTAPI;
+    gpgApi: string = "5gh394D"
 }

@@ -1,12 +1,14 @@
 import { Button, color, EventTouch, instantiate, Label, Layout, Node, Prefab, random, Sprite, Vec3, _decorator } from 'cc';
 import DelayTime from '../../../../../Plug/DelayTime';
 import { AssetType } from '../../../../Enum/AssetType';
+import { CommandType } from '../../../../Enum/CommandType';
 import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
+import { WebSocketEvent } from '../../../../Enum/WebSocketEvent';
 import AssetMng from '../../../../Manager/AssetMng';
 import ButtonMng from '../../../../Manager/ButtonMng';
 import BallData from '../../../../Model/BallData';
 import BaseComponent from '../../../../Model/ComponentBase';
-import { InRoomLevel } from '../../../../State/LobbyState';
+import { bet } from '../../../Api/SendCommand';
 const { ccclass, property } = _decorator;
 @ccclass('PanelBall')
 export default class PanelBall extends BaseComponent {
@@ -18,7 +20,7 @@ export default class PanelBall extends BaseComponent {
     layoutItem: Prefab;
     @property(Prefab)
     ballItem: Prefab;
-    
+
     Halign: number = 10;
     Valign: number = 5;
     totalCount: number = 49
@@ -30,6 +32,8 @@ export default class PanelBall extends BaseComponent {
     MaxCount: number = 6
     isConfirm: boolean;
     isFullBall: boolean;
+    websocket: Node;
+
 
     async start() {
         await AssetMng.waitStateCheck(AssetType.Sprite)
@@ -65,6 +69,7 @@ export default class PanelBall extends BaseComponent {
             element.getOrg()
         });
     }
+
     onRandomNumber(e: EventTouch, customEventData?: string) {
         this.onResetChooese(null)
         let arr = []
@@ -144,6 +149,10 @@ export default class PanelBall extends BaseComponent {
             this.eventEmit(LobbyStateEvent.BallChooeseAction, this.mapBallNumber.get(this.isChoose[index]).node, index)
             await DelayTime.getInstance.StartDT(.1);
         }
+        const _bet = new bet()
+        _bet.betCode = this.isChoose
+        this.eventEmit(WebSocketEvent.WebSocketSendCommand, CommandType.bet, _bet)
+        /**打leo的com */
         this.tempChoose = []
 
         this.isConfirm = true

@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Label, Node, Prefab, _decorator, BallData, BaseComponent, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _temp, _crd, ccclass, property, PointItemData;
+  var _reporterNs, _cclegacy, instantiate, Label, Node, Prefab, _decorator, BallData, BaseComponent, AutoFollow, PublicModel, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _temp, _crd, ccclass, property, PointItemData;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -19,6 +19,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     _reporterNs.report("BaseComponent", "./ComponentBase", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfAutoFollow(extras) {
+    _reporterNs.report("AutoFollow", "./AutoFollow", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPublicModel(extras) {
+    _reporterNs.report("PublicModel", "./PublicModel", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -33,6 +41,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       BallData = _unresolved_2.default;
     }, function (_unresolved_3) {
       BaseComponent = _unresolved_3.default;
+    }, function (_unresolved_4) {
+      AutoFollow = _unresolved_4.default;
+    }, function (_unresolved_5) {
+      PublicModel = _unresolved_5.default;
     }],
     execute: function () {
       _crd = true;
@@ -44,7 +56,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         property
       } = _decorator);
 
-      _export("default", PointItemData = (_dec = ccclass('PointItemData'), _dec2 = property(Prefab), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Node), _dec6 = property(Label), _dec7 = property(Node), _dec(_class2 = (_class3 = (_temp = class PointItemData extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PointItemData = (_dec = ccclass('PointItemData'), _dec2 = property(Prefab), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Node), _dec(_class2 = (_class3 = (_temp = class PointItemData extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {
@@ -52,26 +64,60 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           _initializerDefineProperty(this, "prefabBallItem", _descriptor, this);
 
-          _initializerDefineProperty(this, "labelPoint", _descriptor2, this);
+          _initializerDefineProperty(this, "labelMyChooeseNumber", _descriptor2, this);
 
-          _initializerDefineProperty(this, "labelOpenNumber", _descriptor3, this);
+          _initializerDefineProperty(this, "labelOpenNumberTitle", _descriptor3, this);
 
-          _initializerDefineProperty(this, "clientPointLayout", _descriptor4, this);
+          _initializerDefineProperty(this, "labelPoint", _descriptor4, this);
 
-          _initializerDefineProperty(this, "labelDayData", _descriptor5, this);
+          _initializerDefineProperty(this, "labelOpenNumber", _descriptor5, this);
 
-          _initializerDefineProperty(this, "labelContent", _descriptor6, this);
+          _defineProperty(this, "maxNumberCount", 6);
+
+          _initializerDefineProperty(this, "labelDayData", _descriptor6, this);
+
+          _initializerDefineProperty(this, "clientPointLayout", _descriptor7, this);
+
+          _defineProperty(this, "labelContent", void 0);
+
+          _defineProperty(this, "outlineContent", void 0);
         }
 
         onLoad() {
           this.clientPointLayout.removeAllChildren();
         }
 
-        init(data) {
-          this.labelDayData.string = `112/4/9(一) 第123456789期`;
-          this.labelPoint.string = `+ ${Math.floor(Math.random() * 200)}`;
+        setLabelContent(_node) {
+          this.labelContent = _node;
+          return this;
+        }
 
-          for (let index = 0; index < this.labelOpenNumber.length; index++) {
+        setOutlineContent(_node) {
+          this.outlineContent = _node;
+          return this;
+        }
+        /**
+         * 
+         * @param day 日期 
+         * @param issueID 期號
+         */
+
+
+        setDayData(day, issueID) {
+          this.labelDayData.string = `${(_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.convertDateDay(day)} 第${issueID.toString()}期`;
+          this.labelDayData.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+            error: Error()
+          }), AutoFollow) : AutoFollow).createNewTarget();
+          this.labelContent.addChild(this.labelDayData.node);
+          return this;
+        }
+
+        setOpenNumber(numbers) {
+          for (let index = 0; index < numbers.length; index++) {
+            if (index == this.maxNumberCount) break;
+
             let _node = instantiate(this.prefabBallItem);
 
             this.clientPointLayout.addChild(_node);
@@ -83,8 +129,31 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             _class.init(this.randomBall());
 
             this.labelContent.addChild(_class.label.node);
-            this.labelOpenNumber[index].string = this.randomBall().toString();
+            this.labelOpenNumber[index].string = numbers[index];
+            this.labelOpenNumber[index].node.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+              error: Error()
+            }), AutoFollow) : AutoFollow).setTarget(this.labelOpenNumber[index].node.parent);
+            this.labelContent.addChild(this.labelOpenNumber[index].node);
           }
+
+          return this;
+        }
+
+        init() {
+          this.labelOpenNumberTitle.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+            error: Error()
+          }), AutoFollow) : AutoFollow).createNewTarget();
+          this.labelContent.addChild(this.labelOpenNumberTitle.node);
+          this.labelMyChooeseNumber.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+            error: Error()
+          }), AutoFollow) : AutoFollow).createNewTarget();
+          this.outlineContent.addChild(this.labelMyChooeseNumber.node);
+          this.labelPoint.string = `+ ${Math.floor(Math.random() * 200)}`;
+          this.labelPoint.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+            error: Error()
+          }), AutoFollow) : AutoFollow).createNewTarget();
+          this.labelContent.addChild(this.labelPoint.node);
+          return this;
         }
         /**測試用 */
 
@@ -98,29 +167,34 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor2 = _applyDecoratedDescriptor(_class3.prototype, "labelPoint", [_dec3], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class3.prototype, "labelMyChooeseNumber", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class3.prototype, "labelOpenNumber", [_dec4], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class3.prototype, "labelOpenNumberTitle", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor4 = _applyDecoratedDescriptor(_class3.prototype, "labelPoint", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "labelOpenNumber", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function () {
           return [];
         }
-      }), _descriptor4 = _applyDecoratedDescriptor(_class3.prototype, "clientPointLayout", [_dec5], {
+      }), _descriptor6 = _applyDecoratedDescriptor(_class3.prototype, "labelDayData", [_dec7], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "labelDayData", [_dec6], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor6 = _applyDecoratedDescriptor(_class3.prototype, "labelContent", [_dec7], {
+      }), _descriptor7 = _applyDecoratedDescriptor(_class3.prototype, "clientPointLayout", [_dec8], {
         configurable: true,
         enumerable: true,
         writable: true,

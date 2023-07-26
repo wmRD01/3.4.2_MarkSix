@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, BaseComponent, PublicModel, _dec, _class, _temp, _crd, ccclass, property, LabelAutoFollow;
+  var _reporterNs, _cclegacy, Node, _decorator, BaseComponent, PublicModel, _dec, _class, _temp, _crd, ccclass, property, LabelAutoFollow;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -18,6 +18,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       _reporterNs = _unresolved_;
     }, function (_cc) {
       _cclegacy = _cc.cclegacy;
+      Node = _cc.Node;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
       BaseComponent = _unresolved_2.default;
@@ -47,11 +48,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.target = _node;
         }
 
+        createNewTarget() {
+          this.target = new Node();
+          this.node.parent.addChild(this.target);
+          this.target.setPosition(this.node.position);
+          this.target.setScale(this.node.scale);
+        }
+
         update() {
           if (this.node.position.equals((_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
-          }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(this.node, this.target))) return;
-          console.log("改座標");
+          }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(this.node, this.target))) return; // console.log("改座標");
+
           this.node.scale = this.node.scale;
           this.node.position = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()

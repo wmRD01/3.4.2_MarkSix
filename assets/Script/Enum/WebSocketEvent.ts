@@ -28,4 +28,8 @@ export enum WebSocketEvent{
      * 前往儲值
      */
     StaoredValue = "StaoredValue",
+    /**
+     * 斷開連線
+     */
+    CloseWebSocket="CloseWebSocket",
 }

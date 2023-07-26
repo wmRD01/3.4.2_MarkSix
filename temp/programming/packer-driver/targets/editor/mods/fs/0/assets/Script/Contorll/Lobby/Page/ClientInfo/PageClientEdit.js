@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "crypto-es", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Node, Sprite, _decorator, EvnetType, LobbyStateEvent, EventMng, BaseComponent, Player, RequestGPG, CryptoES, MyEditBox, PublicModel, CreateFileSprite, PublicData, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PageClientEdit;
+  var _reporterNs, _cclegacy, Button, Node, Sprite, _decorator, NotificationType, LobbyStateEvent, EventMng, BaseComponent, Player, RequestGPG, MyEditBox, PublicModel, CreateFileSprite, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PageClientEdit;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -11,8 +11,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
-  function _reportPossibleCrUseOfEvnetType(extras) {
-    _reporterNs.report("EvnetType", "../../../../Enum/EvnetType", _context.meta, extras);
+  function _reportPossibleCrUseOfNotificationType(extras) {
+    _reporterNs.report("NotificationType", "../../../../Enum/NotificationType", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfLobbyStateEvent(extras) {
@@ -35,10 +35,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("RequestGPG", "../../../Api/GPGAPI/RequestGPG", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfCryptoES(extras) {
-    _reporterNs.report("CryptoES", "crypto-es", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfResponseGPG(extras) {
     _reporterNs.report("ResponseGPG", "../../../Api/GPGAPI/ResponseGPG", _context.meta, extras);
   }
@@ -55,10 +51,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("CreateFileSprite", "../../../../Model/CreateFileSprite", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfPublicData(extras) {
-    _reporterNs.report("PublicData", "../../../../Model/PublicData", _context.meta, extras);
-  }
-
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -69,7 +61,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Sprite = _cc.Sprite;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
-      EvnetType = _unresolved_2.EvnetType;
+      NotificationType = _unresolved_2.NotificationType;
     }, function (_unresolved_3) {
       LobbyStateEvent = _unresolved_3.LobbyStateEvent;
     }, function (_unresolved_4) {
@@ -80,16 +72,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Player = _unresolved_6.default;
     }, function (_unresolved_7) {
       RequestGPG = _unresolved_7.RequestGPG;
-    }, function (_cryptoEs) {
-      CryptoES = _cryptoEs.default;
     }, function (_unresolved_8) {
       MyEditBox = _unresolved_8.MyEditBox;
     }, function (_unresolved_9) {
       PublicModel = _unresolved_9.default;
     }, function (_unresolved_10) {
       CreateFileSprite = _unresolved_10.default;
-    }, function (_unresolved_11) {
-      PublicData = _unresolved_11.default;
     }],
     execute: function () {
       _crd = true;
@@ -107,7 +95,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         error: Error()
       }), MyEditBox) : MyEditBox), _dec4 = property(_crd && MyEditBox === void 0 ? (_reportPossibleCrUseOfMyEditBox({
         error: Error()
-      }), MyEditBox) : MyEditBox), _dec5 = property(Node), _dec6 = property(Node), _dec7 = property(Button), _dec8 = property(Node), _dec9 = property(Sprite), _dec(_class2 = (_class3 = (_temp = class PageClientEdit extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      }), MyEditBox) : MyEditBox), _dec5 = property(Node), _dec6 = property(Node), _dec7 = property(Button), _dec8 = property(Node), _dec9 = property(Sprite), _dec(_class = (_class2 = (_temp = class PageClientEdit extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {
@@ -136,16 +124,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           super.onLoad();
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+          }), NotificationType) : NotificationType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).ActivePanelClientEdit, this.activePanel, this);
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+          }), NotificationType) : NotificationType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).ChangePlayerPicture, this.onChangePlayerPicture, this);
           this.hide();
@@ -179,7 +167,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), RequestGPG) : RequestGPG).Body.NeedToken.Nickname();
           body.nickname = "我修改拉";
-          body.sign = this.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+          body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
           }), RequestGPG) : RequestGPG).Body.NeedToken.Nickname);
           await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
@@ -209,9 +199,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.hide();
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+          }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).ActivePanelClientInfo, true);
         }
@@ -273,7 +263,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), RequestGPG) : RequestGPG).Body.NeedToken.CertifiedEmail();
           body.email = this.editEmail.string;
           body.verifyCode = this.editVerificationCode.string;
-          body.sign = this.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+          body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
           }), RequestGPG) : RequestGPG).Body.NeedToken.CertifiedEmail);
           await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
@@ -343,9 +335,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         onCheckMotify() {
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+          }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).UpDataPlayer);
           this.onActivePanel(null);
@@ -371,91 +363,56 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (this.isChangePicture) (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+          }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).ChangePlayerPicture, this.spritePlayer.spriteFrame);
-        }
-
-        convertSign(body, _class) {
-          let sign = new _class();
-          (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-            error: Error()
-          }), PublicModel) : PublicModel).getInstance.TwoClassCheckData(sign, body);
-          delete sign.sign;
-          const dataWithApiKey = this.sortObj(sign, (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.gpgApi);
-          console.log(dataWithApiKey);
-          return (_crd && CryptoES === void 0 ? (_reportPossibleCrUseOfCryptoES({
-            error: Error()
-          }), CryptoES) : CryptoES).MD5(dataWithApiKey).toString(); // console.log(body);
         }
         /**排序物件順序並且queryString */
 
 
-        sortObj(obj, apiKey) {
-          var keyA = Object.keys(obj).sort();
-          var querystring = "";
-
-          for (let index = 0; index < keyA.length; index++) {
-            querystring += `${keyA[index]}=${obj[keyA[index]]}`;
-
-            if (index != keyA.length - 1) {
-              querystring += "&";
-            }
-          } // for (var i in keyA) {
-          //encodeURIComponent是ASCII轉換\，但是@也會被轉換所以不使用此方式
-          //     // sortObj[keyA[i]] = encodeURIComponent(obj[keyA[i]])
-          // }
-
-
-          querystring += apiKey;
-          return querystring;
-        }
-
-      }, _temp), (_descriptor = _applyDecoratedDescriptor(_class3.prototype, "editNicName", [_dec2], {
+      }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "editNicName", [_dec2], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor2 = _applyDecoratedDescriptor(_class3.prototype, "editEmail", [_dec3], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "editEmail", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class3.prototype, "editVerificationCode", [_dec4], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "editVerificationCode", [_dec4], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class3.prototype, "NodeEmail", [_dec5], {
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "NodeEmail", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "NodeVerificationCode", [_dec6], {
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "NodeVerificationCode", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor6 = _applyDecoratedDescriptor(_class3.prototype, "btnVerificationCode", [_dec7], {
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "btnVerificationCode", [_dec7], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor7 = _applyDecoratedDescriptor(_class3.prototype, "btnsFunction", [_dec8], {
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "btnsFunction", [_dec8], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor8 = _applyDecoratedDescriptor(_class3.prototype, "spritePlayer", [_dec9], {
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "spritePlayer", [_dec9], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      })), _class3)) || _class2));
+      })), _class2)) || _class));
 
       _cclegacy._RF.pop();
 

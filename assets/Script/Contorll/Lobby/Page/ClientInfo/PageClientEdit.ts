@@ -1,5 +1,5 @@
 import { Button, EventTouch, Label, Node, Sprite, SpriteFrame, _decorator } from 'cc';
-import { EvnetType } from '../../../../Enum/EvnetType';
+import { NotificationType } from '../../../../Enum/NotificationType';
 import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import EventMng from '../../../../Manager/EventMng';
 import BaseComponent from '../../../../Model/ComponentBase';
@@ -36,8 +36,8 @@ export default class PageClientEdit extends BaseComponent {
 
     onLoad() {
         super.onLoad()
-        EventMng.getInstance.mapEvnet.get(EvnetType.Panel).on(LobbyStateEvent.ActivePanelClientEdit, this.activePanel, this)
-        EventMng.getInstance.mapEvnet.get(EvnetType.Panel).on(LobbyStateEvent.ChangePlayerPicture, this.onChangePlayerPicture, this)
+        EventMng.getInstance.mapEvnet.get(NotificationType.Panel).on(LobbyStateEvent.ActivePanelClientEdit, this.activePanel, this)
+        EventMng.getInstance.mapEvnet.get(NotificationType.Panel).on(LobbyStateEvent.ChangePlayerPicture, this.onChangePlayerPicture, this)
         this.hide()
     }
     start() {
@@ -62,7 +62,7 @@ export default class PageClientEdit extends BaseComponent {
     async onTestNickName() {
         const body = new RequestGPG.Body.NeedToken.Nickname()
         body.nickname = "我修改拉"
-        body.sign = this.convertSign(body, RequestGPG.Body.NeedToken.Nickname)
+        body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Nickname)
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
@@ -79,7 +79,7 @@ export default class PageClientEdit extends BaseComponent {
 
     onActivePanel(e: EventTouch, customEventData?: string) {
         this.hide()
-        EventMng.getInstance.mapEvnet.get(EvnetType.Panel).emit(LobbyStateEvent.ActivePanelClientInfo, true)
+        EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.ActivePanelClientInfo, true)
     }
     activeVerificationCode(bool: boolean) {
         this.editVerificationCode.spriteBG.node.active = bool
@@ -122,7 +122,7 @@ export default class PageClientEdit extends BaseComponent {
         const body = new RequestGPG.Body.NeedToken.CertifiedEmail()
         body.email = this.editEmail.string
         body.verifyCode = this.editVerificationCode.string
-        body.sign = this.convertSign(body, RequestGPG.Body.NeedToken.CertifiedEmail)
+        body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.CertifiedEmail)
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
             .setToken(Player.getInstance.gpgToken)
@@ -177,7 +177,7 @@ export default class PageClientEdit extends BaseComponent {
         }
     }
     onCheckMotify() {
-        EventMng.getInstance.mapEvnet.get(EvnetType.Panel).emit(LobbyStateEvent.UpDataPlayer)
+        EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.UpDataPlayer)
         this.onActivePanel(null)
         return
         if (this.editNicName.string == Player.getInstance.nickname) {
@@ -196,35 +196,9 @@ export default class PageClientEdit extends BaseComponent {
 
 
         if (this.isChangePicture)
-            EventMng.getInstance.mapEvnet.get(EvnetType.Panel).emit(LobbyStateEvent.ChangePlayerPicture, this.spritePlayer.spriteFrame)
+            EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.ChangePlayerPicture, this.spritePlayer.spriteFrame)
     }
 
-    private convertSign<T extends RequestGPG.Body.NeedToken.base>(body: Object, _class: { new(): T }) {
-        let sign = new _class();
-        PublicModel.getInstance.TwoClassCheckData(sign, body)
-        delete sign.sign
-        const dataWithApiKey = this.sortObj(sign, PublicData.getInstance.gpgApi);
-        console.log(dataWithApiKey);
-        return CryptoES.MD5(dataWithApiKey).toString()
-        // console.log(body);
-
-    }
     /**排序物件順序並且queryString */
-    private sortObj<T>(obj: T, apiKey: string) {
-        var keyA = Object.keys(obj).sort();
-        var querystring = ""
-        for (let index = 0; index < keyA.length; index++) {
-            querystring += `${keyA[index]}=${obj[keyA[index]]}`
-            if (index != keyA.length - 1) {
-                querystring += "&"
-            }
-        }
-        // for (var i in keyA) {
-        //encodeURIComponent是ASCII轉換\，但是@也會被轉換所以不使用此方式
-        //     // sortObj[keyA[i]] = encodeURIComponent(obj[keyA[i]])
 
-        // }
-        querystring += apiKey
-        return querystring
-    }
 }

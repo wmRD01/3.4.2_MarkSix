@@ -4,7 +4,7 @@ import BaseSingletonComponent from "../../Patten/Singleton/BaseSingletonComponen
 import { lbll, lbrl, lbsr } from "../Contorll/Api/SendCommand";
 import PanelLoading from "../Contorll/NoClearNode/PanelLoading";
 import { CommandType } from "../Enum/CommandType";
-import { EvnetType } from "../Enum/EvnetType";
+import { NotificationType } from "../Enum/NotificationType";
 import { GameEvent } from "../Enum/GameEvent";
 import { GameSceneName } from "../Enum/GameSenceName";
 import { WebSocketEvent } from "../Enum/WebSocketEvent";

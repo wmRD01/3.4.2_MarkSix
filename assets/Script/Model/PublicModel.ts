@@ -1,7 +1,9 @@
 import { director, dynamicAtlasManager, Node, UITransform, Vec2, Vec3, _decorator } from "cc";
 import BaseSingleton from "../../Patten/Singleton/BaseSingleton";
 import MyMath from "../../Plug/MyMath";
-
+import CryptoES from 'crypto-es';
+import { RequestGPG } from "../Contorll/Api/GPGAPI/RequestGPG";
+import PublicData from "./PublicData";
 export default class PublicModel extends BaseSingleton<PublicModel>() {
     /**
      * @param targetNode 需要移動的物件
@@ -37,13 +39,22 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         moveToNode.position = orgPos
     }
     /**秒數時間轉換 */
-    formatSecond(secs: number, isMilli?: boolean) {
+    formatSecond(secs: number, isHR?: boolean) {
         // if (isMilli) secs = this.convertMilliToSecond(secs);
-        let min = Math.floor(secs / 60).toString()
-        let sec = Math.floor((secs - (Number(min) * 60))).toString()
-        while (min.length < 2) min = "0" + min
-        while (sec.length < 2) sec = "0" + sec
-        return min + ":" + sec
+        // let min = Math.floor(secs / 60).toString()
+        // let sec = Math.floor((secs - (Number(min) * 60))).toString()
+        // while (min.length < 2) min = "0" + min
+        // while (sec.length < 2) sec = "0" + sec
+        // return min + ":" + sec
+        const hours = isHR ? Math.floor(secs / 3600) : 0;
+        const minutes = Math.floor((secs - hours * 3600) / 60);
+        const seconds = Math.floor(secs - hours * 3600 - minutes * 60);
+
+        const hrStr = isHR ? hours.toString().padStart(2, '0') + ':' : '';
+        const minStr = minutes.toString().padStart(2, '0');
+        const secStr = seconds.toString().padStart(2, '0');
+
+        return hrStr + minStr + ':' + secStr;
     }
     convertMilliToSecond(num: number) {
         return MyMath.divide(num, 1000)
@@ -181,6 +192,68 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
     }
     openShader() {
         dynamicAtlasManager.enabled = false//打開Shader合批(????)
+    }
+    convertSign<T extends RequestGPG.Body.NeedToken.base>(body: Object, _class: { new(): T }, isDelete: boolean = true) {
+        let sign = new _class();
+        PublicModel.getInstance.TwoClassCheckData(sign, body)
+        if (isDelete)
+            delete sign.sign
+        const dataWithApiKey = this.sortObj(sign, PublicData.getInstance.gpgApi);
+        console.log(dataWithApiKey);
+        return CryptoES.MD5(dataWithApiKey).toString()
+        // console.log(body);
+    }
+    convertMD5(str: string) {
+        return CryptoES.MD5(str).toString()
+    }
+    /**排序物件順序並且queryString */
+    private sortObj<T>(obj: T, apiKey: string) {
+        var keyA = Object.keys(obj).sort();
+        var querystring = ""
+        for (let index = 0; index < keyA.length; index++) {
+            querystring += `${keyA[index]}=${obj[keyA[index]]}`
+            if (index != keyA.length - 1) {
+                querystring += "&"
+            }
+        }
+        // for (var i in keyA) {
+        //encodeURIComponent是ASCII轉換\，但是@也會被轉換所以不使用此方式
+        //     // sortObj[keyA[i]] = encodeURIComponent(obj[keyA[i]])
+
+        // }
+        querystring += apiKey
+        return querystring
+    }
+    convertDateDay(str: string) {
+        // 將字串轉換為Date物件
+        const dateObj = new Date(str);
+
+        // 取得日期資訊
+        const year = this.convertToROC(dateObj.getFullYear());
+        const month = dateObj.getMonth() + 1; // 月份是從0開始的，所以要加1
+        const day = dateObj.getDate();
+        const daysOfWeek = ['日', '一', '二', '三', '四', '五', '六'];
+        const dayOfWeek = daysOfWeek[dateObj.getDay()];
+        // 格式化日期
+        return `${year}/${month}/${day} (${dayOfWeek})`;
+
+    }
+    convertDateTime(str: string) {
+        // 將字串轉換為Date物件
+        const dateObj = new Date(str);
+        const sec = dateObj.getSeconds()
+        const min = dateObj.getMinutes()
+        const hours = dateObj.getHours()
+
+        // 格式化日期
+        return `${hours}:${min}:${sec}`;
+
+    }
+    convertToROC(yearAD) {
+        const ROC_OFFSET = 1911;
+        const isLeapYear = (year) => (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+        const yearROC = yearAD - ROC_OFFSET + (isLeapYear(yearAD) ? 1 : 0);
+        return yearROC;
     }
 }
 

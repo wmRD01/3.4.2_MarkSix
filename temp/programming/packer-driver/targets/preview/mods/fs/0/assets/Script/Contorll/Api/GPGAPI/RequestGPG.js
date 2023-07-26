@@ -54,8 +54,13 @@ System.register(["cc"], function (_export, _context) {
             var _this = this;
 
             return _asyncToGenerator(function* () {
+              // console.log(_url);
+              // console.log(_url.split("?"));
+              // console.log(_url.split("?")[0].split("/"));
+              console.log(_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length]);
               return new Promise((resolve, reject) => {
-                fetch(_url, _this).then(response => response.json()).then(response => callback(response)).then(resolve);
+                var data;
+                fetch(_url, _this).then(response => response.json()).then(response => data = response).catch(err => reject).then(response => console.log("\u8CC7\u6599\u540D\u7A31\uFF1A" + _url.split("?")[0].split("/")[_url.split("?")[0].split("/").length - 1])).then(response => console.log("\u8CC7\u6599\u5167\u5BB9", data)).then(response => callback(data)).then(resolve);
               });
             })();
           }
@@ -117,6 +122,21 @@ System.register(["cc"], function (_export, _context) {
             }
 
             _NeedToken.Nickname = Nickname;
+
+            class DrawHistory extends base {
+              constructor() {
+                super(...arguments);
+
+                _defineProperty(this, "top", void 0);
+              }
+
+            }
+
+            _NeedToken.DrawHistory = DrawHistory;
+
+            class DrawUpcoming extends base {}
+
+            _NeedToken.DrawUpcoming = DrawUpcoming;
           })(NeedToken || (NeedToken = _Body.NeedToken || (_Body.NeedToken = {})));
 
           var NotNeedToken;
@@ -174,6 +194,8 @@ System.register(["cc"], function (_export, _context) {
           API["ValidateContactInfo"] = "/Token/ValidateContactInfo";
           API["MyInfo"] = "/Member/MyInfo";
           API["Nickname"] = "/Member/Nickname";
+          API["DrawHistory"] = "/Mark6/Draw_History";
+          API["DrawUpcoming"] = "/Mark6/Draw_Upcoming";
         })(API || (API = {}));
 
         _RequestGPG.API = API;

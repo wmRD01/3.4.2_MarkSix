@@ -9,11 +9,11 @@
         "id": "1654667623042",
         "progress": 1,
         "state": "success",
-        "message": "2023-7-14 10:36 Build success in 13534 ms!",
+        "message": "2023-7-21 11:37 Build success in 18859 ms!",
         "options": {
           "name": "Baccarat",
           "platform": "web-mobile",
-          "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\SixMark",
+          "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\game50003",
           "debug": false,
           "md5Cache": true,
           "sourceMaps": false,
@@ -47,8 +47,45 @@
             }
           }
         },
-        "time": "2023-7-14 10:36",
-        "dirty": false
+        "time": "2023-7-21 11:37",
+        "dirty": true,
+        "rawOptions": {
+          "name": "Baccarat",
+          "platform": "web-mobile",
+          "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\50003",
+          "debug": false,
+          "md5Cache": true,
+          "sourceMaps": false,
+          "replaceSplashScreen": true,
+          "mainBundleCompressionType": "merge_all_json",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": false,
+          "startScene": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
+          "scenes": [
+            {
+              "url": "db://assets/Scene/Lobby.scene",
+              "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
+              "inBundle": false
+            }
+          ],
+          "outputName": "web-mobile",
+          "packages": {
+            "web-mobile": {
+              "orientation": "portrait",
+              "polyfills": {
+                "asyncFunctions": true,
+                "coreJs": false
+              }
+            },
+            "cocos-service": {
+              "configID": "08c3e2",
+              "services": []
+            }
+          }
+        }
       },
       "1659321737563": {
         "id": "1659321737563",
@@ -95,11 +132,11 @@
         "id": "1662027362863",
         "progress": 1,
         "state": "success",
-        "message": "2023-1-12 18:51 Build success in 16054 ms!",
+        "message": "2023-7-21 13:57 Build success in 38222 ms!",
         "options": {
           "name": "GPG_Rocket",
           "platform": "android",
-          "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\test1",
+          "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\game50003",
           "debug": false,
           "md5Cache": true,
           "sourceMaps": false,
@@ -110,11 +147,11 @@
           "experimentalEraseModules": false,
           "compressTexture": true,
           "packAutoAtlas": false,
-          "startScene": "6d75f75e-afa0-42f6-b7ee-162d8198800d",
+          "startScene": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
           "scenes": [
             {
-              "url": "db://assets/Scene/MainGame.scene",
-              "uuid": "6d75f75e-afa0-42f6-b7ee-162d8198800d",
+              "url": "db://assets/Scene/Lobby.scene",
+              "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
               "inBundle": false
             }
           ],
@@ -160,25 +197,17 @@
             },
             "cocos-service": {
               "configID": "08c3e2",
-              "services": [
-                {
-                  "service_id": "235",
-                  "service_component_name": "service-analytics",
-                  "builder": "C:\\Users\\ASUS\\.CocosCreator\\.service\\analytics\\builder\\builder.js",
-                  "enable": false,
-                  "params": {}
-                }
-              ]
+              "services": []
             }
           }
         },
-        "time": "2023-1-12 18:51",
+        "time": "2023-7-21 13:56",
         "dirty": false
       }
     }
   },
   "common": {
-    "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\SixMark",
+    "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\game50003",
     "mainBundleCompressionType": "merge_all_json",
     "outputName": "web-mobile",
     "platform": "web-mobile",
@@ -193,8 +222,9 @@
     "startScene": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
     "scenes": [
       {
-        "url": "db://assets/Scene/Lobby_.scene",
-        "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc"
+        "url": "db://assets/Scene/Lobby.scene",
+        "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
+        "inBundle": false
       }
     ],
     "mainBundleIsRemote": false

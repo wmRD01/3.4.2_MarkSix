@@ -3,7 +3,7 @@ import { AssetType } from '../Enum/AssetType';
 import AssetMng from '../Manager/AssetMng';
 import { colorTest } from '../test/colorTest';
 import BaseComponent from './ComponentBase';
-import LabelAutoFollow from './LabelAutoFollow';
+import AutoFollow from './AutoFollow';
 import PublicModel from './PublicModel';
 const { ccclass, property } = _decorator;
 @ccclass('BallData')
@@ -22,15 +22,15 @@ export default class BallData extends BaseComponent {
     type: number = 0;
     orgV3: Vec3;
     init(_ballNumber: number) {
-        console.log(_ballNumber);
+        // console.log(_ballNumber);
 
         this.ballNumber = _ballNumber
         this.node.position = Vec3.ZERO
         this.type = _ballNumber % 6
-        this.label.addComponent(LabelAutoFollow).setTarget(this.node)
+        this.label.addComponent(AutoFollow).setTarget(this.node)
         this.label.string = this.ballNumber.toString()
         this.label.color = color().fromHEX(this.getColor())
-        console.log(AssetMng.AssetClass.get(AssetType.Sprite).data.get(this.getBGData()));
+        // console.log(AssetMng.AssetClass.get(AssetType.Sprite).data.get(this.getBGData()));
 
         this.spriteBG.spriteFrame = AssetMng.AssetClass.get(AssetType.Sprite).data.get(this.getBGData())
         this.setEffect(false)

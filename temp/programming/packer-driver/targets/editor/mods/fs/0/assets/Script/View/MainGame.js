@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "cc/env", "__unresolved_16", "__unresolved_17", "__unresolved_18", "__unresolved_19", "__unresolved_20"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "cc/env"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, PanelUI, _decorator, director, find, js, Node, CommandType, LangType, CheckLoadingType, PublicData, WebSocketEvent, CheckLoading, BaseSingletonComponent, GameSceneName, gbet, SocketSetting, GameEvent, PanelGameMessage, PanelLoading, SingletManager, DEV, AssetMng, AssetType, Player, PlayerIdentity, CanvasControll, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, MainGame;
+  var _reporterNs, _cclegacy, PanelUI, _decorator, find, js, CheckLoadingType, PublicData, CheckLoading, BaseSingletonComponent, GameSceneName, PanelGameMessage, PanelLoading, SingletManager, DEV, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, MainGame;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -15,24 +15,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("PanelUI", "../Contorll/Lobby/PanelBottomNavigationBar", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfCommandType(extras) {
-    _reporterNs.report("CommandType", "../Enum/CommandType", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfLangType(extras) {
-    _reporterNs.report("LangType", "../Enum/LangType", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfCheckLoadingType(extras) {
     _reporterNs.report("CheckLoadingType", "../Enum/CheckLoadingType", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfPublicData(extras) {
     _reporterNs.report("PublicData", "../Model/PublicData", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfWebSocketEvent(extras) {
-    _reporterNs.report("WebSocketEvent", "../Enum/WebSocketEvent", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfCheckLoading(extras) {
@@ -47,18 +35,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("GameSceneName", "../Enum/GameSenceName", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfgbet(extras) {
-    _reporterNs.report("gbet", "../Contorll/Api/SendCommand", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfSocketSetting(extras) {
-    _reporterNs.report("SocketSetting", "../Socket/SocketSetting", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfGameEvent(extras) {
-    _reporterNs.report("GameEvent", "../Enum/GameEvent", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfPanelGameMessage(extras) {
     _reporterNs.report("PanelGameMessage", "../Contorll/Lobby/PanelGameMessage", _context.meta, extras);
   }
@@ -71,78 +47,34 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("SingletManager", "../../Patten/Singleton/SingletonManger", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfAssetMng(extras) {
-    _reporterNs.report("AssetMng", "../Manager/AssetMng", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfAssetType(extras) {
-    _reporterNs.report("AssetType", "../Enum/AssetType", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfPlayer(extras) {
-    _reporterNs.report("Player", "../Model/Player", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfPlayerIdentity(extras) {
-    _reporterNs.report("PlayerIdentity", "../Enum/PlayerIdentity", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfCanvasControll(extras) {
-    _reporterNs.report("CanvasControll", "../Contorll/NoClearNode/CanvasControll", _context.meta, extras);
-  }
-
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
     }, function (_cc) {
       _cclegacy = _cc.cclegacy;
       _decorator = _cc._decorator;
-      director = _cc.director;
       find = _cc.find;
       js = _cc.js;
-      Node = _cc.Node;
     }, function (_unresolved_2) {
       PanelUI = _unresolved_2.default;
     }, function (_unresolved_3) {
-      CommandType = _unresolved_3.CommandType;
+      CheckLoadingType = _unresolved_3.CheckLoadingType;
     }, function (_unresolved_4) {
-      LangType = _unresolved_4.LangType;
+      PublicData = _unresolved_4.default;
     }, function (_unresolved_5) {
-      CheckLoadingType = _unresolved_5.CheckLoadingType;
+      CheckLoading = _unresolved_5.default;
     }, function (_unresolved_6) {
-      PublicData = _unresolved_6.default;
+      BaseSingletonComponent = _unresolved_6.default;
     }, function (_unresolved_7) {
-      WebSocketEvent = _unresolved_7.WebSocketEvent;
+      GameSceneName = _unresolved_7.GameSceneName;
     }, function (_unresolved_8) {
-      CheckLoading = _unresolved_8.default;
+      PanelGameMessage = _unresolved_8.default;
     }, function (_unresolved_9) {
-      BaseSingletonComponent = _unresolved_9.default;
+      PanelLoading = _unresolved_9.default;
     }, function (_unresolved_10) {
-      GameSceneName = _unresolved_10.GameSceneName;
-    }, function (_unresolved_11) {
-      gbet = _unresolved_11.gbet;
-    }, function (_unresolved_12) {
-      SocketSetting = _unresolved_12.default;
-    }, function (_unresolved_13) {
-      GameEvent = _unresolved_13.GameEvent;
-    }, function (_unresolved_14) {
-      PanelGameMessage = _unresolved_14.default;
-    }, function (_unresolved_15) {
-      PanelLoading = _unresolved_15.default;
-    }, function (_unresolved_16) {
-      SingletManager = _unresolved_16.default;
+      SingletManager = _unresolved_10.default;
     }, function (_ccEnv) {
       DEV = _ccEnv.DEV;
-    }, function (_unresolved_17) {
-      AssetMng = _unresolved_17.default;
-    }, function (_unresolved_18) {
-      AssetType = _unresolved_18.AssetType;
-    }, function (_unresolved_19) {
-      Player = _unresolved_19.default;
-    }, function (_unresolved_20) {
-      PlayerIdentity = _unresolved_20.PlayerIdentity;
-    }, function (_unresolved_21) {
-      CanvasControll = _unresolved_21.default;
     }],
     execute: function () {
       _crd = true;
@@ -208,92 +140,36 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // this.panelShuffleCard = find("Canvas/PanelShuffleCard").getComponent(PanelShuffleCard)
         }
 
-        onEnable() {
-          this.setEvent((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
-            error: Error()
-          }), GameEvent) : GameEvent).SetOrientation, this.eventOrientation);
+        onEnable() {// this.setEvent(GameEvent.SetOrientation, this.eventOrientation)
         }
         /**
          * 測試內存
          */
 
 
-        async start() {
-          //建立連線
-          this.eventEmit((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
-            error: Error()
-          }), GameEvent) : GameEvent).ResetView);
-          await (_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
-            error: Error()
-          }), SocketSetting) : SocketSetting).checkLanguage((_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
-            error: Error()
-          }), LangType) : LangType).Server);
-          await (_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
-            error: Error()
-          }), SocketSetting) : SocketSetting).checkLanguage((_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
-            error: Error()
-          }), LangType) : LangType).Game);
-          (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
-            error: Error()
-          }), PanelLoading) : PanelLoading).instance.openLoading((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
-            error: Error()
-          }), SocketSetting) : SocketSetting).t("E_0004", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
-            error: Error()
-          }), LangType) : LangType).Game));
-          (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.isResetProcessing = true;
-          (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.isResetView = true;
-          /**初始化全部語系 */
-
-          for (let index = 0; index < (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.arr_ComponentBaseClass.length; index++) {
-            (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-              error: Error()
-            }), PublicData) : PublicData).getInstance.arr_ComponentBaseClass[index].setLanguage();
-          }
-          /** forCAST用 */
-
-
-          if ((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
-            error: Error()
-          }), Player) : Player).getInstance.identity == (_crd && PlayerIdentity === void 0 ? (_reportPossibleCrUseOfPlayerIdentity({
-            error: Error()
-          }), PlayerIdentity) : PlayerIdentity).Guest) {
-            this.panelUI.hide();
-            (_crd && CanvasControll === void 0 ? (_reportPossibleCrUseOfCanvasControll({
-              error: Error()
-            }), CanvasControll) : CanvasControll).instance.node.on(Node.EventType.TOUCH_END, this.eventPushNotificationGuset, this);
-          }
-
-          await (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
-            error: Error()
-          }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
-            error: Error()
-          }), AssetType) : AssetType).Sprite);
-          await (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
-            error: Error()
-          }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
-            error: Error()
-          }), AssetType) : AssetType).Music);
-          await (_crd && CheckLoading === void 0 ? (_reportPossibleCrUseOfCheckLoading({
-            error: Error()
-          }), CheckLoading) : CheckLoading).getInstance.checkAllEnd();
-          this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
-            error: Error()
-          }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
-            error: Error()
-          }), CommandType) : CommandType).gori);
+        async start() {//建立連線
+          // this.eventEmit(GameEvent.ResetView)
+          // await SocketSetting.checkLanguage(LangType.Server)
+          // await SocketSetting.checkLanguage(LangType.Game)
+          // PanelLoading.instance.openLoading(SocketSetting.t("E_0004", LangType.Game))
+          // PublicData.getInstance.isResetProcessing = true
+          // PublicData.getInstance.isResetView = true;
+          // /**初始化全部語系 */
+          // for (let index = 0; index < PublicData.getInstance.arr_ComponentBaseClass.length; index++) {
+          //     PublicData.getInstance.arr_ComponentBaseClass[index].setLanguage()
+          // }
+          // /** forCAST用 */
+          // if (Player.getInstance.identity == PlayerIdentity.Guest) {
+          //     this.panelUI.hide()
+          //     CanvasControll.instance.node.on(Node.EventType.TOUCH_END, this.eventPushNotificationGuset, this)
+          // }
+          // await AssetMng.waitStateCheck(AssetType.Sprite)
+          // await AssetMng.waitStateCheck(AssetType.Music)
+          // await CheckLoading.getInstance.checkAllEnd()
+          // this.eventEmit(WebSocketEvent.WebSocketSendCommand, CommandType.gori)
         }
 
-        onDisable() {
-          this.deletEvent((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
-            error: Error()
-          }), GameEvent) : GameEvent).SetOrientation, this.eventOrientation);
-        }
+        onDisable() {}
 
         onDestroy() {
           /**清除之前資料 */
@@ -303,140 +179,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           (_crd && SingletManager === void 0 ? (_reportPossibleCrUseOfSingletManager({
             error: Error()
           }), SingletManager) : SingletManager).instance.delete(js.getClassName(this));
-        }
-
-        eventOrientation(str) {
-          /**如果當前是橫版且接收到字串為橫 */
-          if ((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.isLandscape && str == "portrait") (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.isLandscape = false;else if (!(_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.isLandscape && str == "landscape") (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.isLandscape = true;else return;
-          director.loadScene((_crd && GameSceneName === void 0 ? (_reportPossibleCrUseOfGameSceneName({
-            error: Error()
-          }), GameSceneName) : GameSceneName).GameRoom);
-        }
-
-        backLobby() {
-          this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
-            error: Error()
-          }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
-            error: Error()
-          }), CommandType) : CommandType).pwlby);
-          director.loadScene((_crd && GameSceneName === void 0 ? (_reportPossibleCrUseOfGameSceneName({
-            error: Error()
-          }), GameSceneName) : GameSceneName).Lobby);
-        }
-
-        eventPushNotificationGuset() {
-          // console.error("送?");
-          (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.castAPI.send("guest", {});
-        }
-        /**以下測試 */
-
-
-        onRefreshRoomState() {
-          this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
-            error: Error()
-          }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
-            error: Error()
-          }), CommandType) : CommandType).gori);
-        }
-        /**下注清除 */
-
-
-        onBetClear() {
-          this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
-            error: Error()
-          }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
-            error: Error()
-          }), CommandType) : CommandType).gbcl);
-        }
-        /**自身下注 */
-
-
-        onOwnerBet() {
-          for (let index = 0; index < 30; index++) {
-            let temp = new (_crd && gbet === void 0 ? (_reportPossibleCrUseOfgbet({
-              error: Error()
-            }), gbet) : gbet)();
-            temp.chip = 100;
-            temp.kind = Math.floor(Math.random() * 5);
-            this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
-              error: Error()
-            }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
-              error: Error()
-            }), CommandType) : CommandType).gbet, temp);
-          }
-        }
-        /**下注確認 */
-
-
-        onBetCheck() {
-          //這要做什麼?
-          this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
-            error: Error()
-          }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
-            error: Error()
-          }), CommandType) : CommandType).gbcf);
-        }
-        /**參照上一局下注 */
-
-
-        onReferLastBet() {
-          //假設第一局我依然要傳給leo?還是要我們檔? 照傳
-          this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
-            error: Error()
-          }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
-            error: Error()
-          }), CommandType) : CommandType).gbrt);
-        }
-        /**瞇牌過程 */
-
-
-        onSquintProcess() {}
-        /**瞇牌結束 */
-
-
-        onSquintEnd() {
-          this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
-            error: Error()
-          }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
-            error: Error()
-          }), CommandType) : CommandType).gpe);
-        }
-
-        onResestPC() {
-          window.isPhone = false;
-          director.loadScene((_crd && GameSceneName === void 0 ? (_reportPossibleCrUseOfGameSceneName({
-            error: Error()
-          }), GameSceneName) : GameSceneName).GameRoom);
-        }
-
-        onResetPhoneLandscape() {
-          window.isPhone = true;
-          (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.isLandscape = true;
-          director.loadScene((_crd && GameSceneName === void 0 ? (_reportPossibleCrUseOfGameSceneName({
-            error: Error()
-          }), GameSceneName) : GameSceneName).GameRoom);
-        }
-
-        onResetPhonePortrait() {
-          window.isPhone = true;
-          (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.isLandscape = false;
-          director.loadScene((_crd && GameSceneName === void 0 ? (_reportPossibleCrUseOfGameSceneName({
-            error: Error()
-          }), GameSceneName) : GameSceneName).GameRoom);
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "panelGameMessage", [_dec2], {

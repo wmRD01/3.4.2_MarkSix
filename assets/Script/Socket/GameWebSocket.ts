@@ -23,8 +23,10 @@ const { ccclass, property } = _decorator;
 
 @ccclass('GameWebSocket')
 export default class GameWebSocket extends SocketModel {
-    onLoad(): void {
+    onEnable(): void {
         /**避免測試期間轉換到下一個場景的時候，又再次連線 */
+        console.log(PublicData.getInstance.checkLoading.checkState(CheckLoadingType.isWebSocketOpen));
+
         if (PublicData.getInstance.checkLoading.checkState(CheckLoadingType.isWebSocketOpen)) {
             this.node.destroy()
             return
@@ -33,11 +35,6 @@ export default class GameWebSocket extends SocketModel {
         this.Setting();
         this.MotifySetting()
         this.eventSetting();
-    }
-    test(from: Array<number>, data) {
-        from.push(data)
-    }
-    start() {
         let getWebPlatform = this.urlData == undefined ? WebPlatform.Default : (this.urlData as URLVlaue).dc
         /**由於打包出去後似乎會被意外轉成Obj，因此還要再次判斷 */
         getWebPlatform = typeof getWebPlatform !== 'string' ? WebPlatform.Default : getWebPlatform
@@ -45,6 +42,21 @@ export default class GameWebSocket extends SocketModel {
         //取得config拿取遊戲相關資料，其中包含連線的資訊
         this.RomoteData(`${this.libPath}config/${GameData.getInstance.gameID}/${getWebPlatform}/game.json?${new Date().getTime()}`, this.connectToServer.bind(this), this.loadLanguageError.bind(this))
         AssetMng.loadLogoAsset(this.UserLanguage)
+    }
+    onDisable() {
+        this.closeWebsocket()
+    }
+    test(from: Array<number>, data) {
+        from.push(data)
+    }
+    start() {
+        // let getWebPlatform = this.urlData == undefined ? WebPlatform.Default : (this.urlData as URLVlaue).dc
+        // /**由於打包出去後似乎會被意外轉成Obj，因此還要再次判斷 */
+        // getWebPlatform = typeof getWebPlatform !== 'string' ? WebPlatform.Default : getWebPlatform
+        // // console.error("最終結果：" + getWebPlatform);
+        // //取得config拿取遊戲相關資料，其中包含連線的資訊
+        // this.RomoteData(`${this.libPath}config/${GameData.getInstance.gameID}/${getWebPlatform}/game.json?${new Date().getTime()}`, this.connectToServer.bind(this), this.loadLanguageError.bind(this))
+        // AssetMng.loadLogoAsset(this.UserLanguage)
     }
     connectToServer(jsonText: string) {
         let jsonTo = JSON.parse(jsonText)
@@ -91,6 +103,8 @@ export default class GameWebSocket extends SocketModel {
         // console.log(JSON.stringify(config));
         this.webSocket.send(JSON.stringify(config));
     }
+
+
 
     onLogIn(cmd) {
         let _ln = new ln()
@@ -139,7 +153,7 @@ export default class GameWebSocket extends SocketModel {
         CheckLoading.getInstance.endWork(CheckLoadingType.isWebSocketOpen);
         this.onLogIn("ln")
         if (this.usertoken == "") {
-            GameControll.getInstance.messaggeState(MessageCommend.BackHome, SocketSetting.t("E_0001", LangType.Game))
+            // GameControll.getInstance.messaggeState(MessageCommend.BackHome, SocketSetting.t("E_0001", LangType.Game))
             return;
         }
     }
@@ -147,14 +161,14 @@ export default class GameWebSocket extends SocketModel {
         console.log("Send Text fired an error");
         CheckLoading.getInstance.resetState(CheckLoadingType.isWebSocketOpen);
         // 連線錯誤，詳細情況請洽客服!
-        GameControll.getInstance.messaggeState(MessageCommend.BackHome, SocketSetting.t("E_0001", LangType.Game))
+        // GameControll.getInstance.messaggeState(MessageCommend.BackHome, SocketSetting.t("E_0001", LangType.Game))
     }
     onWS_Close(event) {
         console.log("WebSocket instance closed.");
         this.isClose = true
         if (CheckLoading.getInstance.checkState(CheckLoadingType.isWebSocketOpen)) {
             CheckLoading.getInstance.resetState(CheckLoadingType.isWebSocketOpen);
-            GameControll.getInstance.messaggeState(MessageCommend.BackHome, SocketSetting.t("E_0002", LangType.Game))
+            // GameControll.getInstance.messaggeState(MessageCommend.BackHome, SocketSetting.t("E_0002", LangType.Game))
         };
     }
     onWS_Receive(event) {
@@ -175,6 +189,7 @@ export default class GameWebSocket extends SocketModel {
 
     }
     //#endregion
+
     onViewRecord() {
         if (this.recordeURL != null && this.recordeURL != "" && this.recordeURL != "undefined") {
             let formatRecordUrl = `${this.recordeURL}?agentId=${this.agentId}&playerId=${Player.getInstance.account}&lang=${this.UserLanguage}`
@@ -183,7 +198,7 @@ export default class GameWebSocket extends SocketModel {
     }
     onBackHome() {
         /**通知server斷線 */
-        this.onSend(CommandType.usdis, {})
+        // this.onSend(CommandType.usdis, {})
         if (this.backHomeURL != null && this.backHomeURL != "" && this.backHomeURL != "undefined") {
             document.location.href = this.backHomeURL;
         }
@@ -193,10 +208,17 @@ export default class GameWebSocket extends SocketModel {
             window.open(this.staoredValueUrl)
         }
     }
-
     onCloseWindow() {
         let temp = window.open('', '_self');
         temp.close();
+    }
+    closeWebsocket() {
+        // this.isClose = true
+        // CheckLoading.getInstance.resetState(CheckLoadingType.isWebSocketOpen);
+        if (!PublicData.getInstance.checkLoading.checkState(CheckLoadingType.isWebSocketOpen)) {
+            return
+        }
+        this.onSend(CommandType.usdis, {})
     }
     /////////////////////////////////////////////////////////////
     ///     lang載入設定.

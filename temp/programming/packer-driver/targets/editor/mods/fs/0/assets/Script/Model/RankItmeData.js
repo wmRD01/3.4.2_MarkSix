@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Label, Sprite, UITransform, _decorator, AssetType, AssetMng, BaseComponent, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, RankItmeData;
+  var _reporterNs, _cclegacy, Label, Sprite, UITransform, _decorator, AssetType, AssetMng, BaseComponent, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, RankItmeData;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -49,7 +49,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", RankItmeData = (_dec = ccclass('RankItmeData'), _dec2 = property(UITransform), _dec3 = property(Sprite), _dec4 = property(Label), _dec5 = property(Label), _dec(_class = (_class2 = (_temp = class RankItmeData extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", RankItmeData = (_dec = ccclass('RankItmeData'), _dec2 = property(UITransform), _dec3 = property(Sprite), _dec4 = property(Sprite), _dec5 = property(Label), _dec6 = property(Label), _dec(_class = (_class2 = (_temp = class RankItmeData extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {
@@ -59,9 +59,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "spriteRank", _descriptor2, this);
 
-          _initializerDefineProperty(this, "labelName", _descriptor3, this);
+          _initializerDefineProperty(this, "spriteBG", _descriptor3, this);
 
-          _initializerDefineProperty(this, "labelPointCount", _descriptor4, this);
+          _initializerDefineProperty(this, "labelName", _descriptor4, this);
+
+          _initializerDefineProperty(this, "labelPointCount", _descriptor5, this);
         }
 
         init(data) {
@@ -99,12 +101,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "labelName", [_dec4], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "spriteBG", [_dec4], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "labelPointCount", [_dec5], {
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "labelName", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "labelPointCount", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,

@@ -21,10 +21,20 @@ export namespace RequestGPG {
             return this
         }
         async fetchData(_url: string, callback: Function) {
+            // console.log(_url);
+            // console.log(_url.split("?"));
+            // console.log(_url.split("?")[0].split("/"));
+
+            console.log(_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length]);
             return new Promise<void>((resolve, reject) => {
+                let data;
                 fetch(_url, this)
                     .then(response => response.json())
-                    .then(response => callback(response))
+                    .then(response => data = response)
+                    .catch(err => reject)
+                    .then(response => console.log(`資料名稱：${_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length - 1]}`))
+                    .then(response => console.log(`資料內容`, data))
+                    .then(response => callback(data))
                     .then(resolve)
             })
 
@@ -46,7 +56,6 @@ export namespace RequestGPG {
             }
 
             export class CertifiedEmail extends base {
-                [x: string]: string;
                 verifyCode: string;
                 email: string;
             }
@@ -55,6 +64,13 @@ export namespace RequestGPG {
             }
             export class Nickname extends base {
                 nickname: string;
+            }
+            export class DrawHistory extends base {
+                [x: string]: string;
+                "top": string;
+            }
+            export class DrawUpcoming extends base {
+                [x: string]: string;
             }
 
         }
@@ -95,7 +111,9 @@ export namespace RequestGPG {
         SendRegisterVerification = "/Token/SendRegisterVerification",
         ValidateContactInfo = "/Token/ValidateContactInfo",
         MyInfo = "/Member/MyInfo",
-        Nickname = "/Member/Nickname"
+        Nickname = "/Member/Nickname",
+        DrawHistory = "/Mark6/Draw_History",
+        DrawUpcoming = "/Mark6/Draw_Upcoming",
     }
 }
 

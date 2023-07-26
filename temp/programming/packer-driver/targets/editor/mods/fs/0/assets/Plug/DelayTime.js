@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, BaseSingleton, EventMng, CommandType, WebSocketEvent, EvnetType, DelayTime, _crd;
+  var _reporterNs, _cclegacy, BaseSingleton, EventMng, CommandType, WebSocketEvent, NotificationType, DelayTime, _crd;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -21,8 +21,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("WebSocketEvent", "../Script/Enum/WebSocketEvent", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfEvnetType(extras) {
-    _reporterNs.report("EvnetType", "../Script/Enum/EvnetType", _context.meta, extras);
+  function _reportPossibleCrUseOfNotificationType(extras) {
+    _reporterNs.report("NotificationType", "../Script/Enum/NotificationType", _context.meta, extras);
   }
 
   _export("default", void 0);
@@ -41,7 +41,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_5) {
       WebSocketEvent = _unresolved_5.WebSocketEvent;
     }, function (_unresolved_6) {
-      EvnetType = _unresolved_6.EvnetType;
+      NotificationType = _unresolved_6.NotificationType;
     }],
     execute: function () {
       _crd = true;
@@ -110,9 +110,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             // console.error("送心跳");
             (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
               error: Error()
-            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
               error: Error()
-            }), EvnetType) : EvnetType).Pulic).emit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+            }), NotificationType) : NotificationType).Pulic).emit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
               error: Error()
             }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
               error: Error()

@@ -42,7 +42,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         constructor(...args) {
           super(...args);
 
-          _defineProperty(this, "gameID", 20002);
+          _defineProperty(this, "gameID", 50003);
 
           _defineProperty(this, "contentId", "10");
 

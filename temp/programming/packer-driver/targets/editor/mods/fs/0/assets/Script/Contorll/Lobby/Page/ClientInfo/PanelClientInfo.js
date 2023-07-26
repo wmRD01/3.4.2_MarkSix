@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "crypto-es", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, assetManager, Label, Sprite, SpriteFrame, _decorator, BaseComponent, Player, RequestGPG, CryptoES, EventMng, EvnetType, LobbyStateEvent, PublicData, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, PanelClientInfo;
+  var _reporterNs, _cclegacy, assetManager, Label, Sprite, SpriteFrame, _decorator, BaseComponent, Player, RequestGPG, EventMng, NotificationType, LobbyStateEvent, PublicData, PanelLoading, PublicModel, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, PanelClientInfo;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -27,16 +27,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("ResponseGPG", "../../../Api/GPGAPI/ResponseGPG", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfCryptoES(extras) {
-    _reporterNs.report("CryptoES", "crypto-es", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfEventMng(extras) {
     _reporterNs.report("EventMng", "../../../../Manager/EventMng", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfEvnetType(extras) {
-    _reporterNs.report("EvnetType", "../../../../Enum/EvnetType", _context.meta, extras);
+  function _reportPossibleCrUseOfNotificationType(extras) {
+    _reporterNs.report("NotificationType", "../../../../Enum/NotificationType", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfLobbyStateEvent(extras) {
@@ -45,6 +41,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfPublicData(extras) {
     _reporterNs.report("PublicData", "../../../../Model/PublicData", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPanelLoading(extras) {
+    _reporterNs.report("PanelLoading", "../../../NoClearNode/PanelLoading", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPublicModel(extras) {
+    _reporterNs.report("PublicModel", "../../../../Model/PublicModel", _context.meta, extras);
   }
 
   return {
@@ -63,16 +67,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Player = _unresolved_3.default;
     }, function (_unresolved_4) {
       RequestGPG = _unresolved_4.RequestGPG;
-    }, function (_cryptoEs) {
-      CryptoES = _cryptoEs.default;
     }, function (_unresolved_5) {
       EventMng = _unresolved_5.default;
     }, function (_unresolved_6) {
-      EvnetType = _unresolved_6.EvnetType;
+      NotificationType = _unresolved_6.NotificationType;
     }, function (_unresolved_7) {
       LobbyStateEvent = _unresolved_7.LobbyStateEvent;
     }, function (_unresolved_8) {
       PublicData = _unresolved_8.default;
+    }, function (_unresolved_9) {
+      PanelLoading = _unresolved_9.default;
+    }, function (_unresolved_10) {
+      PublicModel = _unresolved_10.default;
     }],
     execute: function () {
       _crd = true;
@@ -84,7 +90,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", PanelClientInfo = (_dec = ccclass('PanelClientInfo'), _dec2 = property(Sprite), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec(_class = (_class2 = (_temp = class PanelClientInfo extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelClientInfo = (_dec = ccclass('PanelClientInfo'), _dec2 = property(Sprite), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec(_class = (_class2 = (_temp = class PanelClientInfo extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {
@@ -101,8 +107,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "labelNickName", _descriptor3, this);
 
           _initializerDefineProperty(this, "labelEmail", _descriptor4, this);
-
-          _initializerDefineProperty(this, "tempText", _descriptor5, this);
         }
 
         async start() {
@@ -111,23 +115,23 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.isLoading = false;
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+          }), NotificationType) : NotificationType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).ActivePanelClientInfo, this.activePanel, this);
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+          }), NotificationType) : NotificationType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).ChangePlayerPicture, this.onChangePlayerPicture, this);
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+          }), NotificationType) : NotificationType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).UpDataPlayer, this.onUpdataPlayer, this); // console.log(sys.browserType, sys.os);
           // console.log(md5("12315235"));
@@ -140,14 +144,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         async onEnable() {
           if (!this.isNeedUpdata || this.isLoading) return;
           this.isLoading = true;
+          (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+            error: Error()
+          }), PanelLoading) : PanelLoading).instance.openLoading("資料讀取中");
+          this.startDelay();
           const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
           }), RequestGPG) : RequestGPG).Body.NeedToken.MyInfo();
-          body.sign = (_crd && CryptoES === void 0 ? (_reportPossibleCrUseOfCryptoES({
+          body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
-          }), CryptoES) : CryptoES).MD5((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+          }), PublicModel) : PublicModel).getInstance.convertMD5((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
             error: Error()
-          }), PublicData) : PublicData).getInstance.gpgApi).toString();
+          }), PublicData) : PublicData).getInstance.gpgApi);
           let convert = new URLSearchParams(body).toString();
           await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
@@ -167,16 +175,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.hide();
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+          }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).ChangePlayerPicture, this.spritePlayer.spriteFrame);
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+          }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).ActivePanelClientEdit, true);
         }
@@ -195,6 +203,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), Player) : Player).getInstance.gpgInfo = response; // response.data.photo
 
+          console.log(response.data.photo.headPhoto);
           assetManager.loadRemote(response.data.photo.headPhoto, (err, image) => {
             if (err) {
               console.error(err.message);
@@ -203,12 +212,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
               error: Error()
-            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
               error: Error()
-            }), EvnetType) : EvnetType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
               error: Error()
             }), LobbyStateEvent) : LobbyStateEvent).ChangePlayerPicture, SpriteFrame.createWithImage(image));
             this.isNeedUpdata = false;
+            if (this.stopDelay() < 1) setTimeout((_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+              error: Error()
+            }), PanelLoading) : PanelLoading).instance.closeLoading.bind((_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+              error: Error()
+            }), PanelLoading) : PanelLoading).instance), 1000);else (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+              error: Error()
+            }), PanelLoading) : PanelLoading).instance.closeLoading();
           });
           this.labelNickName.string = response.data.nickName;
           this.labelPhone.string = response.data.phoneNumber;
@@ -235,11 +251,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         writable: true,
         initializer: null
       }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "labelEmail", [_dec5], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "tempText", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,

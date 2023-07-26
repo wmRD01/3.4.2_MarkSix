@@ -118,7 +118,8 @@ export default class SocketModel extends BaseComponent {
         this.loadLanguageCount = 0; // 語言包載入數
         // Member Info
         this.backHomeURL = ""; // 遊戲返回網址
-        this.account = "Test0" + Math.floor(Math.random() * 24); // 會員帳號
+        // this.account = "Test0" + Math.floor(Math.random() * 24); // 會員帳號
+        this.account = "0015"
         this.usertoken = "e89d0c9623cda4e645026249dfc4632d2c03df1ca7bfb0d95c63b09ba1a9f4a79c461ac66ca0cb88adff60d9a72e601a07b670ee14f0377c1c08712b1b77335d"
         this.companyIcon = "WM"; // 公司Icon名稱
         this.urlData = this.handleURLData(window.location.href)

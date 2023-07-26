@@ -146,8 +146,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       _export("default", GameWebSocket = (_dec = ccclass('GameWebSocket'), _dec(_class = class GameWebSocket extends (_crd && SocketModel === void 0 ? (_reportPossibleCrUseOfSocketModel({
         error: Error()
       }), SocketModel) : SocketModel) {
-        onLoad() {
+        onEnable() {
           /**避免測試期間轉換到下一個場景的時候，又再次連線 */
+          console.log((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.checkLoading.checkState((_crd && CheckLoadingType === void 0 ? (_reportPossibleCrUseOfCheckLoadingType({
+            error: Error()
+          }), CheckLoadingType) : CheckLoadingType).isWebSocketOpen));
+
           if ((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
             error: Error()
           }), PublicData) : PublicData).getInstance.checkLoading.checkState((_crd && CheckLoadingType === void 0 ? (_reportPossibleCrUseOfCheckLoadingType({
@@ -161,13 +167,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.Setting();
           this.MotifySetting();
           this.eventSetting();
-        }
-
-        test(from, data) {
-          from.push(data);
-        }
-
-        start() {
           let getWebPlatform = this.urlData == undefined ? (_crd && WebPlatform === void 0 ? (_reportPossibleCrUseOfWebPlatform({
             error: Error()
           }), WebPlatform) : WebPlatform).Default : this.urlData.dc;
@@ -184,6 +183,23 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
             error: Error()
           }), AssetMng) : AssetMng).loadLogoAsset(this.UserLanguage);
+        }
+
+        onDisable() {
+          this.closeWebsocket();
+        }
+
+        test(from, data) {
+          from.push(data);
+        }
+
+        start() {// let getWebPlatform = this.urlData == undefined ? WebPlatform.Default : (this.urlData as URLVlaue).dc
+          // /**由於打包出去後似乎會被意外轉成Obj，因此還要再次判斷 */
+          // getWebPlatform = typeof getWebPlatform !== 'string' ? WebPlatform.Default : getWebPlatform
+          // // console.error("最終結果：" + getWebPlatform);
+          // //取得config拿取遊戲相關資料，其中包含連線的資訊
+          // this.RomoteData(`${this.libPath}config/${GameData.getInstance.gameID}/${getWebPlatform}/game.json?${new Date().getTime()}`, this.connectToServer.bind(this), this.loadLanguageError.bind(this))
+          // AssetMng.loadLogoAsset(this.UserLanguage)
         }
 
         connectToServer(jsonText) {
@@ -344,15 +360,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.onLogIn("ln");
 
           if (this.usertoken == "") {
-            (_crd && GameControll === void 0 ? (_reportPossibleCrUseOfGameControll({
-              error: Error()
-            }), GameControll) : GameControll).getInstance.messaggeState((_crd && MessageCommend === void 0 ? (_reportPossibleCrUseOfMessageCommend({
-              error: Error()
-            }), MessageCommend) : MessageCommend).BackHome, (_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
-              error: Error()
-            }), SocketSetting) : SocketSetting).t("E_0001", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
-              error: Error()
-            }), LangType) : LangType).Game));
+            // GameControll.getInstance.messaggeState(MessageCommend.BackHome, SocketSetting.t("E_0001", LangType.Game))
             return;
           }
         }
@@ -364,16 +372,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), CheckLoading) : CheckLoading).getInstance.resetState((_crd && CheckLoadingType === void 0 ? (_reportPossibleCrUseOfCheckLoadingType({
             error: Error()
           }), CheckLoadingType) : CheckLoadingType).isWebSocketOpen); // 連線錯誤，詳細情況請洽客服!
-
-          (_crd && GameControll === void 0 ? (_reportPossibleCrUseOfGameControll({
-            error: Error()
-          }), GameControll) : GameControll).getInstance.messaggeState((_crd && MessageCommend === void 0 ? (_reportPossibleCrUseOfMessageCommend({
-            error: Error()
-          }), MessageCommend) : MessageCommend).BackHome, (_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
-            error: Error()
-          }), SocketSetting) : SocketSetting).t("E_0001", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
-            error: Error()
-          }), LangType) : LangType).Game));
+          // GameControll.getInstance.messaggeState(MessageCommend.BackHome, SocketSetting.t("E_0001", LangType.Game))
         }
 
         onWS_Close(event) {
@@ -389,16 +388,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), CheckLoading) : CheckLoading).getInstance.resetState((_crd && CheckLoadingType === void 0 ? (_reportPossibleCrUseOfCheckLoadingType({
               error: Error()
-            }), CheckLoadingType) : CheckLoadingType).isWebSocketOpen);
-            (_crd && GameControll === void 0 ? (_reportPossibleCrUseOfGameControll({
-              error: Error()
-            }), GameControll) : GameControll).getInstance.messaggeState((_crd && MessageCommend === void 0 ? (_reportPossibleCrUseOfMessageCommend({
-              error: Error()
-            }), MessageCommend) : MessageCommend).BackHome, (_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
-              error: Error()
-            }), SocketSetting) : SocketSetting).t("E_0002", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
-              error: Error()
-            }), LangType) : LangType).Game));
+            }), CheckLoadingType) : CheckLoadingType).isWebSocketOpen); // GameControll.getInstance.messaggeState(MessageCommend.BackHome, SocketSetting.t("E_0002", LangType.Game))
           }
 
           ;
@@ -435,10 +425,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         onBackHome() {
           /**通知server斷線 */
-          this.onSend((_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
-            error: Error()
-          }), CommandType) : CommandType).usdis, {});
-
+          // this.onSend(CommandType.usdis, {})
           if (this.backHomeURL != null && this.backHomeURL != "" && this.backHomeURL != "undefined") {
             document.location.href = this.backHomeURL;
           }
@@ -453,6 +440,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         onCloseWindow() {
           let temp = window.open('', '_self');
           temp.close();
+        }
+
+        closeWebsocket() {
+          // this.isClose = true
+          // CheckLoading.getInstance.resetState(CheckLoadingType.isWebSocketOpen);
+          if (!(_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.checkLoading.checkState((_crd && CheckLoadingType === void 0 ? (_reportPossibleCrUseOfCheckLoadingType({
+            error: Error()
+          }), CheckLoadingType) : CheckLoadingType).isWebSocketOpen)) {
+            return;
+          }
+
+          this.onSend((_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
+            error: Error()
+          }), CommandType) : CommandType).usdis, {});
         } /////////////////////////////////////////////////////////////
         ///     lang載入設定.
         /////////////////////////////////////////////////////////////

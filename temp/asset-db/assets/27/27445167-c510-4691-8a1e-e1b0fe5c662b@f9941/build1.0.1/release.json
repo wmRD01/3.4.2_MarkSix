@@ -1,0 +1,53 @@
+[
+    1,
+    [
+        "27RFFnxRBGkYoe4bD+XGYr@6c48a"
+    ],
+    [
+        "_textureSource"
+    ],
+    [
+        "cc.SpriteFrame"
+    ],
+    0,
+    [
+        {
+            "name": "integral_page",
+            "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 721,
+                "height": 1036
+            },
+            "offset": {
+                "x": 0,
+                "y": 0
+            },
+            "originalSize": {
+                "width": 721,
+                "height": 1036
+            },
+            "rotated": false,
+            "capInsets": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "packable": true
+        }
+    ],
+    [
+        0
+    ],
+    0,
+    [
+        0
+    ],
+    [
+        0
+    ],
+    [
+        0
+    ]
+]

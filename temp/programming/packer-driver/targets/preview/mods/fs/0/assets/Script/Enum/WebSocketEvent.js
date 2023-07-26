@@ -21,6 +21,7 @@ System.register(["cc"], function (_export, _context) {
         WebSocketEvent["CloseWindow"] = "CloseWindow";
         WebSocketEvent["ViewRecord"] = "ViewRecord";
         WebSocketEvent["StaoredValue"] = "StaoredValue";
+        WebSocketEvent["CloseWebSocket"] = "CloseWebSocket";
       })(WebSocketEvent || _export("WebSocketEvent", WebSocketEvent = {}));
 
       _cclegacy._RF.pop();

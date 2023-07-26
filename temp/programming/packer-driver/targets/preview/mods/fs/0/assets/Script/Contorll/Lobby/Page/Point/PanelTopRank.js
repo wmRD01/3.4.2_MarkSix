@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Node, Prefab, _decorator, AssetType, AssetMng, BaseComponent, RankItmeData, _dec, _dec2, _dec3, _dec4, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, PanelTopRank;
+  var _reporterNs, _cclegacy, instantiate, Node, Prefab, _decorator, AssetType, AssetMng, BaseComponent, AutoFollow, RankItmeData, _dec, _dec2, _dec3, _dec4, _dec5, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, PanelTopRank;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -27,6 +27,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("BaseComponent", "../../../../Model/ComponentBase", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfAutoFollow(extras) {
+    _reporterNs.report("AutoFollow", "../../../../Model/AutoFollow", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfRankItmeData(extras) {
     _reporterNs.report("RankItmeData", "../../../../Model/RankItmeData", _context.meta, extras);
   }
@@ -47,7 +51,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_4) {
       BaseComponent = _unresolved_4.default;
     }, function (_unresolved_5) {
-      RankItmeData = _unresolved_5.default;
+      AutoFollow = _unresolved_5.default;
+    }, function (_unresolved_6) {
+      RankItmeData = _unresolved_6.default;
     }],
     execute: function () {
       _crd = true;
@@ -59,7 +65,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", PanelTopRank = (_dec = ccclass('PanelTopRank'), _dec2 = property(Prefab), _dec3 = property(Node), _dec4 = property(Node), _dec(_class2 = (_class3 = (_temp = class PanelTopRank extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelTopRank = (_dec = ccclass('PanelTopRank'), _dec2 = property(Prefab), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec(_class2 = (_class3 = (_temp = class PanelTopRank extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor() {
@@ -69,7 +75,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "layoutRank", _descriptor2, this);
 
-          _initializerDefineProperty(this, "contentLabel", _descriptor3, this);
+          _initializerDefineProperty(this, "labelContent", _descriptor3, this);
+
+          _initializerDefineProperty(this, "spriteBGContent", _descriptor4, this);
         }
 
         start() {
@@ -99,6 +107,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _class.init(1);
 
+          _class.labelName.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+            error: Error()
+          }), AutoFollow) : AutoFollow).createNewTarget();
+
+          _class.labelPointCount.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+            error: Error()
+          }), AutoFollow) : AutoFollow).createNewTarget();
+
+          _class.spriteBG.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+            error: Error()
+          }), AutoFollow) : AutoFollow).setTarget(_node);
+
+          this.labelContent.addChild(_class.labelName.node);
+          this.labelContent.addChild(_class.labelPointCount.node);
+          this.spriteBGContent.addChild(_class.spriteBG.node);
           this.layoutRank.addChild(_node);
         }
 
@@ -112,7 +135,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class3.prototype, "contentLabel", [_dec4], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class3.prototype, "labelContent", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor4 = _applyDecoratedDescriptor(_class3.prototype, "spriteBGContent", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,

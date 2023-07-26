@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, color, Label, Node, Sprite, Tween, tween, Vec3, _decorator, AssetType, AssetMng, BaseComponent, LabelAutoFollow, PublicModel, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, BallData, ColorType, SpirteData;
+  var _reporterNs, _cclegacy, Button, color, Label, Node, Sprite, Tween, tween, Vec3, _decorator, AssetType, AssetMng, BaseComponent, AutoFollow, PublicModel, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, BallData, ColorType, SpirteData;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -23,8 +23,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("BaseComponent", "./ComponentBase", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfLabelAutoFollow(extras) {
-    _reporterNs.report("LabelAutoFollow", "./LabelAutoFollow", _context.meta, extras);
+  function _reportPossibleCrUseOfAutoFollow(extras) {
+    _reporterNs.report("AutoFollow", "./AutoFollow", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfPublicModel(extras) {
@@ -52,7 +52,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_4) {
       BaseComponent = _unresolved_4.default;
     }, function (_unresolved_5) {
-      LabelAutoFollow = _unresolved_5.default;
+      AutoFollow = _unresolved_5.default;
     }, function (_unresolved_6) {
       PublicModel = _unresolved_6.default;
     }],
@@ -88,20 +88,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         init(_ballNumber) {
-          console.log(_ballNumber);
+          // console.log(_ballNumber);
           this.ballNumber = _ballNumber;
           this.node.position = Vec3.ZERO;
           this.type = _ballNumber % 6;
-          this.label.addComponent(_crd && LabelAutoFollow === void 0 ? (_reportPossibleCrUseOfLabelAutoFollow({
+          this.label.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
             error: Error()
-          }), LabelAutoFollow) : LabelAutoFollow).setTarget(this.node);
+          }), AutoFollow) : AutoFollow).setTarget(this.node);
           this.label.string = this.ballNumber.toString();
-          this.label.color = color().fromHEX(this.getColor());
-          console.log((_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
-            error: Error()
-          }), AssetMng) : AssetMng).AssetClass.get((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
-            error: Error()
-          }), AssetType) : AssetType).Sprite).data.get(this.getBGData()));
+          this.label.color = color().fromHEX(this.getColor()); // console.log(AssetMng.AssetClass.get(AssetType.Sprite).data.get(this.getBGData()));
+
           this.spriteBG.spriteFrame = (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
             error: Error()
           }), AssetMng) : AssetMng).AssetClass.get((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({

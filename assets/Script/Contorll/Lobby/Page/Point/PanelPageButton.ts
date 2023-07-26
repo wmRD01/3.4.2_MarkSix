@@ -36,11 +36,11 @@ export default class PanelPageButton extends BaseComponent {
     }
     async onChangePanel(e: EventTouch, customEventData?: string) {
         await AssetMng.waitStateCheck(AssetType.Sprite)
-        console.log(customEventData);
+        // console.log(customEventData);
 
         let convert = Number(customEventData)
-        console.log(this.panelRank.active);
-        console.log(this.panelPoint.active);
+        // console.log(this.panelRank.active);
+        // console.log(this.panelPoint.active);
 
         switch (convert) {
             case PageType.Rank:

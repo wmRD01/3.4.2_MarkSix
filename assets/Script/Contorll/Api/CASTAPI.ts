@@ -1,5 +1,5 @@
 import { CASTCommandType } from "../../Enum/CASTCommandType";
-import { EvnetType } from "../../Enum/EvnetType";
+import { NotificationType } from "../../Enum/NotificationType";
 import { GameEvent } from "../../Enum/GameEvent";
 import EventMng from "../../Manager/EventMng";
 
@@ -17,7 +17,7 @@ export class CASTAPI {
             case CASTCommandType.Guest:
                 break;
             case CASTCommandType.Orientation:
-                EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameEvent.SetOrientation, event.data.orientation)
+                EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(GameEvent.SetOrientation, event.data.orientation)
                 break;
         }
     }

@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, PageView, Node, DEV, BaseSingletonComponent, EvnetType, PageAction, EventMng, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PageControll;
+  var _reporterNs, _cclegacy, _decorator, PageView, Node, DEV, BaseSingletonComponent, NotificationType, PageAction, EventMng, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PageControll;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -15,8 +15,8 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
     _reporterNs.report("BaseSingletonComponent", "../../../Patten/Singleton/BaseSingletonComponent", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfEvnetType(extras) {
-    _reporterNs.report("EvnetType", "../../Enum/EvnetType", _context.meta, extras);
+  function _reportPossibleCrUseOfNotificationType(extras) {
+    _reporterNs.report("NotificationType", "../../Enum/NotificationType", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfPageAction(extras) {
@@ -44,7 +44,7 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
     }, function (_unresolved_2) {
       BaseSingletonComponent = _unresolved_2.default;
     }, function (_unresolved_3) {
-      EvnetType = _unresolved_3.EvnetType;
+      NotificationType = _unresolved_3.NotificationType;
     }, function (_unresolved_4) {
       PageAction = _unresolved_4.PageAction;
     }, function (_unresolved_5) {
@@ -80,9 +80,9 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
           this.pageView = this.getComponent(PageView);
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Page).on((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+          }), NotificationType) : NotificationType).Page).on((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
           }), PageAction) : PageAction).ChangeTo, this.onToPage, this);
 
@@ -97,15 +97,15 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
           console.log("欸我已經送了欸");
           if (DEV) (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+          }), NotificationType) : NotificationType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
           }), PageAction) : PageAction).ChangeTo, 0);else (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+          }), NotificationType) : NotificationType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
           }), PageAction) : PageAction).ChangeTo, 0);
         }

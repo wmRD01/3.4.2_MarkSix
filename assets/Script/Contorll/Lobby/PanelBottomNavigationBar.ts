@@ -1,6 +1,6 @@
 import { Button, Node, Sprite, UITransform, v3, Vec3, _decorator } from "cc";
 import { AssetType } from "../../Enum/AssetType";
-import { EvnetType } from "../../Enum/EvnetType";
+import { NotificationType } from "../../Enum/NotificationType";
 import { PageAction } from "../../Enum/PageAction";
 import { PageMenu } from "../../Enum/PageMenu";
 import AssetMng from "../../Manager/AssetMng";
@@ -47,10 +47,10 @@ export default class PanelBottomNavigationBar extends BaseComponent {
         this.circleY = -(PublicData.getInstance.BaseViewHeight / 2) + (this.nodeCircle.getComponent(UITransform).height / 2)
     }
     onEnable() {
-        EventMng.getInstance.mapEvnet.get(EvnetType.Page).on(PageAction.ChangeTo, this.onEventChangeTo, this)
+        EventMng.getInstance.mapEvnet.get(NotificationType.Page).on(PageAction.ChangeTo, this.onEventChangeTo, this)
     }
     onDisable() {
-        EventMng.getInstance.mapEvnet.get(EvnetType.Page).off(PageAction.ChangeTo, this.onEventChangeTo, this)
+        EventMng.getInstance.mapEvnet.get(NotificationType.Page).off(PageAction.ChangeTo, this.onEventChangeTo, this)
     }
 
     onEventChangeTo(index: PageMenu) {
@@ -66,7 +66,7 @@ export default class PanelBottomNavigationBar extends BaseComponent {
         this.goTarget = v3(getX, this.circleY)
         this.startAction()
 
-        EventMng.getInstance.mapEvnet.get(EvnetType.Page).emit(PageAction.ChangeTo, this.currentIndex)
+        EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, this.currentIndex)
     }
     getButton(index: number) {
         return this.mapButton.get(index).getButton()

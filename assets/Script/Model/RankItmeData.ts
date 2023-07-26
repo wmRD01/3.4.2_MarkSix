@@ -9,6 +9,8 @@ export default class RankItmeData extends BaseComponent {
     spriteRankUI: UITransform
     @property(Sprite)
     spriteRank: Sprite
+    @property(Sprite)
+    spriteBG: Sprite
     @property(Label)
     labelName: Label;
     @property(Label)

@@ -130,7 +130,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), RequestGPG) : RequestGPG).Method.POST;
           const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
-          }), RequestGPG) : RequestGPG).Body.ValidateContactInfo();
+          }), RequestGPG) : RequestGPG).Body.NotNeedToken.ValidateContactInfo();
           body.Phone = `+886999999999`;
           request.body = JSON.stringify(body);
           fetch(url, request).then(this.我轉資料).then(this.我拿資料囉);

@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Layout, Node, Prefab, _decorator, DelayTime, AssetType, LobbyStateEvent, AssetMng, ButtonMng, BallData, BaseComponent, _dec, _dec2, _dec3, _dec4, _dec5, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, PanelBall;
+  var _reporterNs, _cclegacy, instantiate, Layout, Node, Prefab, _decorator, DelayTime, AssetType, CommandType, LobbyStateEvent, WebSocketEvent, AssetMng, ButtonMng, BallData, BaseComponent, bet, _dec, _dec2, _dec3, _dec4, _dec5, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, PanelBall;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -23,8 +23,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("AssetType", "../../../../Enum/AssetType", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfCommandType(extras) {
+    _reporterNs.report("CommandType", "../../../../Enum/CommandType", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfLobbyStateEvent(extras) {
     _reporterNs.report("LobbyStateEvent", "../../../../Enum/LobbyStateEvent", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfWebSocketEvent(extras) {
+    _reporterNs.report("WebSocketEvent", "../../../../Enum/WebSocketEvent", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfAssetMng(extras) {
@@ -43,6 +51,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("BaseComponent", "../../../../Model/ComponentBase", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfbet(extras) {
+    _reporterNs.report("bet", "../../../Api/SendCommand", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -58,15 +70,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_3) {
       AssetType = _unresolved_3.AssetType;
     }, function (_unresolved_4) {
-      LobbyStateEvent = _unresolved_4.LobbyStateEvent;
+      CommandType = _unresolved_4.CommandType;
     }, function (_unresolved_5) {
-      AssetMng = _unresolved_5.default;
+      LobbyStateEvent = _unresolved_5.LobbyStateEvent;
     }, function (_unresolved_6) {
-      ButtonMng = _unresolved_6.default;
+      WebSocketEvent = _unresolved_6.WebSocketEvent;
     }, function (_unresolved_7) {
-      BallData = _unresolved_7.default;
+      AssetMng = _unresolved_7.default;
     }, function (_unresolved_8) {
-      BaseComponent = _unresolved_8.default;
+      ButtonMng = _unresolved_8.default;
+    }, function (_unresolved_9) {
+      BallData = _unresolved_9.default;
+    }, function (_unresolved_10) {
+      BaseComponent = _unresolved_10.default;
+    }, function (_unresolved_11) {
+      bet = _unresolved_11.bet;
     }],
     execute: function () {
       _crd = true;
@@ -109,6 +127,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "isConfirm", void 0);
 
           _defineProperty(this, "isFullBall", void 0);
+
+          _defineProperty(this, "websocket", void 0);
         }
 
         start() {
@@ -272,6 +292,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 error: Error()
               }), DelayTime) : DelayTime).getInstance.StartDT(.1);
             }
+
+            var _bet = new (_crd && bet === void 0 ? (_reportPossibleCrUseOfbet({
+              error: Error()
+            }), bet) : bet)();
+
+            _bet.betCode = _this2.isChoose;
+
+            _this2.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+              error: Error()
+            }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
+              error: Error()
+            }), CommandType) : CommandType).bet, _bet);
+            /**打leo的com */
+
 
             _this2.tempChoose = [];
             _this2.isConfirm = true;

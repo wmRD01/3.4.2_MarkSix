@@ -1,6 +1,6 @@
 import { assetManager, error, ImageAsset, JsonAsset, log, resources, SpriteAtlas, SpriteFrame, Texture2D } from "cc";
 import Image from "../../Plug/Image";
-import { EvnetType } from "../Enum/EvnetType";
+import { NotificationType } from "../Enum/NotificationType";
 
 import { GameEvent } from "../Enum/GameEvent";
 import IAsset from "../Interface/IAsset";
@@ -100,7 +100,7 @@ class SpriteAtlasAsset implements IAsset {
             // CheckLoading.getInstance.changeState(CheckLoadingType.isLogo, true)
             console.log(this.data);
 
-            EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameEvent.SetLogo, this.data.get("logo"))
+            EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(GameEvent.SetLogo, this.data.get("logo"))
         })
         return this
     }

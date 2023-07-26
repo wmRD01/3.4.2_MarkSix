@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Node, Sprite, UITransform, v3, _decorator, AssetType, EvnetType, PageAction, AssetMng, EventMng, BaseComponent, PublicData, PublicModel, Page, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, PanelBottomNavigationBar, ActionDic;
+  var _reporterNs, _cclegacy, Button, Node, Sprite, UITransform, v3, _decorator, AssetType, NotificationType, PageAction, AssetMng, EventMng, BaseComponent, PublicData, PublicModel, Page, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, PanelBottomNavigationBar, ActionDic;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -19,8 +19,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("AssetType", "../../Enum/AssetType", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfEvnetType(extras) {
-    _reporterNs.report("EvnetType", "../../Enum/EvnetType", _context.meta, extras);
+  function _reportPossibleCrUseOfNotificationType(extras) {
+    _reporterNs.report("NotificationType", "../../Enum/NotificationType", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfPageAction(extras) {
@@ -65,7 +65,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_2) {
       AssetType = _unresolved_2.AssetType;
     }, function (_unresolved_3) {
-      EvnetType = _unresolved_3.EvnetType;
+      NotificationType = _unresolved_3.NotificationType;
     }, function (_unresolved_4) {
       PageAction = _unresolved_4.PageAction;
     }, function (_unresolved_5) {
@@ -151,9 +151,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         onEnable() {
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Page).on((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+          }), NotificationType) : NotificationType).Page).on((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
           }), PageAction) : PageAction).ChangeTo, this.onEventChangeTo, this);
         }
@@ -161,9 +161,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         onDisable() {
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Page).off((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+          }), NotificationType) : NotificationType).Page).off((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
           }), PageAction) : PageAction).ChangeTo, this.onEventChangeTo, this);
         }
@@ -193,9 +193,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
               error: Error()
-            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
               error: Error()
-            }), EvnetType) : EvnetType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+            }), NotificationType) : NotificationType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
               error: Error()
             }), PageAction) : PageAction).ChangeTo, _this2.currentIndex);
           })();

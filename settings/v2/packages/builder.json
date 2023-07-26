@@ -13,19 +13,6 @@
     "displayWatermark": true
   },
   "textureCompressConfig": {
-    "userPreset": {
-      "0b/nHkZClDqZzbd1GJz3sE": {
-        "name": "test",
-        "options": {
-          "android": {
-            "png": 80
-          }
-        }
-      },
-      "740XYdSVtKy49931pSuzPN": {
-        "name": "test",
-        "options": {}
-      }
-    }
+    "userPreset": {}
   }
 }

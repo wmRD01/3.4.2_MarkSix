@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "crypto-es", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, director, dynamicAtlasManager, UITransform, Vec2, Vec3, BaseSingleton, MyMath, PublicModel, _crd;
+  var _reporterNs, _cclegacy, director, dynamicAtlasManager, UITransform, Vec2, Vec3, BaseSingleton, MyMath, CryptoES, PublicData, PublicModel, _crd;
 
   function _reportPossibleCrUseOfBaseSingleton(extras) {
     _reporterNs.report("BaseSingleton", "../../Patten/Singleton/BaseSingleton", _context.meta, extras);
@@ -9,6 +9,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
   function _reportPossibleCrUseOfMyMath(extras) {
     _reporterNs.report("MyMath", "../../Plug/MyMath", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfCryptoES(extras) {
+    _reporterNs.report("CryptoES", "crypto-es", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfRequestGPG(extras) {
+    _reporterNs.report("RequestGPG", "../Contorll/Api/GPGAPI/RequestGPG", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPublicData(extras) {
+    _reporterNs.report("PublicData", "./PublicData", _context.meta, extras);
   }
 
   _export("default", void 0);
@@ -27,6 +39,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       BaseSingleton = _unresolved_2.default;
     }, function (_unresolved_3) {
       MyMath = _unresolved_3.default;
+    }, function (_cryptoEs) {
+      CryptoES = _cryptoEs.default;
+    }, function (_unresolved_4) {
+      PublicData = _unresolved_4.default;
     }],
     execute: function () {
       _crd = true;
@@ -72,16 +88,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         /**秒數時間轉換 */
 
 
-        formatSecond(secs, isMilli) {
+        formatSecond(secs, isHR) {
           // if (isMilli) secs = this.convertMilliToSecond(secs);
-          let min = Math.floor(secs / 60).toString();
-          let sec = Math.floor(secs - Number(min) * 60).toString();
-
-          while (min.length < 2) min = "0" + min;
-
-          while (sec.length < 2) sec = "0" + sec;
-
-          return min + ":" + sec;
+          // let min = Math.floor(secs / 60).toString()
+          // let sec = Math.floor((secs - (Number(min) * 60))).toString()
+          // while (min.length < 2) min = "0" + min
+          // while (sec.length < 2) sec = "0" + sec
+          // return min + ":" + sec
+          const hours = isHR ? Math.floor(secs / 3600) : 0;
+          const minutes = Math.floor((secs - hours * 3600) / 60);
+          const seconds = Math.floor(secs - hours * 3600 - minutes * 60);
+          const hrStr = isHR ? hours.toString().padStart(2, '0') + ':' : '';
+          const minStr = minutes.toString().padStart(2, '0');
+          const secStr = seconds.toString().padStart(2, '0');
+          return hrStr + minStr + ':' + secStr;
         }
 
         convertMilliToSecond(num) {
@@ -249,6 +269,80 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
         openShader() {
           dynamicAtlasManager.enabled = false; //打開Shader合批(????)
+        }
+
+        convertSign(body, _class, isDelete = true) {
+          let sign = new _class();
+          PublicModel.getInstance.TwoClassCheckData(sign, body);
+          if (isDelete) delete sign.sign;
+          const dataWithApiKey = this.sortObj(sign, (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.gpgApi);
+          console.log(dataWithApiKey);
+          return (_crd && CryptoES === void 0 ? (_reportPossibleCrUseOfCryptoES({
+            error: Error()
+          }), CryptoES) : CryptoES).MD5(dataWithApiKey).toString(); // console.log(body);
+        }
+
+        convertMD5(str) {
+          return (_crd && CryptoES === void 0 ? (_reportPossibleCrUseOfCryptoES({
+            error: Error()
+          }), CryptoES) : CryptoES).MD5(str).toString();
+        }
+        /**排序物件順序並且queryString */
+
+
+        sortObj(obj, apiKey) {
+          var keyA = Object.keys(obj).sort();
+          var querystring = "";
+
+          for (let index = 0; index < keyA.length; index++) {
+            querystring += `${keyA[index]}=${obj[keyA[index]]}`;
+
+            if (index != keyA.length - 1) {
+              querystring += "&";
+            }
+          } // for (var i in keyA) {
+          //encodeURIComponent是ASCII轉換\，但是@也會被轉換所以不使用此方式
+          //     // sortObj[keyA[i]] = encodeURIComponent(obj[keyA[i]])
+          // }
+
+
+          querystring += apiKey;
+          return querystring;
+        }
+
+        convertDateDay(str) {
+          // 將字串轉換為Date物件
+          const dateObj = new Date(str); // 取得日期資訊
+
+          const year = this.convertToROC(dateObj.getFullYear());
+          const month = dateObj.getMonth() + 1; // 月份是從0開始的，所以要加1
+
+          const day = dateObj.getDate();
+          const daysOfWeek = ['日', '一', '二', '三', '四', '五', '六'];
+          const dayOfWeek = daysOfWeek[dateObj.getDay()]; // 格式化日期
+
+          return `${year}/${month}/${day} (${dayOfWeek})`;
+        }
+
+        convertDateTime(str) {
+          // 將字串轉換為Date物件
+          const dateObj = new Date(str);
+          const sec = dateObj.getSeconds();
+          const min = dateObj.getMinutes();
+          const hours = dateObj.getHours(); // 格式化日期
+
+          return `${hours}:${min}:${sec}`;
+        }
+
+        convertToROC(yearAD) {
+          const ROC_OFFSET = 1911;
+
+          const isLeapYear = year => year % 4 === 0 && year % 100 !== 0 || year % 400 === 0;
+
+          const yearROC = yearAD - ROC_OFFSET + (isLeapYear(yearAD) ? 1 : 0);
+          return yearROC;
         }
 
       });

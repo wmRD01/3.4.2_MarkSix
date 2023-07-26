@@ -1,7 +1,7 @@
 import { _decorator, EventTarget, PageView, Node } from 'cc';
 import { DEV } from 'cc/env';
 import BaseSingletonComponent from '../../../Patten/Singleton/BaseSingletonComponent';
-import { EvnetType } from '../../Enum/EvnetType';
+import { NotificationType } from '../../Enum/NotificationType';
 import { PageAction } from '../../Enum/PageAction';
 import { PageMenu } from '../../Enum/PageMenu';
 import AssetMng from '../../Manager/AssetMng';
@@ -23,7 +23,7 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
         // console.log(this.pageEvnet);
         this.pageView = this.getComponent(PageView)
 
-        EventMng.getInstance.mapEvnet.get(EvnetType.Page).on(PageAction.ChangeTo, this.onToPage, this)
+        EventMng.getInstance.mapEvnet.get(NotificationType.Page).on(PageAction.ChangeTo, this.onToPage, this)
         for (let index = 0; index < this.page.length; index++) {
             this.page[index].active = false
         }
@@ -34,9 +34,9 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
         console.log("欸我已經送了欸");
 
         if (DEV)
-            EventMng.getInstance.mapEvnet.get(EvnetType.Page).emit(PageAction.ChangeTo, 0);
+            EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, 0);
         else
-            EventMng.getInstance.mapEvnet.get(EvnetType.Page).emit(PageAction.ChangeTo, 0);
+            EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, 0);
     }
     closeTouch(target: PageView) {
         //@ts-ignore

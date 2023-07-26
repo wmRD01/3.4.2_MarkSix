@@ -104,11 +104,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
               error: Error()
-            }), AssetType) : AssetType).Sprite);
-            console.log(customEventData);
-            var convert = Number(customEventData);
-            console.log(_this.panelRank.active);
-            console.log(_this.panelPoint.active);
+            }), AssetType) : AssetType).Sprite); // console.log(customEventData);
+
+            var convert = Number(customEventData); // console.log(this.panelRank.active);
+            // console.log(this.panelPoint.active);
 
             switch (convert) {
               case PageType.Rank:

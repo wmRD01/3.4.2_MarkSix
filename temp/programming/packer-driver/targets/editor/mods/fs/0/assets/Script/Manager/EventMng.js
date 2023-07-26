@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, EventTarget, _decorator, BaseSingleton, EvnetType, _dec, _class, _temp, _crd, ccclass, property, EventMng;
+  var _reporterNs, _cclegacy, EventTarget, _decorator, BaseSingleton, NotificationType, _dec, _class, _temp, _crd, ccclass, property, EventMng;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -9,8 +9,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     _reporterNs.report("BaseSingleton", "../../Patten/Singleton/BaseSingleton", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfEvnetType(extras) {
-    _reporterNs.report("EvnetType", "../Enum/EvnetType", _context.meta, extras);
+  function _reportPossibleCrUseOfNotificationType(extras) {
+    _reporterNs.report("NotificationType", "../Enum/NotificationType", _context.meta, extras);
   }
 
   return {
@@ -23,7 +23,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     }, function (_unresolved_2) {
       BaseSingleton = _unresolved_2.default;
     }, function (_unresolved_3) {
-      EvnetType = _unresolved_3.EvnetType;
+      NotificationType = _unresolved_3.NotificationType;
     }],
     execute: function () {
       _crd = true;
@@ -46,9 +46,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
         init() {
           /**因為會包含Valude，所以直接/2就是整個Object的數量 */
-          for (let index = 0; index < Object.keys(_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          for (let index = 0; index < Object.keys(_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).length / 2; index++) {
+          }), NotificationType) : NotificationType).length / 2; index++) {
             this.mapEvnet.set(index, new EventTarget());
           }
         }

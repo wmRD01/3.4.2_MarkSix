@@ -63,7 +63,7 @@ export default class PanelGameLoading extends BaseComponent {
         const url = "https://a1-gpg.ceis.tw/Token/ValidateContactInfo"
         const request = new RequestGPG.Request()
         request.method = RequestGPG.Method.POST
-        const body = new RequestGPG.Body.ValidateContactInfo()
+        const body = new RequestGPG.Body.NotNeedToken.ValidateContactInfo()
         body.Phone = `+886999999999`
         request.body = JSON.stringify(body)
         fetch(url, request)

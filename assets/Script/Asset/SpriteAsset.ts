@@ -1,5 +1,5 @@
 import { resources, SpriteAtlas, SpriteFrame } from "cc";
-import { EvnetType } from "../Enum/EvnetType";
+import { NotificationType } from "../Enum/NotificationType";
 import { GameEvent } from "../Enum/GameEvent";
 import IAsset from "../Interface/IAsset";
 import EventMng from "../Manager/EventMng";
@@ -48,7 +48,7 @@ class SpriteAsset implements IAsset {
             });
             console.log(this.data);
 
-            EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameEvent.SetLogo, this.data.get("logo"))
+            EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(GameEvent.SetLogo, this.data.get("logo"))
 
         })
         return this

@@ -3,7 +3,7 @@ import { CoinType } from "../Enum/CoinType";
 import { GameType } from "../Enum/GameType";
 
 export default class GameData extends BaseSingleton<GameData>() {
-    gameID: number = 20002; // 遊戲ID.
+    gameID: number = 50003; // 遊戲ID.
     contentId: string = "10";
     roomNo: number = 1001
     coinType: CoinType = CoinType.Gold;
@@ -17,5 +17,5 @@ export default class GameData extends BaseSingleton<GameData>() {
     bankerPeekSeatID: number;
     playerPeekSeatID: number;
 
-   
+
 }

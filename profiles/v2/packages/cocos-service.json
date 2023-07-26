@@ -11,15 +11,7 @@
     },
     "android": {
       "configID": "08c3e2",
-      "services": [
-        {
-          "service_id": "235",
-          "service_component_name": "service-analytics",
-          "builder": "C:\\Users\\ASUS\\.CocosCreator\\.service\\analytics\\builder\\builder.js",
-          "enable": false,
-          "params": {}
-        }
-      ]
+      "services": []
     }
   },
   "builder-options": {

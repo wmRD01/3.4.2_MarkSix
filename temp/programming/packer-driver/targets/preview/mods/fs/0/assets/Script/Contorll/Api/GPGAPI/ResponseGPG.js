@@ -139,7 +139,7 @@ System.register(["cc"], function (_export, _context) {
         (function (_Certification) {
           class DataClass {
             constructor() {
-              _defineProperty(this, "Data", null);
+              _defineProperty(this, "data", null);
 
               _defineProperty(this, "access_token", null);
 
@@ -165,6 +165,84 @@ System.register(["cc"], function (_export, _context) {
 
           }
         })(Certification || (Certification = _ResponseGPG.Certification || (_ResponseGPG.Certification = {})));
+
+        var DrawHistory;
+
+        (function (_DrawHistory) {
+          class DataClass {
+            constructor() {
+              _defineProperty(this, "data", []);
+
+              _defineProperty(this, "Status", new State());
+            }
+
+          }
+
+          _DrawHistory.DataClass = DataClass;
+
+          class State {
+            constructor() {
+              _defineProperty(this, "Code", void 0);
+
+              _defineProperty(this, "Message", void 0);
+            }
+
+          }
+
+          class History {
+            constructor() {
+              _defineProperty(this, "drawCode", void 0);
+
+              _defineProperty(this, "issueID", void 0);
+
+              _defineProperty(this, "openDate", void 0);
+
+              _defineProperty(this, "realOpenDate", void 0);
+            }
+
+          }
+
+          _DrawHistory.History = History;
+        })(DrawHistory || (DrawHistory = _ResponseGPG.DrawHistory || (_ResponseGPG.DrawHistory = {})));
+
+        var DrawUpcoming;
+
+        (function (_DrawUpcoming) {
+          class DataClass {
+            constructor() {
+              _defineProperty(this, "data", []);
+
+              _defineProperty(this, "Status", new State());
+            }
+
+          }
+
+          _DrawUpcoming.DataClass = DataClass;
+
+          class State {
+            constructor() {
+              _defineProperty(this, "Code", void 0);
+
+              _defineProperty(this, "Message", void 0);
+            }
+
+          }
+
+          class History {
+            constructor() {
+              _defineProperty(this, "drawCode", void 0);
+
+              _defineProperty(this, "issueID", void 0);
+
+              _defineProperty(this, "openDate", void 0);
+
+              _defineProperty(this, "realOpenDate", void 0);
+            }
+
+          }
+
+          _DrawUpcoming.History = History;
+        })(DrawUpcoming || (DrawUpcoming = _ResponseGPG.DrawUpcoming || (_ResponseGPG.DrawUpcoming = {})));
       })(ResponseGPG || _export("ResponseGPG", ResponseGPG = {}));
 
       _cclegacy._RF.pop();

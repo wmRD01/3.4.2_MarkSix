@@ -1,11 +1,6 @@
 {
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font": {
-    "time": 1687336131378.8171,
-    "uuid": "d8e5155a-ffac-4946-a91e-4f917f118d48",
-    "missing": false
-  },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image": {
-    "time": 1689588189332.7583,
+    "time": 1689908839046.8604,
     "uuid": "6e71966d-73ec-46ee-84f1-7fe64bc8e090",
     "missing": false
   },
@@ -47,36 +42,6 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\舊": {
     "time": 1687923559811.7847,
     "uuid": "04d106d2-ed59-4e96-b90c-0e8767ce9451",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\gold.fnt": {
-    "time": 1687144714190.196,
-    "uuid": "c1492d57-f8e1-4538-b443-d8a60704e27a",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\gold_0.png": {
-    "time": 1687144714192.1968,
-    "uuid": "75b704a2-6258-4b5e-aabe-781a26a9db52",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver.fnt": {
-    "time": 1687144714193.1968,
-    "uuid": "7be5589b-4f91-4d78-8a58-ac9f9cd2a92d",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_0.png": {
-    "time": 1687144714194.197,
-    "uuid": "80a47d2e-ab57-417f-ba12-62dcb70bf636",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_alpha.fnt": {
-    "time": 1687144714195.198,
-    "uuid": "3dcd66d5-39f0-4535-8ea5-27de064b986d",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_alpha_0.png": {
-    "time": 1687144714196.1975,
-    "uuid": "3881b46f-7599-4b66-807d-a8757e1f8607",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\ALL_background.png": {
@@ -122,11 +87,6 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\integral_personal score color ball column.png": {
     "time": 1688542140000,
     "uuid": "7fb05528-0227-431e-a5d1-ea10928962ae",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\integral_ranking.png": {
-    "time": 1688542140000,
-    "uuid": "df70976e-b7f1-464b-b0e3-b57d664a5f22",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\LANDING_background.png": {
@@ -280,7 +240,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Plug\\DelayTime.ts": {
-    "time": 1689579924834.961,
+    "time": 1689911927746.5051,
     "uuid": "689e321f-7d7e-4a59-9f56-1f11310f8c98",
     "missing": false
   },
@@ -315,12 +275,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby": {
-    "time": 1688722614806.8145,
+    "time": 1689932835539.5828,
     "uuid": "604b97fb-867a-412b-9119-cfd50536ec92",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\PanelLoading.prefab": {
-    "time": 1687144713908.1323,
+    "time": 1689818035297.174,
     "uuid": "81e4d68d-9573-476b-81e6-649562ab7a28",
     "missing": false
   },
@@ -335,12 +295,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music": {
-    "time": 1687336131630.04,
+    "time": 1689908773061.4392,
     "uuid": "019da387-12c5-4bd8-9ce5-85eae7e87564",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite": {
-    "time": 1689235988796.3296,
+    "time": 1689908839046.8604,
     "uuid": "907dc629-2dea-48e2-8920-457392a38cc5",
     "missing": false
   },
@@ -350,12 +310,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Loading.scene": {
-    "time": 1688707043918.778,
+    "time": 1689933557134.777,
     "uuid": "602c3d25-484a-4071-ae9b-2b9ed340bc8b",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Lobby.scene": {
-    "time": 1689762367759.2869,
+    "time": 1690351501160.0166,
     "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
     "missing": false
   },
@@ -370,12 +330,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll": {
-    "time": 1688548639502.855,
+    "time": 1689909619882.2126,
     "uuid": "e3854938-ffa1-4992-acc8-e348ab56febc",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum": {
-    "time": 1689580723583.6606,
+    "time": 1689912038764.8066,
     "uuid": "e0e8222a-6ab8-4e0a-9447-46d61fb3d24b",
     "missing": false
   },
@@ -390,7 +350,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model": {
-    "time": 1689730371011.225,
+    "time": 1689910860245.1948,
     "uuid": "c0ba6b6a-45ea-4207-b86c-78c0f3297e17",
     "missing": false
   },
@@ -625,18 +585,13 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby\\PanelBall.prefab": {
-    "time": 1688716088654.8726,
+    "time": 1689824471143.175,
     "uuid": "b43f6ee2-d6a6-4382-a1e9-6eade9bb040b",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby\\PanelBottomNavigationBar.prefab": {
     "time": 1689241995494.4646,
     "uuid": "293dfeb6-31a3-43bb-96ac-9e09b34c0e39",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby\\PanelGameLoading.prefab": {
-    "time": 1687835813925.485,
-    "uuid": "4569bdcd-8257-4dfb-8c16-5e2eb0b3a5cc",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby\\PanelGameMessage.prefab": {
@@ -647,51 +602,6 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby\\PanelMask.prefab": {
     "time": 1689558998947.0789,
     "uuid": "1ca57db3-fff6-4ef5-ae74-3a4698996fdc",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\AwaitingStart.wav": {
-    "time": 1687144714199.1985,
-    "uuid": "4ccaad16-5f7a-43a0-bf54-c963cb6c1aba",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\BankerWin.wav": {
-    "time": 1687144714201.2002,
-    "uuid": "1eeee074-e8ab-4de5-98c5-2edcee6a962d",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\BnakerPairWin.wav": {
-    "time": 1687144714204.201,
-    "uuid": "3553b067-a0e2-4ba2-b0a2-94ba077e7596",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\GameOver.wav": {
-    "time": 1687144714205.2004,
-    "uuid": "0119306c-ae25-410d-939b-db5ee82fa84f",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\PlayerPairWin.wav": {
-    "time": 1687144714207.2012,
-    "uuid": "b7ca314e-6f9c-4a80-a95e-26df41d3e96d",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\PlayerWin.wav": {
-    "time": 1687144714208.2004,
-    "uuid": "3964b003-7a0f-4d0a-9971-b510e10d333b",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\StartBetting.wav": {
-    "time": 1687144714210.202,
-    "uuid": "d8e7fb78-be7f-430c-8b46-e2f0a987b276",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\StopBetting.wav": {
-    "time": 1687144714212.2017,
-    "uuid": "2d9ae73d-e256-4364-b539-72ea8800bace",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\Tie.wav": {
-    "time": 1687144714213.2024,
-    "uuid": "f9fc7e26-8cb5-4b67-8f8f-5f6811b4ec64",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\auto-atlas.pac": {
@@ -830,12 +740,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Asset\\SpriteAsset.ts": {
-    "time": 1689579952751.9348,
+    "time": 1689911927746.5051,
     "uuid": "40288a4a-5fc9-4ac8-91d0-d29e9265f5b1",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Asset\\SpriteAtlasAsset.ts": {
-    "time": 1689579958600.194,
+    "time": 1689911927746.5051,
     "uuid": "fab87c7f-2106-45bf-8adf-5374f0fd1e11",
     "missing": false
   },
@@ -879,11 +789,6 @@
     "uuid": "bd37574e-fed4-46ce-9efe-28c3a2ea4cfb",
     "missing": false
   },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\OldPj": {
-    "time": 1688548639513.856,
-    "uuid": "b64b49b4-9077-4ab7-9d73-dce30bfa5290",
-    "missing": false
-  },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\AssetType.ts": {
     "time": 1687144714058.167,
     "uuid": "e0d1fec0-653d-4174-877f-3ea56b14ea52",
@@ -910,7 +815,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\CommandType.ts": {
-    "time": 1687144714063.167,
+    "time": 1690350803470.7864,
     "uuid": "6735ef43-8ab5-47a9-bec0-42159736b6ea",
     "missing": false
   },
@@ -922,11 +827,6 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\EffectType.ts": {
     "time": 1687144714065.1677,
     "uuid": "69347e4d-716d-4718-98a8-1fdc30b2d6c0",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\EvnetType.ts": {
-    "time": 1689579883054.9463,
-    "uuid": "08e79719-3f79-4c78-91b6-3da7c981e97e",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\GameEvent.ts": {
@@ -1015,7 +915,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\WebSocketEvent.ts": {
-    "time": 1687144714099.1763,
+    "time": 1690349975241.7576,
     "uuid": "e3ef0b99-c451-47cb-ba30-0f4f30406cb1",
     "missing": false
   },
@@ -1045,7 +945,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Manager\\EventMng.ts": {
-    "time": 1689751862366.9646,
+    "time": 1689911927745.5054,
     "uuid": "1d41376c-2f3a-4dec-83d2-0c4bd8bbaf87",
     "missing": false
   },
@@ -1070,7 +970,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\BallData.ts": {
-    "time": 1689577321216.2263,
+    "time": 1689910858024.9185,
     "uuid": "b170261f-18c0-4c5a-9b77-687b4d2018e8",
     "missing": false
   },
@@ -1085,12 +985,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\ComponentBase.ts": {
-    "time": 1689579974326.7024,
+    "time": 1689911927746.5051,
     "uuid": "1687cd61-b96f-48fd-ae09-dbbfad3c510b",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\GameData.ts": {
-    "time": 1687330452333.3684,
+    "time": 1689833091523.504,
     "uuid": "75883825-f506-445f-b6f6-0e94c2d08fd5",
     "missing": false
   },
@@ -1104,23 +1004,18 @@
     "uuid": "920a21b6-5e62-445c-a304-8b82cf03e37d",
     "missing": false
   },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\LabelAutoFollow.ts": {
-    "time": 1689660613216.2368,
-    "uuid": "f4774f0f-19e8-48fd-80d5-3be2bd4a8c63",
-    "missing": false
-  },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\MessageItem.ts": {
     "time": 1689057157900.4202,
     "uuid": "49203000-7271-450d-a5e2-fbc6afdb3b0b",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\Player.ts": {
-    "time": 1689758897613.2866,
+    "time": 1690170207068.0186,
     "uuid": "c06b1ce1-9942-4bcc-94ad-976d02243e39",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PointItemData.ts": {
-    "time": 1689068601273.4148,
+    "time": 1690341378278.1758,
     "uuid": "f131d57a-314f-48b1-af87-1e0cac6d55c0",
     "missing": false
   },
@@ -1130,12 +1025,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PublicModel.ts": {
-    "time": 1689227070547.2417,
+    "time": 1690342379081.3733,
     "uuid": "e67ebe82-8c49-4ffb-b7df-3ca593669e05",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\RankItmeData.ts": {
-    "time": 1688720425753.1548,
+    "time": 1689910831782.335,
     "uuid": "afbdd561-2874-4619-88b9-8c244299609b",
     "missing": false
   },
@@ -1145,7 +1040,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\SocketModel.ts": {
-    "time": 1687144714132.183,
+    "time": 1689833219715.4812,
     "uuid": "d543d8b6-2d0c-402a-bcda-1b8934c0e8fd",
     "missing": false
   },
@@ -1170,7 +1065,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Socket\\GameWebSocket.ts": {
-    "time": 1689060744658.0713,
+    "time": 1690351358559.0625,
     "uuid": "15ca959a-c72f-453d-8fb1-71a3c53467c0",
     "missing": false
   },
@@ -1180,22 +1075,22 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\State\\LobbyState.ts": {
-    "time": 1689579979250.4812,
+    "time": 1689909358063.1858,
     "uuid": "ddf10844-fbe2-478e-b90d-6ee6fe098a11",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\State\\MessageState.ts": {
-    "time": 1689579985191.307,
+    "time": 1689911927746.5051,
     "uuid": "b743ab4e-0654-4291-aeca-9face21a2c00",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\State\\PlayState.ts": {
-    "time": 1689579996514.9297,
+    "time": 1689911927747.5054,
     "uuid": "f58f9d70-875c-4733-9dd2-ce918567419d",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\State\\ViewState.ts": {
-    "time": 1689580004453.2134,
+    "time": 1689911927745.5054,
     "uuid": "067dbdd1-1c58-4b07-b92d-0322e3da6f5e",
     "missing": false
   },
@@ -1240,17 +1135,17 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\View\\MainGame.ts": {
-    "time": 1688722670062.528,
+    "time": 1689910572619.9922,
     "uuid": "98592692-68de-4709-bad9-3c15f809c486",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\View\\MainLoading.ts": {
-    "time": 1687774327967.2312,
+    "time": 1689932533402.9153,
     "uuid": "4baf032d-11dc-4a05-888e-2979510bec06",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\View\\MainLobby.ts": {
-    "time": 1689580947083.9287,
+    "time": 1689911927747.5054,
     "uuid": "653bb74f-6774-4398-aa43-0b396ea91337",
     "missing": false
   },
@@ -1830,7 +1725,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby\\Item\\BallItem.prefab": {
-    "time": 1689234277006.3254,
+    "time": 1689825546978.6296,
     "uuid": "a58271df-f733-46f8-b74c-aee4c4c6c5bc",
     "missing": false
   },
@@ -1845,17 +1740,17 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby\\Item\\PointItem.prefab": {
-    "time": 1689146044878.748,
+    "time": 1690187372319.2087,
     "uuid": "0973a4c2-0e68-4da6-b572-73764a3a85b5",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby\\Item\\RankItem.prefab": {
-    "time": 1688720046552.9268,
+    "time": 1689910958886.1401,
     "uuid": "177345b5-6862-484a-8014-c96d561eef7e",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Api\\CASTAPI.ts": {
-    "time": 1689579963675.9204,
+    "time": 1689911927746.5051,
     "uuid": "50247afa-0851-4815-9f55-7db7a547f736",
     "missing": false
   },
@@ -1865,12 +1760,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Api\\ResponeCommand.ts": {
-    "time": 1687238551744.0833,
+    "time": 1689833454081.2507,
     "uuid": "0956a159-b3f1-4d9c-8f4a-7fb4db789acc",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Api\\SendCommand.ts": {
-    "time": 1687144713936.1394,
+    "time": 1690345853205.8062,
     "uuid": "8d88cca0-265b-4f29-be3a-28fcec44331f",
     "missing": false
   },
@@ -1895,12 +1790,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\GameControll\\GameControll.ts": {
-    "time": 1689579968842.2268,
+    "time": 1689911927747.5054,
     "uuid": "b4703ef7-4529-4d87-a1ad-16f2a3261b5a",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Loading\\PanelGameLoading.ts": {
-    "time": 1689578117672.2385,
+    "time": 1689929213707.0833,
     "uuid": "34f876e8-a4d2-423b-8585-d155ec390ebf",
     "missing": false
   },
@@ -1910,12 +1805,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\PageControll.ts": {
-    "time": 1689738427603.354,
+    "time": 1689911927747.5054,
     "uuid": "28a3088d-c1fb-4755-8eba-e7282848d92b",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\PanelBottomNavigationBar.ts": {
-    "time": 1689738450462.3757,
+    "time": 1689911927747.5054,
     "uuid": "ce6eeeec-c458-44b6-8308-5d86e25444c0",
     "missing": false
   },
@@ -1952,26 +1847,6 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\NoClearNode\\PanelVersion.ts": {
     "time": 1687144714052.1653,
     "uuid": "0d6ac28f-3774-4994-8c4a-86a8f2a40bed",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\OldPj\\暫時不用_PanelExchange.ts": {
-    "time": 1687921646877.0908,
-    "uuid": "178062e7-40bb-450d-9298-c700313132c0",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\OldPj\\暫時不用_PanelFunctionMenu.ts": {
-    "time": 1688022667914.7966,
-    "uuid": "c3d66836-f1e5-4802-8f0c-20673e0deb4e",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\OldPj\\暫時不用_PanelGameLoading.ts": {
-    "time": 1687921821590.4553,
-    "uuid": "312ba32d-df80-46d1-9cd8-da049cf453d7",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\OldPj\\暫時不用_PanelSoundSet.ts": {
-    "time": 1687921091291.7097,
-    "uuid": "059fe02d-8467-4027-a9bc-0f1501d7a3ba",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Manager\\NodePoolMng\\CCNodePool.ts": {
@@ -2025,12 +1900,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Api\\GPGAPI\\RequestGPG.ts": {
-    "time": 1689762289742.9817,
+    "time": 1690336423167.5432,
     "uuid": "a8530c9c-9fdc-465d-8309-ca23ec463676",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Api\\GPGAPI\\ResponseGPG.ts": {
-    "time": 1689756647233.9956,
+    "time": 1690336292146.9329,
     "uuid": "9d803bbf-a89c-4062-8498-0dbf99eb1059",
     "missing": false
   },
@@ -2075,7 +1950,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ChooeseBall\\PanelBall.ts": {
-    "time": 1689154132388.2705,
+    "time": 1690349705826.642,
     "uuid": "d2f08cfc-f861-4fd1-8212-bea888090d2b",
     "missing": false
   },
@@ -2085,27 +1960,27 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ClientInfo\\PanelClientInfo.ts": {
-    "time": 1689761595256.9653,
+    "time": 1690336724329.214,
     "uuid": "e72b2a05-d840-45f6-a09f-c715d142e9b8",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Home\\PanelHome.ts": {
-    "time": 1689738416869.2668,
+    "time": 1690341877015.2095,
     "uuid": "b8492fab-e86b-4b04-87cf-33d6acb68979",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Point\\PanelPageButton.ts": {
-    "time": 1689067373867.8298,
+    "time": 1689903488108.2725,
     "uuid": "cbfe3a2c-c34c-4dce-b5a8-cd6436352f93",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Point\\PanelPoint.ts": {
-    "time": 1689067541262.04,
+    "time": 1690187379121.479,
     "uuid": "303d6930-d3b3-4ed5-a888-f81a6a4a03cc",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Point\\PanelTopRank.ts": {
-    "time": 1689067101946.833,
+    "time": 1689910971226.898,
     "uuid": "73704463-4c7c-4ce8-b439-666025f44ee6",
     "missing": false
   },
@@ -2128,9 +2003,6 @@
     "time": 1689053374487.042,
     "uuid": "5101e061-b8b2-4daf-a3f0-fcd5e6ef3f8b",
     "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font.meta": {
-    "time": 1687144714190.196
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image.meta": {
     "time": 1687923565756.3286
@@ -2159,24 +2031,6 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\舊.meta": {
     "time": 1687834624493.1826
   },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\gold.fnt.meta": {
-    "time": 1687144714191.1963
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver.fnt.meta": {
-    "time": 1687144714194.197
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_alpha.fnt.meta": {
-    "time": 1687144714196.1975
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_0.png.meta": {
-    "time": 1687144714195.198
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\gold_0.png.meta": {
-    "time": 1687144714192.1968
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\font\\silver_alpha_0.png.meta": {
-    "time": 1687144714197.1978
-  },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\ALL_Marquee.png.meta": {
     "time": 1688547281654.5442
   },
@@ -2200,9 +2054,6 @@
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\integral_personal score color ball column.png.meta": {
     "time": 1688553545905.3757
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\integral_ranking.png.meta": {
-    "time": 1688547282063.0437
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\LANDING_background.png.meta": {
     "time": 1688547282098.4707
@@ -2504,9 +2355,6 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Main\\menu_bg.png.meta": {
     "time": 1688622722409.5906
   },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby\\PanelGameLoading.prefab.meta": {
-    "time": 1687834350262.7039
-  },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Main\\img_gift.jpg.meta": {
     "time": 1688622722411.5925
   },
@@ -2519,35 +2367,8 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby\\PanelMask.prefab.meta": {
     "time": 1687938263681.1074
   },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\GameOver.wav.meta": {
-    "time": 1687144714206.2004
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\AwaitingStart.wav.meta": {
-    "time": 1687144714200.1987
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\BankerWin.wav.meta": {
-    "time": 1687144714202.2007
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\BnakerPairWin.wav.meta": {
-    "time": 1687144714204.201
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\PlayerPairWin.wav.meta": {
-    "time": 1687144714207.2012
-  },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\auto-atlas.pac.meta": {
     "time": 1689045153143.0198
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\PlayerWin.wav.meta": {
-    "time": 1687144714209.2014
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\StartBetting.wav.meta": {
-    "time": 1687144714211.2014
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\StopBetting.wav.meta": {
-    "time": 1687144714212.2017
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Music\\Tie.wav.meta": {
-    "time": 1687144714214.2026
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\icon_bet_act.png.meta": {
     "time": 1688622722319.6736
@@ -2651,9 +2472,6 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\NoClearNode.meta": {
     "time": 1687144714048.1638
   },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\OldPj.meta": {
-    "time": 1687920653464.9082
-  },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\AssetType.ts.meta": {
     "time": 1687144714059.1663
   },
@@ -2677,9 +2495,6 @@
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\EffectType.ts.meta": {
     "time": 1687144714066.1687
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\EvnetType.ts.meta": {
-    "time": 1689580724884.0518
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\GameEvent.ts.meta": {
     "time": 1687144714067.1682
@@ -2791,9 +2606,6 @@
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\JudgePlatform.ts.meta": {
     "time": 1684221489033.6577
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\LabelAutoFollow.ts.meta": {
-    "time": 1688021896485.8096
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\MessageItem.ts.meta": {
     "time": 1687325224769.2998
@@ -3302,18 +3114,6 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\NoClearNode\\PanelVersion.ts.meta": {
     "time": 1687144714053.1655
   },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\OldPj\\暫時不用_PanelExchange.ts.meta": {
-    "time": 1687144714054.1655
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\OldPj\\暫時不用_PanelFunctionMenu.ts.meta": {
-    "time": 1687144714055.1665
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\OldPj\\暫時不用_PanelGameLoading.ts.meta": {
-    "time": 1687144714056.1667
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\OldPj\\暫時不用_PanelSoundSet.ts.meta": {
-    "time": 1687144714057.1665
-  },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Manager\\NodePoolMng\\CCNodePool.ts.meta": {
     "time": 1687144714111.1782
   },
@@ -3411,7 +3211,7 @@
     "time": 1689585009834.9856
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ClientInfo\\PageClientEdit.ts": {
-    "time": 1689762189852.9531,
+    "time": 1690163986333.8308,
     "uuid": "5d3e955f-5565-4e30-a755-5876a833de2f",
     "missing": false
   },
@@ -3430,5 +3230,37 @@
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\CreateFileSprite.ts.meta": {
     "time": 1689730371170.2625
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\auto-atlas.pac.meta": {
+    "time": 1689907369502.1726
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\auto-atlas.pac": {
+    "time": 1689907369489.1697,
+    "uuid": "e0950175-c768-4eea-92fa-5313587b481d",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\integral_ranking.png.meta": {
+    "time": 1689908994099.3193
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\integral_ranking.png": {
+    "time": 1688542140000,
+    "uuid": "df70976e-b7f1-464b-b0e3-b57d664a5f22",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\AutoFollow.ts.meta": {
+    "time": 1689910860263.2002
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\AutoFollow.ts": {
+    "time": 1689910859361.0876,
+    "uuid": "5a8e8b02-6c93-48ee-92a9-7f7e21c705b6",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\NotificationType.ts.meta": {
+    "time": 1689912038775.8098
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\NotificationType.ts": {
+    "time": 1689911925921,
+    "uuid": "25018252-7058-4c2d-9c14-a30f39c9babd",
+    "missing": false
   }
 }

@@ -1,12 +1,12 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, resources, SpriteAtlas, SpriteFrame, EvnetType, GameEvent, EventMng, SpriteAsset, _crd;
+  var _reporterNs, _cclegacy, resources, SpriteAtlas, SpriteFrame, NotificationType, GameEvent, EventMng, SpriteAsset, _crd;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-  function _reportPossibleCrUseOfEvnetType(extras) {
-    _reporterNs.report("EvnetType", "../Enum/EvnetType", _context.meta, extras);
+  function _reportPossibleCrUseOfNotificationType(extras) {
+    _reporterNs.report("NotificationType", "../Enum/NotificationType", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfGameEvent(extras) {
@@ -30,7 +30,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       SpriteAtlas = _cc.SpriteAtlas;
       SpriteFrame = _cc.SpriteFrame;
     }, function (_unresolved_2) {
-      EvnetType = _unresolved_2.EvnetType;
+      NotificationType = _unresolved_2.NotificationType;
     }, function (_unresolved_3) {
       GameEvent = _unresolved_3.GameEvent;
     }, function (_unresolved_4) {
@@ -87,9 +87,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             console.log(this.data);
             (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
               error: Error()
-            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
               error: Error()
-            }), EvnetType) : EvnetType).Pulic).emit((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
+            }), NotificationType) : NotificationType).Pulic).emit((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
               error: Error()
             }), GameEvent) : GameEvent).SetLogo, this.data.get("logo"));
           });

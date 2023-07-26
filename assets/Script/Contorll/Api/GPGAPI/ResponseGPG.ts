@@ -54,7 +54,7 @@ export namespace ResponseGPG {
     }
     export namespace Certification {
         export class DataClass {
-            Data = null;
+            data = null;
             access_token = null;
             refresh_token = null;
             Roles = null;
@@ -67,6 +67,44 @@ export namespace ResponseGPG {
         }
 
     }
-
-
+    export namespace DrawHistory {
+        export class DataClass {
+            data: History[] = [];
+            Status = new State()
+        }
+        class State {
+            Code: string
+            Message: string
+        }
+        export class History {
+            //  ['9', '18', '39', '4', '33', '11', '45']
+            drawCode: string[];
+            //  2023204
+            issueID: number;
+            //  "2023-07-23T20:49:45+08:00"
+            openDate: string;
+            //  "2023-07-23T20:49:45+08:00"
+            realOpenDate: string;
+        }
+    }
+    export namespace DrawUpcoming {
+        export class DataClass {
+            data: History[] = [];
+            Status = new State()
+        }
+        class State {
+            Code: string
+            Message: string
+        }
+        export class History {
+            //  ['9', '18', '39', '4', '33', '11', '45']
+            drawCode: string[];
+            //  2023204
+            issueID: number;
+            //  "2023-07-23T20:49:45+08:00"
+            openDate: string;
+            //  "2023-07-23T20:49:45+08:00"
+            realOpenDate: string;
+        }
+    }
 }

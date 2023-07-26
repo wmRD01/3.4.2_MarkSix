@@ -20,7 +20,7 @@ export default class MainLoading extends BaseSingletonComponent<MainLoading>() {
         MusicMng.init()
     }
     start() {
-        PanelLoading.instance.openLoading()
+        // PanelLoading.instance.openLoading()
     }
 
 }

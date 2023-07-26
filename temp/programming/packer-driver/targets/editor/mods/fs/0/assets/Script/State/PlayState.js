@@ -1,33 +1,13 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, State, EvnetType, GameStateEvent, EventMng, OwnerBet, ClearBet, BackBet, ReferLastBet, SquintProcess, SquintEnd, UpdateCoin, _crd;
+  var _reporterNs, _cclegacy, State, ChooeseBall, _crd;
 
   function _reportPossibleCrUseOfState(extras) {
     _reporterNs.report("State", "../../Patten/StatePatten", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfEvnetType(extras) {
-    _reporterNs.report("EvnetType", "../Enum/EvnetType", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfGameStateEvent(extras) {
-    _reporterNs.report("GameStateEvent", "../Enum/GameStateEvent", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfEventMng(extras) {
-    _reporterNs.report("EventMng", "../Manager/EventMng", _context.meta, extras);
-  }
-
-  _export({
-    OwnerBet: void 0,
-    ClearBet: void 0,
-    BackBet: void 0,
-    ReferLastBet: void 0,
-    SquintProcess: void 0,
-    SquintEnd: void 0,
-    UpdateCoin: void 0
-  });
+  _export("ChooeseBall", void 0);
 
   return {
     setters: [function (_unresolved_) {
@@ -36,12 +16,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       _cclegacy = _cc.cclegacy;
     }, function (_unresolved_2) {
       State = _unresolved_2.State;
-    }, function (_unresolved_3) {
-      EvnetType = _unresolved_3.EvnetType;
-    }, function (_unresolved_4) {
-      GameStateEvent = _unresolved_4.GameStateEvent;
-    }, function (_unresolved_5) {
-      EventMng = _unresolved_5.default;
     }],
     execute: function () {
       _crd = true;
@@ -55,110 +29,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       // }
 
       /**自身下注 */
-      _export("OwnerBet", OwnerBet = class OwnerBet extends (_crd && State === void 0 ? (_reportPossibleCrUseOfState({
+      _export("ChooeseBall", ChooeseBall = class ChooeseBall extends (_crd && State === void 0 ? (_reportPossibleCrUseOfState({
         error: Error()
       }), State) : State) {
         changeState(data) {
-          if (data.code == 0) {
-            (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-              error: Error()
-            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
-              error: Error()
-            }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
-              error: Error()
-            }), GameStateEvent) : GameStateEvent).UpdateCoin, data.credit);
-            (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-              error: Error()
-            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
-              error: Error()
-            }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
-              error: Error()
-            }), GameStateEvent) : GameStateEvent).ClientBet, data);
-          }
-        }
-
-      });
-      /**下注清除 */
-
-
-      _export("ClearBet", ClearBet = class ClearBet extends (_crd && State === void 0 ? (_reportPossibleCrUseOfState({
-        error: Error()
-      }), State) : State) {
-        changeState(data) {
-          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-            error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
-            error: Error()
-          }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
-            error: Error()
-          }), GameStateEvent) : GameStateEvent).BetClear);
-          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-            error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
-            error: Error()
-          }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
-            error: Error()
-          }), GameStateEvent) : GameStateEvent).UpdateCoin, data.credit);
-        }
-
-      });
-      /**還原下注 */
-
-
-      _export("BackBet", BackBet = class BackBet extends (_crd && State === void 0 ? (_reportPossibleCrUseOfState({
-        error: Error()
-      }), State) : State) {
-        changeState(data) {
-          if (data.kind == -1) return;
-          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-            error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
-            error: Error()
-          }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
-            error: Error()
-          }), GameStateEvent) : GameStateEvent).BackBet, data);
-        }
-
-      });
-      /**參照上一局下注 */
-
-
-      _export("ReferLastBet", ReferLastBet = class ReferLastBet extends (_crd && State === void 0 ? (_reportPossibleCrUseOfState({
-        error: Error()
-      }), State) : State) {
-        changeState(data) {}
-
-      });
-      /**瞇牌過程 */
-
-
-      _export("SquintProcess", SquintProcess = class SquintProcess extends (_crd && State === void 0 ? (_reportPossibleCrUseOfState({
-        error: Error()
-      }), State) : State) {
-        changeState(data) {}
-
-      });
-      /**瞇牌結束 */
-
-
-      _export("SquintEnd", SquintEnd = class SquintEnd extends (_crd && State === void 0 ? (_reportPossibleCrUseOfState({
-        error: Error()
-      }), State) : State) {
-        changeState(data) {}
-
-      });
-
-      _export("UpdateCoin", UpdateCoin = class UpdateCoin extends (_crd && State === void 0 ? (_reportPossibleCrUseOfState({
-        error: Error()
-      }), State) : State) {
-        changeState(data) {
-          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-            error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
-            error: Error()
-          }), EvnetType) : EvnetType).Pulic).emit((_crd && GameStateEvent === void 0 ? (_reportPossibleCrUseOfGameStateEvent({
-            error: Error()
-          }), GameStateEvent) : GameStateEvent).UpdateCoin, data.money);
+          console.log("BET", data);
         }
 
       });

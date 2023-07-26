@@ -1,7 +1,7 @@
 import { find } from "cc";
 import { State } from "../../Patten/StatePatten";
 import PanelSystemMessage from "../Contorll/NoClearNode/PanelSystemMessage";
-import { EvnetType } from "../Enum/EvnetType";
+import { NotificationType } from "../Enum/NotificationType";
 import { GameStateEvent } from "../Enum/GameStateEvent";
 import EventMng from "../Manager/EventMng";
 import ButtonFunctionApi from "../Model/ButtonFunctionApi";
@@ -14,7 +14,7 @@ export class ShowConfirmMessage extends State {
         // PanelSystemMessage.instance.showSingleConfirm();
         // 在這轉彎成Gamemessage 就得不用了
         // }
-        EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameStateEvent.GameMessage, caption)
+        EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(GameStateEvent.GameMessage, caption)
     }
 
 }

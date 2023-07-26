@@ -1,12 +1,12 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, UIOpacity, Vec3, EvnetType, GameEvent, EventMng, PublicData, PublicModel, _dec, _class, _temp, _crd, ccclass, property, BaseComponent;
+  var _reporterNs, _cclegacy, _decorator, Component, UIOpacity, Vec3, NotificationType, GameEvent, EventMng, PublicData, PublicModel, _dec, _class, _temp, _crd, ccclass, property, BaseComponent;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-  function _reportPossibleCrUseOfEvnetType(extras) {
-    _reporterNs.report("EvnetType", "../Enum/EvnetType", _context.meta, extras);
+  function _reportPossibleCrUseOfNotificationType(extras) {
+    _reporterNs.report("NotificationType", "../Enum/NotificationType", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfGameEvent(extras) {
@@ -35,7 +35,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       UIOpacity = _cc.UIOpacity;
       Vec3 = _cc.Vec3;
     }, function (_unresolved_2) {
-      EvnetType = _unresolved_2.EvnetType;
+      NotificationType = _unresolved_2.NotificationType;
     }, function (_unresolved_3) {
       GameEvent = _unresolved_3.GameEvent;
     }, function (_unresolved_4) {
@@ -58,6 +58,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       _export("default", BaseComponent = (_dec = ccclass('BaseComponent'), _dec(_class = (_temp = class BaseComponent extends Component {
         constructor() {
           super();
+
+          _defineProperty(this, "inter", void 0);
+
+          _defineProperty(this, "delayTime", void 0);
 
           _defineProperty(this, "zIndex", void 0);
         }
@@ -100,9 +104,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         setEvent(name, callback) {
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Pulic).on(name, callback, this);
+          }), NotificationType) : NotificationType).Pulic).on(name, callback, this);
         }
 
         eventEmit(name) {
@@ -112,17 +116,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Pulic).emit(name, ...any);
+          }), NotificationType) : NotificationType).Pulic).emit(name, ...any);
         }
 
         deletEvent(name, callback) {
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && EvnetType === void 0 ? (_reportPossibleCrUseOfEvnetType({
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), EvnetType) : EvnetType).Pulic).off(name, callback, this);
+          }), NotificationType) : NotificationType).Pulic).off(name, callback, this);
         }
 
         show() {
@@ -134,6 +138,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         reProcessing() {}
+
+        startDelay() {
+          this.delayTime = 0;
+          this.inter = setInterval(() => {
+            this.delayTime += 0.016;
+          }, 0.016);
+        }
+
+        stopDelay() {
+          clearInterval(this.inter);
+          return this.delayTime;
+        }
 
       }, _temp)) || _class));
 

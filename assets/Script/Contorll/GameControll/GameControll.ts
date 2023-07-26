@@ -3,9 +3,7 @@ import { GameEvent } from "../../Enum/GameEvent";
 import EventMng from "../../Manager/EventMng";
 import PublicData from "../../Model/PublicData";
 import { GameState, LobbyState, MessageState, PlayerState, ViewState } from "../../../Patten/StatePatten";
-import { AccountLogIn, ChangeNickname, InGame, InLobby, InRoomLevel } from "../../State/LobbyState";
-import { BackBet, ClearBet, OwnerBet, ReferLastBet, SquintEnd, SquintProcess, UpdateCoin } from "../../State/PlayState";
-import { GameCloseView, GameOpenView, LobbyCloseView, LobbyOpenView, PlayerInRoom, PlayerExitRoom, RefreshBankerBetList, RefreshPlayerBetList, GetGameRoomData } from "../../State/ViewState";
+import { AccountLogIn } from "../../State/LobbyState";
 import { BackHomeMessage, ShowConfirmMessage } from "../../State/MessageState";
 import { MessageCommend } from "../../Enum/MessageCommend";
 import { LangType } from "../../Enum/LangType";
@@ -21,14 +19,15 @@ import GameSenceText from "../../Model/GameSenceText";
 import GameData from "../../Model/GameData";
 import CheckLoading from "../../Model/CheckLoading";
 import { CheckLoadingType } from "../../Enum/CheckLoadingType";
-import { EvnetType } from "../../Enum/EvnetType";
+import { NotificationType } from "../../Enum/NotificationType";
+import { ChooeseBall } from "../../State/PlayState";
 
 export default class GameControll extends BaseSingleton<GameControll>() {
     //利用推波方式去call Function 
     setControllEvent() {
         game.on(Game.EVENT_HIDE, this.resetView.bind(this))
         game.on(Game.EVENT_SHOW, this.resetWait.bind(this))
-        EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).on(GameEvent.ControllSandCommend, this.serverRespond, this)
+        EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).on(GameEvent.ControllSandCommend, this.serverRespond, this)
     }
     serverRespond(cmd: string, data: any) {
         // console.log(cmd, data);
@@ -41,151 +40,34 @@ export default class GameControll extends BaseSingleton<GameControll>() {
         // console.log(cmd);
         // console.log(MainModel.isResetView);
         switch (cmd) {
-            case CommandType.gori:
-            case CommandType.grre:
-            case CommandType.grrl:
-            case CommandType.gbop:
-            case CommandType.gbob:
-                this.viewState(cmd, data)
-                break
             case CommandType.ln:
-            case CommandType.lbll:
-            case CommandType.lbrl:
-            case CommandType.lbsr:
-            case CommandType.goin:
-            case CommandType.ucnn:
-            case CommandType.vlcr:
                 this.lobbyState(cmd, data)
                 break;
-            case CommandType.gonm:
-            case CommandType.gbet:
-            case CommandType.gbbk:
-            case CommandType.gbcl:
-            case CommandType.gbrt:
-            case CommandType.gpp:
-            case CommandType.gpe:
-                if (PublicData.getInstance.isResetView) return
-                this.playerState(cmd, data)
+            case CommandType.bet:
+                this.playState(cmd, data)
                 break;
-            case ServerGameSenceType.ggs:
-            case ServerGameSenceType.gbal:
-            case ServerGameSenceType.gs1:
-            case ServerGameSenceType.gs8:
-            case ServerGameSenceType.gs9:
-            case ServerGameSenceType.gs10:
-            case ServerGameSenceType.gs11:
-            case ServerGameSenceType.gs12:
-            case ServerGameSenceType.gs13:
-            case ServerGameSenceType.gs14:
-            case ServerGameSenceType.gs15:
-            case ServerGameSenceType.gs16:
-            case ServerGameSenceType.gs17:
-            case ServerGameSenceType.gs19:
-            case ServerGameSenceType.gs18:
-            case ServerGameSenceType.gs20:
-            case ServerGameSenceType.gs21:
-            case ServerGameSenceType.gs22:
-            case ServerGameSenceType.gs23:
-            case ServerGameSenceType.gs24:
-            case ServerGameSenceType.gs25:
-            case ServerGameSenceType.gs30:
-                // console.log("???uisReaaset?");
-                // console.log(PublicData.getInstance.isResetView);
-                if (PublicData.getInstance.isResetView) return
-                if (!PublicData.getInstance.isResetView && PublicData.getInstance.isResetProcessing) {
-                    PanelLoading.instance.closeLoading()
-                    PublicData.getInstance.isResetProcessing = false
-                }
 
-                this.gameState(cmd, data)
-                break;
-        }
-    }
-    viewState(cmd: string, data: any) {
-        switch (cmd) {
-            case CommandType.gori:
-                ViewState.getInstance.transitionTo(GetGameRoomData, data)
-                break;
-            case CommandType.grre:
-                ViewState.getInstance.transitionTo(PlayerInRoom, data)
-                break;
-            case CommandType.grrl:
-                ViewState.getInstance.transitionTo(PlayerExitRoom, data)
-                break;
-            case CommandType.gbop:
-                ViewState.getInstance.transitionTo(RefreshPlayerBetList, data)
-                break;
-            case CommandType.gbob:
-                ViewState.getInstance.transitionTo(RefreshBankerBetList, data)
-                break;
 
         }
     }
+
     lobbyState(cmd: string, data: any) {
         switch (cmd) {
             case CommandType.ln:
                 LobbyState.getInstance.transitionTo(AccountLogIn, data)
                 break;
-            case CommandType.lbsr:
-            case CommandType.goin:
-                LobbyState.getInstance.transitionTo(InGame, data)
-                break;
-            case CommandType.lbll:
-                LobbyState.getInstance.transitionTo(InLobby, data)
-                break;
-            case CommandType.lbrl:
-                LobbyState.getInstance.transitionTo(InRoomLevel, data)
-                break;
-            case CommandType.ucnn:
-                LobbyState.getInstance.transitionTo(ChangeNickname, data)
-                break;
-            case CommandType.vlcr:
-                GameData.getInstance.roomNo = data.roomNo
-                LobbyState.getInstance.transitionTo(InLobby, data)
-                break;
+
         }
     }
-    playerState(cmd: string, data: any) {
-        // console.log(cmd);
 
-        switch (cmd) {
-            case CommandType.gonm:
-                PlayerState.getInstance.transitionTo(UpdateCoin, data)
-                break;
-            case CommandType.gbet:
-                PlayerState.getInstance.transitionTo(OwnerBet, data)
-                break;
-            case CommandType.gbbk:
-                PlayerState.getInstance.transitionTo(BackBet, data)
-                break;
-            case CommandType.gbcl:
-                PlayerState.getInstance.transitionTo(ClearBet, data)
-                break;
-            case CommandType.gbrt:
-                PlayerState.getInstance.transitionTo(ReferLastBet, data)
-                break;
-            case CommandType.gpp:
-                PlayerState.getInstance.transitionTo(SquintProcess, data)
-                break;
-            case CommandType.gpe:
-                PlayerState.getInstance.transitionTo(SquintEnd, data)
-                break;
-        }
-    }
-    gameState(cmd: string, data: any) {
-        //紀錄場景
-        RoomData.getInstance.nowStage = cmd
-        let senceText = new GameSenceText().change(cmd)
-        // console.log(senceText);
-        if (senceText != undefined)
-            EventMng.getInstance.mapEvnet.get(EvnetType.Pulic).emit(GameStateEvent.UpdataSence, senceText)
-        switch (cmd) {
 
+    playState(cmd: string, data: any) {
+        switch (cmd) {
+            case CommandType.bet:
+                PlayerState.getInstance.transitionTo(ChooeseBall, data)
+                break;
 
         }
-        // if (!GameState.isStateing)
-        // else
-        //     GameState.requestStay()
     }
 
 
@@ -193,18 +75,18 @@ export default class GameControll extends BaseSingleton<GameControll>() {
         let message: string;
         message = this.serverErrorCode(data.code)
         switch (cmd) {
-            case CommandType.ssdis://系統踢出
-                CheckLoading.getInstance.resetState(CheckLoadingType.isWebSocketOpen)
-                break;
-                // case CommandType.ssntf://系統通知
-                //     // Panel_Message.showConfirm(this, 0, message)
-                //     break;
-                // case CommandType.sschk://逾時檢查
-                //     break;
-                // default:
-                //     message = this.serverErrorCode(data.code)
+            // case CommandType.ssdis://系統踢出
+            //     CheckLoading.getInstance.resetState(CheckLoadingType.isWebSocketOpen)
+            //     break;
+            // case CommandType.ssntf://系統通知
+            //     // Panel_Message.showConfirm(this, 0, message)
+            //     break;
+            // case CommandType.sschk://逾時檢查
+            //     break;
+            // default:
+            //     message = this.serverErrorCode(data.code)
 
-                break;
+            // break;
         }
         this.messaggeState(cmd, message);
     }
@@ -215,11 +97,7 @@ export default class GameControll extends BaseSingleton<GameControll>() {
             case MessageCommend.BackHome:
                 MessageState.getInstance.transitionTo_Old(new BackHomeMessage(), transformStr).requestChange();
                 break;
-            case CommandType.excr:
-            case CommandType.excc:
-                MessageState.getInstance.transitionTo_Old(new ShowConfirmMessage(), transformStr).requestChange();
-                PanelLoading.instance.closeLoading()
-                break
+
             default:
                 MessageState.getInstance.transitionTo_Old(new ShowConfirmMessage(), transformStr).requestChange();
                 break;
@@ -235,24 +113,24 @@ export default class GameControll extends BaseSingleton<GameControll>() {
     }
     resetView() {
         switch (PublicData.getInstance.currentScene) {
-            case GameSceneName.Lobby:
-                ViewState.getInstance.transitionTo(LobbyCloseView)
-                break
-            case GameSceneName.GameRoom:
-                ViewState.getInstance.transitionTo(GameCloseView)
-                break
+            // case GameSceneName.Lobby:
+            //     ViewState.getInstance.transitionTo(LobbyCloseView)
+            //     break
+            // case GameSceneName.GameRoom:
+            //     ViewState.getInstance.transitionTo(GameCloseView)
+            //     break
         }
 
     }
 
     resetWait() {
         switch (PublicData.getInstance.currentScene) {
-            case GameSceneName.Lobby:
-                ViewState.getInstance.transitionTo(LobbyOpenView)
-                break
-            case GameSceneName.GameRoom:
-                ViewState.getInstance.transitionTo(GameOpenView)
-                break
+            // case GameSceneName.Lobby:
+            //     ViewState.getInstance.transitionTo(LobbyOpenView)
+            //     break
+            // case GameSceneName.GameRoom:
+            //     ViewState.getInstance.transitionTo(GameOpenView)
+            //     break
         }
     }
 

@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Layout, Node, Prefab, _decorator, DelayTime, AssetType, CommandType, LobbyStateEvent, WebSocketEvent, AssetMng, ButtonMng, BallData, BaseComponent, bet, _dec, _dec2, _dec3, _dec4, _dec5, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, PanelBall;
+  var _reporterNs, _cclegacy, instantiate, Label, Layout, Node, Prefab, _decorator, DelayTime, AssetType, CheckLoadingType, CommandType, LobbyStateEvent, WebSocketEvent, AssetMng, ButtonMng, BallData, CheckLoading, BaseComponent, bet, PanelLoading, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, PanelBall;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -17,6 +17,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfAssetType(extras) {
     _reporterNs.report("AssetType", "../../../../Enum/AssetType", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfCheckLoadingType(extras) {
+    _reporterNs.report("CheckLoadingType", "../../../../Enum/CheckLoadingType", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfCommandType(extras) {
@@ -43,12 +47,24 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("BallData", "../../../../Model/BallData", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfCheckLoading(extras) {
+    _reporterNs.report("CheckLoading", "../../../../Model/CheckLoading", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfBaseComponent(extras) {
     _reporterNs.report("BaseComponent", "../../../../Model/ComponentBase", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfln(extras) {
+    _reporterNs.report("ln", "../../../Api/ResponeCommand", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfbet(extras) {
     _reporterNs.report("bet", "../../../Api/SendCommand", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPanelLoading(extras) {
+    _reporterNs.report("PanelLoading", "../../../NoClearNode/PanelLoading", _context.meta, extras);
   }
 
   return {
@@ -57,6 +73,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_cc) {
       _cclegacy = _cc.cclegacy;
       instantiate = _cc.instantiate;
+      Label = _cc.Label;
       Layout = _cc.Layout;
       Node = _cc.Node;
       Prefab = _cc.Prefab;
@@ -66,21 +83,27 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_3) {
       AssetType = _unresolved_3.AssetType;
     }, function (_unresolved_4) {
-      CommandType = _unresolved_4.CommandType;
+      CheckLoadingType = _unresolved_4.CheckLoadingType;
     }, function (_unresolved_5) {
-      LobbyStateEvent = _unresolved_5.LobbyStateEvent;
+      CommandType = _unresolved_5.CommandType;
     }, function (_unresolved_6) {
-      WebSocketEvent = _unresolved_6.WebSocketEvent;
+      LobbyStateEvent = _unresolved_6.LobbyStateEvent;
     }, function (_unresolved_7) {
-      AssetMng = _unresolved_7.default;
+      WebSocketEvent = _unresolved_7.WebSocketEvent;
     }, function (_unresolved_8) {
-      ButtonMng = _unresolved_8.default;
+      AssetMng = _unresolved_8.default;
     }, function (_unresolved_9) {
-      BallData = _unresolved_9.default;
+      ButtonMng = _unresolved_9.default;
     }, function (_unresolved_10) {
-      BaseComponent = _unresolved_10.default;
+      BallData = _unresolved_10.default;
     }, function (_unresolved_11) {
-      bet = _unresolved_11.bet;
+      CheckLoading = _unresolved_11.default;
+    }, function (_unresolved_12) {
+      BaseComponent = _unresolved_12.default;
+    }, function (_unresolved_13) {
+      bet = _unresolved_13.bet;
+    }, function (_unresolved_14) {
+      PanelLoading = _unresolved_14.default;
     }],
     execute: function () {
       _crd = true;
@@ -92,7 +115,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", PanelBall = (_dec = ccclass('PanelBall'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Prefab), _dec5 = property(Prefab), _dec(_class2 = (_class3 = (_temp = class PanelBall extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelBall = (_dec = ccclass('PanelBall'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Prefab), _dec5 = property(Prefab), _dec6 = property(Label), _dec(_class2 = (_class3 = (_temp = class PanelBall extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {
@@ -105,6 +128,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "layoutItem", _descriptor3, this);
 
           _initializerDefineProperty(this, "ballItem", _descriptor4, this);
+
+          _initializerDefineProperty(this, "labelIssueID", _descriptor5, this);
 
           _defineProperty(this, "Halign", 10);
 
@@ -179,7 +204,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.mapBallNumber.forEach(element => {
             element.getOrg();
           });
+          this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).UpDateBall, this.reProcessing);
         }
+
+        onEnable() {}
 
         onRandomNumber(e, customEventData) {
           this.onResetChooese(null);
@@ -299,7 +329,42 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.isFullBall = !bool;
         }
 
-        reProcessing() {}
+        watiWebSocket() {
+          return new Promise((resolve, reject) => {
+            if ((_crd && CheckLoading === void 0 ? (_reportPossibleCrUseOfCheckLoading({
+              error: Error()
+            }), CheckLoading) : CheckLoading).getInstance.checkState((_crd && CheckLoadingType === void 0 ? (_reportPossibleCrUseOfCheckLoadingType({
+              error: Error()
+            }), CheckLoadingType) : CheckLoadingType).isWebSocketOpen)) {
+              resolve();
+              return;
+            }
+
+            let inter = setInterval(() => {
+              if ((_crd && CheckLoading === void 0 ? (_reportPossibleCrUseOfCheckLoading({
+                error: Error()
+              }), CheckLoading) : CheckLoading).getInstance.checkState((_crd && CheckLoadingType === void 0 ? (_reportPossibleCrUseOfCheckLoadingType({
+                error: Error()
+              }), CheckLoadingType) : CheckLoadingType).isWebSocketOpen)) {
+                clearInterval(inter);
+                resolve();
+              }
+            }, 100);
+          });
+        }
+
+        reProcessing(data) {
+          for (let index = 0; index < data.betCode.length; index++) {
+            this.onChooeseBall(null, data.betCode[index].toString());
+          }
+
+          this.labelIssueID.string = `第${data.drawIssue}期`;
+          this.onConfirmAttack();
+          this.isFullBall = true;
+          (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+            error: Error()
+          }), PanelLoading) : PanelLoading).instance.closeLoading();
+        }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class3.prototype, "HorLayout", [_dec2], {
         configurable: true,
@@ -317,6 +382,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         writable: true,
         initializer: null
       }), _descriptor4 = _applyDecoratedDescriptor(_class3.prototype, "ballItem", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "labelIssueID", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,

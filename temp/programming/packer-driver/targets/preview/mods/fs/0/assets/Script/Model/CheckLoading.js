@@ -75,7 +75,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         endWork(type) {
+          console.log("\u7576\u524D\u76F4" + type + "\uFF1A" + this.checkState(type));
           this.map_CheckList.set(type, true);
+          console.log("\u7576\u524D\u76F4" + type + "\uFF1A" + this.checkState(type));
         }
 
         resetState(type) {

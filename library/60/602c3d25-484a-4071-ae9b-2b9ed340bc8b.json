@@ -27,11 +27,11 @@
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 48
+      "__id__": 47
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 49
+      "__id__": 48
     },
     "_id": "602c3d25-484a-4071-ae9b-2b9ed340bc8b"
   },
@@ -203,8 +203,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1080,
-      "height": 1920
+      "width": 720,
+      "height": 1280
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -239,7 +239,7 @@
     },
     "_type": 0,
     "_fillType": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -425,6 +425,9 @@
     "_active": true,
     "_components": [
       {
+        "__id__": 42
+      },
+      {
         "__id__": 43
       },
       {
@@ -435,9 +438,6 @@
       },
       {
         "__id__": 46
-      },
-      {
-        "__id__": 47
       }
     ],
     "_prefab": null,
@@ -818,9 +818,8 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "GameWebSocekt",
+    "_name": "AutoView",
     "_objFlags": 0,
-    "__editorExtras__": {},
     "_parent": {
       "__id__": 13
     },
@@ -829,16 +828,13 @@
     "_components": [
       {
         "__id__": 41
-      },
-      {
-        "__id__": 42
       }
     ],
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -1273.587,
-      "y": -450.944,
+      "x": 0,
+      "y": 0,
       "z": 0
     },
     "_lrot": {
@@ -861,18 +857,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "abHiUG9p9KMLzxXNXPNdyi"
-  },
-  {
-    "__type__": "15ca9Waxy9FPY+xcaPFNGfA",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 40
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_id": "baGzZEB4BMV6+B2pQOyhdq"
+    "_id": "a86t2ydqxLpLo6Bmj3uG20"
   },
   {
     "__type__": "02ccadWhrFMrru0B8V26hNI",
@@ -883,7 +868,7 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "_id": "a38ypEd/VHO56yGo9F1H1F"
+    "_id": "7crqEueAVClZr6bw8aehsJ"
   },
   {
     "__type__": "cc.UIOpacity",
@@ -989,19 +974,19 @@
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 50
+      "__id__": 49
     },
     "shadows": {
-      "__id__": 51
+      "__id__": 50
     },
     "_skybox": {
-      "__id__": 52
+      "__id__": 51
     },
     "fog": {
-      "__id__": 53
+      "__id__": 52
     },
     "octree": {
-      "__id__": 54
+      "__id__": 53
     }
   },
   {

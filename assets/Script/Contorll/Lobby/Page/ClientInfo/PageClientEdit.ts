@@ -5,12 +5,12 @@ import EventMng from '../../../../Manager/EventMng';
 import BaseComponent from '../../../../Model/ComponentBase';
 import Player from '../../../../Model/Player';
 import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
-import CryptoES from 'crypto-es';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import { MyEditBox } from '../../../../../Plug/MyEditBox';
 import PublicModel from '../../../../Model/PublicModel';
 import CreateFileSprite from '../../../../Model/CreateFileSprite';
-import PublicData from '../../../../Model/PublicData';
+
+import PanelLoading from '../../../NoClearNode/PanelLoading';
 const { ccclass, property } = _decorator;
 @ccclass('PageClientEdit')
 export default class PageClientEdit extends BaseComponent {
@@ -33,105 +33,73 @@ export default class PageClientEdit extends BaseComponent {
     @property(Sprite)
     spritePlayer: Sprite
     isChangePicture: boolean = false
+    isCheckCertifiedEmall: boolean = false;
+    isCheckNicename: boolean = false;
+    isCheckuploadAvatar: boolean = false;
+    imageFile: File = null
 
     onLoad() {
         super.onLoad()
         EventMng.getInstance.mapEvnet.get(NotificationType.Panel).on(LobbyStateEvent.ActivePanelClientEdit, this.activePanel, this)
         EventMng.getInstance.mapEvnet.get(NotificationType.Panel).on(LobbyStateEvent.ChangePlayerPicture, this.onChangePlayerPicture, this)
         this.hide()
+
     }
-    start() {
-        this.editEmail.string = ""
-        this.editNicName.string = ""
-        this.editVerificationCode.string = ""
-    }
+
     onEnable() {
+        this.editEmail.string = "";
+        this.editNicName.string = "";
+        this.editVerificationCode.string = "";
         // this.onValidateContactInfo()
-        this.isChangePicture = false
-        return
-        if (Player.getInstance.gpgInfo.data.email != "" || Player.getInstance.gpgInfo.data.email != null || Player.getInstance.gpgInfo.data.email != undefined)
-            this.activeVerificationCode(false)
-        else
+        this.isChangePicture = false;
+        this.isCheckCertifiedEmall = false;
+        this.isCheckNicename = false;
+        this.isCheckuploadAvatar = false;
+        this.imageFile = null;
+        if (Player.getInstance.gpgInfo.data.email == "" || Player.getInstance.gpgInfo.data.email == null || Player.getInstance.gpgInfo.data.email == undefined)
             this.activeVerificationCode(true)
+        else
+            this.activeVerificationCode(false)
+        return
 
     }
 
-    activePanel(bool: boolean) {
-        bool ? this.show() : this.hide()
-    }
-    async onTestNickName() {
-        const body = new RequestGPG.Body.NeedToken.Nickname()
-        body.nickname = "我修改拉"
-        body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Nickname)
-        await new RequestGPG.Request()
-            .setMethod(RequestGPG.Method.POST)
-            .setBody(JSON.stringify(body))
-            .setToken(Player.getInstance.gpgToken)
-            .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.Nickname}`, this.responseSendLoginVerification.bind(this))
-    }
-    responetest(response) {
-        console.log(response);
+    /**送出修改NickName */
+    async motifyNickName() {
+        return new Promise<void>(async (resolve, reject) => {
+            const body = new RequestGPG.Body.NeedToken.Nickname()
+            body.nickname = this.editNicName.string
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Nickname)
+            console.log(body);
+            await new RequestGPG.Request()
+                .setMethod(RequestGPG.Method.POST)
+                .setBody(JSON.stringify(body))
+                .setToken(Player.getInstance.gpgToken)
+                .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.Nickname}`, this.responseNickname.bind(this))
 
+            resolve()
+        })
     }
-    onSelectPhoto() {
-        new CreateFileSprite(this.onChangePlayerPicture.bind(this))
+    /**驗證碼發送是否成功 */
+    responseNickname(response: ResponseGPG.Nickname.DataClass) {
+        console.log("Nickname", response)
+        if (response.Status.Code == "0") {
+            console.log("過關惹");
+            this.isCheckNicename = true;
+        }
     }
 
-    onActivePanel(e: EventTouch, customEventData?: string) {
-        this.hide()
-        EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.ActivePanelClientInfo, true)
-    }
-    activeVerificationCode(bool: boolean) {
-        this.editVerificationCode.spriteBG.node.active = bool
-        this.editEmail.spriteBG.node.active = bool
-        this.NodeEmail.active = bool
-        this.NodeVerificationCode.active = bool
-        this.btnVerificationCode.node.active = bool
-        if (!bool)
-            this.btnsFunction.position = PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(this.btnsFunction, this.editEmail.spriteBG.node)
-    }
-    onChangePlayerPicture(_spriteFrame: SpriteFrame) {
-        this.spritePlayer.spriteFrame = _spriteFrame
-        this.isChangePicture = true;
-    }
-    /**ClientEdit */
-
-    /**進行發送驗證碼時，必須先通過確認手機是否被註冊過，確認沒有驗證過就會SendLog */
+    /**進行發送驗證碼時，必須先通過確認手機是否被註冊過 */
     async onValidateContactInfo() {
-        /**確認是否有需要驗證戲箱 */
-        if (this.editEmail.string == "") {
-            console.error("信箱不可空白");
-            return
-        }
-        if (!this.checkEmailRegular(this.editEmail.string)) {
-            console.error("信箱格式不正確");
-            return
-        }
-        /** */
+        /**確認信箱格式 */
+        if (!this.checkEmail(this.editEmail.string)) return;
         const body = new RequestGPG.Body.NotNeedToken.ValidateContactInfo()
         body.Email = this.editEmail.string;
-
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
             .fetchData(`${RequestGPG.APIUrl.ids}${RequestGPG.API.ValidateContactInfo}`, this.responseValidateContactInfo.bind(this))
-
     }
-    /**送出前須確認驗證碼的正確性，但前題是他必須得先需要註冊信箱時才會接這個function */
-    async onCertification() {
-        const body = new RequestGPG.Body.NeedToken.CertifiedEmail()
-        body.email = this.editEmail.string
-        body.verifyCode = this.editVerificationCode.string
-        body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.CertifiedEmail)
-        await new RequestGPG.Request()
-            .setMethod(RequestGPG.Method.POST)
-            .setToken(Player.getInstance.gpgToken)
-            .setBody(JSON.stringify(body))
-            .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.ValidateContactInfo}`, this.responseSendLoginVerification.bind(this))
-
-    }
-
-
     async responseValidateContactInfo(response: ResponseGPG.ValidateContactInfo.DataClass) {
         console.log("ValidateContactInfo", response)
         /**代表此已經綁定過不可以綁定! */
@@ -148,19 +116,108 @@ export default class PageClientEdit extends BaseComponent {
             await new RequestGPG.Request()
                 .setMethod(RequestGPG.Method.POST)
                 .setBody(JSON.stringify(sendBody))
-                .fetchData(`${RequestGPG.APIUrl.ids}${RequestGPG.API.SendRegisterVerification}`, this.responseSendLoginVerification.bind(this))
+                .fetchData(`${RequestGPG.APIUrl.ids}${RequestGPG.API.SendRegisterVerification}`, this.responseSendRegisterVerification.bind(this))
         }
 
     }
-
     /**驗證碼發送是否成功 */
-    responseSendLoginVerification(response: ResponseGPG.SendRegisterVerification.DataClass) {
+    responseSendRegisterVerification(response: ResponseGPG.SendRegisterVerification.DataClass) {
         console.log("SendRegisterVerification", response)
         if (response.Status.Code == "0") {
-            console.log("過關惹");
+            console.log("送出驗證碼囉");
 
         }
     }
+    /**送出前須確認驗證碼的正確性，但前題是他必須得先需要註冊信箱時才會接這個function */
+    async certifiedEmall() {
+        /**確認信箱格式 */
+        return new Promise<void>(async (resolve, reject) => {
+            const body = new RequestGPG.Body.NeedToken.CertifiedEmail()
+            body.email = this.editEmail.string
+            body.verifyCode = this.editVerificationCode.string
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.CertifiedEmail)
+            await new RequestGPG.Request()
+                .setMethod(RequestGPG.Method.POST)
+                .setToken(Player.getInstance.gpgToken)
+                .setBody(JSON.stringify(body))
+                .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.CertifiedEmall}`, this.responseCertifiedEmall.bind(this))
+            resolve()
+        })
+
+    }
+
+    /**是否修改信箱成功 */
+    responseCertifiedEmall(response: ResponseGPG.CertifiedEmall.DataClass) {
+        console.log("CertifiedEmall", response)
+        if (response.Status.Code == "0") {
+            console.log("過關惹");
+            this.isCheckCertifiedEmall = true;
+        }
+    }
+    async uploadAvatar() {
+        return new Promise<void>(async (resolve, reject) => {
+            const body = new RequestGPG.Body.NeedToken.UploadAvatar()
+            body.File = this.imageFile
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.UploadAvatar)
+            await new RequestGPG.Request()
+                .setMethod(RequestGPG.Method.POST)
+                .setBody(JSON.stringify(body))
+                .setToken(Player.getInstance.gpgToken)
+                .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.UploadAvatar}`, this.responseUploadAvatar.bind(this))
+            resolve()
+        })
+    }
+    responseUploadAvatar(response: ResponseGPG.UploadAvatar.DataClass) {
+        console.log(response);
+
+    }
+
+    async onCheckMotify() {
+        if (!this.checkName(this.editNicName.string)) return;
+        if (!this.checkEmail(this.editEmail.string)) return;
+        if (!this.checkVerification(this.editVerificationCode.string)) return;
+        PanelLoading.instance.openLoading("資料更新中")
+        this.isCheckNicename = false;
+        this.isCheckCertifiedEmall = false;
+        await this.certifiedEmall();
+        if (!this.isCheckCertifiedEmall) return
+        await this.motifyNickName();
+        if (!this.isCheckNicename) return
+        EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.UpDatePlayer)
+        if (this.isChangePicture)
+            EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.ChangePlayerPicture, this.spritePlayer.spriteFrame)
+        this.onActivePanel(null)
+        return
+    }
+    activePanel(bool: boolean) {
+        bool ? this.show() : this.hide()
+    }
+    onSelectPhoto() {
+        new CreateFileSprite(this.onChangePlayerPicture.bind(this))
+    }
+    onChangePlayerPicture(_spriteFrame: SpriteFrame, file: File) {
+        this.spritePlayer.spriteFrame = _spriteFrame
+        this.isChangePicture = true;
+        this.imageFile = file
+
+        this.uploadAvatar()
+    }
+    onActivePanel(e: EventTouch, customEventData?: string) {
+        this.hide()
+        EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.ActivePanelClientInfo, true)
+    }
+    activeVerificationCode(bool: boolean) {
+        console.log(bool);
+
+        this.editVerificationCode.spriteBG.node.active = bool
+        this.editEmail.spriteBG.node.active = bool
+        this.NodeEmail.active = bool
+        this.NodeVerificationCode.active = bool
+        this.btnVerificationCode.node.active = bool
+        if (!bool)
+            this.btnsFunction.position = PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(this.btnsFunction, this.editEmail.spriteBG.node)
+    }
+
     /**確認信箱格式 */
     checkEmailRegular(_string: string) {
         //please input the test email to see is valid
@@ -176,29 +233,60 @@ export default class PageClientEdit extends BaseComponent {
             return false
         }
     }
-    onCheckMotify() {
-        EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.UpDataPlayer)
-        this.onActivePanel(null)
-        return
-        if (this.editNicName.string == Player.getInstance.nickname) {
-            console.error("會員資料與之前相同");
-            return
+    checkName(str: string) {
+        if (str.length == 0) {
+            console.error("請輸入文字");
+            return false;
         }
-
-        /**確認是否有需要驗證戲箱 */
-        if (this.NodeEmail.active) {
-            if (!this.checkEmailRegular(this.editEmail.string)) {
-                console.error("信箱格式不正確]");
-                return
-            }
-            this.onValidateContactInfo();
+        if (/\s/.test(str)) {
+            console.error("文字有空白");
+            return false;
         }
-
-
-        if (this.isChangePicture)
-            EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.ChangePlayerPicture, this.spritePlayer.spriteFrame)
+        if (!PublicModel.getInstance.checkNicknameCondition(str)) {
+            console.error("出現非法文字");
+            return false;
+        }
+        if (str.length < 2 || str.length > 16) {
+            console.error("長度須為2~16");
+            return false;;
+        }
+        return true
     }
-
-    /**排序物件順序並且queryString */
-
+    /**
+     * 
+     * @param str 信箱
+     */
+    checkEmail(str: string) {
+        if (str.length == 0) {
+            console.error("請輸入文字");
+            return false;
+        }
+        if (/\s/.test(str)) {
+            console.error("文字有空白");
+            return false;
+        }
+        if (!this.checkEmailRegular(str)) {
+            console.error("出現非法文字");
+            return false;
+        }
+        return true
+    }
+    /**
+     * @param verification 驗證碼  
+     */
+    checkVerification(str: string) {
+        if (str.length == 0) {
+            console.error("請輸入數字");
+            return false;
+        }
+        if (/\s/.test(str)) {
+            console.error("文字有空白");
+            return false;
+        }
+        if (str.length != 6) {
+            console.error("驗證碼最少六碼");
+            return false;
+        }
+        return true
+    }
 }

@@ -10,6 +10,7 @@ import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
 import Player from '../../../../Model/Player';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import PublicData from '../../../../Model/PublicData';
+import PanelLoading from '../../../NoClearNode/PanelLoading';
 const { ccclass, property } = _decorator;
 @ccclass('PanelHome')
 export default class PanelHome extends BaseComponent {
@@ -48,13 +49,20 @@ export default class PanelHome extends BaseComponent {
 
     marquee: Marquee;
     timer: Timer;
+    currentIssueID: number;
+    lastIssueID: number;
     onLoad() {
         this.marquee = this.labelMarquee.addComponent(Marquee)
         this.timer = this.labelTime.addComponent(Timer);
     }
     async onEnable() {
         await this.onDrawHistory()
-        await this.onDrawUpcoming()
+        if (this.lastIssueID != this.currentIssueID) {
+            await this.onDrawUpcoming()
+            /**代表更新最新一期 */
+            this.lastIssueID = this.currentIssueID;
+        }
+        PanelLoading.instance.closeLoading()
     }
     start() {
         this.marquee.startMarquee("HIHIHI")
@@ -90,6 +98,7 @@ export default class PanelHome extends BaseComponent {
     }
     responseDrawHistory(response?: ResponseGPG.DrawHistory.DataClass) {
         let getDate = response.data[0]
+        this.currentIssueID = getDate.issueID;
         this.labelLastDrawIssueID.string = `第${getDate.issueID.toString()}期`
 
         /**不需要week日 */

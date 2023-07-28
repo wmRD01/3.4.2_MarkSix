@@ -26,6 +26,8 @@ System.register(["cc"], function (_export, _context) {
 
           _defineProperty(this, "callback", void 0);
 
+          _defineProperty(this, "file", void 0);
+
           this.callback = _callback;
 
           if (document.getElementById('inputfile') != null) {
@@ -42,15 +44,15 @@ System.register(["cc"], function (_export, _context) {
         }
 
         checkSpriteData(e) {
-          const _File = e.target.files[0];
-          console.log(_File);
+          this.file = e.target.files[0];
+          console.log(this.file);
           console.log("確定上傳");
 
-          if (this.AcceptImgFormat.indexOf(_File.type) == -1) {
+          if (this.AcceptImgFormat.indexOf(this.file.type) == -1) {
             return console.error(`代表類型不正確`);
           }
 
-          if (!_File) {
+          if (!this.file) {
             return console.error(`無檔案`);
           }
 
@@ -59,7 +61,7 @@ System.register(["cc"], function (_export, _context) {
 
           const reader = new FileReader();
           reader.onload = this.readerOnload.bind(this);
-          reader.readAsDataURL(_File);
+          reader.readAsDataURL(this.file);
         }
 
         readerOnload(e) {
@@ -77,7 +79,7 @@ System.register(["cc"], function (_export, _context) {
             const sp = new SpriteFrame(); //sprite 图片
 
             sp.texture = texture;
-            this.callback(sp);
+            this.callback(sp, this.file);
             return;
           };
         }

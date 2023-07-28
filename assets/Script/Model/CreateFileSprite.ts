@@ -3,7 +3,7 @@ import { ImageAsset, Size, SpriteFrame, Texture2D } from "cc";
 export default class CreateFileSprite {
     AcceptImgFormat: string[] = ['image/gif', 'image/jpeg', 'image/png', 'image/bmp'];
     callback: Function
-    
+    file: File;
 
     constructor(_callback: Function) {
         this.callback = _callback
@@ -21,19 +21,19 @@ export default class CreateFileSprite {
 
     checkSpriteData(e: Event) {
 
-        const _File: File = (e.target as HTMLInputElement).files[0]
-        console.log(_File);
+        this.file = (e.target as HTMLInputElement).files[0]
+        console.log(this.file);
         console.log("確定上傳");
-        if (this.AcceptImgFormat.indexOf(_File.type) == -1) {
+        if (this.AcceptImgFormat.indexOf(this.file.type) == -1) {
             return console.error(`代表類型不正確`);
         }
-        if (!_File) {
+        if (!this.file) {
             return console.error(`無檔案`);
         };
         /**開一條支線傳給後端 */
         const reader = new FileReader();
         reader.onload = this.readerOnload.bind(this)
-        reader.readAsDataURL(_File)
+        reader.readAsDataURL(this.file)
     }
 
     readerOnload(e: ProgressEvent) {
@@ -50,7 +50,7 @@ export default class CreateFileSprite {
             const sp = new SpriteFrame();
             //sprite 图片
             sp.texture = texture;
-            this.callback(sp)
+            this.callback(sp, this.file)
             return
         }
 

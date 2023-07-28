@@ -28,11 +28,15 @@ export default class PanelPageButton extends BaseComponent {
     setPanelPoint(_node: Node) {
         this.panelPoint = _node
     }
-    start() {
+    onEnable() {
         this.panelRank.active = false;
         this.panelPoint.active = false
         this.onChangePanel(null, PageType.Point.toString());
         this.setEvent(LobbyStateEvent.ChangePointPage, this.onChangePanel)
+
+    }
+    onDisable() {
+        this.deletEvent(LobbyStateEvent.ChangePointPage, this.onChangePanel)
     }
     async onChangePanel(e: EventTouch, customEventData?: string) {
         await AssetMng.waitStateCheck(AssetType.Sprite)

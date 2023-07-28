@@ -118,7 +118,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         SetGameHeartrate(setSecond) {
-          // console.error("送心跳????????????");
           this.HeartrateNum = setInterval(() => {
             // console.error("送心跳");
             (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({

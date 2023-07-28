@@ -52,7 +52,6 @@ export default class DelayTime extends BaseSingleton<DelayTime>() {
     }
 
     SetGameHeartrate(setSecond: number) {
-        // console.error("送心跳????????????");
         this.HeartrateNum = setInterval(() => {
             // console.error("送心跳");
 

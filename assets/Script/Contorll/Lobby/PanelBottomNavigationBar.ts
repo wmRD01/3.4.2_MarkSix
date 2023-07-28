@@ -37,6 +37,8 @@ export default class PanelBottomNavigationBar extends BaseComponent {
     async onLoad() {
         super.onLoad()
         await AssetMng.waitStateCheck(AssetType.Sprite)
+        console.log("誰搶誰");
+
         // PageControll.instance.pageEvnet.on(PageAction.ChangeTo, this.onMoveCircle, this)
         for (let index = 0; index < this.btns.length; index++) {
             let _page = new Page(this.btns[index], index)
@@ -47,29 +49,42 @@ export default class PanelBottomNavigationBar extends BaseComponent {
         this.circleY = -(PublicData.getInstance.BaseViewHeight / 2) + (this.nodeCircle.getComponent(UITransform).height / 2)
     }
     onEnable() {
-        EventMng.getInstance.mapEvnet.get(NotificationType.Page).on(PageAction.ChangeTo, this.onEventChangeTo, this)
+        EventMng.getInstance.mapEvnet.get(NotificationType.Page).on(PageAction.ChangeTo, this.onMoveCircle, this)
     }
     onDisable() {
-        EventMng.getInstance.mapEvnet.get(NotificationType.Page).off(PageAction.ChangeTo, this.onEventChangeTo, this)
+        EventMng.getInstance.mapEvnet.get(NotificationType.Page).off(PageAction.ChangeTo, this.onMoveCircle, this)
     }
 
-    onEventChangeTo(index: PageMenu) {
-        this.onMoveCircle(null, index.toString())
+    async onEmitMoveCircle(e: Event, customEventData?: string) {
+        EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, Number(customEventData))
     }
-    async onMoveCircle(e: Event, customEventData?: string) {
+    async onMoveCircle(index: PageMenu) {
         await AssetMng.waitStateCheck(AssetType.Sprite)
-
-        if (this.currentIndex == Number(customEventData)) return;
+        console.error("誰搶誰");
+        if (this.currentIndex == Number(index)) return;
         this.lastIndex = this.currentIndex
-        this.currentIndex = Number(customEventData)
+        this.currentIndex = Number(index)
+        if (this.mapButton.size == 0)
+            await this.waitButton()
         let getX = PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(this.nodeCircle, this.getButton(this.currentIndex).node).x
         this.goTarget = v3(getX, this.circleY)
         this.startAction()
 
-        EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, this.currentIndex)
     }
+
     getButton(index: number) {
         return this.mapButton.get(index).getButton()
+    }
+    async waitButton() {
+
+        return new Promise<void>((resolve, reject) => {
+            let inter = setInterval(() => {
+                if (this.mapButton.size != 0) {
+                    resolve()
+                    clearInterval(inter)
+                }
+            }, 500)
+        })
     }
     startAction() {
         this.getCircleScale = this.nodeCircle.getScale().x

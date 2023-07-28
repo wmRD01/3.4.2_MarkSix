@@ -118,8 +118,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "cr
           let rex = /[\p{P}+\u2100-\u214F]/u;
           return rex.test(str);
         }
-        /**確認名稱長度 */
-
 
         checkNameLen(name, len) {
           let word = name.split(/\w*/).filter(x => x != "");
@@ -128,6 +126,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "cr
 
           if (countLen > len) name = this.reName(name, len);
           return name;
+        }
+        /**確認名稱長度 */
+
+
+        changeNameLen(name) {
+          let word = name.split(/\w*/).filter(x => x != "");
+          let notWord = name.split(/\W*/).filter(x => x != "");
+          let countLen = word.length + Math.floor(notWord.length / 2); //英文數字兩個字元=1個中文字長度
+
+          return countLen;
         }
         /** 將8位數之後的文字"..."化 */
 
@@ -279,9 +287,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "cr
             error: Error()
           }), PublicData) : PublicData).getInstance.gpgApi);
           console.log(dataWithApiKey);
+          console.log((_crd && CryptoES === void 0 ? (_reportPossibleCrUseOfCryptoES({
+            error: Error()
+          }), CryptoES) : CryptoES).MD5(dataWithApiKey).toString());
           return (_crd && CryptoES === void 0 ? (_reportPossibleCrUseOfCryptoES({
             error: Error()
-          }), CryptoES) : CryptoES).MD5(dataWithApiKey).toString(); // console.log(body);
+          }), CryptoES) : CryptoES).MD5(dataWithApiKey).toString();
         }
 
         convertMD5(str) {

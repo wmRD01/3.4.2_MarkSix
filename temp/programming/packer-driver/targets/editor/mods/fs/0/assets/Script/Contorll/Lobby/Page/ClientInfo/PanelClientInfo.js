@@ -96,7 +96,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         constructor(...args) {
           super(...args);
 
-          _defineProperty(this, "isNeedUpdata", true);
+          _defineProperty(this, "isNeedUpdate", true);
 
           _defineProperty(this, "isLoading", false);
 
@@ -107,11 +107,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "labelNickName", _descriptor3, this);
 
           _initializerDefineProperty(this, "labelEmail", _descriptor4, this);
+
+          _defineProperty(this, "labelBetCount", void 0);
+
+          _defineProperty(this, "labelPointCount", void 0);
+
+          _defineProperty(this, "labelRank", void 0);
         }
 
         async start() {
           this.show();
-          this.isNeedUpdata = true;
+          this.isNeedUpdate = true;
           this.isLoading = false;
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
@@ -133,20 +139,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), NotificationType) : NotificationType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
-          }), LobbyStateEvent) : LobbyStateEvent).UpDataPlayer, this.onUpdataPlayer, this); // console.log(sys.browserType, sys.os);
+          }), LobbyStateEvent) : LobbyStateEvent).UpDatePlayer, this.onUpdatePlayer, this); // console.log(sys.browserType, sys.os);
           // console.log(md5("12315235"));
         }
 
-        testGet(repon) {
-          console.log(repon);
-        }
-
         async onEnable() {
-          if (!this.isNeedUpdata || this.isLoading) return;
+          if (!this.isNeedUpdate || this.isLoading) {
+            (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+              error: Error()
+            }), PanelLoading) : PanelLoading).instance.closeLoading();
+            return;
+          }
+
           this.isLoading = true;
-          (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
-            error: Error()
-          }), PanelLoading) : PanelLoading).instance.openLoading("資料讀取中");
           this.startDelay();
           const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
@@ -189,8 +194,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), LobbyStateEvent) : LobbyStateEvent).ActivePanelClientEdit, true);
         }
 
-        onUpdataPlayer() {
-          this.isNeedUpdata = true;
+        onUpdatePlayer() {
+          this.isNeedUpdate = true;
         }
 
         activePanel(bool) {
@@ -202,8 +207,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
             error: Error()
           }), Player) : Player).getInstance.gpgInfo = response; // response.data.photo
+          // console.log(Player.getInstance.gpgInfo);
 
-          console.log(response.data.photo.headPhoto);
           assetManager.loadRemote(response.data.photo.headPhoto, (err, image) => {
             if (err) {
               console.error(err.message);
@@ -217,7 +222,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
               error: Error()
             }), LobbyStateEvent) : LobbyStateEvent).ChangePlayerPicture, SpriteFrame.createWithImage(image));
-            this.isNeedUpdata = false;
+            this.isNeedUpdate = false;
             if (this.stopDelay() < 1) setTimeout((_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
               error: Error()
             }), PanelLoading) : PanelLoading).instance.closeLoading.bind((_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({

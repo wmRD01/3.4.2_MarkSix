@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, AssetType, AssetMng, BaseComponent, ItemSetting, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PanelSetting;
+  var _reporterNs, _cclegacy, _decorator, AssetType, AssetMng, BaseComponent, PanelLoading, ItemSetting, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PanelSetting;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -23,6 +23,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("BaseComponent", "../../../../Model/ComponentBase", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfPanelLoading(extras) {
+    _reporterNs.report("PanelLoading", "../../../NoClearNode/PanelLoading", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfItemSetting(extras) {
     _reporterNs.report("ItemSetting", "./ItemSetting", _context.meta, extras);
   }
@@ -40,7 +44,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_4) {
       BaseComponent = _unresolved_4.default;
     }, function (_unresolved_5) {
-      ItemSetting = _unresolved_5.default;
+      PanelLoading = _unresolved_5.default;
+    }, function (_unresolved_6) {
+      ItemSetting = _unresolved_6.default;
     }],
     execute: function () {
       _crd = true;
@@ -73,6 +79,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           for (let index = 0; index < this.settingItem.length; index++) {
             this.settingItem[index].init();
           }
+        }
+
+        onEnable() {
+          (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+            error: Error()
+          }), PanelLoading) : PanelLoading).instance.closeLoading();
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "settingItem", [_dec2], {

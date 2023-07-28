@@ -137,7 +137,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.node.active = false;
         }
 
-        reProcessing() {}
+        reProcessing(any) {}
 
         startDelay() {
           this.delayTime = 0;

@@ -1,14 +1,18 @@
 import { Button, color, EventTouch, instantiate, Label, Layout, Node, Prefab, random, Sprite, Vec3, _decorator } from 'cc';
 import DelayTime from '../../../../../Plug/DelayTime';
 import { AssetType } from '../../../../Enum/AssetType';
+import { CheckLoadingType } from '../../../../Enum/CheckLoadingType';
 import { CommandType } from '../../../../Enum/CommandType';
 import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import { WebSocketEvent } from '../../../../Enum/WebSocketEvent';
 import AssetMng from '../../../../Manager/AssetMng';
 import ButtonMng from '../../../../Manager/ButtonMng';
 import BallData from '../../../../Model/BallData';
+import CheckLoading from '../../../../Model/CheckLoading';
 import BaseComponent from '../../../../Model/ComponentBase';
+import { ln } from '../../../Api/ResponeCommand';
 import { bet } from '../../../Api/SendCommand';
+import PanelLoading from '../../../NoClearNode/PanelLoading';
 const { ccclass, property } = _decorator;
 @ccclass('PanelBall')
 export default class PanelBall extends BaseComponent {
@@ -20,6 +24,8 @@ export default class PanelBall extends BaseComponent {
     layoutItem: Prefab;
     @property(Prefab)
     ballItem: Prefab;
+    @property(Label)
+    labelIssueID: Label
 
     Halign: number = 10;
     Valign: number = 5;
@@ -68,6 +74,12 @@ export default class PanelBall extends BaseComponent {
         this.mapBallNumber.forEach(element => {
             element.getOrg()
         });
+
+        this.setEvent(LobbyStateEvent.UpDateBall, this.reProcessing)
+    }
+    onEnable() {
+
+
     }
 
     onRandomNumber(e: EventTouch, customEventData?: string) {
@@ -106,7 +118,6 @@ export default class PanelBall extends BaseComponent {
 
     }
     onTestReset(e: EventTouch, customEventData?: string) {
-
         this.isChoose = []
         this.tempChoose = []
         /**選擇球數最大值 */
@@ -134,7 +145,7 @@ export default class PanelBall extends BaseComponent {
 
         this.tempChoose = []
     }
-    async onConfirmAttack(e: EventTouch, customEventData?: string) {
+    async onConfirmAttack(e?: EventTouch, customEventData?: string) {
         if (this.isConfirm) return
         if (this.tempChoose.length < this.MaxCount) {
             return
@@ -164,7 +175,29 @@ export default class PanelBall extends BaseComponent {
         })
         this.isFullBall = !bool;
     }
-    reProcessing() {
+    watiWebSocket() {
+        return new Promise<void>((resolve, reject) => {
+            if (CheckLoading.getInstance.checkState(CheckLoadingType.isWebSocketOpen)) {
+                resolve()
+                return
+            }
+            let inter = setInterval(() => {
+                if (CheckLoading.getInstance.checkState(CheckLoadingType.isWebSocketOpen)) {
+                    clearInterval(inter)
+                    resolve()
+                }
+            }, 100)
+        })
+    }
 
+    reProcessing(data: ln) {
+        for (let index = 0; index < data.betCode.length; index++) {
+            this.onChooeseBall(null, data.betCode[index].toString())
+        }
+        this.labelIssueID.string = `第${data.drawIssue}期`;
+        this.onConfirmAttack()
+        this.isFullBall = true;
+
+        PanelLoading.instance.closeLoading()
     }
 }

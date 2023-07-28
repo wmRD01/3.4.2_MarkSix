@@ -3,4 +3,5 @@ export enum CommandType {
     ln = "ln",
     bet = "bet",
     usdis = "usdis",
+    sschk= "sschk",
 }

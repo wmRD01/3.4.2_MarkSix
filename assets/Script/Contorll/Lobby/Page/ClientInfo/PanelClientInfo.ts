@@ -13,7 +13,7 @@ import PublicModel from '../../../../Model/PublicModel';
 const { ccclass, property } = _decorator;
 @ccclass('PanelClientInfo')
 export default class PanelClientInfo extends BaseComponent {
-    isNeedUpdata: boolean = true;
+    isNeedUpdate: boolean = true;
     isLoading: boolean = false;
     @property(Sprite)
     spritePlayer: Sprite;
@@ -23,28 +23,29 @@ export default class PanelClientInfo extends BaseComponent {
     labelNickName: Label
     @property(Label)
     labelEmail: Label
-
+    labelBetCount: Label;
+    labelPointCount: Label;
+    labelRank: Label;
 
 
     async start() {
         this.show()
-        this.isNeedUpdata = true;
+        this.isNeedUpdate = true;
         this.isLoading = false;
         EventMng.getInstance.mapEvnet.get(NotificationType.Panel).on(LobbyStateEvent.ActivePanelClientInfo, this.activePanel, this)
         EventMng.getInstance.mapEvnet.get(NotificationType.Panel).on(LobbyStateEvent.ChangePlayerPicture, this.onChangePlayerPicture, this)
-        EventMng.getInstance.mapEvnet.get(NotificationType.Panel).on(LobbyStateEvent.UpDataPlayer, this.onUpdataPlayer, this)
+        EventMng.getInstance.mapEvnet.get(NotificationType.Panel).on(LobbyStateEvent.UpDatePlayer, this.onUpdatePlayer, this)
         // console.log(sys.browserType, sys.os);
         // console.log(md5("12315235"));
 
     }
-    testGet(repon) {
-        console.log(repon);
 
-    }
     async onEnable() {
-        if (!this.isNeedUpdata || this.isLoading) return;
+        if (!this.isNeedUpdate || this.isLoading) {
+            PanelLoading.instance.closeLoading()
+            return;
+        }
         this.isLoading = true
-        PanelLoading.instance.openLoading("資料讀取中")
         this.startDelay()
         const body = new RequestGPG.Body.NeedToken.MyInfo()
         body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApi)
@@ -63,8 +64,8 @@ export default class PanelClientInfo extends BaseComponent {
         EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.ChangePlayerPicture, this.spritePlayer.spriteFrame)
         EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.ActivePanelClientEdit, true)
     }
-    onUpdataPlayer() {
-        this.isNeedUpdata = true
+    onUpdatePlayer() {
+        this.isNeedUpdate = true
     }
     activePanel(bool: boolean) {
         bool ? this.show() : this.hide()
@@ -72,9 +73,10 @@ export default class PanelClientInfo extends BaseComponent {
     async responseMyInfo(response: ResponseGPG.MyInfo.DataClass) {
         console.log("MyInfo", response)
         Player.getInstance.gpgInfo = response;
-        // response.data.photo
-        console.log(response.data.photo.headPhoto);
 
+        // response.data.photo
+
+        // console.log(Player.getInstance.gpgInfo);
         assetManager.loadRemote(response.data.photo.headPhoto, (err, image: ImageAsset) => {
 
             if (err) {
@@ -83,7 +85,7 @@ export default class PanelClientInfo extends BaseComponent {
             }
 
             EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.ChangePlayerPicture, SpriteFrame.createWithImage(image))
-            this.isNeedUpdata = false;
+            this.isNeedUpdate = false;
             if (this.stopDelay() < 1)
                 setTimeout(PanelLoading.instance.closeLoading.bind(PanelLoading.instance), 1000);
             else

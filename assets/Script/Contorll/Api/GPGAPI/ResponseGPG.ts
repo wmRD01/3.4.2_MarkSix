@@ -52,7 +52,31 @@ export namespace ResponseGPG {
         }
 
     }
-    export namespace Certification {
+    export namespace Nickname {
+        export class DataClass {
+            Status: State = new State();
+        }
+        class State {
+            Code: string
+            Message: string
+        }
+
+    }
+
+    export namespace UploadAvatar {
+        export class DataClass {
+            AvatarUrl: string;
+            Status: State = new State();
+        }
+        class State {
+            Code: string
+            Message: string
+        }
+
+    }
+
+
+    export namespace CertifiedEmall {
         export class DataClass {
             data = null;
             access_token = null;

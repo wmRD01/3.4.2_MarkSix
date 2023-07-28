@@ -67,7 +67,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         endWork(type) {
+          console.log(`當前直${type}：${this.checkState(type)}`);
           this.map_CheckList.set(type, true);
+          console.log(`當前直${type}：${this.checkState(type)}`);
         }
 
         resetState(type) {

@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Component, Label, UITransform, _decorator, NotificationType, LobbyStateEvent, PageAction, EventMng, BaseComponent, PublicModel, RequestGPG, Player, PublicData, Marquee, Timer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _dec17, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _temp, _crd, ccclass, property, PanelHome;
+  var _reporterNs, _cclegacy, Button, Component, Label, UITransform, _decorator, NotificationType, LobbyStateEvent, PageAction, EventMng, BaseComponent, PublicModel, RequestGPG, Player, PublicData, PanelLoading, Marquee, Timer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _dec17, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _temp, _crd, ccclass, property, PanelHome;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -51,6 +51,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("PublicData", "../../../../Model/PublicData", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfPanelLoading(extras) {
+    _reporterNs.report("PanelLoading", "../../../NoClearNode/PanelLoading", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -79,6 +83,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Player = _unresolved_9.default;
     }, function (_unresolved_10) {
       PublicData = _unresolved_10.default;
+    }, function (_unresolved_11) {
+      PanelLoading = _unresolved_11.default;
     }],
     execute: function () {
       _crd = true;
@@ -131,6 +137,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "marquee", void 0);
 
           _defineProperty(this, "timer", void 0);
+
+          _defineProperty(this, "currentIssueID", void 0);
+
+          _defineProperty(this, "lastIssueID", void 0);
         }
 
         onLoad() {
@@ -140,7 +150,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         async onEnable() {
           await this.onDrawHistory();
-          await this.onDrawUpcoming();
+
+          if (this.lastIssueID != this.currentIssueID) {
+            await this.onDrawUpcoming();
+            /**代表更新最新一期 */
+
+            this.lastIssueID = this.currentIssueID;
+          }
+
+          (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+            error: Error()
+          }), PanelLoading) : PanelLoading).instance.closeLoading();
         }
 
         start() {
@@ -200,6 +220,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         responseDrawHistory(response) {
           let getDate = response.data[0];
+          this.currentIssueID = getDate.issueID;
           this.labelLastDrawIssueID.string = `第${getDate.issueID.toString()}期`;
           /**不需要week日 */
           // console.log(PublicModel.getInstance.convertDate(getDate.openDate).split("(")[0]);

@@ -1,146 +1,215 @@
-2023-07-26 13:07:22-log: [Package] menu@1.0.0 enable
-2023-07-26 13:07:22-log: [Package] profile@1.0.0 enable
-2023-07-26 13:07:22-log: [Package] project@1.0.1 enable
-2023-07-26 13:07:22-log: [Package] messages@1.0.0 enable
-2023-07-26 13:07:22-log: [Package] program@1.0.0 enable
-2023-07-26 13:07:22-log: [Package] device@1.0.1 enable
-2023-07-26 13:07:22-log: [Package] ui-kit@1.0.1 enable
-2023-07-26 13:07:22-log: [Package] tester@1.0.0 enable
-2023-07-26 13:07:22-log: [Package] preferences@1.0.0 enable
-2023-07-26 13:07:22-log: Setup mods mgr.: 266.489ms
-2023-07-26 13:07:22-log: Profile changed: engine (modules.includeModules: audio,base,gfx-webgl,intersection-2d,physics-2d-box2d,profiler,tween,ui)
-2023-07-26 13:07:22-log: [Package] engine@1.0.5 enable
-2023-07-26 13:07:24-log: [Package] programming@1.0.0 enable
-2023-07-26 13:07:25-log: [Package] engine-extends@1.0.0 enable
-2023-07-26 13:07:25-log: [Package] asset-db@1.0.0 enable
-2023-07-26 13:07:25-log: [Package] console@1.0.0 enable
-2023-07-26 13:07:25-log: [Package] scene@1.0.0 enable
-2023-07-26 13:07:25-log: [Package] utils@1.0.0 enable
-2023-07-26 13:07:25-log: [Package] assets@1.0.0 enable
-2023-07-26 13:07:25-log: [Package] inspector@1.0.0 enable
-2023-07-26 13:07:25-log: [Package] hierarchy@1.0.0 enable
-2023-07-26 13:07:26-log: [Package] preview@1.0.1 enable
-2023-07-26 13:07:26-log: [Package] animator@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] builder@1.3.1 enable
-2023-07-26 13:07:28-log: [Package] node-library@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] shortcuts@1.0.1 enable
-2023-07-26 13:07:28-log: [Package] package-asset@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] reference-image@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] animation-graph@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] channel-upload-tools@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] runtime-dev-tools@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] lightmap@1.0.4 enable
-2023-07-26 13:07:28-log: [Package] alipay-mini-game@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] android@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] baidu-mini-game@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] bytedance-mini-game@1.0.1 enable
-2023-07-26 13:07:28-log: [Package] huawei-agc@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] ios@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] ios-app-clip@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] mac@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] native@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] ohos@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] web-desktop@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] web-mobile@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] wechatgame@1.0.1 enable
-2023-07-26 13:07:28-log: [Package] windows@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] xiaomi-quick-game@1.0.0 enable
-2023-07-26 13:07:28-log: [Package] cocos-play@1.0.0 enable
-2023-07-26 13:07:29-log: [Package] huawei-quick-game@1.0.0 enable
-2023-07-26 13:07:29-log: [Package] link-sure@1.0.0 enable
-2023-07-26 13:07:29-log: [Package] oppo-mini-game@1.0.0 enable
-2023-07-26 13:07:29-log: [Package] qtt@1.0.0 enable
-2023-07-26 13:07:29-log: [Package] vivo-mini-game@1.0.0 enable
-2023-07-26 13:07:29-log: [Package] cocos-service@3.0.2 enable
-2023-07-26 13:07:29-log: [Package] importer@1.0.0 enable
-2023-07-26 13:07:29-log: [Package] extension@3.0.15 enable
-2023-07-26 13:07:30-log: [Im-plugin] Check im-plugin version.
-2023-07-26 13:07:30-log: [Package] im-plugin@3.0.10 enable
-2023-07-26 13:07:30-warn: Browserslist: caniuse-lite is outdated. Please run:
+2023-07-27 17:37:24-log: [Package] menu@1.0.0 enable
+2023-07-27 17:37:24-log: [Package] profile@1.0.0 enable
+2023-07-27 17:37:24-log: [Package] project@1.0.1 enable
+2023-07-27 17:37:24-log: [Package] messages@1.0.0 enable
+2023-07-27 17:37:24-log: [Package] program@1.0.0 enable
+2023-07-27 17:37:24-log: [Package] device@1.0.1 enable
+2023-07-27 17:37:24-log: [Package] ui-kit@1.0.1 enable
+2023-07-27 17:37:24-log: [Package] tester@1.0.0 enable
+2023-07-27 17:37:24-log: [Package] preferences@1.0.0 enable
+2023-07-27 17:37:25-log: Setup mods mgr.: 487.887ms
+2023-07-27 17:37:25-log: Profile changed: engine (modules.includeModules: audio,base,gfx-webgl,intersection-2d,physics-2d-box2d,profiler,tween,ui)
+2023-07-27 17:37:25-log: [Package] engine@1.0.5 enable
+2023-07-27 17:37:27-log: [Package] programming@1.0.0 enable
+2023-07-27 17:37:28-log: [Package] engine-extends@1.0.0 enable
+2023-07-27 17:37:28-log: [Package] asset-db@1.0.0 enable
+2023-07-27 17:37:28-log: [Package] console@1.0.0 enable
+2023-07-27 17:37:28-log: [Package] scene@1.0.0 enable
+2023-07-27 17:37:28-log: [Package] about@1.0.0 enable
+2023-07-27 17:37:28-log: [Package] server@1.0.0 enable
+2023-07-27 17:37:28-log: [Package] utils@1.0.0 enable
+2023-07-27 17:37:28-log: [Package] assets@1.0.0 enable
+2023-07-27 17:37:28-log: [Package] inspector@1.0.0 enable
+2023-07-27 17:37:28-log: [Package] hierarchy@1.0.0 enable
+2023-07-27 17:37:30-log: [Package] preview@1.0.1 enable
+2023-07-27 17:37:30-log: [Package] animator@1.0.0 enable
+2023-07-27 17:37:31-log: [Package] builder@1.3.1 enable
+2023-07-27 17:37:31-log: [Package] node-library@1.0.0 enable
+2023-07-27 17:37:31-log: [Package] shortcuts@1.0.1 enable
+2023-07-27 17:37:31-log: [Package] package-asset@1.0.0 enable
+2023-07-27 17:37:31-log: [Package] reference-image@1.0.0 enable
+2023-07-27 17:37:31-log: [Package] animation-graph@1.0.0 enable
+2023-07-27 17:37:31-log: [Package] channel-upload-tools@1.0.0 enable
+2023-07-27 17:37:31-log: [Package] runtime-dev-tools@1.0.0 enable
+2023-07-27 17:37:31-log: [Package] lightmap@1.0.4 enable
+2023-07-27 17:37:31-log: [Package] alipay-mini-game@1.0.0 enable
+2023-07-27 17:37:31-log: [Package] android@1.0.0 enable
+2023-07-27 17:37:31-log: [Package] baidu-mini-game@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] bytedance-mini-game@1.0.1 enable
+2023-07-27 17:37:32-log: [Package] huawei-agc@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] ios@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] ios-app-clip@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] mac@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] native@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] ohos@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] web-desktop@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] web-mobile@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] wechatgame@1.0.1 enable
+2023-07-27 17:37:32-log: [Package] windows@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] xiaomi-quick-game@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] cocos-play@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] huawei-quick-game@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] link-sure@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] oppo-mini-game@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] qtt@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] vivo-mini-game@1.0.0 enable
+2023-07-27 17:37:32-log: [Package] cocos-service@3.0.2 enable
+2023-07-27 17:37:32-log: [Package] importer@1.0.0 enable
+2023-07-27 17:37:33-log: [Package] extension@3.0.15 enable
+2023-07-27 17:37:34-log: [Im-plugin] Check im-plugin version.
+2023-07-27 17:37:34-log: [Package] im-plugin@3.0.10 enable
+2023-07-27 17:37:34-warn: Browserslist: caniuse-lite is outdated. Please run:
 npx browserslist@latest --update-db
 
 Why you should do it regularly:
 https://github.com/browserslist/browserslist#browsers-data-updating
-2023-07-26 13:07:30-log: [Scene] Cocos Creator v3.4.2
-2023-07-26 13:07:31-log: [Im-plugin] Im-plugin online version is 3.0.10.
-2023-07-26 13:07:31-log: [Im-plugin] Im-plugin local version is 3.0.10.
-2023-07-26 13:07:31-log: [Im-plugin] Im-plugin need not update.
-2023-07-26 13:07:31-info: [Scene] Forward render pipeline initialized.
-2023-07-26 13:41:18-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-26 13:41:23-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'getButton')
-2023-07-26 13:41:23-error: [Preview]TypeError: Cannot read properties of undefined (reading 'getButton')
-    at PanelBottomNavigationBar.getButton (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:205:43)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:189:111
+2023-07-27 17:37:34-log: [Scene] Cocos Creator v3.4.2
+2023-07-27 17:37:34-log: [Im-plugin] Im-plugin online version is 3.0.10.
+2023-07-27 17:37:34-log: [Im-plugin] Im-plugin local version is 3.0.10.
+2023-07-27 17:37:34-log: [Im-plugin] Im-plugin need not update.
+2023-07-27 17:37:35-info: [Scene] Forward render pipeline initialized.
+2023-07-27 17:37:36-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-27 17:39:09-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-27 17:40:40-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-27 17:42:30-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-27 17:43:52-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-27 17:55:38-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-27 17:56:57-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 10:37:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 11:11:42-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 11:27:52-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 13:14:46-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 13:15:03-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 13:30:51-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite-001".
+2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite".
+2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite-001".
+2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite".
+2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite-001".
+2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite-001".
+2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite".
+2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite".
+2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite-001".
+2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite".
+2023-07-28 13:40:48-warn: [Scene] Node "Node" has no path "Sprite".
+2023-07-28 13:40:54-error: [Scene] unknown track type: 
+2023-07-28 13:40:54-warn: [Scene] Node "Node" has no path "Sprite-001".
+2023-07-28 13:40:54-warn: [Scene] Node "Node" has no path "Sprite-001".
+2023-07-28 13:40:54-warn: [Scene] Node "Node" has no path "Sprite-001".
+2023-07-28 13:45:41-error: [Window] Cannot read property 'type' of null
+2023-07-28 13:45:42-error: [Window] Cannot read property 'type' of null
+2023-07-28 13:45:42-error: [Window] Cannot read property 'type' of null
+2023-07-28 13:47:13-error: [Window] [Vue warn]: Error in callback for watcher "selectKeyInfo": "TypeError: Cannot read property 'curve' of undefined"
+
+(found in <Root>)
+2023-07-28 13:47:13-error: [Window] Cannot read property 'curve' of undefined
+2023-07-28 13:47:14-error: [Window] Cannot read property 'curve' of undefined
+2023-07-28 13:54:34-error: [Scene] The Asset used by component "cc.Sprite" in prefab "PanelSystemMessage" is missing. Detailed information:
+Asset url: "db://assets/Prefab/PanelSystemMessage"
+Missing uuid: "fbf7c344-c956-44c1-85bf-053a0985694f@f9941"
+
+2023-07-28 13:54:34-error: [Scene] The Asset used by component "cc.Sprite" in prefab "PanelSystemMessage" is missing. Detailed information:
+Asset url: "db://assets/Prefab/PanelSystemMessage"
+Missing uuid: "0e85496d-e352-437b-af21-948ae7f6f7e6@f9941"
+
+2023-07-28 13:54:34-error: [Scene] The Asset used by component "cc.Button" in prefab "PanelSystemMessage" is missing. Detailed information:
+Asset url: "db://assets/Prefab/PanelSystemMessage"
+Missing uuid: "0e85496d-e352-437b-af21-948ae7f6f7e6@f9941"
+
+2023-07-28 13:54:34-error: [Scene] The Asset used by component "cc.Sprite" in prefab "PanelSystemMessage" is missing. Detailed information:
+Asset url: "db://assets/Prefab/PanelSystemMessage"
+Missing uuid: "0e85496d-e352-437b-af21-948ae7f6f7e6@f9941"
+
+2023-07-28 13:54:34-error: [Scene] The Asset used by component "cc.Button" in prefab "PanelSystemMessage" is missing. Detailed information:
+Asset url: "db://assets/Prefab/PanelSystemMessage"
+Missing uuid: "0e85496d-e352-437b-af21-948ae7f6f7e6@f9941"
+
+2023-07-28 13:54:34-error: [Scene] The Asset used by component "cc.Sprite" in scene "Loading" is missing. Detailed information:
+Asset url: "db://assets/Scene/Loading"
+Missing uuid: "5861d739-84bc-4f5f-8c6a-925003902782@f9941"
+
+2023-07-28 13:56:03-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 13:59:11-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 13:59:15-error: [Preview]unhandledrejection: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
+2023-07-28 13:59:15-error: [Preview]Error: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:273:29
     at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:8:196)
-2023-07-26 13:41:48-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'node') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-07-26 13:43:09-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-26 13:43:14-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'getButton')
-2023-07-26 13:43:14-error: [Preview]TypeError: Cannot read properties of undefined (reading 'getButton')
-    at PanelBottomNavigationBar.getButton (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:205:43)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:189:111
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:6:105)
+    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:196)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:366
+    at new Promise (<anonymous>)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:99
+    at GameWebSocket.onSend (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:274:13)
+    at GameWebSocket.onLogIn (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:336:16)
+    at GameWebSocket.onWS_Open (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:351:16)
+2023-07-28 14:00:40-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:01:17-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:01:20-error: [Preview]unhandledrejection: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
+2023-07-28 14:01:20-error: [Preview]Error: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:273:29
     at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:8:196)
-2023-07-26 13:43:36-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'node') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-07-26 13:50:20-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-26 13:51:54-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'node') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-07-26 13:53:30-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-26 13:53:34-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'getButton')
-2023-07-26 13:53:34-error: [Preview]TypeError: Cannot read properties of undefined (reading 'getButton')
-    at PanelBottomNavigationBar.getButton (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:205:43)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:189:111
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:6:105)
+    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:196)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:366
+    at new Promise (<anonymous>)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:99
+    at GameWebSocket.onSend (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:274:13)
+    at GameWebSocket.onLogIn (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:336:16)
+    at GameWebSocket.onWS_Open (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:351:16)
+2023-07-28 14:01:20-error: [Preview]unhandledrejection: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
+2023-07-28 14:01:20-error: [Preview]Error: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:273:29
     at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:8:196)
-2023-07-26 13:53:46-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'node') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-07-26 13:54:26-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-26 13:54:29-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'getButton')
-2023-07-26 13:54:29-error: [Preview]TypeError: Cannot read properties of undefined (reading 'getButton')
-    at PanelBottomNavigationBar.getButton (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:205:43)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:189:111
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:6:105)
+    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:196)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:366
+    at new Promise (<anonymous>)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:99
+    at GameWebSocket.onSend (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:274:13)
+    at GameWebSocket.onLogIn (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:336:16)
+    at GameWebSocket.onWS_Open (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:351:16)
+2023-07-28 14:01:30-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:01:36-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:01:46-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:01:53-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:01:58-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:02:10-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:02:14-error: [Preview]unhandledrejection: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
+2023-07-28 14:02:14-error: [Preview]Error: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:273:29
     at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:8:196)
-2023-07-26 13:55:02-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-26 13:55:06-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'getButton')
-2023-07-26 13:55:06-error: [Preview]TypeError: Cannot read properties of undefined (reading 'getButton')
-    at PanelBottomNavigationBar.getButton (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:205:43)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:189:111
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:6:105)
+    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:196)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:366
+    at new Promise (<anonymous>)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:99
+    at GameWebSocket.onSend (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:274:13)
+    at GameWebSocket.onLogIn (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:336:16)
+    at GameWebSocket.onWS_Open (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:351:16)
+2023-07-28 14:02:14-error: [Preview]unhandledrejection: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
+2023-07-28 14:02:14-error: [Preview]Error: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:273:29
     at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:8:196)
-2023-07-26 13:55:51-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-26 13:55:55-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'getButton')
-2023-07-26 13:55:55-error: [Preview]TypeError: Cannot read properties of undefined (reading 'getButton')
-    at PanelBottomNavigationBar.getButton (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:205:43)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:189:111
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:8:196)
-2023-07-26 13:56:18-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-26 13:56:22-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'getButton')
-2023-07-26 13:56:22-error: [Preview]TypeError: Cannot read properties of undefined (reading 'getButton')
-    at PanelBottomNavigationBar.getButton (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:205:43)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:189:111
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:8:196)
-2023-07-26 13:57:14-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-26 13:57:19-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'getButton')
-2023-07-26 13:57:19-error: [Preview]TypeError: Cannot read properties of undefined (reading 'getButton')
-    at PanelBottomNavigationBar.getButton (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:205:43)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:189:111
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:8:196)
-2023-07-26 13:59:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-26 13:59:16-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'getButton')
-2023-07-26 13:59:16-error: [Preview]TypeError: Cannot read properties of undefined (reading 'getButton')
-    at PanelBottomNavigationBar.getButton (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:205:43)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:189:111
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js:8:196)
-2023-07-26 14:05:01-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:6:105)
+    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:196)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:366
+    at new Promise (<anonymous>)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:99
+    at GameWebSocket.onSend (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:274:13)
+    at GameWebSocket.onLogIn (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:336:16)
+    at GameWebSocket.onWS_Open (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:351:16)
+2023-07-28 14:05:15-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:05:42-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:07:06-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:22:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:36:07-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:36:35-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:36:43-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:37:11-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:39:45-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:41:33-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:41:50-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:42:53-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:42:53-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-28 14:42:53-error: [Build] Get meta of script {asset(db://assets/Script/Asset/MusicAsset.ts)} failed!
+2023-07-28 14:42:53-error: [Build] Get asset info of script {asset(48b292de-9f87-4c28-b626-53c10ba6a9e4)} failed!

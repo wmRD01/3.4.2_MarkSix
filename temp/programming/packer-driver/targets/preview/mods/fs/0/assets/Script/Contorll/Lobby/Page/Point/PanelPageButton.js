@@ -87,11 +87,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.panelPoint = _node;
         }
 
-        start() {
+        onEnable() {
           this.panelRank.active = false;
           this.panelPoint.active = false;
           this.onChangePanel(null, PageType.Point.toString());
           this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).ChangePointPage, this.onChangePanel);
+        }
+
+        onDisable() {
+          this.deletEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).ChangePointPage, this.onChangePanel);
         }

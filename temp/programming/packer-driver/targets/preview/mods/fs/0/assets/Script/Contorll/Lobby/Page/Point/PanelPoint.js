@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Node, Prefab, ScrollView, Vec3, _decorator, BaseComponent, PointItemData, AssetType, AssetMng, RequestGPG, Player, PublicModel, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, PanelPoint;
+  var _reporterNs, _cclegacy, instantiate, Node, Prefab, ScrollView, Vec3, _decorator, BaseComponent, PointItemData, AssetType, AssetMng, RequestGPG, Player, PublicModel, PanelLoading, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, PanelPoint;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -47,6 +47,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("ResponseGPG", "../../../Api/GPGAPI/ResponseGPG", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfPanelLoading(extras) {
+    _reporterNs.report("PanelLoading", "../../../NoClearNode/PanelLoading", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -72,6 +76,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Player = _unresolved_7.default;
     }, function (_unresolved_8) {
       PublicModel = _unresolved_8.default;
+    }, function (_unresolved_9) {
+      PanelLoading = _unresolved_9.default;
     }],
     execute: function () {
       _crd = true;
@@ -127,8 +133,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onEnable() {
-          if (this.layoutContent.children.length > this.maxCount) return;
-          this.onViewBottom();
+          if (this.layoutContent.children.length > this.maxCount) this.returnFunction();
+
+          if (this.layoutContent.children.length == 0) {
+            this.onViewBottom();
+          } else this.returnFunction();
         }
 
         responseDrawHistory(response) {
@@ -163,9 +172,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           var _this2 = this;
 
           return _asyncToGenerator(function* () {
-            if (_this2.currentCount >= _this2.maxCount) return;
-            if (_this2.isDateMax) return;
-            if (_this2.isAsync) return;
+            if (_this2.currentCount >= _this2.maxCount) _this2.returnFunction();
+            if (_this2.isDateMax) _this2.returnFunction();
+            if (_this2.isAsync) _this2.returnFunction();
             _this2.isAsync = true;
             /**新增請求筆數 */
 
@@ -190,9 +199,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), RequestGPG) : RequestGPG).APIUrl.playAPI + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
             }), RequestGPG) : RequestGPG).API.DrawHistory + "?" + convert, _this2.responseDrawHistory.bind(_this2));
-            console.log("超過會走這?", _this2.currentCount);
+            console.error("超過會走這?", _this2.currentCount);
+            (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+              error: Error()
+            }), PanelLoading) : PanelLoading).instance.closeLoading();
             _this2.isAsync = false;
           })();
+        }
+
+        returnFunction() {
+          (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+            error: Error()
+          }), PanelLoading) : PanelLoading).instance.closeLoading();
+          return;
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class3.prototype, "item", [_dec2], {

@@ -23,25 +23,29 @@ const { ccclass, property } = _decorator;
 
 @ccclass('GameWebSocket')
 export default class GameWebSocket extends SocketModel {
+    isFirstData: boolean = true
     onEnable(): void {
         /**避免測試期間轉換到下一個場景的時候，又再次連線 */
-        console.log(PublicData.getInstance.checkLoading.checkState(CheckLoadingType.isWebSocketOpen));
 
-        if (PublicData.getInstance.checkLoading.checkState(CheckLoadingType.isWebSocketOpen)) {
+        if (CheckLoading.getInstance.checkState(CheckLoadingType.isWebSocketOpen)) {
             this.node.destroy()
             return
         }
-        this.judgePlatorm();
-        this.Setting();
-        this.MotifySetting()
-        this.eventSetting();
-        let getWebPlatform = this.urlData == undefined ? WebPlatform.Default : (this.urlData as URLVlaue).dc
-        /**由於打包出去後似乎會被意外轉成Obj，因此還要再次判斷 */
-        getWebPlatform = typeof getWebPlatform !== 'string' ? WebPlatform.Default : getWebPlatform
-        // console.error("最終結果：" + getWebPlatform);
-        //取得config拿取遊戲相關資料，其中包含連線的資訊
-        this.RomoteData(`${this.libPath}config/${GameData.getInstance.gameID}/${getWebPlatform}/game.json?${new Date().getTime()}`, this.connectToServer.bind(this), this.loadLanguageError.bind(this))
-        AssetMng.loadLogoAsset(this.UserLanguage)
+        if (this.isFirstData) {
+            this.judgePlatorm();
+            this.Setting();
+            this.MotifySetting()
+            this.eventSetting();
+            let getWebPlatform = this.urlData == undefined ? WebPlatform.Default : (this.urlData as URLVlaue).dc
+            /**由於打包出去後似乎會被意外轉成Obj，因此還要再次判斷 */
+            getWebPlatform = typeof getWebPlatform !== 'string' ? WebPlatform.Default : getWebPlatform
+            // console.error("最終結果：" + getWebPlatform);
+            //取得config拿取遊戲相關資料，其中包含連線的資訊
+            this.RomoteData(`${this.libPath}config/${GameData.getInstance.gameID}/${getWebPlatform}/game.json?${new Date().getTime()}`, this.connectToServer.bind(this), this.loadLanguageError.bind(this))
+            // AssetMng.loadLogoAsset(this.UserLanguage)
+        }
+        else
+            this.connectToServer();
     }
     onDisable() {
         this.closeWebsocket()
@@ -58,11 +62,14 @@ export default class GameWebSocket extends SocketModel {
         // this.RomoteData(`${this.libPath}config/${GameData.getInstance.gameID}/${getWebPlatform}/game.json?${new Date().getTime()}`, this.connectToServer.bind(this), this.loadLanguageError.bind(this))
         // AssetMng.loadLogoAsset(this.UserLanguage)
     }
-    connectToServer(jsonText: string) {
-        let jsonTo = JSON.parse(jsonText)
-        console.log(jsonTo);
-        PublicModel.getInstance.TwoClassCheckData(GameData.getInstance, jsonTo)
-        PublicModel.getInstance.TwoClassCheckData(this, jsonTo)
+    connectToServer(jsonText?: string) {
+        if (jsonText) {
+            let jsonTo = JSON.parse(jsonText)
+            console.log(jsonTo);
+            PublicModel.getInstance.TwoClassCheckData(GameData.getInstance, jsonTo)
+            PublicModel.getInstance.TwoClassCheckData(this, jsonTo)
+
+        }
         let host = `${this.connectionType}://${this.serverhost}:${this.serverport}`;
         console.log(host);
         this.startLoadLanguage()
@@ -138,9 +145,7 @@ export default class GameWebSocket extends SocketModel {
         PublicData.getInstance.language = this.UserLanguage
         console.log(_ln, "入房資訊");
         this.onSend(cmd, _ln)
-        /**與平台建立監聽溝通 */
-        PublicData.getInstance.castAPI = new CASTAPI()
-        PublicData.getInstance.castAPI.connet()
+        this.isFirstData = false
     }
 
 
@@ -215,10 +220,13 @@ export default class GameWebSocket extends SocketModel {
     closeWebsocket() {
         // this.isClose = true
         // CheckLoading.getInstance.resetState(CheckLoadingType.isWebSocketOpen);
-        if (!PublicData.getInstance.checkLoading.checkState(CheckLoadingType.isWebSocketOpen)) {
+
+        if (!CheckLoading.getInstance.checkState(CheckLoadingType.isWebSocketOpen)) {
             return
         }
+
         this.onSend(CommandType.usdis, {})
+        DelayTime.getInstance.StopGameHeartrate();
     }
     /////////////////////////////////////////////////////////////
     ///     lang載入設定.

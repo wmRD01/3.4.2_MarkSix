@@ -8,6 +8,7 @@ import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
 import Player from '../../../../Model/Player';
 import PublicModel from '../../../../Model/PublicModel';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
+import PanelLoading from '../../../NoClearNode/PanelLoading';
 const { ccclass, property } = _decorator;
 @ccclass('PanelPoint')
 export default class PanelPoint extends BaseComponent {
@@ -33,8 +34,12 @@ export default class PanelPoint extends BaseComponent {
         this.scrollview.node.on(ScrollView.EventType.SCROLL_TO_BOTTOM, this.onViewBottom, this)
     }
     onEnable() {
-        if (this.layoutContent.children.length > this.maxCount) return
-        this.onViewBottom()
+
+        if (this.layoutContent.children.length > this.maxCount) this.returnFunction()
+        if (this.layoutContent.children.length == 0) {
+            this.onViewBottom()
+        }
+        else this.returnFunction();
     }
     responseDrawHistory(response?: ResponseGPG.DrawHistory.DataClass) {
         if (this.currentCount == response.data.length) {
@@ -62,9 +67,9 @@ export default class PanelPoint extends BaseComponent {
 
     }
     async onViewBottom(_scrollview?: ScrollView) {
-        if (this.currentCount >= this.maxCount) return;
-        if (this.isDateMax) return
-        if (this.isAsync) return
+        if (this.currentCount >= this.maxCount) this.returnFunction()
+        if (this.isDateMax) this.returnFunction()
+        if (this.isAsync) this.returnFunction()
         this.isAsync = true;
         /**新增請求筆數 */
         let tryGet = this.currentCount + this.pageCount
@@ -75,8 +80,12 @@ export default class PanelPoint extends BaseComponent {
         await new RequestGPG.Request()
             .setToken(Player.getInstance.gpgToken)
             .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
-        console.log("超過會走這?", this.currentCount);
-
+        console.error("超過會走這?", this.currentCount);
+        PanelLoading.instance.closeLoading()
         this.isAsync = false;
+    }
+    returnFunction() {
+        PanelLoading.instance.closeLoading()
+        return;
     }
 }

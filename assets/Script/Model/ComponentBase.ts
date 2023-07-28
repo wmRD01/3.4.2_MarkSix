@@ -58,7 +58,7 @@ export default class BaseComponent extends Component {
     hide(): void {
         this.node.active = false
     }
-    reProcessing() {
+    reProcessing(any:any) {
 
     }
     startDelay() {

@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16", "__unresolved_17", "__unresolved_18", "__unresolved_19"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16", "__unresolved_17"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, log, sys, _decorator, ln, URLVlaue, MessageCommend, LangType, CheckLoadingType, CommandType, WebSocketEvent, PublicData, SocketModel, SocketSetting, DelayTime, CheckLoading, GameData, Player, PublicModel, GameControll, CASTAPI, PlayerIdentity, WebPlatform, AssetMng, Config, _dec, _class, _crd, ccclass, property, GameWebSocket;
+  var _reporterNs, _cclegacy, log, sys, _decorator, ln, URLVlaue, MessageCommend, LangType, CheckLoadingType, CommandType, WebSocketEvent, PublicData, SocketModel, SocketSetting, DelayTime, CheckLoading, GameData, Player, PublicModel, GameControll, PlayerIdentity, WebPlatform, Config, _dec, _class, _temp, _crd, ccclass, property, GameWebSocket;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -73,20 +73,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("GameControll", "../Contorll/GameControll/GameControll", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfCASTAPI(extras) {
-    _reporterNs.report("CASTAPI", "../Contorll/Api/CASTAPI", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfPlayerIdentity(extras) {
     _reporterNs.report("PlayerIdentity", "../Enum/PlayerIdentity", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfWebPlatform(extras) {
     _reporterNs.report("WebPlatform", "../Enum/WebPlatform", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfAssetMng(extras) {
-    _reporterNs.report("AssetMng", "../Manager/AssetMng", _context.meta, extras);
   }
 
   return {
@@ -129,13 +121,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_16) {
       GameControll = _unresolved_16.default;
     }, function (_unresolved_17) {
-      CASTAPI = _unresolved_17.CASTAPI;
+      PlayerIdentity = _unresolved_17.PlayerIdentity;
     }, function (_unresolved_18) {
-      PlayerIdentity = _unresolved_18.PlayerIdentity;
-    }, function (_unresolved_19) {
-      WebPlatform = _unresolved_19.WebPlatform;
-    }, function (_unresolved_20) {
-      AssetMng = _unresolved_20.default;
+      WebPlatform = _unresolved_18.WebPlatform;
     }],
     execute: function () {
       _crd = true;
@@ -147,46 +135,45 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", GameWebSocket = (_dec = ccclass('GameWebSocket'), _dec(_class = class GameWebSocket extends (_crd && SocketModel === void 0 ? (_reportPossibleCrUseOfSocketModel({
+      _export("default", GameWebSocket = (_dec = ccclass('GameWebSocket'), _dec(_class = (_temp = class GameWebSocket extends (_crd && SocketModel === void 0 ? (_reportPossibleCrUseOfSocketModel({
         error: Error()
       }), SocketModel) : SocketModel) {
+        constructor() {
+          super(...arguments);
+
+          _defineProperty(this, "isFirstData", true);
+        }
+
         onEnable() {
           /**避免測試期間轉換到下一個場景的時候，又再次連線 */
-          console.log((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+          if ((_crd && CheckLoading === void 0 ? (_reportPossibleCrUseOfCheckLoading({
             error: Error()
-          }), PublicData) : PublicData).getInstance.checkLoading.checkState((_crd && CheckLoadingType === void 0 ? (_reportPossibleCrUseOfCheckLoadingType({
-            error: Error()
-          }), CheckLoadingType) : CheckLoadingType).isWebSocketOpen));
-
-          if ((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.checkLoading.checkState((_crd && CheckLoadingType === void 0 ? (_reportPossibleCrUseOfCheckLoadingType({
+          }), CheckLoading) : CheckLoading).getInstance.checkState((_crd && CheckLoadingType === void 0 ? (_reportPossibleCrUseOfCheckLoadingType({
             error: Error()
           }), CheckLoadingType) : CheckLoadingType).isWebSocketOpen)) {
             this.node.destroy();
             return;
           }
 
-          this.judgePlatorm();
-          this.Setting();
-          this.MotifySetting();
-          this.eventSetting();
-          var getWebPlatform = this.urlData == undefined ? (_crd && WebPlatform === void 0 ? (_reportPossibleCrUseOfWebPlatform({
-            error: Error()
-          }), WebPlatform) : WebPlatform).Default : this.urlData.dc;
-          /**由於打包出去後似乎會被意外轉成Obj，因此還要再次判斷 */
+          if (this.isFirstData) {
+            this.judgePlatorm();
+            this.Setting();
+            this.MotifySetting();
+            this.eventSetting();
+            var getWebPlatform = this.urlData == undefined ? (_crd && WebPlatform === void 0 ? (_reportPossibleCrUseOfWebPlatform({
+              error: Error()
+            }), WebPlatform) : WebPlatform).Default : this.urlData.dc;
+            /**由於打包出去後似乎會被意外轉成Obj，因此還要再次判斷 */
 
-          getWebPlatform = typeof getWebPlatform !== 'string' ? (_crd && WebPlatform === void 0 ? (_reportPossibleCrUseOfWebPlatform({
-            error: Error()
-          }), WebPlatform) : WebPlatform).Default : getWebPlatform; // console.error("最終結果：" + getWebPlatform);
-          //取得config拿取遊戲相關資料，其中包含連線的資訊
+            getWebPlatform = typeof getWebPlatform !== 'string' ? (_crd && WebPlatform === void 0 ? (_reportPossibleCrUseOfWebPlatform({
+              error: Error()
+            }), WebPlatform) : WebPlatform).Default : getWebPlatform; // console.error("最終結果：" + getWebPlatform);
+            //取得config拿取遊戲相關資料，其中包含連線的資訊
 
-          this.RomoteData(this.libPath + "config/" + (_crd && GameData === void 0 ? (_reportPossibleCrUseOfGameData({
-            error: Error()
-          }), GameData) : GameData).getInstance.gameID + "/" + getWebPlatform + "/game.json?" + new Date().getTime(), this.connectToServer.bind(this), this.loadLanguageError.bind(this));
-          (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
-            error: Error()
-          }), AssetMng) : AssetMng).loadLogoAsset(this.UserLanguage);
+            this.RomoteData(this.libPath + "config/" + (_crd && GameData === void 0 ? (_reportPossibleCrUseOfGameData({
+              error: Error()
+            }), GameData) : GameData).getInstance.gameID + "/" + getWebPlatform + "/game.json?" + new Date().getTime(), this.connectToServer.bind(this), this.loadLanguageError.bind(this)); // AssetMng.loadLogoAsset(this.UserLanguage)
+          } else this.connectToServer();
         }
 
         onDisable() {
@@ -207,16 +194,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         connectToServer(jsonText) {
-          var jsonTo = JSON.parse(jsonText);
-          console.log(jsonTo);
-          (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-            error: Error()
-          }), PublicModel) : PublicModel).getInstance.TwoClassCheckData((_crd && GameData === void 0 ? (_reportPossibleCrUseOfGameData({
-            error: Error()
-          }), GameData) : GameData).getInstance, jsonTo);
-          (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-            error: Error()
-          }), PublicModel) : PublicModel).getInstance.TwoClassCheckData(this, jsonTo);
+          if (jsonText) {
+            var jsonTo = JSON.parse(jsonText);
+            console.log(jsonTo);
+            (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.TwoClassCheckData((_crd && GameData === void 0 ? (_reportPossibleCrUseOfGameData({
+              error: Error()
+            }), GameData) : GameData).getInstance, jsonTo);
+            (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.TwoClassCheckData(this, jsonTo);
+          }
+
           var host = this.connectionType + "://" + this.serverhost + ":" + this.serverport;
           console.log(host);
           this.startLoadLanguage();
@@ -344,16 +334,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), PublicData) : PublicData).getInstance.language = this.UserLanguage;
           console.log(_ln, "入房資訊");
           this.onSend(cmd, _ln);
-          /**與平台建立監聽溝通 */
-
-          (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.castAPI = new (_crd && CASTAPI === void 0 ? (_reportPossibleCrUseOfCASTAPI({
-            error: Error()
-          }), CASTAPI) : CASTAPI)();
-          (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.castAPI.connet();
+          this.isFirstData = false;
         } /////////////////////////////////////////////////////////////
         ///     web socket event.
         /////////////////////////////////////////////////////////////
@@ -455,9 +436,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         closeWebsocket() {
           // this.isClose = true
           // CheckLoading.getInstance.resetState(CheckLoadingType.isWebSocketOpen);
-          if (!(_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+          if (!(_crd && CheckLoading === void 0 ? (_reportPossibleCrUseOfCheckLoading({
             error: Error()
-          }), PublicData) : PublicData).getInstance.checkLoading.checkState((_crd && CheckLoadingType === void 0 ? (_reportPossibleCrUseOfCheckLoadingType({
+          }), CheckLoading) : CheckLoading).getInstance.checkState((_crd && CheckLoadingType === void 0 ? (_reportPossibleCrUseOfCheckLoadingType({
             error: Error()
           }), CheckLoadingType) : CheckLoadingType).isWebSocketOpen)) {
             return;
@@ -466,6 +447,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.onSend((_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
             error: Error()
           }), CommandType) : CommandType).usdis, {});
+          (_crd && DelayTime === void 0 ? (_reportPossibleCrUseOfDelayTime({
+            error: Error()
+          }), DelayTime) : DelayTime).getInstance.StopGameHeartrate();
         } /////////////////////////////////////////////////////////////
         ///     lang載入設定.
         /////////////////////////////////////////////////////////////
@@ -605,7 +589,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // MainModelUp.instance.ShowMessageBox = true;
         }
 
-      }) || _class));
+      }, _temp)) || _class));
 
       Config = class Config {
         constructor() {

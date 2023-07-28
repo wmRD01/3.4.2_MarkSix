@@ -4,5 +4,7 @@ export enum LobbyStateEvent {
     ActivePanelClientInfo = "ActivePanelClientInfo",
     ActivePanelClientEdit = "ActivePanelClientEdit",
     ChangePlayerPicture = "ChangePlayerPicture",
-    UpDataPlayer="UpDataPlayer",
+    UpDatePlayer="UpDatePlayer",
+    UpDateBall="UpDateBall",
+
 }

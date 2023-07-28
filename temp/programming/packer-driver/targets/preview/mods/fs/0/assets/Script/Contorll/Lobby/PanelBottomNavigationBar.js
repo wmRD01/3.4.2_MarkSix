@@ -132,7 +132,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
               error: Error()
-            }), AssetType) : AssetType).Sprite); // PageControll.instance.pageEvnet.on(PageAction.ChangeTo, this.onMoveCircle, this)
+            }), AssetType) : AssetType).Sprite);
+            console.log("誰搶誰"); // PageControll.instance.pageEvnet.on(PageAction.ChangeTo, this.onMoveCircle, this)
 
             for (var index = 0; index < _this.btns.length; index++) {
               var _page = new Page(_this.btns[index], index);
@@ -155,7 +156,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), NotificationType) : NotificationType).Page).on((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
-          }), PageAction) : PageAction).ChangeTo, this.onEventChangeTo, this);
+          }), PageAction) : PageAction).ChangeTo, this.onMoveCircle, this);
         }
 
         onDisable() {
@@ -165,14 +166,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), NotificationType) : NotificationType).Page).off((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
-          }), PageAction) : PageAction).ChangeTo, this.onEventChangeTo, this);
+          }), PageAction) : PageAction).ChangeTo, this.onMoveCircle, this);
         }
 
-        onEventChangeTo(index) {
-          this.onMoveCircle(null, index.toString());
+        onEmitMoveCircle(e, customEventData) {
+          return _asyncToGenerator(function* () {
+            (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+              error: Error()
+            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
+              error: Error()
+            }), NotificationType) : NotificationType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
+              error: Error()
+            }), PageAction) : PageAction).ChangeTo, Number(customEventData));
+          })();
         }
 
-        onMoveCircle(e, customEventData) {
+        onMoveCircle(index) {
           var _this2 = this;
 
           return _asyncToGenerator(function* () {
@@ -181,28 +190,37 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
               error: Error()
             }), AssetType) : AssetType).Sprite);
-            if (_this2.currentIndex == Number(customEventData)) return;
+            console.error("誰搶誰");
+            if (_this2.currentIndex == Number(index)) return;
             _this2.lastIndex = _this2.currentIndex;
-            _this2.currentIndex = Number(customEventData);
+            _this2.currentIndex = Number(index);
+            if (_this2.mapButton.size == 0) yield _this2.waitButton();
             var getX = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
               error: Error()
             }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(_this2.nodeCircle, _this2.getButton(_this2.currentIndex).node).x;
             _this2.goTarget = v3(getX, _this2.circleY);
 
             _this2.startAction();
-
-            (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-              error: Error()
-            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
-              error: Error()
-            }), NotificationType) : NotificationType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
-              error: Error()
-            }), PageAction) : PageAction).ChangeTo, _this2.currentIndex);
           })();
         }
 
         getButton(index) {
           return this.mapButton.get(index).getButton();
+        }
+
+        waitButton() {
+          var _this3 = this;
+
+          return _asyncToGenerator(function* () {
+            return new Promise((resolve, reject) => {
+              var inter = setInterval(() => {
+                if (_this3.mapButton.size != 0) {
+                  resolve();
+                  clearInterval(inter);
+                }
+              }, 500);
+            });
+          })();
         }
 
         startAction() {

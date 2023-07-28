@@ -48,9 +48,10 @@ System.register(["cc"], function (_export, _context) {
 
           async fetchData(_url, callback) {
             // console.log(_url);
+            // console.log(this);
             // console.log(_url.split("?"));
             // console.log(_url.split("?")[0].split("/"));
-            console.log(_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length]);
+            // console.log(_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length]);
             return new Promise((resolve, reject) => {
               let data;
               fetch(_url, this).then(response => response.json()).then(response => data = response).catch(err => reject).then(response => console.log(`資料名稱：${_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length - 1]}`)).then(response => console.log(`資料內容`, data)).then(response => callback(data)).then(resolve);
@@ -129,6 +130,17 @@ System.register(["cc"], function (_export, _context) {
             class DrawUpcoming extends base {}
 
             _NeedToken.DrawUpcoming = DrawUpcoming;
+
+            class UploadAvatar extends base {
+              constructor(...args) {
+                super(...args);
+
+                _defineProperty(this, "File", void 0);
+              }
+
+            }
+
+            _NeedToken.UploadAvatar = UploadAvatar;
           })(NeedToken || (NeedToken = _Body.NeedToken || (_Body.NeedToken = {})));
 
           let NotNeedToken;
@@ -181,11 +193,12 @@ System.register(["cc"], function (_export, _context) {
         let API;
 
         (function (API) {
+          API["UploadAvatar"] = "/Member/UploadAvatar";
           API["CertifiedEmall"] = "/Member/CertifiedEmail";
-          API["SendRegisterVerification"] = "/Token/SendRegisterVerification";
-          API["ValidateContactInfo"] = "/Token/ValidateContactInfo";
           API["MyInfo"] = "/Member/MyInfo";
           API["Nickname"] = "/Member/Nickname";
+          API["SendRegisterVerification"] = "/Token/SendRegisterVerification";
+          API["ValidateContactInfo"] = "/Token/ValidateContactInfo";
           API["DrawHistory"] = "/Mark6/Draw_History";
           API["DrawUpcoming"] = "/Mark6/Draw_Upcoming";
         })(API || (API = {}));

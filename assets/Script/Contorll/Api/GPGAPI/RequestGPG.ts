@@ -22,10 +22,10 @@ export namespace RequestGPG {
         }
         async fetchData(_url: string, callback: Function) {
             // console.log(_url);
+            // console.log(this);
             // console.log(_url.split("?"));
             // console.log(_url.split("?")[0].split("/"));
-
-            console.log(_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length]);
+            // console.log(_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length]);
             return new Promise<void>((resolve, reject) => {
                 let data;
                 fetch(_url, this)
@@ -72,6 +72,9 @@ export namespace RequestGPG {
             export class DrawUpcoming extends base {
                 [x: string]: string;
             }
+            export class UploadAvatar extends base {
+                File:File;
+            }
 
         }
         export namespace NotNeedToken {
@@ -91,7 +94,7 @@ export namespace RequestGPG {
                 Locale: string = "zh-TW";
                 Email: string;
             }
-
+  
 
         }
 
@@ -107,11 +110,12 @@ export namespace RequestGPG {
         ids = "https://ids.ceis.tw"
     }
     export enum API {
+        UploadAvatar = "/Member/UploadAvatar",
         CertifiedEmall = "/Member/CertifiedEmail",
-        SendRegisterVerification = "/Token/SendRegisterVerification",
-        ValidateContactInfo = "/Token/ValidateContactInfo",
         MyInfo = "/Member/MyInfo",
         Nickname = "/Member/Nickname",
+        SendRegisterVerification = "/Token/SendRegisterVerification",
+        ValidateContactInfo = "/Token/ValidateContactInfo",
         DrawHistory = "/Mark6/Draw_History",
         DrawUpcoming = "/Mark6/Draw_Upcoming",
     }

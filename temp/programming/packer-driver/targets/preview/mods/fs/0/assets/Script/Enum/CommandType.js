@@ -18,6 +18,7 @@ System.register(["cc"], function (_export, _context) {
         CommandType["ln"] = "ln";
         CommandType["bet"] = "bet";
         CommandType["usdis"] = "usdis";
+        CommandType["sschk"] = "sschk";
       })(CommandType || _export("CommandType", CommandType = {}));
 
       _cclegacy._RF.pop();

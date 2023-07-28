@@ -66,7 +66,6 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         let rex = /[\p{P}+\u2100-\u214F]/u
         return rex.test(str)
     }
-    /**確認名稱長度 */
     checkNameLen(name: string, len: number) {
         let word = name.split(/\w*/).filter(x => x != "")
         let notWord = name.split(/\W*/).filter(x => x != "")
@@ -74,6 +73,14 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         if (countLen > len)
             name = this.reName(name, len);
         return name
+
+    }
+    /**確認名稱長度 */
+    changeNameLen(name: string) {
+        let word = name.split(/\w*/).filter(x => x != "")
+        let notWord = name.split(/\W*/).filter(x => x != "")
+        let countLen = word.length + (Math.floor(notWord.length / 2))//英文數字兩個字元=1個中文字長度
+        return countLen
     }
     /** 將8位數之後的文字"..."化 */
     private reName(name: string, len: number) {
@@ -200,8 +207,8 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
             delete sign.sign
         const dataWithApiKey = this.sortObj(sign, PublicData.getInstance.gpgApi);
         console.log(dataWithApiKey);
+        console.log(CryptoES.MD5(dataWithApiKey).toString());
         return CryptoES.MD5(dataWithApiKey).toString()
-        // console.log(body);
     }
     convertMD5(str: string) {
         return CryptoES.MD5(str).toString()

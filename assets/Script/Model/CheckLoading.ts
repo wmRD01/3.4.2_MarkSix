@@ -30,7 +30,11 @@ export default class CheckLoading extends BaseSingleton<CheckLoading>() {
         })
     }
     endWork(type: CheckLoadingType) {
+        console.log(`當前直${type}：${this.checkState(type)}`);
+
         this.map_CheckList.set(type, true)
+        console.log(`當前直${type}：${this.checkState(type)}`);
+
     }
     resetState(type: CheckLoadingType) {
         this.map_CheckList.set(type, false)

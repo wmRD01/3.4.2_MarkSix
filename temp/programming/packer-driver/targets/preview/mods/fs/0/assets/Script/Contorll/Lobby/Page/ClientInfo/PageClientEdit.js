@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Node, Sprite, _decorator, NotificationType, LobbyStateEvent, EventMng, BaseComponent, Player, RequestGPG, MyEditBox, PublicModel, CreateFileSprite, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PageClientEdit;
+  var _reporterNs, _cclegacy, Button, Node, Sprite, _decorator, NotificationType, LobbyStateEvent, EventMng, BaseComponent, Player, RequestGPG, MyEditBox, PublicModel, CreateFileSprite, PanelLoading, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PageClientEdit;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -55,6 +55,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("CreateFileSprite", "../../../../Model/CreateFileSprite", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfPanelLoading(extras) {
+    _reporterNs.report("PanelLoading", "../../../NoClearNode/PanelLoading", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -82,6 +86,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       PublicModel = _unresolved_9.default;
     }, function (_unresolved_10) {
       CreateFileSprite = _unresolved_10.default;
+    }, function (_unresolved_11) {
+      PanelLoading = _unresolved_11.default;
     }],
     execute: function () {
       _crd = true;
@@ -122,6 +128,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "spritePlayer", _descriptor8, this);
 
           _defineProperty(this, "isChangePicture", false);
+
+          _defineProperty(this, "isCheckCertifiedEmall", false);
+
+          _defineProperty(this, "isCheckNicename", false);
+
+          _defineProperty(this, "isCheckuploadAvatar", false);
+
+          _defineProperty(this, "imageFile", null);
         }
 
         onLoad() {
@@ -143,114 +157,84 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.hide();
         }
 
-        start() {
+        onEnable() {
           this.editEmail.string = "";
           this.editNicName.string = "";
-          this.editVerificationCode.string = "";
-        }
+          this.editVerificationCode.string = ""; // this.onValidateContactInfo()
 
-        onEnable() {
-          // this.onValidateContactInfo()
           this.isChangePicture = false;
-          return;
+          this.isCheckCertifiedEmall = false;
+          this.isCheckNicename = false;
+          this.isCheckuploadAvatar = false;
+          this.imageFile = null;
           if ((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
             error: Error()
-          }), Player) : Player).getInstance.gpgInfo.data.email != "" || (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+          }), Player) : Player).getInstance.gpgInfo.data.email == "" || (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
             error: Error()
-          }), Player) : Player).getInstance.gpgInfo.data.email != null || (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+          }), Player) : Player).getInstance.gpgInfo.data.email == null || (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
             error: Error()
-          }), Player) : Player).getInstance.gpgInfo.data.email != undefined) this.activeVerificationCode(false);else this.activeVerificationCode(true);
+          }), Player) : Player).getInstance.gpgInfo.data.email == undefined) this.activeVerificationCode(true);else this.activeVerificationCode(false);
+          return;
         }
+        /**送出修改NickName */
 
-        activePanel(bool) {
-          bool ? this.show() : this.hide();
-        }
 
-        onTestNickName() {
+        motifyNickName() {
           var _this = this;
 
           return _asyncToGenerator(function* () {
-            var body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-              error: Error()
-            }), RequestGPG) : RequestGPG).Body.NeedToken.Nickname();
-            body.nickname = "我修改拉";
-            body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-              error: Error()
-            }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-              error: Error()
-            }), RequestGPG) : RequestGPG).Body.NeedToken.Nickname);
-            yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-              error: Error()
-            }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-              error: Error()
-            }), RequestGPG) : RequestGPG).Method.POST).setBody(JSON.stringify(body)).setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
-              error: Error()
-            }), Player) : Player).getInstance.gpgToken).fetchData("" + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-              error: Error()
-            }), RequestGPG) : RequestGPG).APIUrl.playAPI + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-              error: Error()
-            }), RequestGPG) : RequestGPG).API.Nickname, _this.responseSendLoginVerification.bind(_this));
+            return new Promise( /*#__PURE__*/function () {
+              var _ref = _asyncToGenerator(function* (resolve, reject) {
+                var body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Body.NeedToken.Nickname();
+                body.nickname = _this.editNicName.string;
+                body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+                  error: Error()
+                }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Body.NeedToken.Nickname);
+                console.log(body);
+                yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Method.POST).setBody(JSON.stringify(body)).setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+                  error: Error()
+                }), Player) : Player).getInstance.gpgToken).fetchData("" + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).APIUrl.playAPI + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).API.Nickname, _this.responseNickname.bind(_this));
+                resolve();
+              });
+
+              return function (_x, _x2) {
+                return _ref.apply(this, arguments);
+              };
+            }());
           })();
         }
+        /**驗證碼發送是否成功 */
 
-        responetest(response) {
-          console.log(response);
+
+        responseNickname(response) {
+          console.log("Nickname", response);
+
+          if (response.Status.Code == "0") {
+            console.log("過關惹");
+            this.isCheckNicename = true;
+          }
         }
-
-        onSelectPhoto() {
-          new (_crd && CreateFileSprite === void 0 ? (_reportPossibleCrUseOfCreateFileSprite({
-            error: Error()
-          }), CreateFileSprite) : CreateFileSprite)(this.onChangePlayerPicture.bind(this));
-        }
-
-        onActivePanel(e, customEventData) {
-          this.hide();
-          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-            error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
-            error: Error()
-          }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
-            error: Error()
-          }), LobbyStateEvent) : LobbyStateEvent).ActivePanelClientInfo, true);
-        }
-
-        activeVerificationCode(bool) {
-          this.editVerificationCode.spriteBG.node.active = bool;
-          this.editEmail.spriteBG.node.active = bool;
-          this.NodeEmail.active = bool;
-          this.NodeVerificationCode.active = bool;
-          this.btnVerificationCode.node.active = bool;
-          if (!bool) this.btnsFunction.position = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-            error: Error()
-          }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(this.btnsFunction, this.editEmail.spriteBG.node);
-        }
-
-        onChangePlayerPicture(_spriteFrame) {
-          this.spritePlayer.spriteFrame = _spriteFrame;
-          this.isChangePicture = true;
-        }
-        /**ClientEdit */
-
-        /**進行發送驗證碼時，必須先通過確認手機是否被註冊過，確認沒有驗證過就會SendLog */
+        /**進行發送驗證碼時，必須先通過確認手機是否被註冊過 */
 
 
         onValidateContactInfo() {
           var _this2 = this;
 
           return _asyncToGenerator(function* () {
-            /**確認是否有需要驗證戲箱 */
-            if (_this2.editEmail.string == "") {
-              console.error("信箱不可空白");
-              return;
-            }
-
-            if (!_this2.checkEmailRegular(_this2.editEmail.string)) {
-              console.error("信箱格式不正確");
-              return;
-            }
-            /** */
-
-
+            /**確認信箱格式 */
+            if (!_this2.checkEmail(_this2.editEmail.string)) return;
             var body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
             }), RequestGPG) : RequestGPG).Body.NotNeedToken.ValidateContactInfo();
@@ -266,39 +250,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), RequestGPG) : RequestGPG).API.ValidateContactInfo, _this2.responseValidateContactInfo.bind(_this2));
           })();
         }
-        /**送出前須確認驗證碼的正確性，但前題是他必須得先需要註冊信箱時才會接這個function */
-
-
-        onCertification() {
-          var _this3 = this;
-
-          return _asyncToGenerator(function* () {
-            var body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-              error: Error()
-            }), RequestGPG) : RequestGPG).Body.NeedToken.CertifiedEmail();
-            body.email = _this3.editEmail.string;
-            body.verifyCode = _this3.editVerificationCode.string;
-            body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-              error: Error()
-            }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-              error: Error()
-            }), RequestGPG) : RequestGPG).Body.NeedToken.CertifiedEmail);
-            yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-              error: Error()
-            }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-              error: Error()
-            }), RequestGPG) : RequestGPG).Method.POST).setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
-              error: Error()
-            }), Player) : Player).getInstance.gpgToken).setBody(JSON.stringify(body)).fetchData("" + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-              error: Error()
-            }), RequestGPG) : RequestGPG).APIUrl.playAPI + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-              error: Error()
-            }), RequestGPG) : RequestGPG).API.ValidateContactInfo, _this3.responseSendLoginVerification.bind(_this3));
-          })();
-        }
 
         responseValidateContactInfo(response) {
-          var _this4 = this;
+          var _this3 = this;
 
           return _asyncToGenerator(function* () {
             console.log("ValidateContactInfo", response);
@@ -313,7 +267,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               var sendBody = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
                 error: Error()
               }), RequestGPG) : RequestGPG).Body.NotNeedToken.SendRegisterVerification();
-              sendBody.Email = _this4.editEmail.string;
+              sendBody.Email = _this3.editEmail.string;
               yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
                 error: Error()
               }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
@@ -322,19 +276,187 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 error: Error()
               }), RequestGPG) : RequestGPG).APIUrl.ids + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
                 error: Error()
-              }), RequestGPG) : RequestGPG).API.SendRegisterVerification, _this4.responseSendLoginVerification.bind(_this4));
+              }), RequestGPG) : RequestGPG).API.SendRegisterVerification, _this3.responseSendRegisterVerification.bind(_this3));
             }
           })();
         }
         /**驗證碼發送是否成功 */
 
 
-        responseSendLoginVerification(response) {
+        responseSendRegisterVerification(response) {
           console.log("SendRegisterVerification", response);
 
           if (response.Status.Code == "0") {
-            console.log("過關惹");
+            console.log("送出驗證碼囉");
           }
+        }
+        /**送出前須確認驗證碼的正確性，但前題是他必須得先需要註冊信箱時才會接這個function */
+
+
+        certifiedEmall() {
+          var _this4 = this;
+
+          return _asyncToGenerator(function* () {
+            /**確認信箱格式 */
+            return new Promise( /*#__PURE__*/function () {
+              var _ref2 = _asyncToGenerator(function* (resolve, reject) {
+                var body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Body.NeedToken.CertifiedEmail();
+                body.email = _this4.editEmail.string;
+                body.verifyCode = _this4.editVerificationCode.string;
+                body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+                  error: Error()
+                }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Body.NeedToken.CertifiedEmail);
+                yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Method.POST).setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+                  error: Error()
+                }), Player) : Player).getInstance.gpgToken).setBody(JSON.stringify(body)).fetchData("" + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).APIUrl.playAPI + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).API.CertifiedEmall, _this4.responseCertifiedEmall.bind(_this4));
+                resolve();
+              });
+
+              return function (_x3, _x4) {
+                return _ref2.apply(this, arguments);
+              };
+            }());
+          })();
+        }
+        /**是否修改信箱成功 */
+
+
+        responseCertifiedEmall(response) {
+          console.log("CertifiedEmall", response);
+
+          if (response.Status.Code == "0") {
+            console.log("過關惹");
+            this.isCheckCertifiedEmall = true;
+          }
+        }
+
+        uploadAvatar() {
+          var _this5 = this;
+
+          return _asyncToGenerator(function* () {
+            return new Promise( /*#__PURE__*/function () {
+              var _ref3 = _asyncToGenerator(function* (resolve, reject) {
+                var body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Body.NeedToken.UploadAvatar();
+                body.File = _this5.imageFile;
+                body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+                  error: Error()
+                }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Body.NeedToken.UploadAvatar);
+                yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Method.POST).setBody(JSON.stringify(body)).setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+                  error: Error()
+                }), Player) : Player).getInstance.gpgToken).fetchData("" + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).APIUrl.playAPI + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).API.UploadAvatar, _this5.responseUploadAvatar.bind(_this5));
+                resolve();
+              });
+
+              return function (_x5, _x6) {
+                return _ref3.apply(this, arguments);
+              };
+            }());
+          })();
+        }
+
+        responseUploadAvatar(response) {
+          console.log(response);
+        }
+
+        onCheckMotify() {
+          var _this6 = this;
+
+          return _asyncToGenerator(function* () {
+            if (!_this6.checkName(_this6.editNicName.string)) return;
+            if (!_this6.checkEmail(_this6.editEmail.string)) return;
+            if (!_this6.checkVerification(_this6.editVerificationCode.string)) return;
+            (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+              error: Error()
+            }), PanelLoading) : PanelLoading).instance.openLoading("資料更新中");
+            _this6.isCheckNicename = false;
+            _this6.isCheckCertifiedEmall = false;
+            yield _this6.certifiedEmall();
+            if (!_this6.isCheckCertifiedEmall) return;
+            yield _this6.motifyNickName();
+            if (!_this6.isCheckNicename) return;
+            (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+              error: Error()
+            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
+              error: Error()
+            }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+              error: Error()
+            }), LobbyStateEvent) : LobbyStateEvent).UpDatePlayer);
+            if (_this6.isChangePicture) (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+              error: Error()
+            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
+              error: Error()
+            }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+              error: Error()
+            }), LobbyStateEvent) : LobbyStateEvent).ChangePlayerPicture, _this6.spritePlayer.spriteFrame);
+
+            _this6.onActivePanel(null);
+
+            return;
+          })();
+        }
+
+        activePanel(bool) {
+          bool ? this.show() : this.hide();
+        }
+
+        onSelectPhoto() {
+          new (_crd && CreateFileSprite === void 0 ? (_reportPossibleCrUseOfCreateFileSprite({
+            error: Error()
+          }), CreateFileSprite) : CreateFileSprite)(this.onChangePlayerPicture.bind(this));
+        }
+
+        onChangePlayerPicture(_spriteFrame, file) {
+          this.spritePlayer.spriteFrame = _spriteFrame;
+          this.isChangePicture = true;
+          this.imageFile = file;
+          this.uploadAvatar();
+        }
+
+        onActivePanel(e, customEventData) {
+          this.hide();
+          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+            error: Error()
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
+            error: Error()
+          }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).ActivePanelClientInfo, true);
+        }
+
+        activeVerificationCode(bool) {
+          console.log(bool);
+          this.editVerificationCode.spriteBG.node.active = bool;
+          this.editEmail.spriteBG.node.active = bool;
+          this.NodeEmail.active = bool;
+          this.NodeVerificationCode.active = bool;
+          this.btnVerificationCode.node.active = bool;
+          if (!bool) this.btnsFunction.position = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(this.btnsFunction, this.editEmail.spriteBG.node);
         }
         /**確認信箱格式 */
 
@@ -352,45 +474,79 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
         }
 
-        onCheckMotify() {
-          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-            error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
-            error: Error()
-          }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
-            error: Error()
-          }), LobbyStateEvent) : LobbyStateEvent).UpDataPlayer);
-          this.onActivePanel(null);
-          return;
-
-          if (this.editNicName.string == (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
-            error: Error()
-          }), Player) : Player).getInstance.nickname) {
-            console.error("會員資料與之前相同");
-            return;
-          }
-          /**確認是否有需要驗證戲箱 */
-
-
-          if (this.NodeEmail.active) {
-            if (!this.checkEmailRegular(this.editEmail.string)) {
-              console.error("信箱格式不正確]");
-              return;
-            }
-
-            this.onValidateContactInfo();
+        checkName(str) {
+          if (str.length == 0) {
+            console.error("請輸入文字");
+            return false;
           }
 
-          if (this.isChangePicture) (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+          if (/\s/.test(str)) {
+            console.error("文字有空白");
+            return false;
+          }
+
+          if (!(_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
-            error: Error()
-          }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
-            error: Error()
-          }), LobbyStateEvent) : LobbyStateEvent).ChangePlayerPicture, this.spritePlayer.spriteFrame);
+          }), PublicModel) : PublicModel).getInstance.checkNicknameCondition(str)) {
+            console.error("出現非法文字");
+            return false;
+          }
+
+          if (str.length < 2 || str.length > 16) {
+            console.error("長度須為2~16");
+            return false;
+            ;
+          }
+
+          return true;
         }
-        /**排序物件順序並且queryString */
+        /**
+         * 
+         * @param str 信箱
+         */
 
+
+        checkEmail(str) {
+          if (str.length == 0) {
+            console.error("請輸入文字");
+            return false;
+          }
+
+          if (/\s/.test(str)) {
+            console.error("文字有空白");
+            return false;
+          }
+
+          if (!this.checkEmailRegular(str)) {
+            console.error("出現非法文字");
+            return false;
+          }
+
+          return true;
+        }
+        /**
+         * @param verification 驗證碼  
+         */
+
+
+        checkVerification(str) {
+          if (str.length == 0) {
+            console.error("請輸入數字");
+            return false;
+          }
+
+          if (/\s/.test(str)) {
+            console.error("文字有空白");
+            return false;
+          }
+
+          if (str.length != 6) {
+            console.error("驗證碼最少六碼");
+            return false;
+          }
+
+          return true;
+        }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "editNicName", [_dec2], {
         configurable: true,

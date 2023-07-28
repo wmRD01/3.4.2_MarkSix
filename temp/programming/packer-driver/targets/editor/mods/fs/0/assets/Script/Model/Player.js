@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, BaseSingleton, ResponseGPG, CoinType, PlayerIdentity, GameData, Player, _crd;
+  var _reporterNs, _cclegacy, BaseSingleton, CoinType, PlayerIdentity, GameData, Player, _crd;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -35,13 +35,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_2) {
       BaseSingleton = _unresolved_2.default;
     }, function (_unresolved_3) {
-      ResponseGPG = _unresolved_3.ResponseGPG;
+      CoinType = _unresolved_3.CoinType;
     }, function (_unresolved_4) {
-      CoinType = _unresolved_4.CoinType;
+      PlayerIdentity = _unresolved_4.PlayerIdentity;
     }, function (_unresolved_5) {
-      PlayerIdentity = _unresolved_5.PlayerIdentity;
-    }, function (_unresolved_6) {
-      GameData = _unresolved_6.default;
+      GameData = _unresolved_5.default;
     }],
     execute: function () {
       _crd = true;
@@ -74,9 +72,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), PlayerIdentity) : PlayerIdentity).Member);
 
-          _defineProperty(this, "gpgInfo", new (_crd && ResponseGPG === void 0 ? (_reportPossibleCrUseOfResponseGPG({
-            error: Error()
-          }), ResponseGPG) : ResponseGPG).MyInfo.DataClass());
+          _defineProperty(this, "gpgInfo", void 0);
 
           _defineProperty(this, "gpgToken", "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjExMkVFRDgwNzBBMEY5RkIzRUI3RDc3RkU3NjAxMTU0IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2OTAxNzAxODIsImV4cCI6MTY5Mjc2MjE4MiwiaXNzIjoiaHR0cHM6Ly9pZHMuY2Vpcy50dyIsImNsaWVudF9pZCI6Im1hcmtfc2l4Iiwic3ViIjoiMjMyNCIsImF1dGhfdGltZSI6MTY5MDE3MDE4MiwiaWRwIjoibG9jYWwiLCJNZW1iZXJJRCI6IjIzMjQiLCJqdGkiOiJBNDlCMzAyNUQxMTQ3M0MxNERFQ0I4QkNDNjBFNUYyMiIsImlhdCI6MTY5MDE3MDE4Miwic2NvcGUiOlsibWFyazYuZHJhdy5oaXN0b3J5IiwibWFyazYuc2NvcmUudXNlciIsIm1lbWJlci5pbmZvLnVzZXIiXSwiYW1yIjpbIm1rX3Bob25lIl19.N1iOb6EpmOCDWC9NebkYsOpXNNygXJH4qK5JtOEvr-GhJ6WZDi0RVnQF9svHRFXNL_xCzUXbJZbQhuxqLTcSffIy5-1h2hHYDoOUIa4I0nIbWyBT0-L-K1p2t_COaCiKrgFjE1qIhDFmSnGF6_XjMsCLYsL5ZASy-SnIz28tgGCNmKlpvsIM_rlvkwoQut3h66PrxVNToZ7HsUM3-8tuSWGFqnbgHBdnGPMH74LP3pesf7KWHIYp7fNj6u9mvo2SL5Y_8dmUKWF-0cHgwDLM-UC0PrjARv1eECTKVZFXnLhcp_uqCFm8-UHRA5hjIT5myvzYRQpGCsrBR7jYT-VAFg");
         }

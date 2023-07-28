@@ -134,9 +134,55 @@ System.register(["cc"], function (_export, _context) {
           }
         })(SendRegisterVerification || (SendRegisterVerification = _ResponseGPG.SendRegisterVerification || (_ResponseGPG.SendRegisterVerification = {})));
 
-        let Certification;
+        let Nickname;
 
-        (function (_Certification) {
+        (function (_Nickname) {
+          class DataClass {
+            constructor() {
+              _defineProperty(this, "Status", new State());
+            }
+
+          }
+
+          _Nickname.DataClass = DataClass;
+
+          class State {
+            constructor() {
+              _defineProperty(this, "Code", void 0);
+
+              _defineProperty(this, "Message", void 0);
+            }
+
+          }
+        })(Nickname || (Nickname = _ResponseGPG.Nickname || (_ResponseGPG.Nickname = {})));
+
+        let UploadAvatar;
+
+        (function (_UploadAvatar) {
+          class DataClass {
+            constructor() {
+              _defineProperty(this, "AvatarUrl", void 0);
+
+              _defineProperty(this, "Status", new State());
+            }
+
+          }
+
+          _UploadAvatar.DataClass = DataClass;
+
+          class State {
+            constructor() {
+              _defineProperty(this, "Code", void 0);
+
+              _defineProperty(this, "Message", void 0);
+            }
+
+          }
+        })(UploadAvatar || (UploadAvatar = _ResponseGPG.UploadAvatar || (_ResponseGPG.UploadAvatar = {})));
+
+        let CertifiedEmall;
+
+        (function (_CertifiedEmall) {
           class DataClass {
             constructor() {
               _defineProperty(this, "data", null);
@@ -154,7 +200,7 @@ System.register(["cc"], function (_export, _context) {
 
           }
 
-          _Certification.DataClass = DataClass;
+          _CertifiedEmall.DataClass = DataClass;
 
           class State {
             constructor() {
@@ -164,7 +210,7 @@ System.register(["cc"], function (_export, _context) {
             }
 
           }
-        })(Certification || (Certification = _ResponseGPG.Certification || (_ResponseGPG.Certification = {})));
+        })(CertifiedEmall || (CertifiedEmall = _ResponseGPG.CertifiedEmall || (_ResponseGPG.CertifiedEmall = {})));
 
         let DrawHistory;
 

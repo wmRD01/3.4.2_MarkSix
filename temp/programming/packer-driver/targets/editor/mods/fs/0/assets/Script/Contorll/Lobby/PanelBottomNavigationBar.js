@@ -123,7 +123,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
             error: Error()
-          }), AssetType) : AssetType).Sprite); // PageControll.instance.pageEvnet.on(PageAction.ChangeTo, this.onMoveCircle, this)
+          }), AssetType) : AssetType).Sprite);
+          console.log("誰搶誰"); // PageControll.instance.pageEvnet.on(PageAction.ChangeTo, this.onMoveCircle, this)
 
           for (let index = 0; index < this.btns.length; index++) {
             let _page = new Page(this.btns[index], index);
@@ -145,7 +146,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), NotificationType) : NotificationType).Page).on((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
-          }), PageAction) : PageAction).ChangeTo, this.onEventChangeTo, this);
+          }), PageAction) : PageAction).ChangeTo, this.onMoveCircle, this);
         }
 
         onDisable() {
@@ -155,38 +156,50 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), NotificationType) : NotificationType).Page).off((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
-          }), PageAction) : PageAction).ChangeTo, this.onEventChangeTo, this);
+          }), PageAction) : PageAction).ChangeTo, this.onMoveCircle, this);
         }
 
-        onEventChangeTo(index) {
-          this.onMoveCircle(null, index.toString());
-        }
-
-        async onMoveCircle(e, customEventData) {
-          await (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
-            error: Error()
-          }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
-            error: Error()
-          }), AssetType) : AssetType).Sprite);
-          if (this.currentIndex == Number(customEventData)) return;
-          this.lastIndex = this.currentIndex;
-          this.currentIndex = Number(customEventData);
-          let getX = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-            error: Error()
-          }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(this.nodeCircle, this.getButton(this.currentIndex).node).x;
-          this.goTarget = v3(getX, this.circleY);
-          this.startAction();
+        async onEmitMoveCircle(e, customEventData) {
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
           }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
           }), NotificationType) : NotificationType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
-          }), PageAction) : PageAction).ChangeTo, this.currentIndex);
+          }), PageAction) : PageAction).ChangeTo, Number(customEventData));
+        }
+
+        async onMoveCircle(index) {
+          await (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
+            error: Error()
+          }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
+            error: Error()
+          }), AssetType) : AssetType).Sprite);
+          console.error("誰搶誰");
+          if (this.currentIndex == Number(index)) return;
+          this.lastIndex = this.currentIndex;
+          this.currentIndex = Number(index);
+          if (this.mapButton.size == 0) await this.waitButton();
+          let getX = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(this.nodeCircle, this.getButton(this.currentIndex).node).x;
+          this.goTarget = v3(getX, this.circleY);
+          this.startAction();
         }
 
         getButton(index) {
           return this.mapButton.get(index).getButton();
+        }
+
+        async waitButton() {
+          return new Promise((resolve, reject) => {
+            let inter = setInterval(() => {
+              if (this.mapButton.size != 0) {
+                resolve();
+                clearInterval(inter);
+              }
+            }, 500);
+          });
         }
 
         startAction() {

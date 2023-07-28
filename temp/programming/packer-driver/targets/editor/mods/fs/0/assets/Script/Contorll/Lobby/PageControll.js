@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, PageView, Node, DEV, BaseSingletonComponent, NotificationType, PageAction, EventMng, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PageControll;
+  var _reporterNs, _cclegacy, _decorator, PageView, Node, DEV, BaseSingletonComponent, NotificationType, PageAction, EventMng, PanelLoading, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PageControll;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -31,6 +31,10 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
     _reporterNs.report("EventMng", "../../Manager/EventMng", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfPanelLoading(extras) {
+    _reporterNs.report("PanelLoading", "../NoClearNode/PanelLoading", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -49,6 +53,8 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
       PageAction = _unresolved_4.PageAction;
     }, function (_unresolved_5) {
       EventMng = _unresolved_5.default;
+    }, function (_unresolved_6) {
+      PanelLoading = _unresolved_6.default;
     }],
     execute: function () {
       _crd = true;
@@ -124,6 +130,9 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
 
 
         onToPage(index) {
+          (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+            error: Error()
+          }), PanelLoading) : PanelLoading).instance.openLoading("資料讀取中");
           this.page[this.currnetIndex].active = false;
           this.currnetIndex = index;
           this.page[this.currnetIndex].active = true;

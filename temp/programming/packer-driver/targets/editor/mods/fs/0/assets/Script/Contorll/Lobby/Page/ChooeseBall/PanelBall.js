@@ -281,7 +281,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.tempChoose = [];
         }
 
-        async onConfirmAttack(e, customEventData) {
+        async Attack() {
           if (this.isConfirm) return;
 
           if (this.tempChoose.length < this.MaxCount) {
@@ -304,6 +304,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), DelayTime) : DelayTime).getInstance.StartDT(.1);
           }
+          /**打leo的com */
+
+
+          this.tempChoose = [];
+          this.isConfirm = true;
+        }
+
+        async onConfirmAttack(e, customEventData) {
+          this.Attack();
 
           const _bet = new (_crd && bet === void 0 ? (_reportPossibleCrUseOfbet({
             error: Error()
@@ -315,10 +324,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
             error: Error()
           }), CommandType) : CommandType).bet, _bet);
-          /**打leo的com */
-
-          this.tempChoose = [];
-          this.isConfirm = true;
           /**推波訊息 */
         }
 
@@ -354,13 +359,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         reProcessing(data) {
-          for (let index = 0; index < data.betCode.length; index++) {
-            this.onChooeseBall(null, data.betCode[index].toString());
+          console.log(data);
+
+          if (data.betCode != null) {
+            for (let index = 0; index < data.betCode.length; index++) {
+              this.onChooeseBall(null, data.betCode[index].toString());
+            }
+
+            this.Attack();
+            this.isFullBall = true;
           }
 
           this.labelIssueID.string = `第${data.drawIssue}期`;
-          this.onConfirmAttack();
-          this.isFullBall = true;
           (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
             error: Error()
           }), PanelLoading) : PanelLoading).instance.closeLoading();

@@ -55,7 +55,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         start() {
           var _this = this;
 
-          // if (sys.os == sys.OS.ANDROID) return
+          console.log(find("AutoView")); // if (sys.os == sys.OS.ANDROID) return
+
           this.AdjustView();
           window.addEventListener("resize", /*#__PURE__*/_asyncToGenerator(function* () {
             if (_this.isCanUpdata) {

@@ -49,7 +49,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         start() {
-          // if (sys.os == sys.OS.ANDROID) return
+          console.log(find("AutoView")); // if (sys.os == sys.OS.ANDROID) return
+
           this.AdjustView();
           window.addEventListener("resize", async () => {
             if (this.isCanUpdata) {

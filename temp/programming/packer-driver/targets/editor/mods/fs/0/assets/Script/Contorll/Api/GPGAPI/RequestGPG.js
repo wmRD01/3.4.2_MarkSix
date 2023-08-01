@@ -46,12 +46,22 @@ System.register(["cc"], function (_export, _context) {
             return this;
           }
 
+          deletContentType() {
+            delete this.headers["Content-Type"];
+            return this;
+          }
+
+          setContentType(type) {
+            this.headers["Content-Type"] = type;
+            return this;
+          }
+
           async fetchData(_url, callback) {
             // console.log(_url);
-            // console.log(this);
-            // console.log(_url.split("?"));
+            console.log(this); // console.log(_url.split("?"));
             // console.log(_url.split("?")[0].split("/"));
             // console.log(_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length]);
+
             return new Promise((resolve, reject) => {
               let data;
               fetch(_url, this).then(response => response.json()).then(response => data = response).catch(err => reject).then(response => console.log(`資料名稱：${_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length - 1]}`)).then(response => console.log(`資料內容`, data)).then(response => callback(data)).then(resolve);
@@ -64,7 +74,7 @@ System.register(["cc"], function (_export, _context) {
 
         class Headers {
           constructor() {
-            _defineProperty(this, "Content-Type", "application/json, text/plain, */*");
+            _defineProperty(this, "Content-Type", ContentType.Json);
 
             _defineProperty(this, "Accept", "application/json;charset=UTF-8");
 
@@ -135,7 +145,7 @@ System.register(["cc"], function (_export, _context) {
               constructor(...args) {
                 super(...args);
 
-                _defineProperty(this, "File", void 0);
+                _defineProperty(this, "file", void 0);
               }
 
             }
@@ -165,6 +175,8 @@ System.register(["cc"], function (_export, _context) {
               constructor() {
                 _defineProperty(this, "Locale", "zh-TW");
 
+                _defineProperty(this, "Phone", void 0);
+
                 _defineProperty(this, "Email", void 0);
               }
 
@@ -174,6 +186,15 @@ System.register(["cc"], function (_export, _context) {
           })(NotNeedToken || (NotNeedToken = _Body.NotNeedToken || (_Body.NotNeedToken = {})));
         })(Body || (Body = _RequestGPG.Body || (_RequestGPG.Body = {})));
 
+        let ContentType;
+
+        (function (ContentType) {
+          ContentType["Default"] = "";
+          ContentType["Json"] = "application/json, text/plain, */*";
+          ContentType["FormData"] = "multipart/form-data";
+        })(ContentType || (ContentType = {}));
+
+        _RequestGPG.ContentType = ContentType;
         let Method;
 
         (function (Method) {
@@ -201,6 +222,7 @@ System.register(["cc"], function (_export, _context) {
           API["ValidateContactInfo"] = "/Token/ValidateContactInfo";
           API["DrawHistory"] = "/Mark6/Draw_History";
           API["DrawUpcoming"] = "/Mark6/Draw_Upcoming";
+          API["TopScore"] = "/Mark6/Top_Score";
         })(API || (API = {}));
 
         _RequestGPG.API = API;

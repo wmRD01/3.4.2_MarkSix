@@ -356,6 +356,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "cr
           return yearROC;
         }
 
+        checkStringNull(str) {
+          return str == "" || str == null || str == undefined ? true : false;
+        }
+
       });
 
       _cclegacy._RF.pop();

@@ -1,4 +1,5 @@
 import { ImageAsset, Size, SpriteFrame, Texture2D } from "cc";
+import { RequestGPG } from "../Contorll/Api/GPGAPI/RequestGPG";
 
 export default class CreateFileSprite {
     AcceptImgFormat: string[] = ['image/gif', 'image/jpeg', 'image/png', 'image/bmp'];
@@ -20,10 +21,7 @@ export default class CreateFileSprite {
     }
 
     checkSpriteData(e: Event) {
-
         this.file = (e.target as HTMLInputElement).files[0]
-        console.log(this.file);
-        console.log("確定上傳");
         if (this.AcceptImgFormat.indexOf(this.file.type) == -1) {
             return console.error(`代表類型不正確`);
         }
@@ -37,11 +35,11 @@ export default class CreateFileSprite {
     }
 
     readerOnload(e: ProgressEvent) {
-        console.log(e);
         let limitSize = 2 * 1024 * 1024
         const image = new Image();
-        image.src = (e.target as FileReader).result as string
-
+        let data = (e.target as FileReader).result as string
+        image.src = data
+        // let _base64 = data.split(",")[1]
         image.onload = () => {
             let imgAsset = new ImageAsset();//重置此图像资源使用的原始图像源
             imgAsset.reset(image);
@@ -50,11 +48,14 @@ export default class CreateFileSprite {
             const sp = new SpriteFrame();
             //sprite 图片
             sp.texture = texture;
+            // console.log(this.file);
             this.callback(sp, this.file)
             return
         }
 
     }
+
+
 
     /**以下暫時用不到，如果需要進一步處理圖片才需要 */
     /**以下暫時用不到，如果需要進一步處理圖片才需要 */

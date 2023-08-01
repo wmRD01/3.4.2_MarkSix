@@ -36,17 +36,22 @@ export default class PanelBottomNavigationBar extends BaseComponent {
     //#endregion
     async onLoad() {
         super.onLoad()
-        await AssetMng.waitStateCheck(AssetType.Sprite)
         console.log("誰搶誰");
 
         // PageControll.instance.pageEvnet.on(PageAction.ChangeTo, this.onMoveCircle, this)
+        await AssetMng.waitStateCheck(AssetType.Sprite)
         for (let index = 0; index < this.btns.length; index++) {
             let _page = new Page(this.btns[index], index)
-            _page.change(false)
+            _page.getButton().interactable = false
             this.mapButton.set(index, _page)
         }
 
         this.circleY = -(PublicData.getInstance.BaseViewHeight / 2) + (this.nodeCircle.getComponent(UITransform).height / 2)
+
+        for (let index = 0; index < this.btns.length; index++) {
+            this.mapButton.get(index).getButton().interactable = true
+            this.mapButton.get(index).change(false)
+        }
     }
     onEnable() {
         EventMng.getInstance.mapEvnet.get(NotificationType.Page).on(PageAction.ChangeTo, this.onMoveCircle, this)
@@ -56,12 +61,15 @@ export default class PanelBottomNavigationBar extends BaseComponent {
     }
 
     async onEmitMoveCircle(e: Event, customEventData?: string) {
+        if (this.currentIndex == Number(customEventData)) return;
         EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, Number(customEventData))
     }
     async onMoveCircle(index: PageMenu) {
         await AssetMng.waitStateCheck(AssetType.Sprite)
         console.error("誰搶誰");
-        if (this.currentIndex == Number(index)) return;
+        console.log(this.currentIndex, index);
+
+
         this.lastIndex = this.currentIndex
         this.currentIndex = Number(index)
         if (this.mapButton.size == 0)

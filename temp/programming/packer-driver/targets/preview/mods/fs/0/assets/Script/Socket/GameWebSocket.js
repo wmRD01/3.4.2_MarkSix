@@ -317,12 +317,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), PlayerIdentity) : PlayerIdentity).Guest : (_crd && PlayerIdentity === void 0 ? (_reportPossibleCrUseOfPlayerIdentity({
               error: Error()
             }), PlayerIdentity) : PlayerIdentity).Member;
-          } else if (window.isGPGServer) _ln.key = JSON.stringify({});
+          } //TODO 直接給token字串
+          else if (window.isGPGServer) _ln.key = JSON.stringify({}); //TODO 修改成menberID的給Leo
+
 
           _ln.account = this.account;
-          _ln.ident = (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+          _ln.key = (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
             error: Error()
-          }), Player) : Player).getInstance.identity;
+          }), Player) : Player).getInstance.gpgToken.split(" ")[1];
           (_crd && GameData === void 0 ? (_reportPossibleCrUseOfGameData({
             error: Error()
           }), GameData) : GameData).getInstance.coinType = this.coinType;

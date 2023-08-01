@@ -45,8 +45,6 @@ System.register(["cc"], function (_export, _context) {
 
         checkSpriteData(e) {
           this.file = e.target.files[0];
-          console.log(this.file);
-          console.log("確定上傳");
 
           if (this.AcceptImgFormat.indexOf(this.file.type) == -1) {
             return console.error("\u4EE3\u8868\u985E\u578B\u4E0D\u6B63\u78BA");
@@ -65,10 +63,10 @@ System.register(["cc"], function (_export, _context) {
         }
 
         readerOnload(e) {
-          console.log(e);
           var limitSize = 2 * 1024 * 1024;
           var image = new Image();
-          image.src = e.target.result;
+          var data = e.target.result;
+          image.src = data; // let _base64 = data.split(",")[1]
 
           image.onload = () => {
             var imgAsset = new ImageAsset(); //重置此图像资源使用的原始图像源
@@ -78,7 +76,8 @@ System.register(["cc"], function (_export, _context) {
             texture.image = imgAsset;
             var sp = new SpriteFrame(); //sprite 图片
 
-            sp.texture = texture;
+            sp.texture = texture; // console.log(this.file);
+
             this.callback(sp, this.file);
             return;
           };

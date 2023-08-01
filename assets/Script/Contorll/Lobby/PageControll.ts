@@ -32,7 +32,7 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
     }
     start() {
         this.closeTouch(this.pageView)
-        console.log("欸我已經送了欸");
+        // console.log("欸我已經送了欸");
 
         if (DEV)
             EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, 0);

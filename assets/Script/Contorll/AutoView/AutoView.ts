@@ -11,6 +11,8 @@ export default class AutoView extends Component {
 
     isCanUpdata: boolean = true
     start() {
+        console.log(find("AutoView"));
+
         // if (sys.os == sys.OS.ANDROID) return
         this.AdjustView();
         window.addEventListener("resize", (async () => {

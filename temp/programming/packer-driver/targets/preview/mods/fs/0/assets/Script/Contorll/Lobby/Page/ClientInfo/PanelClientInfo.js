@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, assetManager, Label, Sprite, SpriteFrame, _decorator, BaseComponent, Player, RequestGPG, EventMng, NotificationType, LobbyStateEvent, PublicData, PanelLoading, PublicModel, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, PanelClientInfo;
+  var _reporterNs, _cclegacy, assetManager, Button, Label, Sprite, SpriteFrame, _decorator, BaseComponent, Player, RequestGPG, EventMng, NotificationType, LobbyStateEvent, PublicData, PanelLoading, PublicModel, CreateFileSprite, EditMenu, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PanelClientInfo;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -55,12 +55,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("PublicModel", "../../../../Model/PublicModel", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfCreateFileSprite(extras) {
+    _reporterNs.report("CreateFileSprite", "../../../../Model/CreateFileSprite", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfEditMenu(extras) {
+    _reporterNs.report("EditMenu", "../../../../Enum/EditMenu", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
     }, function (_cc) {
       _cclegacy = _cc.cclegacy;
       assetManager = _cc.assetManager;
+      Button = _cc.Button;
       Label = _cc.Label;
       Sprite = _cc.Sprite;
       SpriteFrame = _cc.SpriteFrame;
@@ -83,6 +92,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       PanelLoading = _unresolved_9.default;
     }, function (_unresolved_10) {
       PublicModel = _unresolved_10.default;
+    }, function (_unresolved_11) {
+      CreateFileSprite = _unresolved_11.default;
+    }, function (_unresolved_12) {
+      EditMenu = _unresolved_12.EditMenu;
     }],
     execute: function () {
       _crd = true;
@@ -94,7 +107,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", PanelClientInfo = (_dec = ccclass('PanelClientInfo'), _dec2 = property(Sprite), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec(_class = (_class2 = (_temp = class PanelClientInfo extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelClientInfo = (_dec = ccclass('PanelClientInfo'), _dec2 = property(Sprite), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Button), _dec7 = property(Button), _dec8 = property(Button), _dec9 = property(Button), _dec(_class = (_class2 = (_temp = class PanelClientInfo extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor() {
@@ -112,6 +125,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "labelEmail", _descriptor4, this);
 
+          _initializerDefineProperty(this, "buttonEditNickname", _descriptor5, this);
+
+          _initializerDefineProperty(this, "buttonEditPhone", _descriptor6, this);
+
+          _initializerDefineProperty(this, "buttonEditEmail", _descriptor7, this);
+
+          _initializerDefineProperty(this, "buttonEditPicture", _descriptor8, this);
+
           _defineProperty(this, "labelBetCount", void 0);
 
           _defineProperty(this, "labelPointCount", void 0);
@@ -119,53 +140,37 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "labelRank", void 0);
         }
 
-        start() {
-          var _this = this;
-
-          return _asyncToGenerator(function* () {
-            _this.show();
-
-            _this.isNeedUpdate = true;
-            _this.isLoading = false;
-            (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-              error: Error()
-            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
-              error: Error()
-            }), NotificationType) : NotificationType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
-              error: Error()
-            }), LobbyStateEvent) : LobbyStateEvent).ActivePanelClientInfo, _this.activePanel, _this);
-            (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-              error: Error()
-            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
-              error: Error()
-            }), NotificationType) : NotificationType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
-              error: Error()
-            }), LobbyStateEvent) : LobbyStateEvent).ChangePlayerPicture, _this.onChangePlayerPicture, _this);
-            (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-              error: Error()
-            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
-              error: Error()
-            }), NotificationType) : NotificationType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
-              error: Error()
-            }), LobbyStateEvent) : LobbyStateEvent).UpDatePlayer, _this.onUpdatePlayer, _this); // console.log(sys.browserType, sys.os);
-            // console.log(md5("12315235"));
-          })();
+        onLoad() {
+          super.onLoad();
+          this.show();
+          this.isNeedUpdate = true;
+          this.isLoading = false;
+          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+            error: Error()
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
+            error: Error()
+          }), NotificationType) : NotificationType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).EditUpdate, this.onEditUpData, this);
+          this.labelEmail.string = "";
+          this.labelPhone.string = "";
+          this.labelNickName.string = "";
         }
 
         onEnable() {
-          var _this2 = this;
+          var _this = this;
 
           return _asyncToGenerator(function* () {
-            if (!_this2.isNeedUpdate || _this2.isLoading) {
+            if (!_this.isNeedUpdate || _this.isLoading) {
               (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
                 error: Error()
               }), PanelLoading) : PanelLoading).instance.closeLoading();
               return;
             }
 
-            _this2.isLoading = true;
+            _this.isLoading = true;
 
-            _this2.startDelay();
+            _this.startDelay();
 
             var body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
@@ -184,37 +189,144 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), RequestGPG) : RequestGPG).APIUrl.playAPI + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
-            }), RequestGPG) : RequestGPG).API.MyInfo + "?" + convert, _this2.responseMyInfo.bind(_this2));
-            _this2.isLoading = false;
+            }), RequestGPG) : RequestGPG).API.MyInfo + "?" + convert, _this.responseMyInfo.bind(_this));
+            _this.isLoading = false;
           })();
         }
 
         onDisable() {}
 
-        onActivePanel(e, customEventData) {
-          this.hide();
-          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-            error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
-            error: Error()
-          }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
-            error: Error()
-          }), LobbyStateEvent) : LobbyStateEvent).ChangePlayerPicture, this.spritePlayer.spriteFrame);
-          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-            error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
-            error: Error()
-          }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
-            error: Error()
-          }), LobbyStateEvent) : LobbyStateEvent).ActivePanelClientEdit, true);
+        onEditTarget(e, customEventData) {
+          this.closeButton();
+
+          switch (Number(customEventData)) {
+            case (_crd && EditMenu === void 0 ? (_reportPossibleCrUseOfEditMenu({
+              error: Error()
+            }), EditMenu) : EditMenu).Nickname:
+              (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+                error: Error()
+              }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
+                error: Error()
+              }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+                error: Error()
+              }), LobbyStateEvent) : LobbyStateEvent).EditNickname);
+              break;
+
+            case (_crd && EditMenu === void 0 ? (_reportPossibleCrUseOfEditMenu({
+              error: Error()
+            }), EditMenu) : EditMenu).Phone:
+              (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+                error: Error()
+              }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
+                error: Error()
+              }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+                error: Error()
+              }), LobbyStateEvent) : LobbyStateEvent).EditPhone);
+              break;
+
+            case (_crd && EditMenu === void 0 ? (_reportPossibleCrUseOfEditMenu({
+              error: Error()
+            }), EditMenu) : EditMenu).Email:
+              (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+                error: Error()
+              }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
+                error: Error()
+              }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+                error: Error()
+              }), LobbyStateEvent) : LobbyStateEvent).EditEmail);
+              break;
+          }
         }
 
-        onUpdatePlayer() {
-          this.isNeedUpdate = true;
+        onEditUpData(str, type) {
+          if (!(_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.checkStringNull(str)) {
+            switch (type) {
+              case (_crd && EditMenu === void 0 ? (_reportPossibleCrUseOfEditMenu({
+                error: Error()
+              }), EditMenu) : EditMenu).Nickname:
+                this.labelNickName.string = str;
+                break;
+
+              case (_crd && EditMenu === void 0 ? (_reportPossibleCrUseOfEditMenu({
+                error: Error()
+              }), EditMenu) : EditMenu).Phone:
+                this.labelPhone.string = str;
+                break;
+
+              case (_crd && EditMenu === void 0 ? (_reportPossibleCrUseOfEditMenu({
+                error: Error()
+              }), EditMenu) : EditMenu).Email:
+                this.labelEmail.string = str;
+                break;
+            }
+          }
+
+          this.resetButton();
+          (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+            error: Error()
+          }), PanelLoading) : PanelLoading).instance.closeLoading();
         }
 
-        activePanel(bool) {
-          bool ? this.show() : this.hide();
+        onUpdateNickName(str) {
+          if (!(_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.checkStringNull(str)) this.labelNickName.string = str;
+        }
+
+        onUpdatePhone(str) {
+          if (!(_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.checkStringNull(str)) this.labelNickName.string = str;
+          this.resetButton();
+          (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+            error: Error()
+          }), PanelLoading) : PanelLoading).instance.closeLoading();
+        }
+
+        onUpdateEmail(str) {
+          if (!(_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.checkStringNull(str)) this.labelNickName.string = str;
+          this.resetButton();
+          (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+            error: Error()
+          }), PanelLoading) : PanelLoading).instance.closeLoading();
+        }
+
+        onSelectPhoto() {
+          new (_crd && CreateFileSprite === void 0 ? (_reportPossibleCrUseOfCreateFileSprite({
+            error: Error()
+          }), CreateFileSprite) : CreateFileSprite)(this.onUploadAvatar.bind(this));
+        }
+
+        onUploadAvatar(_spriteFrame, file) {
+          var _this2 = this;
+
+          return _asyncToGenerator(function* () {
+            // PublicModel.getInstance.convertByteToBinary(PublicModel.getInstance._base64ToBytes(base64))
+            var fileData = new FormData();
+            fileData.append('file', file);
+            yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Method.POST).deletContentType().setBody(fileData).setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+              error: Error()
+            }), Player) : Player).getInstance.gpgToken).fetchData("" + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).APIUrl.playAPI + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).API.UploadAvatar, response => {
+              _this2.responseUploadAvatar(response, _spriteFrame);
+            });
+          })();
+        }
+
+        responseUploadAvatar(response, _spriteFrame) {
+          console.log("圖片上傳成功?", response);
+          if (response.Status.Code == "0") this.spritePlayer.spriteFrame = _spriteFrame;
         }
 
         responseMyInfo(response) {
@@ -233,14 +345,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 return;
               }
 
-              (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-                error: Error()
-              }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
-                error: Error()
-              }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
-                error: Error()
-              }), LobbyStateEvent) : LobbyStateEvent).ChangePlayerPicture, SpriteFrame.createWithImage(image));
               _this3.isNeedUpdate = false;
+              _this3.spritePlayer.spriteFrame = SpriteFrame.createWithImage(image);
               if (_this3.stopDelay() < 1) setTimeout((_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
                 error: Error()
               }), PanelLoading) : PanelLoading).instance.closeLoading.bind((_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
@@ -249,14 +355,40 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 error: Error()
               }), PanelLoading) : PanelLoading).instance.closeLoading();
             });
-            _this3.labelNickName.string = response.data.nickName;
-            _this3.labelPhone.string = response.data.phoneNumber;
-            _this3.labelEmail.string = response.data.email;
+            _this3.labelNickName.string = response.data.nickName.split("_")[1];
+            /**因為前面會有註冊會員的文字，要刪除掉 */
+
+            _this3.buttonEditPhone.node.active = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.checkStringNull(response.data.phoneNumber);
+            _this3.labelPhone.string = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.checkStringNull(response.data.phoneNumber) ? "" : response.data.phoneNumber;
+            _this3.buttonEditEmail.node.active = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.checkStringNull(response.data.email);
+            _this3.labelEmail.string = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.checkStringNull(response.data.email) ? "" : response.data.email;
           })();
         }
 
-        onChangePlayerPicture(_spriteFrame) {
-          this.spritePlayer.spriteFrame = _spriteFrame;
+        resetButton() {
+          this.buttonEditNickname.node.active = true;
+          this.buttonEditPicture.node.active = true;
+          this.buttonEditPhone.node.active = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.checkStringNull(this.labelPhone.string);
+          this.buttonEditEmail.node.active = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.checkStringNull(this.labelEmail.string);
+        }
+
+        closeButton() {
+          this.buttonEditPicture.node.active = false;
+          this.buttonEditNickname.node.active = false;
+          this.buttonEditPhone.node.active = false;
+          this.buttonEditEmail.node.active = false;
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "spritePlayer", [_dec2], {
@@ -275,6 +407,26 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         writable: true,
         initializer: null
       }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "labelEmail", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditNickname", [_dec6], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditPhone", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditEmail", [_dec8], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditPicture", [_dec9], {
         configurable: true,
         enumerable: true,
         writable: true,

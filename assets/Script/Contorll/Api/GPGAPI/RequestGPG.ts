@@ -3,7 +3,7 @@ export namespace RequestGPG {
     export class Request {
         method: Method = Method.Get;
         headers: Headers = new Headers();
-        body: string
+        body: string | FormData
         setMethod(_method: Method) {
             this.method = _method;
             return this
@@ -16,13 +16,22 @@ export namespace RequestGPG {
             this.headers.Authorization = str
             return this
         }
-        setBody(_body: string) {
+        setBody(_body: string | FormData) {
             this.body = _body;
+            return this
+        }
+
+        deletContentType() {
+            delete this.headers["Content-Type"]
+            return this
+        }
+        setContentType(type: ContentType) {
+            this.headers["Content-Type"] = type;
             return this
         }
         async fetchData(_url: string, callback: Function) {
             // console.log(_url);
-            // console.log(this);
+            console.log(this);
             // console.log(_url.split("?"));
             // console.log(_url.split("?")[0].split("/"));
             // console.log(_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length]);
@@ -44,7 +53,7 @@ export namespace RequestGPG {
     class Headers {
 
         [x: string]: string;
-        "Content-Type": string = "application/json, text/plain, */*"
+        "Content-Type": string = ContentType.Json;
         "Accept": string = "application/json;charset=UTF-8"
         "Authorization": string = ""
     }
@@ -73,7 +82,7 @@ export namespace RequestGPG {
                 [x: string]: string;
             }
             export class UploadAvatar extends base {
-                File:File;
+                file: File;
             }
 
         }
@@ -92,12 +101,19 @@ export namespace RequestGPG {
             }
             export class SendRegisterVerification {
                 Locale: string = "zh-TW";
+                Phone: string;
                 Email: string;
+
             }
-  
+
 
         }
 
+    }
+    export enum ContentType {
+        Default = "",
+        Json = "application/json, text/plain, */*",
+        FormData = "multipart/form-data",
     }
 
     export enum Method {
@@ -118,6 +134,7 @@ export namespace RequestGPG {
         ValidateContactInfo = "/Token/ValidateContactInfo",
         DrawHistory = "/Mark6/Draw_History",
         DrawUpcoming = "/Mark6/Draw_Upcoming",
+        TopScore ="/Mark6/Top_Score",
     }
 }
 

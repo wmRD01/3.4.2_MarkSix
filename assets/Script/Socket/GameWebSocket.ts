@@ -135,11 +135,12 @@ export default class GameWebSocket extends SocketModel {
             /**判斷是否為訪客帳號，如果收不到或者false就是正式會員 */
             Player.getInstance.identity = _gameConfig.demo != undefined && _gameConfig.demo == "true" ? PlayerIdentity.Guest : PlayerIdentity.Member;
         }
+        //TODO 直接給token字串
         else if (window.isGPGServer)
             _ln.key = JSON.stringify({})
+        //TODO 修改成menberID的給Leo
         _ln.account = this.account
-        _ln.ident = Player.getInstance.identity
-
+        _ln.key = Player.getInstance.gpgToken.split(" ")[1];
         GameData.getInstance.coinType = this.coinType;
         PublicData.getInstance.recodeUrl = this.recordeURL;
         PublicData.getInstance.language = this.UserLanguage

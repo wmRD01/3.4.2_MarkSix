@@ -26,7 +26,12 @@ export default class BallData extends BaseComponent {
 
         this.ballNumber = _ballNumber
         this.node.position = Vec3.ZERO
-        this.type = _ballNumber % 6
+        /**一般規則 */
+        // this.type = _ballNumber % 6
+        /**符合香港規則 */
+        this.type = (_ballNumber + (Math.floor(_ballNumber / 10))) % 6
+        if (_ballNumber % 10 === 0)
+            this.type -= 1
         this.label.addComponent(AutoFollow).setTarget(this.node)
         this.label.string = this.ballNumber.toString()
         this.label.color = color().fromHEX(this.getColor())
@@ -34,6 +39,22 @@ export default class BallData extends BaseComponent {
 
         this.spriteBG.spriteFrame = AssetMng.AssetClass.get(AssetType.Sprite).data.get(this.getBGData())
         this.setEffect(false)
+
+
+        // const color = ['red', 'red', 'blue', 'blue', 'green', 'green']
+
+        // const result = []
+        // var add = 0
+        // for (let num = 1; num <= 50; num++) {
+
+        //     if (num % 10 === 1) {
+        //         add = Math.floor(num / 10)
+        //     }
+        //     result.push(num.toString() + color[(num - 1 + add) % 6])
+
+        // }
+        // console.log(result)
+
 
 
         return this

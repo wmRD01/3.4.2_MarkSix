@@ -51,12 +51,12 @@ System.register(["cc"], function (_export, _context) {
         }
 
         clearEvent(buttonTarget) {
-          let eventArr = buttonTarget.clickEvents;
-          let count = eventArr.length - 1;
-
-          for (let index = count; 0 < eventArr.length; index++) {
-            eventArr.splice(index);
-          }
+          buttonTarget.clickEvents = []; // let eventArr = buttonTarget.clickEvents
+          // let len = eventArr.length
+          // let count = eventArr.length - 1
+          // for (let index = count; 0 < len; index++) {
+          //     eventArr.splice(index)
+          // }
         }
 
       };

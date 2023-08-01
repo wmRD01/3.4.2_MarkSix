@@ -270,12 +270,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\PanelLoading.prefab": {
-    "time": 1689818035297.174,
+    "time": 1690530217188.273,
     "uuid": "81e4d68d-9573-476b-81e6-649562ab7a28",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\PanelSystemMessage.prefab": {
-    "time": 1687144713910.1328,
+    "time": 1690766740897.302,
     "uuid": "3345b80a-435d-4849-8068-09e5141951ef",
     "missing": false
   },
@@ -300,12 +300,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Loading.scene": {
-    "time": 1690354956147.2058,
+    "time": 1690767878414.5813,
     "uuid": "602c3d25-484a-4071-ae9b-2b9ed340bc8b",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Lobby.scene": {
-    "time": 1690526572741.9792,
+    "time": 1690886695112.3342,
     "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
     "missing": false
   },
@@ -325,7 +325,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum": {
-    "time": 1689912038764.8066,
+    "time": 1690870933339.029,
     "uuid": "e0e8222a-6ab8-4e0a-9447-46d61fb3d24b",
     "missing": false
   },
@@ -755,7 +755,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\LobbyStateEvent.ts": {
-    "time": 1690512949246.1167,
+    "time": 1690871008211.791,
     "uuid": "e292d2cd-8630-4244-853b-3674b43bdcbe",
     "missing": false
   },
@@ -820,7 +820,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Manager\\ButtonMng.ts": {
-    "time": 1684221489023.656,
+    "time": 1690868910821.7195,
     "uuid": "d1ad9997-c573-4ab6-ae5a-ded607dea5fd",
     "missing": false
   },
@@ -855,7 +855,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\BallData.ts": {
-    "time": 1689910858024.9185,
+    "time": 1690858650878.623,
     "uuid": "b170261f-18c0-4c5a-9b77-687b4d2018e8",
     "missing": false
   },
@@ -895,7 +895,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\Player.ts": {
-    "time": 1690449071590.1892,
+    "time": 1690885156202.337,
     "uuid": "c06b1ce1-9942-4bcc-94ad-976d02243e39",
     "missing": false
   },
@@ -910,7 +910,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PublicModel.ts": {
-    "time": 1690437237526.7356,
+    "time": 1690873313311.2468,
     "uuid": "e67ebe82-8c49-4ffb-b7df-3ca593669e05",
     "missing": false
   },
@@ -925,7 +925,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\SocketModel.ts": {
-    "time": 1689833219715.4812,
+    "time": 1690884239251.3286,
     "uuid": "d543d8b6-2d0c-402a-bcda-1b8934c0e8fd",
     "missing": false
   },
@@ -950,7 +950,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Socket\\GameWebSocket.ts": {
-    "time": 1690354544424.5476,
+    "time": 1690885288762.7693,
     "uuid": "15ca959a-c72f-453d-8fb1-71a3c53467c0",
     "missing": false
   },
@@ -1080,7 +1080,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\AutoView\\AutoView.ts": {
-    "time": 1689311619554.312,
+    "time": 1690766712795.4685,
     "uuid": "02cca756-86b1-4cae-bbb4-07c576ea1348",
     "missing": false
   },
@@ -1115,12 +1115,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\PageControll.ts": {
-    "time": 1690524660419.131,
+    "time": 1690528523740.0964,
     "uuid": "28a3088d-c1fb-4755-8eba-e7282848d92b",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\PanelBottomNavigationBar.ts": {
-    "time": 1690526197170.373,
+    "time": 1690886275606.0896,
     "uuid": "ce6eeeec-c458-44b6-8308-5d86e25444c0",
     "missing": false
   },
@@ -1140,7 +1140,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\NoClearNode\\PanelLoading.ts": {
-    "time": 1687144714050.1648,
+    "time": 1690868309026.4485,
     "uuid": "803f6a9e-3778-4d00-a23e-cb63c9c4ab92",
     "missing": false
   },
@@ -1210,7 +1210,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Api\\GPGAPI\\RequestGPG.ts": {
-    "time": 1690450164610.5066,
+    "time": 1690886569077.6174,
     "uuid": "a8530c9c-9fdc-465d-8309-ca23ec463676",
     "missing": false
   },
@@ -1260,7 +1260,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ChooeseBall\\PanelBall.ts": {
-    "time": 1690524038578.236,
+    "time": 1690886003416.532,
     "uuid": "d2f08cfc-f861-4fd1-8212-bea888090d2b",
     "missing": false
   },
@@ -1270,7 +1270,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ClientInfo\\PanelClientInfo.ts": {
-    "time": 1690512932739.1792,
+    "time": 1690886457124.3506,
     "uuid": "e72b2a05-d840-45f6-a09f-c715d142e9b8",
     "missing": false
   },
@@ -1381,10 +1381,10 @@
     "time": 1688622520088.3977
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Login_logo.png.meta": {
-    "time": 1688547689302.4993
+    "time": 1690528548715.3132
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Login_whatsapp.png.meta": {
-    "time": 1688547689300.499
+    "time": 1690528558124.4138
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Login_Input box.png.meta": {
     "time": 1688547282241.768
@@ -2107,12 +2107,12 @@
     "time": 1689585009834.9856
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ClientInfo\\PageClientEdit.ts": {
-    "time": 1690512932756.1829,
+    "time": 1690872229455.3962,
     "uuid": "5d3e955f-5565-4e30-a755-5876a833de2f",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\CreateFileSprite.ts": {
-    "time": 1690447909437.0066,
+    "time": 1690883909628.5344,
     "uuid": "8ce80187-78d2-4235-b863-98e0e3284302",
     "missing": false
   },
@@ -2165,6 +2165,38 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Anime": {
     "time": 1690523668491.6655,
     "uuid": "1d92db8e-e6b8-423f-958d-3568777fe1da",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\示意圖.meta": {
+    "time": 1690528719423.9873
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\示意圖": {
+    "time": 1690528726965.3088,
+    "uuid": "bd9c2116-85a9-4268-9d18-daed54b08db9",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\示意圖\\台灣六合彩APP PART2-02.png.meta": {
+    "time": 1690528779470.0437
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\示意圖\\台灣六合彩APP PART2_工作區域 1.png.meta": {
+    "time": 1690528779472.0435
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\示意圖\\台灣六合彩APP PART2-02.png": {
+    "time": 1688541133899.4834,
+    "uuid": "f405dc94-9ccc-497c-acb2-57ec1bfb3c50",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\示意圖\\台灣六合彩APP PART2_工作區域 1.png": {
+    "time": 1688541134772.0896,
+    "uuid": "3efa7b1d-9b6d-4e19-8a84-f390112d953c",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\EditMenu.ts.meta": {
+    "time": 1690870933357.3838
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\EditMenu.ts": {
+    "time": 1690870728741.493,
+    "uuid": "01bbdda3-7239-4c5f-98b7-b651d5ae0725",
     "missing": false
   }
 }

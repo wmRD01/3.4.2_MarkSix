@@ -1,215 +1,327 @@
-2023-07-27 17:37:24-log: [Package] menu@1.0.0 enable
-2023-07-27 17:37:24-log: [Package] profile@1.0.0 enable
-2023-07-27 17:37:24-log: [Package] project@1.0.1 enable
-2023-07-27 17:37:24-log: [Package] messages@1.0.0 enable
-2023-07-27 17:37:24-log: [Package] program@1.0.0 enable
-2023-07-27 17:37:24-log: [Package] device@1.0.1 enable
-2023-07-27 17:37:24-log: [Package] ui-kit@1.0.1 enable
-2023-07-27 17:37:24-log: [Package] tester@1.0.0 enable
-2023-07-27 17:37:24-log: [Package] preferences@1.0.0 enable
-2023-07-27 17:37:25-log: Setup mods mgr.: 487.887ms
-2023-07-27 17:37:25-log: Profile changed: engine (modules.includeModules: audio,base,gfx-webgl,intersection-2d,physics-2d-box2d,profiler,tween,ui)
-2023-07-27 17:37:25-log: [Package] engine@1.0.5 enable
-2023-07-27 17:37:27-log: [Package] programming@1.0.0 enable
-2023-07-27 17:37:28-log: [Package] engine-extends@1.0.0 enable
-2023-07-27 17:37:28-log: [Package] asset-db@1.0.0 enable
-2023-07-27 17:37:28-log: [Package] console@1.0.0 enable
-2023-07-27 17:37:28-log: [Package] scene@1.0.0 enable
-2023-07-27 17:37:28-log: [Package] about@1.0.0 enable
-2023-07-27 17:37:28-log: [Package] server@1.0.0 enable
-2023-07-27 17:37:28-log: [Package] utils@1.0.0 enable
-2023-07-27 17:37:28-log: [Package] assets@1.0.0 enable
-2023-07-27 17:37:28-log: [Package] inspector@1.0.0 enable
-2023-07-27 17:37:28-log: [Package] hierarchy@1.0.0 enable
-2023-07-27 17:37:30-log: [Package] preview@1.0.1 enable
-2023-07-27 17:37:30-log: [Package] animator@1.0.0 enable
-2023-07-27 17:37:31-log: [Package] builder@1.3.1 enable
-2023-07-27 17:37:31-log: [Package] node-library@1.0.0 enable
-2023-07-27 17:37:31-log: [Package] shortcuts@1.0.1 enable
-2023-07-27 17:37:31-log: [Package] package-asset@1.0.0 enable
-2023-07-27 17:37:31-log: [Package] reference-image@1.0.0 enable
-2023-07-27 17:37:31-log: [Package] animation-graph@1.0.0 enable
-2023-07-27 17:37:31-log: [Package] channel-upload-tools@1.0.0 enable
-2023-07-27 17:37:31-log: [Package] runtime-dev-tools@1.0.0 enable
-2023-07-27 17:37:31-log: [Package] lightmap@1.0.4 enable
-2023-07-27 17:37:31-log: [Package] alipay-mini-game@1.0.0 enable
-2023-07-27 17:37:31-log: [Package] android@1.0.0 enable
-2023-07-27 17:37:31-log: [Package] baidu-mini-game@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] bytedance-mini-game@1.0.1 enable
-2023-07-27 17:37:32-log: [Package] huawei-agc@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] ios@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] ios-app-clip@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] mac@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] native@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] ohos@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] web-desktop@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] web-mobile@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] wechatgame@1.0.1 enable
-2023-07-27 17:37:32-log: [Package] windows@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] xiaomi-quick-game@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] cocos-play@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] huawei-quick-game@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] link-sure@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] oppo-mini-game@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] qtt@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] vivo-mini-game@1.0.0 enable
-2023-07-27 17:37:32-log: [Package] cocos-service@3.0.2 enable
-2023-07-27 17:37:32-log: [Package] importer@1.0.0 enable
-2023-07-27 17:37:33-log: [Package] extension@3.0.15 enable
-2023-07-27 17:37:34-log: [Im-plugin] Check im-plugin version.
-2023-07-27 17:37:34-log: [Package] im-plugin@3.0.10 enable
-2023-07-27 17:37:34-warn: Browserslist: caniuse-lite is outdated. Please run:
+2023-07-31 15:28:33-log: [Package] menu@1.0.0 enable
+2023-07-31 15:28:33-log: [Package] profile@1.0.0 enable
+2023-07-31 15:28:33-log: [Package] project@1.0.1 enable
+2023-07-31 15:28:33-log: [Package] messages@1.0.0 enable
+2023-07-31 15:28:33-log: [Package] program@1.0.0 enable
+2023-07-31 15:28:33-log: [Package] device@1.0.1 enable
+2023-07-31 15:28:33-log: [Package] ui-kit@1.0.1 enable
+2023-07-31 15:28:33-log: [Package] tester@1.0.0 enable
+2023-07-31 15:28:33-log: [Package] preferences@1.0.0 enable
+2023-07-31 15:28:34-log: Setup mods mgr.: 540.234ms
+2023-07-31 15:28:34-log: Profile changed: engine (modules.includeModules: audio,base,gfx-webgl,intersection-2d,physics-2d-box2d,profiler,tween,ui)
+2023-07-31 15:28:34-log: [Package] engine@1.0.5 enable
+2023-07-31 15:28:36-log: [Package] programming@1.0.0 enable
+2023-07-31 15:28:36-log: [Package] engine-extends@1.0.0 enable
+2023-07-31 15:28:37-log: [Package] asset-db@1.0.0 enable
+2023-07-31 15:28:37-log: [Package] console@1.0.0 enable
+2023-07-31 15:28:37-log: [Package] scene@1.0.0 enable
+2023-07-31 15:28:37-log: [Package] about@1.0.0 enable
+2023-07-31 15:28:37-log: [Package] server@1.0.0 enable
+2023-07-31 15:28:37-log: [Package] utils@1.0.0 enable
+2023-07-31 15:28:37-log: [Package] assets@1.0.0 enable
+2023-07-31 15:28:37-log: [Package] inspector@1.0.0 enable
+2023-07-31 15:28:37-log: [Package] hierarchy@1.0.0 enable
+2023-07-31 15:28:38-log: [Package] preview@1.0.1 enable
+2023-07-31 15:28:38-log: [Package] animator@1.0.0 enable
+2023-07-31 15:28:39-log: [Package] builder@1.3.1 enable
+2023-07-31 15:28:39-log: [Package] node-library@1.0.0 enable
+2023-07-31 15:28:39-log: [Package] shortcuts@1.0.1 enable
+2023-07-31 15:28:39-log: [Package] package-asset@1.0.0 enable
+2023-07-31 15:28:39-log: [Package] reference-image@1.0.0 enable
+2023-07-31 15:28:39-log: [Package] animation-graph@1.0.0 enable
+2023-07-31 15:28:39-log: [Package] channel-upload-tools@1.0.0 enable
+2023-07-31 15:28:39-log: [Package] runtime-dev-tools@1.0.0 enable
+2023-07-31 15:28:39-log: [Package] lightmap@1.0.4 enable
+2023-07-31 15:28:39-log: [Package] alipay-mini-game@1.0.0 enable
+2023-07-31 15:28:39-log: [Package] android@1.0.0 enable
+2023-07-31 15:28:39-log: [Package] baidu-mini-game@1.0.0 enable
+2023-07-31 15:28:39-log: [Package] bytedance-mini-game@1.0.1 enable
+2023-07-31 15:28:40-log: [Package] huawei-agc@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] ios@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] ios-app-clip@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] mac@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] native@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] ohos@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] web-desktop@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] web-mobile@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] wechatgame@1.0.1 enable
+2023-07-31 15:28:40-log: [Package] windows@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] xiaomi-quick-game@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] cocos-play@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] huawei-quick-game@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] link-sure@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] oppo-mini-game@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] qtt@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] vivo-mini-game@1.0.0 enable
+2023-07-31 15:28:40-log: [Package] cocos-service@3.0.2 enable
+2023-07-31 15:28:40-log: [Package] importer@1.0.0 enable
+2023-07-31 15:28:41-log: [Package] extension@3.0.15 enable
+2023-07-31 15:28:46-log: [Im-plugin] Check im-plugin version.
+2023-07-31 15:28:46-log: [Package] im-plugin@3.0.10 enable
+2023-07-31 15:28:48-log: [Im-plugin] Im-plugin online version is 3.0.10.
+2023-07-31 15:28:48-log: [Im-plugin] Im-plugin local version is 3.0.10.
+2023-07-31 15:28:48-log: [Im-plugin] Im-plugin need not update.
+2023-07-31 15:28:51-warn: Browserslist: caniuse-lite is outdated. Please run:
 npx browserslist@latest --update-db
 
 Why you should do it regularly:
 https://github.com/browserslist/browserslist#browsers-data-updating
-2023-07-27 17:37:34-log: [Scene] Cocos Creator v3.4.2
-2023-07-27 17:37:34-log: [Im-plugin] Im-plugin online version is 3.0.10.
-2023-07-27 17:37:34-log: [Im-plugin] Im-plugin local version is 3.0.10.
-2023-07-27 17:37:34-log: [Im-plugin] Im-plugin need not update.
-2023-07-27 17:37:35-info: [Scene] Forward render pipeline initialized.
-2023-07-27 17:37:36-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-27 17:39:09-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-27 17:40:40-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-27 17:42:30-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-27 17:43:52-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-27 17:55:38-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-27 17:56:57-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 10:37:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 11:11:42-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 11:27:52-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 13:14:46-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 13:15:03-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 13:30:51-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite-001".
-2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite".
-2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite-001".
-2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite".
-2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite-001".
-2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite-001".
-2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite".
-2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite".
-2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite-001".
-2023-07-28 13:40:41-warn: [Scene] Node "Node" has no path "Sprite".
-2023-07-28 13:40:48-warn: [Scene] Node "Node" has no path "Sprite".
-2023-07-28 13:40:54-error: [Scene] unknown track type: 
-2023-07-28 13:40:54-warn: [Scene] Node "Node" has no path "Sprite-001".
-2023-07-28 13:40:54-warn: [Scene] Node "Node" has no path "Sprite-001".
-2023-07-28 13:40:54-warn: [Scene] Node "Node" has no path "Sprite-001".
-2023-07-28 13:45:41-error: [Window] Cannot read property 'type' of null
-2023-07-28 13:45:42-error: [Window] Cannot read property 'type' of null
-2023-07-28 13:45:42-error: [Window] Cannot read property 'type' of null
-2023-07-28 13:47:13-error: [Window] [Vue warn]: Error in callback for watcher "selectKeyInfo": "TypeError: Cannot read property 'curve' of undefined"
-
-(found in <Root>)
-2023-07-28 13:47:13-error: [Window] Cannot read property 'curve' of undefined
-2023-07-28 13:47:14-error: [Window] Cannot read property 'curve' of undefined
-2023-07-28 13:54:34-error: [Scene] The Asset used by component "cc.Sprite" in prefab "PanelSystemMessage" is missing. Detailed information:
-Asset url: "db://assets/Prefab/PanelSystemMessage"
-Missing uuid: "fbf7c344-c956-44c1-85bf-053a0985694f@f9941"
-
-2023-07-28 13:54:34-error: [Scene] The Asset used by component "cc.Sprite" in prefab "PanelSystemMessage" is missing. Detailed information:
-Asset url: "db://assets/Prefab/PanelSystemMessage"
-Missing uuid: "0e85496d-e352-437b-af21-948ae7f6f7e6@f9941"
-
-2023-07-28 13:54:34-error: [Scene] The Asset used by component "cc.Button" in prefab "PanelSystemMessage" is missing. Detailed information:
-Asset url: "db://assets/Prefab/PanelSystemMessage"
-Missing uuid: "0e85496d-e352-437b-af21-948ae7f6f7e6@f9941"
-
-2023-07-28 13:54:34-error: [Scene] The Asset used by component "cc.Sprite" in prefab "PanelSystemMessage" is missing. Detailed information:
-Asset url: "db://assets/Prefab/PanelSystemMessage"
-Missing uuid: "0e85496d-e352-437b-af21-948ae7f6f7e6@f9941"
-
-2023-07-28 13:54:34-error: [Scene] The Asset used by component "cc.Button" in prefab "PanelSystemMessage" is missing. Detailed information:
-Asset url: "db://assets/Prefab/PanelSystemMessage"
-Missing uuid: "0e85496d-e352-437b-af21-948ae7f6f7e6@f9941"
-
-2023-07-28 13:54:34-error: [Scene] The Asset used by component "cc.Sprite" in scene "Loading" is missing. Detailed information:
-Asset url: "db://assets/Scene/Loading"
-Missing uuid: "5861d739-84bc-4f5f-8c6a-925003902782@f9941"
-
-2023-07-28 13:56:03-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 13:59:11-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 13:59:15-error: [Preview]unhandledrejection: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
-2023-07-28 13:59:15-error: [Preview]Error: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:273:29
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:99
-    at GameWebSocket.onSend (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:274:13)
-    at GameWebSocket.onLogIn (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:336:16)
-    at GameWebSocket.onWS_Open (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:351:16)
-2023-07-28 14:00:40-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:01:17-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:01:20-error: [Preview]unhandledrejection: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
-2023-07-28 14:01:20-error: [Preview]Error: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:273:29
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:99
-    at GameWebSocket.onSend (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:274:13)
-    at GameWebSocket.onLogIn (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:336:16)
-    at GameWebSocket.onWS_Open (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:351:16)
-2023-07-28 14:01:20-error: [Preview]unhandledrejection: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
-2023-07-28 14:01:20-error: [Preview]Error: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:273:29
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:99
-    at GameWebSocket.onSend (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:274:13)
-    at GameWebSocket.onLogIn (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:336:16)
-    at GameWebSocket.onWS_Open (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:351:16)
-2023-07-28 14:01:30-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:01:36-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:01:46-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:01:53-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:01:58-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:02:10-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:02:14-error: [Preview]unhandledrejection: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
-2023-07-28 14:02:14-error: [Preview]Error: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:273:29
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:99
-    at GameWebSocket.onSend (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:274:13)
-    at GameWebSocket.onLogIn (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:336:16)
-    at GameWebSocket.onWS_Open (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:351:16)
-2023-07-28 14:02:14-error: [Preview]unhandledrejection: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
-2023-07-28 14:02:14-error: [Preview]Error: Failed to execute 'send' on 'WebSocket': Still in CONNECTING state.
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:273:29
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:8:99
-    at GameWebSocket.onSend (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:274:13)
-    at GameWebSocket.onLogIn (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:336:16)
-    at GameWebSocket.onWS_Open (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Socket/GameWebSocket.js:351:16)
-2023-07-28 14:05:15-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:05:42-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:07:06-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:22:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:36:07-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:36:35-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:36:43-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:37:11-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:39:45-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:41:33-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:41:50-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:42:53-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:42:53-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-07-28 14:42:53-error: [Build] Get meta of script {asset(db://assets/Script/Asset/MusicAsset.ts)} failed!
-2023-07-28 14:42:53-error: [Build] Get asset info of script {asset(48b292de-9f87-4c28-b626-53c10ba6a9e4)} failed!
+2023-07-31 15:28:51-log: [Scene] Cocos Creator v3.4.2
+2023-07-31 15:28:54-info: [Scene] Forward render pipeline initialized.
+2023-07-31 15:30:22-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 15:30:50-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 15:31:01-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 15:33:04-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 15:33:54-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 15:34:07-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 15:37:43-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 15:40:37-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 15:44:55-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 15:47:33-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 15:47:56-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 15:55:33-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 15:55:43-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 15:56:10-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 16:30:45-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 16:32:59-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-07-31 16:33:46-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 10:46:14-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 10:46:49-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 10:47:58-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 10:48:47-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 10:50:33-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 10:51:57-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 10:54:48-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 10:56:43-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 10:57:34-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 10:58:21-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 11:44:43-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 11:44:44-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 11:45:35-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 11:45:36-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 11:50:01-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 11:50:02-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:13:40-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:13:40-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:14:56-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:15:21-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:15:22-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:15:41-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:15:42-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:16:08-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:16:09-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:17:06-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:17:06-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:18:45-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:18:46-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:21:00-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:21:06-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:21:40-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:28:58-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:28:58-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:31:05-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:31:06-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:32:34-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:32:53-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:33:03-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:33:08-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:33:09-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:35:45-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:35:46-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:36:11-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:36:18-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:37:34-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:37:39-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:37:41-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:37:43-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:38:32-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:39:04-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:39:08-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:39:36-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:39:50-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:40:25-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:41:01-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:41:01-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:41:16-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:41:17-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:44:38-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:45:12-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:45:14-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:45:21-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:45:51-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:46:43-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:46:43-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:47:01-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:47:01-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:47:40-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:47:40-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:48:34-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:48:34-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:51:49-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:51:50-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:52:10-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 13:52:22-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 13:52:23-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:01:26-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:01:27-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:03:51-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:09:11-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:09:11-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:22:13-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:22:14-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:22:14-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:22:30-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:22:54-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:22:55-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:24:33-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:24:34-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:24:34-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:27:13-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:27:13-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:30:17-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:30:17-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:31:58-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:31:59-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:33:28-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'Status')
+2023-08-01 14:33:28-error: [Preview]TypeError: Cannot read properties of undefined (reading 'Status')
+    at PageClientEdit.responseCertifiedEmall (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/ClientInfo/PageClientEdit.js:398:24)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Api/GPGAPI/RequestGPG.js:64:344
+2023-08-01 14:34:10-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'Status')
+2023-08-01 14:34:10-error: [Preview]TypeError: Cannot read properties of undefined (reading 'Status')
+    at PageClientEdit.responseCertifiedEmall (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/ClientInfo/PageClientEdit.js:398:24)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Api/GPGAPI/RequestGPG.js:64:344
+2023-08-01 14:35:06-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:35:07-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:35:22-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'Status')
+2023-08-01 14:35:22-error: [Preview]TypeError: Cannot read properties of undefined (reading 'Status')
+    at PageClientEdit.responseCertifiedEmall (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/ClientInfo/PageClientEdit.js:397:24)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Api/GPGAPI/RequestGPG.js:64:344
+2023-08-01 14:35:53-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:35:53-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:36:05-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'Status')
+2023-08-01 14:36:05-error: [Preview]TypeError: Cannot read properties of undefined (reading 'Status')
+    at PageClientEdit.responseCertifiedEmall (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/ClientInfo/PageClientEdit.js:397:24)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Api/GPGAPI/RequestGPG.js:64:344
+2023-08-01 14:43:53-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:43:54-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:44:50-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:48:16-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:48:17-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:51:43-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:51:44-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:52:47-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:52:47-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:53:49-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:53:49-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:54:30-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:54:30-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:55:45-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:55:46-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 14:56:39-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 14:56:40-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 15:05:09-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 15:05:09-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 15:05:42-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 15:05:42-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 15:34:07-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 15:34:07-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:03:14-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 16:03:15-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:04:19-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 16:04:20-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:05:01-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 16:05:01-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:10:52-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 16:10:53-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:12:23-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 16:12:24-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:18:40-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 16:18:41-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:22:32-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 16:22:32-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:37:38-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 16:37:39-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:38:08-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 16:38:08-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:38:55-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:39:10-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:42:43-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:43:34-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:43:59-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:47:20-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 16:51:33-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 16:51:34-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:08:12-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:08:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:13:11-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:13:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:16:17-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:17:19-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:17:20-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:18:23-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:18:24-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:26:27-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:26:27-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:28:33-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:28:33-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:29:53-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:29:53-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:33:10-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:33:11-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:34:03-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:34:03-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:34:37-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:46:21-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:46:21-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:46:51-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:46:52-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:47:12-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:47:13-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:50:58-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:50:59-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:52:16-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:52:16-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:52:44-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:53:31-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:53:32-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:54:23-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 17:54:24-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 17:54:36-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:03:28-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:04:28-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 18:04:29-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:05:44-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:07:52-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:08:39-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:09:02-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:10:49-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 18:10:50-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:20:30-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 18:20:31-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:21:16-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 18:21:16-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:23:09-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 18:23:09-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:24:29-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 18:24:29-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:24:38-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:25:34-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:25:42-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:25:49-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:29:25-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 18:29:25-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:30:18-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 18:30:19-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:30:36-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:33:25-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 18:33:26-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:33:42-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:33:58-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:34:53-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:36:59-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 18:37:00-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:37:10-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:37:57-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit
+2023-08-01 18:37:57-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:38:04-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-01 18:44:51-error: [Scene] Can not declare PageClientEdit.onLoad, it is already defined in the prototype of PageClientEdit

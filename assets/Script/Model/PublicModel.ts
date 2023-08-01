@@ -262,5 +262,8 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         const yearROC = yearAD - ROC_OFFSET + (isLeapYear(yearAD) ? 1 : 0);
         return yearROC;
     }
+    checkStringNull(str: string) {
+        return str == "" || str == null || str == undefined ? true : false
+    }
 }
 

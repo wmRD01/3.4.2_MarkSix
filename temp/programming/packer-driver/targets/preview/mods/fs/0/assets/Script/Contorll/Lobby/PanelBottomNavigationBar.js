@@ -128,17 +128,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           return _asyncToGenerator(function* () {
             _superprop_getOnLoad().call(_this);
 
+            console.log("誰搶誰"); // PageControll.instance.pageEvnet.on(PageAction.ChangeTo, this.onMoveCircle, this)
+
             yield (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
               error: Error()
             }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
               error: Error()
             }), AssetType) : AssetType).Sprite);
-            console.log("誰搶誰"); // PageControll.instance.pageEvnet.on(PageAction.ChangeTo, this.onMoveCircle, this)
 
             for (var index = 0; index < _this.btns.length; index++) {
               var _page = new Page(_this.btns[index], index);
 
-              _page.change(false);
+              _page.getButton().interactable = false;
 
               _this.mapButton.set(index, _page);
             }
@@ -146,6 +147,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             _this.circleY = -((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
               error: Error()
             }), PublicData) : PublicData).getInstance.BaseViewHeight / 2) + _this.nodeCircle.getComponent(UITransform).height / 2;
+
+            for (var _index = 0; _index < _this.btns.length; _index++) {
+              _this.mapButton.get(_index).getButton().interactable = true;
+
+              _this.mapButton.get(_index).change(false);
+            }
           })();
         }
 
@@ -170,7 +177,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onEmitMoveCircle(e, customEventData) {
+          var _this2 = this;
+
           return _asyncToGenerator(function* () {
+            if (_this2.currentIndex == Number(customEventData)) return;
             (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
               error: Error()
             }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
@@ -182,7 +192,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onMoveCircle(index) {
-          var _this2 = this;
+          var _this3 = this;
 
           return _asyncToGenerator(function* () {
             yield (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
@@ -191,16 +201,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), AssetType) : AssetType).Sprite);
             console.error("誰搶誰");
-            if (_this2.currentIndex == Number(index)) return;
-            _this2.lastIndex = _this2.currentIndex;
-            _this2.currentIndex = Number(index);
-            if (_this2.mapButton.size == 0) yield _this2.waitButton();
+            console.log(_this3.currentIndex, index);
+            _this3.lastIndex = _this3.currentIndex;
+            _this3.currentIndex = Number(index);
+            if (_this3.mapButton.size == 0) yield _this3.waitButton();
             var getX = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
               error: Error()
-            }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(_this2.nodeCircle, _this2.getButton(_this2.currentIndex).node).x;
-            _this2.goTarget = v3(getX, _this2.circleY);
+            }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(_this3.nodeCircle, _this3.getButton(_this3.currentIndex).node).x;
+            _this3.goTarget = v3(getX, _this3.circleY);
 
-            _this2.startAction();
+            _this3.startAction();
           })();
         }
 
@@ -209,12 +219,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         waitButton() {
-          var _this3 = this;
+          var _this4 = this;
 
           return _asyncToGenerator(function* () {
             return new Promise((resolve, reject) => {
               var inter = setInterval(() => {
-                if (_this3.mapButton.size != 0) {
+                if (_this4.mapButton.size != 0) {
                   resolve();
                   clearInterval(inter);
                 }

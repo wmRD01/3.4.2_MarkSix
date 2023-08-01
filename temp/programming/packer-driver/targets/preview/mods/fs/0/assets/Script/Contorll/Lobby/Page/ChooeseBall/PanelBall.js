@@ -296,7 +296,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.tempChoose = [];
         }
 
-        onConfirmAttack(e, customEventData) {
+        Attack() {
           var _this2 = this;
 
           return _asyncToGenerator(function* () {
@@ -323,24 +323,33 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 error: Error()
               }), DelayTime) : DelayTime).getInstance.StartDT(.1);
             }
-
-            var _bet = new (_crd && bet === void 0 ? (_reportPossibleCrUseOfbet({
-              error: Error()
-            }), bet) : bet)();
-
-            _bet.betCode = _this2.isChoose;
-
-            _this2.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
-              error: Error()
-            }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
-              error: Error()
-            }), CommandType) : CommandType).bet, _bet);
             /**打leo的com */
 
 
             _this2.tempChoose = [];
             _this2.isConfirm = true;
+          })();
+        }
+
+        onConfirmAttack(e, customEventData) {
+          var _this3 = this;
+
+          return _asyncToGenerator(function* () {
+            _this3.Attack();
+
+            var _bet = new (_crd && bet === void 0 ? (_reportPossibleCrUseOfbet({
+              error: Error()
+            }), bet) : bet)();
+
+            _bet.betCode = _this3.isChoose;
+
+            _this3.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+              error: Error()
+            }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
+              error: Error()
+            }), CommandType) : CommandType).bet, _bet);
             /**推波訊息 */
+
           })();
         }
 
@@ -376,13 +385,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         reProcessing(data) {
-          for (var index = 0; index < data.betCode.length; index++) {
-            this.onChooeseBall(null, data.betCode[index].toString());
+          console.log(data);
+
+          if (data.betCode != null) {
+            for (var index = 0; index < data.betCode.length; index++) {
+              this.onChooeseBall(null, data.betCode[index].toString());
+            }
+
+            this.Attack();
+            this.isFullBall = true;
           }
 
           this.labelIssueID.string = "\u7B2C" + data.drawIssue + "\u671F";
-          this.onConfirmAttack();
-          this.isFullBall = true;
           (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
             error: Error()
           }), PanelLoading) : PanelLoading).instance.closeLoading();

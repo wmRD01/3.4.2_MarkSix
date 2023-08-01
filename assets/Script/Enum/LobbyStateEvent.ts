@@ -1,10 +1,10 @@
 export enum LobbyStateEvent {
     BallChooeseAction = "BallChooeseAction",
     ChangePointPage = "ChangePointPage",
-    ActivePanelClientInfo = "ActivePanelClientInfo",
-    ActivePanelClientEdit = "ActivePanelClientEdit",
-    ChangePlayerPicture = "ChangePlayerPicture",
-    UpDatePlayer="UpDatePlayer",
-    UpDateBall="UpDateBall",
+    UpDateBall = "UpDateBall",
 
+    EditNickname = "EditNickname",
+    EditPhone = "EditPhone",
+    EditEmail = "EditEmail",
+    EditUpdate="EditUpdate",
 }

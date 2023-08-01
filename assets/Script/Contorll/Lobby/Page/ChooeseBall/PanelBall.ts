@@ -145,7 +145,7 @@ export default class PanelBall extends BaseComponent {
 
         this.tempChoose = []
     }
-    async onConfirmAttack(e?: EventTouch, customEventData?: string) {
+    async Attack() {
         if (this.isConfirm) return
         if (this.tempChoose.length < this.MaxCount) {
             return
@@ -160,13 +160,16 @@ export default class PanelBall extends BaseComponent {
             this.eventEmit(LobbyStateEvent.BallChooeseAction, this.mapBallNumber.get(this.isChoose[index]).node, index)
             await DelayTime.getInstance.StartDT(.1);
         }
+
+        /**打leo的com */
+        this.tempChoose = []
+        this.isConfirm = true
+    }
+    async onConfirmAttack(e?: EventTouch, customEventData?: string) {
+        this.Attack()
         const _bet = new bet()
         _bet.betCode = this.isChoose
         this.eventEmit(WebSocketEvent.WebSocketSendCommand, CommandType.bet, _bet)
-        /**打leo的com */
-        this.tempChoose = []
-
-        this.isConfirm = true
         /**推波訊息 */
     }
     fullResetBallColor(bool: boolean) {
@@ -191,13 +194,16 @@ export default class PanelBall extends BaseComponent {
     }
 
     reProcessing(data: ln) {
-        for (let index = 0; index < data.betCode.length; index++) {
-            this.onChooeseBall(null, data.betCode[index].toString())
+        console.log(data);
+        if (data.betCode != null) {
+            for (let index = 0; index < data.betCode.length; index++) {
+                this.onChooeseBall(null, data.betCode[index].toString())
+            }
+            this.Attack()
+            this.isFullBall = true;
+
         }
         this.labelIssueID.string = `第${data.drawIssue}期`;
-        this.onConfirmAttack()
-        this.isFullBall = true;
-
         PanelLoading.instance.closeLoading()
     }
 }

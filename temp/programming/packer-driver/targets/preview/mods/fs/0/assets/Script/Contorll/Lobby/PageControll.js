@@ -99,8 +99,8 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
         }
 
         start() {
-          this.closeTouch(this.pageView);
-          console.log("欸我已經送了欸");
+          this.closeTouch(this.pageView); // console.log("欸我已經送了欸");
+
           if (DEV) (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
           }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({

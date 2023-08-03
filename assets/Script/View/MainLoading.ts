@@ -1,4 +1,4 @@
-import { game, js, sys, _decorator } from "cc";
+import { director, game, js, sys, _decorator } from "cc";
 import BaseSingletonComponent from "../../Patten/Singleton/BaseSingletonComponent";
 import PanelLoading from "../Contorll/NoClearNode/PanelLoading";
 import { GameEvent } from "../Enum/GameEvent";
@@ -12,6 +12,7 @@ const { ccclass, property } = _decorator;
 @ccclass('MainLoading')
 export default class MainLoading extends BaseSingletonComponent<MainLoading>() {
     onLoad() {
+
         PublicData.getInstance.currentScene = GameSceneName.Loading
         super.onLoad()
         game.frameRate = 59
@@ -20,6 +21,11 @@ export default class MainLoading extends BaseSingletonComponent<MainLoading>() {
         MusicMng.init()
     }
     start() {
+        return
+        PanelLoading.instance.openLoading()
+        director.preloadScene(GameSceneName.Lobby, () => {
+            director.loadScene(GameSceneName.Lobby)
+        })
         // PanelLoading.instance.openLoading()
     }
 

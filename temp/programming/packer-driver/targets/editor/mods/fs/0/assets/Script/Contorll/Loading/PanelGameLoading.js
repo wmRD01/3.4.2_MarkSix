@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, director, find, Label, ProgressBar, Sprite, UIOpacity, _decorator, MyMath, GameEvent, GameSceneName, BaseComponent, RequestGPG, _dec, _class, _temp, _crd, ccclass, property, PanelGameLoading;
+  var _reporterNs, _cclegacy, director, find, Label, ProgressBar, Sprite, UIOpacity, _decorator, MyMath, GameEvent, GameSceneName, BaseComponent, RequestGPG, _dec, _class, _temp, _crd, ccclass, property, PanelLogin;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -58,7 +58,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", PanelGameLoading = (_dec = ccclass('PanelGameLoading'), _dec(_class = (_temp = class PanelGameLoading extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelLogin = (_dec = ccclass('PanelLogin'), _dec(_class = (_temp = class PanelLogin extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {

@@ -7,8 +7,8 @@ import { RequestGPG as RequestGPG } from '../Api/GPGAPI/RequestGPG';
 const { ccclass, property } = _decorator;
 
 
-@ccclass('PanelGameLoading')
-export default class PanelGameLoading extends BaseComponent {
+@ccclass('PanelLogin')
+export default class PanelLogin extends BaseComponent {
     progressBar: ProgressBar;
     label_progress: Label;
     sprite_Logo: Sprite;

@@ -300,12 +300,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Loading.scene": {
-    "time": 1691033628499.5505,
+    "time": 1691056810430.1162,
     "uuid": "602c3d25-484a-4071-ae9b-2b9ed340bc8b",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Lobby.scene": {
-    "time": 1691054387340.1045,
+    "time": 1691055576267.9287,
     "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
     "missing": false
   },
@@ -340,7 +340,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model": {
-    "time": 1689910860245.1948,
+    "time": 1691056455423.0828,
     "uuid": "c0ba6b6a-45ea-4207-b86c-78c0f3297e17",
     "missing": false
   },
@@ -660,7 +660,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Loading": {
-    "time": 1688548639473.8582,
+    "time": 1691056455425.084,
     "uuid": "761e4862-28ea-429d-bb9d-a299c7265238",
     "missing": false
   },
@@ -905,7 +905,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PublicData.ts": {
-    "time": 1691052674764.3638,
+    "time": 1691054879930.663,
     "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12",
     "missing": false
   },
@@ -1025,7 +1025,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\View\\MainLoading.ts": {
-    "time": 1689932533402.9153,
+    "time": 1691055589169.9666,
     "uuid": "4baf032d-11dc-4a05-888e-2979510bec06",
     "missing": false
   },
@@ -1102,11 +1102,6 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\GameControll\\GameControll.ts": {
     "time": 1689911927747.5054,
     "uuid": "b4703ef7-4529-4d87-a1ad-16f2a3261b5a",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Loading\\PanelGameLoading.ts": {
-    "time": 1689929213707.0833,
-    "uuid": "34f876e8-a4d2-423b-8585-d155ec390ebf",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page": {
@@ -1977,9 +1972,6 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\GameControll\\GameControll.ts.meta": {
     "time": 1687144713946.1423
   },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Loading\\PanelGameLoading.ts.meta": {
-    "time": 1676445927550.036
-  },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\PageControll.ts.meta": {
     "time": 1688715279454.266
   },
@@ -2107,7 +2099,7 @@
     "time": 1689585009834.9856
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ClientInfo\\PageClientEdit.ts": {
-    "time": 1691054741255.816,
+    "time": 1691056114150.2532,
     "uuid": "5d3e955f-5565-4e30-a755-5876a833de2f",
     "missing": false
   },
@@ -2213,6 +2205,22 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ChooeseBall\\PaenlFunctionButton.ts": {
     "time": 1691031205863.3215,
     "uuid": "c40dedcf-4140-4083-881f-e3e0fd9ca4c7",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\VerificationTimer.ts.meta": {
+    "time": 1691056455434.0857
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Loading\\PanelLogin.ts.meta": {
+    "time": 1691056455437.087
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\VerificationTimer.ts": {
+    "time": 1691056103789.424,
+    "uuid": "963c0fba-c83f-445d-8939-a57979165ddc",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Loading\\PanelLogin.ts": {
+    "time": 1691056131986,
+    "uuid": "fc559419-b4ce-48d8-aa82-199957b64870",
     "missing": false
   }
 }

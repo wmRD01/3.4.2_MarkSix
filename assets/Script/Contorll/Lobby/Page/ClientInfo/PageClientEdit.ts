@@ -14,6 +14,7 @@ import { EditMenu } from '../../../../Enum/EditMenu';
 import PanelSystemMessage from '../../../NoClearNode/PanelSystemMessage';
 import SocketSetting from '../../../../Socket/SocketSetting';
 import { LangType } from '../../../../Enum/LangType';
+import { VerificationTimer } from '../../../../Model/VerificationTimer';
 const { ccclass, property } = _decorator;
 @ccclass('PanelClientEdit')
 export default class PanelClientEdit extends BaseComponent {
@@ -135,7 +136,7 @@ export default class PanelClientEdit extends BaseComponent {
     responseSendRegisterVerification(response: ResponseGPG.SendRegisterVerification.DataClass) {
         console.log("SendRegisterVerification", response)
         if (response.Status.Code == "0") {
-            new VerificationTimer(this.labelVerificationCode, this.buttonVerificationCode)
+            new VerificationTimer(this.labelVerificationCode, this.buttonVerificationCode, 180)
             console.log("送出驗證碼囉");
         }
 
@@ -294,22 +295,3 @@ export default class PanelClientEdit extends BaseComponent {
 }
 
 
-class VerificationTimer {
-    time: number = 5
-
-    constructor(_label: Label, button: Button) {
-        let rememberOrgStr = _label.string
-        button.interactable = false
-        _label.string = `${this.time.toString()}s`
-        let loop = setInterval(() => {
-            this.time--;
-            if (this.time < 0) {
-                button.interactable = true
-                _label.string = rememberOrgStr
-                clearInterval(loop)
-                return
-            }
-            _label.string = `${this.time.toString()}s`
-        }, 1000)
-    }
-}

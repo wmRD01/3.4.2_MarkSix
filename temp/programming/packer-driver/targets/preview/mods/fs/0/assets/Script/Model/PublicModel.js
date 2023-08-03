@@ -293,11 +293,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "cr
           if (isDelete) delete sign.sign;
           var dataWithApiKey = this.sortObj(sign, (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
             error: Error()
-          }), PublicData) : PublicData).getInstance.gpgApi);
-          console.log(dataWithApiKey);
-          console.log((_crd && CryptoES === void 0 ? (_reportPossibleCrUseOfCryptoES({
-            error: Error()
-          }), CryptoES) : CryptoES).MD5(dataWithApiKey).toString());
+          }), PublicData) : PublicData).getInstance.gpgApi); // console.log(dataWithApiKey);
+          // console.log(CryptoES.MD5(dataWithApiKey).toString());
+
           return (_crd && CryptoES === void 0 ? (_reportPossibleCrUseOfCryptoES({
             error: Error()
           }), CryptoES) : CryptoES).MD5(dataWithApiKey).toString();
@@ -354,6 +352,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "cr
 
           return hours + ":" + min + ":" + sec;
         }
+        /**轉換國立 */
+
 
         convertToROC(yearAD) {
           var ROC_OFFSET = 1911;
@@ -366,6 +366,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "cr
 
         checkStringNull(str) {
           return str == "" || str == null || str == undefined ? true : false;
+        }
+
+        convertDateDiff(_date, offsetDay) {
+          // sDate1 和 sDate2 是 2016-06-18 格式
+          var oDate1 = new Date(_date);
+          return new Date(oDate1.setDate(oDate1.getDate() + offsetDay));
+        }
+
+        getMonthAllDay(day) {
+          var getDay = new Date(day);
+          return new Date(getDay.getFullYear(), getDay.getMonth() + 1, 0).getDate();
         }
 
       });

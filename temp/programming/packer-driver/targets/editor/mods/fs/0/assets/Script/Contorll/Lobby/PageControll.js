@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, PageView, Node, DEV, BaseSingletonComponent, NotificationType, PageAction, EventMng, PanelLoading, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PageControll;
+  var _reporterNs, _cclegacy, _decorator, PageView, Node, DEV, BaseSingletonComponent, NotificationType, PageAction, WebSocketEvent, EventMng, PanelLoading, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PageControll;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -25,6 +25,10 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
 
   function _reportPossibleCrUseOfPageMenu(extras) {
     _reporterNs.report("PageMenu", "../../Enum/PageMenu", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfWebSocketEvent(extras) {
+    _reporterNs.report("WebSocketEvent", "../../Enum/WebSocketEvent", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfEventMng(extras) {
@@ -52,9 +56,11 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
     }, function (_unresolved_4) {
       PageAction = _unresolved_4.PageAction;
     }, function (_unresolved_5) {
-      EventMng = _unresolved_5.default;
+      WebSocketEvent = _unresolved_5.WebSocketEvent;
     }, function (_unresolved_6) {
-      PanelLoading = _unresolved_6.default;
+      EventMng = _unresolved_6.default;
+    }, function (_unresolved_7) {
+      PanelLoading = _unresolved_7.default;
     }],
     execute: function () {
       _crd = true;
@@ -101,6 +107,13 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
         start() {
           this.closeTouch(this.pageView); // console.log("欸我已經送了欸");
 
+          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+            error: Error()
+          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
+            error: Error()
+          }), NotificationType) : NotificationType).Pulic).emit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+            error: Error()
+          }), WebSocketEvent) : WebSocketEvent).StartLoadLanguage);
           if (DEV) (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
           }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({

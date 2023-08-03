@@ -38,8 +38,6 @@ export default class PanelLoading extends BaseSingletonComponent<PanelLoading>()
 
     }
     closeLoading() {
-        console.log("?????");
-
         this.hide()
     }
     dotAction() {

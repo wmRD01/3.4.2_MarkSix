@@ -9,8 +9,10 @@ class SocketSetting {
     Language = "";
     gameData: Object = new Object();
     serverData: Object = new Object();
+    serverAPIData: Object = new Object();
     isGame: boolean;
     isServer: boolean
+    isServerAPI: boolean;
 
     setLang(language: string) {
         this.Language = language;
@@ -18,8 +20,8 @@ class SocketSetting {
     }
     init(_data: Object, _type: LangType) {
         // console.log(_type, _data);
-
-        let data = _type == LangType.Game ? this.gameData : this.serverData
+        let data = this.getTypeData(_type);
+        // console.log(data);
 
 
         for (const key in _data) {
@@ -28,7 +30,14 @@ class SocketSetting {
             }
 
         }
-        _type == LangType.Game ? this.isGame = true : this.isServer = true
+        switch (_type) {
+            case LangType.Game:
+                this.isGame = true;
+            case LangType.Server:
+                this.isServer = true;
+            case LangType.ServerAPI:
+                this.isServerAPI = true;
+        }
 
         return this
 
@@ -37,7 +46,8 @@ class SocketSetting {
         // console.log(language);
     }
     t(option: string, _type: LangType) {
-        let data = _type == LangType.Game ? this.gameData : this.serverData
+        let data = this.getTypeData(_type);
+
         // console.log(option);
         // console.log(data);
         if (data == null) {
@@ -62,6 +72,7 @@ class SocketSetting {
         return new Promise<void>((resolve, reject) => {
             if (_type == LangType.Game && this.isGame) resolve();
             if (_type == LangType.Server && this.isServer) resolve();
+            if (_type == LangType.ServerAPI && this.isGame) resolve();
             let checkLoop = setInterval(() => {
                 let isbool = _type == LangType.Game ? this.isGame : this.isServer
                 if (isbool) {
@@ -72,6 +83,17 @@ class SocketSetting {
                 }
             }, 100)
         })
+    }
+    getTypeData(_type: LangType) {
+        switch (_type) {
+            case LangType.Game:
+                return this.gameData;
+            case LangType.Server:
+                return this.serverData;
+            case LangType.ServerAPI:
+                return this.serverAPIData;
+        }
+
     }
 
 

@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16", "__unresolved_17"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, log, sys, _decorator, ln, URLVlaue, MessageCommend, LangType, CheckLoadingType, CommandType, WebSocketEvent, PublicData, SocketModel, SocketSetting, DelayTime, CheckLoading, GameData, Player, PublicModel, GameControll, PlayerIdentity, WebPlatform, Config, _dec, _class, _temp, _crd, ccclass, property, GameWebSocket;
+  var _reporterNs, _cclegacy, log, sys, _decorator, ln, URLVlaue, MessageCommend, LangType, CheckLoadingType, CommandType, WebSocketEvent, PublicData, SocketModel, SocketSetting, DelayTime, CheckLoading, GameData, Player, PublicModel, GameControll, WebPlatform, Config, _dec, _class, _temp, _crd, ccclass, property, GameWebSocket;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -69,10 +69,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("GameControll", "../Contorll/GameControll/GameControll", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfPlayerIdentity(extras) {
-    _reporterNs.report("PlayerIdentity", "../Enum/PlayerIdentity", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfWebPlatform(extras) {
     _reporterNs.report("WebPlatform", "../Enum/WebPlatform", _context.meta, extras);
   }
@@ -117,9 +113,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_16) {
       GameControll = _unresolved_16.default;
     }, function (_unresolved_17) {
-      PlayerIdentity = _unresolved_17.PlayerIdentity;
-    }, function (_unresolved_18) {
-      WebPlatform = _unresolved_18.WebPlatform;
+      WebPlatform = _unresolved_17.WebPlatform;
     }],
     execute: function () {
       _crd = true;
@@ -141,6 +135,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onEnable() {
+          this.eventSetting();
+          this.judgePlatorm();
+          this.Setting();
+          this.MotifySetting();
+        }
+
+        startConnect() {
           /**避免測試期間轉換到下一個場景的時候，又再次連線 */
           if ((_crd && CheckLoading === void 0 ? (_reportPossibleCrUseOfCheckLoading({
             error: Error()
@@ -152,13 +153,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
 
           if (this.isFirstData) {
-            this.judgePlatorm();
-            this.Setting();
-            this.MotifySetting();
-            this.eventSetting();
-            let getWebPlatform = this.urlData == undefined ? (_crd && WebPlatform === void 0 ? (_reportPossibleCrUseOfWebPlatform({
+            let getWebPlatform = (_crd && WebPlatform === void 0 ? (_reportPossibleCrUseOfWebPlatform({
               error: Error()
-            }), WebPlatform) : WebPlatform).Default : this.urlData.dc;
+            }), WebPlatform) : WebPlatform).Default;
             /**由於打包出去後似乎會被意外轉成Obj，因此還要再次判斷 */
 
             getWebPlatform = typeof getWebPlatform !== 'string' ? (_crd && WebPlatform === void 0 ? (_reportPossibleCrUseOfWebPlatform({
@@ -172,21 +169,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           } else this.connectToServer();
         }
 
-        onDisable() {
-          this.closeWebsocket();
-        }
-
         test(from, data) {
           from.push(data);
-        }
-
-        start() {// let getWebPlatform = this.urlData == undefined ? WebPlatform.Default : (this.urlData as URLVlaue).dc
-          // /**由於打包出去後似乎會被意外轉成Obj，因此還要再次判斷 */
-          // getWebPlatform = typeof getWebPlatform !== 'string' ? WebPlatform.Default : getWebPlatform
-          // // console.error("最終結果：" + getWebPlatform);
-          // //取得config拿取遊戲相關資料，其中包含連線的資訊
-          // this.RomoteData(`${this.libPath}config/${GameData.getInstance.gameID}/${getWebPlatform}/game.json?${new Date().getTime()}`, this.connectToServer.bind(this), this.loadLanguageError.bind(this))
-          // AssetMng.loadLogoAsset(this.UserLanguage)
         }
 
         connectToServer(jsonText) {
@@ -205,7 +189,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           let host = `${this.connectionType}://${this.serverhost}:${this.serverport}`;
           console.log(host);
-          this.startLoadLanguage();
           this.webSocket = new WebSocket(host);
           this.webSocket.onopen = this.onWS_Open.bind(this);
           this.webSocket.onerror = this.onWS_Error.bind(this);
@@ -214,9 +197,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         eventSetting() {
+          console.log("監聽設定玩");
+          console.log((_crd && GameControll === void 0 ? (_reportPossibleCrUseOfGameControll({
+            error: Error()
+          }), GameControll) : GameControll).getInstance);
           (_crd && GameControll === void 0 ? (_reportPossibleCrUseOfGameControll({
             error: Error()
           }), GameControll) : GameControll).getInstance.setControllEvent();
+          console.log("監聽設定玩");
+          this.setEvent((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+            error: Error()
+          }), WebSocketEvent) : WebSocketEvent).StartConnect, this.startConnect);
           this.setEvent((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
             error: Error()
           }), WebSocketEvent) : WebSocketEvent).Login, this.onLogIn);
@@ -235,6 +226,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.setEvent((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
             error: Error()
           }), WebSocketEvent) : WebSocketEvent).StaoredValue, this.onStaoredValue);
+          this.setEvent((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+            error: Error()
+          }), WebSocketEvent) : WebSocketEvent).StartLoadLanguage, this.startLoadLanguage);
+          this.setEvent((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+            error: Error()
+          }), WebSocketEvent) : WebSocketEvent).CloseWebSocket, this.closeWebsocket);
+          console.log("監聽設定玩");
         }
 
         async onSend(cmd, data) {
@@ -273,7 +271,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), GameData) : GameData).getInstance.gameID;
 
-          if (window.isGPGServer && this.urlData != undefined) {
+          if ((window.isGPGServer || window.isInpokerServer) && this.urlData != undefined) {
             let _gameConfig = new (_crd && URLVlaue === void 0 ? (_reportPossibleCrUseOfURLVlaue({
               error: Error()
             }), URLVlaue) : URLVlaue)();
@@ -281,40 +279,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
               error: Error()
             }), PublicModel) : PublicModel).getInstance.TwoClassCheckData(_gameConfig, this.urlData);
-            this.recordeURL = _gameConfig.record;
-            this.usertoken = _gameConfig.token;
-            this.UserLanguage = _gameConfig.lang;
-            this.agentId = _gameConfig.agentId;
-            this.account = _gameConfig.playerId;
-            _gameConfig.browser = sys.browserType;
-            _gameConfig.browserVersion = sys.browserVersion;
-            _gameConfig.os = sys.os;
-            _gameConfig.osVersion = sys.osVersion;
-            _gameConfig.isMobile = sys.isMobile ? 1 : 0;
-            _ln.key = JSON.stringify(_gameConfig);
-            (_crd && GameData === void 0 ? (_reportPossibleCrUseOfGameData({
-              error: Error()
-            }), GameData) : GameData).getInstance.roomNo = _gameConfig.roomNo;
-            (_crd && GameData === void 0 ? (_reportPossibleCrUseOfGameData({
-              error: Error()
-            }), GameData) : GameData).getInstance.isFastInGame = _gameConfig.roomNo > 0 ? true : false;
-            /**判斷是否為訪客帳號，如果收不到或者false就是正式會員 */
+            this.account = _gameConfig.memberid;
+            _ln.account = this.account;
+            _ln.key = _gameConfig.token;
+          } // //TODO 直接給token字串
+          // else if (window.isGPGServer)
+          //     _ln.key = JSON.stringify({})
+          // //TODO 修改成menberID的給Leo
+          else {
+              _ln.account = this.account;
+              _ln.key = (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+                error: Error()
+              }), Player) : Player).getInstance.gpgToken;
+            }
 
-            (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
-              error: Error()
-            }), Player) : Player).getInstance.identity = _gameConfig.demo != undefined && _gameConfig.demo == "true" ? (_crd && PlayerIdentity === void 0 ? (_reportPossibleCrUseOfPlayerIdentity({
-              error: Error()
-            }), PlayerIdentity) : PlayerIdentity).Guest : (_crd && PlayerIdentity === void 0 ? (_reportPossibleCrUseOfPlayerIdentity({
-              error: Error()
-            }), PlayerIdentity) : PlayerIdentity).Member;
-          } //TODO 直接給token字串
-          else if (window.isGPGServer) _ln.key = JSON.stringify({}); //TODO 修改成menberID的給Leo
-
-
-          _ln.account = this.account;
-          _ln.key = (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
-            error: Error()
-          }), Player) : Player).getInstance.gpgToken.split(" ")[1];
           (_crd && GameData === void 0 ? (_reportPossibleCrUseOfGameData({
             error: Error()
           }), GameData) : GameData).getInstance.coinType = this.coinType;
@@ -534,21 +512,29 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         startLoadLanguage() {
+          console.log("開始讀");
           let gameLang = `${this.libPath}gameLanguage/${(_crd && GameData === void 0 ? (_reportPossibleCrUseOfGameData({
             error: Error()
           }), GameData) : GameData).getInstance.gameID}/${this.UserLanguage}.json?/${new Date().getTime()}`;
           this.RomoteData(gameLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this));
           let serverLang = this.libPath + "serverLanguage/" + this.UserLanguage + ".json?" + new Date().getTime();
           this.RomoteData(serverLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this));
+          let serverAPILang = this.libPath + "serverApiLanguage/" + this.UserLanguage + ".json?" + new Date().getTime();
+          this.RomoteData(serverAPILang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this));
         }
 
         loadLanguageEnd(jsonText, url) {
           console.log("loadLanguageEnd");
-          let type = url.indexOf("gameLanguage") == -1 ? (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
-            error: Error()
-          }), LangType) : LangType).Server : (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+          let type;
+          if (url.indexOf("gameLanguage") > 0) type = (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
             error: Error()
           }), LangType) : LangType).Game;
+          if (url.indexOf("serverLanguage") > 0) type = (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+            error: Error()
+          }), LangType) : LangType).Server;
+          if (url.indexOf("serverApiLanguage") > 0) type = (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+            error: Error()
+          }), LangType) : LangType).ServerAPI;
           let jsonTo = JSON.parse(jsonText);
           (_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
             error: Error()
@@ -571,11 +557,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), GameControll) : GameControll).getInstance.messaggeState((_crd && MessageCommend === void 0 ? (_reportPossibleCrUseOfMessageCommend({
             error: Error()
-          }), MessageCommend) : MessageCommend).BackHome, (_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
-            error: Error()
-          }), SocketSetting) : SocketSetting).t("S_0003", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
-            error: Error()
-          }), LangType) : LangType).Server)); // Panel_Message.showConfirm(this, 1, SocketSetting.t("S_9077"), (e) => {
+          }), MessageCommend) : MessageCommend).BackHome, "資源包有問題，請洽客服"); // Panel_Message.showConfirm(this, 1, SocketSetting.t("S_9077"), (e) => {
           //     this.onBackHome();
           // }); //"语言包下载失败请通知客服";
           // MainModelUp.instance.ShowMessageBox = true;

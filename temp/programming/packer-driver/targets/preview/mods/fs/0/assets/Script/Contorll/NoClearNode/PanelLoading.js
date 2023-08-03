@@ -81,7 +81,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         }
 
         closeLoading() {
-          console.log("?????");
           this.hide();
         }
 

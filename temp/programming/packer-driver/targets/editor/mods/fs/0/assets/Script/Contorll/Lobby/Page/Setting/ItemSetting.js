@@ -101,7 +101,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               break;
 
             case Type.Notification:
-              this.labelName.string = "推波"; // MusicMng.getMusicState() ? this.lableState.string = Active.on : this.lableState.string = Active.off
+              this.labelName.string = "推播"; // MusicMng.getMusicState() ? this.lableState.string = Active.on : this.lableState.string = Active.off
 
               break;
           }

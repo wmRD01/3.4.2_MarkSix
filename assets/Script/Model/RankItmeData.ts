@@ -1,4 +1,5 @@
 import { Label, Sprite, SpriteAtlas, UITransform, _decorator } from 'cc';
+import { ResponseGPG } from '../Contorll/Api/GPGAPI/ResponseGPG';
 import { AssetType } from '../Enum/AssetType';
 import AssetMng from '../Manager/AssetMng';
 import BaseComponent from './ComponentBase';
@@ -15,11 +16,13 @@ export default class RankItmeData extends BaseComponent {
     labelName: Label;
     @property(Label)
     labelPointCount: Label;
-    init(data) {
-        this.spriteRank.spriteFrame = this.checkRank(this.randomRank())
-        this.labelName.string = this.randomRank().toString()
-        this.labelPointCount.string = this.randomRank().toString()
-
+    @property(Label)
+    labelRank: Label;
+    init(data: ResponseGPG.TopScore.TopScore) {
+        this.spriteRank.spriteFrame = this.checkRank(data.rank)
+        this.labelName.string = data.nickName
+        this.labelPointCount.string = data.totalScore.toString()
+        this.labelRank.string = data.rank.toString()
     }
     checkRank(num: number) {
 

@@ -55,6 +55,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("PanelLoading", "../../../NoClearNode/PanelLoading", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfURLVlaue(extras) {
+    _reporterNs.report("URLVlaue", "../../../Api/SendCommand", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -128,7 +132,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "labelGiftTitle2", _descriptor13, this);
 
-          _initializerDefineProperty(this, "btnMoreDraw", _descriptor14, this);
+          _initializerDefineProperty(this, 2, _descriptor14, this);
+
+          _defineProperty(this, "btnMoreDraw", void 0);
 
           _initializerDefineProperty(this, "btnPointDetail", _descriptor15, this);
 
@@ -146,13 +152,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         onLoad() {
           this.marquee = this.labelMarquee.addComponent(Marquee);
           this.timer = this.labelTime.addComponent(Timer);
+          /**取TOKEN */
+
+          (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+            error: Error()
+          }), Player) : Player).getInstance.gpgToken = this.handleURLData(window.location.href).token;
         }
 
         async onEnable() {
-          await this.onDrawHistory();
+          await this.requestDrawHistory();
 
           if (this.lastIssueID != this.currentIssueID) {
-            await this.onDrawUpcoming();
+            await this.requestDrawUpcoming(); //TODO 製做我的積分
+
+            await this.request我的積分();
             /**代表更新最新一期 */
 
             this.lastIssueID = this.currentIssueID;
@@ -163,13 +176,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), PanelLoading) : PanelLoading).instance.closeLoading();
         }
 
-        start() {
-          this.marquee.startMarquee("HIHIHI"); // this.timer.setTime(100)
+        start() {// this.marquee.startMarque("HIHIHI")
+          // this.timer.setTime(100)
         }
 
         onDisable() {}
 
-        async onDrawHistory() {
+        async requestDrawHistory() {
           return new Promise(async (resolve, reject) => {
             const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
@@ -194,7 +207,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           });
         }
 
-        async onDrawUpcoming() {
+        async requestDrawUpcoming() {
           return new Promise(async (resolve, reject) => {
             const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
@@ -218,21 +231,37 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           });
         }
 
+        async request我的積分() {
+          return new Promise(async (resolve, reject) => {
+            const getDate = new Date((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.today);
+            this.labelMonth.string = `(${getDate.getMonth() + 1}/1~${getDate.getMonth() + 1}/${(_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.getMonthAllDay((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.today)})`;
+            resolve();
+          });
+        }
+
         responseDrawHistory(response) {
-          let getDate = response.data[0];
-          this.currentIssueID = getDate.issueID;
-          this.labelLastDrawIssueID.string = `第${getDate.issueID.toString()}期`;
-          /**不需要week日 */
-          // console.log(PublicModel.getInstance.convertDate(getDate.openDate).split("(")[0]);
+          if (response.data) {
+            let getDate = response.data[0];
+            this.currentIssueID = getDate.issueID;
+            this.labelLastDrawIssueID.string = `第${getDate.issueID.toString()}期`;
+            /**不需要week日 */
+            // console.log(PublicModel.getInstance.convertDate(getDate.openDate).split("(")[0]);
 
-          let getday = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-            error: Error()
-          }), PublicModel) : PublicModel).getInstance.convertDateDay(getDate.openDate).split("(")[0];
-          this.labelLastDrawDay.string = `${getday}開獎結果`;
+            let getday = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.convertDateDay(getDate.openDate).split("(")[0];
+            this.labelLastDrawDay.string = `${getday}開獎結果`;
 
-          for (let index = 0; index < getDate.drawCode.length; index++) {
-            if (index == 6) return;
-            this.labelLastDrawCode[index].string = getDate.drawCode[index];
+            for (let index = 0; index < getDate.drawCode.length; index++) {
+              if (index == 6) return;
+              this.labelLastDrawCode[index].string = getDate.drawCode[index];
+            }
           }
         }
 
@@ -242,7 +271,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.timer.setTimeNoTimer((_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
           }), PublicModel) : PublicModel).getInstance.convertDateTime(getDate.openDate));
-          console.log(response);
+          (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.today = getDate.openDate;
+        }
+
+        responserequest我的積分(response) {
+          console.log("我的積分");
         }
 
         onGoPage(e, customEventData) {
@@ -258,6 +293,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), NotificationType) : NotificationType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
           }), PageAction) : PageAction).ChangeTo, Number(split[0]));
+        }
+
+        handleURLData(_url) {
+          //  _url = "https://play1.godplay.app/10001/index.html?loginType=web&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0aW1lIjoxNjY4NzYyMjcwMDQ1LCJ1aWQiOiJYUGpST1oiLCJkYyI6IkdQRyIsImFnZW50SWQiOiJ0ckUzeW1XaURMYjIiLCJicmFuZElkIjoiR1BHIiwiYnJhbmRUaXRsZSI6IkdQRyIsImdhbWVJZCI6IjEwMDAxIiwiaWF0IjoxNjY4NzYyMjcwLCJleHAiOjE2Njg3NjU4NzB9.k_GVGPiQCjWxhFG3SGM2zoSy_ggN2cZXuUQ5GvqZib_0TCJ2ul9K5xbTKkgwm7OUw7nMCWLWlwERHc0MMF586SgjuQe9W7SoRSMaBtw_AkiKNn4S1NMvhemgNAdIyjL7I1Gg5xyT-x110RF73lF-yt-n6KKTP3TGkd7wR9_fPz8&record=https://backendsystem.godplay.app/wList&dc=GPG&agentId=trE3ymWiDLb2&GGID=1&lang=tw&forceExchange=true&providerlogo=true"
+          // console.log(_url.split("?")[1].split("&"));
+          // console.log(_url.split("?")[1]);
+          if (_url.split("?")[1] == undefined) return undefined;
+
+          let arr = _url.split("?")[1].split("&");
+
+          let obj = new Object();
+
+          for (let index = 0; index < arr.length; index++) {
+            let cut = arr[index].split("=");
+            obj[cut[0]] = cut[1];
+          } // console.log(obj);
+
+
+          return obj;
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "labelTime", [_dec2], {
@@ -327,7 +381,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor14 = _applyDecoratedDescriptor(_class2.prototype, "btnMoreDraw", [_dec15], {
+      }), _descriptor14 = _applyDecoratedDescriptor(_class2.prototype, 2, [_dec15], {
         configurable: true,
         enumerable: true,
         writable: true,
@@ -364,7 +418,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.rightBorder = this.bindLabel.node.parent.getComponent(UITransform).width + 10; //額外預留
         }
 
-        startMarquee(message) {
+        startMarque(message) {
           this.bindLabel.string = message;
           this.bindLabel.updateRenderData(true);
           this.leftBorder = -(this.bindLabel.getComponent(UITransform).width + 10);

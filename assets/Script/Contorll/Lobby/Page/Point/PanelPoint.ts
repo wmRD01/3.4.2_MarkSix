@@ -9,6 +9,7 @@ import Player from '../../../../Model/Player';
 import PublicModel from '../../../../Model/PublicModel';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
+import PublicData from '../../../../Model/PublicData';
 const { ccclass, property } = _decorator;
 @ccclass('PanelPoint')
 export default class PanelPoint extends BaseComponent {
@@ -28,6 +29,7 @@ export default class PanelPoint extends BaseComponent {
     scrollview: ScrollView;
     isAsync: boolean;
     isDateMax: boolean;
+    mapDate: Map<number, PointItemData> = new Map()
     async start() {
         await AssetMng.waitStateCheck(AssetType.Sprite)
         this.layoutContent.removeAllChildren()
@@ -41,14 +43,29 @@ export default class PanelPoint extends BaseComponent {
         }
         else this.returnFunction();
     }
+    //#region History
+    async requestHistory(count: number) {
+        return new Promise<void>(async (resolve, reject) => {
+            const body = new RequestGPG.Body.NeedToken.DrawHistory()
+            body.top = count.toString()//目前固定10筆
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.DrawHistory)
+            let convert = new URLSearchParams(body).toString()
+            await new RequestGPG.Request()
+                .setToken(Player.getInstance.gpgToken)
+                .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
+            resolve()
+        })
+    }
     responseDrawHistory(response?: ResponseGPG.DrawHistory.DataClass) {
+        console.log("開獎紀錄", response);
+
         if (this.currentCount == response.data.length) {
             this.isDateMax = true
             return
         }
         for (let index = this.currentCount; index < response.data.length; index++) {
             if (this.layoutContent.children.length > this.maxCount) break;
-            this.ClientData(response.data[index])
+            this.mapDate.set(response.data[index].issueID, this.ClientData(response.data[index]))
         }
         this.currentCount = response.data.length;
     }
@@ -64,8 +81,35 @@ export default class PanelPoint extends BaseComponent {
             .setDayData(data.openDate, data.issueID)
             .setOpenNumber(data.drawCode)
             .init()
-
+        return _class
     }
+    //#endregion
+
+    //#region Betlog
+    async requesBetlog(count: number) {
+        return new Promise<void>(async (resolve, reject) => {
+            const body = new RequestGPG.Body.NeedToken.Betlog()
+            const getDate = PublicModel.getInstance.convertDateDiff(PublicData.getInstance.today, -(count))
+            body.sDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-${getDate.getDate()}`
+            body.eDate = PublicData.getInstance.today.split("T")[0]
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Betlog)
+            let convert = new URLSearchParams(body).toString()
+            await new RequestGPG.Request()
+                .setToken(Player.getInstance.gpgToken)
+                .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.Betlog}?${convert}`, this.responseBetlog.bind(this))
+            resolve()
+        })
+    }
+    responseBetlog(response?: ResponseGPG.Betlog.DataClass) {
+        console.log("玩家紀錄", response);
+        for (let index = 0; index < response.data.length; index++) {
+            if (!this.mapDate.has(response.data[index].issueID)) continue;
+            this.mapDate.get(response.data[index].issueID).setSelfNumber(response.data[index].betCode)
+            this.mapDate.get(response.data[index].issueID).setScore(response.data[index].score)
+        }
+    }
+    //#endregion
+
     async onViewBottom(_scrollview?: ScrollView) {
         if (this.currentCount >= this.maxCount) this.returnFunction()
         if (this.isDateMax) this.returnFunction()
@@ -73,17 +117,14 @@ export default class PanelPoint extends BaseComponent {
         this.isAsync = true;
         /**新增請求筆數 */
         let tryGet = this.currentCount + this.pageCount
-        const body = new RequestGPG.Body.NeedToken.DrawHistory()
-        body.top = tryGet.toString()//目前固定10筆
-        body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.DrawHistory)
-        let convert = new URLSearchParams(body).toString()
-        await new RequestGPG.Request()
-            .setToken(Player.getInstance.gpgToken)
-            .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
+        await this.requestHistory(tryGet)
+        await this.requesBetlog(tryGet)
+
         console.error("超過會走這?", this.currentCount);
         PanelLoading.instance.closeLoading()
         this.isAsync = false;
     }
+
     returnFunction() {
         PanelLoading.instance.closeLoading()
         return;

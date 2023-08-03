@@ -15,6 +15,7 @@ import { EditMenu } from '../../../../Enum/EditMenu';
 const { ccclass, property } = _decorator;
 @ccclass('PanelClientInfo')
 export default class PanelClientInfo extends BaseComponent {
+    //#region  propty
     isNeedUpdate: boolean = true;
     isLoading: boolean = false;
     @property(Sprite)
@@ -37,14 +38,15 @@ export default class PanelClientInfo extends BaseComponent {
     labelPointCount: Label;
     labelRank: Label;
 
+    getplatform: string;
 
-
+    //#endregion
     onLoad() {
         super.onLoad()
         this.show()
         this.isNeedUpdate = true;
         this.isLoading = false;
-        EventMng.getInstance.mapEvnet.get(NotificationType.Panel).on(LobbyStateEvent.EditUpdate, this.onEditUpData, this)
+        EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).on(LobbyStateEvent.EditUpdate, this.onEditUpData, this)
         this.labelEmail.string = ""
         this.labelPhone.string = ""
         this.labelNickName.string = ""
@@ -66,19 +68,19 @@ export default class PanelClientInfo extends BaseComponent {
         this.isLoading = false
     }
     onDisable() {
-
+        this.resetButton()
     }
     onEditTarget(e: EventTouch, customEventData?: string) {
         this.closeButton()
         switch (Number(customEventData)) {
             case EditMenu.Nickname:
-                EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.EditNickname)
+                EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).emit(LobbyStateEvent.EditNickname)
                 break;
             case EditMenu.Phone:
-                EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.EditPhone)
+                EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).emit(LobbyStateEvent.EditPhone)
                 break;
             case EditMenu.Email:
-                EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.EditEmail)
+                EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).emit(LobbyStateEvent.EditEmail)
                 break;
         }
     }
@@ -96,23 +98,6 @@ export default class PanelClientInfo extends BaseComponent {
                     break;
             }
         }
-        this.resetButton()
-        PanelLoading.instance.closeLoading()
-    }
-    onUpdateNickName(str: string) {
-        if (!PublicModel.getInstance.checkStringNull(str))
-            this.labelNickName.string = str
-
-    }
-    onUpdatePhone(str: string) {
-        if (!PublicModel.getInstance.checkStringNull(str))
-            this.labelNickName.string = str
-        this.resetButton()
-        PanelLoading.instance.closeLoading()
-    }
-    onUpdateEmail(str: string) {
-        if (!PublicModel.getInstance.checkStringNull(str))
-            this.labelNickName.string = str
         this.resetButton()
         PanelLoading.instance.closeLoading()
     }
@@ -142,33 +127,42 @@ export default class PanelClientInfo extends BaseComponent {
         Player.getInstance.gpgInfo = response;
         // response.data.photo
         // console.log(Player.getInstance.gpgInfo);
-        assetManager.loadRemote(response.data.photo.headPhoto, (err, image: ImageAsset) => {
-            if (err) {
-                console.error(err.message);
-                return
-            }
-            this.isNeedUpdate = false;
-            this.spritePlayer.spriteFrame = SpriteFrame.createWithImage(image)
-            if (this.stopDelay() < 1)
-                setTimeout(PanelLoading.instance.closeLoading.bind(PanelLoading.instance), 1000);
-            else
-                PanelLoading.instance.closeLoading()
-        })
-        this.labelNickName.string = response.data.nickName.split("_")[1]/**因為前面會有註冊會員的文字，要刪除掉 */
+
+        if (!PublicModel.getInstance.checkStringNull(response.data.photo.headPhoto))
+            assetManager.loadRemote(response.data.photo.headPhoto, (err, image: ImageAsset) => {
+                if (err) {
+                    console.error(err.message);
+                    return
+                }
+                this.isNeedUpdate = false;
+                this.spritePlayer.spriteFrame = SpriteFrame.createWithImage(image)
+
+            })
+        if (!PublicModel.getInstance.checkStringNull(response.data.nickName)) {
+            this.getplatform = response.data.nickName?.split("_")[0]/**因為前面會有註冊會員的文字，要刪除掉 */
+            this.labelNickName.string = response.data.nickName.replace(`${this.getplatform}_`, "")
+        }
+        else
+            this.labelNickName.string = response.data.nickName
         this.buttonEditPhone.node.active = PublicModel.getInstance.checkStringNull(response.data.phoneNumber);
         this.labelPhone.string = PublicModel.getInstance.checkStringNull(response.data.phoneNumber) ? "" : response.data.phoneNumber
         this.buttonEditEmail.node.active = PublicModel.getInstance.checkStringNull(response.data.email);
         this.labelEmail.string = PublicModel.getInstance.checkStringNull(response.data.email) ? "" : response.data.email
+        this.isNeedUpdate = false;
+        if (this.stopDelay() < 1)
+            setTimeout(PanelLoading.instance.closeLoading.bind(PanelLoading.instance), 1000);
+        else
+            PanelLoading.instance.closeLoading()
     }
 
     resetButton() {
         this.buttonEditNickname.node.active = true
-        this.buttonEditPicture.node.active = true
+        // this.buttonEditPicture.node.active = true
         this.buttonEditPhone.node.active = PublicModel.getInstance.checkStringNull(this.labelPhone.string);
         this.buttonEditEmail.node.active = PublicModel.getInstance.checkStringNull(this.labelEmail.string);
     }
     closeButton() {
-        this.buttonEditPicture.node.active = false
+        // this.buttonEditPicturse.node.active = false
         this.buttonEditNickname.node.active = false
         this.buttonEditPhone.node.active = false
         this.buttonEditEmail.node.active = false

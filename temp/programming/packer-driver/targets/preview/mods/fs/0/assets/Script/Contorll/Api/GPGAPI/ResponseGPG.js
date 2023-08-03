@@ -251,6 +251,86 @@ System.register(["cc"], function (_export, _context) {
           _DrawHistory.History = History;
         })(DrawHistory || (DrawHistory = _ResponseGPG.DrawHistory || (_ResponseGPG.DrawHistory = {})));
 
+        var Betlog;
+
+        (function (_Betlog) {
+          class DataClass {
+            constructor() {
+              _defineProperty(this, "data", []);
+
+              _defineProperty(this, "Status", new State());
+            }
+
+          }
+
+          _Betlog.DataClass = DataClass;
+
+          class State {
+            constructor() {
+              _defineProperty(this, "Code", void 0);
+
+              _defineProperty(this, "Message", void 0);
+            }
+
+          }
+
+          class Betlog {
+            constructor() {
+              _defineProperty(this, "betCode", void 0);
+
+              _defineProperty(this, "betID", void 0);
+
+              _defineProperty(this, "betTime", void 0);
+
+              _defineProperty(this, "issueID", void 0);
+
+              _defineProperty(this, "score", void 0);
+            }
+
+          }
+
+          _Betlog.Betlog = Betlog;
+        })(Betlog || (Betlog = _ResponseGPG.Betlog || (_ResponseGPG.Betlog = {})));
+
+        var TopScore;
+
+        (function (_TopScore) {
+          class DataClass {
+            constructor() {
+              _defineProperty(this, "data", []);
+
+              _defineProperty(this, "Status", new State());
+            }
+
+          }
+
+          _TopScore.DataClass = DataClass;
+
+          class State {
+            constructor() {
+              _defineProperty(this, "Code", void 0);
+
+              _defineProperty(this, "Message", void 0);
+            }
+
+          }
+
+          class TopScore {
+            constructor() {
+              _defineProperty(this, "memberID", void 0);
+
+              _defineProperty(this, "nickName", void 0);
+
+              _defineProperty(this, "rank", void 0);
+
+              _defineProperty(this, "totalScore", void 0);
+            }
+
+          }
+
+          _TopScore.TopScore = TopScore;
+        })(TopScore || (TopScore = _ResponseGPG.TopScore || (_ResponseGPG.TopScore = {})));
+
         var DrawUpcoming;
 
         (function (_DrawUpcoming) {

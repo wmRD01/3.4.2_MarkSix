@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Node, Sprite, _decorator, NotificationType, LobbyStateEvent, EventMng, BaseComponent, Player, RequestGPG, MyEditBox, PublicModel, PanelLoading, ButtonMng, EditMenu, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _temp, _crd, ccclass, property, PageClientEdit;
+  var _reporterNs, _cclegacy, Button, Label, Node, _decorator, NotificationType, LobbyStateEvent, EventMng, BaseComponent, Player, RequestGPG, MyEditBox, PublicModel, PanelLoading, ButtonMng, EditMenu, PanelSystemMessage, SocketSetting, LangType, VerificationTimer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PanelClientEdit;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -9,11 +9,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
-  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
   function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
   function _reportPossibleCrUseOfNotificationType(extras) {
     _reporterNs.report("NotificationType", "../../../../Enum/NotificationType", _context.meta, extras);
@@ -63,14 +63,26 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("EditMenu", "../../../../Enum/EditMenu", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfPanelSystemMessage(extras) {
+    _reporterNs.report("PanelSystemMessage", "../../../NoClearNode/PanelSystemMessage", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfSocketSetting(extras) {
+    _reporterNs.report("SocketSetting", "../../../../Socket/SocketSetting", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfLangType(extras) {
+    _reporterNs.report("LangType", "../../../../Enum/LangType", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
     }, function (_cc) {
       _cclegacy = _cc.cclegacy;
       Button = _cc.Button;
+      Label = _cc.Label;
       Node = _cc.Node;
-      Sprite = _cc.Sprite;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
       NotificationType = _unresolved_2.NotificationType;
@@ -94,6 +106,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       ButtonMng = _unresolved_11.default;
     }, function (_unresolved_12) {
       EditMenu = _unresolved_12.EditMenu;
+    }, function (_unresolved_13) {
+      PanelSystemMessage = _unresolved_13.default;
+    }, function (_unresolved_14) {
+      SocketSetting = _unresolved_14.default;
+    }, function (_unresolved_15) {
+      LangType = _unresolved_15.LangType;
     }],
     execute: function () {
       _crd = true;
@@ -105,7 +123,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", PageClientEdit = (_dec = ccclass('PageClientEdit'), _dec2 = property(_crd && MyEditBox === void 0 ? (_reportPossibleCrUseOfMyEditBox({
+      _export("default", PanelClientEdit = (_dec = ccclass('PanelClientEdit'), _dec2 = property(_crd && MyEditBox === void 0 ? (_reportPossibleCrUseOfMyEditBox({
         error: Error()
       }), MyEditBox) : MyEditBox), _dec3 = property(_crd && MyEditBox === void 0 ? (_reportPossibleCrUseOfMyEditBox({
         error: Error()
@@ -113,7 +131,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         error: Error()
       }), MyEditBox) : MyEditBox), _dec5 = property(_crd && MyEditBox === void 0 ? (_reportPossibleCrUseOfMyEditBox({
         error: Error()
-      }), MyEditBox) : MyEditBox), _dec6 = property(Button), _dec7 = property(Button), _dec8 = property(Node), _dec9 = property(Sprite), _dec(_class = (_class2 = (_temp = class PageClientEdit extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      }), MyEditBox) : MyEditBox), _dec6 = property(Button), _dec7 = property(Button), _dec8 = property(Node), _dec9 = property(Label), _dec(_class = (_class2 = (_temp = class PanelClientEdit extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor() {
@@ -132,38 +150,42 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "buttonConfirm", _descriptor6, this);
 
           _initializerDefineProperty(this, "btnsFunction", _descriptor7, this);
+
+          _initializerDefineProperty(this, "labelVerificationCode", _descriptor8, this);
         }
 
         onLoad() {
-          super.onLoad();
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
           }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), NotificationType) : NotificationType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+          }), NotificationType) : NotificationType).PanelClient).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).EditNickname, this.onEditNickname, this);
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
           }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), NotificationType) : NotificationType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+          }), NotificationType) : NotificationType).PanelClient).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).EditPhone, this.onEditPhone, this);
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
           }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
-          }), NotificationType) : NotificationType).Panel).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+          }), NotificationType) : NotificationType).PanelClient).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).EditEmail, this.onEditEmail, this);
           this.editNicName.string = "";
           this.editEmail.string = "";
           this.editPhone.string = "";
           this.reset();
+          super.onLoad();
         }
 
-        onCancel() {} //#region  Nickname
+        onDisable() {
+          this.reset();
+        } //#region  Nickname
 
         /**送出修改NickName */
 
@@ -194,7 +216,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
             }), RequestGPG) : RequestGPG).Body.NeedToken.Nickname);
-            console.log(body);
             yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
             }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
@@ -219,7 +240,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
               error: Error()
-            }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            }), NotificationType) : NotificationType).PanelClient).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
               error: Error()
             }), LobbyStateEvent) : LobbyStateEvent).EditUpdate, this.editNicName.string, (_crd && EditMenu === void 0 ? (_reportPossibleCrUseOfEditMenu({
               error: Error()
@@ -229,6 +250,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), ButtonMng) : ButtonMng).clearEvent(this.buttonConfirm);
             this.reset();
           } else {
+            (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+              error: Error()
+            }), PanelLoading) : PanelLoading).instance.closeLoading();
             console.error("資料有問題");
           }
         } //#endregion
@@ -318,8 +342,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           console.log("SendRegisterVerification", response);
 
           if (response.Status.Code == "0") {
+            new VerificationTimer(this.labelVerificationCode, this.buttonVerificationCode);
             console.log("送出驗證碼囉");
-          } else {}
+          }
         } //#endregion
         //#region Phone
 
@@ -373,7 +398,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
             }), RequestGPG) : RequestGPG).Body.NeedToken.CertifiedEmail);
-            console.log(body);
             yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
             }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
@@ -399,7 +423,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
               error: Error()
-            }), NotificationType) : NotificationType).Panel).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            }), NotificationType) : NotificationType).PanelClient).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
               error: Error()
             }), LobbyStateEvent) : LobbyStateEvent).EditUpdate, this.editEmail.string, (_crd && EditMenu === void 0 ? (_reportPossibleCrUseOfEditMenu({
               error: Error()
@@ -410,6 +434,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.reset();
           } else {
             //TODO顯示錯誤訊息
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.messageInit((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t(response.Status.Code, (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).ServerAPI));
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm();
             (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
               error: Error()
             }), PanelLoading) : PanelLoading).instance.closeLoading();
@@ -564,7 +598,35 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _applyDecoratedDescriptor(_class2.prototype, "onLoad", [_dec9], Object.getOwnPropertyDescriptor(_class2.prototype, "onLoad"), _class2.prototype)), _class2)) || _class));
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "labelVerificationCode", [_dec9], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      })), _class2)) || _class));
+
+      VerificationTimer = class VerificationTimer {
+        constructor(_label, button) {
+          _defineProperty(this, "time", 5);
+
+          var rememberOrgStr = _label.string;
+          button.interactable = false;
+          _label.string = this.time.toString() + "s";
+          var loop = setInterval(() => {
+            this.time--;
+
+            if (this.time < 0) {
+              button.interactable = true;
+              _label.string = rememberOrgStr;
+              clearInterval(loop);
+              return;
+            }
+
+            _label.string = this.time.toString() + "s";
+          }, 1000);
+        }
+
+      };
 
       _cclegacy._RF.pop();
 

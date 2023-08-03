@@ -25,37 +25,7 @@ System.register(["cc"], function (_export, _context) {
         constructor() {
           _defineProperty(this, "token", void 0);
 
-          _defineProperty(this, "record", void 0);
-
-          _defineProperty(this, "dc", void 0);
-
-          _defineProperty(this, "agentId", void 0);
-
-          _defineProperty(this, "GGID", void 0);
-
-          _defineProperty(this, "lang", void 0);
-
-          _defineProperty(this, "forceExchange", void 0);
-
-          _defineProperty(this, "providerlogo", void 0);
-
-          _defineProperty(this, "playerId", "");
-
-          _defineProperty(this, "browser", void 0);
-
-          _defineProperty(this, "browserVersion", void 0);
-
-          _defineProperty(this, "os", void 0);
-
-          _defineProperty(this, "osVersion", void 0);
-
-          _defineProperty(this, "isMobile", void 0);
-
-          _defineProperty(this, "isFastInGameRoom", void 0);
-
-          _defineProperty(this, "demo", void 0);
-
-          _defineProperty(this, "roomNo", void 0);
+          _defineProperty(this, "memberid", void 0);
         }
 
       }); //#endregion

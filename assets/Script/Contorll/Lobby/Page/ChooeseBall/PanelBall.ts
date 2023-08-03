@@ -10,7 +10,7 @@ import ButtonMng from '../../../../Manager/ButtonMng';
 import BallData from '../../../../Model/BallData';
 import CheckLoading from '../../../../Model/CheckLoading';
 import BaseComponent from '../../../../Model/ComponentBase';
-import { ln } from '../../../Api/ResponeCommand';
+import * as RP from '../../../Api/ResponeCommand';
 import { bet } from '../../../Api/SendCommand';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
 const { ccclass, property } = _decorator;
@@ -74,12 +74,16 @@ export default class PanelBall extends BaseComponent {
         this.mapBallNumber.forEach(element => {
             element.getOrg()
         });
-
+        this.eventEmit(LobbyStateEvent.ChangeBallButtonState, true)
         this.setEvent(LobbyStateEvent.UpDateBall, this.reProcessing)
+        this.setEvent(LobbyStateEvent.AttackBall, this.onConfirmAttack)
     }
     onEnable() {
+        this.eventEmit(WebSocketEvent.StartConnect)
 
-
+    }
+    onDisable() {
+        this.eventEmit(WebSocketEvent.CloseWebSocket)
     }
 
     onRandomNumber(e: EventTouch, customEventData?: string) {
@@ -118,10 +122,10 @@ export default class PanelBall extends BaseComponent {
 
     }
     onTestReset(e: EventTouch, customEventData?: string) {
+        this.eventEmit(LobbyStateEvent.ChangeBallButtonState, true)
         this.isChoose = []
         this.tempChoose = []
         /**選擇球數最大值 */
-        this.MaxCount = 6
         this.isConfirm = false
         this.isFullBall = false
         this.mapBallNumber.forEach(element => {
@@ -136,14 +140,13 @@ export default class PanelBall extends BaseComponent {
                 element.cancel()
             })
         }
-
         else {
             for (let index = 0; index < this.tempChoose.length; index++) {
                 this.mapBallNumber.get(this.tempChoose[index]).cancel()
             }
         }
-
         this.tempChoose = []
+
     }
     async Attack() {
         if (this.isConfirm) return
@@ -165,12 +168,14 @@ export default class PanelBall extends BaseComponent {
         this.tempChoose = []
         this.isConfirm = true
     }
+    onSendCheckAttack(e?: EventTouch, customEventData?: string) {
+        const _bet = new bet()
+        _bet.betCode = this.tempChoose
+        this.eventEmit(WebSocketEvent.WebSocketSendCommand, CommandType.bet, _bet)
+    }
     async onConfirmAttack(e?: EventTouch, customEventData?: string) {
         this.Attack()
-        const _bet = new bet()
-        _bet.betCode = this.isChoose
-        this.eventEmit(WebSocketEvent.WebSocketSendCommand, CommandType.bet, _bet)
-        /**推波訊息 */
+        this.eventEmit(LobbyStateEvent.ChangeBallButtonState, false)
     }
     fullResetBallColor(bool: boolean) {
         this.mapBallNumber.forEach(element => {
@@ -193,15 +198,16 @@ export default class PanelBall extends BaseComponent {
         })
     }
 
-    reProcessing(data: ln) {
-        console.log(data);
+    reProcessing(data: RP.ln | RP.bet) {
+        // console.log(data);
+        this.onResetChooese(null)
         if (data.betCode != null) {
             for (let index = 0; index < data.betCode.length; index++) {
                 this.onChooeseBall(null, data.betCode[index].toString())
             }
             this.Attack()
             this.isFullBall = true;
-
+            this.eventEmit(LobbyStateEvent.ChangeBallButtonState, false)
         }
         this.labelIssueID.string = `第${data.drawIssue}期`;
         PanelLoading.instance.closeLoading()

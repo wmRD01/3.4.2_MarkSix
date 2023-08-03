@@ -9,10 +9,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("BaseSingleton", "../../Patten/Singleton/BaseSingleton", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfCASTAPI(extras) {
-    _reporterNs.report("CASTAPI", "../Contorll/Api/CASTAPI", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfGameSceneName(extras) {
     _reporterNs.report("GameSceneName", "../Enum/GameSenceName", _context.meta, extras);
   }
@@ -52,9 +48,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "BaseViewHeight", 1280);
 
-          _defineProperty(this, "gameVersion", "0.0.6");
+          _defineProperty(this, "gameVersion", "0.1.4");
 
-          _defineProperty(this, "onlineVersion", "0.0.6");
+          _defineProperty(this, "onlineVersion", "0.1.4");
 
           _defineProperty(this, "checkLoading", new (_crd && CheckLoading === void 0 ? (_reportPossibleCrUseOfCheckLoading({
             error: Error()
@@ -82,7 +78,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "isClickScreen", false);
 
-          _defineProperty(this, "castAPI", void 0);
+          _defineProperty(this, "today", void 0);
 
           _defineProperty(this, "gpgApi", "5gh394D");
         }

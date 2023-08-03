@@ -37,7 +37,7 @@ System.register(["cc"], function (_export, _context) {
           }
 
           setToken(str) {
-            this.headers.Authorization = str;
+            this.headers.Authorization = `Bearer ${str}`;
             return this;
           }
 
@@ -151,6 +151,32 @@ System.register(["cc"], function (_export, _context) {
             }
 
             _NeedToken.UploadAvatar = UploadAvatar;
+
+            class Betlog extends base {
+              constructor(...args) {
+                super(...args);
+
+                _defineProperty(this, "sDate", void 0);
+
+                _defineProperty(this, "eDate", void 0);
+              }
+
+            }
+
+            _NeedToken.Betlog = Betlog;
+
+            class TopScore extends base {
+              constructor(...args) {
+                super(...args);
+
+                _defineProperty(this, "sDate", void 0);
+
+                _defineProperty(this, "eDate", void 0);
+              }
+
+            }
+
+            _NeedToken.TopScore = TopScore;
           })(NeedToken || (NeedToken = _Body.NeedToken || (_Body.NeedToken = {})));
 
           let NotNeedToken;
@@ -223,6 +249,7 @@ System.register(["cc"], function (_export, _context) {
           API["DrawHistory"] = "/Mark6/Draw_History";
           API["DrawUpcoming"] = "/Mark6/Draw_Upcoming";
           API["TopScore"] = "/Mark6/Top_Score";
+          API["Betlog"] = "/Report/Betlog/Get";
         })(API || (API = {}));
 
         _RequestGPG.API = API;

@@ -111,6 +111,50 @@ export namespace ResponseGPG {
             realOpenDate: string;
         }
     }
+    export namespace Betlog {
+        export class DataClass {
+            data: Betlog[] = [];
+            Status = new State()
+        }
+        class State {
+            Code: string
+            Message: string
+        }
+        export class Betlog {
+            // (6) [14, 15, 16, 18, 48, 49]
+            betCode: number[];
+            // "59982501062528060"
+            betID: string;
+            // "2023-08-01T18:25:28.0607245+08:00"
+            betTime: string;
+            // 2023213
+            issueID: number;
+            // 0
+            score: number;
+        }
+    }
+    export namespace TopScore {
+        export class DataClass {
+            data: TopScore[] = [];
+            Status = new State()
+        }
+        class State {
+            Code: string
+            Message: string
+        }
+        export class TopScore {
+            // 25768
+            memberID: number;
+            // "gpg_Rick"
+            nickName: string;
+            // 0
+            rank: number;
+            // 0
+            totalScore: number;
+        }
+    }
+
+
     export namespace DrawUpcoming {
         export class DataClass {
             data: History[] = [];

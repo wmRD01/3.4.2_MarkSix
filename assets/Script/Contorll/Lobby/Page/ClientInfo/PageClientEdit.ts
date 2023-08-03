@@ -8,13 +8,15 @@ import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import { MyEditBox } from '../../../../../Plug/MyEditBox';
 import PublicModel from '../../../../Model/PublicModel';
-import CreateFileSprite from '../../../../Model/CreateFileSprite';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
 import ButtonMng from '../../../../Manager/ButtonMng';
 import { EditMenu } from '../../../../Enum/EditMenu';
+import PanelSystemMessage from '../../../NoClearNode/PanelSystemMessage';
+import SocketSetting from '../../../../Socket/SocketSetting';
+import { LangType } from '../../../../Enum/LangType';
 const { ccclass, property } = _decorator;
-@ccclass('PageClientEdit')
-export default class PageClientEdit extends BaseComponent {
+@ccclass('PanelClientEdit')
+export default class PanelClientEdit extends BaseComponent {
     @property(MyEditBox)
     editNicName: MyEditBox;
     @property(MyEditBox)
@@ -32,20 +34,21 @@ export default class PageClientEdit extends BaseComponent {
 
     @property(Node)
     btnsFunction: Node
-    @property(Sprite)
+    @property(Label)
+    labelVerificationCode: Label;
 
     onLoad() {
-        super.onLoad()
-        EventMng.getInstance.mapEvnet.get(NotificationType.Panel).on(LobbyStateEvent.EditNickname, this.onEditNickname, this)
-        EventMng.getInstance.mapEvnet.get(NotificationType.Panel).on(LobbyStateEvent.EditPhone, this.onEditPhone, this)
-        EventMng.getInstance.mapEvnet.get(NotificationType.Panel).on(LobbyStateEvent.EditEmail, this.onEditEmail, this)
+        EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).on(LobbyStateEvent.EditNickname, this.onEditNickname, this)
+        EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).on(LobbyStateEvent.EditPhone, this.onEditPhone, this)
+        EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).on(LobbyStateEvent.EditEmail, this.onEditEmail, this)
         this.editNicName.string = ""
         this.editEmail.string = ""
         this.editPhone.string = ""
         this.reset()
+        super.onLoad()
     }
-    onCancel() {
-
+    onDisable() {
+        this.reset()
     }
     //#region  Nickname
     /**送出修改NickName */
@@ -62,7 +65,6 @@ export default class PageClientEdit extends BaseComponent {
         const body = new RequestGPG.Body.NeedToken.Nickname()
         body.nickname = this.editNicName.string
         body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Nickname)
-        console.log(body);
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
@@ -74,11 +76,12 @@ export default class PageClientEdit extends BaseComponent {
         console.log("Nickname", response)
 
         if (response.Status.Code == "0") {
-            EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.EditUpdate, this.editNicName.string, EditMenu.Nickname)
+            EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).emit(LobbyStateEvent.EditUpdate, this.editNicName.string, EditMenu.Nickname)
             ButtonMng.clearEvent(this.buttonConfirm);
             this.reset()
         }
         else {
+            PanelLoading.instance.closeLoading()
             console.error("資料有問題");
         }
     }
@@ -113,6 +116,7 @@ export default class PageClientEdit extends BaseComponent {
             return;
         }
         else {
+
             console.log("恭喜信箱不存在，可繼續註冊");
             //*要改成手動送驗證碼
             const sendBody = new RequestGPG.Body.NotNeedToken.SendRegisterVerification()
@@ -131,11 +135,10 @@ export default class PageClientEdit extends BaseComponent {
     responseSendRegisterVerification(response: ResponseGPG.SendRegisterVerification.DataClass) {
         console.log("SendRegisterVerification", response)
         if (response.Status.Code == "0") {
+            new VerificationTimer(this.labelVerificationCode, this.buttonVerificationCode)
             console.log("送出驗證碼囉");
         }
-        else {
 
-        }
     }
     //#endregion
     //#region Phone
@@ -170,8 +173,6 @@ export default class PageClientEdit extends BaseComponent {
         body.email = this.editEmail.string
         body.verifyCode = this.editVerificationCode.string
         body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.CertifiedEmail)
-        console.log(body);
-
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
             .setToken(Player.getInstance.gpgToken)
@@ -184,12 +185,14 @@ export default class PageClientEdit extends BaseComponent {
         console.log("CertifiedEmall", response)
         if (response.Status.Code == "0") {
             console.log("過關惹");
-            EventMng.getInstance.mapEvnet.get(NotificationType.Panel).emit(LobbyStateEvent.EditUpdate, this.editEmail.string, EditMenu.Email)
+            EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).emit(LobbyStateEvent.EditUpdate, this.editEmail.string, EditMenu.Email)
             ButtonMng.clearEvent(this.buttonConfirm);
             this.reset()
         }
         else {
             //TODO顯示錯誤訊息
+            PanelSystemMessage.instance.messageInit(SocketSetting.t(response.Status.Code, LangType.ServerAPI))
+            PanelSystemMessage.instance.showSingleConfirm()
             PanelLoading.instance.closeLoading()
         }
     }
@@ -287,5 +290,26 @@ export default class PageClientEdit extends BaseComponent {
             return false;
         }
         return true
+    }
+}
+
+
+class VerificationTimer {
+    time: number = 5
+
+    constructor(_label: Label, button: Button) {
+        let rememberOrgStr = _label.string
+        button.interactable = false
+        _label.string = `${this.time.toString()}s`
+        let loop = setInterval(() => {
+            this.time--;
+            if (this.time < 0) {
+                button.interactable = true
+                _label.string = rememberOrgStr
+                clearInterval(loop)
+                return
+            }
+            _label.string = `${this.time.toString()}s`
+        }, 1000)
     }
 }

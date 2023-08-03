@@ -59,6 +59,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("PanelLoading", "../../../NoClearNode/PanelLoading", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfURLVlaue(extras) {
+    _reporterNs.report("URLVlaue", "../../../Api/SendCommand", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -132,7 +136,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "labelGiftTitle2", _descriptor13, this);
 
-          _initializerDefineProperty(this, "btnMoreDraw", _descriptor14, this);
+          _initializerDefineProperty(this, 2, _descriptor14, this);
+
+          _defineProperty(this, "btnMoreDraw", void 0);
 
           _initializerDefineProperty(this, "btnPointDetail", _descriptor15, this);
 
@@ -150,16 +156,23 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         onLoad() {
           this.marquee = this.labelMarquee.addComponent(Marquee);
           this.timer = this.labelTime.addComponent(Timer);
+          /**取TOKEN */
+
+          (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+            error: Error()
+          }), Player) : Player).getInstance.gpgToken = this.handleURLData(window.location.href).token;
         }
 
         onEnable() {
           var _this = this;
 
           return _asyncToGenerator(function* () {
-            yield _this.onDrawHistory();
+            yield _this.requestDrawHistory();
 
             if (_this.lastIssueID != _this.currentIssueID) {
-              yield _this.onDrawUpcoming();
+              yield _this.requestDrawUpcoming(); //TODO 製做我的積分
+
+              yield _this.request我的積分();
               /**代表更新最新一期 */
 
               _this.lastIssueID = _this.currentIssueID;
@@ -171,13 +184,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           })();
         }
 
-        start() {
-          this.marquee.startMarquee("HIHIHI"); // this.timer.setTime(100)
+        start() {// this.marquee.startMarque("HIHIHI")
+          // this.timer.setTime(100)
         }
 
         onDisable() {}
 
-        onDrawHistory() {
+        requestDrawHistory() {
           var _this2 = this;
 
           return _asyncToGenerator(function* () {
@@ -212,7 +225,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           })();
         }
 
-        onDrawUpcoming() {
+        requestDrawUpcoming() {
           var _this3 = this;
 
           return _asyncToGenerator(function* () {
@@ -246,21 +259,47 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           })();
         }
 
+        request我的積分() {
+          var _this4 = this;
+
+          return _asyncToGenerator(function* () {
+            return new Promise( /*#__PURE__*/function () {
+              var _ref3 = _asyncToGenerator(function* (resolve, reject) {
+                var getDate = new Date((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+                  error: Error()
+                }), PublicData) : PublicData).getInstance.today);
+                _this4.labelMonth.string = "(" + (getDate.getMonth() + 1) + "/1~" + (getDate.getMonth() + 1) + "/" + (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+                  error: Error()
+                }), PublicModel) : PublicModel).getInstance.getMonthAllDay((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+                  error: Error()
+                }), PublicData) : PublicData).getInstance.today) + ")";
+                resolve();
+              });
+
+              return function (_x5, _x6) {
+                return _ref3.apply(this, arguments);
+              };
+            }());
+          })();
+        }
+
         responseDrawHistory(response) {
-          var getDate = response.data[0];
-          this.currentIssueID = getDate.issueID;
-          this.labelLastDrawIssueID.string = "\u7B2C" + getDate.issueID.toString() + "\u671F";
-          /**不需要week日 */
-          // console.log(PublicModel.getInstance.convertDate(getDate.openDate).split("(")[0]);
+          if (response.data) {
+            var getDate = response.data[0];
+            this.currentIssueID = getDate.issueID;
+            this.labelLastDrawIssueID.string = "\u7B2C" + getDate.issueID.toString() + "\u671F";
+            /**不需要week日 */
+            // console.log(PublicModel.getInstance.convertDate(getDate.openDate).split("(")[0]);
 
-          var getday = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-            error: Error()
-          }), PublicModel) : PublicModel).getInstance.convertDateDay(getDate.openDate).split("(")[0];
-          this.labelLastDrawDay.string = getday + "\u958B\u734E\u7D50\u679C";
+            var getday = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.convertDateDay(getDate.openDate).split("(")[0];
+            this.labelLastDrawDay.string = getday + "\u958B\u734E\u7D50\u679C";
 
-          for (var index = 0; index < getDate.drawCode.length; index++) {
-            if (index == 6) return;
-            this.labelLastDrawCode[index].string = getDate.drawCode[index];
+            for (var index = 0; index < getDate.drawCode.length; index++) {
+              if (index == 6) return;
+              this.labelLastDrawCode[index].string = getDate.drawCode[index];
+            }
           }
         }
 
@@ -270,7 +309,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.timer.setTimeNoTimer((_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
           }), PublicModel) : PublicModel).getInstance.convertDateTime(getDate.openDate));
-          console.log(response);
+          (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.today = getDate.openDate;
+        }
+
+        responserequest我的積分(response) {
+          console.log("我的積分");
         }
 
         onGoPage(e, customEventData) {
@@ -286,6 +331,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), NotificationType) : NotificationType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
           }), PageAction) : PageAction).ChangeTo, Number(split[0]));
+        }
+
+        handleURLData(_url) {
+          //  _url = "https://play1.godplay.app/10001/index.html?loginType=web&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0aW1lIjoxNjY4NzYyMjcwMDQ1LCJ1aWQiOiJYUGpST1oiLCJkYyI6IkdQRyIsImFnZW50SWQiOiJ0ckUzeW1XaURMYjIiLCJicmFuZElkIjoiR1BHIiwiYnJhbmRUaXRsZSI6IkdQRyIsImdhbWVJZCI6IjEwMDAxIiwiaWF0IjoxNjY4NzYyMjcwLCJleHAiOjE2Njg3NjU4NzB9.k_GVGPiQCjWxhFG3SGM2zoSy_ggN2cZXuUQ5GvqZib_0TCJ2ul9K5xbTKkgwm7OUw7nMCWLWlwERHc0MMF586SgjuQe9W7SoRSMaBtw_AkiKNn4S1NMvhemgNAdIyjL7I1Gg5xyT-x110RF73lF-yt-n6KKTP3TGkd7wR9_fPz8&record=https://backendsystem.godplay.app/wList&dc=GPG&agentId=trE3ymWiDLb2&GGID=1&lang=tw&forceExchange=true&providerlogo=true"
+          // console.log(_url.split("?")[1].split("&"));
+          // console.log(_url.split("?")[1]);
+          if (_url.split("?")[1] == undefined) return undefined;
+
+          var arr = _url.split("?")[1].split("&");
+
+          var obj = new Object();
+
+          for (var index = 0; index < arr.length; index++) {
+            var cut = arr[index].split("=");
+            obj[cut[0]] = cut[1];
+          } // console.log(obj);
+
+
+          return obj;
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "labelTime", [_dec2], {
@@ -355,7 +419,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor14 = _applyDecoratedDescriptor(_class2.prototype, "btnMoreDraw", [_dec15], {
+      }), _descriptor14 = _applyDecoratedDescriptor(_class2.prototype, 2, [_dec15], {
         configurable: true,
         enumerable: true,
         writable: true,
@@ -392,7 +456,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.rightBorder = this.bindLabel.node.parent.getComponent(UITransform).width + 10; //額外預留
         }
 
-        startMarquee(message) {
+        startMarque(message) {
           this.bindLabel.string = message;
           this.bindLabel.updateRenderData(true);
           this.leftBorder = -(this.bindLabel.getComponent(UITransform).width + 10);

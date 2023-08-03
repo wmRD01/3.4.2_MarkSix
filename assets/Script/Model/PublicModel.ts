@@ -206,8 +206,8 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         if (isDelete)
             delete sign.sign
         const dataWithApiKey = this.sortObj(sign, PublicData.getInstance.gpgApi);
-        console.log(dataWithApiKey);
-        console.log(CryptoES.MD5(dataWithApiKey).toString());
+        // console.log(dataWithApiKey);
+        // console.log(CryptoES.MD5(dataWithApiKey).toString());
         return CryptoES.MD5(dataWithApiKey).toString()
     }
     convertMD5(str: string) {
@@ -256,6 +256,7 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         return `${hours}:${min}:${sec}`;
 
     }
+    /**轉換國立 */
     convertToROC(yearAD) {
         const ROC_OFFSET = 1911;
         const isLeapYear = (year) => (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
@@ -264,6 +265,14 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
     }
     checkStringNull(str: string) {
         return str == "" || str == null || str == undefined ? true : false
+    }
+    convertDateDiff(_date: string, offsetDay: number) { // sDate1 和 sDate2 是 2016-06-18 格式
+        var oDate1 = new Date(_date)
+        return new Date(oDate1.setDate(oDate1.getDate() + offsetDay));
+    };
+    getMonthAllDay(day:string){
+        const getDay = new Date(day)
+        return new Date(getDay.getFullYear(),getDay.getMonth()+1,0).getDate()
     }
 }
 

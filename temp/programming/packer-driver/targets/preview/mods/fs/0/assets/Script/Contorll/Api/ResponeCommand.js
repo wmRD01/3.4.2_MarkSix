@@ -36,6 +36,10 @@ System.register(["cc"], function (_export, _context) {
       _export("bet", bet = class bet {
         constructor() {
           _defineProperty(this, "code", void 0);
+
+          _defineProperty(this, "betCode", void 0);
+
+          _defineProperty(this, "drawIssue", void 0);
         }
 
       });

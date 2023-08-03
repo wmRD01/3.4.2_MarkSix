@@ -89,6 +89,7 @@
         [
             "d2f08z8+GFP0YISvqiICQ0r",
             [
+                "labelIssueID",
                 "node",
                 "__prefab",
                 "HorLayout",
@@ -96,7 +97,7 @@
                 "layoutItem",
                 "ballItem"
             ],
-            3,
+            2,
             1,
             4,
             1,
@@ -194,7 +195,8 @@
             3,
             4,
             5,
-            1
+            6,
+            2
         ]
     ],
     [
@@ -221,6 +223,7 @@
                 ],
                 [
                     10,
+                    null,
                     -5,
                     [
                         0,

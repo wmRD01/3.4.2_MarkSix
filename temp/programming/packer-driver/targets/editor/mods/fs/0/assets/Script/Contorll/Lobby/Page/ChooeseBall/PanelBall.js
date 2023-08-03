@@ -55,10 +55,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("BaseComponent", "../../../../Model/ComponentBase", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfln(extras) {
-    _reporterNs.report("ln", "../../../Api/ResponeCommand", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfbet(extras) {
     _reporterNs.report("bet", "../../../Api/SendCommand", _context.meta, extras);
   }
@@ -204,12 +200,28 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.mapBallNumber.forEach(element => {
             element.getOrg();
           });
+          this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).ChangeBallButtonState, true);
           this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).UpDateBall, this.reProcessing);
+          this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).AttackBall, this.onConfirmAttack);
         }
 
-        onEnable() {}
+        onEnable() {
+          this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+            error: Error()
+          }), WebSocketEvent) : WebSocketEvent).StartConnect);
+        }
+
+        onDisable() {
+          this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+            error: Error()
+          }), WebSocketEvent) : WebSocketEvent).CloseWebSocket);
+        }
 
         onRandomNumber(e, customEventData) {
           this.onResetChooese(null);
@@ -252,11 +264,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onTestReset(e, customEventData) {
+          this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).ChangeBallButtonState, true);
           this.isChoose = [];
           this.tempChoose = [];
           /**選擇球數最大值 */
 
-          this.MaxCount = 6;
           this.isConfirm = false;
           this.isFullBall = false;
           this.mapBallNumber.forEach(element => {
@@ -311,20 +325,24 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.isConfirm = true;
         }
 
-        async onConfirmAttack(e, customEventData) {
-          this.Attack();
-
+        onSendCheckAttack(e, customEventData) {
           const _bet = new (_crd && bet === void 0 ? (_reportPossibleCrUseOfbet({
             error: Error()
           }), bet) : bet)();
 
-          _bet.betCode = this.isChoose;
+          _bet.betCode = this.tempChoose;
           this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
             error: Error()
           }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
             error: Error()
           }), CommandType) : CommandType).bet, _bet);
-          /**推波訊息 */
+        }
+
+        async onConfirmAttack(e, customEventData) {
+          this.Attack();
+          this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).ChangeBallButtonState, false);
         }
 
         fullResetBallColor(bool) {
@@ -359,7 +377,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         reProcessing(data) {
-          console.log(data);
+          // console.log(data);
+          this.onResetChooese(null);
 
           if (data.betCode != null) {
             for (let index = 0; index < data.betCode.length; index++) {
@@ -368,6 +387,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             this.Attack();
             this.isFullBall = true;
+            this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+              error: Error()
+            }), LobbyStateEvent) : LobbyStateEvent).ChangeBallButtonState, false);
           }
 
           this.labelIssueID.string = `第${data.drawIssue}期`;

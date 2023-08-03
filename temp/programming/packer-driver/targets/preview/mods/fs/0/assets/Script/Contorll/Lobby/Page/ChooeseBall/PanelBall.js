@@ -59,10 +59,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("BaseComponent", "../../../../Model/ComponentBase", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfln(extras) {
-    _reporterNs.report("ln", "../../../Api/ResponeCommand", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfbet(extras) {
     _reporterNs.report("bet", "../../../Api/SendCommand", _context.meta, extras);
   }
@@ -218,13 +214,31 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               element.getOrg();
             });
 
+            _this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+              error: Error()
+            }), LobbyStateEvent) : LobbyStateEvent).ChangeBallButtonState, true);
+
             _this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
               error: Error()
             }), LobbyStateEvent) : LobbyStateEvent).UpDateBall, _this.reProcessing);
+
+            _this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+              error: Error()
+            }), LobbyStateEvent) : LobbyStateEvent).AttackBall, _this.onConfirmAttack);
           })();
         }
 
-        onEnable() {}
+        onEnable() {
+          this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+            error: Error()
+          }), WebSocketEvent) : WebSocketEvent).StartConnect);
+        }
+
+        onDisable() {
+          this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+            error: Error()
+          }), WebSocketEvent) : WebSocketEvent).CloseWebSocket);
+        }
 
         onRandomNumber(e, customEventData) {
           this.onResetChooese(null);
@@ -267,11 +281,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onTestReset(e, customEventData) {
+          this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).ChangeBallButtonState, true);
           this.isChoose = [];
           this.tempChoose = [];
           /**選擇球數最大值 */
 
-          this.MaxCount = 6;
           this.isConfirm = false;
           this.isFullBall = false;
           this.mapBallNumber.forEach(element => {
@@ -331,25 +347,28 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           })();
         }
 
+        onSendCheckAttack(e, customEventData) {
+          var _bet = new (_crd && bet === void 0 ? (_reportPossibleCrUseOfbet({
+            error: Error()
+          }), bet) : bet)();
+
+          _bet.betCode = this.tempChoose;
+          this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+            error: Error()
+          }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
+            error: Error()
+          }), CommandType) : CommandType).bet, _bet);
+        }
+
         onConfirmAttack(e, customEventData) {
           var _this3 = this;
 
           return _asyncToGenerator(function* () {
             _this3.Attack();
 
-            var _bet = new (_crd && bet === void 0 ? (_reportPossibleCrUseOfbet({
+            _this3.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
               error: Error()
-            }), bet) : bet)();
-
-            _bet.betCode = _this3.isChoose;
-
-            _this3.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
-              error: Error()
-            }), WebSocketEvent) : WebSocketEvent).WebSocketSendCommand, (_crd && CommandType === void 0 ? (_reportPossibleCrUseOfCommandType({
-              error: Error()
-            }), CommandType) : CommandType).bet, _bet);
-            /**推波訊息 */
-
+            }), LobbyStateEvent) : LobbyStateEvent).ChangeBallButtonState, false);
           })();
         }
 
@@ -385,7 +404,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         reProcessing(data) {
-          console.log(data);
+          // console.log(data);
+          this.onResetChooese(null);
 
           if (data.betCode != null) {
             for (var index = 0; index < data.betCode.length; index++) {
@@ -394,6 +414,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             this.Attack();
             this.isFullBall = true;
+            this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+              error: Error()
+            }), LobbyStateEvent) : LobbyStateEvent).ChangeBallButtonState, false);
           }
 
           this.labelIssueID.string = "\u7B2C" + data.drawIssue + "\u671F";

@@ -155,7 +155,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.companyIcon = "WM"; // 公司Icon名稱
 
           this.urlData = this.handleURLData(window.location.href);
-          this.UserLanguage = this.urlData == undefined ? this.UserLanguage : this.urlData.lang;
+          this.UserLanguage = this.urlData == undefined ? this.UserLanguage : this.UserLanguage;
           this.UserLanguage = this.ContainLanguage.filter(L => L == this.UserLanguage).length <= 0 ? "tw" : this.UserLanguage;
         }
 

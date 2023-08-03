@@ -14,17 +14,22 @@ import GameData from "../Model/GameData";
 import Player from "../Model/Player";
 import PublicModel from "../Model/PublicModel";
 import GameControll from "../Contorll/GameControll/GameControll";
-import { CASTAPI } from "../Contorll/Api/CASTAPI";
-import { PlayerIdentity } from "../Enum/PlayerIdentity";
 import { WebPlatform } from "../Enum/WebPlatform";
-import AssetMng from "../Manager/AssetMng";
+import BaseSingleton from "../../Patten/Singleton/BaseSingleton";
 
 const { ccclass, property } = _decorator;
 
 @ccclass('GameWebSocket')
 export default class GameWebSocket extends SocketModel {
     isFirstData: boolean = true
-    onEnable(): void {
+
+    onEnable() {
+        this.eventSetting();
+        this.judgePlatorm();
+        this.Setting();
+        this.MotifySetting()
+    }
+    startConnect(): void {
         /**避免測試期間轉換到下一個場景的時候，又再次連線 */
 
         if (CheckLoading.getInstance.checkState(CheckLoadingType.isWebSocketOpen)) {
@@ -32,11 +37,10 @@ export default class GameWebSocket extends SocketModel {
             return
         }
         if (this.isFirstData) {
-            this.judgePlatorm();
-            this.Setting();
-            this.MotifySetting()
-            this.eventSetting();
-            let getWebPlatform = this.urlData == undefined ? WebPlatform.Default : (this.urlData as URLVlaue).dc
+
+
+
+            let getWebPlatform = WebPlatform.Default
             /**由於打包出去後似乎會被意外轉成Obj，因此還要再次判斷 */
             getWebPlatform = typeof getWebPlatform !== 'string' ? WebPlatform.Default : getWebPlatform
             // console.error("最終結果：" + getWebPlatform);
@@ -47,20 +51,9 @@ export default class GameWebSocket extends SocketModel {
         else
             this.connectToServer();
     }
-    onDisable() {
-        this.closeWebsocket()
-    }
+
     test(from: Array<number>, data) {
         from.push(data)
-    }
-    start() {
-        // let getWebPlatform = this.urlData == undefined ? WebPlatform.Default : (this.urlData as URLVlaue).dc
-        // /**由於打包出去後似乎會被意外轉成Obj，因此還要再次判斷 */
-        // getWebPlatform = typeof getWebPlatform !== 'string' ? WebPlatform.Default : getWebPlatform
-        // // console.error("最終結果：" + getWebPlatform);
-        // //取得config拿取遊戲相關資料，其中包含連線的資訊
-        // this.RomoteData(`${this.libPath}config/${GameData.getInstance.gameID}/${getWebPlatform}/game.json?${new Date().getTime()}`, this.connectToServer.bind(this), this.loadLanguageError.bind(this))
-        // AssetMng.loadLogoAsset(this.UserLanguage)
     }
     connectToServer(jsonText?: string) {
         if (jsonText) {
@@ -72,7 +65,6 @@ export default class GameWebSocket extends SocketModel {
         }
         let host = `${this.connectionType}://${this.serverhost}:${this.serverport}`;
         console.log(host);
-        this.startLoadLanguage()
         this.webSocket = new WebSocket(host)
         this.webSocket.onopen = this.onWS_Open.bind(this);
         this.webSocket.onerror = this.onWS_Error.bind(this);
@@ -81,13 +73,23 @@ export default class GameWebSocket extends SocketModel {
     }
 
     eventSetting() {
+        console.log("監聽設定玩");
+        console.log(GameControll.getInstance);
+
         GameControll.getInstance.setControllEvent()
+        console.log("監聽設定玩");
+
+        this.setEvent(WebSocketEvent.StartConnect, this.startConnect);
         this.setEvent(WebSocketEvent.Login, this.onLogIn);
         this.setEvent(WebSocketEvent.WebSocketSendCommand, this.onSend);
         this.setEvent(WebSocketEvent.BackHome, this.onBackHome);
         this.setEvent(WebSocketEvent.CloseWindow, this.onCloseWindow)
         this.setEvent(WebSocketEvent.ViewRecord, this.onViewRecord)
         this.setEvent(WebSocketEvent.StaoredValue, this.onStaoredValue)
+        this.setEvent(WebSocketEvent.StartLoadLanguage, this.startLoadLanguage)
+        this.setEvent(WebSocketEvent.CloseWebSocket, this.closeWebsocket)
+        console.log("監聽設定玩");
+
     }
 
     async onSend(cmd, data) {
@@ -116,31 +118,23 @@ export default class GameWebSocket extends SocketModel {
     onLogIn(cmd) {
         let _ln = new ln()
         _ln.gameId = GameData.getInstance.gameID
-        if (window.isGPGServer && this.urlData != undefined) {
+        if ((window.isGPGServer || window.isInpokerServer) && this.urlData != undefined) {
             let _gameConfig = new URLVlaue()
             PublicModel.getInstance.TwoClassCheckData(_gameConfig, this.urlData);
-            this.recordeURL = _gameConfig.record
-            this.usertoken = _gameConfig.token
-            this.UserLanguage = _gameConfig.lang
-            this.agentId = _gameConfig.agentId
-            this.account = _gameConfig.playerId
-            _gameConfig.browser = sys.browserType
-            _gameConfig.browserVersion = sys.browserVersion
-            _gameConfig.os = sys.os
-            _gameConfig.osVersion = sys.osVersion
-            _gameConfig.isMobile = sys.isMobile ? 1 : 0
-            _ln.key = JSON.stringify(_gameConfig)
-            GameData.getInstance.roomNo = _gameConfig.roomNo
-            GameData.getInstance.isFastInGame = _gameConfig.roomNo > 0 ? true : false
-            /**判斷是否為訪客帳號，如果收不到或者false就是正式會員 */
-            Player.getInstance.identity = _gameConfig.demo != undefined && _gameConfig.demo == "true" ? PlayerIdentity.Guest : PlayerIdentity.Member;
+
+            this.account = _gameConfig.memberid
+            _ln.account = this.account
+            _ln.key = _gameConfig.token;
         }
-        //TODO 直接給token字串
-        else if (window.isGPGServer)
-            _ln.key = JSON.stringify({})
-        //TODO 修改成menberID的給Leo
-        _ln.account = this.account
-        _ln.key = Player.getInstance.gpgToken.split(" ")[1];
+        // //TODO 直接給token字串
+        // else if (window.isGPGServer)
+        //     _ln.key = JSON.stringify({})
+        // //TODO 修改成menberID的給Leo
+        else {
+            _ln.account = this.account
+            _ln.key = Player.getInstance.gpgToken;
+
+        }
         GameData.getInstance.coinType = this.coinType;
         PublicData.getInstance.recodeUrl = this.recordeURL;
         PublicData.getInstance.language = this.UserLanguage
@@ -319,15 +313,25 @@ export default class GameWebSocket extends SocketModel {
         // console.log(jsonTo);
     }
     startLoadLanguage() {
+        console.log("開始讀");
+
         let gameLang = `${this.libPath}gameLanguage/${GameData.getInstance.gameID}/${this.UserLanguage}.json?/${new Date().getTime()}`
         this.RomoteData(gameLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
         let serverLang = this.libPath + "serverLanguage/" + this.UserLanguage + ".json?" + new Date().getTime()
         this.RomoteData(serverLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
+        let serverAPILang = this.libPath + "serverApiLanguage/" + this.UserLanguage + ".json?" + new Date().getTime()
+        this.RomoteData(serverAPILang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
 
     }
     loadLanguageEnd(jsonText: string, url?: string) {
         console.log("loadLanguageEnd");
-        let type = url.indexOf("gameLanguage") == -1 ? LangType.Server : LangType.Game
+        let type;
+        if (url.indexOf("gameLanguage") > 0)
+            type = LangType.Game
+        if (url.indexOf("serverLanguage") > 0)
+            type = LangType.Server
+        if (url.indexOf("serverApiLanguage") > 0)
+            type = LangType.ServerAPI
         let jsonTo = JSON.parse(jsonText)
         SocketSetting.setLang(this.UserLanguage).init(jsonTo, type); //設定語言   
         // SocketSetting.setLang(MyWebSocket.instence.UserLanguage).init(jsonTo, type); //設定語言   
@@ -344,7 +348,7 @@ export default class GameWebSocket extends SocketModel {
     loadLanguageErrorAgain(url: string) {
         this.isClose = true
         // console.log("语言包下载失败请通知客服");
-        GameControll.getInstance.messaggeState(MessageCommend.BackHome, SocketSetting.t("S_0003", LangType.Server))
+        GameControll.getInstance.messaggeState(MessageCommend.BackHome, "資源包有問題，請洽客服")
         // Panel_Message.showConfirm(this, 1, SocketSetting.t("S_9077"), (e) => {
         //     this.onBackHome();
         // }); //"语言包下载失败请通知客服";

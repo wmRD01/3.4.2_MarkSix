@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Node, Prefab, _decorator, AssetType, AssetMng, BaseComponent, AutoFollow, RankItmeData, _dec, _dec2, _dec3, _dec4, _dec5, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, PanelTopRank;
+  var _reporterNs, _cclegacy, instantiate, Node, Prefab, _decorator, AssetType, AssetMng, BaseComponent, AutoFollow, RankItmeData, RequestGPG, PublicModel, PublicData, Player, _dec, _dec2, _dec3, _dec4, _dec5, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, PanelTopRank;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -35,6 +35,26 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("RankItmeData", "../../../../Model/RankItmeData", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfRequestGPG(extras) {
+    _reporterNs.report("RequestGPG", "../../../Api/GPGAPI/RequestGPG", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPublicModel(extras) {
+    _reporterNs.report("PublicModel", "../../../../Model/PublicModel", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPublicData(extras) {
+    _reporterNs.report("PublicData", "../../../../Model/PublicData", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfResponseGPG(extras) {
+    _reporterNs.report("ResponseGPG", "../../../Api/GPGAPI/ResponseGPG", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPlayer(extras) {
+    _reporterNs.report("Player", "../../../../Model/Player", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -54,6 +74,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       AutoFollow = _unresolved_5.default;
     }, function (_unresolved_6) {
       RankItmeData = _unresolved_6.default;
+    }, function (_unresolved_7) {
+      RequestGPG = _unresolved_7.RequestGPG;
+    }, function (_unresolved_8) {
+      PublicModel = _unresolved_8.default;
+    }, function (_unresolved_9) {
+      PublicData = _unresolved_9.default;
+    }, function (_unresolved_10) {
+      Player = _unresolved_10.default;
     }],
     execute: function () {
       _crd = true;
@@ -92,37 +120,84 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             _this.layoutRank.removeAllChildren();
 
-            for (var index = 0; index < 20; index++) {
-              _this.RankData();
-            }
+            yield _this.requesTopScore();
           })();
         }
 
-        RankData() {
-          var _node = instantiate(this.prefabRankItem);
+        requesTopScore() {
+          var _this2 = this;
 
-          var _class = _node.getComponent(_crd && RankItmeData === void 0 ? (_reportPossibleCrUseOfRankItmeData({
-            error: Error()
-          }), RankItmeData) : RankItmeData);
+          return _asyncToGenerator(function* () {
+            return new Promise( /*#__PURE__*/function () {
+              var _ref = _asyncToGenerator(function* (resolve, reject) {
+                var body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Body.NeedToken.TopScore();
+                var getDate = new Date((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+                  error: Error()
+                }), PublicData) : PublicData).getInstance.today);
+                body.sDate = getDate.getFullYear() + "-" + (getDate.getMonth() + 1) + "-01";
+                body.eDate = getDate.getFullYear() + "-" + (getDate.getMonth() + 1) + "-" + (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+                  error: Error()
+                }), PublicModel) : PublicModel).getInstance.getMonthAllDay((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+                  error: Error()
+                }), PublicData) : PublicData).getInstance.today);
+                body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+                  error: Error()
+                }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Body.NeedToken.TopScore);
+                var convert = new URLSearchParams(body).toString();
+                console.log(body);
+                console.log(convert);
+                yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+                  error: Error()
+                }), Player) : Player).getInstance.gpgToken).fetchData("" + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).APIUrl.playAPI + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).API.TopScore + "?" + convert, _this2.responseTopScore.bind(_this2));
+                resolve();
+              });
 
-          _class.init(1);
+              return function (_x, _x2) {
+                return _ref.apply(this, arguments);
+              };
+            }());
+          })();
+        }
 
-          _class.labelName.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
-            error: Error()
-          }), AutoFollow) : AutoFollow).createNewTarget();
+        responseTopScore(response) {
+          console.log("排行榜", response);
 
-          _class.labelPointCount.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
-            error: Error()
-          }), AutoFollow) : AutoFollow).createNewTarget();
+          for (var index = 0; index < response.data.length; index++) {
+            var _node = instantiate(this.prefabRankItem);
 
-          _class.spriteBG.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
-            error: Error()
-          }), AutoFollow) : AutoFollow).setTarget(_node);
+            var _class = _node.getComponent(_crd && RankItmeData === void 0 ? (_reportPossibleCrUseOfRankItmeData({
+              error: Error()
+            }), RankItmeData) : RankItmeData);
 
-          this.labelContent.addChild(_class.labelName.node);
-          this.labelContent.addChild(_class.labelPointCount.node);
-          this.spriteBGContent.addChild(_class.spriteBG.node);
-          this.layoutRank.addChild(_node);
+            _class.init(response.data[index]);
+
+            _class.labelName.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+              error: Error()
+            }), AutoFollow) : AutoFollow).createNewTarget();
+
+            _class.labelPointCount.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+              error: Error()
+            }), AutoFollow) : AutoFollow).createNewTarget();
+
+            _class.spriteBG.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+              error: Error()
+            }), AutoFollow) : AutoFollow).setTarget(_node);
+
+            this.labelContent.addChild(_class.labelName.node);
+            this.labelContent.addChild(_class.labelPointCount.node);
+            this.spriteBGContent.addChild(_class.spriteBG.node);
+            this.layoutRank.addChild(_node);
+          }
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class3.prototype, "prefabRankItem", [_dec2], {

@@ -1,6 +1,6 @@
 {
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image": {
-    "time": 1689908839046.8604,
+    "time": 1691028441212.3223,
     "uuid": "6e71966d-73ec-46ee-84f1-7fe64bc8e090",
     "missing": false
   },
@@ -275,7 +275,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\PanelSystemMessage.prefab": {
-    "time": 1690766740897.302,
+    "time": 1691033623229.7715,
     "uuid": "3345b80a-435d-4849-8068-09e5141951ef",
     "missing": false
   },
@@ -300,12 +300,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Loading.scene": {
-    "time": 1690767878414.5813,
+    "time": 1691033628499.5505,
     "uuid": "602c3d25-484a-4071-ae9b-2b9ed340bc8b",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Lobby.scene": {
-    "time": 1690886695112.3342,
+    "time": 1691054387340.1045,
     "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
     "missing": false
   },
@@ -740,7 +740,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\LangType.ts": {
-    "time": 1687144714080.1714,
+    "time": 1691031870214.6963,
     "uuid": "8d44c9d1-9259-4187-b2a5-d6541bfd07ae",
     "missing": false
   },
@@ -755,7 +755,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\LobbyStateEvent.ts": {
-    "time": 1690871008211.791,
+    "time": 1691043495615.5667,
     "uuid": "e292d2cd-8630-4244-853b-3674b43bdcbe",
     "missing": false
   },
@@ -800,7 +800,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\WebSocketEvent.ts": {
-    "time": 1690349975241.7576,
+    "time": 1691041711513.6294,
     "uuid": "e3ef0b99-c451-47cb-ba30-0f4f30406cb1",
     "missing": false
   },
@@ -870,7 +870,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\ComponentBase.ts": {
-    "time": 1690513674147.5005,
+    "time": 1691046092435.313,
     "uuid": "1687cd61-b96f-48fd-ae09-dbbfad3c510b",
     "missing": false
   },
@@ -885,7 +885,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\JudgePlatform.ts": {
-    "time": 1687144714122.181,
+    "time": 1690970040962.0322,
     "uuid": "920a21b6-5e62-445c-a304-8b82cf03e37d",
     "missing": false
   },
@@ -895,27 +895,27 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\Player.ts": {
-    "time": 1690885156202.337,
+    "time": 1690967477803.3025,
     "uuid": "c06b1ce1-9942-4bcc-94ad-976d02243e39",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PointItemData.ts": {
-    "time": 1690341378278.1758,
+    "time": 1690961892760.6116,
     "uuid": "f131d57a-314f-48b1-af87-1e0cac6d55c0",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PublicData.ts": {
-    "time": 1689755457820.1392,
+    "time": 1691052674764.3638,
     "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PublicModel.ts": {
-    "time": 1690873313311.2468,
+    "time": 1690961062005.3733,
     "uuid": "e67ebe82-8c49-4ffb-b7df-3ca593669e05",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\RankItmeData.ts": {
-    "time": 1689910831782.335,
+    "time": 1690968226733.944,
     "uuid": "afbdd561-2874-4619-88b9-8c244299609b",
     "missing": false
   },
@@ -925,7 +925,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\SocketModel.ts": {
-    "time": 1690884239251.3286,
+    "time": 1691044308837.364,
     "uuid": "d543d8b6-2d0c-402a-bcda-1b8934c0e8fd",
     "missing": false
   },
@@ -950,12 +950,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Socket\\GameWebSocket.ts": {
-    "time": 1690885288762.7693,
+    "time": 1691046950855.7344,
     "uuid": "15ca959a-c72f-453d-8fb1-71a3c53467c0",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Socket\\SocketSetting.ts": {
-    "time": 1688021741793.9998,
+    "time": 1691044274024.7913,
     "uuid": "3040c347-9b02-4831-b82f-801144028eb2",
     "missing": false
   },
@@ -970,7 +970,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\State\\PlayState.ts": {
-    "time": 1689911927747.5054,
+    "time": 1691043844619.6118,
     "uuid": "f58f9d70-875c-4733-9dd2-ce918567419d",
     "missing": false
   },
@@ -1050,12 +1050,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby\\Item\\PointItem.prefab": {
-    "time": 1690187372319.2087,
+    "time": 1690962247561.288,
     "uuid": "0973a4c2-0e68-4da6-b572-73764a3a85b5",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby\\Item\\RankItem.prefab": {
-    "time": 1689910958886.1401,
+    "time": 1690968266157.6208,
     "uuid": "177345b5-6862-484a-8014-c96d561eef7e",
     "missing": false
   },
@@ -1070,12 +1070,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Api\\ResponeCommand.ts": {
-    "time": 1690514759828.1572,
+    "time": 1691042904119.743,
     "uuid": "0956a159-b3f1-4d9c-8f4a-7fb4db789acc",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Api\\SendCommand.ts": {
-    "time": 1690345853205.8062,
+    "time": 1690969480085.291,
     "uuid": "8d88cca0-265b-4f29-be3a-28fcec44331f",
     "missing": false
   },
@@ -1115,7 +1115,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\PageControll.ts": {
-    "time": 1690528523740.0964,
+    "time": 1691042225181.4187,
     "uuid": "28a3088d-c1fb-4755-8eba-e7282848d92b",
     "missing": false
   },
@@ -1140,7 +1140,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\NoClearNode\\PanelLoading.ts": {
-    "time": 1690868309026.4485,
+    "time": 1691046770236.0918,
     "uuid": "803f6a9e-3778-4d00-a23e-cb63c9c4ab92",
     "missing": false
   },
@@ -1210,12 +1210,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Api\\GPGAPI\\RequestGPG.ts": {
-    "time": 1690886569077.6174,
+    "time": 1690967470946.9055,
     "uuid": "a8530c9c-9fdc-465d-8309-ca23ec463676",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Api\\GPGAPI\\ResponseGPG.ts": {
-    "time": 1690449995986.0693,
+    "time": 1690964175042.23,
     "uuid": "9d803bbf-a89c-4062-8498-0dbf99eb1059",
     "missing": false
   },
@@ -1235,7 +1235,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ChooeseBall": {
-    "time": 1688715343715.99,
+    "time": 1691030686286.5796,
     "uuid": "de15b6df-6af3-4fe7-a521-be7e70f0780d",
     "missing": false
   },
@@ -1260,7 +1260,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ChooeseBall\\PanelBall.ts": {
-    "time": 1690886003416.532,
+    "time": 1691052988781.752,
     "uuid": "d2f08cfc-f861-4fd1-8212-bea888090d2b",
     "missing": false
   },
@@ -1270,12 +1270,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ClientInfo\\PanelClientInfo.ts": {
-    "time": 1690886457124.3506,
+    "time": 1691053899154.6565,
     "uuid": "e72b2a05-d840-45f6-a09f-c715d142e9b8",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Home\\PanelHome.ts": {
-    "time": 1690361396258.514,
+    "time": 1691047629033.6482,
     "uuid": "b8492fab-e86b-4b04-87cf-33d6acb68979",
     "missing": false
   },
@@ -1285,12 +1285,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Point\\PanelPoint.ts": {
-    "time": 1690358039812.13,
+    "time": 1690964461221.274,
     "uuid": "303d6930-d3b3-4ed5-a888-f81a6a4a03cc",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Point\\PanelTopRank.ts": {
-    "time": 1689910971226.898,
+    "time": 1691047197312.7134,
     "uuid": "73704463-4c7c-4ce8-b439-666025f44ee6",
     "missing": false
   },
@@ -1300,7 +1300,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Setting\\ItemSetting.ts": {
-    "time": 1689053015103.3484,
+    "time": 1691044175502.8562,
     "uuid": "e7f9b014-29a7-45a6-a75e-ac4e1a8a42c1",
     "missing": false
   },
@@ -1342,7 +1342,7 @@
     "time": 1688547281713.4902
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\confirm_button.png.meta": {
-    "time": 1689588228950.4448
+    "time": 1691033717484.3154
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\cancel_button.png.meta": {
     "time": 1689588228935.07
@@ -2107,7 +2107,7 @@
     "time": 1689585009834.9856
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ClientInfo\\PageClientEdit.ts": {
-    "time": 1690872229455.3962,
+    "time": 1691054741255.816,
     "uuid": "5d3e955f-5565-4e30-a755-5876a833de2f",
     "missing": false
   },
@@ -2147,7 +2147,7 @@
     "time": 1689912038775.8098
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\NotificationType.ts": {
-    "time": 1689911925921,
+    "time": 1691029769854.5498,
     "uuid": "25018252-7058-4c2d-9c14-a30f39c9babd",
     "missing": false
   },
@@ -2197,6 +2197,22 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\EditMenu.ts": {
     "time": 1690870728741.493,
     "uuid": "01bbdda3-7239-4c5f-98b7-b651d5ae0725",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\user.jpg.meta": {
+    "time": 1691028456297.3118
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\user.jpg": {
+    "time": 1691028348380.822,
+    "uuid": "956934c9-7531-4238-9a5a-fc6b43c9d18f",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ChooeseBall\\PaenlFunctionButton.ts.meta": {
+    "time": 1691030686296.582
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ChooeseBall\\PaenlFunctionButton.ts": {
+    "time": 1691031205863.3215,
+    "uuid": "c40dedcf-4140-4083-881f-e3e0fd9ca4c7",
     "missing": false
   }
 }

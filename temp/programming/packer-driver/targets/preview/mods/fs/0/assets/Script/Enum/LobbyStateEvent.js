@@ -18,10 +18,12 @@ System.register(["cc"], function (_export, _context) {
         LobbyStateEvent["BallChooeseAction"] = "BallChooeseAction";
         LobbyStateEvent["ChangePointPage"] = "ChangePointPage";
         LobbyStateEvent["UpDateBall"] = "UpDateBall";
+        LobbyStateEvent["AttackBall"] = "AttackBall";
         LobbyStateEvent["EditNickname"] = "EditNickname";
         LobbyStateEvent["EditPhone"] = "EditPhone";
         LobbyStateEvent["EditEmail"] = "EditEmail";
         LobbyStateEvent["EditUpdate"] = "EditUpdate";
+        LobbyStateEvent["ChangeBallButtonState"] = "ChangeBallButtonState";
       })(LobbyStateEvent || _export("LobbyStateEvent", LobbyStateEvent = {}));
 
       _cclegacy._RF.pop();

@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Node, Prefab, ScrollView, Vec3, _decorator, BaseComponent, PointItemData, AssetType, AssetMng, RequestGPG, Player, PublicModel, PanelLoading, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, PanelPoint;
+  var _reporterNs, _cclegacy, instantiate, Node, Prefab, ScrollView, Vec3, _decorator, BaseComponent, PointItemData, AssetType, AssetMng, RequestGPG, Player, PublicModel, PanelLoading, PublicData, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, PanelPoint;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -47,6 +47,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("PanelLoading", "../../../NoClearNode/PanelLoading", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfPublicData(extras) {
+    _reporterNs.report("PublicData", "../../../../Model/PublicData", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -74,6 +78,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       PublicModel = _unresolved_8.default;
     }, function (_unresolved_9) {
       PanelLoading = _unresolved_9.default;
+    }, function (_unresolved_10) {
+      PublicData = _unresolved_10.default;
     }],
     execute: function () {
       _crd = true;
@@ -110,6 +116,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "isAsync", void 0);
 
           _defineProperty(this, "isDateMax", void 0);
+
+          _defineProperty(this, "mapDate", new Map());
         }
 
         async start() {
@@ -128,9 +136,38 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.layoutContent.children.length == 0) {
             this.onViewBottom();
           } else this.returnFunction();
+        } //#region History
+
+
+        async requestHistory(count) {
+          return new Promise(async (resolve, reject) => {
+            const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Body.NeedToken.DrawHistory();
+            body.top = count.toString(); //目前固定10筆
+
+            body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Body.NeedToken.DrawHistory);
+            let convert = new URLSearchParams(body).toString();
+            await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+              error: Error()
+            }), Player) : Player).getInstance.gpgToken).fetchData(`${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).APIUrl.playAPI}${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this));
+            resolve();
+          });
         }
 
         responseDrawHistory(response) {
+          console.log("開獎紀錄", response);
+
           if (this.currentCount == response.data.length) {
             this.isDateMax = true;
             return;
@@ -138,7 +175,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           for (let index = this.currentCount; index < response.data.length; index++) {
             if (this.layoutContent.children.length > this.maxCount) break;
-            this.ClientData(response.data[index]);
+            this.mapDate.set(response.data[index].issueID, this.ClientData(response.data[index]));
           }
 
           this.currentCount = response.data.length;
@@ -156,7 +193,55 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.layoutContent.addChild(_node);
 
           _class.setLabelContent(this.labelContent).setOutlineContent(this.OutlineContent).setDayData(data.openDate, data.issueID).setOpenNumber(data.drawCode).init();
+
+          return _class;
+        } //#endregion
+        //#region Betlog
+
+
+        async requesBetlog(count) {
+          return new Promise(async (resolve, reject) => {
+            const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Body.NeedToken.Betlog();
+            const getDate = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.convertDateDiff((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.today, -count);
+            body.sDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-${getDate.getDate()}`;
+            body.eDate = (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.today.split("T")[0];
+            body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Body.NeedToken.Betlog);
+            let convert = new URLSearchParams(body).toString();
+            await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+              error: Error()
+            }), Player) : Player).getInstance.gpgToken).fetchData(`${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).APIUrl.playAPI}${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).API.Betlog}?${convert}`, this.responseBetlog.bind(this));
+            resolve();
+          });
         }
+
+        responseBetlog(response) {
+          console.log("玩家紀錄", response);
+
+          for (let index = 0; index < response.data.length; index++) {
+            if (!this.mapDate.has(response.data[index].issueID)) continue;
+            this.mapDate.get(response.data[index].issueID).setSelfNumber(response.data[index].betCode);
+            this.mapDate.get(response.data[index].issueID).setScore(response.data[index].score);
+          }
+        } //#endregion
+
 
         async onViewBottom(_scrollview) {
           if (this.currentCount >= this.maxCount) this.returnFunction();
@@ -166,26 +251,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           /**新增請求筆數 */
 
           let tryGet = this.currentCount + this.pageCount;
-          const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-            error: Error()
-          }), RequestGPG) : RequestGPG).Body.NeedToken.DrawHistory();
-          body.top = tryGet.toString(); //目前固定10筆
-
-          body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-            error: Error()
-          }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-            error: Error()
-          }), RequestGPG) : RequestGPG).Body.NeedToken.DrawHistory);
-          let convert = new URLSearchParams(body).toString();
-          await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-            error: Error()
-          }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
-            error: Error()
-          }), Player) : Player).getInstance.gpgToken).fetchData(`${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-            error: Error()
-          }), RequestGPG) : RequestGPG).APIUrl.playAPI}${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-            error: Error()
-          }), RequestGPG) : RequestGPG).API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this));
+          await this.requestHistory(tryGet);
+          await this.requesBetlog(tryGet);
           console.error("超過會走這?", this.currentCount);
           (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
             error: Error()

@@ -13,7 +13,7 @@ export namespace RequestGPG {
             return this
         }
         setToken(str: string) {
-            this.headers.Authorization = str
+            this.headers.Authorization =`Bearer ${str}`
             return this
         }
         setBody(_body: string | FormData) {
@@ -84,7 +84,16 @@ export namespace RequestGPG {
             export class UploadAvatar extends base {
                 file: File;
             }
-
+            export class Betlog extends base {
+                [x: string]: string;
+                "sDate": string;
+                "eDate": string;
+            }
+            export class TopScore extends base {
+                [x: string]: string;
+                "sDate": string;
+                "eDate": string;
+            }
         }
         export namespace NotNeedToken {
             // export class EmailSign {
@@ -134,7 +143,8 @@ export namespace RequestGPG {
         ValidateContactInfo = "/Token/ValidateContactInfo",
         DrawHistory = "/Mark6/Draw_History",
         DrawUpcoming = "/Mark6/Draw_Upcoming",
-        TopScore ="/Mark6/Top_Score",
+        TopScore = "/Mark6/Top_Score",
+        Betlog = "/Report/Betlog/Get",
     }
 }
 

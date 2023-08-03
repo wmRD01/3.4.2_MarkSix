@@ -17,6 +17,7 @@ System.register(["cc"], function (_export, _context) {
       (function (LangType) {
         LangType[LangType["Game"] = 0] = "Game";
         LangType[LangType["Server"] = 1] = "Server";
+        LangType[LangType["ServerAPI"] = 2] = "ServerAPI";
       })(LangType || _export("LangType", LangType = {}));
 
       _cclegacy._RF.pop();

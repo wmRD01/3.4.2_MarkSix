@@ -1,4 +1,5 @@
 export enum LangType {
     Game,
-    Server
+    Server,
+    ServerAPI,
 }

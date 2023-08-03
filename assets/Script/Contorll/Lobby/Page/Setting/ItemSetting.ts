@@ -34,7 +34,7 @@ export default class ItemSetting extends BaseComponent {
                 MusicMng.getEffectState() ? this.nowState = Active.on : this.nowState = Active.off
                 break;
             case Type.Notification:
-                this.labelName.string = "推波"
+                this.labelName.string = "推播"
 
                 // MusicMng.getMusicState() ? this.lableState.string = Active.on : this.lableState.string = Active.off
                 break;

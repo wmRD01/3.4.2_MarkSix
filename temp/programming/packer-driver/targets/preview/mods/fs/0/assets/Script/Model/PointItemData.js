@@ -117,18 +117,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         setOpenNumber(numbers) {
           for (var index = 0; index < numbers.length; index++) {
             if (index == this.maxNumberCount) break;
-
-            var _node = instantiate(this.prefabBallItem);
-
-            this.clientPointLayout.addChild(_node);
-
-            var _class = _node.getComponent(_crd && BallData === void 0 ? (_reportPossibleCrUseOfBallData({
-              error: Error()
-            }), BallData) : BallData);
-
-            _class.init(this.randomBall());
-
-            this.labelContent.addChild(_class.label.node);
             this.labelOpenNumber[index].string = numbers[index];
             this.labelOpenNumber[index].node.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
               error: Error()
@@ -137,6 +125,28 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
 
           return this;
+        }
+
+        setSelfNumber(numbers) {
+          if (this.clientPointLayout.children.length >= this.maxNumberCount) return;
+
+          for (var index = 0; index < numbers.length; index++) {
+            var _node = instantiate(this.prefabBallItem);
+
+            this.clientPointLayout.addChild(_node);
+
+            var _class = _node.getComponent(_crd && BallData === void 0 ? (_reportPossibleCrUseOfBallData({
+              error: Error()
+            }), BallData) : BallData);
+
+            _class.init(numbers[index]);
+
+            this.labelContent.addChild(_class.label.node);
+          }
+        }
+
+        setScore(num) {
+          this.labelPoint.string = "+" + num.toString();
         }
 
         init() {
@@ -148,7 +158,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), AutoFollow) : AutoFollow).createNewTarget();
           this.outlineContent.addChild(this.labelMyChooeseNumber.node);
-          this.labelPoint.string = "+ " + Math.floor(Math.random() * 200);
+          this.labelPoint.string = "+0";
           this.labelPoint.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
             error: Error()
           }), AutoFollow) : AutoFollow).createNewTarget();

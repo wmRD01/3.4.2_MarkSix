@@ -17,7 +17,7 @@ System.register(["cc"], function (_export, _context) {
       (function (NotificationType) {
         NotificationType[NotificationType["Pulic"] = 0] = "Pulic";
         NotificationType[NotificationType["Page"] = 1] = "Page";
-        NotificationType[NotificationType["Panel"] = 2] = "Panel";
+        NotificationType[NotificationType["PanelClient"] = 2] = "PanelClient";
       })(NotificationType || _export("NotificationType", NotificationType = {}));
 
       _cclegacy._RF.pop();

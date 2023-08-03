@@ -44,9 +44,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           _defineProperty(this, "serverData", new Object());
 
+          _defineProperty(this, "serverAPIData", new Object());
+
           _defineProperty(this, "isGame", void 0);
 
           _defineProperty(this, "isServer", void 0);
+
+          _defineProperty(this, "isServerAPI", void 0);
         }
 
         setLang(language) {
@@ -56,9 +60,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
         init(_data, _type) {
           // console.log(_type, _data);
-          var data = _type == (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
-            error: Error()
-          }), LangType) : LangType).Game ? this.gameData : this.serverData;
+          var data = this.getTypeData(_type); // console.log(data);
 
           for (var key in _data) {
             if (!Object.prototype.hasOwnProperty.call(data, key)) {
@@ -66,18 +68,30 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
             }
           }
 
-          _type == (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
-            error: Error()
-          }), LangType) : LangType).Game ? this.isGame = true : this.isServer = true;
+          switch (_type) {
+            case (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game:
+              this.isGame = true;
+
+            case (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Server:
+              this.isServer = true;
+
+            case (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).ServerAPI:
+              this.isServerAPI = true;
+          }
+
           return this; //@ts-ignore
           // this.data = data;
           // console.log(language);
         }
 
         t(option, _type) {
-          var data = _type == (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
-            error: Error()
-          }), LangType) : LangType).Game ? this.gameData : this.serverData; // console.log(option);
+          var data = this.getTypeData(_type); // console.log(option);
           // console.log(data);
 
           if (data == null) {
@@ -116,6 +130,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
               if (_type == (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
                 error: Error()
               }), LangType) : LangType).Server && _this2.isServer) resolve();
+              if (_type == (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+                error: Error()
+              }), LangType) : LangType).ServerAPI && _this2.isGame) resolve();
               var checkLoop = setInterval(() => {
                 var isbool = _type == (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
                   error: Error()
@@ -129,6 +146,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
               }, 100);
             });
           })();
+        }
+
+        getTypeData(_type) {
+          switch (_type) {
+            case (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game:
+              return this.gameData;
+
+            case (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Server:
+              return this.serverData;
+
+            case (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).ServerAPI:
+              return this.serverAPIData;
+          }
         }
 
       };

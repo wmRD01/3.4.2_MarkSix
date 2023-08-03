@@ -1,22 +1,8 @@
 //#region WebSocket
 export class URLVlaue {
     token: string;
-    record: string;
-    dc: string;
-    agentId: string;
-    GGID: string;
-    lang: string;
-    forceExchange: string;
-    providerlogo: string;
-    playerId: string = "";
-    browser: string;
-    browserVersion: string;
-    os: string;
-    osVersion: string;
-    isMobile: number;
-    isFastInGameRoom: boolean;
-    demo: string;
-    roomNo: number;
+    memberid: string;
+
 }
 //#endregion
 //#region 大廳封包
@@ -28,7 +14,7 @@ export class ln {
     key: string;
 }
 export class bet {
-    betCode:number[];
+    betCode: number[];
 }
 
 

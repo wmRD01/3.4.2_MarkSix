@@ -1,6 +1,6 @@
 import { CommandType } from "./CommandType";
 
-export enum WebSocketEvent{
+export enum WebSocketEvent {
     /**
      * 登入遊戲
      */
@@ -31,5 +31,13 @@ export enum WebSocketEvent{
     /**
      * 斷開連線
      */
-    CloseWebSocket="CloseWebSocket",
+    CloseWebSocket = "CloseWebSocket",
+    /**
+     * 開始Loading語言資料
+     */
+    StartLoadLanguage = "startLoadLanguage",
+    /**
+    * 開始連線
+    */
+    StartConnect = "StartConnect"
 }

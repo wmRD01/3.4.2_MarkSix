@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Label, Sprite, UITransform, _decorator, AssetType, AssetMng, BaseComponent, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, RankItmeData;
+  var _reporterNs, _cclegacy, Label, Sprite, UITransform, _decorator, AssetType, AssetMng, BaseComponent, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _temp, _crd, ccclass, property, RankItmeData;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -10,6 +10,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
   function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  function _reportPossibleCrUseOfResponseGPG(extras) {
+    _reporterNs.report("ResponseGPG", "../Contorll/Api/GPGAPI/ResponseGPG", _context.meta, extras);
+  }
 
   function _reportPossibleCrUseOfAssetType(extras) {
     _reporterNs.report("AssetType", "../Enum/AssetType", _context.meta, extras);
@@ -49,7 +53,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", RankItmeData = (_dec = ccclass('RankItmeData'), _dec2 = property(UITransform), _dec3 = property(Sprite), _dec4 = property(Sprite), _dec5 = property(Label), _dec6 = property(Label), _dec(_class = (_class2 = (_temp = class RankItmeData extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", RankItmeData = (_dec = ccclass('RankItmeData'), _dec2 = property(UITransform), _dec3 = property(Sprite), _dec4 = property(Sprite), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec(_class = (_class2 = (_temp = class RankItmeData extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {
@@ -64,12 +68,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "labelName", _descriptor4, this);
 
           _initializerDefineProperty(this, "labelPointCount", _descriptor5, this);
+
+          _initializerDefineProperty(this, "labelRank", _descriptor6, this);
         }
 
         init(data) {
-          this.spriteRank.spriteFrame = this.checkRank(this.randomRank());
-          this.labelName.string = this.randomRank().toString();
-          this.labelPointCount.string = this.randomRank().toString();
+          this.spriteRank.spriteFrame = this.checkRank(data.rank);
+          this.labelName.string = data.nickName;
+          this.labelPointCount.string = data.totalScore.toString();
+          this.labelRank.string = data.rank.toString();
         }
 
         checkRank(num) {
@@ -112,6 +119,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         writable: true,
         initializer: null
       }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "labelPointCount", [_dec6], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "labelRank", [_dec7], {
         configurable: true,
         enumerable: true,
         writable: true,

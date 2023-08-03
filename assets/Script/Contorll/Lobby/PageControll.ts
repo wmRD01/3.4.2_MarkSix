@@ -4,6 +4,7 @@ import BaseSingletonComponent from '../../../Patten/Singleton/BaseSingletonCompo
 import { NotificationType } from '../../Enum/NotificationType';
 import { PageAction } from '../../Enum/PageAction';
 import { PageMenu } from '../../Enum/PageMenu';
+import { WebSocketEvent } from '../../Enum/WebSocketEvent';
 import AssetMng from '../../Manager/AssetMng';
 import EventMng from '../../Manager/EventMng';
 import MusicMng from '../../Manager/MusicMng';
@@ -18,8 +19,9 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
 
     currnetIndex: number = 0;
     onLoad() {
-        /**現階段測試 正是要往Loading移動 */
 
+
+        /**現階段測試 正是要往Loading移動 */
         super.onLoad()
         // console.log(this.pageEvnet);
         this.pageView = this.getComponent(PageView)
@@ -33,7 +35,7 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
     start() {
         this.closeTouch(this.pageView)
         // console.log("欸我已經送了欸");
-
+        EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(WebSocketEvent.StartLoadLanguage)
         if (DEV)
             EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, 0);
         else
@@ -57,6 +59,7 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
         this.page[this.currnetIndex].active = true
         this.pageView.scrollToPage(index, 0)
     }
+
 }
 
 

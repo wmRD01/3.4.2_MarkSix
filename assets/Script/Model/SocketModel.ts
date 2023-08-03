@@ -124,7 +124,7 @@ export default class SocketModel extends BaseComponent {
         this.companyIcon = "WM"; // 公司Icon名稱
         this.urlData = this.handleURLData(window.location.href)
 
-        this.UserLanguage = this.urlData == undefined ? this.UserLanguage : (this.urlData as URLVlaue).lang
+        this.UserLanguage = this.urlData == undefined ? this.UserLanguage : this.UserLanguage
         this.UserLanguage = (this.ContainLanguage.filter(L => L == this.UserLanguage).length <= 0) ? "tw" : this.UserLanguage;
 
     }

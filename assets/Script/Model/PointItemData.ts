@@ -26,6 +26,7 @@ export default class PointItemData extends BaseComponent {
 
     onLoad() {
         this.clientPointLayout.removeAllChildren()
+
     }
     setLabelContent(_node: Node) {
         this.labelContent = _node
@@ -49,23 +50,33 @@ export default class PointItemData extends BaseComponent {
     setOpenNumber(numbers: string[]) {
         for (let index = 0; index < numbers.length; index++) {
             if (index == this.maxNumberCount) break;
-            let _node = instantiate(this.prefabBallItem)
-            this.clientPointLayout.addChild(_node)
-            let _class = _node.getComponent(BallData)
-            _class.init(this.randomBall())
-            this.labelContent.addChild(_class.label.node)
+
             this.labelOpenNumber[index].string = numbers[index]
             this.labelOpenNumber[index].node.addComponent(AutoFollow).setTarget(this.labelOpenNumber[index].node.parent)
             this.labelContent.addChild(this.labelOpenNumber[index].node)
         }
         return this
     }
+    setSelfNumber(numbers: number[]) {
+        if (this.clientPointLayout.children.length >= this.maxNumberCount) return;
+        for (let index = 0; index < numbers.length; index++) {
+            let _node = instantiate(this.prefabBallItem)
+            this.clientPointLayout.addChild(_node)
+            let _class = _node.getComponent(BallData)
+            _class.init(numbers[index])
+            this.labelContent.addChild(_class.label.node)
+
+        }
+    }
+    setScore(num: number) {
+        this.labelPoint.string = `+${num.toString()}`;
+    }
     init() {
         this.labelOpenNumberTitle.addComponent(AutoFollow).createNewTarget()
         this.labelContent.addChild(this.labelOpenNumberTitle.node)
         this.labelMyChooeseNumber.addComponent(AutoFollow).createNewTarget()
         this.outlineContent.addChild(this.labelMyChooeseNumber.node)
-        this.labelPoint.string = `+ ${Math.floor(Math.random() * 200)}`
+        this.labelPoint.string = "+0"
         this.labelPoint.addComponent(AutoFollow).createNewTarget()
         this.labelContent.addChild(this.labelPoint.node)
         return this

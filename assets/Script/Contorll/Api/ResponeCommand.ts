@@ -8,4 +8,6 @@ export class ln {
 }
 export class bet {
     code: string;
+    betCode: number[];
+    drawIssue: string;
 }

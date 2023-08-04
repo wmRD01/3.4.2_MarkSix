@@ -142,8 +142,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         onLoad() {
           super.onLoad();
           this.show();
-          this.isNeedUpdate = true;
-          this.isLoading = false;
           (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
           }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
@@ -157,14 +155,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         async onEnable() {
-          if (!this.isNeedUpdate || this.isLoading) {
-            (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
-              error: Error()
-            }), PanelLoading) : PanelLoading).instance.closeLoading();
-            return;
-          }
-
-          this.isLoading = true;
           this.startDelay();
           const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
@@ -184,7 +174,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), RequestGPG) : RequestGPG).APIUrl.playAPI}${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
           }), RequestGPG) : RequestGPG).API.MyInfo}?${convert}`, this.responseMyInfo.bind(this));
-          this.isLoading = false;
         }
 
         onDisable() {
@@ -309,7 +298,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               return;
             }
 
-            this.isNeedUpdate = false;
             this.spritePlayer.spriteFrame = SpriteFrame.createWithImage(image);
           });
 
@@ -336,7 +324,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.labelEmail.string = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
           }), PublicModel) : PublicModel).getInstance.checkStringNull(response.data.email) ? "" : response.data.email;
-          this.isNeedUpdate = false;
           if (this.stopDelay() < 1) setTimeout((_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
             error: Error()
           }), PanelLoading) : PanelLoading).instance.closeLoading.bind((_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({

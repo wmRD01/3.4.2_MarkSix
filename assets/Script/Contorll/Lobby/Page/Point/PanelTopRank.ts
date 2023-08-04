@@ -29,9 +29,9 @@ export default class PanelTopRank extends BaseComponent {
     async requesTopScore() {
         return new Promise<void>(async (resolve, reject) => {
             const body = new RequestGPG.Body.NeedToken.TopScore()
-            const getDate = new Date(PublicData.getInstance.today)
-            body.sDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-01`
-            body.eDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-${PublicModel.getInstance.getMonthAllDay(PublicData.getInstance.today)}`
+            const todayDate = new Date(PublicData.getInstance.today)
+            body.sDate = `${todayDate.getFullYear()}-${todayDate.getMonth() + 1}-1`
+            body.eDate = `${todayDate.getFullYear()}-${todayDate.getMonth() + 1}-${todayDate.getDate()}`
             body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.TopScore)
             let convert = new URLSearchParams(body).toString()
             console.log(body);
@@ -45,6 +45,8 @@ export default class PanelTopRank extends BaseComponent {
     responseTopScore(response?: ResponseGPG.TopScore.DataClass) {
         console.log("排行榜", response);
         for (let index = 0; index < response.data.length; index++) {
+            if (response.data[index].totalScore == 0) continue;
+            if (this.layoutRank.children.length >= 100) break;
             let _node = instantiate(this.prefabRankItem)
             let _class = _node.getComponent(RankItmeData)
             _class.init(response.data[index])

@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Label, Sprite, UITransform, _decorator, AssetType, AssetMng, BaseComponent, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _temp, _crd, ccclass, property, RankItmeData;
+  var _reporterNs, _cclegacy, Label, Sprite, UITransform, _decorator, AssetType, AssetMng, BaseComponent, PublicModel, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _temp, _crd, ccclass, property, RankItmeData;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -27,6 +27,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("BaseComponent", "./ComponentBase", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfPublicModel(extras) {
+    _reporterNs.report("PublicModel", "./PublicModel", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -42,6 +46,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       AssetMng = _unresolved_3.default;
     }, function (_unresolved_4) {
       BaseComponent = _unresolved_4.default;
+    }, function (_unresolved_5) {
+      PublicModel = _unresolved_5.default;
     }],
     execute: function () {
       _crd = true;
@@ -74,7 +80,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         init(data) {
           this.spriteRank.spriteFrame = this.checkRank(data.rank);
-          this.labelName.string = data.nickName;
+
+          if (!(_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.checkStringNull(data.nickName)) {
+            var _data$nickName;
+
+            var getplatform = (_data$nickName = data.nickName) === null || _data$nickName === void 0 ? void 0 : _data$nickName.split("_")[0];
+            /**因為前面會有註冊會員的文字，要刪除掉 */
+
+            this.labelName.string = data.nickName.replace(getplatform + "_", "");
+          } else this.labelName.string = data.nickName;
+
           this.labelPointCount.string = data.totalScore.toString();
           this.labelRank.string = data.rank.toString();
         }

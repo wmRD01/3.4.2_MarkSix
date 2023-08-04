@@ -81,7 +81,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         start() {
-          return;
           (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
             error: Error()
           }), PanelLoading) : PanelLoading).instance.openLoading();
@@ -91,7 +90,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             director.loadScene((_crd && GameSceneName === void 0 ? (_reportPossibleCrUseOfGameSceneName({
               error: Error()
             }), GameSceneName) : GameSceneName).Lobby);
-          }); // PanelLoading.instance.openLoading()
+          });
+          return; // PanelLoading.instance.openLoading()
         }
 
       }) || _class));

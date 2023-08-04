@@ -244,6 +244,7 @@ System.register(["cc"], function (_export, _context) {
           API["CertifiedEmall"] = "/Member/CertifiedEmail";
           API["MyInfo"] = "/Member/MyInfo";
           API["Nickname"] = "/Member/Nickname";
+          API["SendLoginVerification"] = "/Token/SendLoginVerification ";
           API["SendRegisterVerification"] = "/Token/SendRegisterVerification";
           API["ValidateContactInfo"] = "/Token/ValidateContactInfo";
           API["DrawHistory"] = "/Mark6/Draw_History";

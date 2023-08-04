@@ -13,7 +13,7 @@ export namespace RequestGPG {
             return this
         }
         setToken(str: string) {
-            this.headers.Authorization =`Bearer ${str}`
+            this.headers.Authorization = `Bearer ${str}`
             return this
         }
         setBody(_body: string | FormData) {
@@ -139,6 +139,9 @@ export namespace RequestGPG {
         CertifiedEmall = "/Member/CertifiedEmail",
         MyInfo = "/Member/MyInfo",
         Nickname = "/Member/Nickname",
+        /**已綁定 */
+        SendLoginVerification = "/Token/SendLoginVerification ",
+        /**未綁定 */
         SendRegisterVerification = "/Token/SendRegisterVerification",
         ValidateContactInfo = "/Token/ValidateContactInfo",
         DrawHistory = "/Mark6/Draw_History",

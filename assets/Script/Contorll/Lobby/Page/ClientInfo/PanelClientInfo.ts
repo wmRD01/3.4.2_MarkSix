@@ -44,19 +44,12 @@ export default class PanelClientInfo extends BaseComponent {
     onLoad() {
         super.onLoad()
         this.show()
-        this.isNeedUpdate = true;
-        this.isLoading = false;
         EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).on(LobbyStateEvent.EditUpdate, this.onEditUpData, this)
         this.labelEmail.string = ""
         this.labelPhone.string = ""
         this.labelNickName.string = ""
     }
     async onEnable() {
-        if (!this.isNeedUpdate || this.isLoading) {
-            PanelLoading.instance.closeLoading()
-            return;
-        }
-        this.isLoading = true
         this.startDelay()
         const body = new RequestGPG.Body.NeedToken.MyInfo()
         body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApi)
@@ -65,7 +58,6 @@ export default class PanelClientInfo extends BaseComponent {
             .setToken(Player.getInstance.gpgToken)
             .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.MyInfo}?${convert}`, this.responseMyInfo.bind(this))
 
-        this.isLoading = false
     }
     onDisable() {
         this.resetButton()
@@ -134,7 +126,6 @@ export default class PanelClientInfo extends BaseComponent {
                     console.error(err.message);
                     return
                 }
-                this.isNeedUpdate = false;
                 this.spritePlayer.spriteFrame = SpriteFrame.createWithImage(image)
 
             })
@@ -148,7 +139,6 @@ export default class PanelClientInfo extends BaseComponent {
         this.labelPhone.string = PublicModel.getInstance.checkStringNull(response.data.phoneNumber) ? "" : response.data.phoneNumber
         this.buttonEditEmail.node.active = PublicModel.getInstance.checkStringNull(response.data.email);
         this.labelEmail.string = PublicModel.getInstance.checkStringNull(response.data.email) ? "" : response.data.email
-        this.isNeedUpdate = false;
         if (this.stopDelay() < 1)
             setTimeout(PanelLoading.instance.closeLoading.bind(PanelLoading.instance), 1000);
         else

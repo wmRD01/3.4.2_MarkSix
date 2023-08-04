@@ -300,7 +300,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Loading.scene": {
-    "time": 1691056810430.1162,
+    "time": 1691122782281.2063,
     "uuid": "602c3d25-484a-4071-ae9b-2b9ed340bc8b",
     "missing": false
   },
@@ -905,7 +905,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PublicData.ts": {
-    "time": 1691054879930.663,
+    "time": 1691119918591.1167,
     "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12",
     "missing": false
   },
@@ -915,7 +915,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\RankItmeData.ts": {
-    "time": 1690968226733.944,
+    "time": 1691118042013.682,
     "uuid": "afbdd561-2874-4619-88b9-8c244299609b",
     "missing": false
   },
@@ -1025,7 +1025,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\View\\MainLoading.ts": {
-    "time": 1691055589169.9666,
+    "time": 1691117698835.4285,
     "uuid": "4baf032d-11dc-4a05-888e-2979510bec06",
     "missing": false
   },
@@ -1205,7 +1205,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Api\\GPGAPI\\RequestGPG.ts": {
-    "time": 1690967470946.9055,
+    "time": 1691119842535.2366,
     "uuid": "a8530c9c-9fdc-465d-8309-ca23ec463676",
     "missing": false
   },
@@ -1265,7 +1265,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ClientInfo\\PanelClientInfo.ts": {
-    "time": 1691053899154.6565,
+    "time": 1691119015650.1997,
     "uuid": "e72b2a05-d840-45f6-a09f-c715d142e9b8",
     "missing": false
   },
@@ -1285,7 +1285,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Point\\PanelTopRank.ts": {
-    "time": 1691047197312.7134,
+    "time": 1691117798315.9988,
     "uuid": "73704463-4c7c-4ce8-b439-666025f44ee6",
     "missing": false
   },

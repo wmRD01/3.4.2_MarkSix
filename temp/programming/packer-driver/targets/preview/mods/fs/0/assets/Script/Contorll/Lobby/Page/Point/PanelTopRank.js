@@ -133,15 +133,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 var body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
                   error: Error()
                 }), RequestGPG) : RequestGPG).Body.NeedToken.TopScore();
-                var getDate = new Date((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+                var todayDate = new Date((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
                   error: Error()
                 }), PublicData) : PublicData).getInstance.today);
-                body.sDate = getDate.getFullYear() + "-" + (getDate.getMonth() + 1) + "-01";
-                body.eDate = getDate.getFullYear() + "-" + (getDate.getMonth() + 1) + "-" + (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-                  error: Error()
-                }), PublicModel) : PublicModel).getInstance.getMonthAllDay((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-                  error: Error()
-                }), PublicData) : PublicData).getInstance.today);
+                body.sDate = todayDate.getFullYear() + "-" + (todayDate.getMonth() + 1) + "-1";
+                body.eDate = todayDate.getFullYear() + "-" + (todayDate.getMonth() + 1) + "-" + todayDate.getDate();
                 body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
                   error: Error()
                 }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
@@ -173,6 +169,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           console.log("排行榜", response);
 
           for (var index = 0; index < response.data.length; index++) {
+            if (response.data[index].totalScore == 0) continue;
+            if (this.layoutRank.children.length >= 100) break;
+
             var _node = instantiate(this.prefabRankItem);
 
             var _class = _node.getComponent(_crd && RankItmeData === void 0 ? (_reportPossibleCrUseOfRankItmeData({

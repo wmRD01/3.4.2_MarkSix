@@ -131,8 +131,10 @@ export namespace RequestGPG {
     }
 
     export enum APIUrl {
-        playAPI = "https://play-api.ceis.tw",
-        ids = "https://ids.ceis.tw"
+        playAPI = "https://play-api.godplay.app",
+        ids = "https://ids.godplay.app",
+        QA_playAPI = "https://play-api.ceis.tw",
+        QA_ids = "https://ids.ceis.tw",
     }
     export enum API {
         UploadAvatar = "/Member/UploadAvatar",

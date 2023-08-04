@@ -1,13 +1,12 @@
 import BaseSingleton from "../../Patten/Singleton/BaseSingleton";
-import { CASTAPI } from "../Contorll/Api/CASTAPI";
 import { GameSceneName } from "../Enum/GameSenceName";
 import CheckLoading from "./CheckLoading";
 export default class PublicData extends BaseSingleton<PublicData>() {
     arr_ComponentBaseClass: Array<ComponentBase> = new Array
     BaseViewWidth: number = 720;
     BaseViewHeight: number = 1280;
-    gameVersion: string = "0.1.5";
-    onlineVersion: string = "0.1.5";
+    gameVersion: string = "0.1.6";
+    onlineVersion: string = "0.1.6";
     checkLoading = new CheckLoading();
     /**畫面重製 */
     isResetView: boolean;
@@ -25,5 +24,26 @@ export default class PublicData extends BaseSingleton<PublicData>() {
     isClickScreen: boolean = false
 
     today: string;
-    gpgApi: string = "5gh394D"
+    gpgApi: GPGAPI = GPGAPI.QA;
+
+    gpgUrlPlayApi = APIUrl.QA_playAPI;
+    gpgUrlids = APIUrl.QA_ids;
+
+
+    isChageOnline() {
+        this.gpgApi = GPGAPI.Online;
+        this.gpgUrlPlayApi = APIUrl.playAPI
+        this.gpgUrlids = APIUrl.ids
+    }
+}
+
+enum GPGAPI {
+    QA = "5gh394D",
+    Online = "4fypra!c!?",
+}
+enum APIUrl {
+    playAPI = "https://play-api.godplay.app",
+    ids = "https://ids.godplay.app",
+    QA_playAPI = "https://play-api.ceis.tw",
+    QA_ids = "https://ids.ceis.tw",
 }

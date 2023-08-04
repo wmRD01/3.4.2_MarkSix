@@ -15,6 +15,7 @@ import PanelSystemMessage from '../../../NoClearNode/PanelSystemMessage';
 import SocketSetting from '../../../../Socket/SocketSetting';
 import { LangType } from '../../../../Enum/LangType';
 import { VerificationTimer } from '../../../../Model/VerificationTimer';
+import PublicData from '../../../../Model/PublicData';
 const { ccclass, property } = _decorator;
 @ccclass('PanelClientEdit')
 export default class PanelClientEdit extends BaseComponent {
@@ -70,7 +71,7 @@ export default class PanelClientEdit extends BaseComponent {
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
             .setToken(Player.getInstance.gpgToken)
-            .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.Nickname}`, this.responseNickname.bind(this))
+            .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.Nickname}`, this.responseNickname.bind(this))
     }
     /**驗證碼發送是否成功 */
     responseNickname(response: ResponseGPG.Nickname.DataClass) {

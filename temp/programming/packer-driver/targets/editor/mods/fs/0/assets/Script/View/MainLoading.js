@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, director, game, _decorator, BaseSingletonComponent, PanelLoading, GameSceneName, AssetMng, MusicMng, PublicData, _dec, _class, _crd, ccclass, property, MainLoading;
+  var _reporterNs, _cclegacy, director, game, sys, _decorator, BaseSingletonComponent, PanelLoading, GameSceneName, AssetMng, MusicMng, PublicData, _dec, _class, _crd, ccclass, property, MainLoading;
 
   function _reportPossibleCrUseOfBaseSingletonComponent(extras) {
     _reporterNs.report("BaseSingletonComponent", "../../Patten/Singleton/BaseSingletonComponent", _context.meta, extras);
@@ -34,6 +34,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       _cclegacy = _cc.cclegacy;
       director = _cc.director;
       game = _cc.game;
+      sys = _cc.sys;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
       BaseSingletonComponent = _unresolved_2.default;
@@ -81,16 +82,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         start() {
-          (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
-            error: Error()
-          }), PanelLoading) : PanelLoading).instance.openLoading();
-          director.preloadScene((_crd && GameSceneName === void 0 ? (_reportPossibleCrUseOfGameSceneName({
-            error: Error()
-          }), GameSceneName) : GameSceneName).Lobby, () => {
-            director.loadScene((_crd && GameSceneName === void 0 ? (_reportPossibleCrUseOfGameSceneName({
+          if (sys.os != sys.OS.ANDROID && sys.os != sys.OS.IOS) {
+            (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
               error: Error()
-            }), GameSceneName) : GameSceneName).Lobby);
-          });
+            }), PanelLoading) : PanelLoading).instance.openLoading();
+            director.preloadScene((_crd && GameSceneName === void 0 ? (_reportPossibleCrUseOfGameSceneName({
+              error: Error()
+            }), GameSceneName) : GameSceneName).Lobby, () => {
+              director.loadScene((_crd && GameSceneName === void 0 ? (_reportPossibleCrUseOfGameSceneName({
+                error: Error()
+              }), GameSceneName) : GameSceneName).Lobby);
+            });
+          }
+
           return; // PanelLoading.instance.openLoading()
         }
 

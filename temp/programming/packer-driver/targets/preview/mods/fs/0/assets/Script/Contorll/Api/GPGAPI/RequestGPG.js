@@ -240,8 +240,10 @@ System.register(["cc"], function (_export, _context) {
         var APIUrl;
 
         (function (APIUrl) {
-          APIUrl["playAPI"] = "https://play-api.ceis.tw";
-          APIUrl["ids"] = "https://ids.ceis.tw";
+          APIUrl["playAPI"] = "https://play-api.godplay.app";
+          APIUrl["ids"] = "https://ids.godplay.app";
+          APIUrl["QA_playAPI"] = "https://play-api.ceis.tw";
+          APIUrl["QA_ids"] = "https://ids.ceis.tw";
         })(APIUrl || (APIUrl = {}));
 
         _RequestGPG.APIUrl = APIUrl;

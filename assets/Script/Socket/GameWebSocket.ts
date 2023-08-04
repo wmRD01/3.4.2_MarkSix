@@ -28,6 +28,11 @@ export default class GameWebSocket extends SocketModel {
         this.judgePlatorm();
         this.Setting();
         this.MotifySetting()
+        console.log(window.isGPGServer);
+
+        if (window.isGPGServer)
+            PublicData.getInstance.isChageOnline();
+        
     }
     startConnect(): void {
         /**避免測試期間轉換到下一個場景的時候，又再次連線 */

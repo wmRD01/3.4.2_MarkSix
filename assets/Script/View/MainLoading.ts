@@ -21,10 +21,13 @@ export default class MainLoading extends BaseSingletonComponent<MainLoading>() {
         MusicMng.init()
     }
     start() {
-        PanelLoading.instance.openLoading()
-        director.preloadScene(GameSceneName.Lobby, () => {
-            director.loadScene(GameSceneName.Lobby)
-        })
+        if (sys.os != sys.OS.ANDROID && sys.os != sys.OS.IOS) {
+            PanelLoading.instance.openLoading()
+            director.preloadScene(GameSceneName.Lobby, () => {
+                director.loadScene(GameSceneName.Lobby)
+            })
+
+        }
         return
         // PanelLoading.instance.openLoading()
     }

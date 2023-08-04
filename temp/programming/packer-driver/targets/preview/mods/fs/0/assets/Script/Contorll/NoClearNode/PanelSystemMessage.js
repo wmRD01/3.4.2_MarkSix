@@ -100,12 +100,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.labelCancel = find("LabelCancel", this.nodeFrame).getComponent(Label);
           this.labelCaption = find("LabelCaption", this.nodeFrame).getComponent(Label);
           this.hide();
-          this.setEvent((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
-            error: Error()
-          }), GameEvent) : GameEvent).SystemMessage, this.onSystemMessage);
         }
 
         onEnable() {
+          this.setEvent((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
+            error: Error()
+          }), GameEvent) : GameEvent).SystemMessage, this.onSystemMessage);
           this.setEvent((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
             error: Error()
           }), GameEvent) : GameEvent).SetLanguage, this.setLanguage);

@@ -26,10 +26,10 @@ export default class PanelSystemMessage extends BaseSingletonComponent<PanelSyst
         this.labelCancel = find("LabelCancel", this.nodeFrame).getComponent(Label)
         this.labelCaption = find("LabelCaption", this.nodeFrame).getComponent(Label)
         this.hide()
-        this.setEvent(GameEvent.SystemMessage, this.onSystemMessage)
 
     }
     onEnable() {
+        this.setEvent(GameEvent.SystemMessage, this.onSystemMessage)
         this.setEvent(GameEvent.SetLanguage, this.setLanguage)
     }
     update() {

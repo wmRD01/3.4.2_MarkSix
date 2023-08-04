@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, BaseSingleton, GameSceneName, CheckLoading, PublicData, _crd;
+  var _reporterNs, _cclegacy, BaseSingleton, GameSceneName, CheckLoading, PublicData, _crd, GPGAPI;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -48,9 +48,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "BaseViewHeight", 1280);
 
-          _defineProperty(this, "gameVersion", "0.1.5");
+          _defineProperty(this, "gameVersion", "0.1.6");
 
-          _defineProperty(this, "onlineVersion", "0.1.5");
+          _defineProperty(this, "onlineVersion", "0.1.6");
 
           _defineProperty(this, "checkLoading", new (_crd && CheckLoading === void 0 ? (_reportPossibleCrUseOfCheckLoading({
             error: Error()
@@ -80,10 +80,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "today", void 0);
 
-          _defineProperty(this, "gpgApi", "5gh394D");
+          _defineProperty(this, "gpgApi", GPGAPI.QA);
+        }
+
+        isChageOnline() {
+          this.gpgApi = GPGAPI.Online;
         }
 
       });
+
+      (function (GPGAPI) {
+        GPGAPI["QA"] = "5gh394D";
+        GPGAPI["Online"] = "4fypra!c!?";
+      })(GPGAPI || (GPGAPI = {}));
 
       _cclegacy._RF.pop();
 

@@ -139,6 +139,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.judgePlatorm();
           this.Setting();
           this.MotifySetting();
+          console.log(window.isGPGServer);
+          if (window.isGPGServer) (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.isChageOnline();
         }
 
         startConnect() {

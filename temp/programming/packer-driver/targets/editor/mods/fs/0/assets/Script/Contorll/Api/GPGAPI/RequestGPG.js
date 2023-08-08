@@ -64,7 +64,14 @@ System.register(["cc"], function (_export, _context) {
 
             return new Promise((resolve, reject) => {
               let data;
-              fetch(_url, this).then(response => response.json()).then(response => data = response).catch(err => reject).then(response => console.log(`資料名稱：${_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length - 1]}`)).then(response => console.log(`資料內容`, data)).then(response => callback(data)).then(resolve);
+              fetch(_url, this).then(response => response.json()).then(response => data = response).catch(err => reject).then(response => console.log(`資料名稱：${_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length - 1]}`)).then(response => {
+                try {
+                  console.log(`資料內容`, data);
+                  callback(data);
+                } catch (error) {
+                  console.log(error);
+                }
+              }).then(resolve);
             });
           }
 
@@ -177,6 +184,19 @@ System.register(["cc"], function (_export, _context) {
             }
 
             _NeedToken.TopScore = TopScore;
+
+            class MyScore extends base {
+              constructor(...args) {
+                super(...args);
+
+                _defineProperty(this, "sDate", void 0);
+
+                _defineProperty(this, "eDate", void 0);
+              }
+
+            }
+
+            _NeedToken.MyScore = MyScore;
           })(NeedToken || (NeedToken = _Body.NeedToken || (_Body.NeedToken = {})));
 
           let NotNeedToken;
@@ -253,6 +273,7 @@ System.register(["cc"], function (_export, _context) {
           API["DrawUpcoming"] = "/Mark6/Draw_Upcoming";
           API["TopScore"] = "/Mark6/Top_Score";
           API["Betlog"] = "/Report/Betlog/Get";
+          API["My_Score"] = "/Mark6/My_Score";
         })(API || (API = {}));
 
         _RequestGPG.API = API;

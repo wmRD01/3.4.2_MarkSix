@@ -1,4 +1,4 @@
-import { Button, Component, EventTouch, Label, Node, UITransform, v3, _decorator } from 'cc';
+import { Button, Component, EventTouch, instantiate, Label, Node, Prefab, UITransform, v3, _decorator } from 'cc';
 import { NotificationType } from '../../../../Enum/NotificationType';
 import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import { PageAction } from '../../../../Enum/PageAction';
@@ -12,12 +12,21 @@ import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import PublicData from '../../../../Model/PublicData';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
 import { URLVlaue } from '../../../Api/SendCommand';
+import BallData from '../../../../Model/BallData';
 
 
 
 const { ccclass, property } = _decorator;
 @ccclass('PanelHome')
 export default class PanelHome extends BaseComponent {
+    @property(Node)
+    lastDrawCodeLayout: Node
+    @property(Node)
+    labelContent: Node;
+
+    @property(Prefab)
+    ballItem: Prefab
+
     @property(Label)
     labelTime: Label;
     @property(Label)
@@ -44,7 +53,7 @@ export default class PanelHome extends BaseComponent {
     labelGiftTitle1: Label
     @property(Label)
     labelGiftTitle2: Label
-    @property(Button) 2
+    @property(Button)
     btnMoreDraw: Button;
     @property(Button)
     btnPointDetail: Button;
@@ -67,7 +76,7 @@ export default class PanelHome extends BaseComponent {
         if (this.lastIssueID != this.currentIssueID) {
             await this.requestDrawUpcoming()
             //TODO 製做我的積分
-            await this.request我的積分()
+            await this.requesMyScore()
             /**代表更新最新一期 */
             this.lastIssueID = this.currentIssueID;
         }
@@ -81,7 +90,7 @@ export default class PanelHome extends BaseComponent {
     onDisable() {
 
     }
-
+    //#region  DrawHistory
     async requestDrawHistory() {
         return new Promise<void>(async (resolve, reject) => {
             const body = new RequestGPG.Body.NeedToken.DrawHistory()
@@ -90,31 +99,14 @@ export default class PanelHome extends BaseComponent {
             let convert = new URLSearchParams(body).toString()
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
+                .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
             resolve();
-        })
-    }
-    async requestDrawUpcoming() {
-        return new Promise<void>(async (resolve, reject) => {
-            const body = new RequestGPG.Body.NeedToken.DrawUpcoming()
-            body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApi)
-            let convert = new URLSearchParams(body).toString()
-            await new RequestGPG.Request()
-                .setToken(Player.getInstance.gpgToken)
-                .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.DrawUpcoming}?${convert}`, this.responseDrawUpcoming.bind(this))
-            resolve()
-        })
-    }
-    async request我的積分() {
-        return new Promise<void>(async (resolve, reject) => {
-            const getDate = new Date(PublicData.getInstance.today)
-            this.labelMonth.string = `(${getDate.getMonth() + 1}/1~${getDate.getMonth() + 1}/${PublicModel.getInstance.getMonthAllDay(PublicData.getInstance.today)})`
-            resolve()
         })
     }
     responseDrawHistory(response?: ResponseGPG.DrawHistory.DataClass) {
         if (response.data) {
             let getDate = response.data[0]
+            if (this.currentIssueID == getDate.issueID) return
             this.currentIssueID = getDate.issueID;
             this.labelLastDrawIssueID.string = `第${getDate.issueID.toString()}期`
 
@@ -125,10 +117,26 @@ export default class PanelHome extends BaseComponent {
             this.labelLastDrawDay.string = `${getday}開獎結果`
             for (let index = 0; index < getDate.drawCode.length; index++) {
                 if (index == 6) return;
-                this.labelLastDrawCode[index].string = getDate.drawCode[index];
+                let _node = instantiate(this.ballItem)
+                let _class = _node.getComponent(BallData);
+                this.lastDrawCodeLayout.addChild(_node);
+                _class.init(Number(getDate.drawCode[index])).cancel()
+                this.labelContent.addChild(_class.label.node);
             }
         }
-        
+    }
+    //#endregion
+    //#region  DrawUpcoming
+    async requestDrawUpcoming() {
+        return new Promise<void>(async (resolve, reject) => {
+            const body = new RequestGPG.Body.NeedToken.DrawUpcoming()
+            body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApi)
+            let convert = new URLSearchParams(body).toString()
+            await new RequestGPG.Request()
+                .setToken(Player.getInstance.gpgToken)
+                .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawUpcoming}?${convert}`, this.responseDrawUpcoming.bind(this))
+            resolve()
+        })
     }
     responseDrawUpcoming(response?: ResponseGPG.DrawUpcoming.DataClass) {
         let getDate = response.data[0]
@@ -136,10 +144,47 @@ export default class PanelHome extends BaseComponent {
         this.timer.setTimeNoTimer(PublicModel.getInstance.convertDateTime(getDate.openDate))
         PublicData.getInstance.today = getDate.openDate
     }
+    //#endregion
+    async request我的積分() {
+        return new Promise<void>(async (resolve, reject) => {
+
+            resolve()
+        })
+    }
+
+
     responserequest我的積分(response?: ResponseGPG.DrawUpcoming.DataClass) {
         console.log("我的積分");
 
     }
+
+    //#region Betlog
+    async requesMyScore() {
+        return new Promise<void>(async (resolve, reject) => {
+            const body = new RequestGPG.Body.NeedToken.MyScore()
+            const getDate = new Date(PublicData.getInstance.today)
+            body.sDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-01`
+            body.eDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-${PublicModel.getInstance.getMonthAllDay(PublicData.getInstance.today)}`
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.MyScore)
+            let convert = new URLSearchParams(body).toString()
+            await new RequestGPG.Request()
+                .setToken(Player.getInstance.gpgToken)
+                .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.My_Score}?${convert}`, this.responseMyScore.bind(this))
+            resolve()
+        })
+    }
+    responseMyScore(response?: ResponseGPG.My_Score.DataClass) {
+        const getDate = new Date(PublicData.getInstance.today)
+        this.labelMonth.string = `(${getDate.getMonth() + 1}/1~${getDate.getMonth() + 1}/${PublicModel.getInstance.getMonthAllDay(PublicData.getInstance.today)})`
+        if (response.data) {
+            console.log("玩家紀錄", response);
+            this.labelMyPoint.string = response.data.totalScore.toString();
+        }
+        else {
+            this.labelMyPoint.string = "0"
+        }
+    }
+    //#endregion
     onGoPage(e: EventTouch, customEventData?: string) {
         let split = customEventData.split('-')
         if (isNaN(Number(split[0])))

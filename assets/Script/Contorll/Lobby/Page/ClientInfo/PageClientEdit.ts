@@ -78,11 +78,13 @@ export default class PanelClientEdit extends BaseComponent {
         console.log("Nickname", response)
 
         if (response.Status.Code == "0") {
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("026", LangType.Game))
             EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).emit(LobbyStateEvent.EditUpdate, this.editNicName.string, EditMenu.Nickname)
             ButtonMng.clearEvent(this.buttonConfirm);
             this.reset()
         }
         else {
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t(response.Status.Code, LangType.ServerAPI))
             PanelLoading.instance.closeLoading()
             console.error("資料有問題");
         }
@@ -98,7 +100,7 @@ export default class PanelClientEdit extends BaseComponent {
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
-            .fetchData(`${RequestGPG.APIUrl.ids}${RequestGPG.API.ValidateContactInfo}`, this.responseValidateContactInfo.bind(this))
+            .fetchData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.ValidateContactInfo}`, this.responseValidateContactInfo.bind(this))
     }
     async onValidateContactInfoEmail() {
         /**確認信箱格式 */
@@ -108,13 +110,13 @@ export default class PanelClientEdit extends BaseComponent {
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
-            .fetchData(`${RequestGPG.APIUrl.ids}${RequestGPG.API.ValidateContactInfo}`, this.responseValidateContactInfo.bind(this))
+            .fetchData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.ValidateContactInfo}`, this.responseValidateContactInfo.bind(this))
     }
     async responseValidateContactInfo(response: ResponseGPG.ValidateContactInfo.DataClass) {
         console.log("ValidateContactInfo", response)
         /**代表此已經綁定過不可以綁定! */
         if (response.Status.Code == "0") {
-            console.log("已存在請重新換組");
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("034", LangType.Game))
             return;
         }
         else {
@@ -129,7 +131,7 @@ export default class PanelClientEdit extends BaseComponent {
             await new RequestGPG.Request()
                 .setMethod(RequestGPG.Method.POST)
                 .setBody(JSON.stringify(sendBody))
-                .fetchData(`${RequestGPG.APIUrl.ids}${RequestGPG.API.SendRegisterVerification}`, this.responseSendRegisterVerification.bind(this))
+                .fetchData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.SendRegisterVerification}`, this.responseSendRegisterVerification.bind(this))
         }
 
     }
@@ -137,6 +139,7 @@ export default class PanelClientEdit extends BaseComponent {
     responseSendRegisterVerification(response: ResponseGPG.SendRegisterVerification.DataClass) {
         console.log("SendRegisterVerification", response)
         if (response.Status.Code == "0") {
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("035", LangType.Game))
             new VerificationTimer(this.labelVerificationCode, this.buttonVerificationCode, 180)
             console.log("送出驗證碼囉");
         }
@@ -179,7 +182,7 @@ export default class PanelClientEdit extends BaseComponent {
             .setMethod(RequestGPG.Method.POST)
             .setToken(Player.getInstance.gpgToken)
             .setBody(JSON.stringify(body))
-            .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.CertifiedEmall}`, this.responseCertifiedEmall.bind(this))
+            .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.CertifiedEmall}`, this.responseCertifiedEmall.bind(this))
     }
 
     /**是否修改信箱成功 */
@@ -187,14 +190,14 @@ export default class PanelClientEdit extends BaseComponent {
         console.log("CertifiedEmall", response)
         if (response.Status.Code == "0") {
             console.log("過關惹");
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("036", LangType.ServerAPI))
             EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).emit(LobbyStateEvent.EditUpdate, this.editEmail.string, EditMenu.Email)
             ButtonMng.clearEvent(this.buttonConfirm);
             this.reset()
         }
         else {
             //TODO顯示錯誤訊息
-            PanelSystemMessage.instance.messageInit(SocketSetting.t(response.Status.Code, LangType.ServerAPI))
-            PanelSystemMessage.instance.showSingleConfirm()
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t(response.Status.Code, LangType.ServerAPI))
             PanelLoading.instance.closeLoading()
         }
     }
@@ -239,19 +242,23 @@ export default class PanelClientEdit extends BaseComponent {
     }
     checkName(str: string) {
         if (str.length == 0) {
-            console.error("請輸入文字");
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("028", LangType.Game))
+            // console.error("請輸入文字");
             return false;
         }
         if (/\s/.test(str)) {
-            console.error("文字有空白");
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("029", LangType.Game))
+            // console.error("文字有空白");
             return false;
         }
         if (PublicModel.getInstance.checkNicknameCondition(str)) {
-            console.error("出現非法文字");
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("030", LangType.Game))
+            // console.error("出現非法文字");
             return false;
         }
         if (str.length < 2 || str.length > 16) {
-            console.error("長度須為2~16");
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("031", LangType.Game))
+            // console.error("長度須為2~16");
             return false;;
         }
         return true
@@ -262,15 +269,18 @@ export default class PanelClientEdit extends BaseComponent {
      */
     checkEmail(str: string) {
         if (str.length == 0) {
-            console.error("請輸入文字");
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("028", LangType.Game))
+            // console.error("請輸入文字");
             return false;
         }
         if (/\s/.test(str)) {
-            console.error("文字有空白");
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("029", LangType.Game))
+            // console.error("文字有空白");
             return false;
         }
         if (!this.checkEmailRegular(str)) {
-            console.error("出現非法文字");
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("030", LangType.Game))
+            // console.error("出現非法文字");
             return false;
         }
         return true
@@ -280,19 +290,23 @@ export default class PanelClientEdit extends BaseComponent {
      */
     checkVerification(str: string) {
         if (str.length == 0) {
-            console.error("請輸入數字");
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("033", LangType.Game))
+            // console.error("請輸入數字");
             return false;
         }
         if (/\s/.test(str)) {
-            console.error("文字有空白");
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("029", LangType.Game))
+            // console.error("文字有空白");
             return false;
         }
         if (str.length != 6) {
-            console.error("驗證碼最少六碼");
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("032", LangType.Game))
+            // console.error("驗證碼最少六碼");
             return false;
         }
         return true
     }
+
 }
 
 

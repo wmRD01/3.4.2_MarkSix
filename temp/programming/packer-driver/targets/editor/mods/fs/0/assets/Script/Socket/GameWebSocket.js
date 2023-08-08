@@ -286,6 +286,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.account = _gameConfig.memberid;
             _ln.account = this.account;
             _ln.key = _gameConfig.token;
+          } else if (this.urlData != undefined) {
+            let _gameConfig = new (_crd && URLVlaue === void 0 ? (_reportPossibleCrUseOfURLVlaue({
+              error: Error()
+            }), URLVlaue) : URLVlaue)();
+
+            (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.TwoClassCheckData(_gameConfig, this.urlData);
+            this.account = _gameConfig.memberid;
+            _ln.account = this.account;
+            _ln.key = _gameConfig.token;
           } // //TODO 直接給token字串
           // else if (window.isGPGServer)
           //     _ln.key = JSON.stringify({})

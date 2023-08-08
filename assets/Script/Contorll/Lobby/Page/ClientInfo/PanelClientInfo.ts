@@ -26,6 +26,13 @@ export default class PanelClientInfo extends BaseComponent {
     labelNickName: Label
     @property(Label)
     labelEmail: Label
+    @property(Label)
+    labelBetCount: Label;
+    @property(Label)
+    labelPointCount: Label;
+    @property(Label)
+    labelRank: Label;
+
     @property(Button)
     buttonEditNickname: Button;
     @property(Button)
@@ -34,9 +41,6 @@ export default class PanelClientInfo extends BaseComponent {
     buttonEditEmail: Button;
     @property(Button)
     buttonEditPicture: Button;
-    labelBetCount: Label;
-    labelPointCount: Label;
-    labelRank: Label;
 
     getplatform: string;
 
@@ -51,13 +55,12 @@ export default class PanelClientInfo extends BaseComponent {
     }
     async onEnable() {
         this.startDelay()
-        const body = new RequestGPG.Body.NeedToken.MyInfo()
-        body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApi)
-        let convert = new URLSearchParams(body).toString()
-        await new RequestGPG.Request()
-            .setToken(Player.getInstance.gpgToken)
-            .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.MyInfo}?${convert}`, this.responseMyInfo.bind(this))
-
+        await this.requestMyInfo()
+        await this.requesMyScore()
+        if (this.stopDelay() < 1)
+            setTimeout(PanelLoading.instance.closeLoading.bind(PanelLoading.instance), 1000);
+        else
+            PanelLoading.instance.closeLoading()
     }
     onDisable() {
         this.resetButton()
@@ -93,6 +96,7 @@ export default class PanelClientInfo extends BaseComponent {
         this.resetButton()
         PanelLoading.instance.closeLoading()
     }
+    //#region UploadAvatar
     onSelectPhoto() {
         new CreateFileSprite(this.onUploadAvatar.bind(this))
     }
@@ -105,7 +109,7 @@ export default class PanelClientInfo extends BaseComponent {
             .deletContentType()
             .setBody(fileData)
             .setToken(Player.getInstance.gpgToken)
-            .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.UploadAvatar}`, (response: ResponseGPG.UploadAvatar.DataClass) => {
+            .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.UploadAvatar}`, (response: ResponseGPG.UploadAvatar.DataClass) => {
                 this.responseUploadAvatar(response, _spriteFrame)
             })
     }
@@ -113,6 +117,22 @@ export default class PanelClientInfo extends BaseComponent {
         console.log("圖片上傳成功?", response);
         if (response.Status.Code == "0")
             this.spritePlayer.spriteFrame = _spriteFrame
+        else {
+
+        }
+    }
+    //#endregion
+    //#region  MyInfo
+    async requestMyInfo() {
+        return new Promise<void>(async (resolve, reject) => {
+            const body = new RequestGPG.Body.NeedToken.MyInfo()
+            body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApi)
+            let convert = new URLSearchParams(body).toString()
+            await new RequestGPG.Request()
+                .setToken(Player.getInstance.gpgToken)
+                .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.MyInfo}?${convert}`, this.responseMyInfo.bind(this))
+            resolve();
+        })
     }
     async responseMyInfo(response: ResponseGPG.MyInfo.DataClass) {
         console.log("MyInfo", response)
@@ -120,15 +140,16 @@ export default class PanelClientInfo extends BaseComponent {
         // response.data.photo
         // console.log(Player.getInstance.gpgInfo);
 
-        if (!PublicModel.getInstance.checkStringNull(response.data.photo.headPhoto))
-            assetManager.loadRemote(response.data.photo.headPhoto, (err, image: ImageAsset) => {
-                if (err) {
-                    console.error(err.message);
-                    return
-                }
-                this.spritePlayer.spriteFrame = SpriteFrame.createWithImage(image)
+        /*上傳圖片功能暫時隱藏 */
+        // if (!PublicModel.getInstance.checkStringNull(response.data.photo.headPhoto))
+        //     assetManager.loadRemote(response.data.photo.headPhoto, (err, image: ImageAsset) => {
+        //         if (err) {
+        //             console.error(err.message);
+        //             return
+        //         }
+        //         this.spritePlayer.spriteFrame = SpriteFrame.createWithImage(image)
 
-            })
+        //     })
         if (!PublicModel.getInstance.checkStringNull(response.data.nickName)) {
             this.getplatform = response.data.nickName?.split("_")[0]/**因為前面會有註冊會員的文字，要刪除掉 */
             this.labelNickName.string = response.data.nickName.replace(`${this.getplatform}_`, "")
@@ -139,12 +160,41 @@ export default class PanelClientInfo extends BaseComponent {
         this.labelPhone.string = PublicModel.getInstance.checkStringNull(response.data.phoneNumber) ? "" : response.data.phoneNumber
         this.buttonEditEmail.node.active = PublicModel.getInstance.checkStringNull(response.data.email);
         this.labelEmail.string = PublicModel.getInstance.checkStringNull(response.data.email) ? "" : response.data.email
-        if (this.stopDelay() < 1)
-            setTimeout(PanelLoading.instance.closeLoading.bind(PanelLoading.instance), 1000);
-        else
-            PanelLoading.instance.closeLoading()
+
     }
 
+    //#region Betlog
+    async requesMyScore() {
+        return new Promise<void>(async (resolve, reject) => {
+            const body = new RequestGPG.Body.NeedToken.MyScore()
+            const getDate = new Date(PublicData.getInstance.today)
+            body.sDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-01`
+            body.eDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-${PublicModel.getInstance.getMonthAllDay(PublicData.getInstance.today)}`
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.MyScore)
+            console.log(body);
+
+            let convert = new URLSearchParams(body).toString()
+            await new RequestGPG.Request()
+                .setToken(Player.getInstance.gpgToken)
+                .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.My_Score}?${convert}`, this.responseMyScore.bind(this))
+            resolve()
+        })
+    }
+    responseMyScore(response?: ResponseGPG.My_Score.DataClass) {
+        console.log("玩家紀錄", response);
+        if (response.data) {
+            this.labelRank.string = response.data.rank.toString()
+            this.labelBetCount.string = response.data.betTimes.toString()
+            this.labelPointCount.string = response.data.totalScore.toString()
+            // this.labelMyPoint.string = response.data.totalScore.toString();
+        }
+        else {
+            this.labelRank.string = "0"
+            this.labelBetCount.string = "0"
+            this.labelPointCount.string = "0"
+        }
+    }
+    //#endregion
     resetButton() {
         this.buttonEditNickname.node.active = true
         // this.buttonEditPicture.node.active = true

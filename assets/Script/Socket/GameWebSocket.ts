@@ -32,7 +32,7 @@ export default class GameWebSocket extends SocketModel {
 
         if (window.isGPGServer)
             PublicData.getInstance.isChageOnline();
-        
+
     }
     startConnect(): void {
         /**避免測試期間轉換到下一個場景的時候，又再次連線 */
@@ -124,6 +124,14 @@ export default class GameWebSocket extends SocketModel {
         let _ln = new ln()
         _ln.gameId = GameData.getInstance.gameID
         if ((window.isGPGServer || window.isInpokerServer) && this.urlData != undefined) {
+            let _gameConfig = new URLVlaue()
+            PublicModel.getInstance.TwoClassCheckData(_gameConfig, this.urlData);
+
+            this.account = _gameConfig.memberid
+            _ln.account = this.account
+            _ln.key = _gameConfig.token;
+        }
+        else if (this.urlData != undefined) {
             let _gameConfig = new URLVlaue()
             PublicModel.getInstance.TwoClassCheckData(_gameConfig, this.urlData);
 

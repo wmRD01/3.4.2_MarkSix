@@ -90,14 +90,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), LobbyStateEvent) : LobbyStateEvent).UpDateBall, data);
             (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
               error: Error()
-            }), PanelSystemMessage) : PanelSystemMessage).instance.messageInit((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
               error: Error()
             }), SocketSetting) : SocketSetting).t(data.code, (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
               error: Error()
             }), LangType) : LangType).Server));
-            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
-              error: Error()
-            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm();
           }
         }
 

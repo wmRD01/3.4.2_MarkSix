@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Label, Node, _decorator, NotificationType, LobbyStateEvent, EventMng, BaseComponent, Player, RequestGPG, MyEditBox, PublicModel, PanelLoading, ButtonMng, EditMenu, PanelSystemMessage, SocketSetting, LangType, VerificationTimer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PanelClientEdit;
+  var _reporterNs, _cclegacy, Button, Label, Node, _decorator, NotificationType, LobbyStateEvent, EventMng, BaseComponent, Player, RequestGPG, MyEditBox, PublicModel, PanelLoading, ButtonMng, EditMenu, PanelSystemMessage, SocketSetting, LangType, VerificationTimer, PublicData, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PanelClientEdit;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -79,6 +79,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("VerificationTimer", "../../../../Model/VerificationTimer", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfPublicData(extras) {
+    _reporterNs.report("PublicData", "../../../../Model/PublicData", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -118,6 +122,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       LangType = _unresolved_15.LangType;
     }, function (_unresolved_16) {
       VerificationTimer = _unresolved_16.VerificationTimer;
+    }, function (_unresolved_17) {
+      PublicData = _unresolved_17.default;
     }],
     execute: function () {
       _crd = true;
@@ -228,9 +234,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), RequestGPG) : RequestGPG).Method.POST).setBody(JSON.stringify(body)).setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
               error: Error()
-            }), Player) : Player).getInstance.gpgToken).fetchData("" + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+            }), Player) : Player).getInstance.gpgToken).fetchData("" + (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
               error: Error()
-            }), RequestGPG) : RequestGPG).APIUrl.playAPI + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+            }), PublicData) : PublicData).getInstance.gpgUrlPlayApi + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
             }), RequestGPG) : RequestGPG).API.Nickname, _this.responseNickname.bind(_this));
           })();
@@ -242,6 +248,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           console.log("Nickname", response);
 
           if (response.Status.Code == "0") {
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("026", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game));
             (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
               error: Error()
             }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
@@ -256,6 +269,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), ButtonMng) : ButtonMng).clearEvent(this.buttonConfirm);
             this.reset();
           } else {
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t(response.Status.Code, (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).ServerAPI));
             (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
               error: Error()
             }), PanelLoading) : PanelLoading).instance.closeLoading();
@@ -281,9 +301,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
-            }), RequestGPG) : RequestGPG).Method.POST).setBody(JSON.stringify(body)).fetchData("" + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+            }), RequestGPG) : RequestGPG).Method.POST).setBody(JSON.stringify(body)).fetchData("" + (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
               error: Error()
-            }), RequestGPG) : RequestGPG).APIUrl.ids + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+            }), PublicData) : PublicData).getInstance.gpgUrlids + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
             }), RequestGPG) : RequestGPG).API.ValidateContactInfo, _this2.responseValidateContactInfo.bind(_this2));
           })();
@@ -303,9 +323,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
-            }), RequestGPG) : RequestGPG).Method.POST).setBody(JSON.stringify(body)).fetchData("" + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+            }), RequestGPG) : RequestGPG).Method.POST).setBody(JSON.stringify(body)).fetchData("" + (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
               error: Error()
-            }), RequestGPG) : RequestGPG).APIUrl.ids + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+            }), PublicData) : PublicData).getInstance.gpgUrlids + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
             }), RequestGPG) : RequestGPG).API.ValidateContactInfo, _this3.responseValidateContactInfo.bind(_this3));
           })();
@@ -319,7 +339,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             /**代表此已經綁定過不可以綁定! */
 
             if (response.Status.Code == "0") {
-              console.log("已存在請重新換組");
+              (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+                error: Error()
+              }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+                error: Error()
+              }), SocketSetting) : SocketSetting).t("034", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+                error: Error()
+              }), LangType) : LangType).Game));
               return;
             } else {
               console.log("恭喜信箱不存在，可繼續註冊"); //*要改成手動送驗證碼
@@ -333,9 +359,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 error: Error()
               }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
                 error: Error()
-              }), RequestGPG) : RequestGPG).Method.POST).setBody(JSON.stringify(sendBody)).fetchData("" + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              }), RequestGPG) : RequestGPG).Method.POST).setBody(JSON.stringify(sendBody)).fetchData("" + (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
                 error: Error()
-              }), RequestGPG) : RequestGPG).APIUrl.ids + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              }), PublicData) : PublicData).getInstance.gpgUrlids + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
                 error: Error()
               }), RequestGPG) : RequestGPG).API.SendRegisterVerification, _this4.responseSendRegisterVerification.bind(_this4));
             }
@@ -348,6 +374,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           console.log("SendRegisterVerification", response);
 
           if (response.Status.Code == "0") {
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("035", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game));
             new (_crd && VerificationTimer === void 0 ? (_reportPossibleCrUseOfVerificationTimer({
               error: Error()
             }), VerificationTimer) : VerificationTimer)(this.labelVerificationCode, this.buttonVerificationCode, 180);
@@ -412,9 +445,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), RequestGPG) : RequestGPG).Method.POST).setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
               error: Error()
-            }), Player) : Player).getInstance.gpgToken).setBody(JSON.stringify(body)).fetchData("" + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+            }), Player) : Player).getInstance.gpgToken).setBody(JSON.stringify(body)).fetchData("" + (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
               error: Error()
-            }), RequestGPG) : RequestGPG).APIUrl.playAPI + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+            }), PublicData) : PublicData).getInstance.gpgUrlPlayApi + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
             }), RequestGPG) : RequestGPG).API.CertifiedEmall, _this5.responseCertifiedEmall.bind(_this5));
           })();
@@ -427,6 +460,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (response.Status.Code == "0") {
             console.log("過關惹");
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("036", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).ServerAPI));
             (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
               error: Error()
             }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
@@ -444,14 +484,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             //TODO顯示錯誤訊息
             (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
               error: Error()
-            }), PanelSystemMessage) : PanelSystemMessage).instance.messageInit((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
               error: Error()
             }), SocketSetting) : SocketSetting).t(response.Status.Code, (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
               error: Error()
             }), LangType) : LangType).ServerAPI));
-            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
-              error: Error()
-            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm();
             (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
               error: Error()
             }), PanelLoading) : PanelLoading).instance.closeLoading();
@@ -499,24 +536,52 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         checkName(str) {
           if (str.length == 0) {
-            console.error("請輸入文字");
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("028", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game)); // console.error("請輸入文字");
+
             return false;
           }
 
           if (/\s/.test(str)) {
-            console.error("文字有空白");
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("029", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game)); // console.error("文字有空白");
+
             return false;
           }
 
           if ((_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
           }), PublicModel) : PublicModel).getInstance.checkNicknameCondition(str)) {
-            console.error("出現非法文字");
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("030", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game)); // console.error("出現非法文字");
+
             return false;
           }
 
           if (str.length < 2 || str.length > 16) {
-            console.error("長度須為2~16");
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("031", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game)); // console.error("長度須為2~16");
+
             return false;
             ;
           }
@@ -531,17 +596,38 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         checkEmail(str) {
           if (str.length == 0) {
-            console.error("請輸入文字");
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("028", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game)); // console.error("請輸入文字");
+
             return false;
           }
 
           if (/\s/.test(str)) {
-            console.error("文字有空白");
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("029", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game)); // console.error("文字有空白");
+
             return false;
           }
 
           if (!this.checkEmailRegular(str)) {
-            console.error("出現非法文字");
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("030", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game)); // console.error("出現非法文字");
+
             return false;
           }
 
@@ -554,17 +640,38 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         checkVerification(str) {
           if (str.length == 0) {
-            console.error("請輸入數字");
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("033", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game)); // console.error("請輸入數字");
+
             return false;
           }
 
           if (/\s/.test(str)) {
-            console.error("文字有空白");
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("029", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game)); // console.error("文字有空白");
+
             return false;
           }
 
           if (str.length != 6) {
-            console.error("驗證碼最少六碼");
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("032", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game)); // console.error("驗證碼最少六碼");
+
             return false;
           }
 

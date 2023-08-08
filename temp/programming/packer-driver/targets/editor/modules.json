@@ -1,6 +1,6 @@
 {
   "cce:/internal/x/cc": {
-    "mTimestamp": 5650.201700001955,
+    "mTimestamp": 7315.2452999949455,
     "chunkId": "quick-pack:/cce/internal/x/cc.js",
     "imports": [
       {
@@ -389,7 +389,7 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 5372105.108500004,
+    "mTimestamp": 2085174.178399995,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
@@ -3661,7 +3661,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/GPGAPI/RequestGPG.ts": {
     "mTimestamp": {
-      "mtime": 1691131299020.221,
+      "mtime": 1691392182512.1658,
       "uuid": "a8530c9c-9fdc-465d-8309-ca23ec463676"
     },
     "chunkId": "assets/Script/Contorll/Api/GPGAPI/RequestGPG.js",
@@ -3682,7 +3682,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/GPGAPI/ResponseGPG.ts": {
     "mTimestamp": {
-      "mtime": 1690964175042.23,
+      "mtime": 1691390205686.108,
       "uuid": "9d803bbf-a89c-4062-8498-0dbf99eb1059"
     },
     "chunkId": "assets/Script/Contorll/Api/GPGAPI/ResponseGPG.js",
@@ -4058,7 +4058,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.ts": {
     "mTimestamp": {
-      "mtime": 1691052988781.752,
+      "mtime": 1691458910295.3318,
       "uuid": "d2f08cfc-f861-4fd1-8212-bea888090d2b"
     },
     "chunkId": "assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js",
@@ -4140,128 +4140,170 @@
         }
       },
       {
-        "value": "../../../../Enum/LobbyStateEvent",
+        "value": "../../../../Enum/LangType",
         "rewritten": "__unresolved_5",
         "loc": {
           "start": {
             "line": 6,
-            "column": 32
+            "column": 25
           },
           "end": {
             "line": 6,
+            "column": 52
+          }
+        }
+      },
+      {
+        "value": "../../../../Enum/LobbyStateEvent",
+        "rewritten": "__unresolved_6",
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 32
+          },
+          "end": {
+            "line": 7,
             "column": 66
           }
         }
       },
       {
         "value": "../../../../Enum/WebSocketEvent",
-        "rewritten": "__unresolved_6",
+        "rewritten": "__unresolved_7",
         "loc": {
           "start": {
-            "line": 7,
+            "line": 8,
             "column": 31
           },
           "end": {
-            "line": 7,
+            "line": 8,
             "column": 64
           }
         }
       },
       {
         "value": "../../../../Manager/AssetMng",
-        "rewritten": "__unresolved_7",
+        "rewritten": "__unresolved_8",
         "loc": {
           "start": {
-            "line": 8,
+            "line": 9,
             "column": 21
           },
           "end": {
-            "line": 8,
+            "line": 9,
             "column": 51
           }
         }
       },
       {
         "value": "../../../../Manager/ButtonMng",
-        "rewritten": "__unresolved_8",
+        "rewritten": "__unresolved_9",
         "loc": {
           "start": {
-            "line": 9,
+            "line": 10,
             "column": 22
           },
           "end": {
-            "line": 9,
+            "line": 10,
             "column": 53
           }
         }
       },
       {
         "value": "../../../../Model/BallData",
-        "rewritten": "__unresolved_9",
+        "rewritten": "__unresolved_10",
         "loc": {
           "start": {
-            "line": 10,
+            "line": 11,
             "column": 21
           },
           "end": {
-            "line": 10,
+            "line": 11,
             "column": 49
           }
         }
       },
       {
         "value": "../../../../Model/CheckLoading",
-        "rewritten": "__unresolved_10",
+        "rewritten": "__unresolved_11",
         "loc": {
           "start": {
-            "line": 11,
+            "line": 12,
             "column": 25
           },
           "end": {
-            "line": 11,
+            "line": 12,
             "column": 57
           }
         }
       },
       {
         "value": "../../../../Model/ComponentBase",
-        "rewritten": "__unresolved_11",
+        "rewritten": "__unresolved_12",
         "loc": {
           "start": {
-            "line": 12,
+            "line": 13,
             "column": 26
           },
           "end": {
-            "line": 12,
+            "line": 13,
             "column": 59
           }
         }
       },
       {
-        "value": "../../../Api/SendCommand",
-        "rewritten": "__unresolved_12",
+        "value": "../../../../Socket/SocketSetting",
+        "rewritten": "__unresolved_13",
         "loc": {
           "start": {
             "line": 14,
-            "column": 20
+            "column": 26
           },
           "end": {
             "line": 14,
+            "column": 60
+          }
+        }
+      },
+      {
+        "value": "../../../Api/SendCommand",
+        "rewritten": "__unresolved_14",
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 20
+          },
+          "end": {
+            "line": 16,
             "column": 46
           }
         }
       },
       {
         "value": "../../../NoClearNode/PanelLoading",
-        "rewritten": "__unresolved_13",
+        "rewritten": "__unresolved_15",
         "loc": {
           "start": {
-            "line": 15,
+            "line": 17,
             "column": 25
           },
           "end": {
-            "line": 15,
+            "line": 17,
             "column": 60
+          }
+        }
+      },
+      {
+        "value": "../../../NoClearNode/PanelSystemMessage",
+        "rewritten": "__unresolved_16",
+        "loc": {
+          "start": {
+            "line": 18,
+            "column": 31
+          },
+          "end": {
+            "line": 18,
+            "column": 72
           }
         }
       }
@@ -4300,6 +4342,10 @@
       },
       {
         "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/LangType.ts"
+      },
+      {
+        "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/LobbyStateEvent.ts"
       },
       {
@@ -4328,11 +4374,19 @@
       },
       {
         "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Socket/SocketSetting.ts"
+      },
+      {
+        "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/SendCommand.ts"
       },
       {
         "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/NoClearNode/PanelLoading.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/NoClearNode/PanelSystemMessage.ts"
       }
     ]
   },
@@ -4756,7 +4810,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/Page/Home/PanelHome.ts": {
     "mTimestamp": {
-      "mtime": 1691047629033.6482,
+      "mtime": 1691460595145.2896,
       "uuid": "b8492fab-e86b-4b04-87cf-33d6acb68979"
     },
     "chunkId": "assets/Script/Contorll/Lobby/Page/Home/PanelHome.js",
@@ -4773,11 +4827,11 @@
         "loc": {
           "start": {
             "line": 1,
-            "column": 88
+            "column": 109
           },
           "end": {
             "line": 1,
-            "column": 92
+            "column": 113
           }
         }
       },
@@ -4920,6 +4974,20 @@
             "column": 60
           }
         }
+      },
+      {
+        "value": "../../../../Model/BallData",
+        "rewritten": "__unresolved_11",
+        "loc": {
+          "start": {
+            "line": 15,
+            "column": 21
+          },
+          "end": {
+            "line": 15,
+            "column": 49
+          }
+        }
       }
     ],
     "modLoMetadata": {
@@ -4977,12 +5045,16 @@
       {
         "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/NoClearNode/PanelLoading.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/BallData.ts"
       }
     ]
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/Page/ClientInfo/PanelClientInfo.ts": {
     "mTimestamp": {
-      "mtime": 1691119015650.1997,
+      "mtime": 1691463582750.3608,
       "uuid": "e72b2a05-d840-45f6-a09f-c715d142e9b8"
     },
     "chunkId": "assets/Script/Contorll/Lobby/Page/ClientInfo/PanelClientInfo.js",
@@ -5308,7 +5380,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/Page/Point/PanelPoint.ts": {
     "mTimestamp": {
-      "mtime": 1690964461221.274,
+      "mtime": 1691388383440.1802,
       "uuid": "303d6930-d3b3-4ed5-a888-f81a6a4a03cc"
     },
     "chunkId": "assets/Script/Contorll/Lobby/Page/Point/PanelPoint.js",
@@ -5516,7 +5588,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.ts": {
     "mTimestamp": {
-      "mtime": 1691117798315.9988,
+      "mtime": 1691133838932.302,
       "uuid": "73704463-4c7c-4ce8-b439-666025f44ee6"
     },
     "chunkId": "assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js",
@@ -7562,7 +7634,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/NoClearNode/PanelSystemMessage.ts": {
     "mTimestamp": {
-      "mtime": 1691128582339.9116,
+      "mtime": 1691393677050.5188,
       "uuid": "7bad3d7e-9485-475d-bd53-d21ba8c5d95c"
     },
     "chunkId": "assets/Script/Contorll/NoClearNode/PanelSystemMessage.js",
@@ -10249,7 +10321,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/JudgePlatform.ts": {
     "mTimestamp": {
-      "mtime": 1690970040962.0322,
+      "mtime": 1691375409689.7585,
       "uuid": "920a21b6-5e62-445c-a304-8b82cf03e37d"
     },
     "chunkId": "assets/Script/Model/JudgePlatform.js",
@@ -10505,7 +10577,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicData.ts": {
     "mTimestamp": {
-      "mtime": 1691133413206.3623,
+      "mtime": 1691463944566.611,
       "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12"
     },
     "chunkId": "assets/Script/Model/PublicData.js",
@@ -10588,7 +10660,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/Player.ts": {
     "mTimestamp": {
-      "mtime": 1690967477803.3025,
+      "mtime": 1691139223802.9368,
       "uuid": "c06b1ce1-9942-4bcc-94ad-976d02243e39"
     },
     "chunkId": "assets/Script/Model/Player.js",
@@ -10689,7 +10761,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PointItemData.ts": {
     "mTimestamp": {
-      "mtime": 1690961892760.6116,
+      "mtime": 1691377941272.0498,
       "uuid": "f131d57a-314f-48b1-af87-1e0cac6d55c0"
     },
     "chunkId": "assets/Script/Model/PointItemData.js",
@@ -10807,7 +10879,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Socket/GameWebSocket.ts": {
     "mTimestamp": {
-      "mtime": 1691133450029.9033,
+      "mtime": 1691375467714.533,
       "uuid": "15ca959a-c72f-453d-8fb1-71a3c53467c0"
     },
     "chunkId": "assets/Script/Socket/GameWebSocket.js",
@@ -11719,7 +11791,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/State/PlayState.ts": {
     "mTimestamp": {
-      "mtime": 1691043844619.6118,
+      "mtime": 1691393677128.7278,
       "uuid": "f58f9d70-875c-4733-9dd2-ce918567419d"
     },
     "chunkId": "assets/Script/State/PlayState.js",
@@ -11874,7 +11946,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/State/MessageState.ts": {
     "mTimestamp": {
-      "mtime": 1689911927746.5051,
+      "mtime": 1691393662127.7495,
       "uuid": "b743ab4e-0654-4291-aeca-9face21a2c00"
     },
     "chunkId": "assets/Script/State/MessageState.js",
@@ -12606,7 +12678,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/View/MainLoading.ts": {
     "mTimestamp": {
-      "mtime": 1691128435185.6516,
+      "mtime": 1691141752358.2664,
       "uuid": "4baf032d-11dc-4a05-888e-2979510bec06"
     },
     "chunkId": "assets/Script/View/MainLoading.js",
@@ -13016,7 +13088,7 @@
     ]
   },
   "cce:/internal/code-quality/cr.mjs": {
-    "mTimestamp": 1691128080306,
+    "mTimestamp": 1691461860249,
     "chunkId": "quick-pack:/cce/internal/code-quality/cr.js",
     "imports": [],
     "modLoMetadata": {
@@ -13025,7 +13097,7 @@
     "resolvedImports": []
   },
   "cce:/internal/ml/cjs-loader.mjs": {
-    "mTimestamp": 1691128080306,
+    "mTimestamp": 1691461860249,
     "chunkId": "quick-pack:/cce/internal/ml/cjs-loader.js",
     "imports": [],
     "modLoMetadata": {
@@ -14806,7 +14878,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/Page/ClientInfo/PageClientEdit.ts": {
     "mTimestamp": {
-      "mtime": 1691056114150.2532,
+      "mtime": 1691396426179.8196,
       "uuid": "5d3e955f-5565-4e30-a755-5876a833de2f"
     },
     "chunkId": "assets/Script/Contorll/Lobby/Page/ClientInfo/PageClientEdit.js",
@@ -15040,6 +15112,20 @@
             "column": 71
           }
         }
+      },
+      {
+        "value": "../../../../Model/PublicData",
+        "rewritten": "__unresolved_16",
+        "loc": {
+          "start": {
+            "line": 18,
+            "column": 23
+          },
+          "end": {
+            "line": 18,
+            "column": 53
+          }
+        }
       }
     ],
     "modLoMetadata": {
@@ -15117,6 +15203,10 @@
       {
         "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/VerificationTimer.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicData.ts"
       }
     ]
   },

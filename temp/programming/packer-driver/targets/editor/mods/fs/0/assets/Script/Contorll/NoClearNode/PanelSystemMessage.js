@@ -143,7 +143,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           super.setLanguage();
         }
 
-        showSingleConfirm(confirm) {
+        showSingleConfirm(caption, confirm) {
+          this.messageInit(caption);
           this.buttonConfirm.node.setPosition(0, -128);
           if (confirm) (_crd && ButtonMng === void 0 ? (_reportPossibleCrUseOfButtonMng({
             error: Error()
@@ -213,8 +214,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
 
         onSystemMessage(caption, _buttonFunctionApi) {
-          this.messageInit(caption);
-          this.showSingleConfirm(_buttonFunctionApi);
+          this.showSingleConfirm(caption, _buttonFunctionApi);
         }
 
         closeMessage(caption, _buttonFunctionApi) {

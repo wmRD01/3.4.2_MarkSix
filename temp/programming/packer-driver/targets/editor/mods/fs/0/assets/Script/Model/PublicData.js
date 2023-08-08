@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, BaseSingleton, GameSceneName, CheckLoading, PublicData, _crd, GPGAPI;
+  var _reporterNs, _cclegacy, BaseSingleton, GameSceneName, CheckLoading, PublicData, _crd, GPGAPI, APIUrl;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -48,9 +48,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "BaseViewHeight", 1280);
 
-          _defineProperty(this, "gameVersion", "0.1.6");
+          _defineProperty(this, "gameVersion", "0.1.8");
 
-          _defineProperty(this, "onlineVersion", "0.1.6");
+          _defineProperty(this, "onlineVersion", "0.1.8");
 
           _defineProperty(this, "checkLoading", new (_crd && CheckLoading === void 0 ? (_reportPossibleCrUseOfCheckLoading({
             error: Error()
@@ -81,10 +81,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "today", void 0);
 
           _defineProperty(this, "gpgApi", GPGAPI.QA);
+
+          _defineProperty(this, "gpgUrlPlayApi", APIUrl.QA_playAPI);
+
+          _defineProperty(this, "gpgUrlids", APIUrl.QA_ids);
         }
 
         isChageOnline() {
           this.gpgApi = GPGAPI.Online;
+          this.gpgUrlPlayApi = APIUrl.playAPI;
+          this.gpgUrlids = APIUrl.ids;
         }
 
       });
@@ -93,6 +99,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         GPGAPI["QA"] = "5gh394D";
         GPGAPI["Online"] = "4fypra!c!?";
       })(GPGAPI || (GPGAPI = {}));
+
+      (function (APIUrl) {
+        APIUrl["playAPI"] = "https://play-api.godplay.app";
+        APIUrl["ids"] = "https://ids.godplay.app";
+        APIUrl["QA_playAPI"] = "https://play-api.ceis.tw";
+        APIUrl["QA_ids"] = "https://ids.ceis.tw";
+      })(APIUrl || (APIUrl = {}));
 
       _cclegacy._RF.pop();
 

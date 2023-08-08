@@ -82,7 +82,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         start() {
-          if (sys.os != sys.OS.ANDROID && sys.os != sys.OS.IOS) {
+          if (!sys.isMobile || sys.isBrowser && sys.isMobile) {
             (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
               error: Error()
             }), PanelLoading) : PanelLoading).instance.openLoading();

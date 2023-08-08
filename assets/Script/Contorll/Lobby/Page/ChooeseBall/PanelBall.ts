@@ -3,6 +3,7 @@ import DelayTime from '../../../../../Plug/DelayTime';
 import { AssetType } from '../../../../Enum/AssetType';
 import { CheckLoadingType } from '../../../../Enum/CheckLoadingType';
 import { CommandType } from '../../../../Enum/CommandType';
+import { LangType } from '../../../../Enum/LangType';
 import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import { WebSocketEvent } from '../../../../Enum/WebSocketEvent';
 import AssetMng from '../../../../Manager/AssetMng';
@@ -10,9 +11,11 @@ import ButtonMng from '../../../../Manager/ButtonMng';
 import BallData from '../../../../Model/BallData';
 import CheckLoading from '../../../../Model/CheckLoading';
 import BaseComponent from '../../../../Model/ComponentBase';
+import SocketSetting from '../../../../Socket/SocketSetting';
 import * as RP from '../../../Api/ResponeCommand';
 import { bet } from '../../../Api/SendCommand';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
+import PanelSystemMessage from '../../../NoClearNode/PanelSystemMessage';
 const { ccclass, property } = _decorator;
 @ccclass('PanelBall')
 export default class PanelBall extends BaseComponent {
@@ -149,8 +152,12 @@ export default class PanelBall extends BaseComponent {
 
     }
     async Attack() {
-        if (this.isConfirm) return
+        if (this.isConfirm) {
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("038", LangType.Game))
+            return
+        }
         if (this.tempChoose.length < this.MaxCount) {
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("039", LangType.Game))
             return
         }
         let len = this.tempChoose.length
@@ -164,6 +171,7 @@ export default class PanelBall extends BaseComponent {
             await DelayTime.getInstance.StartDT(.1);
         }
 
+
         /**打leo的com */
         this.tempChoose = []
         this.isConfirm = true
@@ -173,9 +181,10 @@ export default class PanelBall extends BaseComponent {
         _bet.betCode = this.tempChoose
         this.eventEmit(WebSocketEvent.WebSocketSendCommand, CommandType.bet, _bet)
     }
-    async onConfirmAttack(e?: EventTouch, customEventData?: string) {
-        this.Attack()
+    onConfirmAttack(e?: EventTouch, customEventData?: string) {
         this.eventEmit(LobbyStateEvent.ChangeBallButtonState, false)
+        this.Attack()
+        PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("037", LangType.Game))
     }
     fullResetBallColor(bool: boolean) {
         this.mapBallNumber.forEach(element => {
@@ -200,16 +209,23 @@ export default class PanelBall extends BaseComponent {
 
     reProcessing(data: RP.ln | RP.bet) {
         // console.log(data);
+
         this.onResetChooese(null)
         if (data.betCode != null) {
+            if (this.isFullBall) {
+                PanelLoading.instance.closeLoading()
+                return
+            }
             for (let index = 0; index < data.betCode.length; index++) {
                 this.onChooeseBall(null, data.betCode[index].toString())
             }
             this.Attack()
             this.isFullBall = true;
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("038", LangType.Game))
             this.eventEmit(LobbyStateEvent.ChangeBallButtonState, false)
         }
         this.labelIssueID.string = `第${data.drawIssue}期`;
         PanelLoading.instance.closeLoading()
     }
+
 }

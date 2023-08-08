@@ -49,7 +49,8 @@ export default class PanelSystemMessage extends BaseSingletonComponent<PanelSyst
         this.labelCancel.string = SocketSetting.t("1001", LangType.Game)
         super.setLanguage()
     }
-    showSingleConfirm(confirm?: ButtonFunctionApi) {
+    showSingleConfirm(caption: string, confirm?: ButtonFunctionApi) {
+        this.messageInit(caption)
         this.buttonConfirm.node.setPosition(0, -128);
         if (confirm)
             ButtonMng.addEvent(confirm.target, confirm.callback, this.buttonConfirm, confirm.callbackValue ? confirm.callbackValue : null);
@@ -97,8 +98,7 @@ export default class PanelSystemMessage extends BaseSingletonComponent<PanelSyst
     }
     //暫時開通
     onSystemMessage(caption: string, _buttonFunctionApi?: ButtonFunctionApi) {
-        this.messageInit(caption)
-        this.showSingleConfirm(_buttonFunctionApi)
+        this.showSingleConfirm(caption, _buttonFunctionApi)
     }
     closeMessage(caption: string, _buttonFunctionApi?: ButtonFunctionApi) {
         this.hide()

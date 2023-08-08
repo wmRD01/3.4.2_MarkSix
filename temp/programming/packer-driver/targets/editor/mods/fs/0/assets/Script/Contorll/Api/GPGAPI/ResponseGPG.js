@@ -288,8 +288,6 @@ System.register(["cc"], function (_export, _context) {
             }
 
           }
-
-          _Betlog.Betlog = Betlog;
         })(Betlog || (Betlog = _ResponseGPG.Betlog || (_ResponseGPG.Betlog = {})));
 
         let TopScore;
@@ -366,9 +364,42 @@ System.register(["cc"], function (_export, _context) {
             }
 
           }
-
-          _DrawUpcoming.History = History;
         })(DrawUpcoming || (DrawUpcoming = _ResponseGPG.DrawUpcoming || (_ResponseGPG.DrawUpcoming = {})));
+
+        let My_Score;
+
+        (function (_My_Score) {
+          class DataClass {
+            constructor() {
+              _defineProperty(this, "data", new MyScore());
+
+              _defineProperty(this, "Status", new State());
+            }
+
+          }
+
+          _My_Score.DataClass = DataClass;
+
+          class State {
+            constructor() {
+              _defineProperty(this, "Code", void 0);
+
+              _defineProperty(this, "Message", void 0);
+            }
+
+          }
+
+          class MyScore {
+            constructor() {
+              _defineProperty(this, "rank", void 0);
+
+              _defineProperty(this, "totalScore", void 0);
+
+              _defineProperty(this, "betTimes", void 0);
+            }
+
+          }
+        })(My_Score || (My_Score = _ResponseGPG.My_Score || (_ResponseGPG.My_Score = {})));
       })(ResponseGPG || _export("ResponseGPG", ResponseGPG = {}));
 
       _cclegacy._RF.pop();

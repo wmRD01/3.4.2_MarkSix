@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Component, Label, UITransform, _decorator, NotificationType, LobbyStateEvent, PageAction, EventMng, BaseComponent, PublicModel, RequestGPG, Player, PublicData, PanelLoading, Marquee, Timer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _dec17, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _temp, _crd, ccclass, property, PanelHome;
+  var _reporterNs, _cclegacy, Button, Component, instantiate, Label, Node, Prefab, UITransform, _decorator, NotificationType, LobbyStateEvent, PageAction, EventMng, BaseComponent, PublicModel, RequestGPG, Player, PublicData, PanelLoading, BallData, Marquee, Timer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _dec17, _dec18, _dec19, _dec20, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _descriptor17, _descriptor18, _descriptor19, _temp, _crd, ccclass, property, PanelHome;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -63,6 +63,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("URLVlaue", "../../../Api/SendCommand", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfBallData(extras) {
+    _reporterNs.report("BallData", "../../../../Model/BallData", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -70,7 +74,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       _cclegacy = _cc.cclegacy;
       Button = _cc.Button;
       Component = _cc.Component;
+      instantiate = _cc.instantiate;
       Label = _cc.Label;
+      Node = _cc.Node;
+      Prefab = _cc.Prefab;
       UITransform = _cc.UITransform;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
@@ -93,6 +100,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       PublicData = _unresolved_10.default;
     }, function (_unresolved_11) {
       PanelLoading = _unresolved_11.default;
+    }, function (_unresolved_12) {
+      BallData = _unresolved_12.default;
     }],
     execute: function () {
       _crd = true;
@@ -104,45 +113,49 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", PanelHome = (_dec = ccclass('PanelHome'), _dec2 = property(Label), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Label), _dec9 = property(Label), _dec10 = property(Label), _dec11 = property(Label), _dec12 = property(Label), _dec13 = property(Label), _dec14 = property(Label), _dec15 = property(Button), _dec16 = property(Button), _dec17 = property(Button), _dec(_class = (_class2 = (_temp = class PanelHome extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelHome = (_dec = ccclass('PanelHome'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Prefab), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Label), _dec9 = property(Label), _dec10 = property(Label), _dec11 = property(Label), _dec12 = property(Label), _dec13 = property(Label), _dec14 = property(Label), _dec15 = property(Label), _dec16 = property(Label), _dec17 = property(Label), _dec18 = property(Button), _dec19 = property(Button), _dec20 = property(Button), _dec(_class2 = (_class3 = (_temp = class PanelHome extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor() {
           super(...arguments);
 
-          _initializerDefineProperty(this, "labelTime", _descriptor, this);
+          _initializerDefineProperty(this, "lastDrawCodeLayout", _descriptor, this);
 
-          _initializerDefineProperty(this, "labelCurrentTitle", _descriptor2, this);
+          _initializerDefineProperty(this, "labelContent", _descriptor2, this);
 
-          _initializerDefineProperty(this, "labelCurrentDrawIssueID", _descriptor3, this);
+          _initializerDefineProperty(this, "ballItem", _descriptor3, this);
 
-          _initializerDefineProperty(this, "labelLastDrawCode", _descriptor4, this);
+          _initializerDefineProperty(this, "labelTime", _descriptor4, this);
 
-          _initializerDefineProperty(this, "labelLastDrawIssueID", _descriptor5, this);
+          _initializerDefineProperty(this, "labelCurrentTitle", _descriptor5, this);
 
-          _initializerDefineProperty(this, "labelLastDrawDay", _descriptor6, this);
+          _initializerDefineProperty(this, "labelCurrentDrawIssueID", _descriptor6, this);
 
-          _initializerDefineProperty(this, "labelMarquee", _descriptor7, this);
+          _initializerDefineProperty(this, "labelLastDrawCode", _descriptor7, this);
 
-          _initializerDefineProperty(this, "labelMonth", _descriptor8, this);
+          _initializerDefineProperty(this, "labelLastDrawIssueID", _descriptor8, this);
 
-          _initializerDefineProperty(this, "labelPointTitle", _descriptor9, this);
+          _initializerDefineProperty(this, "labelLastDrawDay", _descriptor9, this);
 
-          _initializerDefineProperty(this, "labelMyPoint", _descriptor10, this);
+          _initializerDefineProperty(this, "labelMarquee", _descriptor10, this);
 
-          _initializerDefineProperty(this, "labelDetail", _descriptor11, this);
+          _initializerDefineProperty(this, "labelMonth", _descriptor11, this);
 
-          _initializerDefineProperty(this, "labelGiftTitle1", _descriptor12, this);
+          _initializerDefineProperty(this, "labelPointTitle", _descriptor12, this);
 
-          _initializerDefineProperty(this, "labelGiftTitle2", _descriptor13, this);
+          _initializerDefineProperty(this, "labelMyPoint", _descriptor13, this);
 
-          _initializerDefineProperty(this, 2, _descriptor14, this);
+          _initializerDefineProperty(this, "labelDetail", _descriptor14, this);
 
-          _defineProperty(this, "btnMoreDraw", void 0);
+          _initializerDefineProperty(this, "labelGiftTitle1", _descriptor15, this);
 
-          _initializerDefineProperty(this, "btnPointDetail", _descriptor15, this);
+          _initializerDefineProperty(this, "labelGiftTitle2", _descriptor16, this);
 
-          _initializerDefineProperty(this, "btnGoChooese", _descriptor16, this);
+          _initializerDefineProperty(this, "btnMoreDraw", _descriptor17, this);
+
+          _initializerDefineProperty(this, "btnPointDetail", _descriptor18, this);
+
+          _initializerDefineProperty(this, "btnGoChooese", _descriptor19, this);
 
           _defineProperty(this, "marquee", void 0);
 
@@ -172,7 +185,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             if (_this.lastIssueID != _this.currentIssueID) {
               yield _this.requestDrawUpcoming(); //TODO 製做我的積分
 
-              yield _this.request我的積分();
+              yield _this.requesMyScore();
               /**代表更新最新一期 */
 
               _this.lastIssueID = _this.currentIssueID;
@@ -188,7 +201,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // this.timer.setTime(100)
         }
 
-        onDisable() {}
+        onDisable() {} //#region  DrawHistory
+
 
         requestDrawHistory() {
           var _this2 = this;
@@ -210,9 +224,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                   error: Error()
                 }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
                   error: Error()
-                }), Player) : Player).getInstance.gpgToken).fetchData("" + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                }), Player) : Player).getInstance.gpgToken).fetchData("" + (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
                   error: Error()
-                }), RequestGPG) : RequestGPG).APIUrl.playAPI + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                }), PublicData) : PublicData).getInstance.gpgUrlPlayApi + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
                   error: Error()
                 }), RequestGPG) : RequestGPG).API.DrawHistory + "?" + convert, _this2.responseDrawHistory.bind(_this2));
                 resolve();
@@ -224,6 +238,40 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }());
           })();
         }
+
+        responseDrawHistory(response) {
+          if (response.data) {
+            var getDate = response.data[0];
+            if (this.currentIssueID == getDate.issueID) return;
+            this.currentIssueID = getDate.issueID;
+            this.labelLastDrawIssueID.string = "\u7B2C" + getDate.issueID.toString() + "\u671F";
+            /**不需要week日 */
+            // console.log(PublicModel.getInstance.convertDate(getDate.openDate).split("(")[0]);
+
+            var getday = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.convertDateDay(getDate.openDate).split("(")[0];
+            this.labelLastDrawDay.string = getday + "\u958B\u734E\u7D50\u679C";
+
+            for (var index = 0; index < getDate.drawCode.length; index++) {
+              if (index == 6) return;
+
+              var _node = instantiate(this.ballItem);
+
+              var _class = _node.getComponent(_crd && BallData === void 0 ? (_reportPossibleCrUseOfBallData({
+                error: Error()
+              }), BallData) : BallData);
+
+              this.lastDrawCodeLayout.addChild(_node);
+
+              _class.init(Number(getDate.drawCode[index])).cancel();
+
+              this.labelContent.addChild(_class.label.node);
+            }
+          }
+        } //#endregion
+        //#region  DrawUpcoming
+
 
         requestDrawUpcoming() {
           var _this3 = this;
@@ -244,9 +292,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                   error: Error()
                 }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
                   error: Error()
-                }), Player) : Player).getInstance.gpgToken).fetchData("" + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                }), Player) : Player).getInstance.gpgToken).fetchData("" + (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
                   error: Error()
-                }), RequestGPG) : RequestGPG).APIUrl.playAPI + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                }), PublicData) : PublicData).getInstance.gpgUrlPlayApi + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
                   error: Error()
                 }), RequestGPG) : RequestGPG).API.DrawUpcoming + "?" + convert, _this3.responseDrawUpcoming.bind(_this3));
                 resolve();
@@ -259,20 +307,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           })();
         }
 
-        request我的積分() {
-          var _this4 = this;
+        responseDrawUpcoming(response) {
+          var getDate = response.data[0];
+          this.labelCurrentDrawIssueID.string = "\u7B2C" + getDate.issueID.toString() + "\u671F";
+          this.timer.setTimeNoTimer((_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.convertDateTime(getDate.openDate));
+          (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.today = getDate.openDate;
+        } //#endregion
 
+
+        request我的積分() {
           return _asyncToGenerator(function* () {
             return new Promise( /*#__PURE__*/function () {
               var _ref3 = _asyncToGenerator(function* (resolve, reject) {
-                var getDate = new Date((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-                  error: Error()
-                }), PublicData) : PublicData).getInstance.today);
-                _this4.labelMonth.string = "(" + (getDate.getMonth() + 1) + "/1~" + (getDate.getMonth() + 1) + "/" + (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-                  error: Error()
-                }), PublicModel) : PublicModel).getInstance.getMonthAllDay((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-                  error: Error()
-                }), PublicData) : PublicData).getInstance.today) + ")";
                 resolve();
               });
 
@@ -283,40 +333,72 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           })();
         }
 
-        responseDrawHistory(response) {
-          if (response.data) {
-            var getDate = response.data[0];
-            this.currentIssueID = getDate.issueID;
-            this.labelLastDrawIssueID.string = "\u7B2C" + getDate.issueID.toString() + "\u671F";
-            /**不需要week日 */
-            // console.log(PublicModel.getInstance.convertDate(getDate.openDate).split("(")[0]);
-
-            var getday = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-              error: Error()
-            }), PublicModel) : PublicModel).getInstance.convertDateDay(getDate.openDate).split("(")[0];
-            this.labelLastDrawDay.string = getday + "\u958B\u734E\u7D50\u679C";
-
-            for (var index = 0; index < getDate.drawCode.length; index++) {
-              if (index == 6) return;
-              this.labelLastDrawCode[index].string = getDate.drawCode[index];
-            }
-          }
-        }
-
-        responseDrawUpcoming(response) {
-          var getDate = response.data[0];
-          this.labelCurrentDrawIssueID.string = "\u7B2C" + getDate.issueID.toString() + "\u671F";
-          this.timer.setTimeNoTimer((_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-            error: Error()
-          }), PublicModel) : PublicModel).getInstance.convertDateTime(getDate.openDate));
-          (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.today = getDate.openDate;
-        }
-
         responserequest我的積分(response) {
           console.log("我的積分");
+        } //#region Betlog
+
+
+        requesMyScore() {
+          var _this4 = this;
+
+          return _asyncToGenerator(function* () {
+            return new Promise( /*#__PURE__*/function () {
+              var _ref4 = _asyncToGenerator(function* (resolve, reject) {
+                var body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Body.NeedToken.MyScore();
+                var getDate = new Date((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+                  error: Error()
+                }), PublicData) : PublicData).getInstance.today);
+                body.sDate = getDate.getFullYear() + "-" + (getDate.getMonth() + 1) + "-01";
+                body.eDate = getDate.getFullYear() + "-" + (getDate.getMonth() + 1) + "-" + (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+                  error: Error()
+                }), PublicModel) : PublicModel).getInstance.getMonthAllDay((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+                  error: Error()
+                }), PublicData) : PublicData).getInstance.today);
+                body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+                  error: Error()
+                }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Body.NeedToken.MyScore);
+                var convert = new URLSearchParams(body).toString();
+                yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+                  error: Error()
+                }), Player) : Player).getInstance.gpgToken).fetchData("" + (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+                  error: Error()
+                }), PublicData) : PublicData).getInstance.gpgUrlPlayApi + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).API.My_Score + "?" + convert, _this4.responseMyScore.bind(_this4));
+                resolve();
+              });
+
+              return function (_x7, _x8) {
+                return _ref4.apply(this, arguments);
+              };
+            }());
+          })();
         }
+
+        responseMyScore(response) {
+          var getDate = new Date((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.today);
+          this.labelMonth.string = "(" + (getDate.getMonth() + 1) + "/1~" + (getDate.getMonth() + 1) + "/" + (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.getMonthAllDay((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.today) + ")";
+
+          if (response.data) {
+            console.log("玩家紀錄", response);
+            this.labelMyPoint.string = response.data.totalScore.toString();
+          } else {
+            this.labelMyPoint.string = "0";
+          }
+        } //#endregion
+
 
         onGoPage(e, customEventData) {
           var split = customEventData.split('-');
@@ -352,89 +434,104 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           return obj;
         }
 
-      }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "labelTime", [_dec2], {
+      }, _temp), (_descriptor = _applyDecoratedDescriptor(_class3.prototype, "lastDrawCodeLayout", [_dec2], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "labelCurrentTitle", [_dec3], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class3.prototype, "labelContent", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "labelCurrentDrawIssueID", [_dec4], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class3.prototype, "ballItem", [_dec4], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "labelLastDrawCode", [_dec5], {
+      }), _descriptor4 = _applyDecoratedDescriptor(_class3.prototype, "labelTime", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "labelCurrentTitle", [_dec6], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor6 = _applyDecoratedDescriptor(_class3.prototype, "labelCurrentDrawIssueID", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor7 = _applyDecoratedDescriptor(_class3.prototype, "labelLastDrawCode", [_dec8], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function initializer() {
           return [];
         }
-      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "labelLastDrawIssueID", [_dec6], {
+      }), _descriptor8 = _applyDecoratedDescriptor(_class3.prototype, "labelLastDrawIssueID", [_dec9], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "labelLastDrawDay", [_dec7], {
+      }), _descriptor9 = _applyDecoratedDescriptor(_class3.prototype, "labelLastDrawDay", [_dec10], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "labelMarquee", [_dec8], {
+      }), _descriptor10 = _applyDecoratedDescriptor(_class3.prototype, "labelMarquee", [_dec11], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "labelMonth", [_dec9], {
+      }), _descriptor11 = _applyDecoratedDescriptor(_class3.prototype, "labelMonth", [_dec12], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor9 = _applyDecoratedDescriptor(_class2.prototype, "labelPointTitle", [_dec10], {
+      }), _descriptor12 = _applyDecoratedDescriptor(_class3.prototype, "labelPointTitle", [_dec13], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor10 = _applyDecoratedDescriptor(_class2.prototype, "labelMyPoint", [_dec11], {
+      }), _descriptor13 = _applyDecoratedDescriptor(_class3.prototype, "labelMyPoint", [_dec14], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "labelDetail", [_dec12], {
+      }), _descriptor14 = _applyDecoratedDescriptor(_class3.prototype, "labelDetail", [_dec15], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "labelGiftTitle1", [_dec13], {
+      }), _descriptor15 = _applyDecoratedDescriptor(_class3.prototype, "labelGiftTitle1", [_dec16], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor13 = _applyDecoratedDescriptor(_class2.prototype, "labelGiftTitle2", [_dec14], {
+      }), _descriptor16 = _applyDecoratedDescriptor(_class3.prototype, "labelGiftTitle2", [_dec17], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor14 = _applyDecoratedDescriptor(_class2.prototype, 2, [_dec15], {
+      }), _descriptor17 = _applyDecoratedDescriptor(_class3.prototype, "btnMoreDraw", [_dec18], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor15 = _applyDecoratedDescriptor(_class2.prototype, "btnPointDetail", [_dec16], {
+      }), _descriptor18 = _applyDecoratedDescriptor(_class3.prototype, "btnPointDetail", [_dec19], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor16 = _applyDecoratedDescriptor(_class2.prototype, "btnGoChooese", [_dec17], {
+      }), _descriptor19 = _applyDecoratedDescriptor(_class3.prototype, "btnGoChooese", [_dec20], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      })), _class2)) || _class));
+      })), _class3)) || _class2));
 
       Marquee = class Marquee extends Component {
         constructor() {

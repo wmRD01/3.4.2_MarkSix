@@ -25,19 +25,18 @@ export class BackHomeMessage extends State {
 
         if (PanelSystemMessage.instance.node.active) PanelSystemMessage.instance.setCaption(caption)
         else {
-            PanelSystemMessage.instance.messageInit(caption)
             //引用會有循環問題
             let confirmBtn = new ButtonFunctionApi()
             confirmBtn.target = find("GameWebSocekt").getComponent("GameWebSocket")
             confirmBtn.callback = "onCloseWindow"
-            PanelSystemMessage.instance.showSingleConfirm(confirmBtn);
+            PanelSystemMessage.instance.showSingleConfirm(caption,confirmBtn);
         }
     }
 }
 
 export class DefaultlMessage extends State {
     public changeState(caption: string): void {
-        PanelSystemMessage.instance.messageInit(caption)
+        PanelSystemMessage.instance.showSingleConfirm(caption);
     }
 
 }

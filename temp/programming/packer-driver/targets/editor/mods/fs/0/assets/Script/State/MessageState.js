@@ -90,10 +90,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), PanelSystemMessage) : PanelSystemMessage).instance.node.active) (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
             error: Error()
           }), PanelSystemMessage) : PanelSystemMessage).instance.setCaption(caption);else {
-            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
-              error: Error()
-            }), PanelSystemMessage) : PanelSystemMessage).instance.messageInit(caption); //引用會有循環問題
-
+            //引用會有循環問題
             let confirmBtn = new (_crd && ButtonFunctionApi === void 0 ? (_reportPossibleCrUseOfButtonFunctionApi({
               error: Error()
             }), ButtonFunctionApi) : ButtonFunctionApi)();
@@ -101,7 +98,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             confirmBtn.callback = "onCloseWindow";
             (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
               error: Error()
-            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm(confirmBtn);
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm(caption, confirmBtn);
           }
         }
 
@@ -113,7 +110,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         changeState(caption) {
           (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
             error: Error()
-          }), PanelSystemMessage) : PanelSystemMessage).instance.messageInit(caption);
+          }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm(caption);
         }
 
       });

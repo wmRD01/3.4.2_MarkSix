@@ -42,8 +42,14 @@ export namespace RequestGPG {
                     .then(response => data = response)
                     .catch(err => reject)
                     .then(response => console.log(`資料名稱：${_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length - 1]}`))
-                    .then(response => console.log(`資料內容`, data))
-                    .then(response => callback(data))
+                    .then(response => {
+                        try {
+                            console.log(`資料內容`, data)
+                            callback(data)
+                        } catch (error) {
+                            console.log(error);
+                        }
+                    })
                     .then(resolve)
             })
 
@@ -90,6 +96,11 @@ export namespace RequestGPG {
                 "eDate": string;
             }
             export class TopScore extends base {
+                [x: string]: string;
+                "sDate": string;
+                "eDate": string;
+            }
+            export class MyScore extends base {
                 [x: string]: string;
                 "sDate": string;
                 "eDate": string;
@@ -150,6 +161,7 @@ export namespace RequestGPG {
         DrawUpcoming = "/Mark6/Draw_Upcoming",
         TopScore = "/Mark6/Top_Score",
         Betlog = "/Report/Betlog/Get",
+        My_Score = "/Mark6/My_Score",
     }
 }
 

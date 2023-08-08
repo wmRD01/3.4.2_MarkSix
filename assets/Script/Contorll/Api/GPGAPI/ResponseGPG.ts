@@ -120,7 +120,7 @@ export namespace ResponseGPG {
             Code: string
             Message: string
         }
-        export class Betlog {
+         class Betlog {
             // (6) [14, 15, 16, 18, 48, 49]
             betCode: number[];
             // "59982501062528060"
@@ -164,7 +164,7 @@ export namespace ResponseGPG {
             Code: string
             Message: string
         }
-        export class History {
+        class History {
             //  ['9', '18', '39', '4', '33', '11', '45']
             drawCode: string[];
             //  2023204
@@ -173,6 +173,21 @@ export namespace ResponseGPG {
             openDate: string;
             //  "2023-07-23T20:49:45+08:00"
             realOpenDate: string;
+        }
+    }
+    export namespace My_Score {
+        export class DataClass {
+            data: MyScore = new MyScore();
+            Status = new State()
+        }
+        class State {
+            Code: string
+            Message: string
+        }
+        class MyScore {
+            rank: number;
+            totalScore: number;
+            betTimes: number;
         }
     }
 }

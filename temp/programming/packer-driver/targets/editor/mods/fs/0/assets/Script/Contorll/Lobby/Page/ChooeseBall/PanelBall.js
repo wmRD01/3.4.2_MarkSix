@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Label, Layout, Node, Prefab, _decorator, DelayTime, AssetType, CheckLoadingType, CommandType, LobbyStateEvent, WebSocketEvent, AssetMng, ButtonMng, BallData, CheckLoading, BaseComponent, bet, PanelLoading, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, PanelBall;
+  var _reporterNs, _cclegacy, instantiate, Label, Layout, Node, Prefab, _decorator, DelayTime, AssetType, CheckLoadingType, CommandType, LangType, LobbyStateEvent, WebSocketEvent, AssetMng, ButtonMng, BallData, CheckLoading, BaseComponent, SocketSetting, bet, PanelLoading, PanelSystemMessage, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, PanelBall;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -25,6 +25,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfCommandType(extras) {
     _reporterNs.report("CommandType", "../../../../Enum/CommandType", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfLangType(extras) {
+    _reporterNs.report("LangType", "../../../../Enum/LangType", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfLobbyStateEvent(extras) {
@@ -55,12 +59,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("BaseComponent", "../../../../Model/ComponentBase", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfSocketSetting(extras) {
+    _reporterNs.report("SocketSetting", "../../../../Socket/SocketSetting", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfbet(extras) {
     _reporterNs.report("bet", "../../../Api/SendCommand", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfPanelLoading(extras) {
     _reporterNs.report("PanelLoading", "../../../NoClearNode/PanelLoading", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPanelSystemMessage(extras) {
+    _reporterNs.report("PanelSystemMessage", "../../../NoClearNode/PanelSystemMessage", _context.meta, extras);
   }
 
   return {
@@ -83,23 +95,29 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_5) {
       CommandType = _unresolved_5.CommandType;
     }, function (_unresolved_6) {
-      LobbyStateEvent = _unresolved_6.LobbyStateEvent;
+      LangType = _unresolved_6.LangType;
     }, function (_unresolved_7) {
-      WebSocketEvent = _unresolved_7.WebSocketEvent;
+      LobbyStateEvent = _unresolved_7.LobbyStateEvent;
     }, function (_unresolved_8) {
-      AssetMng = _unresolved_8.default;
+      WebSocketEvent = _unresolved_8.WebSocketEvent;
     }, function (_unresolved_9) {
-      ButtonMng = _unresolved_9.default;
+      AssetMng = _unresolved_9.default;
     }, function (_unresolved_10) {
-      BallData = _unresolved_10.default;
+      ButtonMng = _unresolved_10.default;
     }, function (_unresolved_11) {
-      CheckLoading = _unresolved_11.default;
+      BallData = _unresolved_11.default;
     }, function (_unresolved_12) {
-      BaseComponent = _unresolved_12.default;
+      CheckLoading = _unresolved_12.default;
     }, function (_unresolved_13) {
-      bet = _unresolved_13.bet;
+      BaseComponent = _unresolved_13.default;
     }, function (_unresolved_14) {
-      PanelLoading = _unresolved_14.default;
+      SocketSetting = _unresolved_14.default;
+    }, function (_unresolved_15) {
+      bet = _unresolved_15.bet;
+    }, function (_unresolved_16) {
+      PanelLoading = _unresolved_16.default;
+    }, function (_unresolved_17) {
+      PanelSystemMessage = _unresolved_17.default;
     }],
     execute: function () {
       _crd = true;
@@ -296,9 +314,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         async Attack() {
-          if (this.isConfirm) return;
+          if (this.isConfirm) {
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("038", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game));
+            return;
+          }
 
           if (this.tempChoose.length < this.MaxCount) {
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("039", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game));
             return;
           }
 
@@ -338,11 +372,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), CommandType) : CommandType).bet, _bet);
         }
 
-        async onConfirmAttack(e, customEventData) {
-          this.Attack();
+        onConfirmAttack(e, customEventData) {
           this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).ChangeBallButtonState, false);
+          this.Attack();
+          (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+            error: Error()
+          }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+            error: Error()
+          }), SocketSetting) : SocketSetting).t("037", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+            error: Error()
+          }), LangType) : LangType).Game));
         }
 
         fullResetBallColor(bool) {
@@ -381,12 +422,26 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.onResetChooese(null);
 
           if (data.betCode != null) {
+            if (this.isFullBall) {
+              (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+                error: Error()
+              }), PanelLoading) : PanelLoading).instance.closeLoading();
+              return;
+            }
+
             for (let index = 0; index < data.betCode.length; index++) {
               this.onChooeseBall(null, data.betCode[index].toString());
             }
 
             this.Attack();
             this.isFullBall = true;
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              error: Error()
+            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("038", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game));
             this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
               error: Error()
             }), LobbyStateEvent) : LobbyStateEvent).ChangeBallButtonState, false);

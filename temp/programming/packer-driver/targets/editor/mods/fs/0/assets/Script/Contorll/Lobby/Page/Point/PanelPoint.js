@@ -156,9 +156,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
               error: Error()
-            }), Player) : Player).getInstance.gpgToken).fetchData(`${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+            }), Player) : Player).getInstance.gpgToken).fetchData(`${(_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
               error: Error()
-            }), RequestGPG) : RequestGPG).APIUrl.playAPI}${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+            }), PublicData) : PublicData).getInstance.gpgUrlPlayApi}${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
             }), RequestGPG) : RequestGPG).API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this));
             resolve();
@@ -223,9 +223,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
               error: Error()
-            }), Player) : Player).getInstance.gpgToken).fetchData(`${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+            }), Player) : Player).getInstance.gpgToken).fetchData(`${(_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
               error: Error()
-            }), RequestGPG) : RequestGPG).APIUrl.playAPI}${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+            }), PublicData) : PublicData).getInstance.gpgUrlPlayApi}${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
             }), RequestGPG) : RequestGPG).API.Betlog}?${convert}`, this.responseBetlog.bind(this));
             resolve();

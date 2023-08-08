@@ -9,7 +9,7 @@
         "id": "1654667623042",
         "progress": 1,
         "state": "success",
-        "message": "2023-8-4 15:01 Build success in 16282 ms!",
+        "message": "2023-8-8 11:08 Build success in 19242 ms!",
         "options": {
           "name": "Baccarat",
           "platform": "web-mobile",
@@ -33,7 +33,8 @@
             },
             {
               "url": "db://assets/Scene/Loading.scene",
-              "uuid": "602c3d25-484a-4071-ae9b-2b9ed340bc8b"
+              "uuid": "602c3d25-484a-4071-ae9b-2b9ed340bc8b",
+              "inBundle": false
             }
           ],
           "outputName": "web-mobile",
@@ -51,7 +52,7 @@
             }
           }
         },
-        "time": "2023-8-4 15:01",
+        "time": "2023-8-8 11:08",
         "dirty": false
       },
       "1659321737563": {

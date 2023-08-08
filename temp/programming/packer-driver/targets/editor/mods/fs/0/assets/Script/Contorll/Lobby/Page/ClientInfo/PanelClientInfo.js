@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, assetManager, Button, Label, Sprite, SpriteFrame, _decorator, BaseComponent, Player, RequestGPG, EventMng, NotificationType, LobbyStateEvent, PublicData, PanelLoading, PublicModel, CreateFileSprite, EditMenu, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PanelClientInfo;
+  var _reporterNs, _cclegacy, Button, Label, Sprite, _decorator, BaseComponent, Player, RequestGPG, EventMng, NotificationType, LobbyStateEvent, PublicData, PanelLoading, PublicModel, CreateFileSprite, EditMenu, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _temp, _crd, ccclass, property, PanelClientInfo;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -64,11 +64,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       _reporterNs = _unresolved_;
     }, function (_cc) {
       _cclegacy = _cc.cclegacy;
-      assetManager = _cc.assetManager;
       Button = _cc.Button;
       Label = _cc.Label;
       Sprite = _cc.Sprite;
-      SpriteFrame = _cc.SpriteFrame;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
       BaseComponent = _unresolved_2.default;
@@ -103,7 +101,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", PanelClientInfo = (_dec = ccclass('PanelClientInfo'), _dec2 = property(Sprite), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Button), _dec7 = property(Button), _dec8 = property(Button), _dec9 = property(Button), _dec(_class = (_class2 = (_temp = class PanelClientInfo extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelClientInfo = (_dec = ccclass('PanelClientInfo'), _dec2 = property(Sprite), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Label), _dec9 = property(Button), _dec10 = property(Button), _dec11 = property(Button), _dec12 = property(Button), _dec(_class = (_class2 = (_temp = class PanelClientInfo extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {
@@ -121,19 +119,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "labelEmail", _descriptor4, this);
 
-          _initializerDefineProperty(this, "buttonEditNickname", _descriptor5, this);
+          _initializerDefineProperty(this, "labelBetCount", _descriptor5, this);
 
-          _initializerDefineProperty(this, "buttonEditPhone", _descriptor6, this);
+          _initializerDefineProperty(this, "labelPointCount", _descriptor6, this);
 
-          _initializerDefineProperty(this, "buttonEditEmail", _descriptor7, this);
+          _initializerDefineProperty(this, "labelRank", _descriptor7, this);
 
-          _initializerDefineProperty(this, "buttonEditPicture", _descriptor8, this);
+          _initializerDefineProperty(this, "buttonEditNickname", _descriptor8, this);
 
-          _defineProperty(this, "labelBetCount", void 0);
+          _initializerDefineProperty(this, "buttonEditPhone", _descriptor9, this);
 
-          _defineProperty(this, "labelPointCount", void 0);
+          _initializerDefineProperty(this, "buttonEditEmail", _descriptor10, this);
 
-          _defineProperty(this, "labelRank", void 0);
+          _initializerDefineProperty(this, "buttonEditPicture", _descriptor11, this);
 
           _defineProperty(this, "getplatform", void 0);
         }
@@ -156,24 +154,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         async onEnable() {
           this.startDelay();
-          const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+          await this.requestMyInfo();
+          await this.requesMyScore();
+          if (this.stopDelay() < 1) setTimeout((_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
             error: Error()
-          }), RequestGPG) : RequestGPG).Body.NeedToken.MyInfo();
-          body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+          }), PanelLoading) : PanelLoading).instance.closeLoading.bind((_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
             error: Error()
-          }), PublicModel) : PublicModel).getInstance.convertMD5((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+          }), PanelLoading) : PanelLoading).instance), 1000);else (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
             error: Error()
-          }), PublicData) : PublicData).getInstance.gpgApi);
-          let convert = new URLSearchParams(body).toString();
-          await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-            error: Error()
-          }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
-            error: Error()
-          }), Player) : Player).getInstance.gpgToken).fetchData(`${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-            error: Error()
-          }), RequestGPG) : RequestGPG).APIUrl.playAPI}${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
-            error: Error()
-          }), RequestGPG) : RequestGPG).API.MyInfo}?${convert}`, this.responseMyInfo.bind(this));
+          }), PanelLoading) : PanelLoading).instance.closeLoading();
         }
 
         onDisable() {
@@ -251,7 +240,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
             error: Error()
           }), PanelLoading) : PanelLoading).instance.closeLoading();
-        }
+        } //#region UploadAvatar
+
 
         onSelectPhoto() {
           new (_crd && CreateFileSprite === void 0 ? (_reportPossibleCrUseOfCreateFileSprite({
@@ -269,9 +259,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), RequestGPG) : RequestGPG).Method.POST).deletContentType().setBody(fileData).setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
             error: Error()
-          }), Player) : Player).getInstance.gpgToken).fetchData(`${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+          }), Player) : Player).getInstance.gpgToken).fetchData(`${(_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
             error: Error()
-          }), RequestGPG) : RequestGPG).APIUrl.playAPI}${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+          }), PublicData) : PublicData).getInstance.gpgUrlPlayApi}${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
           }), RequestGPG) : RequestGPG).API.UploadAvatar}`, response => {
             this.responseUploadAvatar(response, _spriteFrame);
@@ -280,7 +270,33 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         responseUploadAvatar(response, _spriteFrame) {
           console.log("圖片上傳成功?", response);
-          if (response.Status.Code == "0") this.spritePlayer.spriteFrame = _spriteFrame;
+          if (response.Status.Code == "0") this.spritePlayer.spriteFrame = _spriteFrame;else {}
+        } //#endregion
+        //#region  MyInfo
+
+
+        async requestMyInfo() {
+          return new Promise(async (resolve, reject) => {
+            const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Body.NeedToken.MyInfo();
+            body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.convertMD5((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.gpgApi);
+            let convert = new URLSearchParams(body).toString();
+            await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+              error: Error()
+            }), Player) : Player).getInstance.gpgToken).fetchData(`${(_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.gpgUrlPlayApi}${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).API.MyInfo}?${convert}`, this.responseMyInfo.bind(this));
+            resolve();
+          });
         }
 
         async responseMyInfo(response) {
@@ -290,16 +306,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), Player) : Player).getInstance.gpgInfo = response; // response.data.photo
           // console.log(Player.getInstance.gpgInfo);
 
-          if (!(_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-            error: Error()
-          }), PublicModel) : PublicModel).getInstance.checkStringNull(response.data.photo.headPhoto)) assetManager.loadRemote(response.data.photo.headPhoto, (err, image) => {
-            if (err) {
-              console.error(err.message);
-              return;
-            }
-
-            this.spritePlayer.spriteFrame = SpriteFrame.createWithImage(image);
-          });
+          /*上傳圖片功能暫時隱藏 */
+          // if (!PublicModel.getInstance.checkStringNull(response.data.photo.headPhoto))
+          //     assetManager.loadRemote(response.data.photo.headPhoto, (err, image: ImageAsset) => {
+          //         if (err) {
+          //             console.error(err.message);
+          //             return
+          //         }
+          //         this.spritePlayer.spriteFrame = SpriteFrame.createWithImage(image)
+          //     })
 
           if (!(_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
@@ -324,14 +339,57 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.labelEmail.string = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
           }), PublicModel) : PublicModel).getInstance.checkStringNull(response.data.email) ? "" : response.data.email;
-          if (this.stopDelay() < 1) setTimeout((_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
-            error: Error()
-          }), PanelLoading) : PanelLoading).instance.closeLoading.bind((_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
-            error: Error()
-          }), PanelLoading) : PanelLoading).instance), 1000);else (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
-            error: Error()
-          }), PanelLoading) : PanelLoading).instance.closeLoading();
+        } //#region Betlog
+
+
+        async requesMyScore() {
+          return new Promise(async (resolve, reject) => {
+            const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Body.NeedToken.MyScore();
+            const getDate = new Date((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.today);
+            body.sDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-01`;
+            body.eDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-${(_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.getMonthAllDay((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.today)}`;
+            body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Body.NeedToken.MyScore);
+            console.log(body);
+            let convert = new URLSearchParams(body).toString();
+            await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+              error: Error()
+            }), Player) : Player).getInstance.gpgToken).fetchData(`${(_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.gpgUrlPlayApi}${(_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).API.My_Score}?${convert}`, this.responseMyScore.bind(this));
+            resolve();
+          });
         }
+
+        responseMyScore(response) {
+          console.log("玩家紀錄", response);
+
+          if (response.data) {
+            this.labelRank.string = response.data.rank.toString();
+            this.labelBetCount.string = response.data.betTimes.toString();
+            this.labelPointCount.string = response.data.totalScore.toString(); // this.labelMyPoint.string = response.data.totalScore.toString();
+          } else {
+            this.labelRank.string = "0";
+            this.labelBetCount.string = "0";
+            this.labelPointCount.string = "0";
+          }
+        } //#endregion
+
 
         resetButton() {
           this.buttonEditNickname.node.active = true; // this.buttonEditPicture.node.active = true
@@ -371,22 +429,37 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditNickname", [_dec6], {
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "labelBetCount", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditPhone", [_dec7], {
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "labelPointCount", [_dec7], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditEmail", [_dec8], {
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "labelRank", [_dec8], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditPicture", [_dec9], {
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditNickname", [_dec9], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor9 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditPhone", [_dec10], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor10 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditEmail", [_dec11], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditPicture", [_dec12], {
         configurable: true,
         enumerable: true,
         writable: true,

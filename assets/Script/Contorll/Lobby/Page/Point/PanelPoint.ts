@@ -52,7 +52,7 @@ export default class PanelPoint extends BaseComponent {
             let convert = new URLSearchParams(body).toString()
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
+                .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
             resolve()
         })
     }
@@ -96,7 +96,7 @@ export default class PanelPoint extends BaseComponent {
             let convert = new URLSearchParams(body).toString()
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .fetchData(`${RequestGPG.APIUrl.playAPI}${RequestGPG.API.Betlog}?${convert}`, this.responseBetlog.bind(this))
+                .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.Betlog}?${convert}`, this.responseBetlog.bind(this))
             resolve()
         })
     }

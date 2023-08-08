@@ -171,8 +171,8 @@ export default class PanelClientEdit extends BaseComponent {
     }
     /**送出前須確認驗證碼的正確性，但前題是他必須得先需要註冊信箱時才會接這個function */
     async certifiedEmall() {
-        if (!this.checkVerification(this.editVerificationCode.string)) return;
         if (!this.checkEmail(this.editEmail.string)) return;
+        if (!this.checkVerification(this.editVerificationCode.string)) return;
         /**確認信箱格式 */
         const body = new RequestGPG.Body.NeedToken.CertifiedEmail()
         body.email = this.editEmail.string
@@ -270,7 +270,7 @@ export default class PanelClientEdit extends BaseComponent {
     checkEmail(str: string) {
         if (str.length == 0) {
             PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("028", LangType.Game))
-            // console.error("請輸入文字");
+            // console.error("請輸入信箱");
             return false;
         }
         if (/\s/.test(str)) {
@@ -279,8 +279,8 @@ export default class PanelClientEdit extends BaseComponent {
             return false;
         }
         if (!this.checkEmailRegular(str)) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("030", LangType.Game))
-            // console.error("出現非法文字");
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("028", LangType.Game))
+            // console.error("請輸入信箱");
             return false;
         }
         return true

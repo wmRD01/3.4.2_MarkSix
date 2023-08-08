@@ -84,8 +84,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "cr
           let orgPos = this.to2DConvertOtherNodeSpaceAR(targetNode, moveToNode);
           parent.addChild(moveToNode);
           moveToNode.position = orgPos;
-        }
-        /**秒數時間轉換 */
+        } // /**秒數時間轉換 */
 
 
         formatSecond(secs, isHR) {
@@ -95,12 +94,28 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "cr
           // while (min.length < 2) min = "0" + min
           // while (sec.length < 2) sec = "0" + sec
           // return min + ":" + sec
+          // const hours = isHR ? Math.floor(secs / 3600000) : 0;
+          // const minutes = Math.floor((secs - hours * 3600000) / 60000);
+          // const seconds = Math.floor(secs - hours * 3600000 - minutes * 60000);
+          console.log(secs);
+          secs = Math.floor(secs / 1000);
           const hours = isHR ? Math.floor(secs / 3600) : 0;
           const minutes = Math.floor((secs - hours * 3600) / 60);
           const seconds = Math.floor(secs - hours * 3600 - minutes * 60);
           const hrStr = isHR ? hours.toString().padStart(2, '0') + ':' : '';
           const minStr = minutes.toString().padStart(2, '0');
           const secStr = seconds.toString().padStart(2, '0');
+          return hrStr + minStr + ':' + secStr;
+        }
+
+        formatMillisecond(millisecs, isHR) {
+          const seconds = Math.floor(millisecs / 1000);
+          const hours = isHR ? Math.floor(seconds / 3600) : 0;
+          const minutes = Math.floor((seconds - hours * 3600) / 60);
+          const remainingSeconds = seconds - hours * 3600 - minutes * 60;
+          const hrStr = isHR ? hours.toString().padStart(2, '0') + ':' : '';
+          const minStr = minutes.toString().padStart(2, '0');
+          const secStr = remainingSeconds.toString().padStart(2, '0');
           return hrStr + minStr + ':' + secStr;
         }
 
@@ -115,8 +130,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "cr
 
 
         checkNicknameCondition(str) {
-          let rex = /[\p{P}+\u2100-\u214F]/u;
-          return rex.test(str);
+          // let rex = /[\p{P}+\u2100-\u214F]/u
+          const rules = /([\s]|[\u3000]|[\u260E-\u26FF]|[\u270A-\u270D]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/;
+          return rules.test(str);
         }
 
         checkNameLen(name, len) {

@@ -38,7 +38,7 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         parent.addChild(moveToNode)
         moveToNode.position = orgPos
     }
-    /**秒數時間轉換 */
+    // /**秒數時間轉換 */
     formatSecond(secs: number, isHR?: boolean) {
         // if (isMilli) secs = this.convertMilliToSecond(secs);
         // let min = Math.floor(secs / 60).toString()
@@ -46,6 +46,13 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         // while (min.length < 2) min = "0" + min
         // while (sec.length < 2) sec = "0" + sec
         // return min + ":" + sec
+
+        // const hours = isHR ? Math.floor(secs / 3600000) : 0;
+        // const minutes = Math.floor((secs - hours * 3600000) / 60000);
+        // const seconds = Math.floor(secs - hours * 3600000 - minutes * 60000);
+        console.log(secs);
+        secs = Math.floor(secs / 1000);
+
         const hours = isHR ? Math.floor(secs / 3600) : 0;
         const minutes = Math.floor((secs - hours * 3600) / 60);
         const seconds = Math.floor(secs - hours * 3600 - minutes * 60);
@@ -56,6 +63,19 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
 
         return hrStr + minStr + ':' + secStr;
     }
+    formatMillisecond(millisecs: number, isHR?: boolean) {
+        const seconds = Math.floor(millisecs / 1000);
+        const hours = isHR ? Math.floor(seconds / 3600) : 0;
+        const minutes = Math.floor((seconds - hours * 3600) / 60);
+        const remainingSeconds = seconds - hours * 3600 - minutes * 60;
+
+        const hrStr = isHR ? hours.toString().padStart(2, '0') + ':' : '';
+        const minStr = minutes.toString().padStart(2, '0');
+        const secStr = remainingSeconds.toString().padStart(2, '0');
+
+        return hrStr + minStr + ':' + secStr;
+    }
+
     convertMilliToSecond(num: number) {
         return MyMath.divide(num, 1000)
     }
@@ -63,8 +83,9 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
     *確認匿名條件式是否在數字、分數、箭頭、數學運算符號、技術符號以及字母符號的 Unicode 字元
     */
     checkNicknameCondition(str: string) {
-        let rex = /[\p{P}+\u2100-\u214F]/u
-        return rex.test(str)
+        // let rex = /[\p{P}+\u2100-\u214F]/u
+        const rules = /([\s]|[\u3000]|[\u260E-\u26FF]|[\u270A-\u270D]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/
+        return rules.test(str)
     }
     checkNameLen(name: string, len: number) {
         let word = name.split(/\w*/).filter(x => x != "")
@@ -270,9 +291,9 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         var oDate1 = new Date(_date)
         return new Date(oDate1.setDate(oDate1.getDate() + offsetDay));
     };
-    getMonthAllDay(day:string){
+    getMonthAllDay(day: string) {
         const getDay = new Date(day)
-        return new Date(getDay.getFullYear(),getDay.getMonth()+1,0).getDate()
+        return new Date(getDay.getFullYear(), getDay.getMonth() + 1, 0).getDate()
     }
 }
 

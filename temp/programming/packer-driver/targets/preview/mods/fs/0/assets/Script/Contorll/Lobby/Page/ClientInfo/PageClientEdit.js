@@ -425,8 +425,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           var _this5 = this;
 
           return _asyncToGenerator(function* () {
-            if (!_this5.checkVerification(_this5.editVerificationCode.string)) return;
             if (!_this5.checkEmail(_this5.editEmail.string)) return;
+            if (!_this5.checkVerification(_this5.editVerificationCode.string)) return;
             /**確認信箱格式 */
 
             var body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
@@ -602,7 +602,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), SocketSetting) : SocketSetting).t("028", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
               error: Error()
-            }), LangType) : LangType).Game)); // console.error("請輸入文字");
+            }), LangType) : LangType).Game)); // console.error("請輸入信箱");
 
             return false;
           }
@@ -624,9 +624,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
               error: Error()
-            }), SocketSetting) : SocketSetting).t("030", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+            }), SocketSetting) : SocketSetting).t("028", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
               error: Error()
-            }), LangType) : LangType).Game)); // console.error("出現非法文字");
+            }), LangType) : LangType).Game)); // console.error("請輸入信箱");
 
             return false;
           }

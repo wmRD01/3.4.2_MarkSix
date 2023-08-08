@@ -174,10 +174,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         async onEnable() {
           await this.requestDrawHistory();
+          await this.requestDrawUpcoming();
 
           if (this.lastIssueID != this.currentIssueID) {
-            await this.requestDrawUpcoming(); //TODO 製做我的積分
-
+            //TODO 製做我的積分
             await this.requesMyScore();
             /**代表更新最新一期 */
 
@@ -281,25 +281,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         responseDrawUpcoming(response) {
           let getDate = response.data[0];
-          this.labelCurrentDrawIssueID.string = `第${getDate.issueID.toString()}期`;
-          this.timer.setTimeNoTimer((_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-            error: Error()
-          }), PublicModel) : PublicModel).getInstance.convertDateTime(getDate.openDate));
+          this.labelCurrentDrawIssueID.string = `第${getDate.issueID.toString()}期`; // this.timer.setTimeNoTimer(PublicModel.getInstance.convertDateTime(getDate.openDate))
+
+          var Date_A = new Date(getDate.openDate);
+          var Date_B = new Date(getDate.serverNowTime); //@ts-ignore
+
+          var Date_C = new Date(Date_B - Date_A);
+          this.timer.setTimer(Math.abs(Date_C.getTime()));
           (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
             error: Error()
           }), PublicData) : PublicData).getInstance.today = getDate.openDate;
         } //#endregion
-
-
-        async request我的積分() {
-          return new Promise(async (resolve, reject) => {
-            resolve();
-          });
-        }
-
-        responserequest我的積分(response) {
-          console.log("我的積分");
-        } //#region Betlog
+        //#region MyScore
 
 
         async requesMyScore() {
@@ -562,18 +555,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.bindLabel.string = str;
         }
 
-        setTime(num) {
+        setTimer(num) {
+          this.reset();
           this.countTime = num;
           this.isAction = true;
         }
 
         update(dt) {
           if (this.isAction) {
-            this.countTime -= dt;
+            this.countTime -= dt * 1000;
             if (this.countTime < 0) this.reset();
             this.bindLabel.string = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
               error: Error()
-            }), PublicModel) : PublicModel).getInstance.formatSecond(this.countTime, true);
+            }), PublicModel) : PublicModel).getInstance.formatMillisecond(this.countTime, true);
           }
         }
 

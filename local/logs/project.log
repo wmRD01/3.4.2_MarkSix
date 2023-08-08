@@ -1,91 +1,107 @@
-2023-08-08 10:31:04-log: [Package] menu@1.0.0 enable
-2023-08-08 10:31:04-log: [Package] profile@1.0.0 enable
-2023-08-08 10:31:04-log: [Package] project@1.0.1 enable
-2023-08-08 10:31:04-log: [Package] messages@1.0.0 enable
-2023-08-08 10:31:04-log: [Package] program@1.0.0 enable
-2023-08-08 10:31:04-log: [Package] device@1.0.1 enable
-2023-08-08 10:31:04-log: [Package] ui-kit@1.0.1 enable
-2023-08-08 10:31:04-log: [Package] tester@1.0.0 enable
-2023-08-08 10:31:04-log: [Package] preferences@1.0.0 enable
-2023-08-08 10:31:05-log: Setup mods mgr.: 557.927ms
-2023-08-08 10:31:05-log: Profile changed: engine (modules.includeModules: audio,base,gfx-webgl,intersection-2d,physics-2d-box2d,profiler,tween,ui)
-2023-08-08 10:31:05-log: [Package] engine@1.0.5 enable
-2023-08-08 10:31:07-log: [Package] programming@1.0.0 enable
-2023-08-08 10:31:07-log: [Package] engine-extends@1.0.0 enable
-2023-08-08 10:31:08-log: [Package] asset-db@1.0.0 enable
-2023-08-08 10:31:08-log: [Package] console@1.0.0 enable
-2023-08-08 10:31:08-log: [Package] scene@1.0.0 enable
-2023-08-08 10:31:08-log: [Package] about@1.0.0 enable
-2023-08-08 10:31:08-log: [Package] server@1.0.0 enable
-2023-08-08 10:31:08-log: [Package] utils@1.0.0 enable
-2023-08-08 10:31:08-log: [Package] assets@1.0.0 enable
-2023-08-08 10:31:08-log: [Package] inspector@1.0.0 enable
-2023-08-08 10:31:08-log: [Package] hierarchy@1.0.0 enable
-2023-08-08 10:31:09-log: [Package] preview@1.0.1 enable
-2023-08-08 10:31:09-log: [Package] animator@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] builder@1.3.1 enable
-2023-08-08 10:31:11-log: [Package] node-library@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] shortcuts@1.0.1 enable
-2023-08-08 10:31:11-log: [Package] package-asset@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] reference-image@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] animation-graph@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] channel-upload-tools@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] runtime-dev-tools@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] lightmap@1.0.4 enable
-2023-08-08 10:31:11-log: [Package] alipay-mini-game@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] android@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] baidu-mini-game@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] bytedance-mini-game@1.0.1 enable
-2023-08-08 10:31:11-log: [Package] huawei-agc@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] ios@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] ios-app-clip@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] mac@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] native@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] ohos@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] web-desktop@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] web-mobile@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] wechatgame@1.0.1 enable
-2023-08-08 10:31:11-log: [Package] windows@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] xiaomi-quick-game@1.0.0 enable
-2023-08-08 10:31:11-log: [Package] cocos-play@1.0.0 enable
-2023-08-08 10:31:12-log: [Package] huawei-quick-game@1.0.0 enable
-2023-08-08 10:31:12-log: [Package] link-sure@1.0.0 enable
-2023-08-08 10:31:12-log: [Package] oppo-mini-game@1.0.0 enable
-2023-08-08 10:31:12-log: [Package] qtt@1.0.0 enable
-2023-08-08 10:31:12-log: [Package] vivo-mini-game@1.0.0 enable
-2023-08-08 10:31:12-log: [Package] cocos-service@3.0.2 enable
-2023-08-08 10:31:12-log: [Package] importer@1.0.0 enable
-2023-08-08 10:31:12-log: [Package] extension@3.0.15 enable
-2023-08-08 10:31:17-log: [Im-plugin] Check im-plugin version.
-2023-08-08 10:31:17-log: [Package] im-plugin@3.0.10 enable
-2023-08-08 10:31:17-log: [Im-plugin] Im-plugin online version is 3.0.10.
-2023-08-08 10:31:17-log: [Im-plugin] Im-plugin local version is 3.0.10.
-2023-08-08 10:31:17-log: [Im-plugin] Im-plugin need not update.
-2023-08-08 10:31:21-warn: Browserslist: caniuse-lite is outdated. Please run:
+2023-08-08 11:11:52-log: [Package] menu@1.0.0 enable
+2023-08-08 11:11:52-log: [Package] profile@1.0.0 enable
+2023-08-08 11:11:52-log: [Package] project@1.0.1 enable
+2023-08-08 11:11:52-log: [Package] messages@1.0.0 enable
+2023-08-08 11:11:52-log: [Package] program@1.0.0 enable
+2023-08-08 11:11:52-log: [Package] device@1.0.1 enable
+2023-08-08 11:11:52-log: [Package] ui-kit@1.0.1 enable
+2023-08-08 11:11:52-log: [Package] tester@1.0.0 enable
+2023-08-08 11:11:52-log: [Package] preferences@1.0.0 enable
+2023-08-08 11:11:52-log: Setup mods mgr.: 308.042ms
+2023-08-08 11:11:52-log: Profile changed: engine (modules.includeModules: audio,base,gfx-webgl,intersection-2d,physics-2d-box2d,profiler,tween,ui)
+2023-08-08 11:11:52-log: [Package] engine@1.0.5 enable
+2023-08-08 11:11:55-log: [Package] programming@1.0.0 enable
+2023-08-08 11:11:55-log: [Package] engine-extends@1.0.0 enable
+2023-08-08 11:11:55-log: [Package] asset-db@1.0.0 enable
+2023-08-08 11:11:55-log: [Package] console@1.0.0 enable
+2023-08-08 11:11:55-log: [Package] scene@1.0.0 enable
+2023-08-08 11:11:55-log: [Package] about@1.0.0 enable
+2023-08-08 11:11:56-log: [Package] server@1.0.0 enable
+2023-08-08 11:11:56-log: [Package] assets@1.0.0 enable
+2023-08-08 11:11:56-log: [Package] inspector@1.0.0 enable
+2023-08-08 11:11:56-log: [Package] hierarchy@1.0.0 enable
+2023-08-08 11:11:57-log: [Package] preview@1.0.1 enable
+2023-08-08 11:11:57-log: [Package] animator@1.0.0 enable
+2023-08-08 11:11:59-log: [Package] builder@1.3.1 enable
+2023-08-08 11:11:59-log: [Package] node-library@1.0.0 enable
+2023-08-08 11:11:59-log: [Package] shortcuts@1.0.1 enable
+2023-08-08 11:11:59-log: [Package] package-asset@1.0.0 enable
+2023-08-08 11:11:59-log: [Package] reference-image@1.0.0 enable
+2023-08-08 11:11:59-log: [Package] animation-graph@1.0.0 enable
+2023-08-08 11:11:59-log: [Package] channel-upload-tools@1.0.0 enable
+2023-08-08 11:11:59-log: [Package] runtime-dev-tools@1.0.0 enable
+2023-08-08 11:11:59-log: [Package] lightmap@1.0.4 enable
+2023-08-08 11:11:59-log: [Package] alipay-mini-game@1.0.0 enable
+2023-08-08 11:11:59-log: [Package] android@1.0.0 enable
+2023-08-08 11:11:59-log: [Package] baidu-mini-game@1.0.0 enable
+2023-08-08 11:11:59-log: [Package] bytedance-mini-game@1.0.1 enable
+2023-08-08 11:11:59-log: [Package] huawei-agc@1.0.0 enable
+2023-08-08 11:12:00-log: [Package] ios@1.0.0 enable
+2023-08-08 11:12:00-log: [Package] ios-app-clip@1.0.0 enable
+2023-08-08 11:12:00-log: [Package] mac@1.0.0 enable
+2023-08-08 11:12:00-log: [Package] native@1.0.0 enable
+2023-08-08 11:12:00-log: [Package] ohos@1.0.0 enable
+2023-08-08 11:12:00-log: [Package] web-desktop@1.0.0 enable
+2023-08-08 11:12:00-log: [Package] web-mobile@1.0.0 enable
+2023-08-08 11:12:00-log: [Package] wechatgame@1.0.1 enable
+2023-08-08 11:12:00-log: [Package] windows@1.0.0 enable
+2023-08-08 11:12:00-log: [Package] xiaomi-quick-game@1.0.0 enable
+2023-08-08 11:12:00-log: [Package] cocos-play@1.0.0 enable
+2023-08-08 11:12:00-log: [Package] huawei-quick-game@1.0.0 enable
+2023-08-08 11:12:00-log: [Package] link-sure@1.0.0 enable
+2023-08-08 11:12:00-log: [Package] oppo-mini-game@1.0.0 enable
+2023-08-08 11:12:00-log: [Package] qtt@1.0.0 enable
+2023-08-08 11:12:00-log: [Package] vivo-mini-game@1.0.0 enable
+2023-08-08 11:12:01-log: [Package] cocos-service@3.0.2 enable
+2023-08-08 11:12:01-log: [Package] importer@1.0.0 enable
+2023-08-08 11:12:01-log: [Package] extension@3.0.15 enable
+2023-08-08 11:12:02-log: [Im-plugin] Check im-plugin version.
+2023-08-08 11:12:02-log: [Package] im-plugin@3.0.10 enable
+2023-08-08 11:12:02-warn: Browserslist: caniuse-lite is outdated. Please run:
 npx browserslist@latest --update-db
 
 Why you should do it regularly:
 https://github.com/browserslist/browserslist#browsers-data-updating
-2023-08-08 10:31:21-log: [Scene] Cocos Creator v3.4.2
-2023-08-08 10:31:22-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-08 10:31:25-info: [Scene] Forward render pipeline initialized.
-2023-08-08 10:43:56-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-08 10:56:31-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-08 11:02:48-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-08 11:05:26-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-08 11:05:45-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-08 11:05:47-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-08 11:05:51-warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
+2023-08-08 11:12:02-error: [Preview]Uncaught TypeError: Cannot read properties of undefined (reading 'forEach') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Asset/SpriteAsset.js
+2023-08-08 11:12:03-log: [Scene] Cocos Creator v3.4.2
+2023-08-08 11:12:03-log: [Im-plugin] Im-plugin online version is 3.0.10.
+2023-08-08 11:12:03-log: [Im-plugin] Im-plugin local version is 3.0.10.
+2023-08-08 11:12:03-log: [Im-plugin] Im-plugin need not update.
+2023-08-08 11:12:03-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'vb') in http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js
+2023-08-08 11:12:04-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 11:12:04-info: [Scene] Forward render pipeline initialized.
+2023-08-08 11:17:47-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 11:31:09-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 11:41:43-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 11:41:57-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 11:42:02-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 11:42:10-warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
 npx browserslist@latest --update-db
-2023-08-08 11:05:51-warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
+2023-08-08 11:42:11-warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
 npx browserslist@latest --update-db
 
 Why you should do it regularly:
 https://github.com/browserslist/browserslist#browsers-data-updating
-2023-08-08 11:08:32-warn: [Scene] Node [eff_shadow] is a prefab child of prefabInstance [BallItem-002], it's not allowed to delete in current context, you can delete it in it's prefabAsset or         do it after unlink prefab from root node
-2023-08-08 11:08:32-warn: [Scene] Node [Button] is a prefab child of prefabInstance [BallItem-002], it's not allowed to delete in current context, you can delete it in it's prefabAsset or         do it after unlink prefab from root node
-2023-08-08 11:08:32-warn: [Scene] Node [Effect] is a prefab child of prefabInstance [BallItem-002], it's not allowed to delete in current context, you can delete it in it's prefabAsset or         do it after unlink prefab from root node
-2023-08-08 11:08:32-warn: [Scene] Node [label] is a prefab child of prefabInstance [BallItem-002], it's not allowed to delete in current context, you can delete it in it's prefabAsset or         do it after unlink prefab from root node
-2023-08-08 11:08:34-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-08 11:08:37-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-08 11:11:32-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 13:30:54-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 13:35:19-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 14:43:00-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 14:45:37-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 14:48:50-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 14:51:07-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 14:51:46-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 14:52:05-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 14:54:38-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 14:54:51-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 14:55:08-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 15:00:13-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 15:01:14-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 15:14:39-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 15:20:40-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 15:20:46-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 15:22:51-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 15:23:33-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 15:28:38-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 15:30:18-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 16:14:15-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 16:14:59-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-08 16:17:06-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}

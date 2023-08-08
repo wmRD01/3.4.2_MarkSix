@@ -173,6 +173,8 @@ export namespace ResponseGPG {
             openDate: string;
             //  "2023-07-23T20:49:45+08:00"
             realOpenDate: string;
+            //  "2023-07-23T20:49:45+08:00"
+            serverNowTime:string;
         }
     }
     export namespace My_Score {

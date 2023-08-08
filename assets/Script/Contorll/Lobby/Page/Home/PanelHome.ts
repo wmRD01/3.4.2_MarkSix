@@ -73,8 +73,8 @@ export default class PanelHome extends BaseComponent {
     }
     async onEnable() {
         await this.requestDrawHistory()
+        await this.requestDrawUpcoming()
         if (this.lastIssueID != this.currentIssueID) {
-            await this.requestDrawUpcoming()
             //TODO 製做我的積分
             await this.requesMyScore()
             /**代表更新最新一期 */
@@ -141,24 +141,20 @@ export default class PanelHome extends BaseComponent {
     responseDrawUpcoming(response?: ResponseGPG.DrawUpcoming.DataClass) {
         let getDate = response.data[0]
         this.labelCurrentDrawIssueID.string = `第${(getDate.issueID).toString()}期`
-        this.timer.setTimeNoTimer(PublicModel.getInstance.convertDateTime(getDate.openDate))
+        // this.timer.setTimeNoTimer(PublicModel.getInstance.convertDateTime(getDate.openDate))
+        var Date_A = new Date(getDate.openDate);
+        var Date_B = new Date(getDate.serverNowTime);
+        //@ts-ignore
+        var Date_C = new Date(Date_B - Date_A);
+
+        this.timer.setTimer(Math.abs(Date_C.getTime()))
+
+
         PublicData.getInstance.today = getDate.openDate
     }
     //#endregion
-    async request我的積分() {
-        return new Promise<void>(async (resolve, reject) => {
 
-            resolve()
-        })
-    }
-
-
-    responserequest我的積分(response?: ResponseGPG.DrawUpcoming.DataClass) {
-        console.log("我的積分");
-
-    }
-
-    //#region Betlog
+    //#region MyScore
     async requesMyScore() {
         return new Promise<void>(async (resolve, reject) => {
             const body = new RequestGPG.Body.NeedToken.MyScore()
@@ -265,16 +261,17 @@ class Timer extends Component {
     setTimeNoTimer(str: string) {
         this.bindLabel.string = str
     }
-    setTime(num: number) {
+    setTimer(num: number) {
+        this.reset()
         this.countTime = num
         this.isAction = true
     }
 
     update(dt: number) {
         if (this.isAction) {
-            this.countTime -= dt
+            this.countTime -= (dt * 1000)
             if (this.countTime < 0) this.reset()
-            this.bindLabel.string = PublicModel.getInstance.formatSecond(this.countTime, true)
+            this.bindLabel.string = PublicModel.getInstance.formatMillisecond(this.countTime, true)
         }
     }
 

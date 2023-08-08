@@ -361,6 +361,8 @@ System.register(["cc"], function (_export, _context) {
               _defineProperty(this, "openDate", void 0);
 
               _defineProperty(this, "realOpenDate", void 0);
+
+              _defineProperty(this, "serverNowTime", void 0);
             }
 
           }

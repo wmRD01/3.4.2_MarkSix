@@ -71,6 +71,8 @@ export default class PanelHome extends BaseComponent {
     currentIssueID: number;
     loopTimer: number;
     testtotoel: number = 0;
+    loopTime: number = 60
+
     onLoad() {
         this.marquee = this.labelMarquee.addComponent(Marquee)
         this.timer = this.labelTime.addComponent(Timer);
@@ -102,7 +104,7 @@ export default class PanelHome extends BaseComponent {
         PanelLoading.instance.closeLoading()
         if (this.isChangeIssueID) {
             this.testtotoel = 0
-            this.loopTimer = setInterval(this.requestDrawUpcomingLoop.bind(this), 2000)
+            this.loopTimer = setInterval(this.requestDrawUpcomingLoop.bind(this), this.loopTime * 1000)
         }
     }
     //#region  DrawHistory
@@ -169,10 +171,15 @@ export default class PanelHome extends BaseComponent {
         // console.log(getDate.serverNowTime);
 
         var Date_A = new Date(getDate.openDate);
-        var Date_B = new Date("2023-08-11T21:41:20.1951921+08:00");
+        var Date_B = 0;
+        if (DEV)
+            //@ts-ignore
+            Date_B = new Date(getDate.serverNowTime);
+        else
+            //@ts-ignore
+            Date_B = new Date(getDate.serverNowTime);
         //@ts-ignore
         var countTime = Date_A - Date_B
-        // var Date_B = new Date(getDate.serverNowTime);
         var Date_C = new Date(countTime);
         console.log(countTime);
         console.log(Date_C);

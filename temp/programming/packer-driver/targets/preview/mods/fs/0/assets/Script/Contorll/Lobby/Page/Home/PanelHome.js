@@ -190,6 +190,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "loopTimer", void 0);
 
           _defineProperty(this, "testtotoel", 0);
+
+          _defineProperty(this, "loopTime", 60);
         }
 
         onLoad() {
@@ -241,7 +243,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             if (_this2.isChangeIssueID) {
               _this2.testtotoel = 0;
-              _this2.loopTimer = setInterval(_this2.requestDrawUpcomingLoop.bind(_this2), 2000);
+              _this2.loopTimer = setInterval(_this2.requestDrawUpcomingLoop.bind(_this2), _this2.loopTime * 1000);
             }
           })();
         } //#region  DrawHistory
@@ -365,10 +367,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // console.log(getDate.serverNowTime);
 
           var Date_A = new Date(getDate.openDate);
-          var Date_B = new Date("2023-08-11T21:41:20.1951921+08:00"); //@ts-ignore
+          var Date_B = 0;
+          if (DEV) //@ts-ignore
+            Date_B = new Date(getDate.serverNowTime);else //@ts-ignore
+            Date_B = new Date(getDate.serverNowTime); //@ts-ignore
 
-          var countTime = Date_A - Date_B; // var Date_B = new Date(getDate.serverNowTime);
-
+          var countTime = Date_A - Date_B;
           var Date_C = new Date(countTime);
           console.log(countTime);
           console.log(Date_C); //TODO 如果時間到了該怎處理?

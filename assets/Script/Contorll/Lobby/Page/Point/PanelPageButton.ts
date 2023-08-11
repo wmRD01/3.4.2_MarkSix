@@ -1,4 +1,4 @@
-import { Button, EventTouch, Node, Sprite, _decorator } from 'cc';
+import { Button, EventTouch, Node, Sprite, UITransform, _decorator } from 'cc';
 import { AssetType } from '../../../../Enum/AssetType';
 import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import AssetMng from '../../../../Manager/AssetMng';
@@ -15,7 +15,10 @@ export default class PanelPageButton extends BaseComponent {
     btnRank: Button;
     @property(Button)
     btnPoint: Button;
-
+    @property(UITransform)
+    uiRank: UITransform;
+    @property(UITransform)
+    uiPoint: UITransform;
 
     @property(Sprite)
     spriteRank: Sprite;
@@ -49,22 +52,24 @@ export default class PanelPageButton extends BaseComponent {
         switch (convert) {
             case PageType.Rank:
                 if (this.panelRank.active) return
-                this.changeState(this.panelRank, this.spriteRank, true)
-                this.changeState(this.panelPoint, this.spritePoint, false)
+                this.changeState(this.panelRank, this.spriteRank, this.uiRank, true)
+                this.changeState(this.panelPoint, this.spritePoint, this.uiPoint, false)
                 break;
             case PageType.Point:
                 if (this.panelPoint.active) return
-                this.changeState(this.panelRank, this.spriteRank, false)
-                this.changeState(this.panelPoint, this.spritePoint, true)
+                this.changeState(this.panelRank, this.spriteRank, this.uiRank, false)
+                this.changeState(this.panelPoint, this.spritePoint, this.uiPoint, true)
                 break;
 
         }
 
     }
-    changeState(_node: Node, _sprite: Sprite, state: boolean) {
+    changeState(_node: Node, _sprite: Sprite, _ui: UITransform, state: boolean) {
         _node.active = state
         let getSprtie = state ? OnOffData.On : OnOffData.Off
         _sprite.spriteFrame = AssetMng.AssetClass.get(AssetType.Sprite).data.get(getSprtie)
+        let ySize = state ? 92 : 81
+        _ui.setContentSize(_ui.contentSize.width, ySize);
     }
 }
 enum PageType {

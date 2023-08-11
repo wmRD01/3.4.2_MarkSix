@@ -57,7 +57,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       ({
         ccclass,
         property
-      } = _decorator);
+      } = _decorator); //TODO 欸你的排行榜的名次圖片沒過去阿XD
 
       _export("default", RankItmeData = (_dec = ccclass('RankItmeData'), _dec2 = property(UITransform), _dec3 = property(Sprite), _dec4 = property(Sprite), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec(_class = (_class2 = (_temp = class RankItmeData extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()

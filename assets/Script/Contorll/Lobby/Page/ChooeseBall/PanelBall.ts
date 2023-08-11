@@ -135,6 +135,7 @@ export default class PanelBall extends BaseComponent {
             element.cancel()
             element.backPosition()
         })
+        
     }
     onResetChooese(e: EventTouch, customEventData?: string) {
         if (this.isConfirm) return
@@ -167,6 +168,7 @@ export default class PanelBall extends BaseComponent {
         this.isChoose.sort((a, b) => a - b)
 
         for (let index = 0; index < this.isChoose.length; index++) {
+            this.mapBallNumber.get(this.isChoose[index]).cancel()
             this.eventEmit(LobbyStateEvent.BallChooeseAction, this.mapBallNumber.get(this.isChoose[index]).node, index)
             await DelayTime.getInstance.StartDT(.1);
         }
@@ -208,9 +210,10 @@ export default class PanelBall extends BaseComponent {
     }
 
     reProcessing(data: RP.ln | RP.bet) {
-        // console.log(data);
+        console.log(data);
 
         this.onResetChooese(null)
+        
         if (data.betCode != null) {
             if (this.isFullBall) {
                 PanelLoading.instance.closeLoading()
@@ -220,7 +223,6 @@ export default class PanelBall extends BaseComponent {
                 this.onChooeseBall(null, data.betCode[index].toString())
             }
             this.Attack()
-            this.isFullBall = true;
             PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("038", LangType.Game))
             this.eventEmit(LobbyStateEvent.ChangeBallButtonState, false)
         }

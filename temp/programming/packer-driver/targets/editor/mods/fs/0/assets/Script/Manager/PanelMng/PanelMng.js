@@ -42,7 +42,7 @@ System.register(["__unresolved_0", "cc"], function (_export, _context) {
         async initPanel(_node, bundleName) {
           if (this.parent != _node) this.parent = _node;
           return new Promise((resolve, reject) => {
-            console.error(bundleName);
+            // console.error(bundleName);
             assetManager.loadBundle(bundleName, (err, bundle) => {
               bundle.loadDir("", Prefab, (err, data) => {
                 // console.log(data);

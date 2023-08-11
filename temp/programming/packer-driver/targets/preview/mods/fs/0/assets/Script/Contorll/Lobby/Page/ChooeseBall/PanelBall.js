@@ -365,6 +365,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             _this2.isChoose.sort((a, b) => a - b);
 
             for (var _index = 0; _index < _this2.isChoose.length; _index++) {
+              _this2.mapBallNumber.get(_this2.isChoose[_index]).cancel();
+
               _this2.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
                 error: Error()
               }), LobbyStateEvent) : LobbyStateEvent).BallChooeseAction, _this2.mapBallNumber.get(_this2.isChoose[_index]).node, _index);
@@ -440,7 +442,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         reProcessing(data) {
-          // console.log(data);
+          console.log(data);
           this.onResetChooese(null);
 
           if (data.betCode != null) {
@@ -456,7 +458,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }
 
             this.Attack();
-            this.isFullBall = true;
             (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
               error: Error()
             }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({

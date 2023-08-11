@@ -285,8 +285,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             var tryGet = _this4.currentCount + _this4.pageCount;
             yield _this4.requestHistory(tryGet);
-            yield _this4.requesBetlog(tryGet);
-            console.error("超過會走這?", _this4.currentCount);
+            yield _this4.requesBetlog(tryGet); // console.error("超過會走這?", this.currentCount);
+
             (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
               error: Error()
             }), PanelLoading) : PanelLoading).instance.closeLoading();

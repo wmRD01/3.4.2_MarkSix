@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Label, Node, Prefab, _decorator, BallData, BaseComponent, AutoFollow, PublicModel, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _temp, _crd, ccclass, property, PointItemData;
+  var _reporterNs, _cclegacy, instantiate, Label, Node, Prefab, _decorator, BallData, BaseComponent, AutoFollow, PublicModel, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PointItemData;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -54,9 +54,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       ({
         ccclass,
         property
-      } = _decorator);
+      } = _decorator); //TODO 缺乏優化DrawCode
 
-      _export("default", PointItemData = (_dec = ccclass('PointItemData'), _dec2 = property(Prefab), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Node), _dec(_class2 = (_class3 = (_temp = class PointItemData extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PointItemData = (_dec = ccclass('PointItemData'), _dec2 = property(Prefab), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Node), _dec8 = property(Node), _dec9 = property(Node), _dec(_class2 = (_class3 = (_temp = class PointItemData extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {
@@ -70,13 +70,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "labelPoint", _descriptor4, this);
 
-          _initializerDefineProperty(this, "labelOpenNumber", _descriptor5, this);
-
           _defineProperty(this, "maxNumberCount", 6);
 
-          _initializerDefineProperty(this, "labelDayData", _descriptor6, this);
+          _initializerDefineProperty(this, "labelDayData", _descriptor5, this);
+
+          _initializerDefineProperty(this, "openDrawCodeLayout", _descriptor6, this);
 
           _initializerDefineProperty(this, "clientPointLayout", _descriptor7, this);
+
+          _initializerDefineProperty(this, "specialBallItem", _descriptor8, this);
 
           _defineProperty(this, "labelContent", void 0);
 
@@ -85,6 +87,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         onLoad() {
           this.clientPointLayout.removeAllChildren();
+          this.openDrawCodeLayout.removeAllChildren();
         }
 
         setLabelContent(_node) {
@@ -116,12 +119,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         setOpenNumber(numbers) {
           for (let index = 0; index < numbers.length; index++) {
-            if (index == this.maxNumberCount) break;
-            this.labelOpenNumber[index].string = numbers[index];
-            this.labelOpenNumber[index].node.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+            let _node;
+
+            if (index == this.maxNumberCount) _node = this.specialBallItem;else {
+              _node = instantiate(this.prefabBallItem);
+              this.openDrawCodeLayout.addChild(_node);
+            }
+
+            let _class = _node.getComponent(_crd && BallData === void 0 ? (_reportPossibleCrUseOfBallData({
               error: Error()
-            }), AutoFollow) : AutoFollow).setTarget(this.labelOpenNumber[index].node.parent);
-            this.labelContent.addChild(this.labelOpenNumber[index].node);
+            }), BallData) : BallData);
+
+            _class.init(Number(numbers[index]));
+
+            this.labelContent.addChild(_class.label.node); // _class.label.updateRenderData(true)
+
+            _class.setLabelScale(this.openDrawCodeLayout.getScale().x);
           }
 
           return this;
@@ -192,19 +205,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "labelOpenNumber", [_dec6], {
+      }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "labelDayData", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,
-        initializer: function () {
-          return [];
-        }
-      }), _descriptor6 = _applyDecoratedDescriptor(_class3.prototype, "labelDayData", [_dec7], {
+        initializer: null
+      }), _descriptor6 = _applyDecoratedDescriptor(_class3.prototype, "openDrawCodeLayout", [_dec7], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
       }), _descriptor7 = _applyDecoratedDescriptor(_class3.prototype, "clientPointLayout", [_dec8], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor8 = _applyDecoratedDescriptor(_class3.prototype, "specialBallItem", [_dec9], {
         configurable: true,
         enumerable: true,
         writable: true,

@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Node, Sprite, _decorator, AssetType, LobbyStateEvent, AssetMng, BaseComponent, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _temp, _crd, ccclass, property, PanelPageButton, PageType, OnOffData;
+  var _reporterNs, _cclegacy, Button, Node, Sprite, UITransform, _decorator, AssetType, LobbyStateEvent, AssetMng, BaseComponent, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PanelPageButton, PageType, OnOffData;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -35,6 +35,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Button = _cc.Button;
       Node = _cc.Node;
       Sprite = _cc.Sprite;
+      UITransform = _cc.UITransform;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
       AssetType = _unresolved_2.AssetType;
@@ -55,7 +56,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", PanelPageButton = (_dec = ccclass('PanelPageButton'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Button), _dec5 = property(Button), _dec6 = property(Sprite), _dec7 = property(Sprite), _dec(_class = (_class2 = (_temp = class PanelPageButton extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelPageButton = (_dec = ccclass('PanelPageButton'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Button), _dec5 = property(Button), _dec6 = property(UITransform), _dec7 = property(UITransform), _dec8 = property(Sprite), _dec9 = property(Sprite), _dec(_class = (_class2 = (_temp = class PanelPageButton extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {
@@ -69,9 +70,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "btnPoint", _descriptor4, this);
 
-          _initializerDefineProperty(this, "spriteRank", _descriptor5, this);
+          _initializerDefineProperty(this, "uiRank", _descriptor5, this);
 
-          _initializerDefineProperty(this, "spritePoint", _descriptor6, this);
+          _initializerDefineProperty(this, "uiPoint", _descriptor6, this);
+
+          _initializerDefineProperty(this, "spriteRank", _descriptor7, this);
+
+          _initializerDefineProperty(this, "spritePoint", _descriptor8, this);
         }
 
         /**Prefab仔入用 */
@@ -111,19 +116,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           switch (convert) {
             case PageType.Rank:
               if (this.panelRank.active) return;
-              this.changeState(this.panelRank, this.spriteRank, true);
-              this.changeState(this.panelPoint, this.spritePoint, false);
+              this.changeState(this.panelRank, this.spriteRank, this.uiRank, true);
+              this.changeState(this.panelPoint, this.spritePoint, this.uiPoint, false);
               break;
 
             case PageType.Point:
               if (this.panelPoint.active) return;
-              this.changeState(this.panelRank, this.spriteRank, false);
-              this.changeState(this.panelPoint, this.spritePoint, true);
+              this.changeState(this.panelRank, this.spriteRank, this.uiRank, false);
+              this.changeState(this.panelPoint, this.spritePoint, this.uiPoint, true);
               break;
           }
         }
 
-        changeState(_node, _sprite, state) {
+        changeState(_node, _sprite, _ui, state) {
           _node.active = state;
           let getSprtie = state ? OnOffData.On : OnOffData.Off;
           _sprite.spriteFrame = (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
@@ -131,6 +136,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), AssetMng) : AssetMng).AssetClass.get((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
             error: Error()
           }), AssetType) : AssetType).Sprite).data.get(getSprtie);
+          let ySize = state ? 92 : 81;
+
+          _ui.setContentSize(_ui.contentSize.width, ySize);
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "panelRank", [_dec2], {
@@ -153,12 +161,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "spriteRank", [_dec6], {
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "uiRank", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "spritePoint", [_dec7], {
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "uiPoint", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "spriteRank", [_dec8], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "spritePoint", [_dec9], {
         configurable: true,
         enumerable: true,
         writable: true,

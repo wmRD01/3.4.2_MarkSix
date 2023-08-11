@@ -13,6 +13,9 @@ import PublicData from '../../../../Model/PublicData';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
 import { URLVlaue } from '../../../Api/SendCommand';
 import BallData from '../../../../Model/BallData';
+import PanelSystemMessage from '../../../NoClearNode/PanelSystemMessage';
+import SocketSetting from '../../../../Socket/SocketSetting';
+import { LangType } from '../../../../Enum/LangType';
 
 
 
@@ -33,8 +36,6 @@ export default class PanelHome extends BaseComponent {
     labelCurrentTitle: Label;
     @property(Label)
     labelCurrentDrawIssueID: Label;
-    @property(Label)
-    labelLastDrawCode: Label[] = []
     @property(Label)
     labelLastDrawIssueID: Label;
     @property(Label)
@@ -59,7 +60,8 @@ export default class PanelHome extends BaseComponent {
     btnPointDetail: Button;
     @property(Button)
     btnGoChooese: Button;
-
+    @property(Node)
+    specialBallItem: Node
     marquee: Marquee;
     timer: Timer;
     currentIssueID: number;
@@ -72,6 +74,7 @@ export default class PanelHome extends BaseComponent {
 
     }
     async onEnable() {
+        await this.requestMyInfo()
         await this.requestDrawHistory()
         await this.requestDrawUpcoming()
         if (this.lastIssueID != this.currentIssueID) {
@@ -116,11 +119,19 @@ export default class PanelHome extends BaseComponent {
             let getday = PublicModel.getInstance.convertDateDay(getDate.openDate).split("(")[0]
             this.labelLastDrawDay.string = `${getday}開獎結果`
             for (let index = 0; index < getDate.drawCode.length; index++) {
-                if (index == 6) return;
-                let _node = instantiate(this.ballItem)
+                let _node: Node;
+                let isResetPos: boolean = true;
+                if (index == 6) {
+                    _node = this.specialBallItem;
+                    isResetPos = false;
+                }
+                else {
+                    _node = instantiate(this.ballItem)
+                    this.lastDrawCodeLayout.addChild(_node);
+                }
                 let _class = _node.getComponent(BallData);
-                this.lastDrawCodeLayout.addChild(_node);
-                _class.init(Number(getDate.drawCode[index])).cancel()
+
+                _class.init(Number(getDate.drawCode[index]), isResetPos).cancel()
                 this.labelContent.addChild(_class.label.node);
             }
         }
@@ -146,7 +157,7 @@ export default class PanelHome extends BaseComponent {
         var Date_B = new Date(getDate.serverNowTime);
         //@ts-ignore
         var Date_C = new Date(Date_B - Date_A);
-
+        //TODO 如果時間到了該怎處理?
         this.timer.setTimer(Math.abs(Date_C.getTime()))
 
 
@@ -180,6 +191,26 @@ export default class PanelHome extends BaseComponent {
             this.labelMyPoint.string = "0"
         }
     }
+    //#endregion
+    //#region  MyInfo
+    async requestMyInfo() {
+        return new Promise<void>(async (resolve, reject) => {
+            const body = new RequestGPG.Body.NeedToken.MyInfo()
+            body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApi)
+            let convert = new URLSearchParams(body).toString()
+            await new RequestGPG.Request()
+                .setToken(Player.getInstance.gpgToken)
+                .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.MyInfo}?${convert}`, (response: ResponseGPG.MyInfo.DataClass) => {
+                    console.log("MyInfo", response)
+                    console.log("確認玩家token登入無異常");
+                    if (!response || !response.data) {
+                        PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("E_0007", LangType.Game))
+                    }
+                    else resolve()
+                })
+        })
+    }
+
     //#endregion
     onGoPage(e: EventTouch, customEventData?: string) {
         let split = customEventData.split('-')

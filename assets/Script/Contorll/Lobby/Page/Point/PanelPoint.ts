@@ -33,6 +33,7 @@ export default class PanelPoint extends BaseComponent {
     async start() {
         await AssetMng.waitStateCheck(AssetType.Sprite)
         this.layoutContent.removeAllChildren()
+        
         this.scrollview.node.on(ScrollView.EventType.SCROLL_TO_BOTTOM, this.onViewBottom, this)
     }
     onEnable() {
@@ -120,7 +121,7 @@ export default class PanelPoint extends BaseComponent {
         await this.requestHistory(tryGet)
         await this.requesBetlog(tryGet)
 
-        console.error("超過會走這?", this.currentCount);
+        // console.error("超過會走這?", this.currentCount);
         PanelLoading.instance.closeLoading()
         this.isAsync = false;
     }

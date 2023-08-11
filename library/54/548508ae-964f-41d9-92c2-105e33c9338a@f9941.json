@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "eff_selectball",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 169,
+      "height": 168
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 169,
+      "height": 168
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "548508ae-964f-41d9-92c2-105e33c9338a@6c48a",
+    "packable": true
+  }
+}

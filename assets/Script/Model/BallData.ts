@@ -21,11 +21,12 @@ export default class BallData extends BaseComponent {
     ballNumber: number = 0;
     type: number = 0;
     orgV3: Vec3;
-    init(_ballNumber: number) {
+    init(_ballNumber: number, isResetPos: boolean = false) {
         // console.log(_ballNumber);
 
         this.ballNumber = _ballNumber
-        this.node.position = Vec3.ZERO
+        if (isResetPos)
+            this.node.position = Vec3.ZERO
         /**一般規則 */
         // this.type = _ballNumber % 6
         /**符合香港規則 */
@@ -73,7 +74,7 @@ export default class BallData extends BaseComponent {
         // let rotai = tween()
         //     .set({ angle: 0 })
         //     .to(5, { angle: -360 })
-        tween(this.node)
+        tween(this.spriteBG.node)
             .repeatForever(tween()
                 .set({ angle: 0 })
                 .to(5, { angle: -360 }))
@@ -84,11 +85,11 @@ export default class BallData extends BaseComponent {
         // this.spriteBG.color = color().fromHEX(this.getColor())
         this.node.setScale(PublicModel.getInstance.oneSclaeVec3(1))
         this.node.eulerAngles = Vec3.ZERO
-        Tween.stopAllByTarget(this.node)
+        Tween.stopAllByTarget(this.spriteBG.node)
         this.enabledBall(true)
     }
     backPosition() {
-        Tween.stopAllByTarget(this.node)
+        Tween.stopAllByTarget(this.spriteBG.node)
         console.log(this.node.position);
 
         this.node.position = this.orgV3
@@ -100,6 +101,9 @@ export default class BallData extends BaseComponent {
     }
     setEffect(bool: boolean) {
         this.nodeEffect.active = bool
+    }
+    setLabelScale(num: number) {
+        this.label.node.setScale(PublicModel.getInstance.oneSclaeVec3(num))
     }
     private getColor() {
 

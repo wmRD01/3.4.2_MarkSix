@@ -366,7 +366,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), PublicModel) : PublicModel).getInstance.checkStringNull(response.data.email) ? "" : response.data.email;
           })();
-        } //#region Betlog
+        } //#endregion
+        //#region Betlog
 
 
         requesMyScore() {

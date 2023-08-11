@@ -4,6 +4,7 @@ import BaseComponent from './ComponentBase';
 import AutoFollow from './AutoFollow';
 import PublicModel from './PublicModel';
 const { ccclass, property } = _decorator;
+//TODO 缺乏優化DrawCode
 @ccclass('PointItemData')
 export default class PointItemData extends BaseComponent {
     @property(Prefab)
@@ -14,19 +15,21 @@ export default class PointItemData extends BaseComponent {
     labelOpenNumberTitle: Label;
     @property(Label)
     labelPoint: Label;
-    @property(Label)
-    labelOpenNumber: Label[] = []
     maxNumberCount: number = 6
     @property(Label)
     labelDayData: Label;
     @property(Node)
+    openDrawCodeLayout: Node
+    @property(Node)
     clientPointLayout: Node
+    @property(Node)
+    specialBallItem: Node
     labelContent: Node
     outlineContent: Node;
 
     onLoad() {
-        this.clientPointLayout.removeAllChildren()
-
+        this.clientPointLayout.removeAllChildren();
+        this.openDrawCodeLayout.removeAllChildren();
     }
     setLabelContent(_node: Node) {
         this.labelContent = _node
@@ -49,11 +52,19 @@ export default class PointItemData extends BaseComponent {
     }
     setOpenNumber(numbers: string[]) {
         for (let index = 0; index < numbers.length; index++) {
-            if (index == this.maxNumberCount) break;
+            let _node: Node;
+            if (index == this.maxNumberCount) _node = this.specialBallItem;
+            else {
 
-            this.labelOpenNumber[index].string = numbers[index]
-            this.labelOpenNumber[index].node.addComponent(AutoFollow).setTarget(this.labelOpenNumber[index].node.parent)
-            this.labelContent.addChild(this.labelOpenNumber[index].node)
+                _node = instantiate(this.prefabBallItem)
+                this.openDrawCodeLayout.addChild(_node)
+            }
+            let _class = _node.getComponent(BallData)
+            _class.init(Number(numbers[index]))
+            this.labelContent.addChild(_class.label.node)
+
+            // _class.label.updateRenderData(true)
+            _class.setLabelScale(this.openDrawCodeLayout.getScale().x)
         }
         return this
     }

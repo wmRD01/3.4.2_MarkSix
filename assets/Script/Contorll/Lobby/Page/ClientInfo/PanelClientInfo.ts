@@ -162,7 +162,7 @@ export default class PanelClientInfo extends BaseComponent {
         this.labelEmail.string = PublicModel.getInstance.checkStringNull(response.data.email) ? "" : response.data.email
 
     }
-
+    //#endregion
     //#region Betlog
     async requesMyScore() {
         return new Promise<void>(async (resolve, reject) => {

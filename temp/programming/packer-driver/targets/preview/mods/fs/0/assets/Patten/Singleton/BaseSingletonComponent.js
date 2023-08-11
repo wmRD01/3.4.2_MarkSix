@@ -10,8 +10,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       static get instance() {
         if (!(_crd && SingletManager === void 0 ? (_reportPossibleCrUseOfSingletManager({
           error: Error()
-        }), SingletManager) : SingletManager).instance.get(js.getClassName(this))) {
-          console.error("Adam \u7576\u524D" + js.getClassName(this) + " : \u9700\u6AA2\u67E5\u8A72Class\u7684\u521D\u59CB\u5316\u751F\u547D\u9031\u671F");
+        }), SingletManager) : SingletManager).instance.get(js.getClassName(this))) {// console.error(`Adam 當前${js.getClassName(this)} : 需檢查該Class的初始化生命週期`);
         }
 
         return (_crd && SingletManager === void 0 ? (_reportPossibleCrUseOfSingletManager({

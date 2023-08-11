@@ -24,7 +24,7 @@ export default class CheckLoading extends BaseSingleton<CheckLoading>() {
                     resolve()
                     return
                 }
-                console.error("資料仔仔仔仔仔仔仔仔入中");
+                // console.error("資料仔仔仔仔仔仔仔仔入中");
 
             }, 100)
         })

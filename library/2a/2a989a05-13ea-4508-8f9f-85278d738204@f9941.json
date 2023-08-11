@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "integral_button00",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 440,
+      "height": 110
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 440,
+      "height": 110
+    },
+    "rotated": false,
+    "capInsets": [
+      30,
+      38,
+      30,
+      0
+    ],
+    "texture": "2a989a05-13ea-4508-8f9f-85278d738204@6c48a",
+    "packable": true
+  }
+}

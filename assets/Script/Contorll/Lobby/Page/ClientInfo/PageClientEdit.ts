@@ -86,7 +86,7 @@ export default class PanelClientEdit extends BaseComponent {
         else {
             PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t(response.Status.Code, LangType.ServerAPI))
             PanelLoading.instance.closeLoading()
-            console.error("資料有問題");
+            // console.error("資料有問題");
         }
     }
     //#endregion
@@ -116,11 +116,13 @@ export default class PanelClientEdit extends BaseComponent {
         console.log("ValidateContactInfo", response)
         /**代表此已經綁定過不可以綁定! */
         if (response.Status.Code == "0") {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("034", LangType.Game))
+            if (this.editEmail.string != "")
+                PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("040", LangType.Game))
+            if (this.editPhone.string != "")
+                PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("034", LangType.Game))
             return;
         }
         else {
-
             console.log("恭喜信箱不存在，可繼續註冊");
             //*要改成手動送驗證碼
             const sendBody = new RequestGPG.Body.NotNeedToken.SendRegisterVerification()
@@ -133,7 +135,6 @@ export default class PanelClientEdit extends BaseComponent {
                 .setBody(JSON.stringify(sendBody))
                 .fetchData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.SendRegisterVerification}`, this.responseSendRegisterVerification.bind(this))
         }
-
     }
     /**驗證碼發送是否成功 */
     responseSendRegisterVerification(response: ResponseGPG.SendRegisterVerification.DataClass) {
@@ -241,9 +242,9 @@ export default class PanelClientEdit extends BaseComponent {
         }
     }
     checkName(str: string) {
-        if (str.length == 0) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("028", LangType.Game))
-            // console.error("請輸入文字");
+        if (str.length == 0 || (str.length < 2 || str.length > 16)) {
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("031", LangType.Game))
+            // console.error("長度須為2~16");
             return false;
         }
         if (/\s/.test(str)) {
@@ -256,11 +257,7 @@ export default class PanelClientEdit extends BaseComponent {
             // console.error("出現非法文字");
             return false;
         }
-        if (str.length < 2 || str.length > 16) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("031", LangType.Game))
-            // console.error("長度須為2~16");
-            return false;;
-        }
+
         return true
     }
     /**
@@ -280,7 +277,7 @@ export default class PanelClientEdit extends BaseComponent {
         }
         if (!this.checkEmailRegular(str)) {
             PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("028", LangType.Game))
-            // console.error("請輸入信箱");
+            // console.error("請輸入正確信箱");
             return false;
         }
         return true

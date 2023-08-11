@@ -5,6 +5,7 @@ import AssetMng from '../Manager/AssetMng';
 import BaseComponent from './ComponentBase';
 import PublicModel from './PublicModel';
 const { ccclass, property } = _decorator;
+//TODO 欸你的排行榜的名次圖片沒過去阿XD
 @ccclass('RankItmeData')
 export default class RankItmeData extends BaseComponent {
     @property(UITransform)

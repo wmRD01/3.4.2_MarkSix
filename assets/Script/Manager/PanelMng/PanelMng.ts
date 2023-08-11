@@ -10,7 +10,7 @@ export class PanelMng {
     async initPanel(_node: Node, bundleName: string) {
         if (this.parent != _node) this.parent = _node
         return new Promise<void>((resolve, reject) => {
-            console.error(bundleName);
+            // console.error(bundleName);
 
             assetManager.loadBundle(bundleName, (err, bundle) => {
                 bundle.loadDir("", Prefab, (err, data: Array<Prefab>) => {

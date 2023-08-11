@@ -252,8 +252,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           let tryGet = this.currentCount + this.pageCount;
           await this.requestHistory(tryGet);
-          await this.requesBetlog(tryGet);
-          console.error("超過會走這?", this.currentCount);
+          await this.requesBetlog(tryGet); // console.error("超過會走這?", this.currentCount);
+
           (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
             error: Error()
           }), PanelLoading) : PanelLoading).instance.closeLoading();

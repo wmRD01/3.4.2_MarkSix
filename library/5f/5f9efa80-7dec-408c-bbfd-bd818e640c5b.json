@@ -1,7 +1,0 @@
-{
-  "__type__": "cc.TextAsset",
-  "_name": "背景漸層",
-  "_objFlags": 0,
-  "_native": "",
-  "text": "背景整體上至下漸層\r\n#000000\r\n#191a1c\r\n#323538\r\n---\r\n倒數紅底 type/sliced\r\nbg_time.png\r\n畫面上尺寸: 720x80px\r\n---\r\n我的積分區詳細藍按鈕 type/sliced\r\nbtn_radius22.png\r\n畫面上尺寸: 115x44px\r\n#0095da\r\n---\r\n獎品區圓角背景 type/sliced\r\nbg_radius26.png\r\n畫面上尺寸: 670x870px\r\n\r\n"
-}

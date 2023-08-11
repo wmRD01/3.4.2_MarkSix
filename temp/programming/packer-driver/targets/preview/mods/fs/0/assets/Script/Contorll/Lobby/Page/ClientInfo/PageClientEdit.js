@@ -278,8 +278,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), LangType) : LangType).ServerAPI));
             (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
               error: Error()
-            }), PanelLoading) : PanelLoading).instance.closeLoading();
-            console.error("資料有問題");
+            }), PanelLoading) : PanelLoading).instance.closeLoading(); // console.error("資料有問題");
           }
         } //#endregion
         //#region ValidateContactInfo
@@ -339,7 +338,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             /**代表此已經綁定過不可以綁定! */
 
             if (response.Status.Code == "0") {
-              (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+              if (_this4.editEmail.string != "") (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+                error: Error()
+              }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+                error: Error()
+              }), SocketSetting) : SocketSetting).t("040", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+                error: Error()
+              }), LangType) : LangType).Game));
+              if (_this4.editPhone.string != "") (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
                 error: Error()
               }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
                 error: Error()
@@ -535,14 +541,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         checkName(str) {
-          if (str.length == 0) {
+          if (str.length == 0 || str.length < 2 || str.length > 16) {
             (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
               error: Error()
             }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
               error: Error()
-            }), SocketSetting) : SocketSetting).t("028", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+            }), SocketSetting) : SocketSetting).t("031", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
               error: Error()
-            }), LangType) : LangType).Game)); // console.error("請輸入文字");
+            }), LangType) : LangType).Game)); // console.error("長度須為2~16");
 
             return false;
           }
@@ -571,19 +577,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), LangType) : LangType).Game)); // console.error("出現非法文字");
 
             return false;
-          }
-
-          if (str.length < 2 || str.length > 16) {
-            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
-              error: Error()
-            }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
-              error: Error()
-            }), SocketSetting) : SocketSetting).t("031", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
-              error: Error()
-            }), LangType) : LangType).Game)); // console.error("長度須為2~16");
-
-            return false;
-            ;
           }
 
           return true;
@@ -626,7 +619,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), SocketSetting) : SocketSetting).t("028", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
               error: Error()
-            }), LangType) : LangType).Game)); // console.error("請輸入信箱");
+            }), LangType) : LangType).Game)); // console.error("請輸入正確信箱");
 
             return false;
           }

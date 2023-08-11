@@ -7,7 +7,7 @@ export default function BaseSingletonComponent<T>() {
     class BaseSingletonComponent extends BaseComponent implements IBaseSingleton {
         public static get instance(): T {
             if (!SingletManager.instance.get(js.getClassName(this))) {
-                console.error(`Adam 當前${js.getClassName(this)} : 需檢查該Class的初始化生命週期`);
+                // console.error(`Adam 當前${js.getClassName(this)} : 需檢查該Class的初始化生命週期`);
             }
             return SingletManager.instance.get<IBaseSingleton>(js.getClassName(this)) as any;
         }

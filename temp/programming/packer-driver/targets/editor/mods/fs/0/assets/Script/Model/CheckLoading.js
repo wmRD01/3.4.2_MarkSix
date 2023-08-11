@@ -59,9 +59,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
                 clearInterval(roop);
                 resolve();
                 return;
-              }
+              } // console.error("資料仔仔仔仔仔仔仔仔入中");
 
-              console.error("資料仔仔仔仔仔仔仔仔入中");
             }, 100);
           });
         }

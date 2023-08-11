@@ -180,9 +180,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
             error: Error()
-          }), AssetType) : AssetType).Sprite);
-          console.error("誰搶誰");
-          console.log(this.currentIndex, index);
+          }), AssetType) : AssetType).Sprite); // console.error("誰搶誰");
+          // console.log(this.currentIndex, index);
+
           this.lastIndex = this.currentIndex;
           this.currentIndex = Number(index);
           if (this.mapButton.size == 0) await this.waitButton();

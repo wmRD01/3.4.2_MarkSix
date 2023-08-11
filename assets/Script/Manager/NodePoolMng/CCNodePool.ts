@@ -37,7 +37,7 @@ export class CCNodePool implements IPool {
         if (this.prefab) {
             return instantiate<Node | Prefab>(this.prefab);
         } else {
-            console.error(' 預製體沒有賦值 ')
+            // console.error(' 預製體沒有賦值 ')
             return null;
         }
     }

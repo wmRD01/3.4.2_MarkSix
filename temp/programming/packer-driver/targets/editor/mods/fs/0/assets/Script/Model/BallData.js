@@ -87,10 +87,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "orgV3", void 0);
         }
 
-        init(_ballNumber) {
+        init(_ballNumber, isResetPos = false) {
           // console.log(_ballNumber);
           this.ballNumber = _ballNumber;
-          this.node.position = Vec3.ZERO;
+          if (isResetPos) this.node.position = Vec3.ZERO;
           /**一般規則 */
           // this.type = _ballNumber % 6
 
@@ -138,7 +138,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           //     .set({ angle: 0 })
           //     .to(5, { angle: -360 })
 
-          tween(this.node).repeatForever(tween().set({
+          tween(this.spriteBG.node).repeatForever(tween().set({
             angle: 0
           }).to(5, {
             angle: -360
@@ -152,12 +152,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), PublicModel) : PublicModel).getInstance.oneSclaeVec3(1));
           this.node.eulerAngles = Vec3.ZERO;
-          Tween.stopAllByTarget(this.node);
+          Tween.stopAllByTarget(this.spriteBG.node);
           this.enabledBall(true);
         }
 
         backPosition() {
-          Tween.stopAllByTarget(this.node);
+          Tween.stopAllByTarget(this.spriteBG.node);
           console.log(this.node.position);
           this.node.position = this.orgV3;
           console.log(this.node.position, this.orgV3);
@@ -169,6 +169,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         setEffect(bool) {
           this.nodeEffect.active = bool;
+        }
+
+        setLabelScale(num) {
+          this.label.node.setScale((_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.oneSclaeVec3(num));
         }
 
         getColor() {

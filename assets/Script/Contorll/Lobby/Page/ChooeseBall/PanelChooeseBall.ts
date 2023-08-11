@@ -16,7 +16,6 @@ export default class PanelChooeseBall extends BaseComponent {
         let goMoveTo = PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(_node, this.ballLayout.children[index])
         _node.setScale(Vec3.ONE)
         _node.angle = 0
-        Tween.stopAllByTarget(_node)
         tween(_node)
             .to(.5, { position: goMoveTo })
             .start()

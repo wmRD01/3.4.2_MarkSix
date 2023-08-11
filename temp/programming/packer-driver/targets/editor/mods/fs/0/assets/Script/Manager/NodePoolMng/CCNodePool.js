@@ -60,7 +60,7 @@ System.register(["__unresolved_0", "cc"], function (_export, _context) {
           if (this.prefab) {
             return instantiate(this.prefab);
           } else {
-            console.error(' 預製體沒有賦值 ');
+            // console.error(' 預製體沒有賦值 ')
             return null;
           }
         }

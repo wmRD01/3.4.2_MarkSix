@@ -2,7 +2,7 @@
   "ver": "1.0.22",
   "importer": "image",
   "imported": true,
-  "uuid": "95a53104-a402-4b4c-9d25-7a368330615f",
+  "uuid": "a71bb90b-bfa3-4899-adde-c5213ad86736",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "95a53104-a402-4b4c-9d25-7a368330615f@6c48a",
+      "uuid": "a71bb90b-bfa3-4899-adde-c5213ad86736@6c48a",
       "displayName": "integral_button01",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "95a53104-a402-4b4c-9d25-7a368330615f"
+        "imageUuidOrDatabaseUri": "a71bb90b-bfa3-4899-adde-c5213ad86736"
       },
       "ver": "1.0.21",
       "imported": true,
@@ -33,7 +33,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "95a53104-a402-4b4c-9d25-7a368330615f@f9941",
+      "uuid": "a71bb90b-bfa3-4899-adde-c5213ad86736@f9941",
       "displayName": "integral_button01",
       "id": "f9941",
       "name": "spriteFrame",
@@ -45,17 +45,17 @@
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 241,
-        "height": 54,
-        "rawWidth": 241,
-        "rawHeight": 54,
-        "borderTop": 0,
+        "width": 440,
+        "height": 132,
+        "rawWidth": 440,
+        "rawHeight": 132,
+        "borderTop": 38,
         "borderBottom": 0,
-        "borderLeft": 0,
-        "borderRight": 0,
+        "borderLeft": 30,
+        "borderRight": 30,
         "packable": true,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "95a53104-a402-4b4c-9d25-7a368330615f@6c48a",
+        "imageUuidOrDatabaseUri": "a71bb90b-bfa3-4899-adde-c5213ad86736@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.9",
@@ -69,6 +69,6 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "95a53104-a402-4b4c-9d25-7a368330615f@f9941"
+    "redirect": "a71bb90b-bfa3-4899-adde-c5213ad86736@f9941"
   }
 }

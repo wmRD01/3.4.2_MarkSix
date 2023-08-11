@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Component, instantiate, Label, Node, Prefab, UITransform, _decorator, NotificationType, LobbyStateEvent, PageAction, EventMng, BaseComponent, PublicModel, RequestGPG, Player, PublicData, PanelLoading, BallData, Marquee, Timer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _dec17, _dec18, _dec19, _dec20, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _descriptor17, _descriptor18, _descriptor19, _temp, _crd, ccclass, property, PanelHome;
+  var _reporterNs, _cclegacy, Button, Component, instantiate, Label, Node, Prefab, UITransform, _decorator, NotificationType, LobbyStateEvent, PageAction, EventMng, BaseComponent, PublicModel, RequestGPG, Player, PublicData, PanelLoading, BallData, PanelSystemMessage, SocketSetting, LangType, Marquee, Timer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _dec17, _dec18, _dec19, _dec20, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _descriptor17, _descriptor18, _descriptor19, _temp, _crd, ccclass, property, PanelHome;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -67,6 +67,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("BallData", "../../../../Model/BallData", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfPanelSystemMessage(extras) {
+    _reporterNs.report("PanelSystemMessage", "../../../NoClearNode/PanelSystemMessage", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfSocketSetting(extras) {
+    _reporterNs.report("SocketSetting", "../../../../Socket/SocketSetting", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfLangType(extras) {
+    _reporterNs.report("LangType", "../../../../Enum/LangType", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -102,6 +114,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       PanelLoading = _unresolved_11.default;
     }, function (_unresolved_12) {
       BallData = _unresolved_12.default;
+    }, function (_unresolved_13) {
+      PanelSystemMessage = _unresolved_13.default;
+    }, function (_unresolved_14) {
+      SocketSetting = _unresolved_14.default;
+    }, function (_unresolved_15) {
+      LangType = _unresolved_15.LangType;
     }],
     execute: function () {
       _crd = true;
@@ -113,7 +131,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", PanelHome = (_dec = ccclass('PanelHome'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Prefab), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Label), _dec9 = property(Label), _dec10 = property(Label), _dec11 = property(Label), _dec12 = property(Label), _dec13 = property(Label), _dec14 = property(Label), _dec15 = property(Label), _dec16 = property(Label), _dec17 = property(Label), _dec18 = property(Button), _dec19 = property(Button), _dec20 = property(Button), _dec(_class2 = (_class3 = (_temp = class PanelHome extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelHome = (_dec = ccclass('PanelHome'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Prefab), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Label), _dec9 = property(Label), _dec10 = property(Label), _dec11 = property(Label), _dec12 = property(Label), _dec13 = property(Label), _dec14 = property(Label), _dec15 = property(Label), _dec16 = property(Label), _dec17 = property(Button), _dec18 = property(Button), _dec19 = property(Button), _dec20 = property(Node), _dec(_class2 = (_class3 = (_temp = class PanelHome extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor() {
@@ -131,31 +149,31 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "labelCurrentDrawIssueID", _descriptor6, this);
 
-          _initializerDefineProperty(this, "labelLastDrawCode", _descriptor7, this);
+          _initializerDefineProperty(this, "labelLastDrawIssueID", _descriptor7, this);
 
-          _initializerDefineProperty(this, "labelLastDrawIssueID", _descriptor8, this);
+          _initializerDefineProperty(this, "labelLastDrawDay", _descriptor8, this);
 
-          _initializerDefineProperty(this, "labelLastDrawDay", _descriptor9, this);
+          _initializerDefineProperty(this, "labelMarquee", _descriptor9, this);
 
-          _initializerDefineProperty(this, "labelMarquee", _descriptor10, this);
+          _initializerDefineProperty(this, "labelMonth", _descriptor10, this);
 
-          _initializerDefineProperty(this, "labelMonth", _descriptor11, this);
+          _initializerDefineProperty(this, "labelPointTitle", _descriptor11, this);
 
-          _initializerDefineProperty(this, "labelPointTitle", _descriptor12, this);
+          _initializerDefineProperty(this, "labelMyPoint", _descriptor12, this);
 
-          _initializerDefineProperty(this, "labelMyPoint", _descriptor13, this);
+          _initializerDefineProperty(this, "labelDetail", _descriptor13, this);
 
-          _initializerDefineProperty(this, "labelDetail", _descriptor14, this);
+          _initializerDefineProperty(this, "labelGiftTitle1", _descriptor14, this);
 
-          _initializerDefineProperty(this, "labelGiftTitle1", _descriptor15, this);
+          _initializerDefineProperty(this, "labelGiftTitle2", _descriptor15, this);
 
-          _initializerDefineProperty(this, "labelGiftTitle2", _descriptor16, this);
+          _initializerDefineProperty(this, "btnMoreDraw", _descriptor16, this);
 
-          _initializerDefineProperty(this, "btnMoreDraw", _descriptor17, this);
+          _initializerDefineProperty(this, "btnPointDetail", _descriptor17, this);
 
-          _initializerDefineProperty(this, "btnPointDetail", _descriptor18, this);
+          _initializerDefineProperty(this, "btnGoChooese", _descriptor18, this);
 
-          _initializerDefineProperty(this, "btnGoChooese", _descriptor19, this);
+          _initializerDefineProperty(this, "specialBallItem", _descriptor19, this);
 
           _defineProperty(this, "marquee", void 0);
 
@@ -180,6 +198,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           var _this = this;
 
           return _asyncToGenerator(function* () {
+            yield _this.requestMyInfo();
             yield _this.requestDrawHistory();
             yield _this.requestDrawUpcoming();
 
@@ -254,17 +273,23 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.labelLastDrawDay.string = getday + "\u958B\u734E\u7D50\u679C";
 
             for (var index = 0; index < getDate.drawCode.length; index++) {
-              if (index == 6) return;
+              var _node = void 0;
 
-              var _node = instantiate(this.ballItem);
+              var isResetPos = true;
+
+              if (index == 6) {
+                _node = this.specialBallItem;
+                isResetPos = false;
+              } else {
+                _node = instantiate(this.ballItem);
+                this.lastDrawCodeLayout.addChild(_node);
+              }
 
               var _class = _node.getComponent(_crd && BallData === void 0 ? (_reportPossibleCrUseOfBallData({
                 error: Error()
               }), BallData) : BallData);
 
-              this.lastDrawCodeLayout.addChild(_node);
-
-              _class.init(Number(getDate.drawCode[index])).cancel();
+              _class.init(Number(getDate.drawCode[index]), isResetPos).cancel();
 
               this.labelContent.addChild(_class.label.node);
             }
@@ -314,7 +339,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           var Date_A = new Date(getDate.openDate);
           var Date_B = new Date(getDate.serverNowTime); //@ts-ignore
 
-          var Date_C = new Date(Date_B - Date_A);
+          var Date_C = new Date(Date_B - Date_A); //TODO 如果時間到了該怎處理?
+
           this.timer.setTimer(Math.abs(Date_C.getTime()));
           (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
             error: Error()
@@ -383,6 +409,52 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.labelMyPoint.string = "0";
           }
         } //#endregion
+        //#region  MyInfo
+
+
+        requestMyInfo() {
+          return _asyncToGenerator(function* () {
+            return new Promise( /*#__PURE__*/function () {
+              var _ref4 = _asyncToGenerator(function* (resolve, reject) {
+                var body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Body.NeedToken.MyInfo();
+                body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+                  error: Error()
+                }), PublicModel) : PublicModel).getInstance.convertMD5((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+                  error: Error()
+                }), PublicData) : PublicData).getInstance.gpgApi);
+                var convert = new URLSearchParams(body).toString();
+                yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+                  error: Error()
+                }), Player) : Player).getInstance.gpgToken).fetchData("" + (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+                  error: Error()
+                }), PublicData) : PublicData).getInstance.gpgUrlPlayApi + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+                  error: Error()
+                }), RequestGPG) : RequestGPG).API.MyInfo + "?" + convert, response => {
+                  console.log("MyInfo", response);
+                  console.log("確認玩家token登入無異常");
+
+                  if (!response || !response.data) {
+                    (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+                      error: Error()
+                    }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+                      error: Error()
+                    }), SocketSetting) : SocketSetting).t("E_0007", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+                      error: Error()
+                    }), LangType) : LangType).Game));
+                  } else resolve();
+                });
+              });
+
+              return function (_x7, _x8) {
+                return _ref4.apply(this, arguments);
+              };
+            }());
+          })();
+        } //#endregion
 
 
         onGoPage(e, customEventData) {
@@ -449,69 +521,67 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor7 = _applyDecoratedDescriptor(_class3.prototype, "labelLastDrawCode", [_dec8], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: function initializer() {
-          return [];
-        }
-      }), _descriptor8 = _applyDecoratedDescriptor(_class3.prototype, "labelLastDrawIssueID", [_dec9], {
+      }), _descriptor7 = _applyDecoratedDescriptor(_class3.prototype, "labelLastDrawIssueID", [_dec8], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor9 = _applyDecoratedDescriptor(_class3.prototype, "labelLastDrawDay", [_dec10], {
+      }), _descriptor8 = _applyDecoratedDescriptor(_class3.prototype, "labelLastDrawDay", [_dec9], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor10 = _applyDecoratedDescriptor(_class3.prototype, "labelMarquee", [_dec11], {
+      }), _descriptor9 = _applyDecoratedDescriptor(_class3.prototype, "labelMarquee", [_dec10], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor11 = _applyDecoratedDescriptor(_class3.prototype, "labelMonth", [_dec12], {
+      }), _descriptor10 = _applyDecoratedDescriptor(_class3.prototype, "labelMonth", [_dec11], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor12 = _applyDecoratedDescriptor(_class3.prototype, "labelPointTitle", [_dec13], {
+      }), _descriptor11 = _applyDecoratedDescriptor(_class3.prototype, "labelPointTitle", [_dec12], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor13 = _applyDecoratedDescriptor(_class3.prototype, "labelMyPoint", [_dec14], {
+      }), _descriptor12 = _applyDecoratedDescriptor(_class3.prototype, "labelMyPoint", [_dec13], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor14 = _applyDecoratedDescriptor(_class3.prototype, "labelDetail", [_dec15], {
+      }), _descriptor13 = _applyDecoratedDescriptor(_class3.prototype, "labelDetail", [_dec14], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor15 = _applyDecoratedDescriptor(_class3.prototype, "labelGiftTitle1", [_dec16], {
+      }), _descriptor14 = _applyDecoratedDescriptor(_class3.prototype, "labelGiftTitle1", [_dec15], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor16 = _applyDecoratedDescriptor(_class3.prototype, "labelGiftTitle2", [_dec17], {
+      }), _descriptor15 = _applyDecoratedDescriptor(_class3.prototype, "labelGiftTitle2", [_dec16], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor17 = _applyDecoratedDescriptor(_class3.prototype, "btnMoreDraw", [_dec18], {
+      }), _descriptor16 = _applyDecoratedDescriptor(_class3.prototype, "btnMoreDraw", [_dec17], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor18 = _applyDecoratedDescriptor(_class3.prototype, "btnPointDetail", [_dec19], {
+      }), _descriptor17 = _applyDecoratedDescriptor(_class3.prototype, "btnPointDetail", [_dec18], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor19 = _applyDecoratedDescriptor(_class3.prototype, "btnGoChooese", [_dec20], {
+      }), _descriptor18 = _applyDecoratedDescriptor(_class3.prototype, "btnGoChooese", [_dec19], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor19 = _applyDecoratedDescriptor(_class3.prototype, "specialBallItem", [_dec20], {
         configurable: true,
         enumerable: true,
         writable: true,

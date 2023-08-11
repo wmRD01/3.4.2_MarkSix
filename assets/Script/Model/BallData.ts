@@ -84,16 +84,16 @@ export default class BallData extends BaseComponent {
         // this.spriteBG.spriteFrame = AssetMng.AssetClass.get(AssetType.Sprite).data.get(SpirteData.空白)
         // this.spriteBG.color = color().fromHEX(this.getColor())
         this.node.setScale(PublicModel.getInstance.oneSclaeVec3(1))
-        this.node.eulerAngles = Vec3.ZERO
+        this.spriteBG.node.eulerAngles = Vec3.ZERO
         Tween.stopAllByTarget(this.spriteBG.node)
         this.enabledBall(true)
     }
     backPosition() {
         Tween.stopAllByTarget(this.spriteBG.node)
-        console.log(this.node.position);
+        // console.log(this.node.position);
 
         this.node.position = this.orgV3
-        console.log(this.node.position, this.orgV3);
+        // console.log(this.node.position, this.orgV3);
 
     }
     enabledBall(bool: boolean) {

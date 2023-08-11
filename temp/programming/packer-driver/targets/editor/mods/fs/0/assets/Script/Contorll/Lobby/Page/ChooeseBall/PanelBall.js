@@ -274,6 +274,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         onChooeseBall(e, customEventData) {
           if (this.isConfirm) return;
           let convert = Number(customEventData);
+          /**如果已經被選過的球 */
 
           if (this.tempChoose.indexOf(convert) > -1) {
             this.tempChoose.splice(this.tempChoose.indexOf(convert), 1)[0];
@@ -281,8 +282,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             if (this.isFullBall) this.fullResetBallColor(true);
             return;
           }
+          /**如果選號已滿 */
+
 
           if (this.tempChoose.length >= this.MaxCount) return;
+          /**紀錄球號 */
+
           this.tempChoose.push(convert);
           this.mapBallNumber.get(convert).choose();
 

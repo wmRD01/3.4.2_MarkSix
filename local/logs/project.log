@@ -493,3 +493,15 @@ https://github.com/browserslist/browserslist#browsers-data-updating
 2023-08-11 17:55:22-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
 2023-08-11 17:55:51-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
 2023-08-11 18:05:09-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-11 18:10:29-warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+2023-08-11 18:10:30-warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-11 18:10:44-warn: [Build] Engine cache directory({link(C:\Users\ASUS\AppData\Local\Temp\CocosCreator\3.4.2\builder\engine\fb9707b9f76563dcc687a587d417fdb7)}) exists but has empty content. It's abnormal.
+2023-08-11 19:17:25-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-11 19:25:06-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-11 19:25:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-11 19:26:06-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}

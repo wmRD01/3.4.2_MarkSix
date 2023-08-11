@@ -110,6 +110,7 @@ export default class PanelBall extends BaseComponent {
     onChooeseBall(e: EventTouch, customEventData?: string) {
         if (this.isConfirm) return
         let convert = Number(customEventData)
+        /**如果已經被選過的球 */
         if (this.tempChoose.indexOf(convert) > -1) {
             this.tempChoose.splice(this.tempChoose.indexOf(convert), 1)[0];
             this.mapBallNumber.get(convert).cancel()
@@ -117,7 +118,9 @@ export default class PanelBall extends BaseComponent {
                 this.fullResetBallColor(true)
             return
         }
+        /**如果選號已滿 */
         if (this.tempChoose.length >= this.MaxCount) return
+        /**紀錄球號 */
         this.tempChoose.push(convert)
         this.mapBallNumber.get(convert).choose()
         if (this.tempChoose.length === this.MaxCount) {

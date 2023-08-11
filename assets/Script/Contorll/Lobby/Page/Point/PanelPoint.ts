@@ -12,6 +12,7 @@ import PanelLoading from '../../../NoClearNode/PanelLoading';
 import PublicData from '../../../../Model/PublicData';
 import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 const { ccclass, property } = _decorator;
+//TODO 優化如果未選號，自動縮欄位
 @ccclass('PanelPoint')
 export default class PanelPoint extends BaseComponent {
     @property(Prefab)

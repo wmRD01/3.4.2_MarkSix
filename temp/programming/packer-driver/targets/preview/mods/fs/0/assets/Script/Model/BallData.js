@@ -155,16 +155,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.node.setScale((_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
           }), PublicModel) : PublicModel).getInstance.oneSclaeVec3(1));
-          this.node.eulerAngles = Vec3.ZERO;
+          this.spriteBG.node.eulerAngles = Vec3.ZERO;
           Tween.stopAllByTarget(this.spriteBG.node);
           this.enabledBall(true);
         }
 
         backPosition() {
-          Tween.stopAllByTarget(this.spriteBG.node);
-          console.log(this.node.position);
-          this.node.position = this.orgV3;
-          console.log(this.node.position, this.orgV3);
+          Tween.stopAllByTarget(this.spriteBG.node); // console.log(this.node.position);
+
+          this.node.position = this.orgV3; // console.log(this.node.position, this.orgV3);
         }
 
         enabledBall(bool) {

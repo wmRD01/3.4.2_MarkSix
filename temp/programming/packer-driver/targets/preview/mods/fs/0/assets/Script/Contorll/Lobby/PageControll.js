@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, PageView, Node, DEV, BaseSingletonComponent, NotificationType, PageAction, WebSocketEvent, EventMng, PanelLoading, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PageControll;
+  var _reporterNs, _cclegacy, _decorator, PageView, Node, BaseSingletonComponent, NotificationType, PageAction, WebSocketEvent, EventMng, PanelLoading, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PageControll;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -47,8 +47,6 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
       _decorator = _cc._decorator;
       PageView = _cc.PageView;
       Node = _cc.Node;
-    }, function (_ccEnv) {
-      DEV = _ccEnv.DEV;
     }, function (_unresolved_2) {
       BaseSingletonComponent = _unresolved_2.default;
     }, function (_unresolved_3) {
@@ -114,19 +112,15 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
           }), NotificationType) : NotificationType).Pulic).emit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
             error: Error()
           }), WebSocketEvent) : WebSocketEvent).StartLoadLanguage);
-          if (DEV) (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+          (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
             error: Error()
           }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
             error: Error()
           }), NotificationType) : NotificationType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
             error: Error()
-          }), PageAction) : PageAction).ChangeTo, 0);else (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-            error: Error()
-          }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
-            error: Error()
-          }), NotificationType) : NotificationType).Page).emit((_crd && PageAction === void 0 ? (_reportPossibleCrUseOfPageAction({
-            error: Error()
-          }), PageAction) : PageAction).ChangeTo, 0);
+          }), PageAction) : PageAction).ChangeTo, 0); // if (DEV)
+          // else
+          //     EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, 0);
         }
 
         closeTouch(target) {

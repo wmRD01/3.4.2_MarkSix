@@ -49,6 +49,7 @@ export default class PanelClientInfo extends BaseComponent {
         super.onLoad()
         this.show()
         EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).on(LobbyStateEvent.EditUpdate, this.onEditUpData, this)
+        this.setEvent(LobbyStateEvent.NextIssueID, this.resetButton)
         this.labelEmail.string = ""
         this.labelPhone.string = ""
         this.labelNickName.string = ""

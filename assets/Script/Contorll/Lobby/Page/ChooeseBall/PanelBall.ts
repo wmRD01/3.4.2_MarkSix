@@ -80,6 +80,7 @@ export default class PanelBall extends BaseComponent {
         this.eventEmit(LobbyStateEvent.ChangeBallButtonState, true)
         this.setEvent(LobbyStateEvent.UpDateBall, this.reProcessing)
         this.setEvent(LobbyStateEvent.AttackBall, this.onConfirmAttack)
+        this.setEvent(LobbyStateEvent.NextIssueID, this.reset)
     }
     onEnable() {
         this.eventEmit(WebSocketEvent.StartConnect)
@@ -87,6 +88,12 @@ export default class PanelBall extends BaseComponent {
     }
     onDisable() {
         this.eventEmit(WebSocketEvent.CloseWebSocket)
+    }
+    async reset() {
+        this.eventEmit(WebSocketEvent.CloseWebSocket)
+        this.onTestReset(null)
+        await DelayTime.getInstance.StartDT(.5);
+        this.eventEmit(WebSocketEvent.StartConnect)
     }
 
     onRandomNumber(e: EventTouch, customEventData?: string) {
@@ -135,7 +142,7 @@ export default class PanelBall extends BaseComponent {
             element.cancel()
             element.backPosition()
         })
-        
+
     }
     onResetChooese(e: EventTouch, customEventData?: string) {
         if (this.isConfirm) return
@@ -213,7 +220,7 @@ export default class PanelBall extends BaseComponent {
         console.log(data);
 
         this.onResetChooese(null)
-        
+
         if (data.betCode != null) {
             if (this.isFullBall) {
                 PanelLoading.instance.closeLoading()

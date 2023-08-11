@@ -43,6 +43,7 @@ export default class PanelClientEdit extends BaseComponent {
         EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).on(LobbyStateEvent.EditNickname, this.onEditNickname, this)
         EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).on(LobbyStateEvent.EditPhone, this.onEditPhone, this)
         EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).on(LobbyStateEvent.EditEmail, this.onEditEmail, this)
+        this.setEvent(LobbyStateEvent.NextIssueID,this.reset)
         this.editNicName.string = ""
         this.editEmail.string = ""
         this.editPhone.string = ""

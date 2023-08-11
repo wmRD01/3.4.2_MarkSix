@@ -243,6 +243,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             _this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
               error: Error()
             }), LobbyStateEvent) : LobbyStateEvent).AttackBall, _this.onConfirmAttack);
+
+            _this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+              error: Error()
+            }), LobbyStateEvent) : LobbyStateEvent).NextIssueID, _this.reset);
           })();
         }
 
@@ -256,6 +260,26 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
             error: Error()
           }), WebSocketEvent) : WebSocketEvent).CloseWebSocket);
+        }
+
+        reset() {
+          var _this2 = this;
+
+          return _asyncToGenerator(function* () {
+            _this2.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+              error: Error()
+            }), WebSocketEvent) : WebSocketEvent).CloseWebSocket);
+
+            _this2.onTestReset(null);
+
+            yield (_crd && DelayTime === void 0 ? (_reportPossibleCrUseOfDelayTime({
+              error: Error()
+            }), DelayTime) : DelayTime).getInstance.StartDT(.5);
+
+            _this2.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+              error: Error()
+            }), WebSocketEvent) : WebSocketEvent).StartConnect);
+          })();
         }
 
         onRandomNumber(e, customEventData) {
@@ -331,10 +355,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         Attack() {
-          var _this2 = this;
+          var _this3 = this;
 
           return _asyncToGenerator(function* () {
-            if (_this2.isConfirm) {
+            if (_this3.isConfirm) {
               (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
                 error: Error()
               }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
@@ -345,7 +369,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               return;
             }
 
-            if (_this2.tempChoose.length < _this2.MaxCount) {
+            if (_this3.tempChoose.length < _this3.MaxCount) {
               (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
                 error: Error()
               }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
@@ -356,20 +380,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               return;
             }
 
-            var len = _this2.tempChoose.length;
+            var len = _this3.tempChoose.length;
 
             for (var index = 0; index < len; index++) {
-              _this2.isChoose.push(_this2.tempChoose.shift());
+              _this3.isChoose.push(_this3.tempChoose.shift());
             }
 
-            _this2.isChoose.sort((a, b) => a - b);
+            _this3.isChoose.sort((a, b) => a - b);
 
-            for (var _index = 0; _index < _this2.isChoose.length; _index++) {
-              _this2.mapBallNumber.get(_this2.isChoose[_index]).cancel();
+            for (var _index = 0; _index < _this3.isChoose.length; _index++) {
+              _this3.mapBallNumber.get(_this3.isChoose[_index]).cancel();
 
-              _this2.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+              _this3.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
                 error: Error()
-              }), LobbyStateEvent) : LobbyStateEvent).BallChooeseAction, _this2.mapBallNumber.get(_this2.isChoose[_index]).node, _index);
+              }), LobbyStateEvent) : LobbyStateEvent).BallChooeseAction, _this3.mapBallNumber.get(_this3.isChoose[_index]).node, _index);
 
               yield (_crd && DelayTime === void 0 ? (_reportPossibleCrUseOfDelayTime({
                 error: Error()
@@ -378,8 +402,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             /**打leo的com */
 
 
-            _this2.tempChoose = [];
-            _this2.isConfirm = true;
+            _this3.tempChoose = [];
+            _this3.isConfirm = true;
           })();
         }
 

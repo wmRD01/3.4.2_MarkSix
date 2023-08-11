@@ -10,6 +10,7 @@ import PublicModel from '../../../../Model/PublicModel';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
 import PublicData from '../../../../Model/PublicData';
+import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 const { ccclass, property } = _decorator;
 @ccclass('PanelPoint')
 export default class PanelPoint extends BaseComponent {
@@ -32,9 +33,10 @@ export default class PanelPoint extends BaseComponent {
     mapDate: Map<number, PointItemData> = new Map()
     async start() {
         await AssetMng.waitStateCheck(AssetType.Sprite)
-        this.layoutContent.removeAllChildren()
-        
+        this.reset()
+
         this.scrollview.node.on(ScrollView.EventType.SCROLL_TO_BOTTOM, this.onViewBottom, this)
+        this.setEvent(LobbyStateEvent.NextIssueID, this.reset)
     }
     onEnable() {
 
@@ -43,6 +45,12 @@ export default class PanelPoint extends BaseComponent {
             this.onViewBottom()
         }
         else this.returnFunction();
+    }
+    reset() {
+        this.layoutContent.removeAllChildren()
+        if (this.node.active) {
+            this.onViewBottom()
+        }
     }
     //#region History
     async requestHistory(count: number) {

@@ -147,6 +147,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), NotificationType) : NotificationType).PanelClient).on((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).EditUpdate, this.onEditUpData, this);
+          this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).NextIssueID, this.resetButton);
           this.labelEmail.string = "";
           this.labelPhone.string = "";
           this.labelNickName.string = "";

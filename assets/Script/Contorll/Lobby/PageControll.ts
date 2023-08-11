@@ -36,10 +36,10 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
         this.closeTouch(this.pageView)
         // console.log("欸我已經送了欸");
         EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(WebSocketEvent.StartLoadLanguage)
-        if (DEV)
-            EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, 0);
-        else
-            EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, 0);
+        EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, 0);
+        // if (DEV)
+        // else
+        //     EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, 0);
     }
     closeTouch(target: PageView) {
         //@ts-ignore

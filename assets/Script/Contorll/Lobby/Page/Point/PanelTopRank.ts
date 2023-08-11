@@ -9,6 +9,7 @@ import PublicModel from '../../../../Model/PublicModel';
 import PublicData from '../../../../Model/PublicData';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import Player from '../../../../Model/Player';
+import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 const { ccclass, property } = _decorator;
 @ccclass('PanelTopRank')
 export default class PanelTopRank extends BaseComponent {
@@ -20,11 +21,21 @@ export default class PanelTopRank extends BaseComponent {
     labelContent: Node;
     @property(Node)
     spriteBGContent: Node;
-    async start() {
+    start() {
+        this.reset()
+        this.setEvent(LobbyStateEvent.NextIssueID, this.reset)
+    }
+    async onEnable() {
         await AssetMng.waitStateCheck(AssetType.Sprite)
-        this.layoutRank.removeAllChildren()
-
         await this.requesTopScore()
+    }
+    async reset() {
+        this.layoutRank.removeAllChildren()
+        this.labelContent.removeAllChildren()
+        this.spriteBGContent.removeAllChildren()
+        if (this.node.active) {
+            await this.requesTopScore()
+        }
     }
     async requesTopScore() {
         return new Promise<void>(async (resolve, reject) => {

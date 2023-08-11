@@ -227,6 +227,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).AttackBall, this.onConfirmAttack);
+          this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).NextIssueID, this.reset);
         }
 
         onEnable() {
@@ -239,6 +242,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
             error: Error()
           }), WebSocketEvent) : WebSocketEvent).CloseWebSocket);
+        }
+
+        async reset() {
+          this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+            error: Error()
+          }), WebSocketEvent) : WebSocketEvent).CloseWebSocket);
+          this.onTestReset(null);
+          await (_crd && DelayTime === void 0 ? (_reportPossibleCrUseOfDelayTime({
+            error: Error()
+          }), DelayTime) : DelayTime).getInstance.StartDT(.5);
+          this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
+            error: Error()
+          }), WebSocketEvent) : WebSocketEvent).StartConnect);
         }
 
         onRandomNumber(e, customEventData) {

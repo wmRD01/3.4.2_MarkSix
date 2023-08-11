@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "cc/env"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Component, instantiate, Label, Node, Prefab, UITransform, _decorator, NotificationType, LobbyStateEvent, PageAction, EventMng, BaseComponent, PublicModel, RequestGPG, Player, PublicData, PanelLoading, BallData, PanelSystemMessage, SocketSetting, LangType, Marquee, Timer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _dec17, _dec18, _dec19, _dec20, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _descriptor17, _descriptor18, _descriptor19, _temp, _crd, ccclass, property, PanelHome;
+  var _reporterNs, _cclegacy, Button, Component, instantiate, Label, Node, Prefab, UITransform, _decorator, NotificationType, LobbyStateEvent, PageAction, EventMng, BaseComponent, PublicModel, RequestGPG, Player, PublicData, PanelLoading, BallData, PanelSystemMessage, SocketSetting, LangType, DEV, Marquee, Timer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _dec17, _dec18, _dec19, _dec20, _dec21, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _descriptor17, _descriptor18, _descriptor19, _descriptor20, _temp, _crd, ccclass, property, PanelHome;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -120,6 +120,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       SocketSetting = _unresolved_14.default;
     }, function (_unresolved_15) {
       LangType = _unresolved_15.LangType;
+    }, function (_ccEnv) {
+      DEV = _ccEnv.DEV;
     }],
     execute: function () {
       _crd = true;
@@ -131,7 +133,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", PanelHome = (_dec = ccclass('PanelHome'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Prefab), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Label), _dec9 = property(Label), _dec10 = property(Label), _dec11 = property(Label), _dec12 = property(Label), _dec13 = property(Label), _dec14 = property(Label), _dec15 = property(Label), _dec16 = property(Label), _dec17 = property(Button), _dec18 = property(Button), _dec19 = property(Button), _dec20 = property(Node), _dec(_class2 = (_class3 = (_temp = class PanelHome extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelHome = (_dec = ccclass('PanelHome'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Prefab), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Label), _dec9 = property(Label), _dec10 = property(Label), _dec11 = property(Label), _dec12 = property(Label), _dec13 = property(Label), _dec14 = property(Label), _dec15 = property(Label), _dec16 = property(Label), _dec17 = property(Label), _dec18 = property(Button), _dec19 = property(Button), _dec20 = property(Button), _dec21 = property(Node), _dec(_class2 = (_class3 = (_temp = class PanelHome extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor() {
@@ -141,78 +143,74 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "labelContent", _descriptor2, this);
 
-          _initializerDefineProperty(this, "ballItem", _descriptor3, this);
+          _initializerDefineProperty(this, "timeBG", _descriptor3, this);
 
-          _initializerDefineProperty(this, "labelTime", _descriptor4, this);
+          _initializerDefineProperty(this, "ballItem", _descriptor4, this);
 
-          _initializerDefineProperty(this, "labelCurrentTitle", _descriptor5, this);
+          _initializerDefineProperty(this, "labelTime", _descriptor5, this);
 
-          _initializerDefineProperty(this, "labelCurrentDrawIssueID", _descriptor6, this);
+          _initializerDefineProperty(this, "labelCurrentTitle", _descriptor6, this);
 
-          _initializerDefineProperty(this, "labelLastDrawIssueID", _descriptor7, this);
+          _initializerDefineProperty(this, "labelCurrentDrawIssueID", _descriptor7, this);
 
-          _initializerDefineProperty(this, "labelLastDrawDay", _descriptor8, this);
+          _initializerDefineProperty(this, "labelLastDrawIssueID", _descriptor8, this);
 
-          _initializerDefineProperty(this, "labelMarquee", _descriptor9, this);
+          _initializerDefineProperty(this, "labelLastDrawDay", _descriptor9, this);
 
-          _initializerDefineProperty(this, "labelMonth", _descriptor10, this);
+          _initializerDefineProperty(this, "labelMarquee", _descriptor10, this);
 
-          _initializerDefineProperty(this, "labelPointTitle", _descriptor11, this);
+          _initializerDefineProperty(this, "labelMonth", _descriptor11, this);
 
-          _initializerDefineProperty(this, "labelMyPoint", _descriptor12, this);
+          _initializerDefineProperty(this, "labelPointTitle", _descriptor12, this);
 
-          _initializerDefineProperty(this, "labelDetail", _descriptor13, this);
+          _initializerDefineProperty(this, "labelMyPoint", _descriptor13, this);
 
-          _initializerDefineProperty(this, "labelGiftTitle1", _descriptor14, this);
+          _initializerDefineProperty(this, "labelDetail", _descriptor14, this);
 
-          _initializerDefineProperty(this, "labelGiftTitle2", _descriptor15, this);
+          _initializerDefineProperty(this, "labelGiftTitle1", _descriptor15, this);
 
-          _initializerDefineProperty(this, "btnMoreDraw", _descriptor16, this);
+          _initializerDefineProperty(this, "labelGiftTitle2", _descriptor16, this);
 
-          _initializerDefineProperty(this, "btnPointDetail", _descriptor17, this);
+          _initializerDefineProperty(this, "btnMoreDraw", _descriptor17, this);
 
-          _initializerDefineProperty(this, "btnGoChooese", _descriptor18, this);
+          _initializerDefineProperty(this, "btnPointDetail", _descriptor18, this);
 
-          _initializerDefineProperty(this, "specialBallItem", _descriptor19, this);
+          _initializerDefineProperty(this, "btnGoChooese", _descriptor19, this);
+
+          _initializerDefineProperty(this, "specialBallItem", _descriptor20, this);
 
           _defineProperty(this, "marquee", void 0);
 
           _defineProperty(this, "timer", void 0);
 
+          _defineProperty(this, "isChangeIssueID", void 0);
+
           _defineProperty(this, "currentIssueID", void 0);
 
-          _defineProperty(this, "lastIssueID", void 0);
+          _defineProperty(this, "loopTimer", void 0);
+
+          _defineProperty(this, "testtotoel", 0);
         }
 
         onLoad() {
           this.marquee = this.labelMarquee.addComponent(Marquee);
           this.timer = this.labelTime.addComponent(Timer);
+          this.timer.setBGNode(this.timeBG);
           /**取TOKEN */
 
           (_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
             error: Error()
           }), Player) : Player).getInstance.gpgToken = this.handleURLData(window.location.href).token;
+          this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).NextIssueID, this.reset);
         }
 
         onEnable() {
           var _this = this;
 
           return _asyncToGenerator(function* () {
-            yield _this.requestMyInfo();
-            yield _this.requestDrawHistory();
-            yield _this.requestDrawUpcoming();
-
-            if (_this.lastIssueID != _this.currentIssueID) {
-              //TODO 製做我的積分
-              yield _this.requesMyScore();
-              /**代表更新最新一期 */
-
-              _this.lastIssueID = _this.currentIssueID;
-            }
-
-            (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
-              error: Error()
-            }), PanelLoading) : PanelLoading).instance.closeLoading();
+            _this.reset();
           })();
         }
 
@@ -220,11 +218,37 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // this.timer.setTime(100)
         }
 
-        onDisable() {} //#region  DrawHistory
+        onDisable() {}
+
+        reset() {
+          var _this2 = this;
+
+          return _asyncToGenerator(function* () {
+            if (_this2.isChangeIssueID) {
+              (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+                error: Error()
+              }), PanelLoading) : PanelLoading).instance.closeLoading();
+              return;
+            }
+
+            yield _this2.requestMyInfo();
+            yield _this2.requestDrawHistory();
+            yield _this2.requestDrawUpcoming();
+            yield _this2.requesMyScore();
+            (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+              error: Error()
+            }), PanelLoading) : PanelLoading).instance.closeLoading();
+
+            if (_this2.isChangeIssueID) {
+              _this2.testtotoel = 0;
+              _this2.loopTimer = setInterval(_this2.requestDrawUpcomingLoop.bind(_this2), 2000);
+            }
+          })();
+        } //#region  DrawHistory
 
 
         requestDrawHistory() {
-          var _this2 = this;
+          var _this3 = this;
 
           return _asyncToGenerator(function* () {
             return new Promise( /*#__PURE__*/function () {
@@ -247,7 +271,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                   error: Error()
                 }), PublicData) : PublicData).getInstance.gpgUrlPlayApi + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
                   error: Error()
-                }), RequestGPG) : RequestGPG).API.DrawHistory + "?" + convert, _this2.responseDrawHistory.bind(_this2));
+                }), RequestGPG) : RequestGPG).API.DrawHistory + "?" + convert, _this3.responseDrawHistory.bind(_this3));
                 resolve();
               });
 
@@ -260,9 +284,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         responseDrawHistory(response) {
           if (response.data) {
+            this.lastDrawCodeLayout.removeAllChildren();
             var getDate = response.data[0];
-            if (this.currentIssueID == getDate.issueID) return;
-            this.currentIssueID = getDate.issueID;
             this.labelLastDrawIssueID.string = "\u7B2C" + getDate.issueID.toString() + "\u671F";
             /**不需要week日 */
             // console.log(PublicModel.getInstance.convertDate(getDate.openDate).split("(")[0]);
@@ -299,7 +322,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
 
         requestDrawUpcoming() {
-          var _this3 = this;
+          var _this4 = this;
 
           return _asyncToGenerator(function* () {
             return new Promise( /*#__PURE__*/function () {
@@ -321,7 +344,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                   error: Error()
                 }), PublicData) : PublicData).getInstance.gpgUrlPlayApi + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
                   error: Error()
-                }), RequestGPG) : RequestGPG).API.DrawUpcoming + "?" + convert, _this3.responseDrawUpcoming.bind(_this3));
+                }), RequestGPG) : RequestGPG).API.DrawUpcoming + "?" + convert, _this4.responseDrawUpcoming.bind(_this4));
                 resolve();
               });
 
@@ -334,23 +357,35 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         responseDrawUpcoming(response) {
           var getDate = response.data[0];
-          this.labelCurrentDrawIssueID.string = "\u7B2C" + getDate.issueID.toString() + "\u671F"; // this.timer.setTimeNoTimer(PublicModel.getInstance.convertDateTime(getDate.openDate))
-
-          var Date_A = new Date(getDate.openDate);
-          var Date_B = new Date(getDate.serverNowTime); //@ts-ignore
-
-          var Date_C = new Date(Date_B - Date_A); //TODO 如果時間到了該怎處理?
-
-          this.timer.setTimer(Math.abs(Date_C.getTime()));
           (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
             error: Error()
           }), PublicData) : PublicData).getInstance.today = getDate.openDate;
+          this.labelCurrentDrawIssueID.string = "\u7B2C" + getDate.issueID.toString() + "\u671F";
+          this.currentIssueID = getDate.issueID; // this.timer.setTimeNoTimer(PublicModel.getInstance.convertDateTime(getDate.openDate))
+          // console.log(getDate.serverNowTime);
+
+          var Date_A = new Date(getDate.openDate);
+          var Date_B = new Date("2023-08-11T21:41:20.1951921+08:00"); //@ts-ignore
+
+          var countTime = Date_A - Date_B; // var Date_B = new Date(getDate.serverNowTime);
+
+          var Date_C = new Date(countTime);
+          console.log(countTime);
+          console.log(Date_C); //TODO 如果時間到了該怎處理?
+
+          this.timer.setTimer(Date_C.getTime());
+
+          if (countTime < 0) {
+            console.error("時間到了，該開始搓報API");
+            this.isChangeIssueID = true;
+            return;
+          }
         } //#endregion
         //#region MyScore
 
 
         requesMyScore() {
-          var _this4 = this;
+          var _this5 = this;
 
           return _asyncToGenerator(function* () {
             return new Promise( /*#__PURE__*/function () {
@@ -381,7 +416,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                   error: Error()
                 }), PublicData) : PublicData).getInstance.gpgUrlPlayApi + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
                   error: Error()
-                }), RequestGPG) : RequestGPG).API.My_Score + "?" + convert, _this4.responseMyScore.bind(_this4));
+                }), RequestGPG) : RequestGPG).API.My_Score + "?" + convert, _this5.responseMyScore.bind(_this5));
                 resolve();
               });
 
@@ -455,6 +490,63 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }());
           })();
         } //#endregion
+        //#region 
+
+
+        requestDrawUpcomingLoop() {
+          var _this6 = this;
+
+          return _asyncToGenerator(function* () {
+            var body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Body.NeedToken.DrawUpcoming();
+            body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+              error: Error()
+            }), PublicModel) : PublicModel).getInstance.convertMD5((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.gpgApi);
+            var convert = new URLSearchParams(body).toString();
+            yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).Request().setToken((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+              error: Error()
+            }), Player) : Player).getInstance.gpgToken).fetchData("" + (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.gpgUrlPlayApi + (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
+              error: Error()
+            }), RequestGPG) : RequestGPG).API.DrawUpcoming + "?" + convert, _this6.checkIssueID.bind(_this6));
+          })();
+        }
+
+        checkIssueID(response) {
+          console.log("打拉打拉");
+          console.log(DEV);
+          console.log(this.testtotoel);
+
+          if (DEV) {
+            this.testtotoel++;
+
+            if (this.testtotoel == 3) {
+              console.error("終於換天拉!!!!");
+              this.isChangeIssueID = false;
+              clearInterval(this.loopTimer);
+              this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+                error: Error()
+              }), LobbyStateEvent) : LobbyStateEvent).NextIssueID);
+            }
+
+            return;
+          }
+
+          if (this.currentIssueID != response.data[0].issueID) {
+            console.error("終於換天拉!!!!");
+            this.isChangeIssueID = false;
+            clearInterval(this.loopTimer);
+            this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+              error: Error()
+            }), LobbyStateEvent) : LobbyStateEvent).NextIssueID);
+          }
+        } //#endregion
 
 
         onGoPage(e, customEventData) {
@@ -501,87 +593,92 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class3.prototype, "ballItem", [_dec4], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class3.prototype, "timeBG", [_dec4], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class3.prototype, "labelTime", [_dec5], {
+      }), _descriptor4 = _applyDecoratedDescriptor(_class3.prototype, "ballItem", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "labelCurrentTitle", [_dec6], {
+      }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "labelTime", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor6 = _applyDecoratedDescriptor(_class3.prototype, "labelCurrentDrawIssueID", [_dec7], {
+      }), _descriptor6 = _applyDecoratedDescriptor(_class3.prototype, "labelCurrentTitle", [_dec7], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor7 = _applyDecoratedDescriptor(_class3.prototype, "labelLastDrawIssueID", [_dec8], {
+      }), _descriptor7 = _applyDecoratedDescriptor(_class3.prototype, "labelCurrentDrawIssueID", [_dec8], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor8 = _applyDecoratedDescriptor(_class3.prototype, "labelLastDrawDay", [_dec9], {
+      }), _descriptor8 = _applyDecoratedDescriptor(_class3.prototype, "labelLastDrawIssueID", [_dec9], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor9 = _applyDecoratedDescriptor(_class3.prototype, "labelMarquee", [_dec10], {
+      }), _descriptor9 = _applyDecoratedDescriptor(_class3.prototype, "labelLastDrawDay", [_dec10], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor10 = _applyDecoratedDescriptor(_class3.prototype, "labelMonth", [_dec11], {
+      }), _descriptor10 = _applyDecoratedDescriptor(_class3.prototype, "labelMarquee", [_dec11], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor11 = _applyDecoratedDescriptor(_class3.prototype, "labelPointTitle", [_dec12], {
+      }), _descriptor11 = _applyDecoratedDescriptor(_class3.prototype, "labelMonth", [_dec12], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor12 = _applyDecoratedDescriptor(_class3.prototype, "labelMyPoint", [_dec13], {
+      }), _descriptor12 = _applyDecoratedDescriptor(_class3.prototype, "labelPointTitle", [_dec13], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor13 = _applyDecoratedDescriptor(_class3.prototype, "labelDetail", [_dec14], {
+      }), _descriptor13 = _applyDecoratedDescriptor(_class3.prototype, "labelMyPoint", [_dec14], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor14 = _applyDecoratedDescriptor(_class3.prototype, "labelGiftTitle1", [_dec15], {
+      }), _descriptor14 = _applyDecoratedDescriptor(_class3.prototype, "labelDetail", [_dec15], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor15 = _applyDecoratedDescriptor(_class3.prototype, "labelGiftTitle2", [_dec16], {
+      }), _descriptor15 = _applyDecoratedDescriptor(_class3.prototype, "labelGiftTitle1", [_dec16], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor16 = _applyDecoratedDescriptor(_class3.prototype, "btnMoreDraw", [_dec17], {
+      }), _descriptor16 = _applyDecoratedDescriptor(_class3.prototype, "labelGiftTitle2", [_dec17], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor17 = _applyDecoratedDescriptor(_class3.prototype, "btnPointDetail", [_dec18], {
+      }), _descriptor17 = _applyDecoratedDescriptor(_class3.prototype, "btnMoreDraw", [_dec18], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor18 = _applyDecoratedDescriptor(_class3.prototype, "btnGoChooese", [_dec19], {
+      }), _descriptor18 = _applyDecoratedDescriptor(_class3.prototype, "btnPointDetail", [_dec19], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor19 = _applyDecoratedDescriptor(_class3.prototype, "specialBallItem", [_dec20], {
+      }), _descriptor19 = _applyDecoratedDescriptor(_class3.prototype, "btnGoChooese", [_dec20], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor20 = _applyDecoratedDescriptor(_class3.prototype, "specialBallItem", [_dec21], {
         configurable: true,
         enumerable: true,
         writable: true,
@@ -647,6 +744,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "countTime", void 0);
 
           _defineProperty(this, "isAction", void 0);
+
+          _defineProperty(this, "bg", void 0);
         }
 
         onLoad() {
@@ -657,6 +756,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         reset() {
           this.countTime = 0;
           this.isAction = false;
+          this.bg.active = true;
         }
 
         setTimeNoTimer(str) {
@@ -669,10 +769,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.isAction = true;
         }
 
+        setBGNode(_node) {
+          this.bg = _node;
+        }
+
+        timeUp() {
+          this.reset();
+          this.bindLabel.string = "開獎中...";
+          this.bg.active = false;
+        }
+
         update(dt) {
           if (this.isAction) {
             this.countTime -= dt * 1000;
-            if (this.countTime < 0) this.reset();
+
+            if (this.countTime < 0) {
+              this.timeUp();
+              return;
+            }
+
             this.bindLabel.string = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
               error: Error()
             }), PublicModel) : PublicModel).getInstance.formatMillisecond(this.countTime, true);

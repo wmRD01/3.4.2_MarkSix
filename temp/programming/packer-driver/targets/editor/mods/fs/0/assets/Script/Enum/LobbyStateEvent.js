@@ -24,6 +24,7 @@ System.register(["cc"], function (_export, _context) {
         LobbyStateEvent["EditEmail"] = "EditEmail";
         LobbyStateEvent["EditUpdate"] = "EditUpdate";
         LobbyStateEvent["ChangeBallButtonState"] = "ChangeBallButtonState";
+        LobbyStateEvent["NextIssueID"] = "NextIssueID";
       })(LobbyStateEvent || _export("LobbyStateEvent", LobbyStateEvent = {}));
 
       _cclegacy._RF.pop();

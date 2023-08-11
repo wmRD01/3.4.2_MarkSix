@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Node, Prefab, _decorator, AssetType, AssetMng, BaseComponent, AutoFollow, RankItmeData, RequestGPG, PublicModel, PublicData, Player, _dec, _dec2, _dec3, _dec4, _dec5, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, PanelTopRank;
+  var _reporterNs, _cclegacy, instantiate, Node, Prefab, _decorator, AssetType, AssetMng, BaseComponent, AutoFollow, RankItmeData, RequestGPG, PublicModel, PublicData, Player, LobbyStateEvent, _dec, _dec2, _dec3, _dec4, _dec5, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, PanelTopRank;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -51,6 +51,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("Player", "../../../../Model/Player", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfLobbyStateEvent(extras) {
+    _reporterNs.report("LobbyStateEvent", "../../../../Enum/LobbyStateEvent", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -78,6 +82,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       PublicData = _unresolved_9.default;
     }, function (_unresolved_10) {
       Player = _unresolved_10.default;
+    }, function (_unresolved_11) {
+      LobbyStateEvent = _unresolved_11.LobbyStateEvent;
     }],
     execute: function () {
       _crd = true;
@@ -104,14 +110,30 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "spriteBGContent", _descriptor4, this);
         }
 
-        async start() {
+        start() {
+          this.reset();
+          this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).NextIssueID, this.reset);
+        }
+
+        async onEnable() {
           await (_crd && AssetMng === void 0 ? (_reportPossibleCrUseOfAssetMng({
             error: Error()
           }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
             error: Error()
           }), AssetType) : AssetType).Sprite);
-          this.layoutRank.removeAllChildren();
           await this.requesTopScore();
+        }
+
+        async reset() {
+          this.layoutRank.removeAllChildren();
+          this.labelContent.removeAllChildren();
+          this.spriteBGContent.removeAllChildren();
+
+          if (this.node.active) {
+            await this.requesTopScore();
+          }
         }
 
         async requesTopScore() {

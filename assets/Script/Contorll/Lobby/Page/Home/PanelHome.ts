@@ -16,6 +16,7 @@ import BallData from '../../../../Model/BallData';
 import PanelSystemMessage from '../../../NoClearNode/PanelSystemMessage';
 import SocketSetting from '../../../../Socket/SocketSetting';
 import { LangType } from '../../../../Enum/LangType';
+import { DEV } from 'cc/env';
 
 
 
@@ -26,6 +27,8 @@ export default class PanelHome extends BaseComponent {
     lastDrawCodeLayout: Node
     @property(Node)
     labelContent: Node;
+    @property(Node)
+    timeBG: Node;
 
     @property(Prefab)
     ballItem: Prefab
@@ -64,26 +67,20 @@ export default class PanelHome extends BaseComponent {
     specialBallItem: Node
     marquee: Marquee;
     timer: Timer;
+    isChangeIssueID: boolean;
     currentIssueID: number;
-    lastIssueID: number;
+    loopTimer: number;
+    testtotoel: number = 0;
     onLoad() {
         this.marquee = this.labelMarquee.addComponent(Marquee)
         this.timer = this.labelTime.addComponent(Timer);
+        this.timer.setBGNode(this.timeBG);
         /**取TOKEN */
         Player.getInstance.gpgToken = (this.handleURLData(window.location.href) as URLVlaue).token
-
+        this.setEvent(LobbyStateEvent.NextIssueID, this.reset)
     }
     async onEnable() {
-        await this.requestMyInfo()
-        await this.requestDrawHistory()
-        await this.requestDrawUpcoming()
-        if (this.lastIssueID != this.currentIssueID) {
-            //TODO 製做我的積分
-            await this.requesMyScore()
-            /**代表更新最新一期 */
-            this.lastIssueID = this.currentIssueID;
-        }
-        PanelLoading.instance.closeLoading()
+        this.reset()
     }
     start() {
         // this.marquee.startMarque("HIHIHI")
@@ -92,6 +89,21 @@ export default class PanelHome extends BaseComponent {
 
     onDisable() {
 
+    }
+    async reset() {
+        if (this.isChangeIssueID) {
+            PanelLoading.instance.closeLoading()
+            return;
+        }
+        await this.requestMyInfo()
+        await this.requestDrawHistory()
+        await this.requestDrawUpcoming()
+        await this.requesMyScore()
+        PanelLoading.instance.closeLoading()
+        if (this.isChangeIssueID) {
+            this.testtotoel = 0
+            this.loopTimer = setInterval(this.requestDrawUpcomingLoop.bind(this), 2000)
+        }
     }
     //#region  DrawHistory
     async requestDrawHistory() {
@@ -108,9 +120,8 @@ export default class PanelHome extends BaseComponent {
     }
     responseDrawHistory(response?: ResponseGPG.DrawHistory.DataClass) {
         if (response.data) {
+            this.lastDrawCodeLayout.removeAllChildren()
             let getDate = response.data[0]
-            if (this.currentIssueID == getDate.issueID) return
-            this.currentIssueID = getDate.issueID;
             this.labelLastDrawIssueID.string = `第${getDate.issueID.toString()}期`
 
             /**不需要week日 */
@@ -151,17 +162,27 @@ export default class PanelHome extends BaseComponent {
     }
     responseDrawUpcoming(response?: ResponseGPG.DrawUpcoming.DataClass) {
         let getDate = response.data[0]
-        this.labelCurrentDrawIssueID.string = `第${(getDate.issueID).toString()}期`
-        // this.timer.setTimeNoTimer(PublicModel.getInstance.convertDateTime(getDate.openDate))
-        var Date_A = new Date(getDate.openDate);
-        var Date_B = new Date(getDate.serverNowTime);
-        //@ts-ignore
-        var Date_C = new Date(Date_B - Date_A);
-        //TODO 如果時間到了該怎處理?
-        this.timer.setTimer(Math.abs(Date_C.getTime()))
-
-
         PublicData.getInstance.today = getDate.openDate
+        this.labelCurrentDrawIssueID.string = `第${(getDate.issueID).toString()}期`
+        this.currentIssueID = getDate.issueID
+        // this.timer.setTimeNoTimer(PublicModel.getInstance.convertDateTime(getDate.openDate))
+        // console.log(getDate.serverNowTime);
+
+        var Date_A = new Date(getDate.openDate);
+        var Date_B = new Date("2023-08-11T21:41:20.1951921+08:00");
+        //@ts-ignore
+        var countTime = Date_A - Date_B
+        // var Date_B = new Date(getDate.serverNowTime);
+        var Date_C = new Date(countTime);
+        console.log(countTime);
+        console.log(Date_C);
+        //TODO 如果時間到了該怎處理?
+        this.timer.setTimer(Date_C.getTime())
+        if (countTime < 0) {
+            console.error("時間到了，該開始搓報API");
+            this.isChangeIssueID = true;
+            return
+        }
     }
     //#endregion
 
@@ -211,6 +232,42 @@ export default class PanelHome extends BaseComponent {
         })
     }
 
+    //#endregion
+    //#region 
+    async requestDrawUpcomingLoop() {
+        const body = new RequestGPG.Body.NeedToken.DrawUpcoming()
+        body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApi)
+        let convert = new URLSearchParams(body).toString()
+        await new RequestGPG.Request()
+            .setToken(Player.getInstance.gpgToken)
+            .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawUpcoming}?${convert}`, this.checkIssueID.bind(this))
+    }
+    checkIssueID(response?: ResponseGPG.DrawUpcoming.DataClass) {
+        console.log("打拉打拉");
+        console.log(DEV);
+        console.log(this.testtotoel);
+
+        if (DEV) {
+
+            this.testtotoel++
+            if (this.testtotoel == 3) {
+                console.error("終於換天拉!!!!");
+                this.isChangeIssueID = false;
+                clearInterval(this.loopTimer)
+                this.eventEmit(LobbyStateEvent.NextIssueID)
+            }
+
+            return;
+        }
+
+
+        if (this.currentIssueID != response.data[0].issueID) {
+            console.error("終於換天拉!!!!");
+            this.isChangeIssueID = false;
+            clearInterval(this.loopTimer)
+            this.eventEmit(LobbyStateEvent.NextIssueID)
+        }
+    }
     //#endregion
     onGoPage(e: EventTouch, customEventData?: string) {
         let split = customEventData.split('-')
@@ -280,7 +337,8 @@ class Marquee extends Component {
 class Timer extends Component {
     bindLabel: Label;
     countTime: number;
-    isAction: boolean
+    isAction: boolean;
+    bg: Node;
     onLoad() {
         this.bindLabel = this.node.getComponent(Label)
         this.bindLabel.string = ""
@@ -288,6 +346,7 @@ class Timer extends Component {
     reset() {
         this.countTime = 0
         this.isAction = false
+        this.bg.active = true
     }
     setTimeNoTimer(str: string) {
         this.bindLabel.string = str
@@ -297,11 +356,22 @@ class Timer extends Component {
         this.countTime = num
         this.isAction = true
     }
+    setBGNode(_node: Node) {
+        this.bg = _node
+    }
+    timeUp() {
+        this.reset()
+        this.bindLabel.string = "開獎中..."
+        this.bg.active = false;
+    }
 
     update(dt: number) {
         if (this.isAction) {
             this.countTime -= (dt * 1000)
-            if (this.countTime < 0) this.reset()
+            if (this.countTime < 0) {
+                this.timeUp()
+                return
+            }
             this.bindLabel.string = PublicModel.getInstance.formatMillisecond(this.countTime, true)
         }
     }

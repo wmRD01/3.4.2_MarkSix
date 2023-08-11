@@ -300,7 +300,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Lobby.scene": {
-    "time": 1691725235034.0186,
+    "time": 1691747499401.9502,
     "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
     "missing": false
   },
@@ -665,7 +665,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\LobbyStateEvent.ts": {
-    "time": 1691043495615.5667,
+    "time": 1691739328364.968,
     "uuid": "e292d2cd-8630-4244-853b-3674b43bdcbe",
     "missing": false
   },
@@ -815,7 +815,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PublicData.ts": {
-    "time": 1691486476751.3777,
+    "time": 1691747530532.0872,
     "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12",
     "missing": false
   },
@@ -825,7 +825,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\RankItmeData.ts": {
-    "time": 1691723372678.4558,
+    "time": 1691745393105.1604,
     "uuid": "afbdd561-2874-4619-88b9-8c244299609b",
     "missing": false
   },
@@ -1020,7 +1020,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\PageControll.ts": {
-    "time": 1691042225181.4187,
+    "time": 1691733294765.277,
     "uuid": "28a3088d-c1fb-4755-8eba-e7282848d92b",
     "missing": false
   },
@@ -1165,7 +1165,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ChooeseBall\\PanelBall.ts": {
-    "time": 1691546381012.6145,
+    "time": 1691746676612.0764,
     "uuid": "d2f08cfc-f861-4fd1-8212-bea888090d2b",
     "missing": false
   },
@@ -1175,27 +1175,27 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ClientInfo\\PanelClientInfo.ts": {
-    "time": 1691487774111.6172,
+    "time": 1691739579823.0776,
     "uuid": "e72b2a05-d840-45f6-a09f-c715d142e9b8",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Home\\PanelHome.ts": {
-    "time": 1691721745288.427,
+    "time": 1691745475067.2727,
     "uuid": "b8492fab-e86b-4b04-87cf-33d6acb68979",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Point\\PanelPageButton.ts": {
-    "time": 1691725187355.1538,
+    "time": 1691725310019.2036,
     "uuid": "cbfe3a2c-c34c-4dce-b5a8-cd6436352f93",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Point\\PanelPoint.ts": {
-    "time": 1691721252005.7039,
+    "time": 1691745605765.2131,
     "uuid": "303d6930-d3b3-4ed5-a888-f81a6a4a03cc",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Point\\PanelTopRank.ts": {
-    "time": 1691133838932.302,
+    "time": 1691745598397.309,
     "uuid": "73704463-4c7c-4ce8-b439-666025f44ee6",
     "missing": false
   },
@@ -1955,7 +1955,7 @@
     "time": 1689585009834.9856
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ClientInfo\\PageClientEdit.ts": {
-    "time": 1691550364549.3381,
+    "time": 1691739421509.6675,
     "uuid": "5d3e955f-5565-4e30-a755-5876a833de2f",
     "missing": false
   },

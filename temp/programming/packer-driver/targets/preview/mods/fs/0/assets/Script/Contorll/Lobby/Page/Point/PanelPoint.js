@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Node, Prefab, ScrollView, Vec3, _decorator, BaseComponent, PointItemData, AssetType, AssetMng, RequestGPG, Player, PublicModel, PanelLoading, PublicData, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, PanelPoint;
+  var _reporterNs, _cclegacy, instantiate, Node, Prefab, ScrollView, Vec3, _decorator, BaseComponent, PointItemData, AssetType, AssetMng, RequestGPG, Player, PublicModel, PanelLoading, PublicData, LobbyStateEvent, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, PanelPoint;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -55,6 +55,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("PublicData", "../../../../Model/PublicData", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfLobbyStateEvent(extras) {
+    _reporterNs.report("LobbyStateEvent", "../../../../Enum/LobbyStateEvent", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -84,6 +88,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       PanelLoading = _unresolved_9.default;
     }, function (_unresolved_10) {
       PublicData = _unresolved_10.default;
+    }, function (_unresolved_11) {
+      LobbyStateEvent = _unresolved_11.LobbyStateEvent;
     }],
     execute: function () {
       _crd = true;
@@ -134,9 +140,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), AssetType) : AssetType).Sprite);
 
-            _this.layoutContent.removeAllChildren();
+            _this.reset();
 
             _this.scrollview.node.on(ScrollView.EventType.SCROLL_TO_BOTTOM, _this.onViewBottom, _this);
+
+            _this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+              error: Error()
+            }), LobbyStateEvent) : LobbyStateEvent).NextIssueID, _this.reset);
           })();
         }
 
@@ -146,6 +156,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.layoutContent.children.length == 0) {
             this.onViewBottom();
           } else this.returnFunction();
+        }
+
+        reset() {
+          this.layoutContent.removeAllChildren();
+
+          if (this.node.active) {
+            this.onViewBottom();
+          }
         } //#region History
 
 

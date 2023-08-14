@@ -88,11 +88,13 @@ export default class PanelBall extends BaseComponent {
             element.getOrg()
         });
         this.eventEmit(LobbyStateEvent.ChangeBallButtonState, true)
+        this.eventEmit(LobbyStateEvent.ChangeConfirmState, false)
         this.setEvent(LobbyStateEvent.UpDateBall, this.reProcessing)
         this.setEvent(LobbyStateEvent.AttackBall, this.onConfirmAttack)
         this.setEvent(LobbyStateEvent.NextIssueID, this.reset)
     }
     onEnable() {
+        this.eventEmit(LobbyStateEvent.ChangeConfirmState, false)
         this.eventEmit(WebSocketEvent.StartConnect)
 
     }
@@ -127,6 +129,7 @@ export default class PanelBall extends BaseComponent {
             if (this.isFullBall) {
                 this.tipBox.active = false
                 this.fullResetBallColor(true)
+                this.eventEmit(LobbyStateEvent.ChangeConfirmState, false)
             }
             if (this.tempChoose.length == 0)
                 this.labelState.string = SocketSetting.t("041", LangType.Game).replace("$0", this.MaxCount.toString())
@@ -143,6 +146,7 @@ export default class PanelBall extends BaseComponent {
         if (this.tempChoose.length === this.MaxCount) {
             this.isFullBall = true;
             this.tipBox.active = true;
+            this.eventEmit(LobbyStateEvent.ChangeConfirmState, true)
             this.mapBallNumber.forEach(element => {
                 //代表沒被選種
                 if (this.tempChoose.indexOf(element.ballNumber) == -1) {
@@ -178,7 +182,9 @@ export default class PanelBall extends BaseComponent {
             }
         }
         this.tempChoose = []
-
+        this.eventEmit(LobbyStateEvent.ChangeConfirmState, false)
+        this.tipBox.active = false
+        this.labelState.string = SocketSetting.t("041", LangType.Game).replace("$0", this.MaxCount.toString())
     }
     async Attack() {
         if (this.isConfirm) {

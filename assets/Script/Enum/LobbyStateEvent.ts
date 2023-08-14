@@ -9,6 +9,7 @@ export enum LobbyStateEvent {
     EditEmail = "EditEmail",
     EditUpdate = "EditUpdate",
     ChangeBallButtonState = "ChangeBallButtonState",
+    ChangeConfirmState="ChangeConfirmState",
     NextIssueID = "NextIssueID",
        
 }

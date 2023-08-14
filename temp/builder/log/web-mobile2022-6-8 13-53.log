@@ -27531,3 +27531,452 @@ export * from 'C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resou
 2023-8-11 18:11-debug: // ---- cocos-service:(onAfterBuild) success ----
 2023-8-11 18:11-debug: build success in 60671 ms!
 2023-8-11 18:11-debug: Stop record console. {file(C:\CocosProject\3.4.2_MarkSix\temp\builder\log\web-mobile2022-6-8 13-53.log)}
+2023-8-14 18:17-debug: Start record console... {file(C:\CocosProject\3.4.2_MarkSix\temp\builder\log\web-mobile2022-6-8 13-53.log)}
+2023-8-14 18:17-debug: =================================== Build Task (web-mobile) Start ================================
+2023-8-14 18:17-debug: Start build task, options:{"name":"Baccarat","platform":"web-mobile","buildPath":"C:\\inetpub\\wwwroot\\JaiJaiTest\\game50003","debug":false,"md5Cache":true,"sourceMaps":false,"replaceSplashScreen":true,"mainBundleCompressionType":"merge_all_json","mainBundleIsRemote":false,"mergeStartScene":false,"experimentalEraseModules":false,"compressTexture":true,"packAutoAtlas":false,"startScene":"602c3d25-484a-4071-ae9b-2b9ed340bc8b","scenes":[{"url":"db://assets/Scene/Lobby.scene","uuid":"45e4a202-9a2b-4605-8f2c-970d3e4491cc","inBundle":false},{"url":"db://assets/Scene/Loading.scene","uuid":"602c3d25-484a-4071-ae9b-2b9ed340bc8b","inBundle":false}],"outputName":"web-mobile","packages":{"web-mobile":{"orientation":"portrait","polyfills":{"asyncFunctions":true,"coreJs":false}},"cocos-service":{"configID":"08c3e2","services":[]}}}
+2023-8-14 18:17-debug: Build with Cocos Creator 3.4.2
+2023-8-14 18:17-debug: cocos-service:(onBeforeBuild) start...0%
+2023-8-14 18:17-debug: // ---- cocos-service:(onBeforeBuild) ----
+2023-8-14 18:17-debug: Process: heapTotal 179.80MB heapUsed 172.90MB rss 236.12MB
+2023-8-14 18:17-debug: // ---- cocos-service:(onBeforeBuild) success ----
+2023-8-14 18:17-debug: Query all assets info in project
+2023-8-14 18:17-debug: cocos-service:(onBeforeBuild)3%
+2023-8-14 18:17-debug: init custom config: keepNodeUuid: false, useCache: true
+2023-8-14 18:17-debug: BuildAssetLibrary query-assets with assets 451
+2023-8-14 18:17-debug: BuildAssetLibrary initialized with asset 728!
+2023-8-14 18:17-debug:   Number of all scripts: 130
+2023-8-14 18:17-debug:   Number of other assets: 825
+2023-8-14 18:17-debug: web-mobile:(onAfterInit) start...3%
+2023-8-14 18:17-debug:   Number of all scenes: 4
+2023-8-14 18:17-debug: // ---- web-mobile:(onAfterInit) ----
+2023-8-14 18:17-debug: Process: heapTotal 180.54MB heapUsed 169.66MB rss 235.29MB
+2023-8-14 18:17-debug: web-mobile:(onAfterInit)5%
+2023-8-14 18:17-debug: // ---- web-mobile:(onAfterInit) success ----
+2023-8-14 18:17-debug: Reload project scripts start5%
+2023-8-14 18:17-log: // ---- Reload project scripts ----
+2023-8-14 18:17-debug: Process: heapTotal 180.54MB heapUsed 170.03MB rss 235.34MB
+2023-8-14 18:17-debug: reload all scripts.
+2023-8-14 18:17-debug: Incremental keys: 
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/base" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl2" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/3d" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/2d" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle-2d" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-framework" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-framework" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/primitive" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/intersection-2d" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/profiler" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/audio" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/video" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/terrain" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tiled-map" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tween" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/webview" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/spine" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/cc-fu/dragon-bones" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/cce/internal/x/cc.js" loaded.
+2023-8-14 18:17-debug: Invalidating 'pack:///mods/cce/internal/x/cc.js'
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/cce/internal/x/prerequisite-imports.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/cce/internal/code-quality/cr.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/cce/internal/x/cc.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Patten/Singleton/SingletonManger.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/GameEvent.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Patten/Singleton/BaseSingleton.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register EventMng
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/NotificationType.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/EventMng.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/CheckLoadingType.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/GameSenceName.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/CheckLoading.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Plug/MyMath.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/PublicData.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/core.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/x64-core.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/enc-base64.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/md5.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/evpkdf.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/cipher-core.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/enc-utf16.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/enc-base64url.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/hmac.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/sha1.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/sha256.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/sha224.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/sha512.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/sha384.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/sha3.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/ripemd160.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/pbkdf2.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/aes.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/tripledes.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/rabbit.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/rc4.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/rabbit-legacy.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/blowfish.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/mode-cfb.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/mode-ctr.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/mode-ctr-gladman.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/mode-ecb.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/mode-ofb.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/pad-ansix923.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/pad-iso10126.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/pad-zeropadding.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/pad-iso97971.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/pad-nopadding.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/format-hex.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/index.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/PublicModel.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register BaseComponent
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/ComponentBase.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Patten/Singleton/BaseSingletonComponent.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Patten/Singleton/IBaseSingleton.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Patten/StatePatten.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/CommandType.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/WebSocketEvent.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Plug/DelayTime.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/cce/internal/ml/cjs-loader.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Plug/EditSpine.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Plug/EditSpine.proxy.js@63cjs&original=.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Plug/Image.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Plug/MyAnimatinoPlay.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register MyEditBox
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Plug/MyEditBox.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Asset/BundleAsset.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Asset/MusicAsset.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Asset/PrefabAsset.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Asset/SpineAsset.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Asset/SpriteAsset.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Asset/SpriteAtlasAsset.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/CASTCommandType.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Api/CASTAPI.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Api/GPGAPI/RequestGPG.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Api/GPGAPI/ResponseGPG.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Api/ResponeCommand.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Api/SendCommand.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register AutoView
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/AutoView/AutoView.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register testAuto
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/AutoView/testauto.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Data/Panel/DataExchange.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Data/Panel/DataFunctionMenu.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Data/DataMusic.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Data/Panel/DataSoundSet.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/LobbyStateEvent.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/ButtonMng.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/State/LobbyState.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelSystemMessage
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Socket/SocketSetting.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/LangType.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/NoClearNode/PanelSystemMessage.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/GameStateEvent.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/ButtonFunctionApi.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/State/MessageState.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/MessageCommend.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/State/PlayState.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/GameControll/GameControll.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Loading/PanelLogin.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PaenlFunctionButton
+2023-8-14 18:17-debug: [[Executor]] Register PanelLogin
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/AssetType.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PaenlFunctionButton.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/AssetMng.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register AutoFollow
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/AutoFollow.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register BallData
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/BallData.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelLoading
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/NoClearNode/PanelLoading.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelBall
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelChooeseBall
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/CoinType.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelChooeseBall.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/PlayerIdentity.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/GameType.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/GameData.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/Player.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/EditMenu.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/VerificationTimer.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/ClientInfo/PageClientEdit.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelClientEdit
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/CreateFileSprite.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelClientInfo
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/ClientInfo/PanelClientInfo.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/PageAction.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelHome
+2023-8-14 18:17-debug: [[Executor]] Module "cce:/internal/x/editor-exports/cc/editor/populate-internal-constants" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelPageButton
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelPageButton.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PointItemData
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/PointItemData.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelPoint
+2023-8-14 18:17-debug: [[Executor]] Register RankItmeData
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelPoint.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelTopRank
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/RankItmeData.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register ItemLink
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Setting/ItemLink.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/MusicMng.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register ItemSetting
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Setting/ItemSetting.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelLink
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Setting/PanelLink.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelSetting
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Setting/PanelSetting.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PageControll
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/PageControll.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelBottomNavigationBar
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register MessageItem
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/MessageItem.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelGameMessage
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/PanelGameMessage.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelLobbyTest
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/PanelLobbyTest.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/NoClearNode/CanvasControll.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelMask
+2023-8-14 18:17-debug: [[Executor]] Register CanvasControll
+2023-8-14 18:17-debug: [[Executor]] Register PanelVersion
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/NoClearNode/PanelMask.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/NoClearNode/PanelVersion.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/Asset_Prefab.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/Easing.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/EffectType.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/GameWinerResult.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/LisnerEditBox.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/LisnerTouch.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/PageMenu.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/ScrollViewEventType.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/ViewIndex.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/ServerGameSenceType.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/WebPlatform.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Interface/IDtTimer.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Interface/IAsset.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/EditBoxMng.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/NodePoolMng/CCNodePool.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/NodePoolMng/IPool.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/NodePoolMng/SelfPool.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/NodePoolMng/NodePoolMng.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register PanelMng
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/PanelMng/PanelMng.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register GamePanel
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/PanelMng/GamePanel.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/PanelMng/GamePanelType.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register LobbyPanel
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/PanelMng/LobbyPanel.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/RoadMng.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/RoomData.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/GameSenceText.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/JudgePlatform.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/SocketModel.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/TestDelay.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register GameWebSocket
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/State/ViewState.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Socket/GameWebSocket.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register MainGame
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/View/MainGame.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/View/MainLoading.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register MainLoading
+2023-8-14 18:17-debug: [[Executor]] Register MainLobby
+2023-8-14 18:17-debug: [[Executor]] Register colorTest
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/View/MainLobby.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/test/colorTest.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/test/delayTest.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register delayTest
+2023-8-14 18:17-debug: [[Executor]] Register extentTest
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/test/extentTest.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register poly
+2023-8-14 18:17-debug: [[Executor]] Register regTtest
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/test/poly.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/test/regTtest.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Register testHTML
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/test/testHTML.js" loaded.
+2023-8-14 18:17-debug: [[Executor]] Module "pack:///mods/cce/internal/x/prerequisite-imports.js" loaded.
+2023-8-14 18:17-debug: Reload project scripts √6%
+2023-8-14 18:17-debug: Query asset bundle start6%
+2023-8-14 18:17-log: // ---- Query asset bundle ----
+2023-8-14 18:17-debug: Process: heapTotal 188.29MB heapUsed 174.17MB rss 245.55MB
+2023-8-14 18:17-debug: Query asset bundle √8%
+2023-8-14 18:17-debug: Query and organize assets start8%
+2023-8-14 18:17-log: // ---- Query and organize assets ----
+2023-8-14 18:17-debug: Process: heapTotal 188.29MB heapUsed 174.38MB rss 246.13MB
+2023-8-14 18:17-debug: Number of scenes: 2
+2023-8-14 18:17-debug: Number of asset bundle: 2
+2023-8-14 18:17-debug: Query and organize assets √9%
+2023-8-14 18:17-debug: Organize scripts start9%
+2023-8-14 18:17-debug: Number of assets: 251
+2023-8-14 18:17-log: // ---- Organize scripts ----
+2023-8-14 18:17-debug: Process: heapTotal 197.04MB heapUsed 178.52MB rss 248.26MB
+2023-8-14 18:17-debug: sort script group...
+2023-8-14 18:17-debug: Organize texture compression tasks start10%
+2023-8-14 18:17-log: // ---- Organize texture compression tasks ----
+2023-8-14 18:17-debug: Process: heapTotal 197.04MB heapUsed 178.62MB rss 248.42MB
+2023-8-14 18:17-debug: Organize scripts √10%
+2023-8-14 18:17-debug: Number of image-compress task: 1
+2023-8-14 18:17-debug: Organize texture compression tasks √11%
+2023-8-14 18:17-log: // ---- Group json ----
+2023-8-14 18:17-debug: Process: heapTotal 197.04MB heapUsed 179.13MB rss 249.22MB
+2023-8-14 18:17-debug: Group json start11%
+2023-8-14 18:17-debug: Number of json group: 1
+2023-8-14 18:17-debug: Merging Texture2D json start12%
+2023-8-14 18:17-debug: Group json √12%
+2023-8-14 18:17-log: // ---- Merging Texture2D json ----
+2023-8-14 18:17-debug: Process: heapTotal 197.04MB heapUsed 179.84MB rss 249.88MB
+2023-8-14 18:17-debug:  start14%
+2023-8-14 18:17-debug: Merging Texture2D json √14%
+2023-8-14 18:17-log: // ----  ----
+2023-8-14 18:17-debug: Process: heapTotal 197.04MB heapUsed 179.89MB rss 250.01MB
+2023-8-14 18:17-debug:  √15%
+2023-8-14 18:17-debug: web-mobile:(onBeforeBuildAssets) start...15%
+2023-8-14 18:17-debug: // ---- web-mobile:(onBeforeBuildAssets) ----
+2023-8-14 18:17-debug: Process: heapTotal 197.04MB heapUsed 179.91MB rss 250.04MB
+2023-8-14 18:17-debug: web-mobile:(onBeforeBuildAssets)18%
+2023-8-14 18:17-debug: // ---- web-mobile:(onBeforeBuildAssets) success ----
+2023-8-14 18:17-log: // ----  ----
+2023-8-14 18:17-debug:  start18%
+2023-8-14 18:17-debug: Process: heapTotal 197.04MB heapUsed 180.00MB rss 250.13MB
+2023-8-14 18:17-warn: Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+2023-8-14 18:17-warn: Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating
+2023-8-14 18:17-debug: Build script18%
+2023-8-14 18:17-debug: Process: heapTotal 226.00MB heapUsed 186.15MB rss 263.21MB
+2023-8-14 18:17-log: debug: Create cjs interop url for 'file:///C:/CocosProject/3.4.2_MarkSix/assets/Plug/EditSpine.js'
+2023-8-14 18:17-debug: Copy externalScripts success!
+2023-8-14 18:17-debug: Process: heapTotal 256.23MB heapUsed 232.53MB rss 314.33MB
+2023-8-14 18:17-debug: Build script√18%
+2023-8-14 18:17-debug: Build engine18%
+2023-8-14 18:17-debug: Use cache engine: {link(C:\Users\ASUS\AppData\Local\Temp\CocosCreator\3.4.2\builder\engine\fb9707b9f76563dcc687a587d417fdb7)}
+2023-8-14 18:17-debug: {"debug":false,"sourceMaps":false,"includeModules":["audio","base","gfx-webgl","intersection-2d","physics-2d-box2d","profiler","tween","ui"],"engineVersion":"3.4.2","platform":"HTML5","md5Map":[],"engineName":"cocos-js","useCache":true,"split":false,"ammoJsWasm":"fallback","assetURLFormat":"runtime-resolved","entry":"C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resources\\3d\\engine"}
+2023-8-14 18:17-debug: Build engine√18%
+2023-8-14 18:17-log: // ---- Build auto-atlas ----
+2023-8-14 18:17-debug: Build auto-atlas start24%
+2023-8-14 18:17-debug: Process: heapTotal 256.23MB heapUsed 232.37MB rss 314.50MB
+2023-8-14 18:17-debug:  √24%
+2023-8-14 18:17-debug: Asset {asset(db://assets/resources/Sprite/auto-atlas.pac)} is Bundle
+2023-8-14 18:17-debug: remove spriteAtlas._uuid : {asset(e0950175-c768-4eea-92fa-5313587b481d)}
+2023-8-14 18:17-debug: remove spriteAtlas._uuid : {asset(db6569d4-4bae-4ec2-9cc9-46db7ac464ea)}
+2023-8-14 18:17-debug: remove spriteAtlas._uuid : {asset(e0950175-c768-4eea-92fa-5313587b481d)}
+2023-8-14 18:17-debug: remove spriteAtlas._uuid : {asset(e0950175-c768-4eea-92fa-5313587b481d)}
+2023-8-14 18:17-debug: remove spriteAtlas._uuid : {asset(e0950175-c768-4eea-92fa-5313587b481d)}
+2023-8-14 18:17-debug: remove spriteAtlas._uuid : {asset(e0950175-c768-4eea-92fa-5313587b481d)}
+2023-8-14 18:17-debug: Build auto-atlas √31%
+2023-8-14 18:17-debug: Compress Image start31%
+2023-8-14 18:17-log: // ---- Compress Image ----
+2023-8-14 18:17-debug: Process: heapTotal 264.48MB heapUsed 236.84MB rss 393.23MB
+2023-8-14 18:17-debug: Compress Image √37%
+2023-8-14 18:17-debug: Copy the resource start37%
+2023-8-14 18:17-log: // ---- Copy the resource ----
+2023-8-14 18:17-debug: Process: heapTotal 264.48MB heapUsed 236.86MB rss 393.23MB
+2023-8-14 18:17-debug: Asset Bundle(resources) handle assets: 27
+2023-8-14 18:17-debug: Asset Bundle(main) handle assets: 102
+2023-8-14 18:17-log: // ---- Build the grouped json and scatter files to the specified location ----
+2023-8-14 18:17-debug: Copy the resource √44%
+2023-8-14 18:17-debug: Build the grouped json and scatter files to the specified location start44%
+2023-8-14 18:17-debug: Process: heapTotal 233.73MB heapUsed 188.02MB rss 295.22MB
+2023-8-14 18:17-debug: Json group(build-task/json) compile success，json number: 6
+2023-8-14 18:17-debug: Build the grouped json and scatter files to the specified location √51%
+2023-8-14 18:17-log: // ---- Compress zip bundle ----
+2023-8-14 18:17-debug: Json group(build-task/json) compile success，json number: 6
+2023-8-14 18:17-debug: Compress zip bundle start51%
+2023-8-14 18:17-debug: Process: heapTotal 241.33MB heapUsed 193.75MB rss 298.17MB
+2023-8-14 18:17-debug: Add md5 suffix to assets start57%
+2023-8-14 18:17-debug: Compress zip bundle √57%
+2023-8-14 18:17-log: // ---- Add md5 suffix to assets ----
+2023-8-14 18:17-debug: Process: heapTotal 241.33MB heapUsed 193.78MB rss 298.20MB
+2023-8-14 18:17-debug: add suffix to assets(14) success!
+2023-8-14 18:17-log: // ---- Init settings and config ----
+2023-8-14 18:17-debug: Add md5 suffix to assets √68%
+2023-8-14 18:17-debug: Init settings and config start68%
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 190.85MB rss 302.45MB
+2023-8-14 18:17-debug: tasks.settings.macro does not defined in i18n
+2023-8-14 18:17-debug: tasks.settings.macro start68%
+2023-8-14 18:17-debug: Init settings and config √68%
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 190.88MB rss 302.45MB
+2023-8-14 18:17-log: // ---- tasks.settings.macro ----
+2023-8-14 18:17-debug: tasks.settings.macro √69%
+2023-8-14 18:17-debug: Use cached settings start69%
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 190.93MB rss 302.45MB
+2023-8-14 18:17-log: // ---- Use cached settings ----
+2023-8-14 18:17-debug: Use cached settings √69%
+2023-8-14 18:17-debug: custom joint texture layouts start69%
+2023-8-14 18:17-log: // ---- custom joint texture layouts ----
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 191.02MB rss 302.54MB
+2023-8-14 18:17-debug: custom joint texture layouts √70%
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 191.06MB rss 302.54MB
+2023-8-14 18:17-debug: custom joint physics start70%
+2023-8-14 18:17-log: // ---- custom joint physics ----
+2023-8-14 18:17-debug: custom joint physics √70%
+2023-8-14 18:17-debug: Fill script data to settings start70%
+2023-8-14 18:17-log: // ---- Fill script data to settings ----
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 191.07MB rss 302.54MB
+2023-8-14 18:17-debug: Fill script data to settings √71%
+2023-8-14 18:17-debug: Fill scene data to settings start71%
+2023-8-14 18:17-log: // ---- Fill scene data to settings ----
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 191.09MB rss 302.54MB
+2023-8-14 18:17-debug: Organize assets groups，generate packedAssets and rawAssets data start71%
+2023-8-14 18:17-debug: Fill scene data to settings √71%
+2023-8-14 18:17-log: // ---- Organize assets groups，generate packedAssets and rawAssets data ----
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 191.11MB rss 302.54MB
+2023-8-14 18:17-debug: Organize assets groups，generate packedAssets and rawAssets data √72%
+2023-8-14 18:17-debug: Generate md5AssetsMap from suffixMap to settings start72%
+2023-8-14 18:17-log: // ---- Generate md5AssetsMap from suffixMap to settings ----
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 191.17MB rss 302.55MB
+2023-8-14 18:17-debug: Generate md5AssetsMap from suffixMap to settings √72%
+2023-8-14 18:17-debug: web-mobile:(onBeforeCompressSettings) start...72%
+2023-8-14 18:17-debug: // ---- web-mobile:(onBeforeCompressSettings) ----
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 191.19MB rss 302.55MB
+2023-8-14 18:17-debug: // ---- web-mobile:(onBeforeCompressSettings) success ----
+2023-8-14 18:17-debug: cocos-service:(onBeforeCompressSettings) start...75%
+2023-8-14 18:17-debug: web-mobile:(onBeforeCompressSettings)75%
+2023-8-14 18:17-debug: // ---- cocos-service:(onBeforeCompressSettings) ----
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 191.22MB rss 302.55MB
+2023-8-14 18:17-debug: // ---- cocos-service:(onBeforeCompressSettings) success ----
+2023-8-14 18:17-debug:  start77%
+2023-8-14 18:17-log: // ----  ----
+2023-8-14 18:17-debug: cocos-service:(onBeforeCompressSettings)77%
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 191.36MB rss 302.55MB
+2023-8-14 18:17-debug:  √78%
+2023-8-14 18:17-log: // ---- Compress settings.json and config.json ----
+2023-8-14 18:17-debug: Compress settings.json and config.json √79%
+2023-8-14 18:17-debug: Compress settings.json and config.json start78%
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 191.39MB rss 302.55MB
+2023-8-14 18:17-debug: Save config.json start79%
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 191.53MB rss 302.55MB
+2023-8-14 18:17-log: // ---- Save config.json ----
+2023-8-14 18:17-debug: Save Settings.json start80%
+2023-8-14 18:17-debug: Save config.json √80%
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 191.59MB rss 302.80MB
+2023-8-14 18:17-log: // ---- Save Settings.json ----
+2023-8-14 18:17-debug: Save Settings.json √81%
+2023-8-14 18:17-log: // ---- Sort build template ----
+2023-8-14 18:17-debug: Sort build template start81%
+2023-8-14 18:17-debug: Process: heapTotal 240.73MB heapUsed 191.90MB rss 302.93MB
+2023-8-14 18:17-debug: Sort build template √82%
+2023-8-14 18:17-debug: cocos-service:(onAfterCompressSettings) start...82%
+2023-8-14 18:17-debug: // ---- cocos-service:(onAfterCompressSettings) ----
+2023-8-14 18:17-debug: Process: heapTotal 240.98MB heapUsed 192.02MB rss 301.88MB
+2023-8-14 18:17-debug: // ---- cocos-service:(onAfterCompressSettings) success ----
+2023-8-14 18:17-debug: cocos-service:(onAfterCompressSettings)85%
+2023-8-14 18:17-debug: web-mobile:(onAfterBuild) start...85%
+2023-8-14 18:17-debug: // ---- web-mobile:(onAfterBuild) ----
+2023-8-14 18:17-debug: Process: heapTotal 240.98MB heapUsed 192.35MB rss 301.81MB
+2023-8-14 18:17-debug: // ---- web-mobile:(onAfterBuild) success ----
+2023-8-14 18:17-debug: Use build-template {link(C:\CocosProject\3.4.2_MarkSix\build-templates\web-mobile)}.
+2023-8-14 18:17-debug: cocos-service:(onAfterBuild) start...87%
+2023-8-14 18:17-debug: // ---- cocos-service:(onAfterBuild) ----
+2023-8-14 18:17-debug: web-mobile:(onAfterBuild)87%
+2023-8-14 18:17-debug: Process: heapTotal 240.98MB heapUsed 194.75MB rss 301.91MB
+2023-8-14 18:17-debug: // ---- cocos-service:(onAfterBuild) success ----
+2023-8-14 18:17-debug: cocos-service:(onAfterBuild)90%
+2023-8-14 18:17-debug: build success in 23748 ms!
+2023-8-14 18:17-debug: Stop record console. {file(C:\CocosProject\3.4.2_MarkSix\temp\builder\log\web-mobile2022-6-8 13-53.log)}

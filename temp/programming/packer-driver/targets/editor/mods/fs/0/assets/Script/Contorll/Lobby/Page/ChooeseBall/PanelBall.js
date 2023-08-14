@@ -235,6 +235,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).ChangeBallButtonState, true);
+          this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).ChangeConfirmState, false);
           this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).UpDateBall, this.reProcessing);
@@ -247,6 +250,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onEnable() {
+          this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).ChangeConfirmState, false);
           this.eventEmit((_crd && WebSocketEvent === void 0 ? (_reportPossibleCrUseOfWebSocketEvent({
             error: Error()
           }), WebSocketEvent) : WebSocketEvent).StartConnect);
@@ -297,6 +303,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             if (this.isFullBall) {
               this.tipBox.active = false;
               this.fullResetBallColor(true);
+              this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+                error: Error()
+              }), LobbyStateEvent) : LobbyStateEvent).ChangeConfirmState, false);
             }
 
             if (this.tempChoose.length == 0) this.labelState.string = (_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
@@ -327,6 +336,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.tempChoose.length === this.MaxCount) {
             this.isFullBall = true;
             this.tipBox.active = true;
+            this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+              error: Error()
+            }), LobbyStateEvent) : LobbyStateEvent).ChangeConfirmState, true);
             this.mapBallNumber.forEach(element => {
               //代表沒被選種
               if (this.tempChoose.indexOf(element.ballNumber) == -1) {
@@ -366,6 +378,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
 
           this.tempChoose = [];
+          this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).ChangeConfirmState, false);
+          this.tipBox.active = false;
+          this.labelState.string = (_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+            error: Error()
+          }), SocketSetting) : SocketSetting).t("041", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+            error: Error()
+          }), LangType) : LangType).Game).replace("$0", this.MaxCount.toString());
         }
 
         async Attack() {

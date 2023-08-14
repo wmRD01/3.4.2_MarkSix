@@ -24,6 +24,7 @@ System.register(["cc"], function (_export, _context) {
         LobbyStateEvent["EditEmail"] = "EditEmail";
         LobbyStateEvent["EditUpdate"] = "EditUpdate";
         LobbyStateEvent["ChangeBallButtonState"] = "ChangeBallButtonState";
+        LobbyStateEvent["ChangeConfirmState"] = "ChangeConfirmState";
         LobbyStateEvent["NextIssueID"] = "NextIssueID";
       })(LobbyStateEvent || _export("LobbyStateEvent", LobbyStateEvent = {}));
 

@@ -1,507 +1,103 @@
-2023-08-11 13:09:52-log: [Package] menu@1.0.0 enable
-2023-08-11 13:09:52-log: [Package] profile@1.0.0 enable
-2023-08-11 13:09:52-log: [Package] project@1.0.1 enable
-2023-08-11 13:09:52-log: [Package] messages@1.0.0 enable
-2023-08-11 13:09:52-log: [Package] program@1.0.0 enable
-2023-08-11 13:09:52-log: [Package] device@1.0.1 enable
-2023-08-11 13:09:52-log: [Package] ui-kit@1.0.1 enable
-2023-08-11 13:09:52-log: [Package] tester@1.0.0 enable
-2023-08-11 13:09:52-log: [Package] preferences@1.0.0 enable
-2023-08-11 13:09:53-log: Setup mods mgr.: 532.882ms
-2023-08-11 13:09:53-log: Profile changed: engine (modules.includeModules: audio,base,gfx-webgl,intersection-2d,physics-2d-box2d,profiler,tween,ui)
-2023-08-11 13:09:53-log: [Package] engine@1.0.5 enable
-2023-08-11 13:09:55-log: [Package] programming@1.0.0 enable
-2023-08-11 13:09:56-log: [Package] engine-extends@1.0.0 enable
-2023-08-11 13:09:56-log: [Package] asset-db@1.0.0 enable
-2023-08-11 13:09:56-log: [Package] console@1.0.0 enable
-2023-08-11 13:09:56-log: [Package] scene@1.0.0 enable
-2023-08-11 13:09:56-log: [Package] utils@1.0.0 enable
-2023-08-11 13:09:56-log: [Package] assets@1.0.0 enable
-2023-08-11 13:09:56-log: [Package] inspector@1.0.0 enable
-2023-08-11 13:09:56-log: [Package] hierarchy@1.0.0 enable
-2023-08-11 13:09:58-log: [Package] preview@1.0.1 enable
-2023-08-11 13:09:58-log: [Package] animator@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] builder@1.3.1 enable
-2023-08-11 13:09:59-log: [Package] node-library@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] shortcuts@1.0.1 enable
-2023-08-11 13:09:59-log: [Package] package-asset@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] reference-image@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] animation-graph@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] channel-upload-tools@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] runtime-dev-tools@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] lightmap@1.0.4 enable
-2023-08-11 13:09:59-log: [Package] alipay-mini-game@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] android@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] baidu-mini-game@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] bytedance-mini-game@1.0.1 enable
-2023-08-11 13:09:59-log: [Package] huawei-agc@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] ios@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] ios-app-clip@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] mac@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] native@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] ohos@1.0.0 enable
-2023-08-11 13:09:59-log: [Package] web-desktop@1.0.0 enable
-2023-08-11 13:10:00-log: [Package] web-mobile@1.0.0 enable
-2023-08-11 13:10:00-log: [Package] wechatgame@1.0.1 enable
-2023-08-11 13:10:00-log: [Package] windows@1.0.0 enable
-2023-08-11 13:10:00-log: [Package] xiaomi-quick-game@1.0.0 enable
-2023-08-11 13:10:00-log: [Package] cocos-play@1.0.0 enable
-2023-08-11 13:10:00-log: [Package] huawei-quick-game@1.0.0 enable
-2023-08-11 13:10:00-log: [Package] link-sure@1.0.0 enable
-2023-08-11 13:10:00-log: [Package] oppo-mini-game@1.0.0 enable
-2023-08-11 13:10:00-log: [Package] qtt@1.0.0 enable
-2023-08-11 13:10:00-log: [Package] vivo-mini-game@1.0.0 enable
-2023-08-11 13:10:00-log: [Package] cocos-service@3.0.2 enable
-2023-08-11 13:10:00-log: [Package] importer@1.0.0 enable
-2023-08-11 13:10:00-log: [Package] extension@3.0.15 enable
-2023-08-11 13:10:04-log: [Im-plugin] Check im-plugin version.
-2023-08-11 13:10:04-log: [Package] im-plugin@3.0.10 enable
-2023-08-11 13:10:06-log: [Im-plugin] Im-plugin online version is 3.0.10.
-2023-08-11 13:10:06-log: [Im-plugin] Im-plugin local version is 3.0.10.
-2023-08-11 13:10:06-log: [Im-plugin] Im-plugin need not update.
-2023-08-11 13:10:09-warn: Browserslist: caniuse-lite is outdated. Please run:
+2023-08-14 16:36:18-log: [Package] menu@1.0.0 enable
+2023-08-14 16:36:18-log: [Package] profile@1.0.0 enable
+2023-08-14 16:36:18-log: [Package] project@1.0.1 enable
+2023-08-14 16:36:18-log: [Package] messages@1.0.0 enable
+2023-08-14 16:36:18-log: [Package] program@1.0.0 enable
+2023-08-14 16:36:18-log: [Package] device@1.0.1 enable
+2023-08-14 16:36:18-log: [Package] ui-kit@1.0.1 enable
+2023-08-14 16:36:18-log: [Package] tester@1.0.0 enable
+2023-08-14 16:36:18-log: [Package] preferences@1.0.0 enable
+2023-08-14 16:36:19-log: Setup mods mgr.: 256.203ms
+2023-08-14 16:36:19-log: Profile changed: engine (modules.includeModules: audio,base,gfx-webgl,intersection-2d,physics-2d-box2d,profiler,tween,ui)
+2023-08-14 16:36:19-log: [Package] engine@1.0.5 enable
+2023-08-14 16:36:21-log: [Package] programming@1.0.0 enable
+2023-08-14 16:36:21-log: [Package] engine-extends@1.0.0 enable
+2023-08-14 16:36:21-log: [Package] asset-db@1.0.0 enable
+2023-08-14 16:36:21-log: [Package] console@1.0.0 enable
+2023-08-14 16:36:21-log: [Package] scene@1.0.0 enable
+2023-08-14 16:36:21-log: [Package] utils@1.0.0 enable
+2023-08-14 16:36:21-log: [Package] assets@1.0.0 enable
+2023-08-14 16:36:21-log: [Package] inspector@1.0.0 enable
+2023-08-14 16:36:21-log: [Package] hierarchy@1.0.0 enable
+2023-08-14 16:36:23-log: [Package] preview@1.0.1 enable
+2023-08-14 16:36:23-log: [Package] animator@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] builder@1.3.1 enable
+2023-08-14 16:36:24-log: [Package] node-library@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] shortcuts@1.0.1 enable
+2023-08-14 16:36:24-log: [Package] package-asset@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] reference-image@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] animation-graph@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] channel-upload-tools@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] runtime-dev-tools@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] lightmap@1.0.4 enable
+2023-08-14 16:36:24-log: [Package] alipay-mini-game@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] android@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] baidu-mini-game@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] bytedance-mini-game@1.0.1 enable
+2023-08-14 16:36:24-log: [Package] huawei-agc@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] ios@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] ios-app-clip@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] mac@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] native@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] ohos@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] web-desktop@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] web-mobile@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] wechatgame@1.0.1 enable
+2023-08-14 16:36:24-log: [Package] windows@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] xiaomi-quick-game@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] cocos-play@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] huawei-quick-game@1.0.0 enable
+2023-08-14 16:36:24-log: [Package] link-sure@1.0.0 enable
+2023-08-14 16:36:25-log: [Package] oppo-mini-game@1.0.0 enable
+2023-08-14 16:36:25-log: [Package] qtt@1.0.0 enable
+2023-08-14 16:36:25-log: [Package] vivo-mini-game@1.0.0 enable
+2023-08-14 16:36:25-log: [Package] cocos-service@3.0.2 enable
+2023-08-14 16:36:25-log: [Package] importer@1.0.0 enable
+2023-08-14 16:36:25-log: [Package] extension@3.0.15 enable
+2023-08-14 16:36:25-log: [Im-plugin] Check im-plugin version.
+2023-08-14 16:36:25-log: [Package] im-plugin@3.0.10 enable
+2023-08-14 16:36:25-warn: Browserslist: caniuse-lite is outdated. Please run:
 npx browserslist@latest --update-db
 
 Why you should do it regularly:
 https://github.com/browserslist/browserslist#browsers-data-updating
-2023-08-11 13:10:09-log: [Scene] Cocos Creator v3.4.2
-2023-08-11 13:10:11-info: [Scene] Forward render pipeline initialized.
-2023-08-11 13:41:14-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 13:41:40-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:42:01-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:42:01-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:42:16-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 13:42:44-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:43:05-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:43:05-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:43:31-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 13:43:56-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:44:05-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 13:44:30-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:44:30-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:44:30-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:48:02-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 13:48:28-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:48:48-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:48:48-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:49:05-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 13:49:31-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:49:51-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:49:51-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:51:07-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 13:51:15-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 13:51:33-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:51:40-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:51:40-error: [Preview]Uncaught TypeError: Cannot read properties of null (reading 'getComponent') in http://localhost:7456/scripting/x/mods/fs/0/assets/Script/State/MessageState.js
-2023-08-11 13:52:04-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 13:52:21-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 13:54:56-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 13:55:54-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 14:13:44-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 14:23:40-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 14:23:46-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:23:46-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:105
+2023-08-14 16:36:26-log: [Scene] Cocos Creator v3.4.2
+2023-08-14 16:36:27-info: [Scene] Forward render pipeline initialized.
+2023-08-14 16:36:27-log: [Im-plugin] Im-plugin online version is 3.0.10.
+2023-08-14 16:36:27-log: [Im-plugin] Im-plugin local version is 3.0.10.
+2023-08-14 16:36:27-log: [Im-plugin] Im-plugin need not update.
+2023-08-14 16:36:54-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 16:44:27-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 16:49:32-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 16:56:25-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 16:57:04-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 16:57:40-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 16:57:58-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 16:58:11-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 16:59:14-error: ENOENT: no such file or directory, lstat 'C:\CocosDashboard_2.0.0\icon_gameinfo.png'
+2023-08-14 17:11:20-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 17:11:28-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 17:32:14-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 17:32:27-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 17:33:03-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'node')
+2023-08-14 17:33:03-error: [Preview]TypeError: Cannot read properties of undefined (reading 'node')
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js:184:30
     at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:23:47-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:23:47-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:105
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js:6:105)
+    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js:8:196)
+2023-08-14 17:33:18-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 17:34:22-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 17:36:11-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 17:39:42-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 17:40:24-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 17:44:20-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 17:45:22-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 17:47:14-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 17:47:20-error: [Preview]unhandledrejection: Cannot set properties of undefined (setting 'active')
+2023-08-14 17:47:20-error: [Preview]TypeError: Cannot set properties of undefined (setting 'active')
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js:189:33
     at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:23:48-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:23:48-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:105
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:23:49-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:23:49-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:105
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:23:50-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:23:50-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:105
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:23:51-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:23:51-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:105
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:23:52-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:23:52-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:105
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:23:53-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:23:53-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:105
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:23:54-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:23:54-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:105
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:23:55-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:23:55-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:105
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:23:56-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:23:56-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:105
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:23:57-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:23:57-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:105
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:23:57-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 14:24:03-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:03-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:04-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:04-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:05-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:05-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:06-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:06-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:07-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:07-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:08-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:08-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:09-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:09-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:10-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:10-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:11-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:11-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:12-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:12-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:13-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:13-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:14-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:14-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:15-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:15-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:16-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:16-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:17-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:17-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:18-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:18-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:19-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:19-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:20-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:20-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:21-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:21-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:22-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:22-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:23-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:23-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:24-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:24-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:25-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:25-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:26-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'bind')
-2023-08-11 14:24:26-error: [Preview]TypeError: Cannot read properties of undefined (reading 'bind')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:491:97
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:8:99
-    at requestDrawUpcomingLoop (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js:492:13)
-2023-08-11 14:24:27-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 14:25:05-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 14:27:38-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 16:24:28-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 16:24:45-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 16:25:32-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 16:26:53-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 16:27:27-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 16:27:54-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 16:28:24-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 16:28:55-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 16:32:53-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 16:34:07-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 16:35:40-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 16:38:45-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:11:21-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:12:35-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:14:54-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:17:15-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:17:56-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:20:08-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:35:40-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:36:08-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:36:36-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:36:56-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:37:58-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:51:39-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:52:14-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:54:14-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:55:20-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:55:22-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 17:55:51-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 18:05:09-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 18:10:29-warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
-npx browserslist@latest --update-db
-2023-08-11 18:10:30-warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
-npx browserslist@latest --update-db
-
-Why you should do it regularly:
-https://github.com/browserslist/browserslist#browsers-data-updating
-2023-08-11 18:10:44-warn: [Build] Engine cache directory({link(C:\Users\ASUS\AppData\Local\Temp\CocosCreator\3.4.2\builder\engine\fb9707b9f76563dcc687a587d417fdb7)}) exists but has empty content. It's abnormal.
-2023-08-11 19:17:25-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 19:25:06-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 19:25:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-08-11 19:26:06-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js:6:105)
+    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js:8:196)
+2023-08-14 17:47:33-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-08-14 17:49:52-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}

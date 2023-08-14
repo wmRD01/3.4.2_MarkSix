@@ -124,7 +124,7 @@ export default class PanelHome extends BaseComponent {
         if (response.data) {
             this.lastDrawCodeLayout.removeAllChildren()
             let getDate = response.data[0]
-            this.labelLastDrawIssueID.string = `第${getDate.issueID.toString()}期`
+            this.labelLastDrawIssueID.string = `第${getDate.issueID}期`
 
             /**不需要week日 */
             // console.log(PublicModel.getInstance.convertDate(getDate.openDate).split("(")[0]);
@@ -165,8 +165,8 @@ export default class PanelHome extends BaseComponent {
     responseDrawUpcoming(response?: ResponseGPG.DrawUpcoming.DataClass) {
         let getDate = response.data[0]
         PublicData.getInstance.today = getDate.openDate
-        this.labelCurrentDrawIssueID.string = `第${(getDate.issueID).toString()}期`
-        this.currentIssueID = getDate.issueID
+        this.labelCurrentDrawIssueID.string = `第${getDate.issueID}期`
+        this.currentIssueID = Number(getDate.issueID)
         // this.timer.setTimeNoTimer(PublicModel.getInstance.convertDateTime(getDate.openDate))
         // console.log(getDate.serverNowTime);
 
@@ -268,7 +268,7 @@ export default class PanelHome extends BaseComponent {
         }
 
 
-        if (this.currentIssueID != response.data[0].issueID) {
+        if (this.currentIssueID != Number(response.data[0].issueID)) {
             console.error("終於換天拉!!!!");
             this.isChangeIssueID = false;
             clearInterval(this.loopTimer)

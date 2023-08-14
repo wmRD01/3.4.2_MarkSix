@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Label, Layout, Node, Prefab, _decorator, DelayTime, AssetType, CheckLoadingType, CommandType, LangType, LobbyStateEvent, WebSocketEvent, AssetMng, ButtonMng, BallData, CheckLoading, BaseComponent, SocketSetting, bet, PanelLoading, PanelSystemMessage, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, PanelBall;
+  var _reporterNs, _cclegacy, instantiate, Label, Layout, Node, Prefab, _decorator, DelayTime, AssetType, CheckLoadingType, CommandType, LangType, LobbyStateEvent, WebSocketEvent, AssetMng, ButtonMng, BallData, CheckLoading, BaseComponent, SocketSetting, bet, PanelLoading, PanelSystemMessage, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PanelBall;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -129,7 +129,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", PanelBall = (_dec = ccclass('PanelBall'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Prefab), _dec5 = property(Prefab), _dec6 = property(Label), _dec(_class2 = (_class3 = (_temp = class PanelBall extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelBall = (_dec = ccclass('PanelBall'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Prefab), _dec5 = property(Prefab), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Node), _dec9 = property(Node), _dec(_class2 = (_class3 = (_temp = class PanelBall extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {
@@ -144,6 +144,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "ballItem", _descriptor4, this);
 
           _initializerDefineProperty(this, "labelIssueID", _descriptor5, this);
+
+          _initializerDefineProperty(this, "labelState", _descriptor6, this);
+
+          _initializerDefineProperty(this, "tipBox", _descriptor7, this);
+
+          _initializerDefineProperty(this, "remide", _descriptor8, this);
 
           _defineProperty(this, "Halign", 10);
 
@@ -172,9 +178,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
             error: Error()
           }), AssetType) : AssetType).Sprite);
+          this.labelState.node.active = true;
+          this.tipBox.active = false;
+          this.remide.active = false;
           this.labelContent.removeAllChildren();
           this.HorLayout.removeAllChildren();
           let isEnd = false;
+          this.labelState.string = (_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+            error: Error()
+          }), SocketSetting) : SocketSetting).t("041", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+            error: Error()
+          }), LangType) : LangType).Game).replace("$0", this.MaxCount.toString());
 
           for (let V = 0; V < this.Valign; V++) {
             let layout = instantiate(this.layoutItem);
@@ -183,7 +197,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             for (let H = 1; H <= this.Halign; H++) {
               let count = V * this.Halign + H;
 
-              if (count > 49) {
+              if (count > this.totalCount) {
                 isEnd = true;
                 break;
               }
@@ -279,7 +293,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.tempChoose.indexOf(convert) > -1) {
             this.tempChoose.splice(this.tempChoose.indexOf(convert), 1)[0];
             this.mapBallNumber.get(convert).cancel();
-            if (this.isFullBall) this.fullResetBallColor(true);
+
+            if (this.isFullBall) {
+              this.tipBox.active = false;
+              this.fullResetBallColor(true);
+            }
+
+            if (this.tempChoose.length == 0) this.labelState.string = (_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("041", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game).replace("$0", this.MaxCount.toString());else this.labelState.string = (_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+              error: Error()
+            }), SocketSetting) : SocketSetting).t("042", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+              error: Error()
+            }), LangType) : LangType).Game).replace("$0", this.tempChoose.length.toString());
             return;
           }
           /**如果選號已滿 */
@@ -290,9 +318,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           this.tempChoose.push(convert);
           this.mapBallNumber.get(convert).choose();
+          this.labelState.string = (_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
+            error: Error()
+          }), SocketSetting) : SocketSetting).t("042", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
+            error: Error()
+          }), LangType) : LangType).Game).replace("$0", this.tempChoose.length.toString());
 
           if (this.tempChoose.length === this.MaxCount) {
             this.isFullBall = true;
+            this.tipBox.active = true;
             this.mapBallNumber.forEach(element => {
               //代表沒被選種
               if (this.tempChoose.indexOf(element.ballNumber) == -1) {
@@ -357,6 +391,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             return;
           }
 
+          this.labelState.node.active = false;
+          this.tipBox.active = false;
+          this.remide.active = true;
           let len = this.tempChoose.length;
 
           for (let index = 0; index < len; index++) {
@@ -495,6 +532,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         writable: true,
         initializer: null
       }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "labelIssueID", [_dec6], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor6 = _applyDecoratedDescriptor(_class3.prototype, "labelState", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor7 = _applyDecoratedDescriptor(_class3.prototype, "tipBox", [_dec8], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor8 = _applyDecoratedDescriptor(_class3.prototype, "remide", [_dec9], {
         configurable: true,
         enumerable: true,
         writable: true,

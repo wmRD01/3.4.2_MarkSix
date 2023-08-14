@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, color, Label, Node, Sprite, Tween, tween, Vec3, _decorator, AssetType, AssetMng, BaseComponent, AutoFollow, PublicModel, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, BallData, ColorType, SpirteData;
+  var _reporterNs, _cclegacy, Button, color, Label, Node, Sprite, Tween, Vec3, _decorator, AssetType, AssetMng, BaseComponent, AutoFollow, PublicModel, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, BallData, ColorType, SpirteData;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -42,7 +42,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Node = _cc.Node;
       Sprite = _cc.Sprite;
       Tween = _cc.Tween;
-      tween = _cc.tween;
       Vec3 = _cc.Vec3;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
@@ -138,15 +137,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // this.spriteBG.color = Color.WHITE
           this.node.setScale((_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
-          }), PublicModel) : PublicModel).getInstance.oneSclaeVec3(1.2)); // let rotai = tween()
+          }), PublicModel) : PublicModel).getInstance.oneSclaeVec3(1.2));
+          this.setEffect(true); // let rotai = tween()
           //     .set({ angle: 0 })
           //     .to(5, { angle: -360 })
-
-          tween(this.spriteBG.node).repeatForever(tween().set({
-            angle: 0
-          }).to(5, {
-            angle: -360
-          })).start();
+          // tween(this.spriteBG.node)
+          //     .repeatForever(tween()
+          //         .set({ angle: 0 })
+          //         .to(5, { angle: -360 }))
+          //     .start()
         }
 
         cancel() {
@@ -156,6 +155,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), PublicModel) : PublicModel).getInstance.oneSclaeVec3(1));
           this.spriteBG.node.eulerAngles = Vec3.ZERO;
+          this.setEffect(false);
           Tween.stopAllByTarget(this.spriteBG.node);
           this.enabledBall(true);
         }

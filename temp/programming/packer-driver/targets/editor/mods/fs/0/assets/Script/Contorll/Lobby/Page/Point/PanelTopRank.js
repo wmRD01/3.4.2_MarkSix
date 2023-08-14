@@ -111,7 +111,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         start() {
-          this.reset();
+          this.layoutRank.removeAllChildren();
+          this.labelContent.removeAllChildren();
+          this.spriteBGContent.removeAllChildren();
           this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).NextIssueID, this.reset);
@@ -188,15 +190,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             _class.labelPointCount.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
               error: Error()
-            }), AutoFollow) : AutoFollow).createNewTarget();
+            }), AutoFollow) : AutoFollow).createNewTarget(); // _class.spriteBG.addComponent(AutoFollow).setTarget(_node)
 
-            _class.spriteBG.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
-              error: Error()
-            }), AutoFollow) : AutoFollow).setTarget(_node);
 
             this.labelContent.addChild(_class.labelName.node);
-            this.labelContent.addChild(_class.labelPointCount.node);
-            this.spriteBGContent.addChild(_class.spriteBG.node);
+            this.labelContent.addChild(_class.labelPointCount.node); // this.spriteBGContent.addChild(_class.spriteBG.node)
+
             this.layoutRank.addChild(_node);
           }
         }

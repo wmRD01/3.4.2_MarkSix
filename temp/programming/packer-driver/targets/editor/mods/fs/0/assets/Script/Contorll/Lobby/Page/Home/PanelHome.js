@@ -266,7 +266,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (response.data) {
             this.lastDrawCodeLayout.removeAllChildren();
             let getDate = response.data[0];
-            this.labelLastDrawIssueID.string = `第${getDate.issueID.toString()}期`;
+            this.labelLastDrawIssueID.string = `第${getDate.issueID}期`;
             /**不需要week日 */
             // console.log(PublicModel.getInstance.convertDate(getDate.openDate).split("(")[0]);
 
@@ -330,8 +330,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
             error: Error()
           }), PublicData) : PublicData).getInstance.today = getDate.openDate;
-          this.labelCurrentDrawIssueID.string = `第${getDate.issueID.toString()}期`;
-          this.currentIssueID = getDate.issueID; // this.timer.setTimeNoTimer(PublicModel.getInstance.convertDateTime(getDate.openDate))
+          this.labelCurrentDrawIssueID.string = `第${getDate.issueID}期`;
+          this.currentIssueID = Number(getDate.issueID); // this.timer.setTimeNoTimer(PublicModel.getInstance.convertDateTime(getDate.openDate))
           // console.log(getDate.serverNowTime);
 
           var Date_A = new Date(getDate.openDate);
@@ -488,7 +488,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             return;
           }
 
-          if (this.currentIssueID != response.data[0].issueID) {
+          if (this.currentIssueID != Number(response.data[0].issueID)) {
             console.error("終於換天拉!!!!");
             this.isChangeIssueID = false;
             clearInterval(this.loopTimer);

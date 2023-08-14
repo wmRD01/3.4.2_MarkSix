@@ -34,7 +34,8 @@ export default class PanelPoint extends BaseComponent {
     mapDate: Map<number, PointItemData> = new Map()
     async start() {
         await AssetMng.waitStateCheck(AssetType.Sprite)
-        this.reset()
+        this.layoutContent.removeAllChildren()
+
 
         this.scrollview.node.on(ScrollView.EventType.SCROLL_TO_BOTTOM, this.onViewBottom, this)
         this.setEvent(LobbyStateEvent.NextIssueID, this.reset)
@@ -75,7 +76,7 @@ export default class PanelPoint extends BaseComponent {
         }
         for (let index = this.currentCount; index < response.data.length; index++) {
             if (this.layoutContent.children.length > this.maxCount) break;
-            this.mapDate.set(response.data[index].issueID, this.ClientData(response.data[index]))
+            this.mapDate.set(Number(response.data[index].issueID), this.ClientData(response.data[index]))
         }
         this.currentCount = response.data.length;
     }
@@ -88,7 +89,7 @@ export default class PanelPoint extends BaseComponent {
         _class
             .setLabelContent(this.labelContent)
             .setOutlineContent(this.OutlineContent)
-            .setDayData(data.openDate, data.issueID)
+            .setDayData(data.openDate, Number(data.issueID))
             .setOpenNumber(data.drawCode)
             .init()
         return _class
@@ -112,10 +113,12 @@ export default class PanelPoint extends BaseComponent {
     }
     responseBetlog(response?: ResponseGPG.Betlog.DataClass) {
         console.log("玩家紀錄", response);
+        console.log(this.mapDate);
+
         for (let index = 0; index < response.data.length; index++) {
-            if (!this.mapDate.has(response.data[index].issueID)) continue;
-            this.mapDate.get(response.data[index].issueID).setSelfNumber(response.data[index].betCode)
-            this.mapDate.get(response.data[index].issueID).setScore(response.data[index].score)
+            if (!this.mapDate.has(Number(response.data[index].issueID))) continue;
+            this.mapDate.get(Number(response.data[index].issueID)).setSelfNumber(response.data[index].betCode)
+            this.mapDate.get(Number(response.data[index].issueID)).setScore(response.data[index].score)
         }
     }
     //#endregion

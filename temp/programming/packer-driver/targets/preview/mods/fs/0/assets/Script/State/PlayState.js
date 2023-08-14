@@ -81,6 +81,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), LobbyStateEvent) : LobbyStateEvent).AttackBall);
           } else {
+            console.log(data.betCode);
             if (data.betCode != null) (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
               error: Error()
             }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({

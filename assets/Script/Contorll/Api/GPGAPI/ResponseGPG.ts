@@ -104,7 +104,7 @@ export namespace ResponseGPG {
             //  ['9', '18', '39', '4', '33', '11', '45']
             drawCode: string[];
             //  2023204
-            issueID: number;
+            issueID: string;
             //  "2023-07-23T20:49:45+08:00"
             openDate: string;
             //  "2023-07-23T20:49:45+08:00"
@@ -120,7 +120,7 @@ export namespace ResponseGPG {
             Code: string
             Message: string
         }
-         class Betlog {
+        class Betlog {
             // (6) [14, 15, 16, 18, 48, 49]
             betCode: number[];
             // "59982501062528060"
@@ -128,7 +128,7 @@ export namespace ResponseGPG {
             // "2023-08-01T18:25:28.0607245+08:00"
             betTime: string;
             // 2023213
-            issueID: number;
+            issueID: string;
             // 0
             score: number;
         }
@@ -168,13 +168,13 @@ export namespace ResponseGPG {
             //  ['9', '18', '39', '4', '33', '11', '45']
             drawCode: string[];
             //  2023204
-            issueID: number;
+            issueID: string;
             //  "2023-07-23T20:49:45+08:00"
             openDate: string;
             //  "2023-07-23T20:49:45+08:00"
             realOpenDate: string;
             //  "2023-07-23T20:49:45+08:00"
-            serverNowTime:string;
+            serverNowTime: string;
         }
     }
     export namespace My_Score {

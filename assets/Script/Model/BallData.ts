@@ -71,20 +71,22 @@ export default class BallData extends BaseComponent {
         // this.spriteBG.spriteFrame = AssetMng.AssetClass.get(AssetType.Sprite).data.get(this.getBGData())
         // this.spriteBG.color = Color.WHITE
         this.node.setScale(PublicModel.getInstance.oneSclaeVec3(1.2))
+        this.setEffect(true)
         // let rotai = tween()
         //     .set({ angle: 0 })
         //     .to(5, { angle: -360 })
-        tween(this.spriteBG.node)
-            .repeatForever(tween()
-                .set({ angle: 0 })
-                .to(5, { angle: -360 }))
-            .start()
+        // tween(this.spriteBG.node)
+        //     .repeatForever(tween()
+        //         .set({ angle: 0 })
+        //         .to(5, { angle: -360 }))
+        //     .start()
     }
     cancel() {
         // this.spriteBG.spriteFrame = AssetMng.AssetClass.get(AssetType.Sprite).data.get(SpirteData.空白)
         // this.spriteBG.color = color().fromHEX(this.getColor())
         this.node.setScale(PublicModel.getInstance.oneSclaeVec3(1))
         this.spriteBG.node.eulerAngles = Vec3.ZERO
+        this.setEffect(false)
         Tween.stopAllByTarget(this.spriteBG.node)
         this.enabledBall(true)
     }

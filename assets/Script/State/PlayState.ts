@@ -22,6 +22,8 @@ export class ChooeseBall extends State {
             EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(LobbyStateEvent.AttackBall)
         }
         else {
+            console.log(data.betCode);
+
             if (data.betCode != null)
                 EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(LobbyStateEvent.UpDateBall, data)
             PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t(data.code, LangType.Server))

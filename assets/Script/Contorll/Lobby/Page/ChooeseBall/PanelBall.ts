@@ -29,6 +29,12 @@ export default class PanelBall extends BaseComponent {
     ballItem: Prefab;
     @property(Label)
     labelIssueID: Label
+    @property(Label)
+    labelState: Label
+    @property(Node)
+    tipBox: Node
+    @property(Node)
+    remide: Node
 
     Halign: number = 10;
     Valign: number = 5;
@@ -46,15 +52,19 @@ export default class PanelBall extends BaseComponent {
 
     async start() {
         await AssetMng.waitStateCheck(AssetType.Sprite)
+        this.labelState.node.active = true;
+        this.tipBox.active = false;
+        this.remide.active = false;
         this.labelContent.removeAllChildren()
         this.HorLayout.removeAllChildren()
         let isEnd = false
+        this.labelState.string = SocketSetting.t("041", LangType.Game).replace("$0", this.MaxCount.toString())
         for (let V = 0; V < this.Valign; V++) {
             let layout = instantiate(this.layoutItem)
             this.HorLayout.addChild(layout)
             for (let H = 1; H <= this.Halign; H++) {
                 let count = (V * this.Halign) + H
-                if (count > 49) {
+                if (count > this.totalCount) {
                     isEnd = true
                     break;
                 }
@@ -114,8 +124,14 @@ export default class PanelBall extends BaseComponent {
         if (this.tempChoose.indexOf(convert) > -1) {
             this.tempChoose.splice(this.tempChoose.indexOf(convert), 1)[0];
             this.mapBallNumber.get(convert).cancel()
-            if (this.isFullBall)
+            if (this.isFullBall) {
+                this.tipBox.active = false
                 this.fullResetBallColor(true)
+            }
+            if (this.tempChoose.length == 0)
+                this.labelState.string = SocketSetting.t("041", LangType.Game).replace("$0", this.MaxCount.toString())
+            else
+                this.labelState.string = SocketSetting.t("042", LangType.Game).replace("$0", this.tempChoose.length.toString())
             return
         }
         /**如果選號已滿 */
@@ -123,8 +139,10 @@ export default class PanelBall extends BaseComponent {
         /**紀錄球號 */
         this.tempChoose.push(convert)
         this.mapBallNumber.get(convert).choose()
+        this.labelState.string = SocketSetting.t("042", LangType.Game).replace("$0", this.tempChoose.length.toString())
         if (this.tempChoose.length === this.MaxCount) {
             this.isFullBall = true;
+            this.tipBox.active = true;
             this.mapBallNumber.forEach(element => {
                 //代表沒被選種
                 if (this.tempChoose.indexOf(element.ballNumber) == -1) {
@@ -171,6 +189,9 @@ export default class PanelBall extends BaseComponent {
             PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("039", LangType.Game))
             return
         }
+        this.labelState.node.active = false;
+        this.tipBox.active = false
+        this.remide.active = true;
         let len = this.tempChoose.length
         for (let index = 0; index < len; index++) {
             this.isChoose.push(this.tempChoose.shift())
@@ -221,9 +242,7 @@ export default class PanelBall extends BaseComponent {
 
     reProcessing(data: RP.ln | RP.bet) {
         console.log(data);
-
         this.onResetChooese(null)
-
         if (data.betCode != null) {
             if (this.isFullBall) {
                 PanelLoading.instance.closeLoading()

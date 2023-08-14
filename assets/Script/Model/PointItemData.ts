@@ -55,16 +55,14 @@ export default class PointItemData extends BaseComponent {
             let _node: Node;
             if (index == this.maxNumberCount) _node = this.specialBallItem;
             else {
-
                 _node = instantiate(this.prefabBallItem)
+                _node.setScale(PublicModel.getInstance.oneSclaeVec3(.6))
                 this.openDrawCodeLayout.addChild(_node)
             }
             let _class = _node.getComponent(BallData)
             _class.init(Number(numbers[index]))
             this.labelContent.addChild(_class.label.node)
 
-            // _class.label.updateRenderData(true)
-            _class.setLabelScale(this.openDrawCodeLayout.getScale().x)
         }
         return this
     }
@@ -76,7 +74,6 @@ export default class PointItemData extends BaseComponent {
             let _class = _node.getComponent(BallData)
             _class.init(numbers[index])
             this.labelContent.addChild(_class.label.node)
-
         }
     }
     setScore(num: number) {

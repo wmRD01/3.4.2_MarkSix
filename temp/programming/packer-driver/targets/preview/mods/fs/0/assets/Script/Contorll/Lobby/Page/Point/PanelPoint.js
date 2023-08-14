@@ -99,7 +99,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       ({
         ccclass,
         property
-      } = _decorator);
+      } = _decorator); //TODO 優化如果未選號，自動縮欄位
 
       _export("default", PanelPoint = (_dec = ccclass('PanelPoint'), _dec2 = property(Prefab), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(ScrollView), _dec(_class2 = (_class3 = (_temp = class PanelPoint extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
@@ -140,7 +140,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), AssetType) : AssetType).Sprite);
 
-            _this.reset();
+            _this.layoutContent.removeAllChildren();
 
             _this.scrollview.node.on(ScrollView.EventType.SCROLL_TO_BOTTOM, _this.onViewBottom, _this);
 
@@ -213,7 +213,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           for (var index = this.currentCount; index < response.data.length; index++) {
             if (this.layoutContent.children.length > this.maxCount) break;
-            this.mapDate.set(response.data[index].issueID, this.ClientData(response.data[index]));
+            this.mapDate.set(Number(response.data[index].issueID), this.ClientData(response.data[index]));
           }
 
           this.currentCount = response.data.length;
@@ -230,7 +230,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           this.layoutContent.addChild(_node);
 
-          _class.setLabelContent(this.labelContent).setOutlineContent(this.OutlineContent).setDayData(data.openDate, data.issueID).setOpenNumber(data.drawCode).init();
+          _class.setLabelContent(this.labelContent).setOutlineContent(this.OutlineContent).setDayData(data.openDate, Number(data.issueID)).setOpenNumber(data.drawCode).init();
 
           return _class;
         } //#endregion
@@ -282,11 +282,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         responseBetlog(response) {
           console.log("玩家紀錄", response);
+          console.log(this.mapDate);
 
           for (var index = 0; index < response.data.length; index++) {
-            if (!this.mapDate.has(response.data[index].issueID)) continue;
-            this.mapDate.get(response.data[index].issueID).setSelfNumber(response.data[index].betCode);
-            this.mapDate.get(response.data[index].issueID).setScore(response.data[index].score);
+            if (!this.mapDate.has(Number(response.data[index].issueID))) continue;
+            this.mapDate.get(Number(response.data[index].issueID)).setSelfNumber(response.data[index].betCode);
+            this.mapDate.get(Number(response.data[index].issueID)).setScore(response.data[index].score);
           }
         } //#endregion
 

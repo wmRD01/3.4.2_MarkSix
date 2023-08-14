@@ -10,4 +10,5 @@ export enum LobbyStateEvent {
     EditUpdate = "EditUpdate",
     ChangeBallButtonState = "ChangeBallButtonState",
     NextIssueID = "NextIssueID",
+       
 }

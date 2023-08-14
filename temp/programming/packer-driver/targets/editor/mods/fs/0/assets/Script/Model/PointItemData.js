@@ -123,6 +123,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             if (index == this.maxNumberCount) _node = this.specialBallItem;else {
               _node = instantiate(this.prefabBallItem);
+
+              _node.setScale((_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+                error: Error()
+              }), PublicModel) : PublicModel).getInstance.oneSclaeVec3(.6));
+
               this.openDrawCodeLayout.addChild(_node);
             }
 
@@ -132,9 +137,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             _class.init(Number(numbers[index]));
 
-            this.labelContent.addChild(_class.label.node); // _class.label.updateRenderData(true)
-
-            _class.setLabelScale(this.openDrawCodeLayout.getScale().x);
+            this.labelContent.addChild(_class.label.node);
           }
 
           return this;

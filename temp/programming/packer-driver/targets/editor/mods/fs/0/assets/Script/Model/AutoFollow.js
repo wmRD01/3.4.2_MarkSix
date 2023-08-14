@@ -42,6 +42,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           super(...args);
 
           _defineProperty(this, "target", void 0);
+
+          _defineProperty(this, "isAutoScale", true);
         }
 
         setTarget(_node) {
@@ -55,16 +57,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.target.setScale(this.node.scale);
         }
 
-        update() {
-          if (this.node.position.equals((_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
-            error: Error()
-          }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(this.node, this.target))) return; // console.log("改座標");
+        setAutoScale(isbool) {
+          this.isAutoScale = isbool;
+        }
 
-          this.node.scale = this.node.scale;
-          this.node.position = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+        update() {
+          if (!this.node.position.equals((_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
-          }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(this.node, this.target);
-          if (this.target.active != this.node.active) this.target.active = this.node.active;
+          }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(this.node, this.target))) this.node.position = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(this.node, this.target); // console.log("改座標");
+
+          if (!this.node.scale.equals(this.target.scale) && this.isAutoScale) this.node.scale = this.target.scale;
+          if (this.target.active != this.node.active) this.node.active = this.target.active;
         }
 
       }, _temp)) || _class));

@@ -1,4 +1,5 @@
 import { Button, color, EventTouch, instantiate, Label, Layout, Node, Prefab, random, Sprite, Vec3, _decorator } from 'cc';
+import { DEV } from 'cc/env';
 import DelayTime from '../../../../../Plug/DelayTime';
 import { AssetType } from '../../../../Enum/AssetType';
 import { CheckLoadingType } from '../../../../Enum/CheckLoadingType';
@@ -49,6 +50,8 @@ export default class PanelBall extends BaseComponent {
     isFullBall: boolean;
     websocket: Node;
 
+    tipTimer: Timer
+
 
     async start() {
         await AssetMng.waitStateCheck(AssetType.Sprite)
@@ -87,6 +90,7 @@ export default class PanelBall extends BaseComponent {
         this.mapBallNumber.forEach(element => {
             element.getOrg()
         });
+        this.tipTimer = this.tipBox.addComponent(Timer)
         this.eventEmit(LobbyStateEvent.ChangeBallButtonState, true)
         this.eventEmit(LobbyStateEvent.ChangeConfirmState, false)
         this.setEvent(LobbyStateEvent.UpDateBall, this.reProcessing)
@@ -127,6 +131,7 @@ export default class PanelBall extends BaseComponent {
             this.tempChoose.splice(this.tempChoose.indexOf(convert), 1)[0];
             this.mapBallNumber.get(convert).cancel()
             if (this.isFullBall) {
+
                 this.tipBox.active = false
                 this.fullResetBallColor(true)
                 this.eventEmit(LobbyStateEvent.ChangeConfirmState, false)
@@ -146,6 +151,7 @@ export default class PanelBall extends BaseComponent {
         if (this.tempChoose.length === this.MaxCount) {
             this.isFullBall = true;
             this.tipBox.active = true;
+            this.tipTimer.setAction(3)
             this.eventEmit(LobbyStateEvent.ChangeConfirmState, true)
             this.mapBallNumber.forEach(element => {
                 //代表沒被選種
@@ -203,6 +209,10 @@ export default class PanelBall extends BaseComponent {
             this.isChoose.push(this.tempChoose.shift())
         }
         this.isChoose.sort((a, b) => a - b)
+        /**沒辦法 得先關閉全部特效在座飛上去動作 */
+        for (let index = 0; index < this.isChoose.length; index++) {
+            this.mapBallNumber.get(this.isChoose[index]).cancel()
+        }
 
         for (let index = 0; index < this.isChoose.length; index++) {
             this.mapBallNumber.get(this.isChoose[index]).cancel()
@@ -251,8 +261,12 @@ export default class PanelBall extends BaseComponent {
         this.onResetChooese(null)
         if (data.betCode != null) {
             if (this.isFullBall) {
-                PanelLoading.instance.closeLoading()
-                return
+                // if (DEV)
+                    this.onTestReset(null)
+                // else {
+                //     PanelLoading.instance.closeLoading()
+                //     return
+                // }
             }
             for (let index = 0; index < data.betCode.length; index++) {
                 this.onChooeseBall(null, data.betCode[index].toString())
@@ -265,4 +279,26 @@ export default class PanelBall extends BaseComponent {
         PanelLoading.instance.closeLoading()
     }
 
+}
+class Timer extends BaseComponent {
+    isAction: boolean
+    time: number
+    setAction(s: number) {
+        this.isAction = true;
+        this.time = s
+        // console.error("原神起痛");
+
+    }
+    stopAction() {
+        this.isAction = false
+    }
+    update(dt) {
+        if (this.isAction) {
+            this.time -= dt
+            if (this.time < 0) {
+                this.node.active = false;
+                this.stopAction()
+            }
+        }
+    }
 }

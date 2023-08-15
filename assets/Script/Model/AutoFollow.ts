@@ -8,16 +8,20 @@ export default class AutoFollow extends BaseComponent {
     isAutoScale: boolean = true;
     setTarget(_node: Node) {
         this.target = _node;
+        return this
     }
     createNewTarget() {
         this.target = new Node();
         this.node.parent.addChild(this.target)
         this.target.setPosition(this.node.position)
         this.target.setScale(this.node.scale)
+        return this
     }
-    setAutoScale(isbool:boolean) {
+    setAutoScale(isbool: boolean) {
         this.isAutoScale = isbool;
+        return this
     }
+
     update() {
         if (!this.node.position.equals(PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(this.node, this.target)))
             this.node.position = PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(this.node, this.target)

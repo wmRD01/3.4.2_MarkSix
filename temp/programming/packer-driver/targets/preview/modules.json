@@ -1,6 +1,6 @@
 {
   "cce:/internal/x/cc": {
-    "mTimestamp": 5623.822600007057,
+    "mTimestamp": 7525.503000020981,
     "chunkId": "quick-pack:/cce/internal/x/cc.js",
     "imports": [
       {
@@ -191,7 +191,7 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 5859612.099099994,
+    "mTimestamp": 3613241.983400047,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
@@ -4137,7 +4137,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.ts": {
     "mTimestamp": {
-      "mtime": 1692008033753.868,
+      "mtime": 1692084790865.338,
       "uuid": "d2f08cfc-f861-4fd1-8212-bea888090d2b"
     },
     "chunkId": "assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js",
@@ -4167,11 +4167,11 @@
         "rewritten": "__unresolved_1",
         "loc": {
           "start": {
-            "line": 2,
+            "line": 3,
             "column": 22
           },
           "end": {
-            "line": 2,
+            "line": 3,
             "column": 53
           }
         }
@@ -4181,11 +4181,11 @@
         "rewritten": "__unresolved_2",
         "loc": {
           "start": {
-            "line": 3,
+            "line": 4,
             "column": 26
           },
           "end": {
-            "line": 3,
+            "line": 4,
             "column": 54
           }
         }
@@ -4195,11 +4195,11 @@
         "rewritten": "__unresolved_3",
         "loc": {
           "start": {
-            "line": 4,
+            "line": 5,
             "column": 33
           },
           "end": {
-            "line": 4,
+            "line": 5,
             "column": 68
           }
         }
@@ -4209,11 +4209,11 @@
         "rewritten": "__unresolved_4",
         "loc": {
           "start": {
-            "line": 5,
+            "line": 6,
             "column": 28
           },
           "end": {
-            "line": 5,
+            "line": 6,
             "column": 58
           }
         }
@@ -4223,11 +4223,11 @@
         "rewritten": "__unresolved_5",
         "loc": {
           "start": {
-            "line": 6,
+            "line": 7,
             "column": 25
           },
           "end": {
-            "line": 6,
+            "line": 7,
             "column": 52
           }
         }
@@ -4237,11 +4237,11 @@
         "rewritten": "__unresolved_6",
         "loc": {
           "start": {
-            "line": 7,
+            "line": 8,
             "column": 32
           },
           "end": {
-            "line": 7,
+            "line": 8,
             "column": 66
           }
         }
@@ -4251,11 +4251,11 @@
         "rewritten": "__unresolved_7",
         "loc": {
           "start": {
-            "line": 8,
+            "line": 9,
             "column": 31
           },
           "end": {
-            "line": 8,
+            "line": 9,
             "column": 64
           }
         }
@@ -4265,11 +4265,11 @@
         "rewritten": "__unresolved_8",
         "loc": {
           "start": {
-            "line": 9,
+            "line": 10,
             "column": 21
           },
           "end": {
-            "line": 9,
+            "line": 10,
             "column": 51
           }
         }
@@ -4279,11 +4279,11 @@
         "rewritten": "__unresolved_9",
         "loc": {
           "start": {
-            "line": 10,
+            "line": 11,
             "column": 22
           },
           "end": {
-            "line": 10,
+            "line": 11,
             "column": 53
           }
         }
@@ -4293,11 +4293,11 @@
         "rewritten": "__unresolved_10",
         "loc": {
           "start": {
-            "line": 11,
+            "line": 12,
             "column": 21
           },
           "end": {
-            "line": 11,
+            "line": 12,
             "column": 49
           }
         }
@@ -4307,11 +4307,11 @@
         "rewritten": "__unresolved_11",
         "loc": {
           "start": {
-            "line": 12,
+            "line": 13,
             "column": 25
           },
           "end": {
-            "line": 12,
+            "line": 13,
             "column": 57
           }
         }
@@ -4321,11 +4321,11 @@
         "rewritten": "__unresolved_12",
         "loc": {
           "start": {
-            "line": 13,
+            "line": 14,
             "column": 26
           },
           "end": {
-            "line": 13,
+            "line": 14,
             "column": 59
           }
         }
@@ -4335,11 +4335,11 @@
         "rewritten": "__unresolved_13",
         "loc": {
           "start": {
-            "line": 14,
+            "line": 15,
             "column": 26
           },
           "end": {
-            "line": 14,
+            "line": 15,
             "column": 60
           }
         }
@@ -4349,11 +4349,11 @@
         "rewritten": "__unresolved_14",
         "loc": {
           "start": {
-            "line": 16,
+            "line": 17,
             "column": 20
           },
           "end": {
-            "line": 16,
+            "line": 17,
             "column": 46
           }
         }
@@ -4363,11 +4363,11 @@
         "rewritten": "__unresolved_15",
         "loc": {
           "start": {
-            "line": 17,
+            "line": 18,
             "column": 25
           },
           "end": {
-            "line": 17,
+            "line": 18,
             "column": 60
           }
         }
@@ -4377,11 +4377,11 @@
         "rewritten": "__unresolved_16",
         "loc": {
           "start": {
-            "line": 18,
+            "line": 19,
             "column": 31
           },
           "end": {
-            "line": 18,
+            "line": 19,
             "column": 72
           }
         }
@@ -6626,7 +6626,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/PanelLobbyTest.ts": {
     "mTimestamp": {
-      "mtime": 1691994720030.16,
+      "mtime": 1692084818490.212,
       "uuid": "3b400b1d-2ff9-4a95-b9f3-a0de638665e5"
     },
     "chunkId": "assets/Script/Contorll/Lobby/PanelLobbyTest.js",
@@ -6648,19 +6648,6 @@
           "end": {
             "line": 1,
             "column": 37
-          }
-        }
-      },
-      {
-        "value": "cc/env",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 20
-          },
-          "end": {
-            "line": 2,
-            "column": 28
           }
         }
       },
@@ -6694,10 +6681,6 @@
       {
         "isExternal": false,
         "url": "cce:/internal/x/cc"
-      },
-      {
-        "specifierOrURL": "cc/env",
-        "isExternal": true
       },
       {
         "isExternal": false,
@@ -9425,7 +9408,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/BallData.ts": {
     "mTimestamp": {
-      "mtime": 1691999726895.5325,
+      "mtime": 1692084582388.0486,
       "uuid": "b170261f-18c0-4c5a-9b77-687b4d2018e8"
     },
     "chunkId": "assets/Script/Model/BallData.js",
@@ -9442,11 +9425,11 @@
         "loc": {
           "start": {
             "line": 1,
-            "column": 94
+            "column": 105
           },
           "end": {
             "line": 1,
-            "column": 98
+            "column": 109
           }
         }
       },
@@ -10200,7 +10183,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicData.ts": {
     "mTimestamp": {
-      "mtime": 1692006618543.3994,
+      "mtime": 1692084857833.785,
       "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12"
     },
     "chunkId": "assets/Script/Model/PublicData.js",
@@ -12980,7 +12963,7 @@
     ]
   },
   "cce:/internal/ml/cjs-loader.mjs": {
-    "mTimestamp": 1692002175626,
+    "mTimestamp": 1692081246461,
     "chunkId": "quick-pack:/cce/internal/ml/cjs-loader.js",
     "imports": [],
     "modLoMetadata": {
@@ -12989,7 +12972,7 @@
     "resolvedImports": []
   },
   "cce:/internal/code-quality/cr.mjs": {
-    "mTimestamp": 1692002175626,
+    "mTimestamp": 1692081246461,
     "chunkId": "quick-pack:/cce/internal/code-quality/cr.js",
     "imports": [],
     "modLoMetadata": {
@@ -15142,7 +15125,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/AutoFollow.ts": {
     "mTimestamp": {
-      "mtime": 1691999272649.9453,
+      "mtime": 1692084358961.2256,
       "uuid": "5a8e8b02-6c93-48ee-92a9-7f7e21c705b6"
     },
     "chunkId": "assets/Script/Model/AutoFollow.js",

@@ -1,4 +1,4 @@
-import { Button, Color, color, Label, Node, Sprite, Tween, tween, v3, Vec3, _decorator } from 'cc';
+import { Button, Color, color, Label, Node, Sprite, Tween, tween, UIOpacity, v3, Vec3, _decorator } from 'cc';
 import { AssetType } from '../Enum/AssetType';
 import AssetMng from '../Manager/AssetMng';
 import { colorTest } from '../test/colorTest';
@@ -15,12 +15,13 @@ export default class BallData extends BaseComponent {
     button: Button;
     @property(Sprite)
     spriteBG: Sprite;
-    /**data */
-    @property(Node)
-    nodeEffect: Node;
+
+    @property(UIOpacity)
+    opacityEffect: UIOpacity;
     ballNumber: number = 0;
     type: number = 0;
     orgV3: Vec3;
+    labelAuto: AutoFollow;
     init(_ballNumber: number, isResetPos: boolean = false) {
         // console.log(_ballNumber);
 
@@ -33,7 +34,7 @@ export default class BallData extends BaseComponent {
         this.type = (_ballNumber + (Math.floor(_ballNumber / 10))) % 6
         if (_ballNumber % 10 === 0)
             this.type -= 1
-        this.label.addComponent(AutoFollow).setTarget(this.node)
+        this.labelAuto = this.label.addComponent(AutoFollow).setTarget(this.node)
         this.label.string = this.ballNumber.toString()
         this.label.color = color().fromHEX(this.getColor())
         // console.log(AssetMng.AssetClass.get(AssetType.Sprite).data.get(this.getBGData()));
@@ -75,15 +76,16 @@ export default class BallData extends BaseComponent {
         // let rotai = tween()
         //     .set({ angle: 0 })
         //     .to(5, { angle: -360 })
-        // tween(this.spriteBG.node)
-        //     .repeatForever(tween()
-        //         .set({ angle: 0 })
-        //         .to(5, { angle: -360 }))
-        //     .start()
+        tween(this.opacityEffect)
+            .repeatForever(tween()
+                .to(1, { opacity: 0 })
+                .to(1, { opacity: 255 }))
+            .start()
     }
     cancel() {
         // this.spriteBG.spriteFrame = AssetMng.AssetClass.get(AssetType.Sprite).data.get(SpirteData.空白)
         // this.spriteBG.color = color().fromHEX(this.getColor())
+
         this.node.setScale(PublicModel.getInstance.oneSclaeVec3(1))
         this.spriteBG.node.eulerAngles = Vec3.ZERO
         this.setEffect(false)
@@ -98,15 +100,27 @@ export default class BallData extends BaseComponent {
         // console.log(this.node.position, this.orgV3);
 
     }
+    setLabelAutoScale() {
+        this.labelAuto.setAutoScale(true)
+    }
+
     enabledBall(bool: boolean) {
-        this.spriteBG.color = bool ? color().fromHEX(ColorType.白) : color().fromHEX(ColorType.灰);
+        if (bool) {
+            this.label.color = Color.BLACK
+            this.spriteBG.color = Color.WHITE
+        }
+
+        else {
+
+            this.spriteBG.color = new Color(255, 255, 255, 100)
+            this.label.color = new Color(0, 0, 0, 100)
+        }
     }
     setEffect(bool: boolean) {
-        this.nodeEffect.active = bool
+        this.opacityEffect.opacity = 255
+        this.opacityEffect.node.active = bool
     }
-    setLabelScale(num: number) {
-        this.label.node.setScale(PublicModel.getInstance.oneSclaeVec3(num))
-    }
+
     private getColor() {
 
         return ColorType.黑

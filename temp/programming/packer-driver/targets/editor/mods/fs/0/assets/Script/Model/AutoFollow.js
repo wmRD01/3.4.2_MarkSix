@@ -48,6 +48,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
         setTarget(_node) {
           this.target = _node;
+          return this;
         }
 
         createNewTarget() {
@@ -55,10 +56,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.node.parent.addChild(this.target);
           this.target.setPosition(this.node.position);
           this.target.setScale(this.node.scale);
+          return this;
         }
 
         setAutoScale(isbool) {
           this.isAutoScale = isbool;
+          return this;
         }
 
         update() {

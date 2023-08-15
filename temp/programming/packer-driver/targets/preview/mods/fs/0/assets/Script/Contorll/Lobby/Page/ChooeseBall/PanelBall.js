@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Label, Layout, Node, Prefab, _decorator, DelayTime, AssetType, CheckLoadingType, CommandType, LangType, LobbyStateEvent, WebSocketEvent, AssetMng, ButtonMng, BallData, CheckLoading, BaseComponent, SocketSetting, bet, PanelLoading, PanelSystemMessage, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PanelBall;
+  var _reporterNs, _cclegacy, instantiate, Label, Layout, Node, Prefab, _decorator, DelayTime, AssetType, CheckLoadingType, CommandType, LangType, LobbyStateEvent, WebSocketEvent, AssetMng, ButtonMng, BallData, CheckLoading, BaseComponent, SocketSetting, bet, PanelLoading, PanelSystemMessage, Timer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PanelBall;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -9,11 +9,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
-  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
   function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
   function _reportPossibleCrUseOfDelayTime(extras) {
     _reporterNs.report("DelayTime", "../../../../../Plug/DelayTime", _context.meta, extras);
@@ -174,6 +174,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "isFullBall", void 0);
 
           _defineProperty(this, "websocket", void 0);
+
+          _defineProperty(this, "tipTimer", void 0);
         }
 
         start() {
@@ -245,6 +247,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             _this.mapBallNumber.forEach(element => {
               element.getOrg();
             });
+
+            _this.tipTimer = _this.tipBox.addComponent(Timer);
 
             _this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
               error: Error()
@@ -362,6 +366,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.tempChoose.length === this.MaxCount) {
             this.isFullBall = true;
             this.tipBox.active = true;
+            this.tipTimer.setAction(3);
             this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
               error: Error()
             }), LobbyStateEvent) : LobbyStateEvent).ChangeConfirmState, true);
@@ -451,13 +456,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }
 
             _this3.isChoose.sort((a, b) => a - b);
+            /**沒辦法 得先關閉全部特效在座飛上去動作 */
+
 
             for (var _index = 0; _index < _this3.isChoose.length; _index++) {
               _this3.mapBallNumber.get(_this3.isChoose[_index]).cancel();
+            }
+
+            for (var _index2 = 0; _index2 < _this3.isChoose.length; _index2++) {
+              _this3.mapBallNumber.get(_this3.isChoose[_index2]).cancel();
 
               _this3.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
                 error: Error()
-              }), LobbyStateEvent) : LobbyStateEvent).BallChooeseAction, _this3.mapBallNumber.get(_this3.isChoose[_index]).node, _index);
+              }), LobbyStateEvent) : LobbyStateEvent).BallChooeseAction, _this3.mapBallNumber.get(_this3.isChoose[_index2]).node, _index2);
 
               yield (_crd && DelayTime === void 0 ? (_reportPossibleCrUseOfDelayTime({
                 error: Error()
@@ -535,10 +546,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (data.betCode != null) {
             if (this.isFullBall) {
-              (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
-                error: Error()
-              }), PanelLoading) : PanelLoading).instance.closeLoading();
-              return;
+              // if (DEV)
+              this.onTestReset(null); // else {
+              //     PanelLoading.instance.closeLoading()
+              //     return
+              // }
             }
 
             for (var index = 0; index < data.betCode.length; index++) {
@@ -605,6 +617,39 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         writable: true,
         initializer: null
       })), _class3)) || _class2));
+
+      Timer = class Timer extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+        error: Error()
+      }), BaseComponent) : BaseComponent) {
+        constructor() {
+          super(...arguments);
+
+          _defineProperty(this, "isAction", void 0);
+
+          _defineProperty(this, "time", void 0);
+        }
+
+        setAction(s) {
+          this.isAction = true;
+          this.time = s; // console.error("原神起痛");
+        }
+
+        stopAction() {
+          this.isAction = false;
+        }
+
+        update(dt) {
+          if (this.isAction) {
+            this.time -= dt;
+
+            if (this.time < 0) {
+              this.node.active = false;
+              this.stopAction();
+            }
+          }
+        }
+
+      };
 
       _cclegacy._RF.pop();
 

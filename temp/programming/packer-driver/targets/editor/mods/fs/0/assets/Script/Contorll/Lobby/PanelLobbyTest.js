@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Node, _decorator, BaseComponent, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PanelLobbyTest;
+  var _reporterNs, _cclegacy, Node, _decorator, DEV, BaseComponent, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, PanelLobbyTest;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -22,6 +22,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       _cclegacy = _cc.cclegacy;
       Node = _cc.Node;
       _decorator = _cc._decorator;
+    }, function (_ccEnv) {
+      DEV = _ccEnv.DEV;
     }, function (_unresolved_2) {
       BaseComponent = _unresolved_2.default;
     }],
@@ -44,7 +46,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           _initializerDefineProperty(this, "resetBall", _descriptor, this);
         }
 
-        onLoad() {// this.resetBall.active = DEV;
+        onLoad() {
+          this.resetBall.active = DEV;
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "resetBall", [_dec2], {

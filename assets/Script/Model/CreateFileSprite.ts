@@ -4,10 +4,14 @@ import { RequestGPG } from "../Contorll/Api/GPGAPI/RequestGPG";
 export default class CreateFileSprite {
     AcceptImgFormat: string[] = ['image/gif', 'image/jpeg', 'image/png', 'image/bmp'];
     callback: Function
+    errorback: Function;
     file: File;
+    setLimitSize: number = 5
 
-    constructor(_callback: Function) {
+
+    constructor(_callback: Function, _error: Function) {
         this.callback = _callback
+        this.errorback = _error
         if (document.getElementById('inputfile') != null) {
             document.getElementById('inputfile').remove();
         }
@@ -21,12 +25,20 @@ export default class CreateFileSprite {
     }
 
     checkSpriteData(e: Event) {
+        let limitSize = this.setLimitSize * 1024 * 1024
         this.file = (e.target as HTMLInputElement).files[0]
         if (this.AcceptImgFormat.indexOf(this.file.type) == -1) {
-            return console.error(`代表類型不正確`);
+            this.errorback("044")
+            return
+        }
+        if (this.file.size > limitSize) {
+            this.errorback("043")
+            return
+
         }
         if (!this.file) {
-            return console.error(`無檔案`);
+            this.errorback("045")
+            return
         };
         /**開一條支線傳給後端 */
         const reader = new FileReader();
@@ -35,7 +47,6 @@ export default class CreateFileSprite {
     }
 
     readerOnload(e: ProgressEvent) {
-        let limitSize = 2 * 1024 * 1024
         const image = new Image();
         let data = (e.target as FileReader).result as string
         image.src = data

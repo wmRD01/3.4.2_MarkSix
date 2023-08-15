@@ -21,32 +21,19 @@ const { ccclass, property } = _decorator;
 export default class PanelClientEdit extends BaseComponent {
     @property(MyEditBox)
     editNicName: MyEditBox;
-    @property(MyEditBox)
-    editPhone: MyEditBox;
-    @property(MyEditBox)
-    editEmail: MyEditBox;
-    @property(MyEditBox)
-    editVerificationCode: MyEditBox;
-
-    @property(Button)
-    buttonVerificationCode: Button
 
     @property(Button)
     buttonConfirm: Button
 
     @property(Node)
     btnsFunction: Node
-    @property(Label)
-    labelVerificationCode: Label;
 
     onLoad() {
         EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).on(LobbyStateEvent.EditNickname, this.onEditNickname, this)
         EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).on(LobbyStateEvent.EditPhone, this.onEditPhone, this)
         EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).on(LobbyStateEvent.EditEmail, this.onEditEmail, this)
-        this.setEvent(LobbyStateEvent.NextIssueID,this.reset)
+        this.setEvent(LobbyStateEvent.NextIssueID, this.reset)
         this.editNicName.string = ""
-        this.editEmail.string = ""
-        this.editPhone.string = ""
         this.reset()
         super.onLoad()
     }
@@ -91,13 +78,13 @@ export default class PanelClientEdit extends BaseComponent {
         }
     }
     //#endregion
-    //#region ValidateContactInfo
+    //#region (棄用)ValidateContactInfo
     /**進行發送驗證碼時，必須先通過確認手機是否被註冊過 */
     async onValidateContactInfoPhone() {
         /**確認信箱 */
         //TODO 製作手機驗證(整理好後再回頭製作)
         const body = new RequestGPG.Body.NotNeedToken.ValidateContactInfo()
-        body.Phone = this.editPhone.string;
+        // body.Phone = this.editPhone.string;
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
@@ -105,9 +92,9 @@ export default class PanelClientEdit extends BaseComponent {
     }
     async onValidateContactInfoEmail() {
         /**確認信箱格式 */
-        if (!this.checkEmail(this.editEmail.string)) return;
+        // if (!this.checkEmail(this.editEmail.string)) return;
         const body = new RequestGPG.Body.NotNeedToken.ValidateContactInfo()
-        body.Email = this.editEmail.string;
+        // body.Email = this.editEmail.string;
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
@@ -117,20 +104,20 @@ export default class PanelClientEdit extends BaseComponent {
         console.log("ValidateContactInfo", response)
         /**代表此已經綁定過不可以綁定! */
         if (response.Status.Code == "0") {
-            if (this.editEmail.string != "")
-                PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("040", LangType.Game))
-            if (this.editPhone.string != "")
-                PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("034", LangType.Game))
+            // if (this.editEmail.string != "")
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("040", LangType.Game))
+            // if (this.editPhone.string != "")
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("034", LangType.Game))
             return;
         }
         else {
             console.log("恭喜信箱不存在，可繼續註冊");
             //*要改成手動送驗證碼
             const sendBody = new RequestGPG.Body.NotNeedToken.SendRegisterVerification()
-            if (this.editEmail.string != "")
-                sendBody.Email = this.editEmail.string
-            if (this.editPhone.string != "")
-                sendBody.Phone = this.editPhone.string
+            // if (this.editEmail.string != "")
+            //     sendBody.Email = this.editEmail.string
+            // if (this.editPhone.string != "")
+            //     sendBody.Phone = this.editPhone.string
             await new RequestGPG.Request()
                 .setMethod(RequestGPG.Method.POST)
                 .setBody(JSON.stringify(sendBody))
@@ -142,43 +129,43 @@ export default class PanelClientEdit extends BaseComponent {
         console.log("SendRegisterVerification", response)
         if (response.Status.Code == "0") {
             PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("035", LangType.Game))
-            new VerificationTimer(this.labelVerificationCode, this.buttonVerificationCode, 180)
+            // new VerificationTimer(this.labelVerificationCode, this.buttonVerificationCode, 180)
             console.log("送出驗證碼囉");
         }
 
     }
     //#endregion
-    //#region Phone
+    //#region (棄用)Phone
     private onEditPhone() {
-        this.editPhone.spriteBG.node.active = true
-        this.editPhone.textLabel.node.parent.active = true;
-        this.activeVerificationCode(true)
+        // this.editPhone.spriteBG.node.active = true
+        // this.editPhone.textLabel.node.parent.active = true;
+        // this.activeVerificationCode(true)
         this.btnsFunction.active = true
-        ButtonMng.addEvent(this, "onValidateContactInfoPhone", this.buttonVerificationCode)
+        // ButtonMng.addEvent(this, "onValidateContactInfoPhone", this.buttonVerificationCode)
         ButtonMng.addEvent(this, "創立修改手機的", this.buttonConfirm)
     }
     //TODO 修改手機的方法
     //#endregion
-    //#region Email
+    //#region (棄用)Email
 
     private onEditEmail() {
-        this.editEmail.spriteBG.node.active = true
-        this.editEmail.textLabel.node.parent.active = true;
+        // this.editEmail.spriteBG.node.active = true
+        // this.editEmail.textLabel.node.parent.active = true;
         this.activeVerificationCode(true)
         this.btnsFunction.active = true
-        ButtonMng.addEvent(this, "onValidateContactInfoEmail", this.buttonVerificationCode)
+        // ButtonMng.addEvent(this, "onValidateContactInfoEmail", this.buttonVerificationCode)
         ButtonMng.addEvent(this, "certifiedEmall", this.buttonConfirm)
 
 
     }
     /**送出前須確認驗證碼的正確性，但前題是他必須得先需要註冊信箱時才會接這個function */
     async certifiedEmall() {
-        if (!this.checkEmail(this.editEmail.string)) return;
-        if (!this.checkVerification(this.editVerificationCode.string)) return;
+        // if (!this.checkEmail(this.editEmail.string)) return;
+        // if (!this.checkVerification(this.editVerificationCode.string)) return;
         /**確認信箱格式 */
         const body = new RequestGPG.Body.NeedToken.CertifiedEmail()
-        body.email = this.editEmail.string
-        body.verifyCode = this.editVerificationCode.string
+        // body.email = this.editEmail.string
+        // body.verifyCode = this.editVerificationCode.string
         body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.CertifiedEmail)
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
@@ -193,7 +180,7 @@ export default class PanelClientEdit extends BaseComponent {
         if (response.Status.Code == "0") {
             console.log("過關惹");
             PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("036", LangType.ServerAPI))
-            EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).emit(LobbyStateEvent.EditUpdate, this.editEmail.string, EditMenu.Email)
+            // EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).emit(LobbyStateEvent.EditUpdate, this.editEmail.string, EditMenu.Email)
             ButtonMng.clearEvent(this.buttonConfirm);
             this.reset()
         }
@@ -205,9 +192,9 @@ export default class PanelClientEdit extends BaseComponent {
     }
     //#endregion
     private activeVerificationCode(bool: boolean) {
-        this.editVerificationCode.spriteBG.node.active = bool
-        this.editVerificationCode.textLabel.node.parent.active = bool;
-        this.buttonVerificationCode.node.active = bool
+        // this.editVerificationCode.spriteBG.node.active = bool
+        // this.editVerificationCode.textLabel.node.parent.active = bool;
+        // this.buttonVerificationCode.node.active = bool
 
         // if (!bool)
         // this.btnsFunction.position = PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(this.btnsFunction, this.editEmail.spriteBG.node)
@@ -215,17 +202,17 @@ export default class PanelClientEdit extends BaseComponent {
     private reset() {
         this.editNicName.spriteBG.node.active = false
         this.editNicName.textLabel.node.parent.active = false;
-        this.editEmail.spriteBG.node.active = false
-        this.editEmail.textLabel.node.parent.active = false;
-        this.editPhone.spriteBG.node.active = false
-        this.editPhone.textLabel.node.parent.active = false;
+        // this.editEmail.spriteBG.node.active = false
+        // this.editEmail.textLabel.node.parent.active = false;
+        // this.editPhone.spriteBG.node.active = false
+        // this.editPhone.textLabel.node.parent.active = false;
         this.activeVerificationCode(false)
         this.btnsFunction.active = false;
-        this.buttonVerificationCode.node.active = false;
-        this.editEmail.string = "";
+        // this.buttonVerificationCode.node.active = false;
+        // this.editEmail.string = "";
         this.editNicName.string = "";
         this.editNicName.string = "";
-        this.editVerificationCode.string = "";
+        // this.editVerificationCode.string = "";
     }
     /**確認信箱格式 */
     checkEmailRegular(_string: string) {

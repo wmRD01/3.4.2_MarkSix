@@ -261,12 +261,12 @@ export default class PanelBall extends BaseComponent {
         this.onResetChooese(null)
         if (data.betCode != null) {
             if (this.isFullBall) {
-                // if (DEV)
+                if (DEV)
                     this.onTestReset(null)
-                // else {
-                //     PanelLoading.instance.closeLoading()
-                //     return
-                // }
+                else {
+                    PanelLoading.instance.closeLoading()
+                    return
+                }
             }
             for (let index = 0; index < data.betCode.length; index++) {
                 this.onChooeseBall(null, data.betCode[index].toString())

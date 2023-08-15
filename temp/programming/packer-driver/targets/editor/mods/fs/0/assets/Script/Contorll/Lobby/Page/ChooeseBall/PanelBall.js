@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Label, Layout, Node, Prefab, _decorator, DelayTime, AssetType, CheckLoadingType, CommandType, LangType, LobbyStateEvent, WebSocketEvent, AssetMng, ButtonMng, BallData, CheckLoading, BaseComponent, SocketSetting, bet, PanelLoading, PanelSystemMessage, Timer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PanelBall;
+  var _reporterNs, _cclegacy, instantiate, Label, Layout, Node, Prefab, _decorator, DEV, DelayTime, AssetType, CheckLoadingType, CommandType, LangType, LobbyStateEvent, WebSocketEvent, AssetMng, ButtonMng, BallData, CheckLoading, BaseComponent, SocketSetting, bet, PanelLoading, PanelSystemMessage, Timer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PanelBall;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -86,6 +86,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Node = _cc.Node;
       Prefab = _cc.Prefab;
       _decorator = _cc._decorator;
+    }, function (_ccEnv) {
+      DEV = _ccEnv.DEV;
     }, function (_unresolved_2) {
       DelayTime = _unresolved_2.default;
     }, function (_unresolved_3) {
@@ -512,11 +514,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (data.betCode != null) {
             if (this.isFullBall) {
-              // if (DEV)
-              this.onTestReset(null); // else {
-              //     PanelLoading.instance.closeLoading()
-              //     return
-              // }
+              if (DEV) this.onTestReset(null);else {
+                (_crd && PanelLoading === void 0 ? (_reportPossibleCrUseOfPanelLoading({
+                  error: Error()
+                }), PanelLoading) : PanelLoading).instance.closeLoading();
+                return;
+              }
             }
 
             for (let index = 0; index < data.betCode.length; index++) {

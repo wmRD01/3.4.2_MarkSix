@@ -7,6 +7,6 @@ export default class PanelLobbyTest extends BaseComponent {
     @property(Node)
     resetBall: Node;
     onLoad() {
-        // this.resetBall.active = DEV;
+        this.resetBall.active = DEV;
     }
 }

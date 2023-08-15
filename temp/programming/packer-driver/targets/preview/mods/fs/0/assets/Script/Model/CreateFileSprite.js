@@ -21,14 +21,19 @@ System.register(["cc"], function (_export, _context) {
       _cclegacy._RF.push({}, "8ce80GHeNJCNbhjmODjKEMC", "CreateFileSprite", undefined);
 
       _export("default", CreateFileSprite = class CreateFileSprite {
-        constructor(_callback) {
+        constructor(_callback, _error) {
           _defineProperty(this, "AcceptImgFormat", ['image/gif', 'image/jpeg', 'image/png', 'image/bmp']);
 
           _defineProperty(this, "callback", void 0);
 
+          _defineProperty(this, "errorback", void 0);
+
           _defineProperty(this, "file", void 0);
 
+          _defineProperty(this, "setLimitSize", 5);
+
           this.callback = _callback;
+          this.errorback = _error;
 
           if (document.getElementById('inputfile') != null) {
             document.getElementById('inputfile').remove();
@@ -44,14 +49,22 @@ System.register(["cc"], function (_export, _context) {
         }
 
         checkSpriteData(e) {
+          var limitSize = this.setLimitSize * 1024 * 1024;
           this.file = e.target.files[0];
 
           if (this.AcceptImgFormat.indexOf(this.file.type) == -1) {
-            return console.error("\u4EE3\u8868\u985E\u578B\u4E0D\u6B63\u78BA");
+            this.errorback("044");
+            return;
+          }
+
+          if (this.file.size > limitSize) {
+            this.errorback("043");
+            return;
           }
 
           if (!this.file) {
-            return console.error("\u7121\u6A94\u6848");
+            this.errorback("045");
+            return;
           }
 
           ;
@@ -63,7 +76,6 @@ System.register(["cc"], function (_export, _context) {
         }
 
         readerOnload(e) {
-          var limitSize = 2 * 1024 * 1024;
           var image = new Image();
           var data = e.target.result;
           image.src = data; // let _base64 = data.split(",")[1]

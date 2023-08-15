@@ -12,6 +12,9 @@ import PanelLoading from '../../../NoClearNode/PanelLoading';
 import PublicModel from '../../../../Model/PublicModel';
 import CreateFileSprite from '../../../../Model/CreateFileSprite';
 import { EditMenu } from '../../../../Enum/EditMenu';
+import PanelSystemMessage from '../../../NoClearNode/PanelSystemMessage';
+import SocketSetting from '../../../../Socket/SocketSetting';
+import { LangType } from '../../../../Enum/LangType';
 const { ccclass, property } = _decorator;
 @ccclass('PanelClientInfo')
 export default class PanelClientInfo extends BaseComponent {
@@ -25,8 +28,6 @@ export default class PanelClientInfo extends BaseComponent {
     @property(Label)
     labelNickName: Label
     @property(Label)
-    labelEmail: Label
-    @property(Label)
     labelBetCount: Label;
     @property(Label)
     labelPointCount: Label;
@@ -35,10 +36,6 @@ export default class PanelClientInfo extends BaseComponent {
 
     @property(Button)
     buttonEditNickname: Button;
-    @property(Button)
-    buttonEditPhone: Button;
-    @property(Button)
-    buttonEditEmail: Button;
     @property(Button)
     buttonEditPicture: Button;
 
@@ -50,7 +47,6 @@ export default class PanelClientInfo extends BaseComponent {
         this.show()
         EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).on(LobbyStateEvent.EditUpdate, this.onEditUpData, this)
         this.setEvent(LobbyStateEvent.NextIssueID, this.resetButton)
-        this.labelEmail.string = ""
         this.labelPhone.string = ""
         this.labelNickName.string = ""
     }
@@ -89,9 +85,6 @@ export default class PanelClientInfo extends BaseComponent {
                 case EditMenu.Phone:
                     this.labelPhone.string = str
                     break;
-                case EditMenu.Email:
-                    this.labelEmail.string = str
-                    break;
             }
         }
         this.resetButton()
@@ -99,7 +92,7 @@ export default class PanelClientInfo extends BaseComponent {
     }
     //#region UploadAvatar
     onSelectPhoto() {
-        new CreateFileSprite(this.onUploadAvatar.bind(this))
+        new CreateFileSprite(this.onUploadAvatar.bind(this),this.responError.bind(this))
     }
     async onUploadAvatar(_spriteFrame: SpriteFrame, file: File) {
         // PublicModel.getInstance.convertByteToBinary(PublicModel.getInstance._base64ToBytes(base64))
@@ -122,6 +115,9 @@ export default class PanelClientInfo extends BaseComponent {
 
         }
     }
+    responError(errorCode:string){
+        PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t(errorCode, LangType.Game))
+    }
     //#endregion
     //#region  MyInfo
     async requestMyInfo() {
@@ -141,27 +137,28 @@ export default class PanelClientInfo extends BaseComponent {
         // response.data.photo
         // console.log(Player.getInstance.gpgInfo);
 
-        /*上傳圖片功能暫時隱藏 */
-        // if (!PublicModel.getInstance.checkStringNull(response.data.photo.headPhoto))
-        //     assetManager.loadRemote(response.data.photo.headPhoto, (err, image: ImageAsset) => {
-        //         if (err) {
-        //             console.error(err.message);
-        //             return
-        //         }
-        //         this.spritePlayer.spriteFrame = SpriteFrame.createWithImage(image)
-
-        //     })
+        // /*上傳圖片功能暫時隱藏 */
+        if (!PublicModel.getInstance.checkStringNull(response.data.photo.headPhoto))
+            await this.loadPicture(response.data.photo.headPhoto)
         if (!PublicModel.getInstance.checkStringNull(response.data.nickName)) {
             this.getplatform = response.data.nickName?.split("_")[0]/**因為前面會有註冊會員的文字，要刪除掉 */
             this.labelNickName.string = response.data.nickName.replace(`${this.getplatform}_`, "")
         }
         else
             this.labelNickName.string = response.data.nickName
-        this.buttonEditPhone.node.active = PublicModel.getInstance.checkStringNull(response.data.phoneNumber);
         this.labelPhone.string = PublicModel.getInstance.checkStringNull(response.data.phoneNumber) ? "" : response.data.phoneNumber
-        this.buttonEditEmail.node.active = PublicModel.getInstance.checkStringNull(response.data.email);
-        this.labelEmail.string = PublicModel.getInstance.checkStringNull(response.data.email) ? "" : response.data.email
-
+    }
+    async loadPicture(url: string) {
+        return new Promise<void>((resolve, reject) => {
+            assetManager.loadRemote(url, (err, image: ImageAsset) => {
+                if (err) {
+                    console.error(err.message);
+                    return
+                }
+                this.spritePlayer.spriteFrame = SpriteFrame.createWithImage(image)
+                resolve()
+            })
+        })
     }
     //#endregion
     //#region Betlog
@@ -187,7 +184,6 @@ export default class PanelClientInfo extends BaseComponent {
             this.labelRank.string = response.data.rank.toString()
             this.labelBetCount.string = response.data.betTimes.toString()
             this.labelPointCount.string = response.data.totalScore.toString()
-            // this.labelMyPoint.string = response.data.totalScore.toString();
         }
         else {
             this.labelRank.string = "0"
@@ -198,14 +194,10 @@ export default class PanelClientInfo extends BaseComponent {
     //#endregion
     resetButton() {
         this.buttonEditNickname.node.active = true
-        // this.buttonEditPicture.node.active = true
-        this.buttonEditPhone.node.active = PublicModel.getInstance.checkStringNull(this.labelPhone.string);
-        this.buttonEditEmail.node.active = PublicModel.getInstance.checkStringNull(this.labelEmail.string);
+        this.buttonEditPicture.node.active = true
     }
     closeButton() {
-        // this.buttonEditPicturse.node.active = false
+        this.buttonEditPicture.node.active = false
         this.buttonEditNickname.node.active = false
-        this.buttonEditPhone.node.active = false
-        this.buttonEditEmail.node.active = false
     }
 }

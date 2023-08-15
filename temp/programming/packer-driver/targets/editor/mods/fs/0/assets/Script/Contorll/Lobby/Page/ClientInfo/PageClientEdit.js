@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Label, Node, _decorator, NotificationType, LobbyStateEvent, EventMng, BaseComponent, Player, RequestGPG, MyEditBox, PublicModel, PanelLoading, ButtonMng, EditMenu, PanelSystemMessage, SocketSetting, LangType, VerificationTimer, PublicData, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PanelClientEdit;
+  var _reporterNs, _cclegacy, Button, Node, _decorator, NotificationType, LobbyStateEvent, EventMng, BaseComponent, Player, RequestGPG, MyEditBox, PublicModel, PanelLoading, ButtonMng, EditMenu, PanelSystemMessage, SocketSetting, LangType, PublicData, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, PanelClientEdit;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -71,10 +71,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("LangType", "../../../../Enum/LangType", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfVerificationTimer(extras) {
-    _reporterNs.report("VerificationTimer", "../../../../Model/VerificationTimer", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfPublicData(extras) {
     _reporterNs.report("PublicData", "../../../../Model/PublicData", _context.meta, extras);
   }
@@ -85,7 +81,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_cc) {
       _cclegacy = _cc.cclegacy;
       Button = _cc.Button;
-      Label = _cc.Label;
       Node = _cc.Node;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
@@ -117,9 +112,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_15) {
       LangType = _unresolved_15.LangType;
     }, function (_unresolved_16) {
-      VerificationTimer = _unresolved_16.VerificationTimer;
-    }, function (_unresolved_17) {
-      PublicData = _unresolved_17.default;
+      PublicData = _unresolved_16.default;
     }],
     execute: function () {
       _crd = true;
@@ -133,13 +126,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
       _export("default", PanelClientEdit = (_dec = ccclass('PanelClientEdit'), _dec2 = property(_crd && MyEditBox === void 0 ? (_reportPossibleCrUseOfMyEditBox({
         error: Error()
-      }), MyEditBox) : MyEditBox), _dec3 = property(_crd && MyEditBox === void 0 ? (_reportPossibleCrUseOfMyEditBox({
-        error: Error()
-      }), MyEditBox) : MyEditBox), _dec4 = property(_crd && MyEditBox === void 0 ? (_reportPossibleCrUseOfMyEditBox({
-        error: Error()
-      }), MyEditBox) : MyEditBox), _dec5 = property(_crd && MyEditBox === void 0 ? (_reportPossibleCrUseOfMyEditBox({
-        error: Error()
-      }), MyEditBox) : MyEditBox), _dec6 = property(Button), _dec7 = property(Button), _dec8 = property(Node), _dec9 = property(Label), _dec(_class = (_class2 = (_temp = class PanelClientEdit extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      }), MyEditBox) : MyEditBox), _dec3 = property(Button), _dec4 = property(Node), _dec(_class = (_class2 = (_temp = class PanelClientEdit extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {
@@ -147,19 +134,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "editNicName", _descriptor, this);
 
-          _initializerDefineProperty(this, "editPhone", _descriptor2, this);
+          _initializerDefineProperty(this, "buttonConfirm", _descriptor2, this);
 
-          _initializerDefineProperty(this, "editEmail", _descriptor3, this);
-
-          _initializerDefineProperty(this, "editVerificationCode", _descriptor4, this);
-
-          _initializerDefineProperty(this, "buttonVerificationCode", _descriptor5, this);
-
-          _initializerDefineProperty(this, "buttonConfirm", _descriptor6, this);
-
-          _initializerDefineProperty(this, "btnsFunction", _descriptor7, this);
-
-          _initializerDefineProperty(this, "labelVerificationCode", _descriptor8, this);
+          _initializerDefineProperty(this, "btnsFunction", _descriptor3, this);
         }
 
         onLoad() {
@@ -188,8 +165,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).NextIssueID, this.reset);
           this.editNicName.string = "";
-          this.editEmail.string = "";
-          this.editPhone.string = "";
           this.reset();
           super.onLoad();
         }
@@ -276,7 +251,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), PanelLoading) : PanelLoading).instance.closeLoading(); // console.error("資料有問題");
           }
         } //#endregion
-        //#region ValidateContactInfo
+        //#region (棄用)ValidateContactInfo
 
         /**進行發送驗證碼時，必須先通過確認手機是否被註冊過 */
 
@@ -286,8 +261,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           //TODO 製作手機驗證(整理好後再回頭製作)
           const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
-          }), RequestGPG) : RequestGPG).Body.NotNeedToken.ValidateContactInfo();
-          body.Phone = this.editPhone.string;
+          }), RequestGPG) : RequestGPG).Body.NotNeedToken.ValidateContactInfo(); // body.Phone = this.editPhone.string;
+
           await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
           }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
@@ -301,11 +276,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         async onValidateContactInfoEmail() {
           /**確認信箱格式 */
-          if (!this.checkEmail(this.editEmail.string)) return;
+          // if (!this.checkEmail(this.editEmail.string)) return;
           const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
-          }), RequestGPG) : RequestGPG).Body.NotNeedToken.ValidateContactInfo();
-          body.Email = this.editEmail.string;
+          }), RequestGPG) : RequestGPG).Body.NotNeedToken.ValidateContactInfo(); // body.Email = this.editEmail.string;
+
           await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
           }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
@@ -322,14 +297,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           /**代表此已經綁定過不可以綁定! */
 
           if (response.Status.Code == "0") {
-            if (this.editEmail.string != "") (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+            // if (this.editEmail.string != "")
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
               error: Error()
             }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
               error: Error()
             }), SocketSetting) : SocketSetting).t("040", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
               error: Error()
-            }), LangType) : LangType).Game));
-            if (this.editPhone.string != "") (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
+            }), LangType) : LangType).Game)); // if (this.editPhone.string != "")
+
+            (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
               error: Error()
             }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({
               error: Error()
@@ -342,9 +319,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             const sendBody = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
-            }), RequestGPG) : RequestGPG).Body.NotNeedToken.SendRegisterVerification();
-            if (this.editEmail.string != "") sendBody.Email = this.editEmail.string;
-            if (this.editPhone.string != "") sendBody.Phone = this.editPhone.string;
+            }), RequestGPG) : RequestGPG).Body.NotNeedToken.SendRegisterVerification(); // if (this.editEmail.string != "")
+            //     sendBody.Email = this.editEmail.string
+            // if (this.editPhone.string != "")
+            //     sendBody.Phone = this.editPhone.string
+
             await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()
             }), RequestGPG) : RequestGPG).Request().setMethod((_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
@@ -369,40 +348,34 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), SocketSetting) : SocketSetting).t("035", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
               error: Error()
-            }), LangType) : LangType).Game));
-            new (_crd && VerificationTimer === void 0 ? (_reportPossibleCrUseOfVerificationTimer({
-              error: Error()
-            }), VerificationTimer) : VerificationTimer)(this.labelVerificationCode, this.buttonVerificationCode, 180);
+            }), LangType) : LangType).Game)); // new VerificationTimer(this.labelVerificationCode, this.buttonVerificationCode, 180)
+
             console.log("送出驗證碼囉");
           }
         } //#endregion
-        //#region Phone
+        //#region (棄用)Phone
 
 
         onEditPhone() {
-          this.editPhone.spriteBG.node.active = true;
-          this.editPhone.textLabel.node.parent.active = true;
-          this.activeVerificationCode(true);
-          this.btnsFunction.active = true;
-          (_crd && ButtonMng === void 0 ? (_reportPossibleCrUseOfButtonMng({
-            error: Error()
-          }), ButtonMng) : ButtonMng).addEvent(this, "onValidateContactInfoPhone", this.buttonVerificationCode);
+          // this.editPhone.spriteBG.node.active = true
+          // this.editPhone.textLabel.node.parent.active = true;
+          // this.activeVerificationCode(true)
+          this.btnsFunction.active = true; // ButtonMng.addEvent(this, "onValidateContactInfoPhone", this.buttonVerificationCode)
+
           (_crd && ButtonMng === void 0 ? (_reportPossibleCrUseOfButtonMng({
             error: Error()
           }), ButtonMng) : ButtonMng).addEvent(this, "創立修改手機的", this.buttonConfirm);
         } //TODO 修改手機的方法
         //#endregion
-        //#region Email
+        //#region (棄用)Email
 
 
         onEditEmail() {
-          this.editEmail.spriteBG.node.active = true;
-          this.editEmail.textLabel.node.parent.active = true;
+          // this.editEmail.spriteBG.node.active = true
+          // this.editEmail.textLabel.node.parent.active = true;
           this.activeVerificationCode(true);
-          this.btnsFunction.active = true;
-          (_crd && ButtonMng === void 0 ? (_reportPossibleCrUseOfButtonMng({
-            error: Error()
-          }), ButtonMng) : ButtonMng).addEvent(this, "onValidateContactInfoEmail", this.buttonVerificationCode);
+          this.btnsFunction.active = true; // ButtonMng.addEvent(this, "onValidateContactInfoEmail", this.buttonVerificationCode)
+
           (_crd && ButtonMng === void 0 ? (_reportPossibleCrUseOfButtonMng({
             error: Error()
           }), ButtonMng) : ButtonMng).addEvent(this, "certifiedEmall", this.buttonConfirm);
@@ -411,15 +384,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
 
         async certifiedEmall() {
-          if (!this.checkEmail(this.editEmail.string)) return;
-          if (!this.checkVerification(this.editVerificationCode.string)) return;
-          /**確認信箱格式 */
+          // if (!this.checkEmail(this.editEmail.string)) return;
+          // if (!this.checkVerification(this.editVerificationCode.string)) return;
 
+          /**確認信箱格式 */
           const body = new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
-          }), RequestGPG) : RequestGPG).Body.NeedToken.CertifiedEmail();
-          body.email = this.editEmail.string;
-          body.verifyCode = this.editVerificationCode.string;
+          }), RequestGPG) : RequestGPG).Body.NeedToken.CertifiedEmail(); // body.email = this.editEmail.string
+          // body.verifyCode = this.editVerificationCode.string
+
           body.sign = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
           }), PublicModel) : PublicModel).getInstance.convertSign(body, (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
@@ -451,16 +424,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), SocketSetting) : SocketSetting).t("036", (_crd && LangType === void 0 ? (_reportPossibleCrUseOfLangType({
               error: Error()
-            }), LangType) : LangType).ServerAPI));
-            (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
-              error: Error()
-            }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
-              error: Error()
-            }), NotificationType) : NotificationType).PanelClient).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
-              error: Error()
-            }), LobbyStateEvent) : LobbyStateEvent).EditUpdate, this.editEmail.string, (_crd && EditMenu === void 0 ? (_reportPossibleCrUseOfEditMenu({
-              error: Error()
-            }), EditMenu) : EditMenu).Email);
+            }), LangType) : LangType).ServerAPI)); // EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).emit(LobbyStateEvent.EditUpdate, this.editEmail.string, EditMenu.Email)
+
             (_crd && ButtonMng === void 0 ? (_reportPossibleCrUseOfButtonMng({
               error: Error()
             }), ButtonMng) : ButtonMng).clearEvent(this.buttonConfirm);
@@ -481,27 +446,26 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         } //#endregion
 
 
-        activeVerificationCode(bool) {
-          this.editVerificationCode.spriteBG.node.active = bool;
-          this.editVerificationCode.textLabel.node.parent.active = bool;
-          this.buttonVerificationCode.node.active = bool; // if (!bool)
+        activeVerificationCode(bool) {// this.editVerificationCode.spriteBG.node.active = bool
+          // this.editVerificationCode.textLabel.node.parent.active = bool;
+          // this.buttonVerificationCode.node.active = bool
+          // if (!bool)
           // this.btnsFunction.position = PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(this.btnsFunction, this.editEmail.spriteBG.node)
         }
 
         reset() {
           this.editNicName.spriteBG.node.active = false;
-          this.editNicName.textLabel.node.parent.active = false;
-          this.editEmail.spriteBG.node.active = false;
-          this.editEmail.textLabel.node.parent.active = false;
-          this.editPhone.spriteBG.node.active = false;
-          this.editPhone.textLabel.node.parent.active = false;
+          this.editNicName.textLabel.node.parent.active = false; // this.editEmail.spriteBG.node.active = false
+          // this.editEmail.textLabel.node.parent.active = false;
+          // this.editPhone.spriteBG.node.active = false
+          // this.editPhone.textLabel.node.parent.active = false;
+
           this.activeVerificationCode(false);
-          this.btnsFunction.active = false;
-          this.buttonVerificationCode.node.active = false;
-          this.editEmail.string = "";
+          this.btnsFunction.active = false; // this.buttonVerificationCode.node.active = false;
+          // this.editEmail.string = "";
+
           this.editNicName.string = "";
-          this.editNicName.string = "";
-          this.editVerificationCode.string = "";
+          this.editNicName.string = ""; // this.editVerificationCode.string = "";
         }
         /**確認信箱格式 */
 
@@ -655,37 +619,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "editPhone", [_dec3], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "buttonConfirm", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "editEmail", [_dec4], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "editVerificationCode", [_dec5], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "buttonVerificationCode", [_dec6], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "buttonConfirm", [_dec7], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "btnsFunction", [_dec8], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "labelVerificationCode", [_dec9], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "btnsFunction", [_dec4], {
         configurable: true,
         enumerable: true,
         writable: true,

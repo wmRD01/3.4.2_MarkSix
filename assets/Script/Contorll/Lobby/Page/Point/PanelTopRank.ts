@@ -21,15 +21,16 @@ export default class PanelTopRank extends BaseComponent {
     labelContent: Node;
     @property(Node)
     spriteBGContent: Node;
+    onLoad() {
+        this.reset()
+    }
     start() {
-        this.layoutRank.removeAllChildren()
-        this.labelContent.removeAllChildren()
-        this.spriteBGContent.removeAllChildren()
         this.setEvent(LobbyStateEvent.NextIssueID, this.reset)
     }
     async onEnable() {
         await AssetMng.waitStateCheck(AssetType.Sprite)
-        await this.requesTopScore()
+        if (this.layoutRank.children.length == 0)
+            await this.requesTopScore()
     }
     async reset() {
         this.layoutRank.removeAllChildren()

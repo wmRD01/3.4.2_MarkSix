@@ -110,10 +110,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "spriteBGContent", _descriptor4, this);
         }
 
+        onLoad() {
+          this.reset();
+        }
+
         start() {
-          this.layoutRank.removeAllChildren();
-          this.labelContent.removeAllChildren();
-          this.spriteBGContent.removeAllChildren();
           this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).NextIssueID, this.reset);
@@ -125,7 +126,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
             error: Error()
           }), AssetType) : AssetType).Sprite);
-          await this.requesTopScore();
+          if (this.layoutRank.children.length == 0) await this.requesTopScore();
         }
 
         async reset() {

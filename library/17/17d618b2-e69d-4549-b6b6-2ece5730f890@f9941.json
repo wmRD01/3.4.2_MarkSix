@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Login_Input box",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 446,
+      "height": 90
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 446,
+      "height": 90
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "17d618b2-e69d-4549-b6b6-2ece5730f890@6c48a",
+    "packable": true
+  }
+}

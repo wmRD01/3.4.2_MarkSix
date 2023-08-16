@@ -1,0 +1,757 @@
+2023-7-21 13:52-debug: Start record console... {file(C:\CocosProject\3.4.2_MarkSix\temp\builder\log\android2022-9-1 18-16.log)}
+2023-7-21 13:52-warn: Get cache build options failed!
+2023-7-21 13:52-error: make package C:\inetpub\wwwroot\JaiJaiTest\game50003\android failed!
+2023-7-21 13:52-debug: Stop record console. {file(C:\CocosProject\3.4.2_MarkSix\temp\builder\log\android2022-9-1 18-16.log)}
+2023-7-21 13:52-error: TypeError: Cannot read property 'buildPath' of undefined
+    at SingleTask.init (C:\ProgramData\cocos\editors\Creator\3.4.2\resources\app.asar\builtin\builder\dist\worker\builder\single-task.ccc:1:1201)
+    at SingleTask.run (C:\ProgramData\cocos\editors\Creator\3.4.2\resources\app.asar\builtin\builder\dist\worker\builder\single-task.ccc:1:1306)
+    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.4.2\resources\app.asar\builtin\builder\dist\worker\index.ccc:1:5012)
+    at Ipc.emit (events.js:315:20)
+    at EventEmitter.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.4.2\resources\app.asar\node_modules\@base\electron-worker\static\script.ccc:1:1271)
+    at EventEmitter.emit (events.js:315:20)
+    at EventEmitter.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.4.2\resources\app.asar\node_modules\@base\electron-base-ipc\dist\renderer.ccc:1:3614)
+    at EventEmitter.emit (events.js:315:20)
+    at Object.onMessage (electron/js2c/renderer_init.js:93:1117)
+2023-7-21 13:56-debug: Start record console... {file(C:\CocosProject\3.4.2_MarkSix\temp\builder\log\android2022-9-1 18-16.log)}
+2023-7-21 13:56-debug: Start build task, options:{"name":"GPG_Rocket","platform":"android","buildPath":"C:\\inetpub\\wwwroot\\JaiJaiTest\\game50003","debug":false,"md5Cache":true,"sourceMaps":false,"replaceSplashScreen":true,"mainBundleCompressionType":"merge_all_json","mainBundleIsRemote":false,"mergeStartScene":false,"experimentalEraseModules":false,"compressTexture":true,"packAutoAtlas":false,"startScene":"45e4a202-9a2b-4605-8f2c-970d3e4491cc","scenes":[{"url":"db://assets/Scene/Lobby.scene","uuid":"45e4a202-9a2b-4605-8f2c-970d3e4491cc","inBundle":false}],"outputName":"android","packages":{"android":{"packageName":"com.cocos.RocketPlay","orientation":{"portrait":true,"upsideDown":false,"landscapeRight":false,"landscapeLeft":false},"apiLevel":"android-30","appABIs":["armeabi-v7a"],"useDebugKeystore":true,"keystorePath":"","keystorePassword":"","keystoreAlias":"","keystoreAliasPassword":"","appBundle":false,"androidInstant":false,"remoteUrl":"","sdkPath":"","ndkPath":"","renderBackEnd":{"vulkan":false,"gles3":true,"gles2":true}},"native":{"polyfills":{"asyncFunctions":true},"encrypted":false,"xxteaKey":"06g9qyTYRL4bE3MQ","compressZip":false,"makeAfterBuild":false,"JobSystem":"tbb"},"cocos-service":{"configID":"08c3e2","services":[]}}}
+2023-7-21 13:56-debug: =================================== Build Task (android) Start ================================
+2023-7-21 13:56-debug: Build with Cocos Creator 3.4.2
+2023-7-21 13:56-debug: cocos-service:(onBeforeBuild) start...0%
+2023-7-21 13:56-debug: // ---- cocos-service:(onBeforeBuild) ----
+2023-7-21 13:56-debug: Process: heapTotal 214.23MB heapUsed 200.47MB rss 214.14MB
+2023-7-21 13:56-debug: cocos-service:(onBeforeBuild)3%
+2023-7-21 13:56-debug: // ---- cocos-service:(onBeforeBuild) success ----
+2023-7-21 13:56-debug: Query all assets info in project
+2023-7-21 13:56-debug: init custom config: keepNodeUuid: false, useCache: true
+2023-7-21 13:56-debug: BuildAssetLibrary query-assets with assets 557
+2023-7-21 13:56-debug:   Number of all scenes: 4
+2023-7-21 13:56-debug:   Number of all scripts: 127
+2023-7-21 13:56-debug:   Number of other assets: 1320
+2023-7-21 13:56-debug: BuildAssetLibrary initialized with asset 1027!
+2023-7-21 13:56-debug: native:(onAfterInit) start...3%
+2023-7-21 13:56-debug: Process: heapTotal 215.40MB heapUsed 202.26MB rss 216.64MB
+2023-7-21 13:56-debug: // ---- native:(onAfterInit) ----
+2023-7-21 13:56-debug: Native engine root:C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine-native
+2023-7-21 13:56-debug: // ---- native:(onAfterInit) success ----
+2023-7-21 13:56-debug: android:(onAfterInit) start...5%
+2023-7-21 13:56-debug: // ---- android:(onAfterInit) ----
+2023-7-21 13:56-debug: Process: heapTotal 228.26MB heapUsed 204.63MB rss 231.22MB
+2023-7-21 13:56-debug: native:(onAfterInit)5%
+2023-7-21 13:56-debug: android:(onAfterInit)8%
+2023-7-21 13:56-debug: // ---- android:(onAfterInit) success ----
+2023-7-21 13:56-log: // ---- Reload project scripts ----
+2023-7-21 13:56-debug: Reload project scripts start8%
+2023-7-21 13:56-debug: Process: heapTotal 228.26MB heapUsed 204.68MB rss 231.21MB
+2023-7-21 13:56-debug: reload all scripts.
+2023-7-21 13:56-debug: Incremental keys: 
+2023-7-21 13:56-debug: Unregister EventMng
+2023-7-21 13:56-debug: Unregister BaseComponent
+2023-7-21 13:56-debug: Unregister AutoView
+2023-7-21 13:56-debug: Unregister testAuto
+2023-7-21 13:56-debug: Unregister MyEditBox
+2023-7-21 13:56-debug: Unregister PanelSystemMessage
+2023-7-21 13:56-debug: Unregister PanelGameLoading
+2023-7-21 13:56-debug: Unregister PanelBall
+2023-7-21 13:56-debug: Unregister LabelAutoFollow
+2023-7-21 13:56-debug: Unregister BallData
+2023-7-21 13:56-debug: Unregister PageClientEdit
+2023-7-21 13:56-debug: Unregister PanelChooeseBall
+2023-7-21 13:56-debug: Unregister PanelLoading
+2023-7-21 13:56-debug: Unregister PanelClientInfo
+2023-7-21 13:56-debug: Unregister PanelHome
+2023-7-21 13:56-debug: Unregister PanelPageButton
+2023-7-21 13:56-debug: Unregister PointItemData
+2023-7-21 13:56-debug: Unregister PanelPoint
+2023-7-21 13:56-debug: Unregister RankItmeData
+2023-7-21 13:56-debug: Unregister PanelTopRank
+2023-7-21 13:56-debug: Unregister ItemLink
+2023-7-21 13:56-debug: Unregister ItemSetting
+2023-7-21 13:56-debug: Unregister PanelLink
+2023-7-21 13:56-debug: Unregister PanelSetting
+2023-7-21 13:56-debug: Unregister PageControll
+2023-7-21 13:56-debug: Unregister PanelBottomNavigationBar
+2023-7-21 13:56-debug: Unregister MessageItem
+2023-7-21 13:56-debug: Unregister PanelLobbyTest
+2023-7-21 13:56-debug: Unregister PanelGameMessage
+2023-7-21 13:56-debug: Unregister CanvasControll
+2023-7-21 13:56-debug: Unregister PanelMask
+2023-7-21 13:56-debug: Unregister PanelVersion
+2023-7-21 13:56-debug: Unregister GamePanel
+2023-7-21 13:56-debug: Unregister PanelMng
+2023-7-21 13:56-debug: Unregister LobbyPanel
+2023-7-21 13:56-debug: Unregister GameWebSocket
+2023-7-21 13:56-debug: Unregister MainGame
+2023-7-21 13:56-debug: Unregister MainLoading
+2023-7-21 13:56-debug: Unregister MainLobby
+2023-7-21 13:56-debug: Unregister colorTest
+2023-7-21 13:56-debug: Unregister delayTest
+2023-7-21 13:56-debug: Unregister extentTest
+2023-7-21 13:56-debug: Unregister poly
+2023-7-21 13:56-debug: Unregister regTtest
+2023-7-21 13:56-debug: Unregister testHTML
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/cce/internal/x/prerequisite-imports.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Patten/Singleton/BaseSingleton.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/cce/internal/code-quality/cr.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/cce/internal/x/cc.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Patten/Singleton/SingletonManger.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Patten/Singleton/BaseSingletonComponent.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/ComponentBase.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/EvnetType.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Manager/EventMng.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/PublicData.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/GameEvent.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/PublicModel.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/GameSenceName.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/CheckLoadingType.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Patten/Singleton/IBaseSingleton.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/CheckLoading.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Plug/MyMath.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Patten/StatePatten.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Plug/DelayTime.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/CommandType.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/WebSocketEvent.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Plug/EditSpine.proxy.js@63cjs&original=.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Plug/EditSpine.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/cce/internal/ml/cjs-loader.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Plug/MyAnimatinoPlay.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Plug/Image.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Plug/MyEditBox.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Asset/MusicAsset.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Asset/BundleAsset.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Asset/PrefabAsset.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Asset/SpineAsset.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Asset/SpriteAsset.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Asset/SpriteAtlasAsset.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Api/CASTAPI.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/CASTCommandType.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Api/GPGAPI/RequestGPG.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Api/GPGAPI/ResponseGPG.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Api/ResponeCommand.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Api/SendCommand.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/AutoView/AutoView.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/AutoView/testauto.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Data/DataMusic.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Data/Panel/DataExchange.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Data/Panel/DataFunctionMenu.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Data/Panel/DataSoundSet.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/GameControll/GameControll.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/State/LobbyState.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/State/MessageState.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/MessageCommend.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/LangType.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Socket/SocketSetting.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/State/PlayState.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/NoClearNode/PanelSystemMessage.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/GameStateEvent.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/ButtonFunctionApi.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Manager/ButtonMng.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Loading/PanelGameLoading.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/LobbyStateEvent.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Manager/AssetMng.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/BallData.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/LabelAutoFollow.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelChooeseBall.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/ClientInfo/PageClientEdit.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/Player.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/index.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/CreateFileSprite.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/CoinType.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/AssetType.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/PlayerIdentity.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/core.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/GameData.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/x64-core.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/cipher-core.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/enc-base64.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/enc-utf16.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/enc-base64url.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/md5.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/hmac.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/sha1.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/sha224.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/sha256.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/sha384.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/sha3.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/sha512.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/ripemd160.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/pbkdf2.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/evpkdf.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/aes.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/tripledes.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/rabbit.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/rabbit-legacy.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/rc4.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/blowfish.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/mode-cfb.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/mode-ctr-gladman.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/mode-ecb.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/mode-ctr.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/mode-ofb.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/pad-ansix923.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/pad-nopadding.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/pad-iso10126.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/pad-iso97971.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/pad-zeropadding.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/node_modules/crypto-es/lib/format-hex.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/GameType.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/NoClearNode/PanelLoading.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/ClientInfo/PanelClientInfo.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/PageAction.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelPageButton.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelPoint.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/PointItemData.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/RankItmeData.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Setting/ItemLink.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Setting/ItemSetting.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Manager/MusicMng.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Setting/PanelLink.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Setting/PanelSetting.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/PageControll.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/MessageItem.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/PanelGameMessage.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/Lobby/PanelLobbyTest.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/NoClearNode/CanvasControll.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/NoClearNode/PanelMask.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Contorll/NoClearNode/PanelVersion.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/Easing.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/Asset_Prefab.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/GameWinerResult.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/EffectType.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/LisnerEditBox.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/LisnerTouch.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/PageMenu.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/ScrollViewEventType.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/ViewIndex.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/ServerGameSenceType.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Enum/WebPlatform.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Interface/IAsset.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Interface/IDtTimer.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Manager/NodePoolMng/CCNodePool.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Manager/EditBoxMng.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Manager/NodePoolMng/IPool.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Manager/NodePoolMng/NodePoolMng.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Manager/NodePoolMng/SelfPool.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Manager/PanelMng/GamePanel.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Manager/PanelMng/PanelMng.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Manager/PanelMng/GamePanelType.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Manager/PanelMng/LobbyPanel.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Manager/RoadMng.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/GameSenceText.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/RoomData.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/JudgePlatform.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/SocketModel.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Model/TestDelay.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/Socket/GameWebSocket.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/State/ViewState.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/View/MainGame.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/View/MainLoading.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/View/MainLobby.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/test/colorTest.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/test/delayTest.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/test/extentTest.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/test/regTtest.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/test/poly.js'
+2023-7-21 13:56-debug: Invalidating 'pack:///mods/fs/0/assets/Script/test/testHTML.js'
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/cce/internal/x/prerequisite-imports.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/cce/internal/code-quality/cr.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/cce/internal/x/cc.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Patten/Singleton/SingletonManger.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Patten/Singleton/BaseSingleton.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/GameEvent.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/NotificationType.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/EventMng.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register EventMng
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/GameSenceName.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/CheckLoadingType.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/CheckLoading.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/PublicData.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/PublicModel.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register BaseComponent
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Plug/MyMath.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Patten/Singleton/BaseSingletonComponent.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/ComponentBase.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Patten/Singleton/IBaseSingleton.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Patten/StatePatten.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/CommandType.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/WebSocketEvent.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Plug/DelayTime.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/cce/internal/ml/cjs-loader.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Plug/EditSpine.proxy.js@63cjs&original=.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Plug/EditSpine.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Plug/Image.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Plug/MyAnimatinoPlay.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register MyEditBox
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Plug/MyEditBox.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Asset/BundleAsset.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Asset/MusicAsset.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Asset/PrefabAsset.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Asset/SpriteAsset.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Asset/SpineAsset.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Asset/SpriteAtlasAsset.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Api/CASTAPI.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/CASTCommandType.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Api/GPGAPI/RequestGPG.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Api/ResponeCommand.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Api/GPGAPI/ResponseGPG.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Api/SendCommand.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register AutoView
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/AutoView/AutoView.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register testAuto
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/AutoView/testauto.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Data/DataMusic.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Data/Panel/DataExchange.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Data/Panel/DataFunctionMenu.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Data/Panel/DataSoundSet.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/State/LobbyState.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/ButtonMng.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/LangType.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Socket/SocketSetting.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelSystemMessage
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/NoClearNode/PanelSystemMessage.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/GameStateEvent.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/ButtonFunctionApi.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/MessageCommend.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/State/PlayState.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/State/MessageState.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelGameLoading
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/GameControll/GameControll.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Loading/PanelGameLoading.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/AssetType.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/LobbyStateEvent.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/AssetMng.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/AutoFollow.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register AutoFollow
+2023-7-21 13:56-debug: [[Executor]] Register BallData
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/BallData.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelBall
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelBall.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/ChooeseBall/PanelChooeseBall.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/CoinType.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelChooeseBall
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/PlayerIdentity.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/GameType.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/GameData.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/Player.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/core.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/x64-core.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/enc-base64.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/md5.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/evpkdf.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/cipher-core.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/enc-utf16.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/enc-base64url.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/hmac.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/sha1.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/sha256.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/sha224.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/sha512.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/sha384.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/sha3.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/ripemd160.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/aes.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/pbkdf2.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/tripledes.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/rabbit-legacy.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/rabbit.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/blowfish.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/mode-cfb.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/rc4.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/mode-ctr.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/mode-ctr-gladman.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/mode-ecb.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/mode-ofb.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/pad-ansix923.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/pad-iso10126.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/pad-zeropadding.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/pad-iso97971.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/format-hex.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/pad-nopadding.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/node_modules/crypto-es/lib/index.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/CreateFileSprite.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PageClientEdit
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/ClientInfo/PageClientEdit.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelLoading
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/NoClearNode/PanelLoading.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelClientInfo
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/ClientInfo/PanelClientInfo.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/PageAction.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelHome
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Home/PanelHome.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelPageButton
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelPageButton.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PointItemData
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/PointItemData.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelPoint
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelPoint.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register RankItmeData
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/RankItmeData.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelTopRank
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register ItemLink
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Setting/ItemLink.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/MusicMng.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Setting/ItemSetting.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelLink
+2023-7-21 13:56-debug: [[Executor]] Register ItemSetting
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Setting/PanelLink.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/Page/Setting/PanelSetting.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelSetting
+2023-7-21 13:56-debug: [[Executor]] Register PageControll
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/PageControll.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelBottomNavigationBar
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/PanelBottomNavigationBar.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register MessageItem
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/MessageItem.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelGameMessage
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/PanelGameMessage.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelLobbyTest
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/Lobby/PanelLobbyTest.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register CanvasControll
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/NoClearNode/CanvasControll.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelMask
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/NoClearNode/PanelMask.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelVersion
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Contorll/NoClearNode/PanelVersion.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/Asset_Prefab.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/Easing.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/EffectType.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/GameWinerResult.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/LisnerEditBox.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/LisnerTouch.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/PageMenu.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/ScrollViewEventType.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/ServerGameSenceType.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/ViewIndex.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Enum/WebPlatform.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Interface/IAsset.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Interface/IDtTimer.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/EditBoxMng.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/NodePoolMng/CCNodePool.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/NodePoolMng/IPool.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/NodePoolMng/SelfPool.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/NodePoolMng/NodePoolMng.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register PanelMng
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/PanelMng/PanelMng.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/PanelMng/GamePanel.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/PanelMng/GamePanelType.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register GamePanel
+2023-7-21 13:56-debug: [[Executor]] Register LobbyPanel
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/PanelMng/LobbyPanel.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/RoomData.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Manager/RoadMng.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/GameSenceText.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/JudgePlatform.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/SocketModel.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Model/TestDelay.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register GameWebSocket
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/Socket/GameWebSocket.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/State/ViewState.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register MainGame
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/View/MainGame.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register MainLoading
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/View/MainLoading.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register MainLobby
+2023-7-21 13:56-debug: [[Executor]] Register colorTest
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/View/MainLobby.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/test/colorTest.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register delayTest
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/test/delayTest.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register extentTest
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/test/extentTest.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register poly
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/test/poly.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register regTtest
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/test/regTtest.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Register testHTML
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Script/test/testHTML.js" loaded.
+2023-7-21 13:56-debug: [[Executor]] Module "pack:///mods/cce/internal/x/prerequisite-imports.js" loaded.
+2023-7-21 13:56-debug: Reload project scripts √9%
+2023-7-21 13:56-debug: Query asset bundle start9%
+2023-7-21 13:56-log: // ---- Query asset bundle ----
+2023-7-21 13:56-debug: Process: heapTotal 236.51MB heapUsed 208.09MB rss 233.88MB
+2023-7-21 13:56-debug: Query asset bundle √10%
+2023-7-21 13:56-debug: Query and organize assets start10%
+2023-7-21 13:56-log: // ---- Query and organize assets ----
+2023-7-21 13:56-debug: Process: heapTotal 236.51MB heapUsed 208.43MB rss 234.88MB
+2023-7-21 13:56-debug: Number of scenes: 1
+2023-7-21 13:56-debug: Number of assets: 209
+2023-7-21 13:56-debug: Organize scripts start11%
+2023-7-21 13:56-debug: Query and organize assets √11%
+2023-7-21 13:56-debug: Number of asset bundle: 2
+2023-7-21 13:56-log: // ---- Organize scripts ----
+2023-7-21 13:56-debug: Process: heapTotal 236.51MB heapUsed 210.00MB rss 240.27MB
+2023-7-21 13:56-debug: Organize texture compression tasks start13%
+2023-7-21 13:56-log: // ---- Organize texture compression tasks ----
+2023-7-21 13:56-debug: Organize scripts √13%
+2023-7-21 13:56-debug: Process: heapTotal 236.51MB heapUsed 210.09MB rss 240.41MB
+2023-7-21 13:56-debug: sort script group...
+2023-7-21 13:56-debug: Number of image-compress task: 1
+2023-7-21 13:56-debug: Organize texture compression tasks √14%
+2023-7-21 13:56-debug: Group json start14%
+2023-7-21 13:56-log: // ---- Group json ----
+2023-7-21 13:56-debug: Process: heapTotal 236.51MB heapUsed 210.54MB rss 240.68MB
+2023-7-21 13:56-debug: Number of json group: 1
+2023-7-21 13:56-debug: Group json √15%
+2023-7-21 13:56-debug: Merging Texture2D json start15%
+2023-7-21 13:56-log: // ---- Merging Texture2D json ----
+2023-7-21 13:56-debug: Process: heapTotal 236.51MB heapUsed 210.98MB rss 241.11MB
+2023-7-21 13:56-debug: Merging Texture2D json √16%
+2023-7-21 13:56-debug:  start16%
+2023-7-21 13:56-log: // ----  ----
+2023-7-21 13:56-debug: Process: heapTotal 236.51MB heapUsed 211.02MB rss 241.20MB
+2023-7-21 13:56-debug: native:(onBeforeBuildAssets) start...18%
+2023-7-21 13:56-debug:  √18%
+2023-7-21 13:56-debug: // ---- native:(onBeforeBuildAssets) ----
+2023-7-21 13:56-debug: Process: heapTotal 236.51MB heapUsed 211.04MB rss 241.22MB
+2023-7-21 13:56-debug: // ---- native:(onBeforeBuildAssets) success ----
+2023-7-21 13:56-debug: native:(onBeforeBuildAssets)20%
+2023-7-21 13:56-debug:  start20%
+2023-7-21 13:56-log: // ----  ----
+2023-7-21 13:56-debug: Process: heapTotal 236.51MB heapUsed 211.12MB rss 241.31MB
+2023-7-21 13:56-debug: Caught exception during build core-js: WebpackOptionsValidationError: Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema.
+ - configuration.entry should be an non-empty array.
+   -> A non-empty array of non-empty strings
+This may indicates the core-js polyfill is not necessary. See https://github.com/zloirock/core-js/issues/822
+2023-7-21 13:56-debug: Build script20%
+2023-7-21 13:56-debug: Process: heapTotal 236.51MB heapUsed 209.74MB rss 244.20MB
+2023-7-21 13:56-log: debug: Create cjs interop url for 'file:///C:/CocosProject/3.4.2_MarkSix/assets/Plug/EditSpine.js'
+2023-7-21 13:56-debug: Copy externalScripts success!
+2023-7-21 13:56-debug: Build engine20%
+2023-7-21 13:56-debug: Build script√20%
+2023-7-21 13:56-debug: Process: heapTotal 263.04MB heapUsed 235.51MB rss 266.91MB
+2023-7-21 13:56-debug: Engine cache ({link(C:\Users\ASUS\AppData\Local\Temp\CocosCreator\3.4.2\builder\engine\33ca8e413db078863795834376627736)}) does not exist.
+2023-7-21 13:56-debug: {"incremental":"C:\\Users\\ASUS\\AppData\\Local\\Temp\\CocosCreator\\3.4.2\\builder\\engine\\33ca8e413db078863795834376627736.watch-files.json","engine":"C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resources\\3d\\engine","out":"C:\\Users\\ASUS\\AppData\\Local\\Temp\\CocosCreator\\3.4.2\\builder\\engine\\33ca8e413db078863795834376627736","moduleFormat":2,"compress":true,"buildTimeConstants":{"HTML5":false,"WECHAT":false,"ALIPAY":false,"BAIDU":false,"XIAOMI":false,"BYTEDANCE":false,"OPPO":false,"VIVO":false,"HUAWEI":false,"NATIVE":true,"COCOSPLAY":false,"LINKSURE":false,"QTT":false,"EDITOR":false,"PREVIEW":false,"BUILD":true,"TEST":false,"DEBUG":false,"DEV":false,"RUNTIME_BASED":false,"MINIGAME":false,"JSB":true,"SUPPORT_JIT":true},"loose":true,"features":["audio","base","gfx-webgl","intersection-2d","physics-2d-box2d","profiler","tween","ui"],"platform":"NATIVE","mode":"BUILD"}
+2023-7-21 13:56-debug: Build-engine options: {
+  "incremental": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\CocosCreator\\3.4.2\\builder\\engine\\33ca8e413db078863795834376627736.watch-files.json",
+  "engine": "C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resources\\3d\\engine",
+  "out": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\CocosCreator\\3.4.2\\builder\\engine\\33ca8e413db078863795834376627736",
+  "moduleFormat": 2,
+  "compress": true,
+  "buildTimeConstants": {
+    "HTML5": false,
+    "WECHAT": false,
+    "ALIPAY": false,
+    "BAIDU": false,
+    "XIAOMI": false,
+    "BYTEDANCE": false,
+    "OPPO": false,
+    "VIVO": false,
+    "HUAWEI": false,
+    "NATIVE": true,
+    "COCOSPLAY": false,
+    "LINKSURE": false,
+    "QTT": false,
+    "EDITOR": false,
+    "PREVIEW": false,
+    "BUILD": true,
+    "TEST": false,
+    "DEBUG": false,
+    "DEV": false,
+    "RUNTIME_BASED": false,
+    "MINIGAME": false,
+    "JSB": true,
+    "SUPPORT_JIT": true
+  },
+  "loose": true,
+  "features": [
+    "audio",
+    "base",
+    "gfx-webgl",
+    "intersection-2d",
+    "physics-2d-box2d",
+    "profiler",
+    "tween",
+    "ui"
+  ],
+  "platform": "NATIVE",
+  "mode": "BUILD",
+  "targets": "chrome 80"
+}
+2023-7-21 13:56-debug: Module source "internal-constants":
+export const EXPORT_TO_GLOBAL = true;
+export const HTML5 = false;
+export const WECHAT = false;
+export const ALIPAY = false;
+export const BAIDU = false;
+export const XIAOMI = false;
+export const BYTEDANCE = false;
+export const OPPO = false;
+export const VIVO = false;
+export const HUAWEI = false;
+export const NATIVE = true;
+export const COCOSPLAY = false;
+export const LINKSURE = false;
+export const QTT = false;
+export const EDITOR = false;
+export const PREVIEW = false;
+export const BUILD = true;
+export const TEST = false;
+export const DEBUG = false;
+export const DEV = false;
+export const RUNTIME_BASED = false;
+export const MINIGAME = false;
+export const JSB = true;
+export const SUPPORT_JIT = true;
+2023-7-21 13:56-debug: Module source "cc":
+export * from 'C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resources\\3d\\engine\\exports\\audio.ts';
+export * from 'C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resources\\3d\\engine\\exports\\base.ts';
+export * from 'C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resources\\3d\\engine\\exports\\gfx-webgl.ts';
+export * from 'C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resources\\3d\\engine\\exports\\intersection-2d.ts';
+export * from 'C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resources\\3d\\engine\\exports\\physics-2d-box2d.ts';
+export * from 'C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resources\\3d\\engine\\exports\\physics-2d-framework.ts';
+export * from 'C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resources\\3d\\engine\\exports\\profiler.ts';
+export * from 'C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resources\\3d\\engine\\exports\\tween.ts';
+export * from 'C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resources\\3d\\engine\\exports\\ui.ts';
+export * from 'C:\\ProgramData\\cocos\\editors\\Creator\\3.4.2\\resources\\resources\\3d\\engine\\exports\\2d.ts';
+2023-7-21 13:56-debug: Redirect module C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\math\mat4.ts to C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\math\mat4.jsb.ts
+2023-7-21 13:56-debug: Redirect module pal/system-info to C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\pal\system-info\native\system-info.ts
+2023-7-21 13:56-debug: Redirect module pal/input to C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\pal\input\native\index.ts
+2023-7-21 13:56-debug: Redirect module C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\gfx\index.ts to C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\gfx\index.jsb.ts
+2023-7-21 13:56-debug: Redirect module pal/audio to C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\pal\audio\native\player.ts
+2023-7-21 13:57-debug: Redirect module pal/screen-adapter to C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\pal\screen-adapter\native\screen-adapter.ts
+2023-7-21 13:57-debug: Redirect module pal/minigame to C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\pal\minigame\non-minigame.ts
+2023-7-21 13:57-debug: Redirect module C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\pipeline\index.ts to C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\pipeline\index.jsb.ts
+2023-7-21 13:57-debug: Redirect module C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\renderer\scene\native-scene.ts to C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\renderer\scene\native-scene.jsb.ts
+2023-7-21 13:57-debug: Redirect module C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\math\mat3.ts to C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\math\mat3.jsb.ts
+2023-7-21 13:57-debug: Redirect module C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\math\quat.ts to C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\math\quat.jsb.ts
+2023-7-21 13:57-debug: Redirect module C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\math\vec3.ts to C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\math\vec3.jsb.ts
+2023-7-21 13:57-debug: Redirect module C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\renderer\core\native-pools.ts to C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\renderer\core\native-pools.jsb.ts
+2023-7-21 13:57-debug: Redirect module C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\animation\marionette\runtime-exports.ts to C:\ProgramData\cocos\editors\Creator\3.4.2\resources\resources\3d\engine\cocos\core\animation\marionette\index-empty.ts
+2023-7-21 13:57-debug: ==== Performance ====
+2023-7-21 13:57-debug: {"# BUILD":[14814.3863,152993628,400839216],"## generate module graph":[13907.8427,134332724,382180532],"- plugin 0 (@cocos/build-engine|code-asset) - resolveId":[3.576799999999977,194824,396001724],"- plugin 1 (@cocos/build-engine|load-asset) - resolveId":[3.854899999999968,557628,396002252],"- plugin 1 (@cocos/build-engine|load-asset) - resolveId (async)":[17.90630000000002,2365552,396002536],"- plugin 2 (@cocos/build-engine|module-overrides) - resolveId":[4.328899999999982,222732,396002928],"- plugin 3 (virtual) - resolveId":[12.862599999999993,3517680,396004896],"load modules":[78821.71530000003,1524257632,399256024],"- plugin 0 (@cocos/build-engine|code-asset) - load":[6.199899999999998,577804,391383364],"- plugin 0 (@cocos/build-engine|code-asset) - load (async)":[0.9643999999999958,128224,391383648],"- plugin 1 (@cocos/build-engine|load-asset) - load":[1.362500000000006,138016,391384204],"- plugin 1 (@cocos/build-engine|load-asset) - load (async)":[1.0258999999999954,126696,391384488],"- plugin 2 (@cocos/build-engine|module-overrides) - load":[7.767999999999995,231604,391385008],"- plugin 3 (virtual) - load":[0.8023999999999984,44108,391385400],"- plugin 6 (json) - transform":[2.694899999999998,585196,399261516],"- plugin 7 (commonjs) - transform":[304.5505000000002,12936452,399264480],"- plugin 8 (babel) - transform":[271.5250999999999,-8946688,399299548],"generate ast":[1813.8865000000017,-14773044,399530556],"analyse ast":[606.2895999999997,28428996,399533516],"- plugin 4 (ts-paths) - resolveId":[5.967199999999976,-4751308,396005288],"- plugin 5 (node-resolve) - resolveId":[25.482300000000006,4241668,396008476],"- plugin 5 (node-resolve) - resolveId (async)":[48519.36209999997,-2611574896,396960940],"- plugin 5 (node-resolve) - load":[0.7289999999999983,43712,391385832],"- plugin 7 (commonjs) - load":[3.0281999999999982,524200,391387232],"- plugin 8 (babel) - load":[50.83519999999979,3275968,391387624],"- plugin 8 (babel) - transform (async)":[7865.0913,181533108,406735104],"- plugin 7 (commonjs) - resolveId":[0.5491000000000003,12136,393162040],"- plugin 8 (babel) - resolveId":[0.19620000000000007,5832,393162456],"- plugin 7 (commonjs) - resolveId (async)":[5861.5346,70883324,381532236],"- plugin 7 (commonjs) - load (async)":[0.0075,1524,325034752],"## sort modules":[192.074,9055416,391236092],"## mark included statements":[714.374,9602072,400838320],"treeshaking pass 1":[163.6043,4904588,398252144],"treeshaking pass 2":[140.9876,43316,398295608],"treeshaking pass 3":[143.2538,882492,399178248],"treeshaking pass 4":[67.4295,-3310716,395867680],"treeshaking pass 5":[53.5924,3163480,399031308],"treeshaking pass 6":[46.2852,832844,399864300],"treeshaking pass 7":[47.5647,545996,400410444],"treeshaking pass 8":[45.2051,427580,400838172]}
+2023-7-21 13:57-debug: ====             ====
+2023-7-21 13:57-debug: Build engine√20%
+2023-7-21 13:57-debug:  √27%
+2023-7-21 13:57-debug: Build auto-atlas start27%
+2023-7-21 13:57-log: // ---- Build auto-atlas ----
+2023-7-21 13:57-debug: Process: heapTotal 440.29MB heapUsed 411.00MB rss 450.08MB
+2023-7-21 13:57-debug: Asset {asset(db://assets/resources/Sprite/auto-atlas.pac)} is Bundle
+2023-7-21 13:57-debug: remove spriteAtlas._uuid : {asset(db6569d4-4bae-4ec2-9cc9-46db7ac464ea)}
+2023-7-21 13:57-debug: remove spriteAtlas._uuid : {asset(e0950175-c768-4eea-92fa-5313587b481d)}
+2023-7-21 13:57-debug: remove spriteAtlas._uuid : {asset(e0950175-c768-4eea-92fa-5313587b481d)}
+2023-7-21 13:57-debug: remove spriteAtlas._uuid : {asset(e0950175-c768-4eea-92fa-5313587b481d)}
+2023-7-21 13:57-debug: remove spriteAtlas._uuid : {asset(e0950175-c768-4eea-92fa-5313587b481d)}
+2023-7-21 13:57-debug: Build auto-atlas √33%
+2023-7-21 13:57-log: // ---- Compress Image ----
+2023-7-21 13:57-debug: Compress Image start33%
+2023-7-21 13:57-debug: Process: heapTotal 448.29MB heapUsed 415.74MB rss 672.31MB
+2023-7-21 13:57-debug: Compress Image √40%
+2023-7-21 13:57-debug: Copy the resource start40%
+2023-7-21 13:57-log: // ---- Copy the resource ----
+2023-7-21 13:57-debug: Process: heapTotal 448.29MB heapUsed 415.76MB rss 672.34MB
+2023-7-21 13:57-debug: Asset Bundle(resources) handle assets: 24
+2023-7-21 13:57-log: // ---- Build the grouped json and scatter files to the specified location ----
+2023-7-21 13:57-debug: Asset Bundle(main) handle assets: 87
+2023-7-21 13:57-debug: Build the grouped json and scatter files to the specified location start47%
+2023-7-21 13:57-debug: Copy the resource √47%
+2023-7-21 13:57-debug: Process: heapTotal 329.73MB heapUsed 197.11MB rss 320.05MB
+2023-7-21 13:57-debug: Json group(build-task/json) compile success，json number: 6
+2023-7-21 13:57-debug: Json group(build-task/json) compile success，json number: 6
+2023-7-21 13:57-debug: Build the grouped json and scatter files to the specified location √53%
+2023-7-21 13:57-debug: Compress zip bundle start53%
+2023-7-21 13:57-log: // ---- Compress zip bundle ----
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 200.28MB rss 268.04MB
+2023-7-21 13:57-debug: native:(onAfterBuildAssets) start...60%
+2023-7-21 13:57-debug: // ---- native:(onAfterBuildAssets) ----
+2023-7-21 13:57-debug: Compress zip bundle √60%
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 200.30MB rss 268.00MB
+2023-7-21 13:57-log: [plugin New]: running ...
+2023-7-21 13:57-log: update settings.properties
+2023-7-21 13:57-log: AndroidAPI level 30
+2023-7-21 13:57-debug: generateCMakeConfig, {"CC_USE_GLES3":"set(CC_USE_GLES3 ON)","CC_USE_GLES2":"set(CC_USE_GLES2 ON)","USE_SERVER_MODE":"set(USE_SERVER_MODE OFF)","APP_NAME":"set(APP_NAME GPG_Rocket)","COCOS_X_PATH":"set(COCOS_X_PATH \"C:/ProgramData/cocos/editors/Creator/3.4.2/resources/resources/3d/engine-native\")","USE_JOB_SYSTEM_TASKFLOW":"set(USE_JOB_SYSTEM_TASKFLOW OFF)","USE_JOB_SYSTEM_TBB":"set(USE_JOB_SYSTEM_TBB ON)","CC_USE_VULKAN":"set(CC_USE_VULKAN OFF)","USE_PHYSICS_PHYSX":"set(USE_PHYSICS_PHYSX OFF)","USE_AUDIO":"set(USE_AUDIO ON)","USE_VIDEO":"set(USE_VIDEO OFF)","USE_WEBVIEW":"set(USE_WEBVIEW OFF)","USE_SPINE":"set(USE_SPINE OFF)","USE_DRAGONBONES":"set(USE_DRAGONBONES OFF)"}
+2023-7-21 13:57-log: update gradle.properties
+2023-7-21 13:57-log: android instant not configured
+2023-7-21 13:57-debug: // ---- native:(onAfterBuildAssets) success ----
+2023-7-21 13:57-debug: native:(onAfterBuildAssets)63%
+2023-7-21 13:57-debug: Add md5 suffix to assets start63%
+2023-7-21 13:57-log:   [plugin New]: done!
+2023-7-21 13:57-log: // ---- Add md5 suffix to assets ----
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 201.26MB rss 267.06MB
+2023-7-21 13:57-debug: add suffix to assets(15) success!
+2023-7-21 13:57-debug: Add md5 suffix to assets √73%
+2023-7-21 13:57-debug: Init settings and config start73%
+2023-7-21 13:57-log: // ---- Init settings and config ----
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 201.93MB rss 273.22MB
+2023-7-21 13:57-debug: tasks.settings.macro does not defined in i18n
+2023-7-21 13:57-debug: Init settings and config √73%
+2023-7-21 13:57-log: // ---- tasks.settings.macro ----
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 201.96MB rss 273.25MB
+2023-7-21 13:57-debug: tasks.settings.macro start73%
+2023-7-21 13:57-debug: tasks.settings.macro √74%
+2023-7-21 13:57-debug: Use cached settings start74%
+2023-7-21 13:57-log: // ---- Use cached settings ----
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 202.02MB rss 273.30MB
+2023-7-21 13:57-debug: Use cached settings √74%
+2023-7-21 13:57-debug: custom joint texture layouts start74%
+2023-7-21 13:57-log: // ---- custom joint texture layouts ----
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 202.11MB rss 273.47MB
+2023-7-21 13:57-debug: custom joint texture layouts √75%
+2023-7-21 13:57-log: // ---- custom joint physics ----
+2023-7-21 13:57-debug: custom joint physics start75%
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 202.14MB rss 273.51MB
+2023-7-21 13:57-debug: Fill script data to settings start75%
+2023-7-21 13:57-debug: custom joint physics √75%
+2023-7-21 13:57-log: // ---- Fill script data to settings ----
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 202.16MB rss 273.52MB
+2023-7-21 13:57-debug: Fill script data to settings √76%
+2023-7-21 13:57-debug: Fill scene data to settings start76%
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 202.18MB rss 273.54MB
+2023-7-21 13:57-log: // ---- Fill scene data to settings ----
+2023-7-21 13:57-debug: Fill scene data to settings √76%
+2023-7-21 13:57-debug: Organize assets groups，generate packedAssets and rawAssets data start76%
+2023-7-21 13:57-log: // ---- Organize assets groups，generate packedAssets and rawAssets data ----
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 202.20MB rss 273.56MB
+2023-7-21 13:57-debug: Organize assets groups，generate packedAssets and rawAssets data √77%
+2023-7-21 13:57-log: // ---- Generate md5AssetsMap from suffixMap to settings ----
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 202.25MB rss 273.61MB
+2023-7-21 13:57-debug: Generate md5AssetsMap from suffixMap to settings start77%
+2023-7-21 13:57-debug: Generate md5AssetsMap from suffixMap to settings √77%
+2023-7-21 13:57-debug: cocos-service:(onBeforeCompressSettings) start...77%
+2023-7-21 13:57-debug: // ---- cocos-service:(onBeforeCompressSettings) ----
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 202.28MB rss 273.64MB
+2023-7-21 13:57-debug: // ---- cocos-service:(onBeforeCompressSettings) success ----
+2023-7-21 13:57-debug:  start80%
+2023-7-21 13:57-debug: cocos-service:(onBeforeCompressSettings)80%
+2023-7-21 13:57-log: // ----  ----
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 202.42MB rss 273.77MB
+2023-7-21 13:57-debug:  √81%
+2023-7-21 13:57-debug: Compress settings.json and config.json start81%
+2023-7-21 13:57-log: // ---- Compress settings.json and config.json ----
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 202.45MB rss 273.81MB
+2023-7-21 13:57-debug: Compress settings.json and config.json √82%
+2023-7-21 13:57-debug: Save config.json start82%
+2023-7-21 13:57-log: // ---- Save config.json ----
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 202.56MB rss 273.92MB
+2023-7-21 13:57-debug: Save config.json √83%
+2023-7-21 13:57-log: // ---- Save Settings.json ----
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 202.63MB rss 274.15MB
+2023-7-21 13:57-debug: Save Settings.json start83%
+2023-7-21 13:57-debug: Save Settings.json √84%
+2023-7-21 13:57-log: // ---- Sort build template ----
+2023-7-21 13:57-debug: Sort build template start84%
+2023-7-21 13:57-debug: Process: heapTotal 337.46MB heapUsed 202.95MB rss 274.51MB
+2023-7-21 13:57-debug: Sort build template √85%
+2023-7-21 13:57-debug: cocos-service:(onAfterCompressSettings) start...85%
+2023-7-21 13:57-debug: // ---- cocos-service:(onAfterCompressSettings) ----
+2023-7-21 13:57-debug: Process: heapTotal 337.17MB heapUsed 203.05MB rss 272.75MB
+2023-7-21 13:57-debug: // ---- cocos-service:(onAfterCompressSettings) success ----
+2023-7-21 13:57-debug: native:(onAfterBuild) start...87%
+2023-7-21 13:57-debug: cocos-service:(onAfterCompressSettings)87%
+2023-7-21 13:57-debug: Process: heapTotal 337.17MB heapUsed 203.42MB rss 272.69MB
+2023-7-21 13:57-debug: // ---- native:(onAfterBuild) ----
+2023-7-21 13:57-log: [plugin Generate]: running ...
+2023-7-21 13:57-debug: // ---- native:(onAfterBuild) success ----
+2023-7-21 13:57-log: generate android
+2023-7-21 13:57-log:   [plugin Generate]: done!
+2023-7-21 13:57-debug: cocos-service:(onAfterBuild) start...90%
+2023-7-21 13:57-debug: native:(onAfterBuild)90%
+2023-7-21 13:57-debug: // ---- cocos-service:(onAfterBuild) ----
+2023-7-21 13:57-debug: Process: heapTotal 337.17MB heapUsed 200.98MB rss 272.79MB
+2023-7-21 13:57-debug: // ---- cocos-service:(onAfterBuild) success ----
+2023-7-21 13:57-debug: cocos-service:(onAfterBuild)93%
+2023-7-21 13:57-debug: build success in 38222 ms!
+2023-7-21 13:57-debug: Stop record console. {file(C:\CocosProject\3.4.2_MarkSix\temp\builder\log\android2022-9-1 18-16.log)}

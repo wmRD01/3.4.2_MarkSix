@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_howtoplay",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 688,
+      "height": 308
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 688,
+      "height": 308
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "b9970cc0-282b-415a-a01d-1481ca869fc5@6c48a",
+    "packable": true
+  }
+}

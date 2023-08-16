@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "box_img02",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 735,
+      "height": 153
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 735,
+      "height": 153
+    },
+    "rotated": false,
+    "capInsets": [
+      100,
+      0,
+      100,
+      0
+    ],
+    "texture": "cfbbfbcc-4721-4936-9710-856809c406a2@6c48a",
+    "packable": true
+  }
+}

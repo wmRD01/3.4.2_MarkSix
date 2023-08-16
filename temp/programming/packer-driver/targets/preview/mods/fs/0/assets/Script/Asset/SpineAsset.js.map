@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Asset/SpineAsset.ts"],"names":["SpineAsset"],"mappings":";;;iBACMA,U;;;;;;;;;;;AAAAA,MAAAA,U,GAAN,MAAMA,UAAN,CAAiB,E;;yBAGF,IAAIA,UAAJ,E","sourcesContent":["\r\nclass SpineAsset {\r\n\r\n}\r\nexport default new SpineAsset();"]}

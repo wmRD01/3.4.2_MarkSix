@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Challenge_BlueBall",
+    "atlas": "",
+    "rect": {
+      "x": 1,
+      "y": 0,
+      "width": 82,
+      "height": 82
+    },
+    "offset": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "originalSize": {
+      "width": 83,
+      "height": 83
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "18883870-75ba-454f-918b-eea8f5531445@6c48a",
+    "packable": true
+  }
+}

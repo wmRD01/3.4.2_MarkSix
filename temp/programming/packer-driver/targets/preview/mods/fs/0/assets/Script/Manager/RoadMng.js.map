@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/RoadMng.ts"],"names":["EventTarget"],"mappings":";;;;;;;;AAASA,MAAAA,W,OAAAA,W;;;;;;;yBAEM,IAAIA,WAAJ,E","sourcesContent":["import { EventTarget } from \"cc\";\r\n\r\nexport default new EventTarget();"]}

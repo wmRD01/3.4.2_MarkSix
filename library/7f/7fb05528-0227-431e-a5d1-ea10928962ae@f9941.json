@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "integral_personal score color ball column",
+    "atlas": "",
+    "rect": {
+      "x": 3,
+      "y": 2,
+      "width": 456,
+      "height": 113
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 462,
+      "height": 117
+    },
+    "rotated": false,
+    "capInsets": [
+      71,
+      0,
+      58,
+      0
+    ],
+    "texture": "7fb05528-0227-431e-a5d1-ea10928962ae@6c48a",
+    "packable": true
+  }
+}

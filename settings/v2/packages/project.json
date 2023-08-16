@@ -1,0 +1,42 @@
+{
+  "__version__": "1.0.1",
+  "general": {
+    "designResolution": {
+      "width": 720,
+      "height": 1280,
+      "fitWidth": true,
+      "fitHeight": false
+    }
+  },
+  "layer": [
+    {
+      "name": "UI",
+      "value": 1
+    },
+    {
+      "name": "UI_BG",
+      "value": 2
+    },
+    {
+      "name": "3DTabel",
+      "value": 8
+    }
+  ],
+  "fbx": {
+    "legacyFbxImporter": {
+      "visible": true
+    }
+  },
+  "physics": {
+    "collisionGroups": [
+      {
+        "index": 1,
+        "name": "wwww"
+      }
+    ],
+    "collisionMatrix": {
+      "0": 1,
+      "1": 0
+    }
+  }
+}

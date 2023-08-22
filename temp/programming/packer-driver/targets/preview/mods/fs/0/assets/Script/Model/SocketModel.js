@@ -191,7 +191,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         checkLanguagePath() {
           if (window.isVAServer || window.isInpokerServer) return "../../lib/"; // 語言包路徑
           else if (window.isGitServer) return "https://wmrd01.github.io/BaccaratPlay/lib/";else //預設 // 本地端
-              return "http://10.20.13.201/JaiJaiTest/lib/"; // return "http://192.168.89.61/JaiJaiTest/lib/"
+              // return "http://10.20.13.201/JaiJaiTest/lib/"
+              return "http://192.168.112.61/JaiJaiTest/lib/"; // return "http://192.168.89.61/JaiJaiTest/lib/"
           // return "http://192.168.0.238/JaiJaiTest/lib/"
         }
 

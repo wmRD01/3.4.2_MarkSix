@@ -18,14 +18,15 @@ export class ChooeseBall extends State {
     public changeState(data: RP.bet): void {
         console.log("BET", data);
         if (data.code == "0") {
-            console.log("下注成功");
             EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(LobbyStateEvent.AttackBall)
         }
         else {
-            console.log(data.betCode);
-
             if (data.betCode != null)
                 EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(LobbyStateEvent.UpDateBall, data)
+            else {
+                EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(LobbyStateEvent.ChangeBallButtonState, true)
+                EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(LobbyStateEvent.ChangeConfirmState, false)
+            }
             PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t(data.code, LangType.Server))
         }
     }

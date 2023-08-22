@@ -226,9 +226,11 @@ export default class PanelBall extends BaseComponent {
         this.isConfirm = true
     }
     onSendCheckAttack(e?: EventTouch, customEventData?: string) {
+        this.eventEmit(LobbyStateEvent.ChangeConfirmState, false)
         const _bet = new bet()
         _bet.betCode = this.tempChoose
         this.eventEmit(WebSocketEvent.WebSocketSendCommand, CommandType.bet, _bet)
+
     }
     onConfirmAttack(e?: EventTouch, customEventData?: string) {
         this.eventEmit(LobbyStateEvent.ChangeBallButtonState, false)

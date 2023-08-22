@@ -22,8 +22,6 @@ export default class PaenlFunctionButton extends BaseComponent {
         }
     }
     changeConfirmState(isbool: boolean) {
-        console.log("???");
-
         this.buttons[2].interactable = isbool
     }
 }

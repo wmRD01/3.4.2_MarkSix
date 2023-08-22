@@ -485,6 +485,10 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
         }
 
         onSendCheckAttack(e, customEventData) {
+          this.eventEmit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+            error: Error()
+          }), LobbyStateEvent) : LobbyStateEvent).ChangeConfirmState, false);
+
           var _bet = new (_crd && bet === void 0 ? (_reportPossibleCrUseOfbet({
             error: Error()
           }), bet) : bet)();

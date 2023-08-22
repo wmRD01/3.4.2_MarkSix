@@ -280,7 +280,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         responseUploadAvatar(response, _spriteFrame) {
           console.log("圖片上傳成功?", response);
-          if (response.Status.Code == "0") this.spritePlayer.spriteFrame = _spriteFrame;else {}
+
+          if (response.Status.Code == "0") {
+            this.spritePlayer.spriteFrame = _spriteFrame;
+            this.responError("047");
+          } else {}
         }
 
         responError(errorCode) {

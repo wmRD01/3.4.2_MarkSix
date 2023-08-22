@@ -74,7 +74,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         changeConfirmState(isbool) {
-          console.log("???");
           this.buttons[2].interactable = isbool;
         }
 

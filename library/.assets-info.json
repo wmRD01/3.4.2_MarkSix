@@ -300,7 +300,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Lobby.scene": {
-    "time": 1692150675833.4954,
+    "time": 1692712610066.699,
     "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
     "missing": false
   },
@@ -805,7 +805,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PublicData.ts": {
-    "time": 1692085092167.6594,
+    "time": 1692700476132.4004,
     "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12",
     "missing": false
   },
@@ -825,7 +825,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\SocketModel.ts": {
-    "time": 1691044308837.364,
+    "time": 1692700922439.662,
     "uuid": "d543d8b6-2d0c-402a-bcda-1b8934c0e8fd",
     "missing": false
   },
@@ -870,7 +870,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\State\\PlayState.ts": {
-    "time": 1692002969937.8977,
+    "time": 1692706535194.5781,
     "uuid": "f58f9d70-875c-4733-9dd2-ce918567419d",
     "missing": false
   },
@@ -1150,7 +1150,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ChooeseBall\\PanelBall.ts": {
-    "time": 1692085098906.0945,
+    "time": 1692703334463.2944,
     "uuid": "d2f08cfc-f861-4fd1-8212-bea888090d2b",
     "missing": false
   },
@@ -1160,12 +1160,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ClientInfo\\PanelClientInfo.ts": {
-    "time": 1692092578684.0962,
+    "time": 1692700586019.141,
     "uuid": "e72b2a05-d840-45f6-a09f-c715d142e9b8",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Home\\PanelHome.ts": {
-    "time": 1692002791673.0107,
+    "time": 1692710210375.694,
     "uuid": "b8492fab-e86b-4b04-87cf-33d6acb68979",
     "missing": false
   },
@@ -1936,7 +1936,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\CreateFileSprite.ts": {
-    "time": 1692092570275.1604,
+    "time": 1692700578881.7888,
     "uuid": "8ce80187-78d2-4235-b863-98e0e3284302",
     "missing": false
   },
@@ -2027,7 +2027,7 @@
     "time": 1691030686296.582
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ChooeseBall\\PaenlFunctionButton.ts": {
-    "time": 1692007750039.5513,
+    "time": 1692700693480.6902,
     "uuid": "c40dedcf-4140-4083-881f-e3e0fd9ca4c7",
     "missing": false
   },

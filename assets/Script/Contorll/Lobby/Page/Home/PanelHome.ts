@@ -78,6 +78,7 @@ export default class PanelHome extends BaseComponent {
         this.timer = this.labelTime.addComponent(Timer);
         this.timer.setBGNode(this.timeBG);
         /**取TOKEN */
+        
         Player.getInstance.gpgToken = (this.handleURLData(window.location.href) as URLVlaue).token
         this.setEvent(LobbyStateEvent.NextIssueID, this.reset)
     }

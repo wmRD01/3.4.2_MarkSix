@@ -72,7 +72,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           console.log("BET", data);
 
           if (data.code == "0") {
-            console.log("下注成功");
             (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
               error: Error()
             }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
@@ -81,14 +80,28 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), LobbyStateEvent) : LobbyStateEvent).AttackBall);
           } else {
-            console.log(data.betCode);
             if (data.betCode != null) (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
               error: Error()
             }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
               error: Error()
             }), NotificationType) : NotificationType).Pulic).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
               error: Error()
-            }), LobbyStateEvent) : LobbyStateEvent).UpDateBall, data);
+            }), LobbyStateEvent) : LobbyStateEvent).UpDateBall, data);else {
+              (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+                error: Error()
+              }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
+                error: Error()
+              }), NotificationType) : NotificationType).Pulic).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+                error: Error()
+              }), LobbyStateEvent) : LobbyStateEvent).ChangeBallButtonState, true);
+              (_crd && EventMng === void 0 ? (_reportPossibleCrUseOfEventMng({
+                error: Error()
+              }), EventMng) : EventMng).getInstance.mapEvnet.get((_crd && NotificationType === void 0 ? (_reportPossibleCrUseOfNotificationType({
+                error: Error()
+              }), NotificationType) : NotificationType).Pulic).emit((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
+                error: Error()
+              }), LobbyStateEvent) : LobbyStateEvent).ChangeConfirmState, false);
+            }
             (_crd && PanelSystemMessage === void 0 ? (_reportPossibleCrUseOfPanelSystemMessage({
               error: Error()
             }), PanelSystemMessage) : PanelSystemMessage).instance.showSingleConfirm((_crd && SocketSetting === void 0 ? (_reportPossibleCrUseOfSocketSetting({

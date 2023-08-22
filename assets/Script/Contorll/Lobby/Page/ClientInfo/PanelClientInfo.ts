@@ -92,7 +92,7 @@ export default class PanelClientInfo extends BaseComponent {
     }
     //#region UploadAvatar
     onSelectPhoto() {
-        new CreateFileSprite(this.onUploadAvatar.bind(this),this.responError.bind(this))
+        new CreateFileSprite(this.onUploadAvatar.bind(this), this.responError.bind(this))
     }
     async onUploadAvatar(_spriteFrame: SpriteFrame, file: File) {
         // PublicModel.getInstance.convertByteToBinary(PublicModel.getInstance._base64ToBytes(base64))
@@ -109,13 +109,15 @@ export default class PanelClientInfo extends BaseComponent {
     }
     responseUploadAvatar(response: ResponseGPG.UploadAvatar.DataClass, _spriteFrame: SpriteFrame) {
         console.log("圖片上傳成功?", response);
-        if (response.Status.Code == "0")
+        if (response.Status.Code == "0") {
             this.spritePlayer.spriteFrame = _spriteFrame
+            this.responError("047")
+        }
         else {
 
         }
     }
-    responError(errorCode:string){
+    responError(errorCode: string) {
         PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t(errorCode, LangType.Game))
     }
     //#endregion

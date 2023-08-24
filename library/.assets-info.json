@@ -1,6 +1,6 @@
 {
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image": {
-    "time": 1692003565245.3052,
+    "time": 1692861219736.9934,
     "uuid": "6e71966d-73ec-46ee-84f1-7fe64bc8e090",
     "missing": false
   },
@@ -300,7 +300,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Lobby.scene": {
-    "time": 1692712610066.699,
+    "time": 1692861399534.114,
     "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
     "missing": false
   },
@@ -805,7 +805,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PublicData.ts": {
-    "time": 1692700476132.4004,
+    "time": 1692861395371.1045,
     "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12",
     "missing": false
   },
@@ -825,7 +825,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\SocketModel.ts": {
-    "time": 1692700922439.662,
+    "time": 1692861360714.465,
     "uuid": "d543d8b6-2d0c-402a-bcda-1b8934c0e8fd",
     "missing": false
   },
@@ -2291,7 +2291,7 @@
     "time": 1688622722411.5925
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\img_gift.jpg": {
-    "time": 1688514856000,
+    "time": 1692762991027.4014,
     "uuid": "db96ec86-9ed4-4196-b183-5503d144e407",
     "missing": false
   },

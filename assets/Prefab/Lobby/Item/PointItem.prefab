@@ -3573,6 +3573,12 @@
     "__prefab": {
       "__id__": 245
     },
+    "ui": {
+      "__id__": 242
+    },
+    "UIbg": {
+      "__id__": 3
+    },
     "prefabBallItem": {
       "__uuid__": "a58271df-f733-46f8-b74c-aee4c4c6c5bc",
       "__expectedType__": "cc.Prefab"

@@ -22,6 +22,7 @@ export default class PanelTopRank extends BaseComponent {
     @property(Node)
     spriteBGContent: Node;
     onLoad() {
+        super.onLoad()
         this.reset()
     }
     start() {
@@ -29,6 +30,8 @@ export default class PanelTopRank extends BaseComponent {
     }
     async onEnable() {
         await AssetMng.waitStateCheck(AssetType.Sprite)
+        console.log(this.layoutRank.children.length);
+
         if (this.layoutRank.children.length == 0)
             await this.requesTopScore()
     }

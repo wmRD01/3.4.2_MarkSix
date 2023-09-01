@@ -1,4 +1,4 @@
-import { instantiate, Label, Node, Prefab, _decorator } from 'cc';
+import { instantiate, Label, log, Node, Prefab, Size, Sprite, UITransform, _decorator } from 'cc';
 import BallData from './BallData';
 import BaseComponent from './ComponentBase';
 import AutoFollow from './AutoFollow';
@@ -7,6 +7,10 @@ const { ccclass, property } = _decorator;
 //TODO 缺乏優化DrawCode
 @ccclass('PointItemData')
 export default class PointItemData extends BaseComponent {
+    @property(UITransform)
+    ui: UITransform;
+    @property(UITransform)
+    UIbg: UITransform;
     @property(Prefab)
     prefabBallItem: Prefab;
     @property(Label)
@@ -27,9 +31,16 @@ export default class PointItemData extends BaseComponent {
     labelContent: Node
     outlineContent: Node;
 
+    drawCode: string[] = [];
+
+    itemSize: Size;
+
     onLoad() {
         this.clientPointLayout.removeAllChildren();
         this.openDrawCodeLayout.removeAllChildren();
+        this.ui = this.node.getComponent(UITransform);
+        this.itemSize = new Size(this.UIbg.contentSize.width, this.UIbg.contentSize.height)
+        this.itemState(false)
     }
     setLabelContent(_node: Node) {
         this.labelContent = _node
@@ -51,6 +62,7 @@ export default class PointItemData extends BaseComponent {
         return this
     }
     setOpenNumber(numbers: string[]) {
+        this.drawCode = numbers;
         for (let index = 0; index < numbers.length; index++) {
             let _node: Node;
             if (index == this.maxNumberCount) _node = this.specialBallItem;
@@ -68,12 +80,17 @@ export default class PointItemData extends BaseComponent {
     }
     setSelfNumber(numbers: number[]) {
         if (this.clientPointLayout.children.length >= this.maxNumberCount) return;
+        this.itemState(true)
         for (let index = 0; index < numbers.length; index++) {
             let _node = instantiate(this.prefabBallItem)
             this.clientPointLayout.addChild(_node)
             let _class = _node.getComponent(BallData)
             _class.init(numbers[index])
             this.labelContent.addChild(_class.label.node)
+            if (this.drawCode[index].indexOf(numbers[index].toString()) != -1) {
+                _class.setEffect(true);
+                _class.changeEffectColor();
+            }
         }
     }
     setScore(num: number) {
@@ -88,6 +105,23 @@ export default class PointItemData extends BaseComponent {
         this.labelPoint.addComponent(AutoFollow).createNewTarget()
         this.labelContent.addChild(this.labelPoint.node)
         return this
+    }
+
+    itemState(bool: boolean) {
+        if (bool) {
+            console.log(this.itemSize.height);
+
+            this.ui.setContentSize(this.itemSize)
+            this.UIbg.setContentSize(this.itemSize)
+        }
+        else {
+            let halfSize = new Size(this.itemSize.width, this.itemSize.height / 2)
+
+            this.ui.setContentSize(halfSize)
+            this.UIbg.setContentSize(halfSize)
+        }
+        this.clientPointLayout.active = bool;
+        this.labelMyChooeseNumber.node.active = bool;
     }
     /**測試用 */
     randomBall() {

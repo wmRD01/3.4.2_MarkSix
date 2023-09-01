@@ -65,6 +65,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         update() {
+          // if (!this.target) {
           if (!this.node.position.equals((_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
           }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(this.node, this.target))) this.node.position = (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
@@ -72,7 +73,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }), PublicModel) : PublicModel).getInstance.to2DConvertOtherNodeSpaceAR(this.node, this.target); // console.log("改座標");
 
           if (!this.node.scale.equals(this.target.scale) && this.isAutoScale) this.node.scale = this.target.scale;
-          if (this.target.active != this.node.active) this.node.active = this.target.active;
+          if (this.target.active != this.node.active) this.node.active = this.target.active; // }
+          // else {
+          //     this.node.destroy();
+          // }
         }
 
       }, _temp)) || _class));

@@ -264,7 +264,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         responseDrawHistory(response) {
           if (response.data) {
-            this.lastDrawCodeLayout.removeAllChildren();
+            // this.lastDrawCodeLayout.removeAllChildren()
+            let count = this.lastDrawCodeLayout.children.length - 1;
+
+            for (let index = count; index >= 0; index--) {
+              this.lastDrawCodeLayout.children[index].destroy();
+            }
+
             let getDate = response.data[0];
             this.labelLastDrawIssueID.string = `第${getDate.issueID}期`;
             /**不需要week日 */

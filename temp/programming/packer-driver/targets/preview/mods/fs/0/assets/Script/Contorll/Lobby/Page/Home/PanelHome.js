@@ -286,7 +286,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         responseDrawHistory(response) {
           if (response.data) {
-            this.lastDrawCodeLayout.removeAllChildren();
+            // this.lastDrawCodeLayout.removeAllChildren()
+            var count = this.lastDrawCodeLayout.children.length - 1;
+
+            for (var index = count; index >= 0; index--) {
+              this.lastDrawCodeLayout.children[index].destroy();
+            }
+
             var getDate = response.data[0];
             this.labelLastDrawIssueID.string = "\u7B2C" + getDate.issueID + "\u671F";
             /**不需要week日 */
@@ -297,12 +303,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), PublicModel) : PublicModel).getInstance.convertDateDay(getDate.openDate).split("(")[0];
             this.labelLastDrawDay.string = getday + "\u958B\u734E\u7D50\u679C";
 
-            for (var index = 0; index < getDate.drawCode.length; index++) {
+            for (var _index = 0; _index < getDate.drawCode.length; _index++) {
               var _node = void 0;
 
               var isResetPos = true;
 
-              if (index == 6) {
+              if (_index == 6) {
                 _node = this.specialBallItem;
                 isResetPos = false;
               } else {
@@ -314,7 +320,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 error: Error()
               }), BallData) : BallData);
 
-              _class.init(Number(getDate.drawCode[index]), isResetPos).cancel();
+              _class.init(Number(getDate.drawCode[_index]), isResetPos).cancel();
 
               this.labelContent.addChild(_class.label.node);
             }

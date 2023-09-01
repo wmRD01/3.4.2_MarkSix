@@ -78,7 +78,7 @@ export default class PanelHome extends BaseComponent {
         this.timer = this.labelTime.addComponent(Timer);
         this.timer.setBGNode(this.timeBG);
         /**取TOKEN */
-        
+
         Player.getInstance.gpgToken = (this.handleURLData(window.location.href) as URLVlaue).token
         this.setEvent(LobbyStateEvent.NextIssueID, this.reset)
     }
@@ -123,10 +123,14 @@ export default class PanelHome extends BaseComponent {
     }
     responseDrawHistory(response?: ResponseGPG.DrawHistory.DataClass) {
         if (response.data) {
-            this.lastDrawCodeLayout.removeAllChildren()
+            // this.lastDrawCodeLayout.removeAllChildren()
+            let count = this.lastDrawCodeLayout.children.length - 1
+
+            for (let index = count; index >= 0; index--) {
+                this.lastDrawCodeLayout.children[index].destroy()
+            }
             let getDate = response.data[0]
             this.labelLastDrawIssueID.string = `第${getDate.issueID}期`
-
             /**不需要week日 */
             // console.log(PublicModel.getInstance.convertDate(getDate.openDate).split("(")[0]);
 

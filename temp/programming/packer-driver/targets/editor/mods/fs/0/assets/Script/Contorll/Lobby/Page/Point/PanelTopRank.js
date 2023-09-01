@@ -111,6 +111,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onLoad() {
+          super.onLoad();
           this.reset();
         }
 
@@ -126,6 +127,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), AssetMng) : AssetMng).waitStateCheck((_crd && AssetType === void 0 ? (_reportPossibleCrUseOfAssetType({
             error: Error()
           }), AssetType) : AssetType).Sprite);
+          console.log(this.layoutRank.children.length);
           if (this.layoutRank.children.length == 0) await this.requesTopScore();
         }
 

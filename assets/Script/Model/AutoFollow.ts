@@ -21,8 +21,8 @@ export default class AutoFollow extends BaseComponent {
         this.isAutoScale = isbool;
         return this
     }
-
     update() {
+        // if (!this.target) {
         if (!this.node.position.equals(PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(this.node, this.target)))
             this.node.position = PublicModel.getInstance.to2DConvertOtherNodeSpaceAR(this.node, this.target)
         // console.log("改座標");
@@ -31,5 +31,9 @@ export default class AutoFollow extends BaseComponent {
 
         if (this.target.active != this.node.active)
             this.node.active = this.target.active
+        // }
+        // else {
+        //     this.node.destroy();
+        // }
     }
 }

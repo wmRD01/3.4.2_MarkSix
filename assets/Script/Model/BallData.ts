@@ -22,6 +22,19 @@ export default class BallData extends BaseComponent {
     type: number = 0;
     orgV3: Vec3;
     labelAuto: AutoFollow;
+    // onDisable() {
+    //     console.log("我消失了?");
+    // }
+
+    onDestroy() {
+        console.log(this.label);
+        try {
+
+            this.label.node.destroy();
+        } catch (error) {
+
+        }
+    }
     init(_ballNumber: number, isResetPos: boolean = false) {
         // console.log(_ballNumber);
 
@@ -119,8 +132,11 @@ export default class BallData extends BaseComponent {
     setEffect(bool: boolean) {
         this.opacityEffect.opacity = 255
         this.opacityEffect.node.active = bool
-    }
 
+    }
+    changeEffectColor() {
+        this.opacityEffect.node.getComponent(Sprite).color = color().fromHEX("#FFB700")
+    }
     private getColor() {
 
         return ColorType.黑

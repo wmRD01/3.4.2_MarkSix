@@ -90,6 +90,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "labelAuto", void 0);
         }
 
+        // onDisable() {
+        //     console.log("我消失了?");
+        // }
+        onDestroy() {
+          console.log(this.label);
+
+          try {
+            this.label.node.destroy();
+          } catch (error) {}
+        }
+
         init(_ballNumber, isResetPos) {
           if (isResetPos === void 0) {
             isResetPos = false;
@@ -188,6 +199,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         setEffect(bool) {
           this.opacityEffect.opacity = 255;
           this.opacityEffect.node.active = bool;
+        }
+
+        changeEffectColor() {
+          this.opacityEffect.node.getComponent(Sprite).color = color().fromHEX("#FFB700");
         }
 
         getColor() {

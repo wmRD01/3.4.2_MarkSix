@@ -325,7 +325,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                   error: Error()
                 }), PublicModel) : PublicModel).getInstance.convertMD5((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
                   error: Error()
-                }), PublicData) : PublicData).getInstance.gpgApi);
+                }), PublicData) : PublicData).getInstance.gpgApiKey);
                 var convert = new URLSearchParams(body).toString();
                 yield new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
                   error: Error()

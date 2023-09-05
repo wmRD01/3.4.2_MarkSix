@@ -62,6 +62,8 @@ export default class PointItemData extends BaseComponent {
         return this
     }
     setOpenNumber(numbers: string[]) {
+        console.log(`當期號碼${numbers}`);
+
         this.drawCode = numbers;
         for (let index = 0; index < numbers.length; index++) {
             let _node: Node;
@@ -87,7 +89,11 @@ export default class PointItemData extends BaseComponent {
             let _class = _node.getComponent(BallData)
             _class.init(numbers[index])
             this.labelContent.addChild(_class.label.node)
-            if (this.drawCode[index].indexOf(numbers[index].toString()) != -1) {
+            console.log(`${this.drawCode},${numbers[index]}`);
+
+            console.log(this.drawCode[index].indexOf(numbers[index].toString()));
+
+            if (this.drawCode.indexOf(numbers[index].toString()) != -1) {
                 _class.setEffect(true);
                 _class.changeEffectColor();
             }

@@ -1,6 +1,6 @@
 {
   "cce:/internal/x/cc": {
-    "mTimestamp": 6354.055699825287,
+    "mTimestamp": 7226.263400000054,
     "chunkId": "quick-pack:/cce/internal/x/cc.js",
     "imports": [
       {
@@ -389,7 +389,7 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 14104905.254499912,
+    "mTimestamp": 3659463.6083000004,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
@@ -3715,7 +3715,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/GPGAPI/RequestGPG.ts": {
     "mTimestamp": {
-      "mtime": 1691392182512.1658,
+      "mtime": 1693881798571.3247,
       "uuid": "a8530c9c-9fdc-465d-8309-ca23ec463676"
     },
     "chunkId": "assets/Script/Contorll/Api/GPGAPI/RequestGPG.js",
@@ -4881,7 +4881,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/Page/Home/PanelHome.ts": {
     "mTimestamp": {
-      "mtime": 1693561966115.083,
+      "mtime": 1693881704330.755,
       "uuid": "b8492fab-e86b-4b04-87cf-33d6acb68979"
     },
     "chunkId": "assets/Script/Contorll/Lobby/Page/Home/PanelHome.js",
@@ -5196,7 +5196,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/Page/ClientInfo/PanelClientInfo.ts": {
     "mTimestamp": {
-      "mtime": 1692700586019.141,
+      "mtime": 1693881704330.755,
       "uuid": "e72b2a05-d840-45f6-a09f-c715d142e9b8"
     },
     "chunkId": "assets/Script/Contorll/Lobby/Page/ClientInfo/PanelClientInfo.js",
@@ -10792,7 +10792,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicData.ts": {
     "mTimestamp": {
-      "mtime": 1693556183109.7778,
+      "mtime": 1693884921097.1924,
       "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12"
     },
     "chunkId": "assets/Script/Model/PublicData.js",
@@ -10819,29 +10819,43 @@
         }
       },
       {
-        "value": "../Enum/GameSenceName",
+        "value": "../Contorll/Api/GPGAPI/RequestGPG",
         "rewritten": "__unresolved_2",
         "loc": {
           "start": {
             "line": 2,
-            "column": 30
+            "column": 27
           },
           "end": {
             "line": 2,
+            "column": 62
+          }
+        }
+      },
+      {
+        "value": "../Enum/GameSenceName",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 30
+          },
+          "end": {
+            "line": 3,
             "column": 53
           }
         }
       },
       {
         "value": "./CheckLoading",
-        "rewritten": "__unresolved_3",
+        "rewritten": "__unresolved_4",
         "loc": {
           "start": {
-            "line": 3,
+            "line": 4,
             "column": 25
           },
           "end": {
-            "line": 3,
+            "line": 4,
             "column": 41
           }
         }
@@ -10862,6 +10876,10 @@
       {
         "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Patten/Singleton/BaseSingleton.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/GPGAPI/RequestGPG.ts"
       },
       {
         "isExternal": false,
@@ -10976,7 +10994,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PointItemData.ts": {
     "mTimestamp": {
-      "mtime": 1693555660357.8567,
+      "mtime": 1693884873636.035,
       "uuid": "f131d57a-314f-48b1-af87-1e0cac6d55c0"
     },
     "chunkId": "assets/Script/Model/PointItemData.js",
@@ -11094,7 +11112,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Socket/GameWebSocket.ts": {
     "mTimestamp": {
-      "mtime": 1691375467714.533,
+      "mtime": 1693884119092.9607,
       "uuid": "15ca959a-c72f-453d-8fb1-71a3c53467c0"
     },
     "chunkId": "assets/Script/Socket/GameWebSocket.js",
@@ -11493,7 +11511,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicModel.ts": {
     "mTimestamp": {
-      "mtime": 1691479238075.1372,
+      "mtime": 1693881704330.755,
       "uuid": "e67ebe82-8c49-4ffb-b7df-3ca593669e05"
     },
     "chunkId": "assets/Script/Model/PublicModel.js",
@@ -13303,7 +13321,7 @@
     ]
   },
   "cce:/internal/code-quality/cr.mjs": {
-    "mTimestamp": 1693547864153,
+    "mTimestamp": 1693881262926,
     "chunkId": "quick-pack:/cce/internal/code-quality/cr.js",
     "imports": [],
     "modLoMetadata": {
@@ -13312,7 +13330,7 @@
     "resolvedImports": []
   },
   "cce:/internal/ml/cjs-loader.mjs": {
-    "mTimestamp": 1693547864153,
+    "mTimestamp": 1693881262926,
     "chunkId": "quick-pack:/cce/internal/ml/cjs-loader.js",
     "imports": [],
     "modLoMetadata": {

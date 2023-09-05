@@ -226,7 +226,7 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         PublicModel.getInstance.TwoClassCheckData(sign, body)
         if (isDelete)
             delete sign.sign
-        const dataWithApiKey = this.sortObj(sign, PublicData.getInstance.gpgApi);
+        const dataWithApiKey = this.sortObj(sign, PublicData.getInstance.gpgApiKey);
         // console.log(dataWithApiKey);
         // console.log(CryptoES.MD5(dataWithApiKey).toString());
         return CryptoES.MD5(dataWithApiKey).toString()

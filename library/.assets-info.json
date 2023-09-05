@@ -300,7 +300,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Lobby.scene": {
-    "time": 1693561995507.609,
+    "time": 1693885200181.7954,
     "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
     "missing": false
   },
@@ -800,17 +800,17 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PointItemData.ts": {
-    "time": 1693555660357.8567,
+    "time": 1693884873636.035,
     "uuid": "f131d57a-314f-48b1-af87-1e0cac6d55c0",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PublicData.ts": {
-    "time": 1693556183109.7778,
+    "time": 1693884921097.1924,
     "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PublicModel.ts": {
-    "time": 1691479238075.1372,
+    "time": 1693881704330.755,
     "uuid": "e67ebe82-8c49-4ffb-b7df-3ca593669e05",
     "missing": false
   },
@@ -850,7 +850,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Socket\\GameWebSocket.ts": {
-    "time": 1691375467714.533,
+    "time": 1693884119092.9607,
     "uuid": "15ca959a-c72f-453d-8fb1-71a3c53467c0",
     "missing": false
   },
@@ -1100,7 +1100,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Api\\GPGAPI\\RequestGPG.ts": {
-    "time": 1691392182512.1658,
+    "time": 1693881798571.3247,
     "uuid": "a8530c9c-9fdc-465d-8309-ca23ec463676",
     "missing": false
   },
@@ -1160,12 +1160,12 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ClientInfo\\PanelClientInfo.ts": {
-    "time": 1692700586019.141,
+    "time": 1693881704330.755,
     "uuid": "e72b2a05-d840-45f6-a09f-c715d142e9b8",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\Home\\PanelHome.ts": {
-    "time": 1693561966115.083,
+    "time": 1693881704330.755,
     "uuid": "b8492fab-e86b-4b04-87cf-33d6acb68979",
     "missing": false
   },

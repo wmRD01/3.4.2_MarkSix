@@ -1,12 +1,13 @@
 import BaseSingleton from "../../Patten/Singleton/BaseSingleton";
+import { RequestGPG } from "../Contorll/Api/GPGAPI/RequestGPG";
 import { GameSceneName } from "../Enum/GameSenceName";
 import CheckLoading from "./CheckLoading";
 export default class PublicData extends BaseSingleton<PublicData>() {
     arr_ComponentBaseClass: Array<ComponentBase> = new Array
     BaseViewWidth: number = 720;
     BaseViewHeight: number = 1280;
-    gameVersion: string = "0.3.0";
-    onlineVersion: string = "0.3.0";
+    gameVersion: string = "0.3.1";
+    onlineVersion: string = "0.3.1";
     checkLoading = new CheckLoading();
     /**畫面重製 */
     isResetView: boolean;
@@ -24,26 +25,15 @@ export default class PublicData extends BaseSingleton<PublicData>() {
     isClickScreen: boolean = false
 
     today: string;
-    gpgApi: GPGAPI = GPGAPI.QA;
+    gpgApiKey: RequestGPG.GPGAPIKey = RequestGPG.GPGAPIKey.QA;
 
-    gpgUrlPlayApi = APIUrl.QA_playAPI;
-    gpgUrlids = APIUrl.QA_ids;
+    gpgUrlPlayApi = RequestGPG.APIUrl.QA_playAPI;
+    gpgUrlids = RequestGPG.APIUrl.QA_ids;
 
 
     isChageOnline() {
-        this.gpgApi = GPGAPI.Online;
-        this.gpgUrlPlayApi = APIUrl.playAPI
-        this.gpgUrlids = APIUrl.ids
+        this.gpgApiKey = RequestGPG.GPGAPIKey.Online;
+        this.gpgUrlPlayApi = RequestGPG.APIUrl.playAPI
+        this.gpgUrlids = RequestGPG.APIUrl.ids
     }
-}
-
-enum GPGAPI {
-    QA = "5gh394D",
-    Online = "4fypra!c!?",
-}
-enum APIUrl {
-    playAPI = "https://play-api.godplay.app",
-    ids = "https://ids.godplay.app",
-    QA_playAPI = "https://play-api.ceis.tw",
-    QA_ids = "https://ids.ceis.tw",
 }

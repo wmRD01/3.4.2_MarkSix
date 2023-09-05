@@ -285,6 +285,14 @@ System.register(["cc"], function (_export, _context) {
         })(API || (API = {}));
 
         _RequestGPG.API = API;
+        var GPGAPIKey;
+
+        (function (GPGAPIKey) {
+          GPGAPIKey["QA"] = "5gh394D";
+          GPGAPIKey["Online"] = "4fypra!c!?";
+        })(GPGAPIKey || (GPGAPIKey = {}));
+
+        _RequestGPG.GPGAPIKey = GPGAPIKey;
       })(RequestGPG || _export("RequestGPG", RequestGPG = {}));
 
       _cclegacy._RF.pop();

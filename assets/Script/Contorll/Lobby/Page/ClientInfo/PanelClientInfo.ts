@@ -125,7 +125,7 @@ export default class PanelClientInfo extends BaseComponent {
     async requestMyInfo() {
         return new Promise<void>(async (resolve, reject) => {
             const body = new RequestGPG.Body.NeedToken.MyInfo()
-            body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApi)
+            body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApiKey)
             let convert = new URLSearchParams(body).toString()
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)

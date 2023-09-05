@@ -309,7 +309,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "cr
           if (isDelete) delete sign.sign;
           var dataWithApiKey = this.sortObj(sign, (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
             error: Error()
-          }), PublicData) : PublicData).getInstance.gpgApi); // console.log(dataWithApiKey);
+          }), PublicData) : PublicData).getInstance.gpgApiKey); // console.log(dataWithApiKey);
           // console.log(CryptoES.MD5(dataWithApiKey).toString());
 
           return (_crd && CryptoES === void 0 ? (_reportPossibleCrUseOfCryptoES({

@@ -159,7 +159,7 @@ export default class PanelHome extends BaseComponent {
     async requestDrawUpcoming() {
         return new Promise<void>(async (resolve, reject) => {
             const body = new RequestGPG.Body.NeedToken.DrawUpcoming()
-            body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApi)
+            body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApiKey)
             let convert = new URLSearchParams(body).toString()
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
@@ -229,7 +229,7 @@ export default class PanelHome extends BaseComponent {
     async requestMyInfo() {
         return new Promise<void>(async (resolve, reject) => {
             const body = new RequestGPG.Body.NeedToken.MyInfo()
-            body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApi)
+            body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApiKey)
             let convert = new URLSearchParams(body).toString()
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
@@ -248,7 +248,7 @@ export default class PanelHome extends BaseComponent {
     //#region 
     async requestDrawUpcomingLoop() {
         const body = new RequestGPG.Body.NeedToken.DrawUpcoming()
-        body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApi)
+        body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApiKey)
         let convert = new URLSearchParams(body).toString()
         await new RequestGPG.Request()
             .setToken(Player.getInstance.gpgToken)

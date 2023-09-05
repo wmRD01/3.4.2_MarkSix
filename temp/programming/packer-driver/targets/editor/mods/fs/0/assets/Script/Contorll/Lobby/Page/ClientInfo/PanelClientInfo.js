@@ -308,7 +308,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), PublicModel) : PublicModel).getInstance.convertMD5((_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
               error: Error()
-            }), PublicData) : PublicData).getInstance.gpgApi);
+            }), PublicData) : PublicData).getInstance.gpgApiKey);
             let convert = new URLSearchParams(body).toString();
             await new (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
               error: Error()

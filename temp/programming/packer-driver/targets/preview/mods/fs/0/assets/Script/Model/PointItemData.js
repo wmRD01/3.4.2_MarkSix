@@ -131,6 +131,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         setOpenNumber(numbers) {
+          console.log("\u7576\u671F\u865F\u78BC" + numbers);
           this.drawCode = numbers;
 
           for (var index = 0; index < numbers.length; index++) {
@@ -174,8 +175,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             _class.init(numbers[index]);
 
             this.labelContent.addChild(_class.label.node);
+            console.log(this.drawCode + "," + numbers[index]);
+            console.log(this.drawCode[index].indexOf(numbers[index].toString()));
 
-            if (this.drawCode[index].indexOf(numbers[index].toString()) != -1) {
+            if (this.drawCode.indexOf(numbers[index].toString()) != -1) {
               _class.setEffect(true);
 
               _class.changeEffectColor();

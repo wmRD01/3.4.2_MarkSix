@@ -163,5 +163,9 @@ export namespace RequestGPG {
         Betlog = "/Report/Betlog/Get",
         My_Score = "/Mark6/My_Score",
     }
+    export enum GPGAPIKey {
+        QA = "5gh394D",
+        Online = "4fypra!c!?",
+    }
 }
 

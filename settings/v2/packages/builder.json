@@ -13,6 +13,25 @@
     "displayWatermark": true
   },
   "textureCompressConfig": {
-    "userPreset": {}
+    "userPreset": {
+      "d7wPRcBK9EhbrEXzBVG3HR": {
+        "name": "ASTC6x6_PNG",
+        "options": {
+          "web": {
+            "astc_8x8": "medium",
+            "png": 100
+          }
+        }
+      },
+      "17bDFDRkFCZo140Yv/DBnK": {
+        "name": "ASTC6x6)JPG_RGB",
+        "options": {
+          "web": {
+            "astc_6x6": "medium",
+            "jpg": 80
+          }
+        }
+      }
+    }
   }
 }

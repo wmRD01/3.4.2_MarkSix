@@ -1,6 +1,6 @@
 {
   "cce:/internal/x/cc": {
-    "mTimestamp": 5996.7977000027895,
+    "mTimestamp": 5655.539800003171,
     "chunkId": "quick-pack:/cce/internal/x/cc.js",
     "imports": [
       {
@@ -191,7 +191,7 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 2136746.106100008,
+    "mTimestamp": 2160763.2214999944,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
@@ -5455,7 +5455,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.ts": {
     "mTimestamp": {
-      "mtime": 1693982488248.2751,
+      "mtime": 1693985571755.0034,
       "uuid": "73704463-4c7c-4ce8-b439-666025f44ee6"
     },
     "chunkId": "assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js",
@@ -10325,7 +10325,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicData.ts": {
     "mTimestamp": {
-      "mtime": 1693983680050.9724,
+      "mtime": 1693991180072.9353,
       "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12"
     },
     "chunkId": "assets/Script/Model/PublicData.js",
@@ -13123,7 +13123,7 @@
     ]
   },
   "cce:/internal/ml/cjs-loader.mjs": {
-    "mTimestamp": 1693981545428,
+    "mTimestamp": 1693991291337,
     "chunkId": "quick-pack:/cce/internal/ml/cjs-loader.js",
     "imports": [],
     "modLoMetadata": {
@@ -13132,7 +13132,7 @@
     "resolvedImports": []
   },
   "cce:/internal/code-quality/cr.mjs": {
-    "mTimestamp": 1693981545428,
+    "mTimestamp": 1693991291337,
     "chunkId": "quick-pack:/cce/internal/code-quality/cr.js",
     "imports": [],
     "modLoMetadata": {
@@ -16835,6 +16835,399 @@
       {
         "isExternal": false,
         "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Image/tests/setCompressPNG.mjs?cjs=&original=.js": {
+    "mTimestamp": 1692260071115.1282,
+    "chunkId": "assets/Image/tests/setCompressPNG.proxy.js?cjs&original=.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "./setCompressPNG.js",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 36
+          },
+          "end": {
+            "line": 2,
+            "column": 57
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/ml/cjs-loader.mjs",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 19
+          },
+          "end": {
+            "line": 3,
+            "column": 52
+          }
+        }
+      },
+      {
+        "value": "./setCompressPNG.js",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 14
+          },
+          "end": {
+            "line": 8,
+            "column": 35
+          }
+        }
+      },
+      {
+        "value": "./setCompressPNG.js",
+        "rewritten": "__unresolved_4",
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 29
+          },
+          "end": {
+            "line": 9,
+            "column": 50
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Image/tests/setCompressPNG.js"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/ml/cjs-loader.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Image/tests/setCompressPNG.js"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Image/tests/setCompressPNG.js"
+      }
+    ]
+  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Image/tests/setCompressPNG.js": {
+    "mTimestamp": {
+      "mtime": 1692260071115.1282,
+      "uuid": "6e737428-7526-4a57-9bb1-6dc1cb8b9b4d"
+    },
+    "chunkId": "assets/Image/tests/setCompressPNG.js",
+    "imports": [
+      {
+        "value": "fs"
+      },
+      {
+        "value": "path"
+      },
+      {
+        "value": "cce:/internal/ml/cjs-loader.mjs",
+        "rewritten": "__unresolved_0"
+      }
+    ],
+    "modLoMetadata": {
+      "type": "cjs",
+      "cjs": {
+        "exports": [],
+        "reexports": []
+      }
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "node:fs"
+      },
+      {
+        "isExternal": false,
+        "url": "node:path"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/ml/cjs-loader.mjs"
+      }
+    ]
+  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Plug/setCompressPNG.mjs?cjs=&original=.js": {
+    "mTimestamp": 1693990732789.0564,
+    "chunkId": "assets/Plug/setCompressPNG.proxy.js?cjs&original=.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "./setCompressPNG.js",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 36
+          },
+          "end": {
+            "line": 2,
+            "column": 57
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/ml/cjs-loader.mjs",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 19
+          },
+          "end": {
+            "line": 3,
+            "column": 52
+          }
+        }
+      },
+      {
+        "value": "./setCompressPNG.js",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 14
+          },
+          "end": {
+            "line": 8,
+            "column": 35
+          }
+        }
+      },
+      {
+        "value": "./setCompressPNG.js",
+        "rewritten": "__unresolved_4",
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 29
+          },
+          "end": {
+            "line": 9,
+            "column": 50
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Plug/setCompressPNG.js"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/ml/cjs-loader.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Plug/setCompressPNG.js"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Plug/setCompressPNG.js"
+      }
+    ]
+  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Plug/setCompressPNG.js": {
+    "mTimestamp": {
+      "mtime": 1693990732789.0564,
+      "uuid": "6e737428-7526-4a57-9bb1-6dc1cb8b9b4d"
+    },
+    "chunkId": "assets/Plug/setCompressPNG.js",
+    "imports": [
+      {
+        "value": "fs"
+      },
+      {
+        "value": "path"
+      },
+      {
+        "value": "cce:/internal/ml/cjs-loader.mjs",
+        "rewritten": "__unresolved_0"
+      }
+    ],
+    "modLoMetadata": {
+      "type": "cjs",
+      "cjs": {
+        "exports": [],
+        "reexports": []
+      }
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "node:fs"
+      },
+      {
+        "isExternal": false,
+        "url": "node:path"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/ml/cjs-loader.mjs"
+      }
+    ]
+  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Plug/setCompressPNG/setCompressPNG.mjs?cjs=&original=.js": {
+    "mTimestamp": 1693993028400.186,
+    "chunkId": "assets/Plug/setCompressPNG/setCompressPNG.proxy.js?cjs&original=.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "./setCompressPNG.js",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 36
+          },
+          "end": {
+            "line": 2,
+            "column": 57
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/ml/cjs-loader.mjs",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 19
+          },
+          "end": {
+            "line": 3,
+            "column": 52
+          }
+        }
+      },
+      {
+        "value": "./setCompressPNG.js",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 14
+          },
+          "end": {
+            "line": 8,
+            "column": 35
+          }
+        }
+      },
+      {
+        "value": "./setCompressPNG.js",
+        "rewritten": "__unresolved_4",
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 29
+          },
+          "end": {
+            "line": 9,
+            "column": 50
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Plug/setCompressPNG/setCompressPNG.js"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/ml/cjs-loader.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Plug/setCompressPNG/setCompressPNG.js"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Plug/setCompressPNG/setCompressPNG.js"
+      }
+    ]
+  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Plug/setCompressPNG/setCompressPNG.js": {
+    "mTimestamp": {
+      "mtime": 1693993028400.186,
+      "uuid": "3fa2e074-0259-46cb-a0d4-07c243e734d3"
+    },
+    "chunkId": "assets/Plug/setCompressPNG/setCompressPNG.js",
+    "imports": [
+      {
+        "value": "fs"
+      },
+      {
+        "value": "path"
+      },
+      {
+        "value": "cce:/internal/ml/cjs-loader.mjs",
+        "rewritten": "__unresolved_0"
+      }
+    ],
+    "modLoMetadata": {
+      "type": "cjs",
+      "cjs": {
+        "exports": [],
+        "reexports": []
+      }
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "node:fs"
+      },
+      {
+        "isExternal": false,
+        "url": "node:path"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/ml/cjs-loader.mjs"
       }
     ]
   }

@@ -15,7 +15,8 @@ export default class BallData extends BaseComponent {
     button: Button;
     @property(Sprite)
     spriteBG: Sprite;
-
+    @property(Sprite)
+    shoadow: Sprite;
 
     @property(UIOpacity)
     opacityEffect: UIOpacity;
@@ -24,7 +25,7 @@ export default class BallData extends BaseComponent {
     orgV3: Vec3;
     labelAuto: AutoFollow;
     btnBGAuto: AutoFollow;
-
+    shadowAuto: AutoFollow;
     // onDisable() {
     //     console.log("我消失了?");
     // }
@@ -121,6 +122,10 @@ export default class BallData extends BaseComponent {
     }
     setButtonAuto() {
         this.btnBGAuto = this.button.addComponent(AutoFollow).setTarget(this.node)
+        return this
+    }
+    setShadowAuto() {
+        this.shadowAuto = this.shoadow.addComponent(AutoFollow).createNewTarget()
         return this
     }
 

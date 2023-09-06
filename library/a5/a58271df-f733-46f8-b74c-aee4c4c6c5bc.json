@@ -727,6 +727,9 @@
     "spriteBG": {
       "__id__": 11
     },
+    "shoadow": {
+      "__id__": 5
+    },
     "opacityEffect": {
       "__id__": 21
     },

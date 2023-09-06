@@ -191,7 +191,7 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 1577671.1730000079,
+    "mTimestamp": 2136746.106100008,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
@@ -5093,7 +5093,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/Page/Point/PanelPoint.ts": {
     "mTimestamp": {
-      "mtime": 1693982877317.5066,
+      "mtime": 1693983365688.4534,
       "uuid": "303d6930-d3b3-4ed5-a888-f81a6a4a03cc"
     },
     "chunkId": "assets/Script/Contorll/Lobby/Page/Point/PanelPoint.js",
@@ -9550,7 +9550,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/BallData.ts": {
     "mTimestamp": {
-      "mtime": 1693982857088.8953,
+      "mtime": 1693983465161.1106,
       "uuid": "b170261f-18c0-4c5a-9b77-687b4d2018e8"
     },
     "chunkId": "assets/Script/Model/BallData.js",
@@ -10325,7 +10325,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicData.ts": {
     "mTimestamp": {
-      "mtime": 1693982453058.4521,
+      "mtime": 1693983680050.9724,
       "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12"
     },
     "chunkId": "assets/Script/Model/PublicData.js",
@@ -10929,7 +10929,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PointItemData.ts": {
     "mTimestamp": {
-      "mtime": 1693983120914.7224,
+      "mtime": 1693983508611.8281,
       "uuid": "f131d57a-314f-48b1-af87-1e0cac6d55c0"
     },
     "chunkId": "assets/Script/Model/PointItemData.js",

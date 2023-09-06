@@ -11084,11 +11084,14 @@
     "labelContent": {
       "__id__": 465
     },
-    "outlineContent": {
+    "OutlineContent": {
       "__id__": 467
     },
     "buttonBGContent": {
       "__id__": 463
+    },
+    "shadowContent": {
+      "__id__": 461
     },
     "scrollview": {
       "__id__": 451

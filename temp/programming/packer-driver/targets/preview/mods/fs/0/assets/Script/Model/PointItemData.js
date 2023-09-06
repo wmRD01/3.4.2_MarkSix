@@ -92,6 +92,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "buttonBGContent", void 0);
 
+          _defineProperty(this, "shadowContent", void 0);
+
           _defineProperty(this, "drawCode", []);
 
           _defineProperty(this, "itemSize", void 0);
@@ -117,6 +119,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         setButtonBGContent(_node) {
           this.buttonBGContent = _node;
+          return this;
+        }
+
+        setShadowContent(_node) {
+          this.shadowContent = _node;
           return this;
         }
         /**
@@ -158,10 +165,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), BallData) : BallData);
 
-            _class.init(Number(numbers[index])).setButtonAuto();
+            _class.init(Number(numbers[index])).setButtonAuto().setShadowAuto();
 
             this.labelContent.addChild(_class.label.node);
             this.buttonBGContent.addChild(_class.button.node);
+            this.shadowContent.addChild(_class.shoadow.node);
           }
 
           return this;
@@ -180,10 +188,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), BallData) : BallData);
 
-            _class.init(numbers[index]).setButtonAuto();
+            _class.init(numbers[index]).setShadowAuto().setButtonAuto();
 
             this.labelContent.addChild(_class.label.node);
             this.buttonBGContent.addChild(_class.button.node);
+            this.shadowContent.addChild(_class.shoadow.node);
 
             if (this.drawCode.indexOf(numbers[index].toString()) != -1) {
               _class.setEffect(true);

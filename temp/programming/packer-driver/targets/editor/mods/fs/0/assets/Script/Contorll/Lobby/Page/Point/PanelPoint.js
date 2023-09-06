@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Node, Prefab, ScrollView, Vec3, _decorator, BaseComponent, PointItemData, AssetType, AssetMng, RequestGPG, Player, PublicModel, PanelLoading, PublicData, LobbyStateEvent, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _temp, _crd, ccclass, property, PanelPoint;
+  var _reporterNs, _cclegacy, instantiate, Node, Prefab, ScrollView, Vec3, _decorator, BaseComponent, PointItemData, AssetType, AssetMng, RequestGPG, Player, PublicModel, PanelLoading, PublicData, LobbyStateEvent, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _temp, _crd, ccclass, property, PanelPoint;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -97,7 +97,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator); //TODO 優化如果未選號，自動縮欄位
 
-      _export("default", PanelPoint = (_dec = ccclass('PanelPoint'), _dec2 = property(Prefab), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(Node), _dec7 = property(ScrollView), _dec(_class2 = (_class3 = (_temp = class PanelPoint extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelPoint = (_dec = ccclass('PanelPoint'), _dec2 = property(Prefab), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(Node), _dec7 = property(Node), _dec8 = property(ScrollView), _dec(_class2 = (_class3 = (_temp = class PanelPoint extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {
@@ -109,9 +109,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "labelContent", _descriptor3, this);
 
-          _initializerDefineProperty(this, "outlineContent", _descriptor4, this);
+          _initializerDefineProperty(this, "OutlineContent", _descriptor4, this);
 
           _initializerDefineProperty(this, "buttonBGContent", _descriptor5, this);
+
+          _initializerDefineProperty(this, "shadowContent", _descriptor6, this);
 
           _defineProperty(this, "maxCount", 30);
 
@@ -119,7 +121,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "currentCount", 0);
 
-          _initializerDefineProperty(this, "scrollview", _descriptor6, this);
+          _initializerDefineProperty(this, "scrollview", _descriptor7, this);
 
           _defineProperty(this, "isAsync", void 0);
 
@@ -211,7 +213,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           this.layoutContent.addChild(_node);
 
-          _class.setLabelContent(this.labelContent).setOutlineContent(this.outlineContent).setButtonBGContent(this.buttonBGContent).setDayData(data.openDate, Number(data.issueID)).setOpenNumber(data.drawCode).init();
+          _class.setLabelContent(this.labelContent).setOutlineContent(this.OutlineContent).setButtonBGContent(this.buttonBGContent).setShadowContent(this.shadowContent).setDayData(data.openDate, Number(data.issueID)).setOpenNumber(data.drawCode).init();
 
           return _class;
         } //#endregion
@@ -302,7 +304,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class3.prototype, "outlineContent", [_dec5], {
+      }), _descriptor4 = _applyDecoratedDescriptor(_class3.prototype, "OutlineContent", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,
@@ -312,7 +314,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor6 = _applyDecoratedDescriptor(_class3.prototype, "scrollview", [_dec7], {
+      }), _descriptor6 = _applyDecoratedDescriptor(_class3.prototype, "shadowContent", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor7 = _applyDecoratedDescriptor(_class3.prototype, "scrollview", [_dec8], {
         configurable: true,
         enumerable: true,
         writable: true,

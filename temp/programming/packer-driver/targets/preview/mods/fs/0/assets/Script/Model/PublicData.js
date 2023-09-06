@@ -54,9 +54,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "BaseViewHeight", 1280);
 
-          _defineProperty(this, "gameVersion", "0.3.2_test3");
+          _defineProperty(this, "gameVersion", "0.3.3");
 
-          _defineProperty(this, "onlineVersion", "0.3.2_test3");
+          _defineProperty(this, "onlineVersion", "0.3.3");
 
           _defineProperty(this, "checkLoading", new (_crd && CheckLoading === void 0 ? (_reportPossibleCrUseOfCheckLoading({
             error: Error()

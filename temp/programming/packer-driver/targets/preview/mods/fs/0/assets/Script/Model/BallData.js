@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Color, color, Label, Sprite, Tween, tween, UIOpacity, Vec3, _decorator, AssetType, AssetMng, BaseComponent, AutoFollow, PublicModel, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, BallData, ColorType, SpirteData;
+  var _reporterNs, _cclegacy, Button, Color, color, Label, Sprite, Tween, tween, UIOpacity, Vec3, _decorator, AssetType, AssetMng, BaseComponent, AutoFollow, PublicModel, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, BallData, ColorType, SpirteData;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -67,7 +67,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", BallData = (_dec = ccclass('BallData'), _dec2 = property(Label), _dec3 = property(Button), _dec4 = property(Sprite), _dec5 = property(UIOpacity), _dec(_class = (_class2 = (_temp = class BallData extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", BallData = (_dec = ccclass('BallData'), _dec2 = property(Label), _dec3 = property(Button), _dec4 = property(Sprite), _dec5 = property(Sprite), _dec6 = property(UIOpacity), _dec(_class = (_class2 = (_temp = class BallData extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor() {
@@ -79,7 +79,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "spriteBG", _descriptor3, this);
 
-          _initializerDefineProperty(this, "opacityEffect", _descriptor4, this);
+          _initializerDefineProperty(this, "shoadow", _descriptor4, this);
+
+          _initializerDefineProperty(this, "opacityEffect", _descriptor5, this);
 
           _defineProperty(this, "ballNumber", 0);
 
@@ -90,6 +92,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "labelAuto", void 0);
 
           _defineProperty(this, "btnBGAuto", void 0);
+
+          _defineProperty(this, "shadowAuto", void 0);
         }
 
         // onDisable() {
@@ -195,6 +199,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           return this;
         }
 
+        setShadowAuto() {
+          this.shadowAuto = this.shoadow.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+            error: Error()
+          }), AutoFollow) : AutoFollow).createNewTarget();
+          return this;
+        }
+
         enabledBall(bool) {
           if (bool) {
             this.label.color = Color.BLACK;
@@ -263,7 +274,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "opacityEffect", [_dec5], {
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "shoadow", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "opacityEffect", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,

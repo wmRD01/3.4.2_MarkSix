@@ -1,6 +1,6 @@
 {
   "cce:/internal/x/cc": {
-    "mTimestamp": 6674.557099997997,
+    "mTimestamp": 5996.7977000027895,
     "chunkId": "quick-pack:/cce/internal/x/cc.js",
     "imports": [
       {
@@ -191,7 +191,7 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 883683.2774999887,
+    "mTimestamp": 12903.721100002527,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
@@ -9550,7 +9550,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/BallData.ts": {
     "mTimestamp": {
-      "mtime": 1693561941993.1543,
+      "mtime": 1693981540756.7224,
       "uuid": "b170261f-18c0-4c5a-9b77-687b4d2018e8"
     },
     "chunkId": "assets/Script/Model/BallData.js",
@@ -10325,7 +10325,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicData.ts": {
     "mTimestamp": {
-      "mtime": 1693979399578.3547,
+      "mtime": 1693981540757.722,
       "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12"
     },
     "chunkId": "assets/Script/Model/PublicData.js",
@@ -10929,7 +10929,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PointItemData.ts": {
     "mTimestamp": {
-      "mtime": 1693884873636.035,
+      "mtime": 1693981515973.3015,
       "uuid": "f131d57a-314f-48b1-af87-1e0cac6d55c0"
     },
     "chunkId": "assets/Script/Model/PointItemData.js",
@@ -13123,7 +13123,7 @@
     ]
   },
   "cce:/internal/ml/cjs-loader.mjs": {
-    "mTimestamp": 1693978518138,
+    "mTimestamp": 1693981545428,
     "chunkId": "quick-pack:/cce/internal/ml/cjs-loader.js",
     "imports": [],
     "modLoMetadata": {
@@ -13132,7 +13132,7 @@
     "resolvedImports": []
   },
   "cce:/internal/code-quality/cr.mjs": {
-    "mTimestamp": 1693978518138,
+    "mTimestamp": 1693981545428,
     "chunkId": "quick-pack:/cce/internal/code-quality/cr.js",
     "imports": [],
     "modLoMetadata": {

@@ -1,6 +1,6 @@
 {
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image": {
-    "time": 1692861219736.9934,
+    "time": 1693979571616.8357,
     "uuid": "6e71966d-73ec-46ee-84f1-7fe64bc8e090",
     "missing": false
   },
@@ -32,11 +32,6 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script": {
     "time": 1693546015900.2756,
     "uuid": "13a5b4dc-c7d6-4700-ab89-3731efc2a293",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\ALL_background.png": {
-    "time": 1688542138000,
-    "uuid": "6f7d24c1-80eb-42c0-9ce7-53f1b9fe2f37",
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\ALL_Marquee.png": {
@@ -300,7 +295,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Lobby.scene": {
-    "time": 1693885200181.7954,
+    "time": 1693979402008.816,
     "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
     "missing": false
   },
@@ -805,7 +800,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PublicData.ts": {
-    "time": 1693884921097.1924,
+    "time": 1693979399578.3547,
     "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12",
     "missing": false
   },
@@ -935,7 +930,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby\\Item\\BallItem.prefab": {
-    "time": 1692083137086.9436,
+    "time": 1693979380410.636,
     "uuid": "a58271df-f733-46f8-b74c-aee4c4c6c5bc",
     "missing": false
   },
@@ -1227,9 +1222,6 @@
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\ALL_Marquee.png.meta": {
     "time": 1688547281654.5442
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\ALL_background.png.meta": {
-    "time": 1688547281713.4902
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\confirm_button.png.meta": {
     "time": 1691033717484.3154

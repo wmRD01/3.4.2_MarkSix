@@ -1,6 +1,6 @@
 {
   "cce:/internal/x/cc": {
-    "mTimestamp": 7254.543800000101,
+    "mTimestamp": 6674.557099997997,
     "chunkId": "quick-pack:/cce/internal/x/cc.js",
     "imports": [
       {
@@ -191,7 +191,7 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 3659703.1861000005,
+    "mTimestamp": 883683.2774999887,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
@@ -10325,7 +10325,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicData.ts": {
     "mTimestamp": {
-      "mtime": 1693884921097.1924,
+      "mtime": 1693979399578.3547,
       "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12"
     },
     "chunkId": "assets/Script/Model/PublicData.js",
@@ -13123,7 +13123,7 @@
     ]
   },
   "cce:/internal/ml/cjs-loader.mjs": {
-    "mTimestamp": 1693881262926,
+    "mTimestamp": 1693978518138,
     "chunkId": "quick-pack:/cce/internal/ml/cjs-loader.js",
     "imports": [],
     "modLoMetadata": {
@@ -13132,7 +13132,7 @@
     "resolvedImports": []
   },
   "cce:/internal/code-quality/cr.mjs": {
-    "mTimestamp": 1693881262926,
+    "mTimestamp": 1693978518138,
     "chunkId": "quick-pack:/cce/internal/code-quality/cr.js",
     "imports": [],
     "modLoMetadata": {

@@ -88,6 +88,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "orgV3", void 0);
 
           _defineProperty(this, "labelAuto", void 0);
+
+          _defineProperty(this, "btnBGAuto", void 0);
         }
 
         // onDisable() {
@@ -184,6 +186,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         setLabelAutoScale() {
           this.labelAuto.setAutoScale(true);
+        }
+
+        setButtonAuto() {
+          this.btnBGAuto = this.button.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+            error: Error()
+          }), AutoFollow) : AutoFollow).setTarget(this.node);
+          return this;
         }
 
         enabledBall(bool) {

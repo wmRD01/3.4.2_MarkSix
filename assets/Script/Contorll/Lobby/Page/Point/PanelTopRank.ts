@@ -21,6 +21,7 @@ export default class PanelTopRank extends BaseComponent {
     labelContent: Node;
     @property(Node)
     spriteBGContent: Node;
+
     onLoad() {
         super.onLoad()
         this.reset()

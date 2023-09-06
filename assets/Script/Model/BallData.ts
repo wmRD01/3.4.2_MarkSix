@@ -16,12 +16,15 @@ export default class BallData extends BaseComponent {
     @property(Sprite)
     spriteBG: Sprite;
 
+
     @property(UIOpacity)
     opacityEffect: UIOpacity;
     ballNumber: number = 0;
     type: number = 0;
     orgV3: Vec3;
     labelAuto: AutoFollow;
+    btnBGAuto: AutoFollow;
+
     // onDisable() {
     //     console.log("我消失了?");
     // }
@@ -115,6 +118,10 @@ export default class BallData extends BaseComponent {
     }
     setLabelAutoScale() {
         this.labelAuto.setAutoScale(true)
+    }
+    setButtonAuto() {
+        this.btnBGAuto = this.button.addComponent(AutoFollow).setTarget(this.node)
+        return this
     }
 
     enabledBall(bool: boolean) {

@@ -30,6 +30,7 @@ export default class PointItemData extends BaseComponent {
     specialBallItem: Node
     labelContent: Node
     outlineContent: Node;
+    buttonBGContent: Node;
 
     drawCode: string[] = [];
 
@@ -50,6 +51,11 @@ export default class PointItemData extends BaseComponent {
         this.outlineContent = _node
         return this;
     }
+    setButtonBGContent(_node: Node) {
+        this.buttonBGContent = _node
+        return this;
+    }
+
     /**
      * 
      * @param day 日期 
@@ -75,8 +81,9 @@ export default class PointItemData extends BaseComponent {
             }
             let _class = _node.getComponent(BallData)
             _class.init(Number(numbers[index]))
+                .setButtonAuto()
             this.labelContent.addChild(_class.label.node)
-
+            this.buttonBGContent.addChild(_class.button.node)
         }
         return this
     }
@@ -88,11 +95,9 @@ export default class PointItemData extends BaseComponent {
             this.clientPointLayout.addChild(_node)
             let _class = _node.getComponent(BallData)
             _class.init(numbers[index])
+                .setButtonAuto()
             this.labelContent.addChild(_class.label.node)
-            console.log(`${this.drawCode},${numbers[index]}`);
-
-            console.log(this.drawCode[index].indexOf(numbers[index].toString()));
-
+            this.buttonBGContent.addChild(_class.button.node)
             if (this.drawCode.indexOf(numbers[index].toString()) != -1) {
                 _class.setEffect(true);
                 _class.changeEffectColor();

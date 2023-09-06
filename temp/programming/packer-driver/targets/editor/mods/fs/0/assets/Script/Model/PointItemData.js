@@ -90,6 +90,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "outlineContent", void 0);
 
+          _defineProperty(this, "buttonBGContent", void 0);
+
           _defineProperty(this, "drawCode", []);
 
           _defineProperty(this, "itemSize", void 0);
@@ -110,6 +112,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         setOutlineContent(_node) {
           this.outlineContent = _node;
+          return this;
+        }
+
+        setButtonBGContent(_node) {
+          this.buttonBGContent = _node;
           return this;
         }
         /**
@@ -151,9 +158,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), BallData) : BallData);
 
-            _class.init(Number(numbers[index]));
+            _class.init(Number(numbers[index])).setButtonAuto();
 
             this.labelContent.addChild(_class.label.node);
+            this.buttonBGContent.addChild(_class.button.node);
           }
 
           return this;
@@ -172,11 +180,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), BallData) : BallData);
 
-            _class.init(numbers[index]);
+            _class.init(numbers[index]).setButtonAuto();
 
             this.labelContent.addChild(_class.label.node);
-            console.log(`${this.drawCode},${numbers[index]}`);
-            console.log(this.drawCode[index].indexOf(numbers[index].toString()));
+            this.buttonBGContent.addChild(_class.button.node);
 
             if (this.drawCode.indexOf(numbers[index].toString()) != -1) {
               _class.setEffect(true);

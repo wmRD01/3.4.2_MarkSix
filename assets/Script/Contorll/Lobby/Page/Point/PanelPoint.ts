@@ -22,7 +22,9 @@ export default class PanelPoint extends BaseComponent {
     @property(Node)
     labelContent: Node;
     @property(Node)
-    OutlineContent: Node;
+    outlineContent: Node;
+    @property(Node)
+    buttonBGContent: Node;
     maxCount: number = 30;
     /**一次取得最多頁數 */
     pageCount: number = 10;
@@ -88,7 +90,8 @@ export default class PanelPoint extends BaseComponent {
         this.layoutContent.addChild(_node)
         _class
             .setLabelContent(this.labelContent)
-            .setOutlineContent(this.OutlineContent)
+            .setOutlineContent(this.outlineContent)
+            .setButtonBGContent(this.buttonBGContent)
             .setDayData(data.openDate, Number(data.issueID))
             .setOpenNumber(data.drawCode)
             .init()

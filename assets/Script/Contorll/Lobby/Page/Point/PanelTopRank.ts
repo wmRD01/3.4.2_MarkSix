@@ -20,7 +20,7 @@ export default class PanelTopRank extends BaseComponent {
     @property(Node)
     labelContent: Node;
     @property(Node)
-    spriteBGContent: Node;
+    spriteRankBGContent: Node;
 
     onLoad() {
         super.onLoad()
@@ -39,7 +39,7 @@ export default class PanelTopRank extends BaseComponent {
     async reset() {
         this.layoutRank.removeAllChildren()
         this.labelContent.removeAllChildren()
-        this.spriteBGContent.removeAllChildren()
+        this.spriteRankBGContent.removeAllChildren()
         if (this.node.active) {
             await this.requesTopScore()
         }
@@ -71,13 +71,13 @@ export default class PanelTopRank extends BaseComponent {
             _class.labelName.addComponent(AutoFollow).createNewTarget()
             _class.labelPointCount.addComponent(AutoFollow).createNewTarget()
             _class.labelRank.addComponent(AutoFollow).createNewTarget()
-            // _class.spriteBG.addComponent(AutoFollow)
-            //     .setTarget(_node)
-            // .setAutoScale(false)
+            _class.spriteRank.addComponent(AutoFollow)
+                .createNewTarget()
+                .setAutoScale(false)
             this.labelContent.addChild(_class.labelName.node)
             this.labelContent.addChild(_class.labelPointCount.node)
             this.labelContent.addChild(_class.labelRank.node)
-            // this.spriteBGContent.addChild(_class.spriteBG.node)
+            this.spriteRankBGContent.addChild(_class.spriteRank.node)
             this.layoutRank.addChild(_node)
         }
     }

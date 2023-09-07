@@ -111,7 +111,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "labelContent", _descriptor3, this);
 
-          _initializerDefineProperty(this, "spriteBGContent", _descriptor4, this);
+          _initializerDefineProperty(this, "spriteRankBGContent", _descriptor4, this);
         }
 
         onLoad() {
@@ -147,7 +147,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             _this2.labelContent.removeAllChildren();
 
-            _this2.spriteBGContent.removeAllChildren();
+            _this2.spriteRankBGContent.removeAllChildren();
 
             if (_this2.node.active) {
               yield _this2.requesTopScore();
@@ -221,15 +221,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             _class.labelRank.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
               error: Error()
-            }), AutoFollow) : AutoFollow).createNewTarget(); // _class.spriteBG.addComponent(AutoFollow)
-            //     .setTarget(_node)
-            // .setAutoScale(false)
+            }), AutoFollow) : AutoFollow).createNewTarget();
 
+            _class.spriteRank.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+              error: Error()
+            }), AutoFollow) : AutoFollow).createNewTarget().setAutoScale(false);
 
             this.labelContent.addChild(_class.labelName.node);
             this.labelContent.addChild(_class.labelPointCount.node);
-            this.labelContent.addChild(_class.labelRank.node); // this.spriteBGContent.addChild(_class.spriteBG.node)
-
+            this.labelContent.addChild(_class.labelRank.node);
+            this.spriteRankBGContent.addChild(_class.spriteRank.node);
             this.layoutRank.addChild(_node);
           }
         }
@@ -249,7 +250,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class3.prototype, "spriteBGContent", [_dec5], {
+      }), _descriptor4 = _applyDecoratedDescriptor(_class3.prototype, "spriteRankBGContent", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,

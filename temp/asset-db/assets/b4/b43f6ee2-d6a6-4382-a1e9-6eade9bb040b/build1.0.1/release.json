@@ -89,6 +89,9 @@
         [
             "d2f08z8+GFP0YISvqiICQ0r",
             [
+                "buttonContent",
+                "shadowContent",
+                "effectContent",
                 "labelIssueID",
                 "labelState",
                 "tipBox",
@@ -100,7 +103,7 @@
                 "layoutItem",
                 "ballItem"
             ],
-            -1,
+            -4,
             1,
             4,
             1,
@@ -202,7 +205,10 @@
             7,
             8,
             9,
-            5
+            10,
+            11,
+            12,
+            8
         ]
     ],
     [
@@ -229,6 +235,9 @@
                 ],
                 [
                     10,
+                    null,
+                    null,
+                    null,
                     null,
                     null,
                     null,

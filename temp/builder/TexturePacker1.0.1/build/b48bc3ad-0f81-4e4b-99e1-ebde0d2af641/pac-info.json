@@ -10,7 +10,7 @@
     "59d78327-5d70-4f2c-b557-8696ed9d187a@f9941": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\asset-db\\assets\\59\\59d78327-5d70-4f2c-b557-8696ed9d187a@f9941\\build\\b48bc3ad-0f81-4e4b-99e1-ebde0d2af641"
   },
   "sharpMd5": "8c10c",
-  "md5": "215b4",
+  "md5": "694d8",
   "versionDev": "1.0.2",
   "result": {
     "atlases": [
@@ -30,7 +30,7 @@
             "imageUuid": "59d78327-5d70-4f2c-b557-8696ed9d187a",
             "textureUuid": "59d78327-5d70-4f2c-b557-8696ed9d187a@6c48a",
             "file": "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\banner01.jpg",
-            "libraryPath": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\builder\\TexturePacker1.0.1\\build\\trimImages\\spritesheet_js_59d78327-5d70-4f2c-b557-8696ed9d187a@f9941_image_1.png",
+            "libraryPath": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\builder\\TexturePacker1.0.1\\build\\trimImages\\spritesheet_js_59d78327-5d70-4f2c-b557-8696ed9d187a@f9941_image_2.png",
             "trim": {
               "rotatedWidth": 720,
               "rotatedHeight": 854,
@@ -57,8 +57,8 @@
         "imagePath": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\builder\\TexturePacker1.0.1\\build\\b48bc3ad-0f81-4e4b-99e1-ebde0d2af641\\12d73cd1c.png"
       },
       {
-        "imageUuid": "16955a14c",
-        "textureUuid": "16955a14c@6c48a",
+        "imageUuid": "1fc4b3345",
+        "textureUuid": "1fc4b3345@6c48a",
         "compressed": {
           "imagePathNoExt": "",
           "suffixs": [
@@ -72,7 +72,7 @@
             "imageUuid": "90c2be91-fa06-4461-af6e-d1329b29bd3f",
             "textureUuid": "90c2be91-fa06-4461-af6e-d1329b29bd3f@6c48a",
             "file": "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\img_gift.jpg",
-            "libraryPath": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\builder\\TexturePacker1.0.1\\build\\trimImages\\spritesheet_js_90c2be91-fa06-4461-af6e-d1329b29bd3f@f9941_image_3.png",
+            "libraryPath": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\builder\\TexturePacker1.0.1\\build\\trimImages\\spritesheet_js_90c2be91-fa06-4461-af6e-d1329b29bd3f@f9941_image_4.png",
             "trim": {
               "rotatedWidth": 670,
               "rotatedHeight": 690,
@@ -91,12 +91,38 @@
             "y": 0,
             "rotatedWidth": 676,
             "rotatedHeight": 696
+          },
+          {
+            "name": "user",
+            "uuid": "05952a51-6322-42a9-80db-eab172a40785@f9941",
+            "imageUuid": "05952a51-6322-42a9-80db-eab172a40785",
+            "textureUuid": "05952a51-6322-42a9-80db-eab172a40785@6c48a",
+            "file": "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\user.jpg",
+            "libraryPath": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\builder\\TexturePacker1.0.1\\build\\trimImages\\spritesheet_js_05952a51-6322-42a9-80db-eab172a40785@f9941_image_0.png",
+            "trim": {
+              "rotatedWidth": 300,
+              "rotatedHeight": 300,
+              "x": 3,
+              "y": 699,
+              "width": 300,
+              "height": 300
+            },
+            "rawWidth": 300,
+            "rawHeight": 300,
+            "width": 306,
+            "height": 306,
+            "originalPath": "C:\\CocosProject\\3.4.2_MarkSix\\library\\05\\05952a51-6322-42a9-80db-eab172a40785.jpg",
+            "rotated": false,
+            "x": 0,
+            "y": 696,
+            "rotatedWidth": 306,
+            "rotatedHeight": 306
           }
         ],
         "width": 676,
-        "height": 696,
+        "height": 1002,
         "name": "auto-atlas-1",
-        "imagePath": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\builder\\TexturePacker1.0.1\\build\\b48bc3ad-0f81-4e4b-99e1-ebde0d2af641\\16955a14c.png"
+        "imagePath": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\builder\\TexturePacker1.0.1\\build\\b48bc3ad-0f81-4e4b-99e1-ebde0d2af641\\1fc4b3345.png"
       }
     ],
     "options": {
@@ -140,7 +166,7 @@
         "imageUuid": "398099aa-dd79-4256-9f8c-7b5f24631895",
         "textureUuid": "398099aa-dd79-4256-9f8c-7b5f24631895@6c48a",
         "file": "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\bg_new04.jpg",
-        "libraryPath": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\builder\\TexturePacker1.0.1\\build\\trimImages\\spritesheet_js_398099aa-dd79-4256-9f8c-7b5f24631895@f9941_image_0.png",
+        "libraryPath": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\builder\\TexturePacker1.0.1\\build\\trimImages\\spritesheet_js_398099aa-dd79-4256-9f8c-7b5f24631895@f9941_image_1.png",
         "trim": {
           "rotatedWidth": 1080,
           "rotatedHeight": 1920,
@@ -162,7 +188,7 @@
         "imageUuid": "6ac91a16-d607-4827-94f1-e99a01a46b10",
         "textureUuid": "6ac91a16-d607-4827-94f1-e99a01a46b10@6c48a",
         "file": "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\bg_new02.jpg",
-        "libraryPath": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\builder\\TexturePacker1.0.1\\build\\trimImages\\spritesheet_js_6ac91a16-d607-4827-94f1-e99a01a46b10@f9941_image_2.png",
+        "libraryPath": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\builder\\TexturePacker1.0.1\\build\\trimImages\\spritesheet_js_6ac91a16-d607-4827-94f1-e99a01a46b10@f9941_image_3.png",
         "trim": {
           "rotatedWidth": 1080,
           "rotatedHeight": 1920,
@@ -184,7 +210,7 @@
         "imageUuid": "f585d49c-0a04-4d94-99a7-407b9fdda61d",
         "textureUuid": "f585d49c-0a04-4d94-99a7-407b9fdda61d@6c48a",
         "file": "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\bg_new03.jpg",
-        "libraryPath": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\builder\\TexturePacker1.0.1\\build\\trimImages\\spritesheet_js_f585d49c-0a04-4d94-99a7-407b9fdda61d@f9941_image_4.png",
+        "libraryPath": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\builder\\TexturePacker1.0.1\\build\\trimImages\\spritesheet_js_f585d49c-0a04-4d94-99a7-407b9fdda61d@f9941_image_5.png",
         "trim": {
           "rotatedWidth": 1080,
           "rotatedHeight": 1920,
@@ -198,6 +224,28 @@
         "width": 1086,
         "height": 1926,
         "originalPath": "C:\\CocosProject\\3.4.2_MarkSix\\library\\f5\\f585d49c-0a04-4d94-99a7-407b9fdda61d.jpg",
+        "rotated": false
+      },
+      {
+        "name": "bg_new01",
+        "uuid": "f8426995-a6ed-44e7-8869-e94ab179c9da@f9941",
+        "imageUuid": "f8426995-a6ed-44e7-8869-e94ab179c9da",
+        "textureUuid": "f8426995-a6ed-44e7-8869-e94ab179c9da@6c48a",
+        "file": "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\bg_new01.jpg",
+        "libraryPath": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\builder\\TexturePacker1.0.1\\build\\trimImages\\spritesheet_js_f8426995-a6ed-44e7-8869-e94ab179c9da@f9941_image_6.png",
+        "trim": {
+          "rotatedWidth": 1080,
+          "rotatedHeight": 1920,
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1920
+        },
+        "rawWidth": 1080,
+        "rawHeight": 1920,
+        "width": 1086,
+        "height": 1926,
+        "originalPath": "C:\\CocosProject\\3.4.2_MarkSix\\library\\f8\\f8426995-a6ed-44e7-8869-e94ab179c9da.jpg",
         "rotated": false
       }
     ]

@@ -73,3 +73,28 @@ https://github.com/browserslist/browserslist#browsers-data-updating
 2023-09-07 11:58:08-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
 2023-09-07 11:59:07-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
 2023-09-07 11:59:21-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-09-07 11:59:45-warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+2023-09-07 11:59:46-warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating
+2023-09-07 12:04:11-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-09-07 12:05:15-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-09-07 12:05:23-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'removeAllChildren')
+2023-09-07 12:05:23-error: [Preview]TypeError: Cannot read properties of undefined (reading 'removeAllChildren')
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js:150:40
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js:6:105)
+    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js:8:196)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js:8:366
+    at new Promise (<anonymous>)
+    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js:8:99
+    at PanelTopRank.reset (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js:155:13)
+    at PanelTopRank.onLoad (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js:119:16)
+    at http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:148650:16
+2023-09-07 12:05:33-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-09-07 12:06:09-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-09-07 12:06:27-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-09-07 12:07:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}

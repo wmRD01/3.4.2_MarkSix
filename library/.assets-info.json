@@ -30,7 +30,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script": {
-    "time": 1693546015900.2756,
+    "time": 1694057078869.198,
     "uuid": "13a5b4dc-c7d6-4700-ab89-3731efc2a293",
     "missing": false
   },
@@ -295,7 +295,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Lobby.scene": {
-    "time": 1693993606689.9146,
+    "time": 1694058691681.6008,
     "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
     "missing": false
   },
@@ -750,7 +750,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\BallData.ts": {
-    "time": 1693983465161.1106,
+    "time": 1694058683763.007,
     "uuid": "b170261f-18c0-4c5a-9b77-687b4d2018e8",
     "missing": false
   },
@@ -930,7 +930,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Prefab\\Lobby\\Item\\BallItem.prefab": {
-    "time": 1693983468312.6233,
+    "time": 1694058580001.9685,
     "uuid": "a58271df-f733-46f8-b74c-aee4c4c6c5bc",
     "missing": false
   },
@@ -1145,7 +1145,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Lobby\\Page\\ChooeseBall\\PanelBall.ts": {
-    "time": 1692703334463.2944,
+    "time": 1694058187622.6526,
     "uuid": "d2f08cfc-f861-4fd1-8212-bea888090d2b",
     "missing": false
   },
@@ -2303,22 +2303,6 @@
     "uuid": "fb686581-3508-4219-aef3-1e8f722e6842",
     "missing": false
   },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\BarChart.ts.meta": {
-    "time": 1693546519998.2664
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\LineChart.ts.meta": {
-    "time": 1693546520002.2683
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\BarChart.ts": {
-    "time": 1693547830520.3535,
-    "uuid": "2be127a3-14ef-41a5-ace1-bacd19985ce0",
-    "missing": false
-  },
-  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\LineChart.ts": {
-    "time": 1693547170165.58,
-    "uuid": "31125ecc-c9e4-495a-a3d9-5c1b839d5630",
-    "missing": false
-  },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\tests.meta": {
     "time": 1693991260249.6968
   },
@@ -2397,6 +2381,30 @@
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\auto-atlas.pac": {
     "time": 1693993261458.172,
     "uuid": "b48bc3ad-0f81-4e4b-99e1-ebde0d2af641",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Experiment.meta": {
+    "time": 1694057078888.203
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Experiment\\BarChart.ts.meta": {
+    "time": 1694057078892.2043
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Experiment\\LineChart.ts.meta": {
+    "time": 1694057078895.204
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Experiment": {
+    "time": 1694057078871.1997,
+    "uuid": "d59dda8a-cdc8-4b18-890e-1007f4014eb2",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Experiment\\BarChart.ts": {
+    "time": 1694057079110.2527,
+    "uuid": "057faef1-7c35-4dbe-a2ab-f8e3131ab9dd",
+    "missing": false
+  },
+  "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Experiment\\LineChart.ts": {
+    "time": 1694057073882,
+    "uuid": "c099ad10-9e49-4234-beac-cc4a0c113eef",
     "missing": false
   }
 }

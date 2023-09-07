@@ -94,6 +94,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "btnBGAuto", void 0);
 
           _defineProperty(this, "shadowAuto", void 0);
+
+          _defineProperty(this, "effectAuto", void 0);
         }
 
         // onDisable() {
@@ -168,6 +170,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }).to(1, {
             opacity: 255
           })).start();
+          return this;
         }
 
         cancel() {
@@ -180,12 +183,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.setEffect(false);
           Tween.stopAllByTarget(this.spriteBG.node);
           this.enabledBall(true);
+          return this;
         }
 
         backPosition() {
           Tween.stopAllByTarget(this.spriteBG.node); // console.log(this.node.position);
 
           this.node.position = this.orgV3; // console.log(this.node.position, this.orgV3);
+
+          return this;
         }
 
         setLabelAutoScale() {
@@ -194,6 +200,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         setButtonAuto() {
           this.btnBGAuto = this.button.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+            error: Error()
+          }), AutoFollow) : AutoFollow).setTarget(this.node);
+          return this;
+        }
+
+        setEffectAuto() {
+          this.effectAuto = this.opacityEffect.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
             error: Error()
           }), AutoFollow) : AutoFollow).setTarget(this.node);
           return this;

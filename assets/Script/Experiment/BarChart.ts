@@ -1,5 +1,5 @@
 import { _decorator, Component, Node, PageView, ScrollView, Graphics, Color, log, Label, v3, UITransform } from 'cc';
-import BaseComponent from './Script/Model/ComponentBase';
+import BaseComponent from '../Model/ComponentBase';
 const { ccclass, property } = _decorator;
 @ccclass('BarChart')
 export default class BarChart extends BaseComponent {

@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, instantiate, Label, Layout, Node, Prefab, _decorator, DEV, DelayTime, AssetType, CheckLoadingType, CommandType, LangType, LobbyStateEvent, WebSocketEvent, AssetMng, ButtonMng, BallData, CheckLoading, BaseComponent, SocketSetting, bet, PanelLoading, PanelSystemMessage, Timer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PanelBall;
+  var _reporterNs, _cclegacy, instantiate, Label, Layout, Node, Prefab, _decorator, DEV, DelayTime, AssetType, CheckLoadingType, CommandType, LangType, LobbyStateEvent, WebSocketEvent, AssetMng, ButtonMng, BallData, CheckLoading, BaseComponent, SocketSetting, bet, PanelLoading, PanelSystemMessage, Timer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _temp, _crd, ccclass, property, PanelBall;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -131,7 +131,7 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
         property
       } = _decorator);
 
-      _export("default", PanelBall = (_dec = ccclass('PanelBall'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Prefab), _dec5 = property(Prefab), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Node), _dec9 = property(Node), _dec(_class2 = (_class3 = (_temp = class PanelBall extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelBall = (_dec = ccclass('PanelBall'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(Node), _dec7 = property(Prefab), _dec8 = property(Prefab), _dec9 = property(Label), _dec10 = property(Label), _dec11 = property(Node), _dec12 = property(Node), _dec(_class2 = (_class3 = (_temp = class PanelBall extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {
@@ -141,17 +141,23 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
 
           _initializerDefineProperty(this, "labelContent", _descriptor2, this);
 
-          _initializerDefineProperty(this, "layoutItem", _descriptor3, this);
+          _initializerDefineProperty(this, "buttonContent", _descriptor3, this);
 
-          _initializerDefineProperty(this, "ballItem", _descriptor4, this);
+          _initializerDefineProperty(this, "shadowContent", _descriptor4, this);
 
-          _initializerDefineProperty(this, "labelIssueID", _descriptor5, this);
+          _initializerDefineProperty(this, "effectContent", _descriptor5, this);
 
-          _initializerDefineProperty(this, "labelState", _descriptor6, this);
+          _initializerDefineProperty(this, "layoutItem", _descriptor6, this);
 
-          _initializerDefineProperty(this, "tipBox", _descriptor7, this);
+          _initializerDefineProperty(this, "ballItem", _descriptor7, this);
 
-          _initializerDefineProperty(this, "remide", _descriptor8, this);
+          _initializerDefineProperty(this, "labelIssueID", _descriptor8, this);
+
+          _initializerDefineProperty(this, "labelState", _descriptor9, this);
+
+          _initializerDefineProperty(this, "tipBox", _descriptor10, this);
+
+          _initializerDefineProperty(this, "remide", _descriptor11, this);
 
           _defineProperty(this, "Halign", 10);
 
@@ -215,12 +221,15 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
               this.mapBallNumber.set(count, _class);
               layout.addChild(_node);
 
-              _class.init(count).cancel();
+              _class.init(count).cancel().setButtonAuto().setEffectAuto().setShadowAuto();
 
               (_crd && ButtonMng === void 0 ? (_reportPossibleCrUseOfButtonMng({
                 error: Error()
               }), ButtonMng) : ButtonMng).addEvent(this, "onChooeseBall", _class.button, count.toString());
               this.labelContent.addChild(_class.label.node);
+              this.buttonContent.addChild(_class.button.node);
+              this.shadowContent.addChild(_class.shoadow.node);
+              this.effectContent.addChild(_class.opacityEffect.node);
             }
           }
 
@@ -559,32 +568,47 @@ System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolv
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class3.prototype, "layoutItem", [_dec4], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class3.prototype, "buttonContent", [_dec4], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class3.prototype, "ballItem", [_dec5], {
+      }), _descriptor4 = _applyDecoratedDescriptor(_class3.prototype, "shadowContent", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "labelIssueID", [_dec6], {
+      }), _descriptor5 = _applyDecoratedDescriptor(_class3.prototype, "effectContent", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor6 = _applyDecoratedDescriptor(_class3.prototype, "labelState", [_dec7], {
+      }), _descriptor6 = _applyDecoratedDescriptor(_class3.prototype, "layoutItem", [_dec7], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor7 = _applyDecoratedDescriptor(_class3.prototype, "tipBox", [_dec8], {
+      }), _descriptor7 = _applyDecoratedDescriptor(_class3.prototype, "ballItem", [_dec8], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor8 = _applyDecoratedDescriptor(_class3.prototype, "remide", [_dec9], {
+      }), _descriptor8 = _applyDecoratedDescriptor(_class3.prototype, "labelIssueID", [_dec9], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor9 = _applyDecoratedDescriptor(_class3.prototype, "labelState", [_dec10], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor10 = _applyDecoratedDescriptor(_class3.prototype, "tipBox", [_dec11], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor11 = _applyDecoratedDescriptor(_class3.prototype, "remide", [_dec12], {
         configurable: true,
         enumerable: true,
         writable: true,

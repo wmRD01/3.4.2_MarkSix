@@ -26,6 +26,7 @@ export default class BallData extends BaseComponent {
     labelAuto: AutoFollow;
     btnBGAuto: AutoFollow;
     shadowAuto: AutoFollow;
+    effectAuto: AutoFollow;
     // onDisable() {
     //     console.log("我消失了?");
     // }
@@ -98,6 +99,7 @@ export default class BallData extends BaseComponent {
                 .to(1, { opacity: 0 })
                 .to(1, { opacity: 255 }))
             .start()
+        return this
     }
     cancel() {
         // this.spriteBG.spriteFrame = AssetMng.AssetClass.get(AssetType.Sprite).data.get(SpirteData.空白)
@@ -108,6 +110,7 @@ export default class BallData extends BaseComponent {
         this.setEffect(false)
         Tween.stopAllByTarget(this.spriteBG.node)
         this.enabledBall(true)
+        return this
     }
     backPosition() {
         Tween.stopAllByTarget(this.spriteBG.node)
@@ -115,13 +118,17 @@ export default class BallData extends BaseComponent {
 
         this.node.position = this.orgV3
         // console.log(this.node.position, this.orgV3);
-
+        return this
     }
     setLabelAutoScale() {
         this.labelAuto.setAutoScale(true)
     }
     setButtonAuto() {
         this.btnBGAuto = this.button.addComponent(AutoFollow).setTarget(this.node)
+        return this
+    }
+    setEffectAuto() {
+        this.effectAuto = this.opacityEffect.addComponent(AutoFollow).setTarget(this.node)
         return this
     }
     setShadowAuto() {

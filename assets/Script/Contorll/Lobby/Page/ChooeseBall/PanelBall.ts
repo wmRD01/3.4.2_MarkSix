@@ -24,6 +24,12 @@ export default class PanelBall extends BaseComponent {
     HorLayout: Node;
     @property(Node)
     labelContent: Node;
+    @property(Node)
+    buttonContent: Node;
+    @property(Node)
+    shadowContent: Node;
+    @property(Node)
+    effectContent: Node;
     @property(Prefab)
     layoutItem: Prefab;
     @property(Prefab)
@@ -36,6 +42,8 @@ export default class PanelBall extends BaseComponent {
     tipBox: Node
     @property(Node)
     remide: Node
+
+
 
     Halign: number = 10;
     Valign: number = 5;
@@ -75,9 +83,16 @@ export default class PanelBall extends BaseComponent {
                 let _class = _node.getComponent(BallData)
                 this.mapBallNumber.set(count, _class)
                 layout.addChild(_node)
-                _class.init(count).cancel()
+                _class.init(count)
+                    .cancel()
+                    .setButtonAuto()
+                    .setEffectAuto()
+                    .setShadowAuto();
                 ButtonMng.addEvent(this, "onChooeseBall", _class.button, count.toString())
                 this.labelContent.addChild(_class.label.node)
+                this.buttonContent.addChild(_class.button.node)
+                this.shadowContent.addChild(_class.shoadow.node)
+                this.effectContent.addChild(_class.opacityEffect.node)
             }
 
         }

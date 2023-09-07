@@ -217,11 +217,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             _class.labelPointCount.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
               error: Error()
-            }), AutoFollow) : AutoFollow).createNewTarget(); // _class.spriteBG.addComponent(AutoFollow).setTarget(_node)
+            }), AutoFollow) : AutoFollow).createNewTarget();
+
+            _class.labelRank.addComponent(_crd && AutoFollow === void 0 ? (_reportPossibleCrUseOfAutoFollow({
+              error: Error()
+            }), AutoFollow) : AutoFollow).createNewTarget(); // _class.spriteBG.addComponent(AutoFollow)
+            //     .setTarget(_node)
+            // .setAutoScale(false)
 
 
             this.labelContent.addChild(_class.labelName.node);
-            this.labelContent.addChild(_class.labelPointCount.node); // this.spriteBGContent.addChild(_class.spriteBG.node)
+            this.labelContent.addChild(_class.labelPointCount.node);
+            this.labelContent.addChild(_class.labelRank.node); // this.spriteBGContent.addChild(_class.spriteBG.node)
 
             this.layoutRank.addChild(_node);
           }

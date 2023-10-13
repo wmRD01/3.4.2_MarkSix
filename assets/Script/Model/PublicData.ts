@@ -6,8 +6,8 @@ export default class PublicData extends BaseSingleton<PublicData>() {
     arr_ComponentBaseClass: Array<ComponentBase> = new Array
     BaseViewWidth: number = 720;
     BaseViewHeight: number = 1280;
-    gameVersion: string = "0.3.5";
-    onlineVersion: string = "0.3.5";
+    gameVersion: string = "0.3.7_test1";
+    onlineVersion: string = "0.3.7_test1";
     checkLoading = new CheckLoading();
     /**畫面重製 */
     isResetView: boolean;

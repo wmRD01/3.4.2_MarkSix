@@ -1,100 +1,71 @@
-2023-09-07 11:52:12-log: [Package] menu@1.0.0 enable
-2023-09-07 11:52:12-log: [Package] profile@1.0.0 enable
-2023-09-07 11:52:12-log: [Package] project@1.0.1 enable
-2023-09-07 11:52:12-log: [Package] messages@1.0.0 enable
-2023-09-07 11:52:12-log: [Package] program@1.0.0 enable
-2023-09-07 11:52:12-log: [Package] device@1.0.1 enable
-2023-09-07 11:52:12-log: [Package] ui-kit@1.0.1 enable
-2023-09-07 11:52:12-log: [Package] tester@1.0.0 enable
-2023-09-07 11:52:12-log: [Package] preferences@1.0.0 enable
-2023-09-07 11:52:13-log: Setup mods mgr.: 570.593ms
-2023-09-07 11:52:13-log: Profile changed: engine (modules.includeModules: audio,base,gfx-webgl,intersection-2d,physics-2d-box2d,profiler,tween,ui)
-2023-09-07 11:52:13-log: [Package] engine@1.0.5 enable
-2023-09-07 11:52:15-log: [Package] programming@1.0.0 enable
-2023-09-07 11:52:15-log: [Package] engine-extends@1.0.0 enable
-2023-09-07 11:52:16-log: [Package] asset-db@1.0.0 enable
-2023-09-07 11:52:16-log: [Package] console@1.0.0 enable
-2023-09-07 11:52:16-log: [Package] scene@1.0.0 enable
-2023-09-07 11:52:16-log: [Package] about@1.0.0 enable
-2023-09-07 11:52:16-log: [Package] server@1.0.0 enable
-2023-09-07 11:52:16-log: [Package] assets@1.0.0 enable
-2023-09-07 11:52:16-log: [Package] inspector@1.0.0 enable
-2023-09-07 11:52:16-log: [Package] hierarchy@1.0.0 enable
-2023-09-07 11:52:18-log: [Package] preview@1.0.1 enable
-2023-09-07 11:52:18-log: [Package] animator@1.0.0 enable
-2023-09-07 11:52:19-log: [Package] builder@1.3.1 enable
-2023-09-07 11:52:19-log: [Package] node-library@1.0.0 enable
-2023-09-07 11:52:19-log: [Package] shortcuts@1.0.1 enable
-2023-09-07 11:52:19-log: [Package] package-asset@1.0.0 enable
-2023-09-07 11:52:19-log: [Package] reference-image@1.0.0 enable
-2023-09-07 11:52:19-log: [Package] animation-graph@1.0.0 enable
-2023-09-07 11:52:19-log: [Package] channel-upload-tools@1.0.0 enable
-2023-09-07 11:52:19-log: [Package] runtime-dev-tools@1.0.0 enable
-2023-09-07 11:52:19-log: [Package] lightmap@1.0.4 enable
-2023-09-07 11:52:19-log: [Package] alipay-mini-game@1.0.0 enable
-2023-09-07 11:52:19-log: [Package] android@1.0.0 enable
-2023-09-07 11:52:19-log: [Package] baidu-mini-game@1.0.0 enable
-2023-09-07 11:52:19-log: [Package] bytedance-mini-game@1.0.1 enable
-2023-09-07 11:52:19-log: [Package] huawei-agc@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] ios@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] ios-app-clip@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] mac@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] native@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] ohos@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] web-desktop@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] web-mobile@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] wechatgame@1.0.1 enable
-2023-09-07 11:52:20-log: [Package] windows@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] xiaomi-quick-game@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] cocos-play@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] huawei-quick-game@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] link-sure@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] oppo-mini-game@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] qtt@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] vivo-mini-game@1.0.0 enable
-2023-09-07 11:52:20-log: [Package] cocos-service@3.0.2 enable
-2023-09-07 11:52:20-log: [Package] importer@1.0.0 enable
-2023-09-07 11:52:21-log: [Package] extension@3.0.15 enable
-2023-09-07 11:52:26-log: [Im-plugin] Check im-plugin version.
-2023-09-07 11:52:26-log: [Package] im-plugin@3.0.10 enable
-2023-09-07 11:52:26-log: [Im-plugin] Im-plugin online version is 3.0.10.
-2023-09-07 11:52:26-log: [Im-plugin] Im-plugin local version is 3.0.10.
-2023-09-07 11:52:26-log: [Im-plugin] Im-plugin need not update.
-2023-09-07 11:52:31-warn: Browserslist: caniuse-lite is outdated. Please run:
+2023-09-11 17:35:01-log: [Package] menu@1.0.0 enable
+2023-09-11 17:35:01-log: [Package] profile@1.0.0 enable
+2023-09-11 17:35:01-log: [Package] project@1.0.1 enable
+2023-09-11 17:35:01-log: [Package] messages@1.0.0 enable
+2023-09-11 17:35:01-log: [Package] program@1.0.0 enable
+2023-09-11 17:35:01-log: [Package] device@1.0.1 enable
+2023-09-11 17:35:01-log: [Package] ui-kit@1.0.1 enable
+2023-09-11 17:35:01-log: [Package] tester@1.0.0 enable
+2023-09-11 17:35:01-log: [Package] preferences@1.0.0 enable
+2023-09-11 17:35:02-log: Setup mods mgr.: 256.952ms
+2023-09-11 17:35:02-log: Profile changed: engine (modules.includeModules: audio,base,gfx-webgl,intersection-2d,physics-2d-box2d,profiler,tween,ui)
+2023-09-11 17:35:02-log: [Package] engine@1.0.5 enable
+2023-09-11 17:35:04-log: [Package] programming@1.0.0 enable
+2023-09-11 17:35:04-log: [Package] engine-extends@1.0.0 enable
+2023-09-11 17:35:04-log: [Package] asset-db@1.0.0 enable
+2023-09-11 17:35:04-log: [Package] console@1.0.0 enable
+2023-09-11 17:35:04-log: [Package] scene@1.0.0 enable
+2023-09-11 17:35:04-log: [Package] about@1.0.0 enable
+2023-09-11 17:35:05-log: [Package] server@1.0.0 enable
+2023-09-11 17:35:05-log: [Package] utils@1.0.0 enable
+2023-09-11 17:35:05-log: [Package] assets@1.0.0 enable
+2023-09-11 17:35:05-log: [Package] inspector@1.0.0 enable
+2023-09-11 17:35:05-log: [Package] hierarchy@1.0.0 enable
+2023-09-11 17:35:06-log: [Package] preview@1.0.1 enable
+2023-09-11 17:35:06-log: [Package] animator@1.0.0 enable
+2023-09-11 17:35:07-log: [Package] builder@1.3.1 enable
+2023-09-11 17:35:07-log: [Package] node-library@1.0.0 enable
+2023-09-11 17:35:07-log: [Package] shortcuts@1.0.1 enable
+2023-09-11 17:35:07-log: [Package] package-asset@1.0.0 enable
+2023-09-11 17:35:07-log: [Package] reference-image@1.0.0 enable
+2023-09-11 17:35:07-log: [Package] animation-graph@1.0.0 enable
+2023-09-11 17:35:07-log: [Package] channel-upload-tools@1.0.0 enable
+2023-09-11 17:35:07-log: [Package] runtime-dev-tools@1.0.0 enable
+2023-09-11 17:35:07-log: [Package] lightmap@1.0.4 enable
+2023-09-11 17:35:07-log: [Package] alipay-mini-game@1.0.0 enable
+2023-09-11 17:35:07-log: [Package] android@1.0.0 enable
+2023-09-11 17:35:07-log: [Package] baidu-mini-game@1.0.0 enable
+2023-09-11 17:35:07-log: [Package] bytedance-mini-game@1.0.1 enable
+2023-09-11 17:35:07-log: [Package] huawei-agc@1.0.0 enable
+2023-09-11 17:35:07-log: [Package] ios@1.0.0 enable
+2023-09-11 17:35:07-log: [Package] ios-app-clip@1.0.0 enable
+2023-09-11 17:35:07-log: [Package] mac@1.0.0 enable
+2023-09-11 17:35:08-log: [Package] native@1.0.0 enable
+2023-09-11 17:35:08-log: [Package] ohos@1.0.0 enable
+2023-09-11 17:35:08-log: [Package] web-desktop@1.0.0 enable
+2023-09-11 17:35:08-log: [Package] web-mobile@1.0.0 enable
+2023-09-11 17:35:08-log: [Package] wechatgame@1.0.1 enable
+2023-09-11 17:35:08-log: [Package] windows@1.0.0 enable
+2023-09-11 17:35:08-log: [Package] xiaomi-quick-game@1.0.0 enable
+2023-09-11 17:35:08-log: [Package] cocos-play@1.0.0 enable
+2023-09-11 17:35:08-log: [Package] huawei-quick-game@1.0.0 enable
+2023-09-11 17:35:08-log: [Package] link-sure@1.0.0 enable
+2023-09-11 17:35:08-log: [Package] oppo-mini-game@1.0.0 enable
+2023-09-11 17:35:08-log: [Package] qtt@1.0.0 enable
+2023-09-11 17:35:08-log: [Package] vivo-mini-game@1.0.0 enable
+2023-09-11 17:35:08-log: [Package] cocos-service@3.0.2 enable
+2023-09-11 17:35:08-log: [Package] importer@1.0.0 enable
+2023-09-11 17:35:08-log: [Package] extension@3.0.15 enable
+2023-09-11 17:35:09-log: [Im-plugin] Check im-plugin version.
+2023-09-11 17:35:09-log: [Package] im-plugin@3.0.10 enable
+2023-09-11 17:35:10-log: [Im-plugin] Im-plugin online version is 3.0.10.
+2023-09-11 17:35:10-log: [Im-plugin] Im-plugin local version is 3.0.10.
+2023-09-11 17:35:10-log: [Im-plugin] Im-plugin need not update.
+2023-09-11 17:35:11-warn: Browserslist: caniuse-lite is outdated. Please run:
 npx browserslist@latest --update-db
 
 Why you should do it regularly:
 https://github.com/browserslist/browserslist#browsers-data-updating
-2023-09-07 11:52:31-log: [Scene] Cocos Creator v3.4.2
-2023-09-07 11:52:34-info: [Scene] Forward render pipeline initialized.
-2023-09-07 11:52:42-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-09-07 11:52:48-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-09-07 11:56:30-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-09-07 11:58:08-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-09-07 11:59:07-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-09-07 11:59:21-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-09-07 11:59:45-warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
-npx browserslist@latest --update-db
-2023-09-07 11:59:46-warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
-npx browserslist@latest --update-db
-
-Why you should do it regularly:
-https://github.com/browserslist/browserslist#browsers-data-updating
-2023-09-07 12:04:11-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-09-07 12:05:15-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-09-07 12:05:23-error: [Preview]unhandledrejection: Cannot read properties of undefined (reading 'removeAllChildren')
-2023-09-07 12:05:23-error: [Preview]TypeError: Cannot read properties of undefined (reading 'removeAllChildren')
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js:150:40
-    at Generator.next (<anonymous>)
-    at asyncGeneratorStep (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js:6:105)
-    at _next (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js:8:196)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js:8:366
-    at new Promise (<anonymous>)
-    at http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js:8:99
-    at PanelTopRank.reset (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js:155:13)
-    at PanelTopRank.onLoad (http://localhost:7456/scripting/x/mods/fs/0/assets/Script/Contorll/Lobby/Page/Point/PanelTopRank.js:119:16)
-    at http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:148650:16
-2023-09-07 12:05:33-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-09-07 12:06:09-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-09-07 12:06:27-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
-2023-09-07 12:07:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-09-11 17:35:11-log: [Scene] Cocos Creator v3.4.2
+2023-09-11 17:35:12-log: Use preview template {link(C:\CocosProject\3.4.2_MarkSix\preview-template\index.ejs)}
+2023-09-11 17:35:14-info: [Scene] Forward render pipeline initialized.

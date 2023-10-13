@@ -20,6 +20,18 @@
           "web": {
             "astc_8x8": "medium",
             "png": 100
+          },
+          "ios": {
+            "astc_8x8": "medium",
+            "png": 100
+          },
+          "android": {
+            "astc_8x8": "medium",
+            "png": 100
+          },
+          "miniGame": {
+            "etc1_rgb_a": "fast",
+            "png": 100
           }
         }
       },
@@ -27,6 +39,18 @@
         "name": "ASTC6x6)JPG_RGB",
         "options": {
           "web": {
+            "astc_6x6": "medium",
+            "jpg": 80
+          },
+          "ios": {
+            "astc_6x6": "medium",
+            "jpg": 80
+          },
+          "miniGame": {
+            "etc1_rgb_a": "fast",
+            "jpg": 80
+          },
+          "android": {
             "astc_6x6": "medium",
             "jpg": 80
           }

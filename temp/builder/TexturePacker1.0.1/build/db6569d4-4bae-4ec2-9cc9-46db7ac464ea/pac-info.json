@@ -1,8 +1,8 @@
 {
   "cacheFiles": {
     "db6569d4-4bae-4ec2-9cc9-46db7ac464ea": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\asset-db\\assets\\db\\db6569d4-4bae-4ec2-9cc9-46db7ac464ea\\build\\db6569d4-4bae-4ec2-9cc9-46db7ac464ea",
-    "b8983ec7-8c61-4ac5-a066-f0d29e30ba31@f9941": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\asset-db\\assets\\b8\\b8983ec7-8c61-4ac5-a066-f0d29e30ba31@f9941\\build\\db6569d4-4bae-4ec2-9cc9-46db7ac464ea",
     "755640a0-8e45-4610-b40c-3fe69f5b791a@f9941": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\asset-db\\assets\\75\\755640a0-8e45-4610-b40c-3fe69f5b791a@f9941\\build\\db6569d4-4bae-4ec2-9cc9-46db7ac464ea",
+    "b8983ec7-8c61-4ac5-a066-f0d29e30ba31@f9941": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\asset-db\\assets\\b8\\b8983ec7-8c61-4ac5-a066-f0d29e30ba31@f9941\\build\\db6569d4-4bae-4ec2-9cc9-46db7ac464ea",
     "fc681d2f-45a3-40ae-8a45-dad7c94928f0@f9941": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\asset-db\\assets\\fc\\fc681d2f-45a3-40ae-8a45-dad7c94928f0@f9941\\build\\db6569d4-4bae-4ec2-9cc9-46db7ac464ea",
     "18883870-75ba-454f-918b-eea8f5531445@f9941": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\asset-db\\assets\\18\\18883870-75ba-454f-918b-eea8f5531445@f9941\\build\\db6569d4-4bae-4ec2-9cc9-46db7ac464ea",
     "ee30a148-3d6f-42e8-98f4-63fb02467490@f9941": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\asset-db\\assets\\ee\\ee30a148-3d6f-42e8-98f4-63fb02467490@f9941\\build\\db6569d4-4bae-4ec2-9cc9-46db7ac464ea",
@@ -28,7 +28,7 @@
     "fe76553f-ad78-4df4-ab28-e471666c5111@f9941": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\asset-db\\assets\\fe\\fe76553f-ad78-4df4-ab28-e471666c5111@f9941\\build\\db6569d4-4bae-4ec2-9cc9-46db7ac464ea"
   },
   "sharpMd5": "8c10c",
-  "md5": "ee0e0",
+  "md5": "6e449",
   "versionDev": "1.0.2",
   "result": {
     "atlases": [

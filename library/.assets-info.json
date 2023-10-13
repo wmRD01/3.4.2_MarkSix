@@ -295,7 +295,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Lobby.scene": {
-    "time": 1694059633120.4246,
+    "time": 1694079154824.6018,
     "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
     "missing": false
   },
@@ -695,7 +695,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\WebSocketEvent.ts": {
-    "time": 1691041711513.6294,
+    "time": 1694397379439.1765,
     "uuid": "e3ef0b99-c451-47cb-ba30-0f4f30406cb1",
     "missing": false
   },
@@ -800,7 +800,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Model\\PublicData.ts": {
-    "time": 1694058726864.4624,
+    "time": 1694079146846.5537,
     "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12",
     "missing": false
   },
@@ -1221,103 +1221,103 @@
     "time": 1684221489176.64
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\ALL_Marquee.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077345397.4148
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\confirm_button.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366093.4182
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\cancel_button.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366084.4153
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\ALL_TAG.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077345407.4175
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\default_sprite_splash.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366114.4226
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\default_ecircle.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366105.4197
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\integral_personal score color ball column.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366197.12
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\LANDING_background.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366219.1245
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\integral_page.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366186.1174
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\LANDING_LOGO.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366230.127
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\login_button.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366250.1316
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Login_background.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366239.1292
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\login_facebook.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366261.135
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Login_logo.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366281.1387
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Login_whatsapp.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366294.1416
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Login_Input box.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366271.1367
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Login_Twitter.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366292.141
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Personal_Button.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366347.153
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Personal_EMAIL.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366358.156
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Personal_IPHONE.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366368.1582
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Personal_Background.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366337.151
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Personal_MAP.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366378.1604
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Pick_Button00.png.meta": {
-    "time": 1693993054965.2842
+    "time": 1694077366410.168
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\pick_choose.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366431.1724
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Pick_Button01.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366421.1697
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\photo_button.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366389.1628
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\pick_background.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366400.1653
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Set up_hyperlink.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366453.1772
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Set up_facebook.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366442.175
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Set up_Instagram.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366463.1792
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Set up_Music.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366473.1824
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Patten\\Singleton.meta": {
     "time": 1684221488887.8958
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Set up_official website.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366491.1855
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Patten\\StatePatten.ts.meta": {
     "time": 1684221488889.8962
@@ -1365,7 +1365,7 @@
     "time": 1687144713910.1328
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Set up_Push broadcast.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366503.1887
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\Loading.scene.meta": {
     "time": 1684221488935.1228
@@ -1374,7 +1374,7 @@
     "time": 1684221489127.6794
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\Set up_sound effect.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366512.1904
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Scene\\GameRoom.scene.meta": {
     "time": 1687144713916.1345
@@ -1437,58 +1437,58 @@
     "time": 1687938263681.1074
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\auto-atlas.pac.meta": {
-    "time": 1693993289528.23
+    "time": 1694077388760.3499
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\icon_bet_act.png.meta": {
-    "time": 1693993069424.9226
+    "time": 1694077396090.5703
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\icon_bet.png.meta": {
-    "time": 1693993069424.9226
+    "time": 1694077396081.568
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\Challenge_BlueBall.png.meta": {
-    "time": 1693993069424.9226
+    "time": 1694077396054.562
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\Challenge_GreenBall.png.meta": {
-    "time": 1693993069424.9226
+    "time": 1694077396063.5642
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\Challenge_RedBall.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396072.5662
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\icon_home_act.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396107.574
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\icon_home.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396099.573
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\icon_rank.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396116.576
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\icon_setting.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396133.5796
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\icon_rank_act.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396125.578
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\icon_setting_act.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396142.5823
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\icon_user.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396151.584
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\icon_user_act.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396160.5857
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\integral_2.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396184.5913
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\integral_1.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396168.5874
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\integral_3.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396194.5942
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\integral_common.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396221.5996
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Asset\\BundleAsset.ts.meta": {
     "time": 1687144713921.135
@@ -1503,7 +1503,7 @@
     "time": 1684221488940.1228
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\Setup_button00.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396240.6038
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Contorll\\Api.meta": {
     "time": 1684221488982.1328
@@ -1587,7 +1587,7 @@
     "time": 1688700732362.1318
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\points_box.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396230.6018
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\MessageCommend.ts.meta": {
     "time": 1687144714084.1719
@@ -1605,7 +1605,7 @@
     "time": 1687144714087.1733
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\Setup_button01.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396249.6057
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Script\\Enum\\ServerGameSenceType.ts.meta": {
     "time": 1687144714095.1748
@@ -1936,7 +1936,7 @@
     "time": 1689730371170.2625
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\auto-atlas.pac.meta": {
-    "time": 1693993276632.3108
+    "time": 1694077358868.833
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\auto-atlas.pac": {
     "time": 1689907369489.1697,
@@ -1944,7 +1944,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\integral_ranking.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366208.1226
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\integral_ranking.png": {
     "time": 1688542140000,
@@ -2032,7 +2032,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\eff_shadow.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366155.1094
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\eff_shadow.png": {
     "time": 1691460578624.937,
@@ -2040,46 +2040,46 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\btn_user_03.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366075.413
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\eff_selectball.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366144.4287
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\index_add.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366175.1152
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\mask_ava.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366305.1438
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\tipboxbg_01.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366523.1929
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\title_bg_new01.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366534.1953
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\box_bg_sliced01.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077365976.3916
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\box_img01.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077365984.3933
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\box_img02.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077365993.395
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\btn_input_01.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077366021.4016
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\box_img03.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077366003.3967
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\btn_new_continue.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077366038.4048
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\btn_user_01.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077366056.4087
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\btn_user_02.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077366065.411
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\btn_user_03.png": {
     "time": 1691561780447.34,
@@ -2152,7 +2152,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\bg_img01mq_icon.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077365949.3845
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\bg_img01mq_icon.png": {
     "time": 1688539614211.79,
@@ -2160,7 +2160,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\bg_radius26.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077365958.3872
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\bg_radius26.png": {
     "time": 1688541135541.6323,
@@ -2168,7 +2168,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\bg_img01.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077365936.382
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\bg_img01.png": {
     "time": 1688514856000,
@@ -2176,7 +2176,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\btn_more01.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077366030.403
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\btn_more01.png": {
     "time": 1688538764733.199,
@@ -2184,7 +2184,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\btn_radius22.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366047.407
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\btn_radius22.png": {
     "time": 1688543394610.3108,
@@ -2192,7 +2192,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\btn_howtoplay.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077366012.3987
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\btn_howtoplay.png": {
     "time": 1688544617526.8652,
@@ -2200,7 +2200,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\bg_v_repeat.png.meta": {
-    "time": 1693993054963.2832
+    "time": 1694077365967.3894
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\bg_v_repeat.png": {
     "time": 1688514856000,
@@ -2208,7 +2208,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\eff_img02.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366133.4272
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\eff_img02.png": {
     "time": 1688542842395.3845,
@@ -2216,7 +2216,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\eff_img01.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366124.4236
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\eff_img01.png": {
     "time": 1688540501995.8289,
@@ -2224,7 +2224,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\menu_bg.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366315.1462
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\menu_bg.png": {
     "time": 1688527804802.6533,
@@ -2232,7 +2232,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\menu_select.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366326.1492
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\menu_select.png": {
     "time": 1688528519465.2012,
@@ -2240,7 +2240,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\icon_gameinfo.png.meta": {
-    "time": 1693993054964.284
+    "time": 1694077366165.1125
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\icon_gameinfo.png": {
     "time": 1691635299852.2344,
@@ -2248,7 +2248,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\integral_button00.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396202.5957
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\integral_button00.png": {
     "time": 1691560446845.7969,
@@ -2256,7 +2256,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\integral_button01.png.meta": {
-    "time": 1693993069425.9246
+    "time": 1694077396211.5974
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\integral_button01.png": {
     "time": 1691560426183.341,
@@ -2264,7 +2264,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\btn_new01.png.meta": {
-    "time": 1693993069424.9226
+    "time": 1694077396022.5554
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\btn_new01.png": {
     "time": 1691489537638.917,
@@ -2272,7 +2272,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\btn_new02.png.meta": {
-    "time": 1693993069424.9226
+    "time": 1694077396035.5579
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\btn_new02.png": {
     "time": 1691489564740.3293,
@@ -2280,7 +2280,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\btn_new03.png.meta": {
-    "time": 1693993069424.9226
+    "time": 1694077396046.56
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\resources\\Sprite\\btn_new03.png": {
     "time": 1691489588315.4407,
@@ -2320,25 +2320,25 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\banner01.jpg.meta": {
-    "time": 1693993134528.9402
+    "time": 1694077335881.2476
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\bg_new01.jpg.meta": {
-    "time": 1693993134565.9502
+    "time": 1694077335891.2502
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\bg_new02.jpg.meta": {
-    "time": 1693993134560.9463
+    "time": 1694077335902.253
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\bg_new03.jpg.meta": {
-    "time": 1693993134556.947
+    "time": 1694077335911.2544
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\bg_new04.jpg.meta": {
-    "time": 1693993134568.9485
+    "time": 1694077335920.2566
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\img_gift.jpg.meta": {
-    "time": 1693993203078.9287
+    "time": 1694077335928.2588
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\user.jpg.meta": {
-    "time": 1693993203059.923
+    "time": 1694077335937.261
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\bg_new01.jpg": {
     "time": 1691531950000,
@@ -2376,7 +2376,7 @@
     "missing": false
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\auto-atlas.pac.meta": {
-    "time": 1693993267148.0332
+    "time": 1694077217043.4646
   },
   "C:\\CocosProject\\3.4.2_MarkSix\\assets\\Image\\JPG\\auto-atlas.pac": {
     "time": 1693993261458.172,

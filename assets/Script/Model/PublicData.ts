@@ -1,13 +1,14 @@
 import BaseSingleton from "../../Patten/Singleton/BaseSingleton";
 import { RequestGPG } from "../Contorll/Api/GPGAPI/RequestGPG";
+import { MarkSix } from "../Contorll/Api/MarkSix";
 import { GameSceneName } from "../Enum/GameSenceName";
 import CheckLoading from "./CheckLoading";
 export default class PublicData extends BaseSingleton<PublicData>() {
     arr_ComponentBaseClass: Array<ComponentBase> = new Array
     BaseViewWidth: number = 720;
     BaseViewHeight: number = 1280;
-    gameVersion: string = "0.3.7_test1";
-    onlineVersion: string = "0.3.7_test1";
+    gameVersion: string = "0.4.2";
+    onlineVersion: string = "0.4.2";
     checkLoading = new CheckLoading();
     /**畫面重製 */
     isResetView: boolean;
@@ -29,6 +30,7 @@ export default class PublicData extends BaseSingleton<PublicData>() {
 
     gpgUrlPlayApi = RequestGPG.APIUrl.QA_playAPI;
     gpgUrlids = RequestGPG.APIUrl.QA_ids;
+    markSixMsg: MarkSix = new MarkSix();
 
 
     isChageOnline() {

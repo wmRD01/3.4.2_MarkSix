@@ -65,7 +65,7 @@
     "9ed0e3a7-ee6c-404c-86fa-dc8abaaebc30@f9941": "C:\\CocosProject\\3.4.2_MarkSix\\temp\\asset-db\\assets\\9e\\9ed0e3a7-ee6c-404c-86fa-dc8abaaebc30@f9941\\build\\e0950175-c768-4eea-92fa-5313587b481d"
   },
   "sharpMd5": "8c10c",
-  "md5": "a87c2",
+  "md5": "1ffbc",
   "versionDev": "1.0.2",
   "result": {
     "atlases": [
@@ -1638,7 +1638,7 @@
       "removeSpriteAtlasInBundle": true,
       "compressSettings": {
         "useCompressTexture": false,
-        "presetId": "d7wPRcBK9EhbrEXzBVG3HR"
+        "presetId": "default"
       },
       "textureSetting": {
         "wrapModeS": "repeat",

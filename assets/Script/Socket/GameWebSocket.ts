@@ -1,21 +1,20 @@
-import { game, log, sys, _decorator } from "cc";
+import { log, sys, _decorator } from "cc";
+import DelayTime from '../../Plug/DelayTime';
 import { ln, URLVlaue } from "../Contorll/Api/SendCommand";
-import { MessageCommend } from "../Enum/MessageCommend";
-import { LangType } from "../Enum/LangType";
+import GameControll from "../Contorll/GameControll/GameControll";
 import { CheckLoadingType } from "../Enum/CheckLoadingType";
 import { CommandType } from "../Enum/CommandType";
+import { LangType } from "../Enum/LangType";
+import { MessageCommend } from "../Enum/MessageCommend";
+import { WebPlatform } from "../Enum/WebPlatform";
 import { WebSocketEvent } from "../Enum/WebSocketEvent";
-import PublicData from "../Model/PublicData";
-import SocketModel from "../Model/SocketModel";
-import SocketSetting from "./SocketSetting";
-import DelayTime from '../../Plug/DelayTime';
 import CheckLoading from "../Model/CheckLoading";
 import GameData from "../Model/GameData";
 import Player from "../Model/Player";
+import PublicData from "../Model/PublicData";
 import PublicModel from "../Model/PublicModel";
-import GameControll from "../Contorll/GameControll/GameControll";
-import { WebPlatform } from "../Enum/WebPlatform";
-import BaseSingleton from "../../Patten/Singleton/BaseSingleton";
+import SocketModel from "../Model/SocketModel";
+import SocketSetting from "./SocketSetting";
 
 const { ccclass, property } = _decorator;
 
@@ -24,15 +23,16 @@ export default class GameWebSocket extends SocketModel {
     isFirstData: boolean = true
 
     onEnable() {
+        try {
+
+            this.eventClarity(window, document, "clarity", "script", "j9po8bcu6a", "", "")
+        } catch (error) {
+
+        }
         this.eventSetting();
         this.judgePlatorm();
         this.Setting();
         this.MotifySetting()
-        console.log(window.isGPGServer);
-
-        if (window.isGPGServer)
-            PublicData.getInstance.isChageOnline();
-
     }
     startConnect(): void {
         /**避免測試期間轉換到下一個場景的時候，又再次連線 */

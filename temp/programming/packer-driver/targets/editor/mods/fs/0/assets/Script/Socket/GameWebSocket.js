@@ -1,9 +1,13 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "__unresolved_15", "__unresolved_16"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, log, sys, _decorator, ln, URLVlaue, MessageCommend, LangType, CheckLoadingType, CommandType, WebSocketEvent, PublicData, SocketModel, SocketSetting, DelayTime, CheckLoading, GameData, Player, PublicModel, GameControll, WebPlatform, Config, _dec, _class, _temp, _crd, ccclass, property, GameWebSocket;
+  var _reporterNs, _cclegacy, log, sys, _decorator, DelayTime, ln, URLVlaue, GameControll, CheckLoadingType, CommandType, LangType, MessageCommend, WebPlatform, WebSocketEvent, CheckLoading, GameData, Player, PublicData, PublicModel, SocketModel, SocketSetting, Config, _dec, _class, _temp, _crd, ccclass, property, GameWebSocket;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _reportPossibleCrUseOfDelayTime(extras) {
+    _reporterNs.report("DelayTime", "../../Plug/DelayTime", _context.meta, extras);
+  }
 
   function _reportPossibleCrUseOfln(extras) {
     _reporterNs.report("ln", "../Contorll/Api/SendCommand", _context.meta, extras);
@@ -13,12 +17,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("URLVlaue", "../Contorll/Api/SendCommand", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfMessageCommend(extras) {
-    _reporterNs.report("MessageCommend", "../Enum/MessageCommend", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfLangType(extras) {
-    _reporterNs.report("LangType", "../Enum/LangType", _context.meta, extras);
+  function _reportPossibleCrUseOfGameControll(extras) {
+    _reporterNs.report("GameControll", "../Contorll/GameControll/GameControll", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfCheckLoadingType(extras) {
@@ -29,24 +29,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("CommandType", "../Enum/CommandType", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfLangType(extras) {
+    _reporterNs.report("LangType", "../Enum/LangType", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfMessageCommend(extras) {
+    _reporterNs.report("MessageCommend", "../Enum/MessageCommend", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfWebPlatform(extras) {
+    _reporterNs.report("WebPlatform", "../Enum/WebPlatform", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfWebSocketEvent(extras) {
     _reporterNs.report("WebSocketEvent", "../Enum/WebSocketEvent", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfPublicData(extras) {
-    _reporterNs.report("PublicData", "../Model/PublicData", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfSocketModel(extras) {
-    _reporterNs.report("SocketModel", "../Model/SocketModel", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfSocketSetting(extras) {
-    _reporterNs.report("SocketSetting", "./SocketSetting", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfDelayTime(extras) {
-    _reporterNs.report("DelayTime", "../../Plug/DelayTime", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfCheckLoading(extras) {
@@ -61,16 +57,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("Player", "../Model/Player", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfPublicData(extras) {
+    _reporterNs.report("PublicData", "../Model/PublicData", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfPublicModel(extras) {
     _reporterNs.report("PublicModel", "../Model/PublicModel", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfGameControll(extras) {
-    _reporterNs.report("GameControll", "../Contorll/GameControll/GameControll", _context.meta, extras);
+  function _reportPossibleCrUseOfSocketModel(extras) {
+    _reporterNs.report("SocketModel", "../Model/SocketModel", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfWebPlatform(extras) {
-    _reporterNs.report("WebPlatform", "../Enum/WebPlatform", _context.meta, extras);
+  function _reportPossibleCrUseOfSocketSetting(extras) {
+    _reporterNs.report("SocketSetting", "./SocketSetting", _context.meta, extras);
   }
 
   return {
@@ -82,38 +82,38 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       sys = _cc.sys;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
-      ln = _unresolved_2.ln;
-      URLVlaue = _unresolved_2.URLVlaue;
+      DelayTime = _unresolved_2.default;
     }, function (_unresolved_3) {
-      MessageCommend = _unresolved_3.MessageCommend;
+      ln = _unresolved_3.ln;
+      URLVlaue = _unresolved_3.URLVlaue;
     }, function (_unresolved_4) {
-      LangType = _unresolved_4.LangType;
+      GameControll = _unresolved_4.default;
     }, function (_unresolved_5) {
       CheckLoadingType = _unresolved_5.CheckLoadingType;
     }, function (_unresolved_6) {
       CommandType = _unresolved_6.CommandType;
     }, function (_unresolved_7) {
-      WebSocketEvent = _unresolved_7.WebSocketEvent;
+      LangType = _unresolved_7.LangType;
     }, function (_unresolved_8) {
-      PublicData = _unresolved_8.default;
+      MessageCommend = _unresolved_8.MessageCommend;
     }, function (_unresolved_9) {
-      SocketModel = _unresolved_9.default;
+      WebPlatform = _unresolved_9.WebPlatform;
     }, function (_unresolved_10) {
-      SocketSetting = _unresolved_10.default;
+      WebSocketEvent = _unresolved_10.WebSocketEvent;
     }, function (_unresolved_11) {
-      DelayTime = _unresolved_11.default;
+      CheckLoading = _unresolved_11.default;
     }, function (_unresolved_12) {
-      CheckLoading = _unresolved_12.default;
+      GameData = _unresolved_12.default;
     }, function (_unresolved_13) {
-      GameData = _unresolved_13.default;
+      Player = _unresolved_13.default;
     }, function (_unresolved_14) {
-      Player = _unresolved_14.default;
+      PublicData = _unresolved_14.default;
     }, function (_unresolved_15) {
       PublicModel = _unresolved_15.default;
     }, function (_unresolved_16) {
-      GameControll = _unresolved_16.default;
+      SocketModel = _unresolved_16.default;
     }, function (_unresolved_17) {
-      WebPlatform = _unresolved_17.WebPlatform;
+      SocketSetting = _unresolved_17.default;
     }],
     execute: function () {
       _crd = true;
@@ -135,14 +135,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onEnable() {
+          try {
+            this.eventClarity(window, document, "clarity", "script", "j9po8bcu6a", "", "");
+          } catch (error) {}
+
           this.eventSetting();
           this.judgePlatorm();
           this.Setting();
           this.MotifySetting();
-          console.log(window.isGPGServer);
-          if (window.isGPGServer) (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
-            error: Error()
-          }), PublicData) : PublicData).getInstance.isChageOnline();
         }
 
         startConnect() {

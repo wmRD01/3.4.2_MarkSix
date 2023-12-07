@@ -1,22 +1,21 @@
-import { Button, Component, EventTouch, instantiate, Label, Node, Prefab, UITransform, v3, _decorator } from 'cc';
-import { NotificationType } from '../../../../Enum/NotificationType';
+import { Button, Component, EventTouch, instantiate, Label, Node, Prefab, UITransform, _decorator } from 'cc';
+import { DEV } from 'cc/env';
+import { LangType } from '../../../../Enum/LangType';
 import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
+import { NotificationType } from '../../../../Enum/NotificationType';
 import { PageAction } from '../../../../Enum/PageAction';
 import EventMng from '../../../../Manager/EventMng';
-import BaseComponent from '../../../../Model/ComponentBase';
-import PageControll from '../../PageControll';
-import PublicModel from '../../../../Model/PublicModel';
-import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
-import Player from '../../../../Model/Player';
-import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
-import PublicData from '../../../../Model/PublicData';
-import PanelLoading from '../../../NoClearNode/PanelLoading';
-import { URLVlaue } from '../../../Api/SendCommand';
 import BallData from '../../../../Model/BallData';
-import PanelSystemMessage from '../../../NoClearNode/PanelSystemMessage';
+import BaseComponent from '../../../../Model/ComponentBase';
+import Player from '../../../../Model/Player';
+import PublicData from '../../../../Model/PublicData';
+import PublicModel from '../../../../Model/PublicModel';
 import SocketSetting from '../../../../Socket/SocketSetting';
-import { LangType } from '../../../../Enum/LangType';
-import { DEV } from 'cc/env';
+import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
+import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
+import { URLVlaue } from '../../../Api/SendCommand';
+import PanelLoading from '../../../NoClearNode/PanelLoading';
+import PanelSystemMessage from '../../../NoClearNode/PanelSystemMessage';
 
 
 
@@ -74,6 +73,8 @@ export default class PanelHome extends BaseComponent {
     loopTime: number = 60
 
     onLoad() {
+        if (window.isGPGServer)
+            PublicData.getInstance.isChageOnline();
         this.marquee = this.labelMarquee.addComponent(Marquee)
         this.timer = this.labelTime.addComponent(Timer);
         this.timer.setBGNode(this.timeBG);
@@ -81,6 +82,10 @@ export default class PanelHome extends BaseComponent {
 
         Player.getInstance.gpgToken = (this.handleURLData(window.location.href) as URLVlaue).token
         this.setEvent(LobbyStateEvent.NextIssueID, this.reset)
+        PublicData.getInstance.markSixMsg.connet()
+        console.log(Player.getInstance.gpgToken);
+        
+        
     }
     async onEnable() {
         this.reset()

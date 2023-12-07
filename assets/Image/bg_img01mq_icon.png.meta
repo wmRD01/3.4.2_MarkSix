@@ -71,8 +71,8 @@
     "type": "sprite-frame",
     "redirect": "7cc068e6-9ecc-47f3-9fc6-46d3d795e158@f9941",
     "compressSettings": {
-      "useCompressTexture": true,
-      "presetId": "d7wPRcBK9EhbrEXzBVG3HR"
+      "useCompressTexture": false,
+      "presetId": "default"
     }
   }
 }

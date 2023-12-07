@@ -151,7 +151,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           // this.account = "Test0" + Math.floor(Math.random() * 24); // 會員帳號
 
           this.account = "2324";
-          this.usertoken = "e89d0c9623cda4e645026249dfc4632d2c03df1ca7bfb0d95c63b09ba1a9f4a79c461ac66ca0cb88adff60d9a72e601a07b670ee14f0377c1c08712b1b77335d";
+          this.usertoken = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjExMkVFRDgwNzBBMEY5RkIzRUI3RDc3RkU3NjAxMTU0IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2OTg2MzU1MjYsImV4cCI6MTcwMTIyNzUyNiwiaXNzIjoiaHR0cHM6Ly9pZHMuY2Vpcy50dyIsImNsaWVudF9pZCI6Im1hcmtfc2l4Iiwic3ViIjoiNTc3OSIsImF1dGhfdGltZSI6MTY5ODYzNTUyNiwiaWRwIjoibG9jYWwiLCJNZW1iZXJJRCI6IjU3NzkiLCJqdGkiOiJDM0FFQ0Q3RTJFN0VEMzg3RjU2QkVFOUE1RUE2RTAwNCIsImlhdCI6MTY5ODYzNTUyNiwic2NvcGUiOlsiZ2FtZS5saW5rIiwibWFyazYuZHJhdy5oaXN0b3J5IiwibWFyazYuc2NvcmUudXNlciIsIm1lbWJlci5pbmZvLnVzZXIiLCJyZXBvcnQucmVhZCIsInJlcG9ydC53cml0ZSJdLCJhbXIiOlsibWtfcGhvbmUiXX0.xqKpRqydOApkLKiRpmriikrFjB_mXuljPeMhQ2E1w--3Xgh1oTQ-ehWjNciDHhCANicCYoCncx9nolRGdnPZWgranxF-jzD3UIEmEjUmJOxK11xgdLanMGVgO2SrA9DetkJU7xSF3gvZxcwDSwnGoPK205ohhsRrc0rudVQHURqZbk8_ShJTYtQfDrayTXXZet_O88mILkQUh0bwT745IiFrsdq5MNgXoI9uGvGT1LnZ37uKDyle58jCFzbQ4JqDUnnRAhluUDJgp1E2FNKvV_azcV3zrfFAWChH7fCY7_vTE2Xq0uxMzGyJs6ERs7RpXL99olhBnor8A8N7VwST6A";
           this.companyIcon = "WM"; // 公司Icon名稱
 
           this.urlData = this.handleURLData(window.location.href);
@@ -191,7 +191,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         checkLanguagePath() {
           if (window.isVAServer || window.isInpokerServer) return "../../lib/"; // 語言包路徑
           else if (window.isGitServer) return "https://wmrd01.github.io/BaccaratPlay/lib/";else //預設 // 本地端
-              return "http://10.20.13.201/JaiJaiTest/lib/"; // return "http://192.168.4.61/JaiJaiTest/lib/"
+              return "http://10.20.13.141/JaiJaiTest/lib/"; // return "http://192.168.4.61/JaiJaiTest/lib/"
           // return "http://192.168.89.61/JaiJaiTest/lib/"
           // return "http://192.168.0.238/JaiJaiTest/lib/"
         }
@@ -213,6 +213,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
 
           return obj;
+        }
+
+        eventClarity(c, l, a, r, i, t, y) {
+          c[a] = c[a] || function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+
+          t = l.createElement(r);
+          t.async = 1;
+          t.src = "https://www.clarity.ms/tag/" + i;
+          y = l.getElementsByTagName(r)[0];
+          y.parentNode.insertBefore(t, y);
         }
 
       });

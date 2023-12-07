@@ -1,20 +1,19 @@
-import { absMax, assetManager, Button, EventTouch, ImageAsset, Label, Node, Sprite, SpriteFrame, sys, _decorator } from 'cc';
+import { assetManager, Button, EventTouch, ImageAsset, Label, Sprite, SpriteFrame, _decorator } from 'cc';
+import { EditMenu } from '../../../../Enum/EditMenu';
+import { LangType } from '../../../../Enum/LangType';
+import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
+import { NotificationType } from '../../../../Enum/NotificationType';
+import EventMng from '../../../../Manager/EventMng';
 import BaseComponent from '../../../../Model/ComponentBase';
+import CreateFileSprite from '../../../../Model/CreateFileSprite';
 import Player from '../../../../Model/Player';
+import PublicData from '../../../../Model/PublicData';
+import PublicModel from '../../../../Model/PublicModel';
+import SocketSetting from '../../../../Socket/SocketSetting';
 import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
-import CryptoES from 'crypto-es';
-import EventMng from '../../../../Manager/EventMng';
-import { NotificationType } from '../../../../Enum/NotificationType';
-import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
-import PublicData from '../../../../Model/PublicData';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
-import PublicModel from '../../../../Model/PublicModel';
-import CreateFileSprite from '../../../../Model/CreateFileSprite';
-import { EditMenu } from '../../../../Enum/EditMenu';
 import PanelSystemMessage from '../../../NoClearNode/PanelSystemMessage';
-import SocketSetting from '../../../../Socket/SocketSetting';
-import { LangType } from '../../../../Enum/LangType';
 const { ccclass, property } = _decorator;
 @ccclass('PanelClientInfo')
 export default class PanelClientInfo extends BaseComponent {
@@ -25,6 +24,8 @@ export default class PanelClientInfo extends BaseComponent {
     spritePlayer: Sprite;
     @property(Label)
     labelPhone: Label
+    @property(Label)
+    labelMail: Label
     @property(Label)
     labelNickName: Label
     @property(Label)
@@ -49,6 +50,7 @@ export default class PanelClientInfo extends BaseComponent {
         this.setEvent(LobbyStateEvent.NextIssueID, this.resetButton)
         this.labelPhone.string = ""
         this.labelNickName.string = ""
+        this.labelMail.string = ""
     }
     async onEnable() {
         this.startDelay()
@@ -136,9 +138,11 @@ export default class PanelClientInfo extends BaseComponent {
     async responseMyInfo(response: ResponseGPG.MyInfo.DataClass) {
         console.log("MyInfo", response)
         Player.getInstance.gpgInfo = response;
+
         // response.data.photo
         // console.log(Player.getInstance.gpgInfo);
-
+        if (!PublicModel.getInstance.checkStringNull(response.data.nickName))
+            this.labelMail.string = response.data.email
         // /*上傳圖片功能暫時隱藏 */
         if (!PublicModel.getInstance.checkStringNull(response.data.photo.headPhoto))
             await this.loadPicture(response.data.photo.headPhoto)
@@ -196,10 +200,10 @@ export default class PanelClientInfo extends BaseComponent {
     //#endregion
     resetButton() {
         this.buttonEditNickname.node.active = true
-        this.buttonEditPicture.node.active = true
+        // this.buttonEditPicture.node.active = true
     }
     closeButton() {
-        this.buttonEditPicture.node.active = false
         this.buttonEditNickname.node.active = false
+        // this.buttonEditPicture.node.active = false
     }
 }

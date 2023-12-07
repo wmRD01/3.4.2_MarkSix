@@ -1,12 +1,20 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, BaseComponent, PublicModel, _dec, _class, _temp, _crd, ccclass, property, ItemLink, URLType;
+  var _reporterNs, _cclegacy, _decorator, MarkSixCommandType, BaseComponent, PublicData, PublicModel, SendData, _dec, _class, _temp, _crd, ccclass, property, ItemLink, URLType;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+  function _reportPossibleCrUseOfMarkSixCommandType(extras) {
+    _reporterNs.report("MarkSixCommandType", "../../../../Enum/MarkSixCommandType", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfBaseComponent(extras) {
     _reporterNs.report("BaseComponent", "../../../../Model/ComponentBase", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPublicData(extras) {
+    _reporterNs.report("PublicData", "../../../../Model/PublicData", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfPublicModel(extras) {
@@ -20,9 +28,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       _cclegacy = _cc.cclegacy;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
-      BaseComponent = _unresolved_2.default;
+      MarkSixCommandType = _unresolved_2.MarkSixCommandType;
     }, function (_unresolved_3) {
-      PublicModel = _unresolved_3.default;
+      BaseComponent = _unresolved_3.default;
+    }, function (_unresolved_4) {
+      PublicData = _unresolved_4.default;
+    }, function (_unresolved_5) {
+      PublicModel = _unresolved_5.default;
     }],
     execute: function () {
       _crd = true;
@@ -52,7 +64,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
         onOpenWindow(e, customEventData) {
           // console.log(this.url);
-          window.open(this.url);
+          let _data = new SendData();
+
+          _data.name = this.node.name.split("Link")[0];
+          (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.markSixMsg.send((_crd && MarkSixCommandType === void 0 ? (_reportPossibleCrUseOfMarkSixCommandType({
+            error: Error()
+          }), MarkSixCommandType) : MarkSixCommandType).contact, _data); // window.open(this.url)
         }
 
       }, _temp)) || _class));
@@ -62,6 +81,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         URLType["FaceBook"] = "https://www.facebook.com/GodPlayGameFun/";
         URLType["Instagram"] = "https://www.instagram.com/explore/tags/gpg/";
       })(URLType || (URLType = {}));
+
+      SendData = class SendData {
+        constructor() {
+          _defineProperty(this, "name", void 0);
+        }
+
+      };
 
       _cclegacy._RF.pop();
 

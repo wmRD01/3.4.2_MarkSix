@@ -80,8 +80,8 @@
     "redirect": "643ab8e1-e8d9-4f8d-829d-aec2374b641e@f9941",
     "hasAlpha": false,
     "compressSettings": {
-      "useCompressTexture": true,
-      "presetId": "d7wPRcBK9EhbrEXzBVG3HR"
+      "useCompressTexture": false,
+      "presetId": "default"
     }
   }
 }

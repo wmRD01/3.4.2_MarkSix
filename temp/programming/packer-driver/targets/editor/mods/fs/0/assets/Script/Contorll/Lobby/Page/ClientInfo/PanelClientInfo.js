@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, assetManager, Button, Label, Sprite, SpriteFrame, _decorator, BaseComponent, Player, RequestGPG, EventMng, NotificationType, LobbyStateEvent, PublicData, PanelLoading, PublicModel, CreateFileSprite, EditMenu, PanelSystemMessage, SocketSetting, LangType, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, PanelClientInfo;
+  var _reporterNs, _cclegacy, assetManager, Button, Label, Sprite, SpriteFrame, _decorator, EditMenu, LangType, LobbyStateEvent, NotificationType, EventMng, BaseComponent, CreateFileSprite, Player, PublicData, PublicModel, SocketSetting, RequestGPG, PanelLoading, PanelSystemMessage, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _temp, _crd, ccclass, property, PanelClientInfo;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -11,12 +11,48 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
+  function _reportPossibleCrUseOfEditMenu(extras) {
+    _reporterNs.report("EditMenu", "../../../../Enum/EditMenu", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfLangType(extras) {
+    _reporterNs.report("LangType", "../../../../Enum/LangType", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfLobbyStateEvent(extras) {
+    _reporterNs.report("LobbyStateEvent", "../../../../Enum/LobbyStateEvent", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfNotificationType(extras) {
+    _reporterNs.report("NotificationType", "../../../../Enum/NotificationType", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfEventMng(extras) {
+    _reporterNs.report("EventMng", "../../../../Manager/EventMng", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfBaseComponent(extras) {
     _reporterNs.report("BaseComponent", "../../../../Model/ComponentBase", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfCreateFileSprite(extras) {
+    _reporterNs.report("CreateFileSprite", "../../../../Model/CreateFileSprite", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfPlayer(extras) {
     _reporterNs.report("Player", "../../../../Model/Player", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPublicData(extras) {
+    _reporterNs.report("PublicData", "../../../../Model/PublicData", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPublicModel(extras) {
+    _reporterNs.report("PublicModel", "../../../../Model/PublicModel", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfSocketSetting(extras) {
+    _reporterNs.report("SocketSetting", "../../../../Socket/SocketSetting", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfRequestGPG(extras) {
@@ -27,48 +63,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("ResponseGPG", "../../../Api/GPGAPI/ResponseGPG", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfEventMng(extras) {
-    _reporterNs.report("EventMng", "../../../../Manager/EventMng", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfNotificationType(extras) {
-    _reporterNs.report("NotificationType", "../../../../Enum/NotificationType", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfLobbyStateEvent(extras) {
-    _reporterNs.report("LobbyStateEvent", "../../../../Enum/LobbyStateEvent", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfPublicData(extras) {
-    _reporterNs.report("PublicData", "../../../../Model/PublicData", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfPanelLoading(extras) {
     _reporterNs.report("PanelLoading", "../../../NoClearNode/PanelLoading", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfPublicModel(extras) {
-    _reporterNs.report("PublicModel", "../../../../Model/PublicModel", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfCreateFileSprite(extras) {
-    _reporterNs.report("CreateFileSprite", "../../../../Model/CreateFileSprite", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfEditMenu(extras) {
-    _reporterNs.report("EditMenu", "../../../../Enum/EditMenu", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfPanelSystemMessage(extras) {
     _reporterNs.report("PanelSystemMessage", "../../../NoClearNode/PanelSystemMessage", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfSocketSetting(extras) {
-    _reporterNs.report("SocketSetting", "../../../../Socket/SocketSetting", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfLangType(extras) {
-    _reporterNs.report("LangType", "../../../../Enum/LangType", _context.meta, extras);
   }
 
   return {
@@ -83,33 +83,33 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       SpriteFrame = _cc.SpriteFrame;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
-      BaseComponent = _unresolved_2.default;
+      EditMenu = _unresolved_2.EditMenu;
     }, function (_unresolved_3) {
-      Player = _unresolved_3.default;
+      LangType = _unresolved_3.LangType;
     }, function (_unresolved_4) {
-      RequestGPG = _unresolved_4.RequestGPG;
+      LobbyStateEvent = _unresolved_4.LobbyStateEvent;
     }, function (_unresolved_5) {
-      EventMng = _unresolved_5.default;
+      NotificationType = _unresolved_5.NotificationType;
     }, function (_unresolved_6) {
-      NotificationType = _unresolved_6.NotificationType;
+      EventMng = _unresolved_6.default;
     }, function (_unresolved_7) {
-      LobbyStateEvent = _unresolved_7.LobbyStateEvent;
+      BaseComponent = _unresolved_7.default;
     }, function (_unresolved_8) {
-      PublicData = _unresolved_8.default;
+      CreateFileSprite = _unresolved_8.default;
     }, function (_unresolved_9) {
-      PanelLoading = _unresolved_9.default;
+      Player = _unresolved_9.default;
     }, function (_unresolved_10) {
-      PublicModel = _unresolved_10.default;
+      PublicData = _unresolved_10.default;
     }, function (_unresolved_11) {
-      CreateFileSprite = _unresolved_11.default;
+      PublicModel = _unresolved_11.default;
     }, function (_unresolved_12) {
-      EditMenu = _unresolved_12.EditMenu;
+      SocketSetting = _unresolved_12.default;
     }, function (_unresolved_13) {
-      PanelSystemMessage = _unresolved_13.default;
+      RequestGPG = _unresolved_13.RequestGPG;
     }, function (_unresolved_14) {
-      SocketSetting = _unresolved_14.default;
+      PanelLoading = _unresolved_14.default;
     }, function (_unresolved_15) {
-      LangType = _unresolved_15.LangType;
+      PanelSystemMessage = _unresolved_15.default;
     }],
     execute: function () {
       _crd = true;
@@ -121,7 +121,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("default", PanelClientInfo = (_dec = ccclass('PanelClientInfo'), _dec2 = property(Sprite), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Button), _dec9 = property(Button), _dec(_class = (_class2 = (_temp = class PanelClientInfo extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
+      _export("default", PanelClientInfo = (_dec = ccclass('PanelClientInfo'), _dec2 = property(Sprite), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Label), _dec9 = property(Button), _dec10 = property(Button), _dec(_class = (_class2 = (_temp = class PanelClientInfo extends (_crd && BaseComponent === void 0 ? (_reportPossibleCrUseOfBaseComponent({
         error: Error()
       }), BaseComponent) : BaseComponent) {
         constructor(...args) {
@@ -135,17 +135,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "labelPhone", _descriptor2, this);
 
-          _initializerDefineProperty(this, "labelNickName", _descriptor3, this);
+          _initializerDefineProperty(this, "labelMail", _descriptor3, this);
 
-          _initializerDefineProperty(this, "labelBetCount", _descriptor4, this);
+          _initializerDefineProperty(this, "labelNickName", _descriptor4, this);
 
-          _initializerDefineProperty(this, "labelPointCount", _descriptor5, this);
+          _initializerDefineProperty(this, "labelBetCount", _descriptor5, this);
 
-          _initializerDefineProperty(this, "labelRank", _descriptor6, this);
+          _initializerDefineProperty(this, "labelPointCount", _descriptor6, this);
 
-          _initializerDefineProperty(this, "buttonEditNickname", _descriptor7, this);
+          _initializerDefineProperty(this, "labelRank", _descriptor7, this);
 
-          _initializerDefineProperty(this, "buttonEditPicture", _descriptor8, this);
+          _initializerDefineProperty(this, "buttonEditNickname", _descriptor8, this);
+
+          _initializerDefineProperty(this, "buttonEditPicture", _descriptor9, this);
 
           _defineProperty(this, "getplatform", void 0);
         }
@@ -166,6 +168,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), LobbyStateEvent) : LobbyStateEvent).NextIssueID, this.resetButton);
           this.labelPhone.string = "";
           this.labelNickName.string = "";
+          this.labelMail.string = "";
         }
 
         async onEnable() {
@@ -329,7 +332,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), Player) : Player).getInstance.gpgInfo = response; // response.data.photo
           // console.log(Player.getInstance.gpgInfo);
-          // /*上傳圖片功能暫時隱藏 */
+
+          if (!(_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
+            error: Error()
+          }), PublicModel) : PublicModel).getInstance.checkStringNull(response.data.nickName)) this.labelMail.string = response.data.email; // /*上傳圖片功能暫時隱藏 */
 
           if (!(_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
             error: Error()
@@ -417,13 +423,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
 
         resetButton() {
-          this.buttonEditNickname.node.active = true;
-          this.buttonEditPicture.node.active = true;
+          this.buttonEditNickname.node.active = true; // this.buttonEditPicture.node.active = true
         }
 
         closeButton() {
-          this.buttonEditPicture.node.active = false;
-          this.buttonEditNickname.node.active = false;
+          this.buttonEditNickname.node.active = false; // this.buttonEditPicture.node.active = false
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "spritePlayer", [_dec2], {
@@ -436,32 +440,37 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "labelNickName", [_dec4], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "labelMail", [_dec4], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "labelBetCount", [_dec5], {
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "labelNickName", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "labelPointCount", [_dec6], {
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "labelBetCount", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "labelRank", [_dec7], {
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "labelPointCount", [_dec7], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditNickname", [_dec8], {
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "labelRank", [_dec8], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditPicture", [_dec9], {
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditNickname", [_dec9], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor9 = _applyDecoratedDescriptor(_class2.prototype, "buttonEditPicture", [_dec10], {
         configurable: true,
         enumerable: true,
         writable: true,

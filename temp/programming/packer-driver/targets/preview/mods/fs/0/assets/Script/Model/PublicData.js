@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, BaseSingleton, RequestGPG, GameSceneName, CheckLoading, PublicData, _crd;
+  var _reporterNs, _cclegacy, BaseSingleton, RequestGPG, MarkSix, GameSceneName, CheckLoading, PublicData, _crd;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -11,6 +11,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfRequestGPG(extras) {
     _reporterNs.report("RequestGPG", "../Contorll/Api/GPGAPI/RequestGPG", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfMarkSix(extras) {
+    _reporterNs.report("MarkSix", "../Contorll/Api/MarkSix", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfGameSceneName(extras) {
@@ -33,9 +37,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_3) {
       RequestGPG = _unresolved_3.RequestGPG;
     }, function (_unresolved_4) {
-      GameSceneName = _unresolved_4.GameSceneName;
+      MarkSix = _unresolved_4.MarkSix;
     }, function (_unresolved_5) {
-      CheckLoading = _unresolved_5.default;
+      GameSceneName = _unresolved_5.GameSceneName;
+    }, function (_unresolved_6) {
+      CheckLoading = _unresolved_6.default;
     }],
     execute: function () {
       _crd = true;
@@ -54,9 +60,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "BaseViewHeight", 1280);
 
-          _defineProperty(this, "gameVersion", "0.3.7_test1");
+          _defineProperty(this, "gameVersion", "0.4.2");
 
-          _defineProperty(this, "onlineVersion", "0.3.7_test1");
+          _defineProperty(this, "onlineVersion", "0.4.2");
 
           _defineProperty(this, "checkLoading", new (_crd && CheckLoading === void 0 ? (_reportPossibleCrUseOfCheckLoading({
             error: Error()
@@ -97,6 +103,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "gpgUrlids", (_crd && RequestGPG === void 0 ? (_reportPossibleCrUseOfRequestGPG({
             error: Error()
           }), RequestGPG) : RequestGPG).APIUrl.QA_ids);
+
+          _defineProperty(this, "markSixMsg", new (_crd && MarkSix === void 0 ? (_reportPossibleCrUseOfMarkSix({
+            error: Error()
+          }), MarkSix) : MarkSix)());
         }
 
         isChageOnline() {

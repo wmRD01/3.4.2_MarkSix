@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14", "cc/env"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "cc/env", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12", "__unresolved_13", "__unresolved_14"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, Component, instantiate, Label, Node, Prefab, UITransform, _decorator, NotificationType, LobbyStateEvent, PageAction, EventMng, BaseComponent, PublicModel, RequestGPG, Player, PublicData, PanelLoading, BallData, PanelSystemMessage, SocketSetting, LangType, DEV, Marquee, Timer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _dec17, _dec18, _dec19, _dec20, _dec21, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _descriptor17, _descriptor18, _descriptor19, _descriptor20, _temp, _crd, ccclass, property, PanelHome;
+  var _reporterNs, _cclegacy, Button, Component, instantiate, Label, Node, Prefab, UITransform, _decorator, DEV, LangType, LobbyStateEvent, NotificationType, PageAction, EventMng, BallData, BaseComponent, Player, PublicData, PublicModel, SocketSetting, RequestGPG, PanelLoading, PanelSystemMessage, Marquee, Timer, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _dec17, _dec18, _dec19, _dec20, _dec21, _class2, _class3, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _descriptor17, _descriptor18, _descriptor19, _descriptor20, _temp, _crd, ccclass, property, PanelHome;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -11,12 +11,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-  function _reportPossibleCrUseOfNotificationType(extras) {
-    _reporterNs.report("NotificationType", "../../../../Enum/NotificationType", _context.meta, extras);
+  function _reportPossibleCrUseOfLangType(extras) {
+    _reporterNs.report("LangType", "../../../../Enum/LangType", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfLobbyStateEvent(extras) {
     _reporterNs.report("LobbyStateEvent", "../../../../Enum/LobbyStateEvent", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfNotificationType(extras) {
+    _reporterNs.report("NotificationType", "../../../../Enum/NotificationType", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfPageAction(extras) {
@@ -27,52 +31,48 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("EventMng", "../../../../Manager/EventMng", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfBallData(extras) {
+    _reporterNs.report("BallData", "../../../../Model/BallData", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfBaseComponent(extras) {
     _reporterNs.report("BaseComponent", "../../../../Model/ComponentBase", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfPublicModel(extras) {
-    _reporterNs.report("PublicModel", "../../../../Model/PublicModel", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfRequestGPG(extras) {
-    _reporterNs.report("RequestGPG", "../../../Api/GPGAPI/RequestGPG", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfPlayer(extras) {
     _reporterNs.report("Player", "../../../../Model/Player", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfResponseGPG(extras) {
-    _reporterNs.report("ResponseGPG", "../../../Api/GPGAPI/ResponseGPG", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfPublicData(extras) {
     _reporterNs.report("PublicData", "../../../../Model/PublicData", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfPanelLoading(extras) {
-    _reporterNs.report("PanelLoading", "../../../NoClearNode/PanelLoading", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfURLVlaue(extras) {
-    _reporterNs.report("URLVlaue", "../../../Api/SendCommand", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfBallData(extras) {
-    _reporterNs.report("BallData", "../../../../Model/BallData", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfPanelSystemMessage(extras) {
-    _reporterNs.report("PanelSystemMessage", "../../../NoClearNode/PanelSystemMessage", _context.meta, extras);
+  function _reportPossibleCrUseOfPublicModel(extras) {
+    _reporterNs.report("PublicModel", "../../../../Model/PublicModel", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfSocketSetting(extras) {
     _reporterNs.report("SocketSetting", "../../../../Socket/SocketSetting", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfLangType(extras) {
-    _reporterNs.report("LangType", "../../../../Enum/LangType", _context.meta, extras);
+  function _reportPossibleCrUseOfRequestGPG(extras) {
+    _reporterNs.report("RequestGPG", "../../../Api/GPGAPI/RequestGPG", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfResponseGPG(extras) {
+    _reporterNs.report("ResponseGPG", "../../../Api/GPGAPI/ResponseGPG", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfURLVlaue(extras) {
+    _reporterNs.report("URLVlaue", "../../../Api/SendCommand", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPanelLoading(extras) {
+    _reporterNs.report("PanelLoading", "../../../NoClearNode/PanelLoading", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPanelSystemMessage(extras) {
+    _reporterNs.report("PanelSystemMessage", "../../../NoClearNode/PanelSystemMessage", _context.meta, extras);
   }
 
   return {
@@ -88,36 +88,36 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Prefab = _cc.Prefab;
       UITransform = _cc.UITransform;
       _decorator = _cc._decorator;
+    }, function (_ccEnv) {
+      DEV = _ccEnv.DEV;
     }, function (_unresolved_2) {
-      NotificationType = _unresolved_2.NotificationType;
+      LangType = _unresolved_2.LangType;
     }, function (_unresolved_3) {
       LobbyStateEvent = _unresolved_3.LobbyStateEvent;
     }, function (_unresolved_4) {
-      PageAction = _unresolved_4.PageAction;
+      NotificationType = _unresolved_4.NotificationType;
     }, function (_unresolved_5) {
-      EventMng = _unresolved_5.default;
+      PageAction = _unresolved_5.PageAction;
     }, function (_unresolved_6) {
-      BaseComponent = _unresolved_6.default;
+      EventMng = _unresolved_6.default;
     }, function (_unresolved_7) {
-      PublicModel = _unresolved_7.default;
+      BallData = _unresolved_7.default;
     }, function (_unresolved_8) {
-      RequestGPG = _unresolved_8.RequestGPG;
+      BaseComponent = _unresolved_8.default;
     }, function (_unresolved_9) {
       Player = _unresolved_9.default;
     }, function (_unresolved_10) {
       PublicData = _unresolved_10.default;
     }, function (_unresolved_11) {
-      PanelLoading = _unresolved_11.default;
+      PublicModel = _unresolved_11.default;
     }, function (_unresolved_12) {
-      BallData = _unresolved_12.default;
+      SocketSetting = _unresolved_12.default;
     }, function (_unresolved_13) {
-      PanelSystemMessage = _unresolved_13.default;
+      RequestGPG = _unresolved_13.RequestGPG;
     }, function (_unresolved_14) {
-      SocketSetting = _unresolved_14.default;
+      PanelLoading = _unresolved_14.default;
     }, function (_unresolved_15) {
-      LangType = _unresolved_15.LangType;
-    }, function (_ccEnv) {
-      DEV = _ccEnv.DEV;
+      PanelSystemMessage = _unresolved_15.default;
     }],
     execute: function () {
       _crd = true;
@@ -191,6 +191,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onLoad() {
+          if (window.isGPGServer) (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.isChageOnline();
           this.marquee = this.labelMarquee.addComponent(Marquee);
           this.timer = this.labelTime.addComponent(Timer);
           this.timer.setBGNode(this.timeBG);
@@ -202,6 +205,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.setEvent((_crd && LobbyStateEvent === void 0 ? (_reportPossibleCrUseOfLobbyStateEvent({
             error: Error()
           }), LobbyStateEvent) : LobbyStateEvent).NextIssueID, this.reset);
+          (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+            error: Error()
+          }), PublicData) : PublicData).getInstance.markSixMsg.connet();
+          console.log((_crd && Player === void 0 ? (_reportPossibleCrUseOfPlayer({
+            error: Error()
+          }), Player) : Player).getInstance.gpgToken);
         }
 
         async onEnable() {

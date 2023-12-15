@@ -1,1 +1,0 @@
-{"version":3,"sources":["file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameSenceName.ts"],"names":["GameSceneName"],"mappings":";;;;;;;;;;;;;;;;iBAAYA,a;AAAAA,QAAAA,a;AAAAA,QAAAA,a;AAAAA,QAAAA,a;SAAAA,a,6BAAAA,a","sourcesContent":["export enum GameSceneName {\r\n    Loading = \"Loading\",\r\n    Lobby = \"Lobby\",\r\n    GameRoom = \"GameRoom\",\r\n}"]}

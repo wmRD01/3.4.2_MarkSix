@@ -1,1 +1,0 @@
-{"version":3,"sources":["file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/CASTCommandType.ts"],"names":["CASTCommandType"],"mappings":";;;;;;;;;;;;;;;;iBAAYA,e;AAAAA,QAAAA,e;AAAAA,QAAAA,e;SAAAA,e,+BAAAA,e","sourcesContent":["export enum CASTCommandType {\r\n    Guest = \"guest\",\r\n    Orientation = \"orientation\",\r\n\r\n}"]}

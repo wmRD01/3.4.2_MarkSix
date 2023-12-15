@@ -1,1 +1,0 @@
-{"version":3,"sources":["file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/PlayerIdentity.ts"],"names":["PlayerIdentity"],"mappings":";;;;;;;;;;;;;;;;iBAAYA,c;AAAAA,QAAAA,c,CAAAA,c;AAAAA,QAAAA,c,CAAAA,c;SAAAA,c,8BAAAA,c","sourcesContent":["export enum PlayerIdentity {\r\n    Member,\r\n    Guest,\r\n\r\n}"]}

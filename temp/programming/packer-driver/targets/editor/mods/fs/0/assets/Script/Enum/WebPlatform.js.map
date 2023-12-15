@@ -1,1 +1,0 @@
-{"version":3,"sources":["file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/WebPlatform.ts"],"names":["WebPlatform"],"mappings":";;;;;;;;;;;;;;;;iBAAYA,W;AAAAA,QAAAA,W;AAAAA,QAAAA,W;AAAAA,QAAAA,W;SAAAA,W,2BAAAA,W","sourcesContent":["export enum WebPlatform {\r\n    Default=\"Default\",\r\n    GPG=\"GPG\",\r\n    V588=\"V588\"\r\n}   "]}

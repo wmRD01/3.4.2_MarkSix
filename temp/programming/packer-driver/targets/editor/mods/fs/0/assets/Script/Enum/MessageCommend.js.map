@@ -1,1 +1,0 @@
-{"version":3,"sources":["file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/MessageCommend.ts"],"names":["MessageCommend"],"mappings":";;;;;;;;;;;;;;;;iBAAYA,c;AAAAA,QAAAA,c;SAAAA,c,8BAAAA,c","sourcesContent":["export enum MessageCommend {\r\n    BackHome =\"BackHome\",\r\n}"]}

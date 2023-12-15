@@ -1,1 +1,0 @@
-{"version":3,"sources":["file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/CoinType.ts"],"names":["CoinType"],"mappings":";;;;;;;;;;;;;;;;iBAAYA,Q;AAAAA,QAAAA,Q,CAAAA,Q;AAAAA,QAAAA,Q,CAAAA,Q;SAAAA,Q,wBAAAA,Q","sourcesContent":["export enum CoinType {\r\n    Gold,\r\n    Silver\r\n}"]}

@@ -1,6 +1,7 @@
 import { URLVlaue } from "../Contorll/Api/SendCommand";
 import BaseComponent from "./ComponentBase";
 import { IsBuildSelfServer, IsEditor, IsGitHub, IsGPGServer, IsInpokerBestServer, IsPhone, IsVAServer } from "./JudgePlatform";
+import PublicData from "./PublicData";
 
 export default class SocketModel extends BaseComponent {
     /**
@@ -147,7 +148,10 @@ export default class SocketModel extends BaseComponent {
     }
     checkLanguagePath() {
         if (window.isVAServer || window.isInpokerServer)
-            return "https://twsixmark.com/app/lib/"; // 語言包路徑
+            if (PublicData.getInstance.isApp == "1")
+                return "https://twsixmark.com/app/lib/"; // 語言包路徑
+            else
+                return "../../lib/"
         else if (window.isGitServer)
             return "https://wmrd01.github.io/BaccaratPlay/lib/"
         else//預設 // 本地端

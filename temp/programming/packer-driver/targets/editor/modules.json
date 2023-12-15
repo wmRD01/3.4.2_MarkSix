@@ -1,6 +1,6 @@
 {
   "cce:/internal/x/cc": {
-    "mTimestamp": 6887.123999997973,
+    "mTimestamp": 5558.3779999911785,
     "chunkId": "quick-pack:/cce/internal/x/cc.js",
     "imports": [
       {
@@ -389,7 +389,7 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 436523.04410000145,
+    "mTimestamp": 12088.268500000238,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
@@ -631,7 +631,7 @@
         }
       },
       {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/CASTAPI.ts",
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/GPGAPI/RequestGPG.ts",
         "rewritten": "__unresolved_17",
         "loc": {
           "start": {
@@ -640,35 +640,35 @@
           },
           "end": {
             "line": 5,
-            "column": 1614
-          }
-        }
-      },
-      {
-        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/GPGAPI/RequestGPG.ts",
-        "rewritten": "__unresolved_18",
-        "loc": {
-          "start": {
-            "line": 5,
-            "column": 1630
-          },
-          "end": {
-            "line": 5,
-            "column": 1717
+            "column": 1624
           }
         }
       },
       {
         "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/GPGAPI/ResponseGPG.ts",
+        "rewritten": "__unresolved_18",
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 1640
+          },
+          "end": {
+            "line": 5,
+            "column": 1728
+          }
+        }
+      },
+      {
+        "value": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/HybridWebView.ts",
         "rewritten": "__unresolved_19",
         "loc": {
           "start": {
             "line": 5,
-            "column": 1733
+            "column": 1744
           },
           "end": {
             "line": 5,
-            "column": 1821
+            "column": 1827
           }
         }
       },
@@ -678,11 +678,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 1837
+            "column": 1843
           },
           "end": {
             "line": 5,
-            "column": 1914
+            "column": 1920
           }
         }
       },
@@ -692,11 +692,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 1930
+            "column": 1936
           },
           "end": {
             "line": 5,
-            "column": 2014
+            "column": 2020
           }
         }
       },
@@ -706,11 +706,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 2030
+            "column": 2036
           },
           "end": {
             "line": 5,
-            "column": 2111
+            "column": 2117
           }
         }
       },
@@ -720,11 +720,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 2127
+            "column": 2133
           },
           "end": {
             "line": 5,
-            "column": 2210
+            "column": 2216
           }
         }
       },
@@ -734,11 +734,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 2226
+            "column": 2232
           },
           "end": {
             "line": 5,
-            "column": 2309
+            "column": 2315
           }
         }
       },
@@ -748,11 +748,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 2325
+            "column": 2331
           },
           "end": {
             "line": 5,
-            "column": 2405
+            "column": 2411
           }
         }
       },
@@ -762,11 +762,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 2421
+            "column": 2427
           },
           "end": {
             "line": 5,
-            "column": 2510
+            "column": 2516
           }
         }
       },
@@ -776,11 +776,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 2526
+            "column": 2532
           },
           "end": {
             "line": 5,
-            "column": 2619
+            "column": 2625
           }
         }
       },
@@ -790,11 +790,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 2635
+            "column": 2641
           },
           "end": {
             "line": 5,
-            "column": 2724
+            "column": 2730
           }
         }
       },
@@ -804,11 +804,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 2740
+            "column": 2746
           },
           "end": {
             "line": 5,
-            "column": 2831
+            "column": 2837
           }
         }
       },
@@ -818,11 +818,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 2847
+            "column": 2853
           },
           "end": {
             "line": 5,
-            "column": 2931
+            "column": 2937
           }
         }
       },
@@ -832,11 +832,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 2947
+            "column": 2953
           },
           "end": {
             "line": 5,
-            "column": 3055
+            "column": 3061
           }
         }
       },
@@ -846,11 +846,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 3071
+            "column": 3077
           },
           "end": {
             "line": 5,
-            "column": 3169
+            "column": 3175
           }
         }
       },
@@ -860,11 +860,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 3185
+            "column": 3191
           },
           "end": {
             "line": 5,
-            "column": 3290
+            "column": 3296
           }
         }
       },
@@ -874,11 +874,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 3306
+            "column": 3312
           },
           "end": {
             "line": 5,
-            "column": 3408
+            "column": 3414
           }
         }
       },
@@ -888,11 +888,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 3424
+            "column": 3430
           },
           "end": {
             "line": 5,
-            "column": 3526
+            "column": 3532
           }
         }
       },
@@ -902,11 +902,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 3542
+            "column": 3548
           },
           "end": {
             "line": 5,
-            "column": 3645
+            "column": 3651
           }
         }
       },
@@ -916,11 +916,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 3661
+            "column": 3667
           },
           "end": {
             "line": 5,
-            "column": 3752
+            "column": 3758
           }
         }
       },
@@ -930,11 +930,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 3768
+            "column": 3774
           },
           "end": {
             "line": 5,
-            "column": 3866
+            "column": 3872
           }
         }
       },
@@ -944,11 +944,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 3882
+            "column": 3888
           },
           "end": {
             "line": 5,
-            "column": 3975
+            "column": 3981
           }
         }
       },
@@ -958,11 +958,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 3991
+            "column": 3997
           },
           "end": {
             "line": 5,
-            "column": 4086
+            "column": 4092
           }
         }
       },
@@ -972,11 +972,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 4102
+            "column": 4108
           },
           "end": {
             "line": 5,
-            "column": 4195
+            "column": 4201
           }
         }
       },
@@ -986,11 +986,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 4211
+            "column": 4217
           },
           "end": {
             "line": 5,
-            "column": 4307
+            "column": 4313
           }
         }
       },
@@ -1000,11 +1000,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 4323
+            "column": 4329
           },
           "end": {
             "line": 5,
-            "column": 4417
+            "column": 4423
           }
         }
       },
@@ -1014,11 +1014,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 4433
+            "column": 4439
           },
           "end": {
             "line": 5,
-            "column": 4530
+            "column": 4536
           }
         }
       },
@@ -1028,11 +1028,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 4546
+            "column": 4552
           },
           "end": {
             "line": 5,
-            "column": 4630
+            "column": 4636
           }
         }
       },
@@ -1042,11 +1042,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 4646
+            "column": 4652
           },
           "end": {
             "line": 5,
-            "column": 4742
+            "column": 4748
           }
         }
       },
@@ -1056,11 +1056,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 4758
+            "column": 4764
           },
           "end": {
             "line": 5,
-            "column": 4846
+            "column": 4852
           }
         }
       },
@@ -1070,11 +1070,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 4862
+            "column": 4868
           },
           "end": {
             "line": 5,
-            "column": 4948
+            "column": 4954
           }
         }
       },
@@ -1084,11 +1084,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 4964
+            "column": 4970
           },
           "end": {
             "line": 5,
-            "column": 5056
+            "column": 5062
           }
         }
       },
@@ -1098,11 +1098,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 5072
+            "column": 5078
           },
           "end": {
             "line": 5,
-            "column": 5162
+            "column": 5168
           }
         }
       },
@@ -1112,11 +1112,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 5178
+            "column": 5184
           },
           "end": {
             "line": 5,
-            "column": 5265
+            "column": 5271
           }
         }
       },
@@ -1126,11 +1126,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 5281
+            "column": 5287
           },
           "end": {
             "line": 5,
-            "column": 5370
+            "column": 5376
           }
         }
       },
@@ -1140,11 +1140,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 5386
+            "column": 5392
           },
           "end": {
             "line": 5,
-            "column": 5482
+            "column": 5488
           }
         }
       },
@@ -1154,11 +1154,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 5498
+            "column": 5504
           },
           "end": {
             "line": 5,
-            "column": 5588
+            "column": 5594
           }
         }
       },
@@ -1168,11 +1168,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 5604
+            "column": 5610
           },
           "end": {
             "line": 5,
-            "column": 5675
+            "column": 5681
           }
         }
       },
@@ -1182,11 +1182,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 5691
+            "column": 5697
           },
           "end": {
             "line": 5,
-            "column": 5765
+            "column": 5771
           }
         }
       },
@@ -1196,11 +1196,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 5781
+            "column": 5787
           },
           "end": {
             "line": 5,
-            "column": 5858
+            "column": 5864
           }
         }
       },
@@ -1210,11 +1210,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 5874
+            "column": 5880
           },
           "end": {
             "line": 5,
-            "column": 5952
+            "column": 5958
           }
         }
       },
@@ -1224,11 +1224,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 5968
+            "column": 5974
           },
           "end": {
             "line": 5,
-            "column": 6038
+            "column": 6044
           }
         }
       },
@@ -1238,11 +1238,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 6054
+            "column": 6060
           },
           "end": {
             "line": 5,
-            "column": 6127
+            "column": 6133
           }
         }
       },
@@ -1252,11 +1252,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 6143
+            "column": 6149
           },
           "end": {
             "line": 5,
-            "column": 6211
+            "column": 6217
           }
         }
       },
@@ -1266,11 +1266,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 6227
+            "column": 6233
           },
           "end": {
             "line": 5,
-            "column": 6297
+            "column": 6303
           }
         }
       },
@@ -1280,11 +1280,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 6313
+            "column": 6319
           },
           "end": {
             "line": 5,
-            "column": 6385
+            "column": 6391
           }
         }
       },
@@ -1294,11 +1294,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 6401
+            "column": 6407
           },
           "end": {
             "line": 5,
-            "column": 6472
+            "column": 6478
           }
         }
       },
@@ -1308,11 +1308,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 6488
+            "column": 6494
           },
           "end": {
             "line": 5,
-            "column": 6563
+            "column": 6569
           }
         }
       },
@@ -1322,11 +1322,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 6579
+            "column": 6585
           },
           "end": {
             "line": 5,
-            "column": 6655
+            "column": 6661
           }
         }
       },
@@ -1336,11 +1336,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 6671
+            "column": 6677
           },
           "end": {
             "line": 5,
-            "column": 6741
+            "column": 6747
           }
         }
       },
@@ -1350,11 +1350,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 6757
+            "column": 6763
           },
           "end": {
             "line": 5,
-            "column": 6834
+            "column": 6840
           }
         }
       },
@@ -1364,11 +1364,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 6850
+            "column": 6856
           },
           "end": {
             "line": 5,
-            "column": 6920
+            "column": 6926
           }
         }
       },
@@ -1378,11 +1378,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 6936
+            "column": 6942
           },
           "end": {
             "line": 5,
-            "column": 7011
+            "column": 7017
           }
         }
       },
@@ -1392,11 +1392,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 7027
+            "column": 7033
           },
           "end": {
             "line": 5,
-            "column": 7100
+            "column": 7106
           }
         }
       },
@@ -1406,11 +1406,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 7116
+            "column": 7122
           },
           "end": {
             "line": 5,
-            "column": 7193
+            "column": 7199
           }
         }
       },
@@ -1420,11 +1420,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 7209
+            "column": 7215
           },
           "end": {
             "line": 5,
-            "column": 7289
+            "column": 7295
           }
         }
       },
@@ -1434,11 +1434,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 7305
+            "column": 7311
           },
           "end": {
             "line": 5,
-            "column": 7381
+            "column": 7387
           }
         }
       },
@@ -1448,11 +1448,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 7397
+            "column": 7403
           },
           "end": {
             "line": 5,
-            "column": 7475
+            "column": 7481
           }
         }
       },
@@ -1462,11 +1462,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 7491
+            "column": 7497
           },
           "end": {
             "line": 5,
-            "column": 7563
+            "column": 7569
           }
         }
       },
@@ -1476,11 +1476,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 7579
+            "column": 7585
           },
           "end": {
             "line": 5,
-            "column": 7649
+            "column": 7655
           }
         }
       },
@@ -1490,11 +1490,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 7665
+            "column": 7671
           },
           "end": {
             "line": 5,
-            "column": 7741
+            "column": 7747
           }
         }
       },
@@ -1504,11 +1504,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 7757
+            "column": 7763
           },
           "end": {
             "line": 5,
-            "column": 7838
+            "column": 7844
           }
         }
       },
@@ -1518,11 +1518,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 7854
+            "column": 7860
           },
           "end": {
             "line": 5,
-            "column": 7935
+            "column": 7941
           }
         }
       },
@@ -1532,11 +1532,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 7951
+            "column": 7957
           },
           "end": {
             "line": 5,
-            "column": 8022
+            "column": 8028
           }
         }
       },
@@ -1546,11 +1546,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 8038
+            "column": 8044
           },
           "end": {
             "line": 5,
-            "column": 8111
+            "column": 8117
           }
         }
       },
@@ -1560,11 +1560,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 8127
+            "column": 8133
           },
           "end": {
             "line": 5,
-            "column": 8203
+            "column": 8209
           }
         }
       },
@@ -1574,11 +1574,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 8219
+            "column": 8225
           },
           "end": {
             "line": 5,
-            "column": 8295
+            "column": 8301
           }
         }
       },
@@ -1588,11 +1588,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 8311
+            "column": 8317
           },
           "end": {
             "line": 5,
-            "column": 8388
+            "column": 8394
           }
         }
       },
@@ -1602,11 +1602,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 8404
+            "column": 8410
           },
           "end": {
             "line": 5,
-            "column": 8477
+            "column": 8483
           }
         }
       },
@@ -1616,11 +1616,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 8493
+            "column": 8499
           },
           "end": {
             "line": 5,
-            "column": 8568
+            "column": 8574
           }
         }
       },
@@ -1630,11 +1630,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 8584
+            "column": 8590
           },
           "end": {
             "line": 5,
-            "column": 8657
+            "column": 8663
           }
         }
       },
@@ -1644,11 +1644,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 8673
+            "column": 8679
           },
           "end": {
             "line": 5,
-            "column": 8747
+            "column": 8753
           }
         }
       },
@@ -1658,11 +1658,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 8763
+            "column": 8769
           },
           "end": {
             "line": 5,
-            "column": 8838
+            "column": 8844
           }
         }
       },
@@ -1672,11 +1672,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 8854
+            "column": 8860
           },
           "end": {
             "line": 5,
-            "column": 8927
+            "column": 8933
           }
         }
       },
@@ -1686,11 +1686,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 8943
+            "column": 8949
           },
           "end": {
             "line": 5,
-            "column": 9016
+            "column": 9022
           }
         }
       },
@@ -1700,11 +1700,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 9032
+            "column": 9038
           },
           "end": {
             "line": 5,
-            "column": 9119
+            "column": 9125
           }
         }
       },
@@ -1714,11 +1714,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 9135
+            "column": 9141
           },
           "end": {
             "line": 5,
-            "column": 9217
+            "column": 9223
           }
         }
       },
@@ -1728,11 +1728,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 9233
+            "column": 9239
           },
           "end": {
             "line": 5,
-            "column": 9321
+            "column": 9327
           }
         }
       },
@@ -1742,11 +1742,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 9337
+            "column": 9343
           },
           "end": {
             "line": 5,
-            "column": 9422
+            "column": 9428
           }
         }
       },
@@ -1756,11 +1756,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 9438
+            "column": 9444
           },
           "end": {
             "line": 5,
-            "column": 9521
+            "column": 9527
           }
         }
       },
@@ -1770,11 +1770,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 9537
+            "column": 9543
           },
           "end": {
             "line": 5,
-            "column": 9624
+            "column": 9630
           }
         }
       },
@@ -1784,11 +1784,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 9640
+            "column": 9646
           },
           "end": {
             "line": 5,
-            "column": 9724
+            "column": 9730
           }
         }
       },
@@ -1798,11 +1798,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 9740
+            "column": 9746
           },
           "end": {
             "line": 5,
-            "column": 9822
+            "column": 9828
           }
         }
       },
@@ -1812,11 +1812,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 9838
+            "column": 9844
           },
           "end": {
             "line": 5,
-            "column": 9910
+            "column": 9916
           }
         }
       },
@@ -1826,11 +1826,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 9926
+            "column": 9932
           },
           "end": {
             "line": 5,
-            "column": 9999
+            "column": 10005
           }
         }
       },
@@ -1840,11 +1840,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 10015
+            "column": 10021
           },
           "end": {
             "line": 5,
-            "column": 10086
+            "column": 10092
           }
         }
       },
@@ -1854,11 +1854,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 10102
+            "column": 10108
           },
           "end": {
             "line": 5,
-            "column": 10182
+            "column": 10188
           }
         }
       },
@@ -1868,11 +1868,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 10198
+            "column": 10204
           },
           "end": {
             "line": 5,
-            "column": 10273
+            "column": 10279
           }
         }
       },
@@ -1882,11 +1882,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 10289
+            "column": 10295
           },
           "end": {
             "line": 5,
-            "column": 10365
+            "column": 10371
           }
         }
       },
@@ -1896,11 +1896,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 10381
+            "column": 10387
           },
           "end": {
             "line": 5,
-            "column": 10460
+            "column": 10466
           }
         }
       },
@@ -1910,11 +1910,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 10476
+            "column": 10482
           },
           "end": {
             "line": 5,
-            "column": 10547
+            "column": 10553
           }
         }
       },
@@ -1924,11 +1924,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 10563
+            "column": 10569
           },
           "end": {
             "line": 5,
-            "column": 10639
+            "column": 10645
           }
         }
       },
@@ -1938,11 +1938,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 10655
+            "column": 10661
           },
           "end": {
             "line": 5,
-            "column": 10731
+            "column": 10737
           }
         }
       },
@@ -1952,11 +1952,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 10747
+            "column": 10753
           },
           "end": {
             "line": 5,
-            "column": 10821
+            "column": 10827
           }
         }
       },
@@ -1966,11 +1966,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 10837
+            "column": 10843
           },
           "end": {
             "line": 5,
-            "column": 10906
+            "column": 10912
           }
         }
       },
@@ -1980,11 +1980,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 10922
+            "column": 10928
           },
           "end": {
             "line": 5,
-            "column": 10998
+            "column": 11004
           }
         }
       },
@@ -1994,11 +1994,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 11014
+            "column": 11020
           },
           "end": {
             "line": 5,
-            "column": 11087
+            "column": 11093
           }
         }
       },
@@ -2008,11 +2008,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 11103
+            "column": 11109
           },
           "end": {
             "line": 5,
-            "column": 11177
+            "column": 11183
           }
         }
       },
@@ -2022,11 +2022,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 11193
+            "column": 11199
           },
           "end": {
             "line": 5,
-            "column": 11268
+            "column": 11274
           }
         }
       },
@@ -2036,11 +2036,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 11284
+            "column": 11290
           },
           "end": {
             "line": 5,
-            "column": 11355
+            "column": 11361
           }
         }
       },
@@ -2050,11 +2050,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 11371
+            "column": 11377
           },
           "end": {
             "line": 5,
-            "column": 11445
+            "column": 11451
           }
         }
       },
@@ -2064,11 +2064,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 11461
+            "column": 11467
           },
           "end": {
             "line": 5,
-            "column": 11533
+            "column": 11539
           }
         }
       },
@@ -2078,11 +2078,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 11549
+            "column": 11555
           },
           "end": {
             "line": 5,
-            "column": 11629
+            "column": 11635
           }
         }
       },
@@ -2092,11 +2092,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 11645
+            "column": 11651
           },
           "end": {
             "line": 5,
-            "column": 11722
+            "column": 11728
           }
         }
       },
@@ -2106,11 +2106,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 11738
+            "column": 11744
           },
           "end": {
             "line": 5,
-            "column": 11815
+            "column": 11821
           }
         }
       },
@@ -2120,11 +2120,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 11831
+            "column": 11837
           },
           "end": {
             "line": 5,
-            "column": 11904
+            "column": 11910
           }
         }
       },
@@ -2134,11 +2134,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 11920
+            "column": 11926
           },
           "end": {
             "line": 5,
-            "column": 11995
+            "column": 12001
           }
         }
       },
@@ -2148,11 +2148,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 12011
+            "column": 12017
           },
           "end": {
             "line": 5,
-            "column": 12083
+            "column": 12089
           }
         }
       },
@@ -2162,11 +2162,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 12099
+            "column": 12105
           },
           "end": {
             "line": 5,
-            "column": 12171
+            "column": 12177
           }
         }
       },
@@ -2176,11 +2176,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 12187
+            "column": 12193
           },
           "end": {
             "line": 5,
-            "column": 12257
+            "column": 12263
           }
         }
       },
@@ -2190,11 +2190,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 12273
+            "column": 12279
           },
           "end": {
             "line": 5,
-            "column": 12346
+            "column": 12352
           }
         }
       },
@@ -2204,11 +2204,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 12362
+            "column": 12368
           },
           "end": {
             "line": 5,
-            "column": 12433
+            "column": 12439
           }
         }
       },
@@ -2218,11 +2218,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 12449
+            "column": 12455
           },
           "end": {
             "line": 5,
-            "column": 12520
+            "column": 12526
           }
         }
       },
@@ -2232,11 +2232,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 12536
+            "column": 12542
           },
           "end": {
             "line": 5,
-            "column": 12607
+            "column": 12613
           }
         }
       },
@@ -2246,11 +2246,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 12623
+            "column": 12629
           },
           "end": {
             "line": 5,
-            "column": 12695
+            "column": 12701
           }
         }
       },
@@ -2260,11 +2260,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 12711
+            "column": 12717
           },
           "end": {
             "line": 5,
-            "column": 12777
+            "column": 12783
           }
         }
       },
@@ -2274,11 +2274,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 12793
+            "column": 12799
           },
           "end": {
             "line": 5,
-            "column": 12863
+            "column": 12869
           }
         }
       },
@@ -2288,11 +2288,11 @@
         "loc": {
           "start": {
             "line": 5,
-            "column": 12879
+            "column": 12885
           },
           "end": {
             "line": 5,
-            "column": 12949
+            "column": 12955
           }
         }
       }
@@ -2371,15 +2371,15 @@
       },
       {
         "isExternal": false,
-        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/CASTAPI.ts"
-      },
-      {
-        "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/GPGAPI/RequestGPG.ts"
       },
       {
         "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/GPGAPI/ResponseGPG.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/HybridWebView.ts"
       },
       {
         "isExternal": false,
@@ -3429,7 +3429,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Asset/SpriteAsset.ts": {
     "mTimestamp": {
-      "mtime": 1689911927746.5051,
+      "mtime": 1702622409364.0344,
       "uuid": "40288a4a-5fc9-4ac8-91d0-d29e9265f5b1"
     },
     "chunkId": "assets/Script/Asset/SpriteAsset.js",
@@ -3978,7 +3978,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/SendCommand.ts": {
     "mTimestamp": {
-      "mtime": 1690969480085.291,
+      "mtime": 1702620325171.459,
       "uuid": "8d88cca0-265b-4f29-be3a-28fcec44331f"
     },
     "chunkId": "assets/Script/Contorll/Api/SendCommand.js",
@@ -5548,7 +5548,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Lobby/Page/Setting/ItemLink.ts": {
     "mTimestamp": {
-      "mtime": 1698638195305.4116,
+      "mtime": 1702623053323.5896,
       "uuid": "2953dca7-87d6-4f43-a134-df3beb8d852b"
     },
     "chunkId": "assets/Script/Contorll/Lobby/Page/Setting/ItemLink.js",
@@ -5574,58 +5574,58 @@
         }
       },
       {
-        "value": "../../../../Enum/MarkSixCommandType",
+        "value": "../../../../Model/ComponentBase",
         "rewritten": "__unresolved_1",
         "loc": {
           "start": {
             "line": 2,
-            "column": 35
-          },
-          "end": {
-            "line": 2,
-            "column": 72
-          }
-        }
-      },
-      {
-        "value": "../../../../Model/ComponentBase",
-        "rewritten": "__unresolved_2",
-        "loc": {
-          "start": {
-            "line": 3,
             "column": 26
           },
           "end": {
-            "line": 3,
+            "line": 2,
             "column": 59
           }
         }
       },
       {
         "value": "../../../../Model/PublicData",
-        "rewritten": "__unresolved_3",
+        "rewritten": "__unresolved_2",
         "loc": {
           "start": {
-            "line": 4,
+            "line": 3,
             "column": 23
           },
           "end": {
-            "line": 4,
+            "line": 3,
             "column": 53
           }
         }
       },
       {
         "value": "../../../../Model/PublicModel",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 24
+          },
+          "end": {
+            "line": 4,
+            "column": 55
+          }
+        }
+      },
+      {
+        "value": "../../../Api/HybridWebView",
         "rewritten": "__unresolved_4",
         "loc": {
           "start": {
             "line": 5,
-            "column": 24
+            "column": 26
           },
           "end": {
             "line": 5,
-            "column": 55
+            "column": 54
           }
         }
       }
@@ -5648,10 +5648,6 @@
       },
       {
         "isExternal": false,
-        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/MarkSixCommandType.ts"
-      },
-      {
-        "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/ComponentBase.ts"
       },
       {
@@ -5661,6 +5657,10 @@
       {
         "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicModel.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/HybridWebView.ts"
       }
     ]
   },
@@ -7939,7 +7939,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/NoClearNode/PanelSystemMessage.ts": {
     "mTimestamp": {
-      "mtime": 1691393677050.5188,
+      "mtime": 1702622217849.7393,
       "uuid": "7bad3d7e-9485-475d-bd53-d21ba8c5d95c"
     },
     "chunkId": "assets/Script/Contorll/NoClearNode/PanelSystemMessage.js",
@@ -7956,25 +7956,25 @@
         "loc": {
           "start": {
             "line": 1,
-            "column": 110
+            "column": 71
           },
           "end": {
             "line": 1,
-            "column": 114
+            "column": 75
           }
         }
       },
       {
-        "value": "../../Manager/ButtonMng",
+        "value": "../../../Patten/Singleton/BaseSingletonComponent",
         "rewritten": "__unresolved_1",
         "loc": {
           "start": {
             "line": 2,
-            "column": 22
+            "column": 35
           },
           "end": {
             "line": 2,
-            "column": 47
+            "column": 85
           }
         }
       },
@@ -8007,58 +8007,58 @@
         }
       },
       {
-        "value": "../../Socket/SocketSetting",
+        "value": "../../Enum/LangType",
         "rewritten": "__unresolved_4",
         "loc": {
           "start": {
             "line": 5,
-            "column": 26
-          },
-          "end": {
-            "line": 5,
-            "column": 54
-          }
-        }
-      },
-      {
-        "value": "../../Enum/LangType",
-        "rewritten": "__unresolved_5",
-        "loc": {
-          "start": {
-            "line": 6,
             "column": 25
           },
           "end": {
-            "line": 6,
+            "line": 5,
             "column": 46
           }
         }
       },
       {
         "value": "../../Enum/WebSocketEvent",
-        "rewritten": "__unresolved_6",
+        "rewritten": "__unresolved_5",
         "loc": {
           "start": {
-            "line": 7,
+            "line": 6,
             "column": 31
           },
           "end": {
-            "line": 7,
+            "line": 6,
             "column": 58
           }
         }
       },
       {
-        "value": "../../../Patten/Singleton/BaseSingletonComponent",
+        "value": "../../Manager/ButtonMng",
+        "rewritten": "__unresolved_6",
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 22
+          },
+          "end": {
+            "line": 7,
+            "column": 47
+          }
+        }
+      },
+      {
+        "value": "../../Socket/SocketSetting",
         "rewritten": "__unresolved_7",
         "loc": {
           "start": {
             "line": 8,
-            "column": 35
+            "column": 26
           },
           "end": {
             "line": 8,
-            "column": 85
+            "column": 54
           }
         }
       }
@@ -8081,7 +8081,7 @@
       },
       {
         "isExternal": false,
-        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/ButtonMng.ts"
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Patten/Singleton/BaseSingletonComponent.ts"
       },
       {
         "isExternal": false,
@@ -8093,10 +8093,6 @@
       },
       {
         "isExternal": false,
-        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Socket/SocketSetting.ts"
-      },
-      {
-        "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/LangType.ts"
       },
       {
@@ -8105,7 +8101,11 @@
       },
       {
         "isExternal": false,
-        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Patten/Singleton/BaseSingletonComponent.ts"
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/ButtonMng.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Socket/SocketSetting.ts"
       }
     ]
   },
@@ -9442,7 +9442,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/EventMng.ts": {
     "mTimestamp": {
-      "mtime": 1689911927745.5054,
+      "mtime": 1702622125585.244,
       "uuid": "1d41376c-2f3a-4dec-83d2-0c4bd8bbaf87"
     },
     "chunkId": "assets/Script/Manager/EventMng.js",
@@ -10882,7 +10882,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/PublicData.ts": {
     "mTimestamp": {
-      "mtime": 1698649088969.0818,
+      "mtime": 1702623333942.9514,
       "uuid": "6750800d-d6ea-4105-8305-2caf3041fb12"
     },
     "chunkId": "assets/Script/Model/PublicData.js",
@@ -11001,7 +11001,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/Player.ts": {
     "mTimestamp": {
-      "mtime": 1691488549992.624,
+      "mtime": 1702622726201.2566,
       "uuid": "c06b1ce1-9942-4bcc-94ad-976d02243e39"
     },
     "chunkId": "assets/Script/Model/Player.js",
@@ -11220,7 +11220,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Socket/GameWebSocket.ts": {
     "mTimestamp": {
-      "mtime": 1698635881649.586,
+      "mtime": 1702622453060.5837,
       "uuid": "15ca959a-c72f-453d-8fb1-71a3c53467c0"
     },
     "chunkId": "assets/Script/Socket/GameWebSocket.js",
@@ -11554,7 +11554,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/SocketModel.ts": {
     "mTimestamp": {
-      "mtime": 1698635697213.2441,
+      "mtime": 1702622353795.9153,
       "uuid": "d543d8b6-2d0c-402a-bcda-1b8934c0e8fd"
     },
     "chunkId": "assets/Script/Model/SocketModel.js",
@@ -12287,7 +12287,7 @@
   },
   "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/State/MessageState.ts": {
     "mTimestamp": {
-      "mtime": 1691393662127.7495,
+      "mtime": 1702622051193.1646,
       "uuid": "b743ab4e-0654-4291-aeca-9face21a2c00"
     },
     "chunkId": "assets/Script/State/MessageState.js",
@@ -12300,28 +12300,15 @@
         "value": "cc"
       },
       {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 1,
-            "column": 21
-          },
-          "end": {
-            "line": 1,
-            "column": 25
-          }
-        }
-      },
-      {
         "value": "../../Patten/StatePatten",
         "rewritten": "__unresolved_1",
         "loc": {
           "start": {
-            "line": 2,
+            "line": 1,
             "column": 22
           },
           "end": {
-            "line": 2,
+            "line": 1,
             "column": 48
           }
         }
@@ -12331,18 +12318,32 @@
         "rewritten": "__unresolved_2",
         "loc": {
           "start": {
-            "line": 3,
+            "line": 2,
             "column": 31
           },
           "end": {
-            "line": 3,
+            "line": 2,
             "column": 75
           }
         }
       },
       {
-        "value": "../Enum/NotificationType",
+        "value": "../Enum/GameStateEvent",
         "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 31
+          },
+          "end": {
+            "line": 3,
+            "column": 55
+          }
+        }
+      },
+      {
+        "value": "../Enum/NotificationType",
+        "rewritten": "__unresolved_4",
         "loc": {
           "start": {
             "line": 4,
@@ -12355,8 +12356,8 @@
         }
       },
       {
-        "value": "../Enum/GameStateEvent",
-        "rewritten": "__unresolved_4",
+        "value": "../Enum/WebSocketEvent",
+        "rewritten": "__unresolved_5",
         "loc": {
           "start": {
             "line": 5,
@@ -12370,7 +12371,7 @@
       },
       {
         "value": "../Manager/EventMng",
-        "rewritten": "__unresolved_5",
+        "rewritten": "__unresolved_6",
         "loc": {
           "start": {
             "line": 6,
@@ -12379,20 +12380,6 @@
           "end": {
             "line": 6,
             "column": 42
-          }
-        }
-      },
-      {
-        "value": "../Model/ButtonFunctionApi",
-        "rewritten": "__unresolved_6",
-        "loc": {
-          "start": {
-            "line": 7,
-            "column": 30
-          },
-          "end": {
-            "line": 7,
-            "column": 58
           }
         }
       }
@@ -12411,10 +12398,6 @@
       },
       {
         "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Patten/StatePatten.ts"
       },
       {
@@ -12423,19 +12406,19 @@
       },
       {
         "isExternal": false,
-        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/NotificationType.ts"
-      },
-      {
-        "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/GameStateEvent.ts"
       },
       {
         "isExternal": false,
-        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/EventMng.ts"
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/NotificationType.ts"
       },
       {
         "isExternal": false,
-        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Model/ButtonFunctionApi.ts"
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/WebSocketEvent.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Manager/EventMng.ts"
       }
     ]
   },
@@ -13429,7 +13412,7 @@
     ]
   },
   "cce:/internal/code-quality/cr.mjs": {
-    "mTimestamp": 1698893495559,
+    "mTimestamp": 1702623409737,
     "chunkId": "quick-pack:/cce/internal/code-quality/cr.js",
     "imports": [],
     "modLoMetadata": {
@@ -13438,7 +13421,7 @@
     "resolvedImports": []
   },
   "cce:/internal/ml/cjs-loader.mjs": {
-    "mTimestamp": 1698893495559,
+    "mTimestamp": 1702623409737,
     "chunkId": "quick-pack:/cce/internal/ml/cjs-loader.js",
     "imports": [],
     "modLoMetadata": {
@@ -17896,6 +17879,27 @@
       {
         "isExternal": false,
         "url": "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Enum/MarkSixCommandType.ts"
+      }
+    ]
+  },
+  "file:///C:/CocosProject/3.4.2_MarkSix/assets/Script/Contorll/Api/HybridWebView.ts": {
+    "mTimestamp": {
+      "mtime": 1702619053263.0957,
+      "uuid": "7bb8c870-213b-41d8-9f7f-cfe14a6ae74c"
+    },
+    "chunkId": "assets/Script/Contorll/Api/HybridWebView.js",
+    "imports": [
+      {
+        "value": "cc"
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
       }
     ]
   }

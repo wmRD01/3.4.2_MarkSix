@@ -1,0 +1,84 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+/library/
+/temp/asset-db
+/temp/crash
+/temp/declarations
+/temp/profiles
+/temp/startup.json
+/temp/scene
+/temp/tsconfig.cocos.json
+/temp/programming/preview
+/temp/programming/custom-macro
+/temp/programming/packer-driver/logs
+/temp/programming/packer-driver/VERSION
+/temp/programming/packer-driver/targets/editor
+/temp/programming/packer-driver/targets/preview/*.json
+/temp/programming/packer-driver/targets/preview/mods/cce
+/temp/programming/packer-driver/targets/preview/mods/fs/0/assets/script/d*
+/temp/programming/packer-driver/targets/preview/mods/fs/0/assets/script/f*
+/temp/programming/packer-driver/targets/preview/mods/fs/0/assets/script/logic
+/temp/programming/packer-driver/targets/preview/mods/fs/0/assets/script/NetConnection
+/temp/programming/packer-driver/targets/preview/mods/fs/0/assets/script/p*
+/temp/programming/packer-driver/targets/preview/mods/fs/0/assets/script/ui
+/temp/programming/packer-driver/targets/preview/mods/fs/0/assets/script/m*
+/temp/programming/packer-driver/targets/preview/mods/fs/0/assets/script/i18nMaster/r*
+/temp/programming/custom-macro.js
+
+# dependencies
+
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+
+ 
+/src/app/test
+/src/app/account/register
+*.rar
+*.zip
+.vscode/launch.json
+*.log
+logs
+package-lock.json
+scene.json
+
+# cocos creator
+library/
+build/
+temp/
+profiles/v2/packages/scene.json
+settings/v2/packages/cocos-service.json

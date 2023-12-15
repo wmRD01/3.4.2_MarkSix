@@ -23,12 +23,6 @@ export default class GameWebSocket extends SocketModel {
     isFirstData: boolean = true
 
     onEnable() {
-        try {
-
-            this.eventClarity(window, document, "clarity", "script", "j9po8bcu6a", "", "")
-        } catch (error) {
-
-        }
         this.eventSetting();
         this.judgePlatorm();
         this.Setting();
@@ -126,10 +120,11 @@ export default class GameWebSocket extends SocketModel {
         if ((window.isGPGServer || window.isInpokerServer) && this.urlData != undefined) {
             let _gameConfig = new URLVlaue()
             PublicModel.getInstance.TwoClassCheckData(_gameConfig, this.urlData);
-
+            PublicData.getInstance.isApp = _gameConfig.app
             this.account = _gameConfig.memberid
             _ln.account = this.account
             _ln.key = _gameConfig.token;
+
         }
         else if (this.urlData != undefined) {
             let _gameConfig = new URLVlaue()

@@ -20,6 +20,15 @@ export default class EventMng extends BaseSingleton<EventMng>() {
             this.mapEvnet.set(index, new EventTarget())
         }
     }
+    emit(notiType: NotificationType, emitType: string | number, ...any: any[]) {
+        this.mapEvnet.get(notiType).emit(emitType, ...any);
+    }
+    setEvent(notiType: NotificationType, emitType: string | number, callback: any | Function, target: any) {
+        this.mapEvnet.get(notiType).on(emitType, callback, target)
+    }
+    deletEvent(notiType: NotificationType, emitType: string | number, callback: any | Function, target: any) {
+        this.mapEvnet.get(notiType).on(emitType, callback, target)
+    }
 }
 
 

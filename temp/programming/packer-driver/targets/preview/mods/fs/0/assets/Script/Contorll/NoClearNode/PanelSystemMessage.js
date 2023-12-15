@@ -1,12 +1,12 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, Button, find, Label, UITransform, v3, _decorator, ButtonMng, MyMath, GameEvent, SocketSetting, LangType, WebSocketEvent, BaseSingletonComponent, _dec, _class, _temp, _crd, ccclass, property, PanelSystemMessage;
+  var _reporterNs, _cclegacy, Button, find, Label, UITransform, v3, _decorator, BaseSingletonComponent, MyMath, GameEvent, LangType, WebSocketEvent, ButtonMng, SocketSetting, _dec, _class, _temp, _crd, ccclass, property, PanelSystemMessage;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-  function _reportPossibleCrUseOfButtonMng(extras) {
-    _reporterNs.report("ButtonMng", "../../Manager/ButtonMng", _context.meta, extras);
+  function _reportPossibleCrUseOfBaseSingletonComponent(extras) {
+    _reporterNs.report("BaseSingletonComponent", "../../../Patten/Singleton/BaseSingletonComponent", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfMyMath(extras) {
@@ -17,10 +17,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("GameEvent", "../../Enum/GameEvent", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfSocketSetting(extras) {
-    _reporterNs.report("SocketSetting", "../../Socket/SocketSetting", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfLangType(extras) {
     _reporterNs.report("LangType", "../../Enum/LangType", _context.meta, extras);
   }
@@ -29,8 +25,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("WebSocketEvent", "../../Enum/WebSocketEvent", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfBaseSingletonComponent(extras) {
-    _reporterNs.report("BaseSingletonComponent", "../../../Patten/Singleton/BaseSingletonComponent", _context.meta, extras);
+  function _reportPossibleCrUseOfButtonMng(extras) {
+    _reporterNs.report("ButtonMng", "../../Manager/ButtonMng", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfSocketSetting(extras) {
+    _reporterNs.report("SocketSetting", "../../Socket/SocketSetting", _context.meta, extras);
   }
 
   return {
@@ -45,19 +45,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       v3 = _cc.v3;
       _decorator = _cc._decorator;
     }, function (_unresolved_2) {
-      ButtonMng = _unresolved_2.default;
+      BaseSingletonComponent = _unresolved_2.default;
     }, function (_unresolved_3) {
       MyMath = _unresolved_3.default;
     }, function (_unresolved_4) {
       GameEvent = _unresolved_4.GameEvent;
     }, function (_unresolved_5) {
-      SocketSetting = _unresolved_5.default;
+      LangType = _unresolved_5.LangType;
     }, function (_unresolved_6) {
-      LangType = _unresolved_6.LangType;
+      WebSocketEvent = _unresolved_6.WebSocketEvent;
     }, function (_unresolved_7) {
-      WebSocketEvent = _unresolved_7.WebSocketEvent;
+      ButtonMng = _unresolved_7.default;
     }, function (_unresolved_8) {
-      BaseSingletonComponent = _unresolved_8.default;
+      SocketSetting = _unresolved_8.default;
     }],
     execute: function () {
       _crd = true;
@@ -88,6 +88,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "labelCancel", void 0);
 
           _defineProperty(this, "twoBtnPositionX", void 0);
+
+          _defineProperty(this, "confirmCallback", void 0);
         }
 
         onLoad() {
@@ -100,12 +102,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.labelCancel = find("LabelCancel", this.nodeFrame).getComponent(Label);
           this.labelCaption = find("LabelCaption", this.nodeFrame).getComponent(Label);
           this.hide();
-        }
-
-        onEnable() {
-          this.setEvent((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
-            error: Error()
-          }), GameEvent) : GameEvent).SystemMessage, this.onSystemMessage);
           this.setEvent((_crd && GameEvent === void 0 ? (_reportPossibleCrUseOfGameEvent({
             error: Error()
           }), GameEvent) : GameEvent).SetLanguage, this.setLanguage);
@@ -145,19 +141,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           super.setLanguage();
         }
 
-        showSingleConfirm(caption, confirm) {
+        showSingleConfirm(caption, _callBack) {
           this.messageInit(caption);
           this.buttonConfirm.node.setPosition(0, -128);
-          if (confirm) (_crd && ButtonMng === void 0 ? (_reportPossibleCrUseOfButtonMng({
+          this.confirmCallback = _callBack;
+          (_crd && ButtonMng === void 0 ? (_reportPossibleCrUseOfButtonMng({
             error: Error()
-          }), ButtonMng) : ButtonMng).addEvent(confirm.target, confirm.callback, this.buttonConfirm, confirm.callbackValue ? confirm.callbackValue : null);else {
-            (_crd && ButtonMng === void 0 ? (_reportPossibleCrUseOfButtonMng({
-              error: Error()
-            }), ButtonMng) : ButtonMng).clearEvent(this.buttonConfirm);
-            (_crd && ButtonMng === void 0 ? (_reportPossibleCrUseOfButtonMng({
-              error: Error()
-            }), ButtonMng) : ButtonMng).addEvent(this, "closeMessage", this.buttonConfirm);
-          }
+          }), ButtonMng) : ButtonMng).clearEvent(this.buttonConfirm);
+          if (_callBack) (_crd && ButtonMng === void 0 ? (_reportPossibleCrUseOfButtonMng({
+            error: Error()
+          }), ButtonMng) : ButtonMng).addEvent(this, "onCallBack", this.buttonConfirm);
+          (_crd && ButtonMng === void 0 ? (_reportPossibleCrUseOfButtonMng({
+            error: Error()
+          }), ButtonMng) : ButtonMng).addEvent(this, "addClickEffect", this.buttonConfirm, "btn_enter");
+          (_crd && ButtonMng === void 0 ? (_reportPossibleCrUseOfButtonMng({
+            error: Error()
+          }), ButtonMng) : ButtonMng).addEvent(this, "hide", this.buttonConfirm);
 
           if (!this.buttonConfirm.node.active) {
             this.buttonConfirm.node.active = true;
@@ -212,15 +211,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.buttonConfirm.node.active = true;
             this.labelConfirm.node.active = true;
           }
-        } //暫時開通
-
-
-        onSystemMessage(caption, _buttonFunctionApi) {
-          this.showSingleConfirm(caption, _buttonFunctionApi);
-        }
-
-        closeMessage(caption, _buttonFunctionApi) {
-          this.hide();
         }
 
         closeWindow() {

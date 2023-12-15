@@ -53,6 +53,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }
         }
 
+        emit(notiType, emitType) {
+          for (var _len = arguments.length, any = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+            any[_key - 2] = arguments[_key];
+          }
+
+          this.mapEvnet.get(notiType).emit(emitType, ...any);
+        }
+
+        setEvent(notiType, emitType, callback, target) {
+          this.mapEvnet.get(notiType).on(emitType, callback, target);
+        }
+
+        deletEvent(notiType, emitType, callback, target) {
+          this.mapEvnet.get(notiType).on(emitType, callback, target);
+        }
+
       }, _temp)) || _class));
 
       _cclegacy._RF.pop();

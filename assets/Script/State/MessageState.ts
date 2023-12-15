@@ -1,10 +1,9 @@
-import { find } from "cc";
 import { State } from "../../Patten/StatePatten";
 import PanelSystemMessage from "../Contorll/NoClearNode/PanelSystemMessage";
-import { NotificationType } from "../Enum/NotificationType";
 import { GameStateEvent } from "../Enum/GameStateEvent";
+import { NotificationType } from "../Enum/NotificationType";
+import { WebSocketEvent } from "../Enum/WebSocketEvent";
 import EventMng from "../Manager/EventMng";
-import ButtonFunctionApi from "../Model/ButtonFunctionApi";
 
 export class ShowConfirmMessage extends State {
     public changeState(caption: string): void {
@@ -26,10 +25,9 @@ export class BackHomeMessage extends State {
         if (PanelSystemMessage.instance.node.active) PanelSystemMessage.instance.setCaption(caption)
         else {
             //引用會有循環問題
-            let confirmBtn = new ButtonFunctionApi()
-            confirmBtn.target = find("GameWebSocekt").getComponent("GameWebSocket")
-            confirmBtn.callback = "onCloseWindow"
-            PanelSystemMessage.instance.showSingleConfirm(caption,confirmBtn);
+            PanelSystemMessage.instance.showSingleConfirm(caption, () => {
+                EventMng.getInstance.emit(NotificationType.Pulic, WebSocketEvent.CloseWindow)
+            });
         }
     }
 }

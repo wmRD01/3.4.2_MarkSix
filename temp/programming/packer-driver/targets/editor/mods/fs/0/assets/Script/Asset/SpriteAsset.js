@@ -73,7 +73,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           formatArr.push(this.typePath + "Lang/" + lang);
           resources.load(formatArr, SpriteAtlas, (err, data) => {
             if (err) {
-              this.loadLogo("en");
+              this.loadLogo("USD");
               return;
             } // console.log(data);
 

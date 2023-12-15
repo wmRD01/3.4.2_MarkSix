@@ -53,6 +53,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }
         }
 
+        emit(notiType, emitType, ...any) {
+          this.mapEvnet.get(notiType).emit(emitType, ...any);
+        }
+
+        setEvent(notiType, emitType, callback, target) {
+          this.mapEvnet.get(notiType).on(emitType, callback, target);
+        }
+
+        deletEvent(notiType, emitType, callback, target) {
+          this.mapEvnet.get(notiType).on(emitType, callback, target);
+        }
+
       }, _temp)) || _class));
 
       _cclegacy._RF.pop();

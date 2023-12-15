@@ -1,11 +1,11 @@
-import { Button, Component, EditBox, find, game, Label, macro, Node, UITransform, v3, Vec3, _decorator } from "cc";
-import ButtonMng from "../../Manager/ButtonMng";
+import { Button, find, Label, Node, UITransform, v3, _decorator } from "cc";
+import BaseSingletonComponent from "../../../Patten/Singleton/BaseSingletonComponent";
 import MyMath from "../../../Plug/MyMath";
 import { GameEvent } from "../../Enum/GameEvent";
-import SocketSetting from "../../Socket/SocketSetting";
 import { LangType } from "../../Enum/LangType";
 import { WebSocketEvent } from "../../Enum/WebSocketEvent";
-import BaseSingletonComponent from "../../../Patten/Singleton/BaseSingletonComponent";
+import ButtonMng from "../../Manager/ButtonMng";
+import SocketSetting from "../../Socket/SocketSetting";
 const { ccclass, property } = _decorator;
 @ccclass('PanelSystemMessage')
 export default class PanelSystemMessage extends BaseSingletonComponent<PanelSystemMessage>() {
@@ -16,6 +16,7 @@ export default class PanelSystemMessage extends BaseSingletonComponent<PanelSyst
     buttonCancel: Button;
     labelCancel: Label;
     twoBtnPositionX: number
+    confirmCallback: Function;
     onLoad() {
         super.onLoad()
         this.nodeFrame = find("Frame", this.node)
@@ -26,11 +27,8 @@ export default class PanelSystemMessage extends BaseSingletonComponent<PanelSyst
         this.labelCancel = find("LabelCancel", this.nodeFrame).getComponent(Label)
         this.labelCaption = find("LabelCaption", this.nodeFrame).getComponent(Label)
         this.hide()
-
-    }
-    onEnable() {
-        this.setEvent(GameEvent.SystemMessage, this.onSystemMessage)
         this.setEvent(GameEvent.SetLanguage, this.setLanguage)
+
     }
     update() {
         if (this.buttonConfirm.node.active) {
@@ -49,15 +47,16 @@ export default class PanelSystemMessage extends BaseSingletonComponent<PanelSyst
         this.labelCancel.string = SocketSetting.t("1001", LangType.Game)
         super.setLanguage()
     }
-    showSingleConfirm(caption: string, confirm?: ButtonFunctionApi) {
+    showSingleConfirm(caption: string, _callBack?: Function, ...arg: any) {
         this.messageInit(caption)
+
         this.buttonConfirm.node.setPosition(0, -128);
-        if (confirm)
-            ButtonMng.addEvent(confirm.target, confirm.callback, this.buttonConfirm, confirm.callbackValue ? confirm.callbackValue : null);
-        else {
-            ButtonMng.clearEvent(this.buttonConfirm);
-            ButtonMng.addEvent(this, "closeMessage", this.buttonConfirm);
-        }
+        this.confirmCallback = _callBack
+        ButtonMng.clearEvent(this.buttonConfirm);
+        if (_callBack)
+            ButtonMng.addEvent(this, "onCallBack", this.buttonConfirm);
+        ButtonMng.addEvent(this, "addClickEffect", this.buttonConfirm, "btn_enter");
+        ButtonMng.addEvent(this, "hide", this.buttonConfirm);
         if (!this.buttonConfirm.node.active) {
             this.buttonConfirm.node.active = true;
             this.labelConfirm.node.active = true;
@@ -96,13 +95,7 @@ export default class PanelSystemMessage extends BaseSingletonComponent<PanelSyst
             this.labelConfirm.node.active = true;
         }
     }
-    //暫時開通
-    onSystemMessage(caption: string, _buttonFunctionApi?: ButtonFunctionApi) {
-        this.showSingleConfirm(caption, _buttonFunctionApi)
-    }
-    closeMessage(caption: string, _buttonFunctionApi?: ButtonFunctionApi) {
-        this.hide()
-    }
+
     closeWindow() {
         this.eventEmit(WebSocketEvent.CloseWindow)
     }

@@ -35,7 +35,7 @@ class SpriteAsset implements IAsset {
         formatArr.push(this.typePath + "Lang/" + lang)
         resources.load(formatArr, SpriteAtlas, (err, data: Array<SpriteAtlas>) => {
             if (err) {
-                this.loadLogo("en")
+                this.loadLogo("USD")
                 return
             }
             // console.log(data);

@@ -82,7 +82,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           _defineProperty(this, "UserLanguage", void 0);
 
-          _defineProperty(this, "ContainLanguage", ["tw", "cn", "en", "vn", "th", "id", "jp"]);
+          _defineProperty(this, "ContainLanguage", ["NTD", "CNY", "USD", "VND", "THB", "IND", "JPY"]);
 
           _defineProperty(this, "FormatLanguageURL", void 0);
 
@@ -138,7 +138,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           var serverhost = this.serverhost == "inpoker.best" || this.serverhost == "211.22.137.96" ? "inpoker.best" : "inpoker.fun";
           this.httpServerURL = "http://" + serverhost + "/"; // HTTP Server URL
 
-          this.UserLanguage = "tw"; // 
+          this.UserLanguage = "NTD"; // 
 
           this.libPath = this.checkLanguagePath(); // 語言包路徑
           // console.log(this.libPath);  

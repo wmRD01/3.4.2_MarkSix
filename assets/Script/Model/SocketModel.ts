@@ -30,7 +30,7 @@ export default class SocketModel extends BaseComponent {
     /**
      * 全部語系tw(繁)cn(簡)en(英)vn(越)th(泰)id(印)
      */
-    ContainLanguage: string[] = ["tw", "cn", "en", "vn", "th", "id", "jp"];
+    ContainLanguage: string[] = ["NTD", "CNY", "USD", "VND", "THB", "IND", "JPY"];
     /**
      * 重新拼湊後的網址
      */
@@ -109,7 +109,7 @@ export default class SocketModel extends BaseComponent {
         this.LoginState = "2"; // 0註冊 1登入 2遊客, 3:正式.
         let serverhost = (this.serverhost == "inpoker.best" || this.serverhost == "211.22.137.96") ? "inpoker.best" : "inpoker.fun";
         this.httpServerURL = "http://" + serverhost + "/"; // HTTP Server URL
-        this.UserLanguage = "tw"; // 
+        this.UserLanguage = "NTD"; // 
         this.libPath = this.checkLanguagePath(); // 語言包路徑
         // console.log(this.libPath);  
         // console.log(window.location.href.indexOf("github"));

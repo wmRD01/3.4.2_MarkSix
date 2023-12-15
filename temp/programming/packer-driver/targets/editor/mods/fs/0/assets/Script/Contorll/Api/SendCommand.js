@@ -26,6 +26,8 @@ System.register(["cc"], function (_export, _context) {
           _defineProperty(this, "token", void 0);
 
           _defineProperty(this, "memberid", void 0);
+
+          _defineProperty(this, "app", void 0);
         }
 
       }); //#endregion

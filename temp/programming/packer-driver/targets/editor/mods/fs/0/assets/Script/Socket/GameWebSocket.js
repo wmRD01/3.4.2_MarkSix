@@ -135,10 +135,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onEnable() {
-          try {
-            this.eventClarity(window, document, "clarity", "script", "j9po8bcu6a", "", "");
-          } catch (error) {}
-
           this.eventSetting();
           this.judgePlatorm();
           this.Setting();
@@ -283,6 +279,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             (_crd && PublicModel === void 0 ? (_reportPossibleCrUseOfPublicModel({
               error: Error()
             }), PublicModel) : PublicModel).getInstance.TwoClassCheckData(_gameConfig, this.urlData);
+            (_crd && PublicData === void 0 ? (_reportPossibleCrUseOfPublicData({
+              error: Error()
+            }), PublicData) : PublicData).getInstance.isApp = _gameConfig.app;
             this.account = _gameConfig.memberid;
             _ln.account = this.account;
             _ln.key = _gameConfig.token;

@@ -2,6 +2,8 @@
 export class URLVlaue {
     token: string;
     memberid: string;
+    /**透過前端官網傳送是否為app，因為她是webView我不管怎判斷都是browser，因此必須由前端給我 */
+    app:string;
 
 }
 //#endregion

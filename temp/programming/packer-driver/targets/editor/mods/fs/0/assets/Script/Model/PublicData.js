@@ -60,9 +60,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "BaseViewHeight", 1280);
 
-          _defineProperty(this, "gameVersion", "0.4.2");
+          _defineProperty(this, "gameVersion", "0.4.3");
 
-          _defineProperty(this, "onlineVersion", "0.4.2");
+          _defineProperty(this, "onlineVersion", "0.4.3");
 
           _defineProperty(this, "checkLoading", new (_crd && CheckLoading === void 0 ? (_reportPossibleCrUseOfCheckLoading({
             error: Error()
@@ -107,6 +107,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "markSixMsg", new (_crd && MarkSix === void 0 ? (_reportPossibleCrUseOfMarkSix({
             error: Error()
           }), MarkSix) : MarkSix)());
+
+          _defineProperty(this, "isApp", '0');
         }
 
         isChageOnline() {

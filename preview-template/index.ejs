@@ -16,16 +16,17 @@
         <meta name="force-rendering" content="webkit" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <link rel="stylesheet" type="text/css" href="./index.css" />
+      
     </head>
     <body>
         <%- include(cocosToolBar, {config: config}) %>
-        <div style="display: flex;flex: auto;align-items: center;">
+        <div style="display: flex; flex: auto; align-items: center">
             <%- include ./dist/index.html %>
             <div id="content" class="content">
                 <div class="contentWrap">
                     <div id="GameDiv" class="wrapper">
                         <div id="Cocos3dGameContainer">
-                            <canvas id="GameCanvas" tabindex="-1" style="background-color: '';"></canvas>
+                            <canvas id="GameCanvas" tabindex="-1" style="background-color: ''"></canvas>
                         </div>
                         <div id="splash">
                             <div class="progress-bar stripes"><span></span></div>
@@ -41,7 +42,8 @@
                     </div>
                 </div>
                 <p class="footer">
-                    Created with <a href="https://www.cocos.com/products" target="_blank" title="Cocos Creator">Cocos Creator</a>
+                    Created with
+                    <a href="https://www.cocos.com/products" target="_blank" title="Cocos Creator">Cocos Creator</a>
                 </p>
             </div>
         </div>
@@ -50,14 +52,20 @@
 </html>
 
 <script>
-    document.getElementsByClassName('toolbar')[0].insertAdjacentHTML('afterbegin', '<div><button id="btn-show-tree">Tree</button></div>');
+    document
+        .getElementsByClassName('toolbar')[0]
+        .insertAdjacentHTML('afterbegin', '<div><button id="btn-show-tree">Tree</button></div>');
     const devtoolsBtn = document.getElementById('btn-show-tree');
     let isOpen = !!localStorage.getItem('ccc_devtools_show');
     toggle(isOpen);
-    devtoolsBtn.addEventListener('click', () => {
-        isOpen = !isOpen;
-        toggle(isOpen);
-    }, false);
+    devtoolsBtn.addEventListener(
+        'click',
+        () => {
+            isOpen = !isOpen;
+            toggle(isOpen);
+        },
+        false
+    );
 
     function toggle(isOpen) {
         const devApp = document.getElementById('dev-app');

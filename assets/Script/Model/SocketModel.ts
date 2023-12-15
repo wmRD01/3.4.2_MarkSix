@@ -147,7 +147,7 @@ export default class SocketModel extends BaseComponent {
     }
     checkLanguagePath() {
         if (window.isVAServer || window.isInpokerServer)
-            return "../../lib/"; // 語言包路徑
+            return "https://twsixmark.com/app/lib/"; // 語言包路徑
         else if (window.isGitServer)
             return "https://wmrd01.github.io/BaccaratPlay/lib/"
         else//預設 // 本地端

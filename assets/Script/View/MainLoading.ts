@@ -1,9 +1,9 @@
-import { director, game, js, sys, _decorator } from "cc";
+import { director, game, sys, _decorator } from "cc";
 import BaseSingletonComponent from "../../Patten/Singleton/BaseSingletonComponent";
 import PanelLoading from "../Contorll/NoClearNode/PanelLoading";
-import { GameEvent } from "../Enum/GameEvent";
 import { GameSceneName } from "../Enum/GameSenceName";
 import AssetMng from "../Manager/AssetMng";
+import EventMng from "../Manager/EventMng";
 import MusicMng from "../Manager/MusicMng";
 import PublicData from "../Model/PublicData";
 const { ccclass, property } = _decorator;
@@ -19,6 +19,7 @@ export default class MainLoading extends BaseSingletonComponent<MainLoading>() {
         PublicData.getInstance.isResetView = true
         AssetMng.startLoad()
         MusicMng.init()
+        EventMng.getInstance.init()
     }
     start() {
         if (!sys.isMobile || (sys.isBrowser && sys.isMobile)) {

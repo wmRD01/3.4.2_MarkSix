@@ -18,7 +18,7 @@ enum ItemType {
 
 class MusicMng extends DataMusic {
 
-    async init(): Promise<void> {
+    async init() {
         await AssetMng.waitStateCheck(AssetType.Music)
         this.gameString = GameData.getInstance.gameID + "_" + GameData.getInstance.contentId
         this.audio_Music = new Node().addComponent(AudioSource);

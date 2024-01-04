@@ -73,7 +73,7 @@ export default class PanelHome extends BaseComponent {
     loopTime: number = 60
 
     onLoad() {
-        if (window.isGPGServer)
+        if (window.isGPGServer || PublicData.getInstance.isApp == "1")
             PublicData.getInstance.isChageOnline();
         this.marquee = this.labelMarquee.addComponent(Marquee)
         this.timer = this.labelTime.addComponent(Timer);
@@ -84,8 +84,8 @@ export default class PanelHome extends BaseComponent {
         this.setEvent(LobbyStateEvent.NextIssueID, this.reset)
         PublicData.getInstance.markSixMsg.connet()
         console.log(Player.getInstance.gpgToken);
-        
-        
+
+
     }
     async onEnable() {
         this.reset()

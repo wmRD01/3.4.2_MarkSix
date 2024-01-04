@@ -1,4 +1,5 @@
 import { EventTouch, _decorator } from 'cc';
+import { MarkSixCommandType } from '../../../../Enum/MarkSixCommandType';
 import BaseComponent from '../../../../Model/ComponentBase';
 import PublicData from '../../../../Model/PublicData';
 import PublicModel from '../../../../Model/PublicModel';
@@ -30,12 +31,14 @@ export default class ItemLink extends BaseComponent {
                 window.location.href = this.url
             else
                 HybridWebView.SendRawMessageToDotNet(this.url);
-        else
-            window.open(this.url)
+        else {
+
+            let _data = new SendData()
+            _data.name = this.node.name.split("Link")[0]
+            PublicData.getInstance.markSixMsg.send(MarkSixCommandType.contact, _data)
+        }
+        // window.open(this.url)
         // console.log(this.url);
-        // let _data = new SendData()
-        // _data.name = this.node.name.split("Link")[0]
-        // PublicData.getInstance.markSixMsg.send(MarkSixCommandType.contact, _data)
         // window.open(this.url)
     }
 }
@@ -49,7 +52,7 @@ enum WebUrlType {
 }
 enum NativeUrlType {
     /**官方 */
-    Official = "../index.html",
+    Official = "../",
     FaceBook = "https://www.facebook.com/GodPlayGameFun/",
     Instagram = "https://www.instagram.com/explore/tags/gpg/",
 }

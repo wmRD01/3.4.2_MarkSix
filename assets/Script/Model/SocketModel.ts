@@ -101,6 +101,12 @@ export default class SocketModel extends BaseComponent {
     // windows: String;
     // Game Server
     Setting() {
+        this.urlData = this.handleURLData(window.location.href)
+        /**確認是否為App 這個會從前端那邊傳 */
+        if (this.urlData != undefined)
+            PublicData.getInstance.isApp = (this.urlData as URLVlaue).app
+        console.log(this.urlData);
+
         // this.serverhost = "211.22.137.96"; // server host
         // this.ConnectionType = "ws"
         this.serverhost = "inpoker.va-game.com"; // server host
@@ -123,7 +129,6 @@ export default class SocketModel extends BaseComponent {
         this.account = "2324"
         this.usertoken = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjExMkVFRDgwNzBBMEY5RkIzRUI3RDc3RkU3NjAxMTU0IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2OTg2MzU1MjYsImV4cCI6MTcwMTIyNzUyNiwiaXNzIjoiaHR0cHM6Ly9pZHMuY2Vpcy50dyIsImNsaWVudF9pZCI6Im1hcmtfc2l4Iiwic3ViIjoiNTc3OSIsImF1dGhfdGltZSI6MTY5ODYzNTUyNiwiaWRwIjoibG9jYWwiLCJNZW1iZXJJRCI6IjU3NzkiLCJqdGkiOiJDM0FFQ0Q3RTJFN0VEMzg3RjU2QkVFOUE1RUE2RTAwNCIsImlhdCI6MTY5ODYzNTUyNiwic2NvcGUiOlsiZ2FtZS5saW5rIiwibWFyazYuZHJhdy5oaXN0b3J5IiwibWFyazYuc2NvcmUudXNlciIsIm1lbWJlci5pbmZvLnVzZXIiLCJyZXBvcnQucmVhZCIsInJlcG9ydC53cml0ZSJdLCJhbXIiOlsibWtfcGhvbmUiXX0.xqKpRqydOApkLKiRpmriikrFjB_mXuljPeMhQ2E1w--3Xgh1oTQ-ehWjNciDHhCANicCYoCncx9nolRGdnPZWgranxF-jzD3UIEmEjUmJOxK11xgdLanMGVgO2SrA9DetkJU7xSF3gvZxcwDSwnGoPK205ohhsRrc0rudVQHURqZbk8_ShJTYtQfDrayTXXZet_O88mILkQUh0bwT745IiFrsdq5MNgXoI9uGvGT1LnZ37uKDyle58jCFzbQ4JqDUnnRAhluUDJgp1E2FNKvV_azcV3zrfFAWChH7fCY7_vTE2Xq0uxMzGyJs6ERs7RpXL99olhBnor8A8N7VwST6A"
         this.companyIcon = "WM"; // 公司Icon名稱
-        this.urlData = this.handleURLData(window.location.href)
 
         this.UserLanguage = this.urlData == undefined ? this.UserLanguage : this.UserLanguage
         this.UserLanguage = (this.ContainLanguage.filter(L => L == this.UserLanguage).length <= 0) ? "tw" : this.UserLanguage;
@@ -147,15 +152,14 @@ export default class SocketModel extends BaseComponent {
             return false
     }
     checkLanguagePath() {
-        if (window.isVAServer || window.isInpokerServer)
-            if (PublicData.getInstance.isApp == "1")
-                return "https://twsixmark.com/app/lib/"; // 語言包路徑
-            else
-                return "../../lib/"
+        if (PublicData.getInstance.isApp == "1")
+            return "https://twsixmark.com/app/lib/"; // 語言包路徑
+        else if (window.isVAServer || window.isInpokerServer)
+            return "../../lib/"
         else if (window.isGitServer)
             return "https://wmrd01.github.io/BaccaratPlay/lib/"
         else//預設 // 本地端
-            return "http://10.20.13.141/JaiJaiTest/lib/"
+            return "http://127.0.0.1/JaiJaiTest/lib/";
         // return "http://192.168.4.61/JaiJaiTest/lib/"
         // return "http://192.168.89.61/JaiJaiTest/lib/"
         // return "http://192.168.0.238/JaiJaiTest/lib/"

@@ -1,0 +1,11 @@
+{
+    "gameID": "20002",
+    "serverport": "10004",
+    "contentid": "10",
+    "connectionType": "ws",
+    "serverhost": "inpoker.va-game.com",
+    "custemUrl": "wss://game.cast77.com/websocket",
+    "exChangeLib": ["1000", "5000", "MAX"],
+    "staoredValueUrl": "https://godplay.app/deposit?type=giftpack&class=cycle",
+    "backHomeUrl": ""
+}

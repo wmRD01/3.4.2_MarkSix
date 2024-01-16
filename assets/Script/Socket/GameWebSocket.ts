@@ -325,22 +325,22 @@ export default class GameWebSocket extends SocketModel {
     startLoadLanguage() {
         console.log("開始讀");
 
-        if (sys.os === sys.OS.IOS) {
-            let gameLang = `Lib/gameLanguage/${GameData.getInstance.gameID}/${this.UserLanguage}`
-            this.JsonData(gameLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
-            let serverLang = `Lib/serverLanguage/${this.UserLanguage}`
-            this.JsonData(serverLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
-            let serverAPILang = `Lib/serverApiLanguage/${this.UserLanguage}`
-            this.JsonData(serverAPILang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
-        }
-        else {
-            let gameLang = `${this.libPath}gameLanguage/${GameData.getInstance.gameID}/${this.UserLanguage}.json?/${new Date().getTime()}`
-            this.RomoteData(gameLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
-            let serverLang = this.libPath + "serverLanguage/" + this.UserLanguage + ".json?" + new Date().getTime()
-            this.RomoteData(serverLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
-            let serverAPILang = this.libPath + "serverApiLanguage/" + this.UserLanguage + ".json?" + new Date().getTime()
-            this.RomoteData(serverAPILang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
-        }
+        // if (sys.os === sys.OS.IOS) {
+        let gameLang = `Lib/gameLanguage/${GameData.getInstance.gameID}/${this.UserLanguage}`
+        this.JsonData(gameLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
+        let serverLang = `Lib/serverLanguage/${this.UserLanguage}`
+        this.JsonData(serverLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
+        let serverAPILang = `Lib/serverApiLanguage/${this.UserLanguage}`
+        this.JsonData(serverAPILang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
+        // }
+        // else {
+        //     let gameLang = `${this.libPath}gameLanguage/${GameData.getInstance.gameID}/${this.UserLanguage}.json?/${new Date().getTime()}`
+        //     this.RomoteData(gameLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
+        //     let serverLang = this.libPath + "serverLanguage/" + this.UserLanguage + ".json?" + new Date().getTime()
+        //     this.RomoteData(serverLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
+        //     let serverAPILang = this.libPath + "serverApiLanguage/" + this.UserLanguage + ".json?" + new Date().getTime()
+        //     this.RomoteData(serverAPILang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
+        // }
 
         // ${new Date().getTime()}
     }

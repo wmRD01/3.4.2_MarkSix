@@ -19,8 +19,6 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
 
     currnetIndex: number = 0;
     onLoad() {
-
-
         /**現階段測試 正是要往Loading移動 */
         super.onLoad()
         // console.log(this.pageEvnet);

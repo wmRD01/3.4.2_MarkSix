@@ -32,7 +32,7 @@ export default class BallData extends BaseComponent {
     // }
 
     onDestroy() {
-        console.log(this.label);
+        // console.log(this.label);
         try {
 
             this.label.node.destroy();

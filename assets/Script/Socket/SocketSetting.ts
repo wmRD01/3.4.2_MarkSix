@@ -19,7 +19,7 @@ class SocketSetting {
         return this
     }
     init(_data: Object, _type: LangType) {
-        // console.log(_type, _data);
+        console.log(_type, _data);
         let data = this.getTypeData(_type);
         // console.log(data);
 

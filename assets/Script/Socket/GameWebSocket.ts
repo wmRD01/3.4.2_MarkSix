@@ -1,4 +1,4 @@
-import { log, sys, _decorator } from "cc";
+import { JsonAsset, log, resources, sys, _decorator } from "cc";
 import DelayTime from '../../Plug/DelayTime';
 import { ln, URLVlaue } from "../Contorll/Api/SendCommand";
 import GameControll from "../Contorll/GameControll/GameControll";
@@ -36,15 +36,15 @@ export default class GameWebSocket extends SocketModel {
             return
         }
         if (this.isFirstData) {
-
-
-
             let getWebPlatform = WebPlatform.Default
             /**由於打包出去後似乎會被意外轉成Obj，因此還要再次判斷 */
             getWebPlatform = typeof getWebPlatform !== 'string' ? WebPlatform.Default : getWebPlatform
             // console.error("最終結果：" + getWebPlatform);
             //取得config拿取遊戲相關資料，其中包含連線的資訊
-            this.RomoteData(`${this.libPath}config/${GameData.getInstance.gameID}/${getWebPlatform}/game.json?${new Date().getTime()}`, this.connectToServer.bind(this), this.loadLanguageError.bind(this))
+            // if (sys.os === sys.OS.IOS)
+            this.JsonData(`Lib/config/${GameData.getInstance.gameID}/${getWebPlatform}/game`, this.connectToServer.bind(this), this.loadLanguageError.bind(this))
+            // else
+            //     this.RomoteData(`${this.libPath}config/${GameData.getInstance.gameID}/${getWebPlatform}/game.json?${new Date().getTime()}`, this.connectToServer.bind(this), this.loadLanguageError.bind(this))
             // AssetMng.loadLogoAsset(this.UserLanguage)
         }
         else
@@ -72,12 +72,7 @@ export default class GameWebSocket extends SocketModel {
     }
 
     eventSetting() {
-        console.log("監聽設定玩");
-        console.log(GameControll.getInstance);
-
         GameControll.getInstance.setControllEvent()
-        console.log("監聽設定玩");
-
         this.setEvent(WebSocketEvent.StartConnect, this.startConnect);
         this.setEvent(WebSocketEvent.Login, this.onLogIn);
         this.setEvent(WebSocketEvent.WebSocketSendCommand, this.onSend);
@@ -87,7 +82,6 @@ export default class GameWebSocket extends SocketModel {
         this.setEvent(WebSocketEvent.StaoredValue, this.onStaoredValue)
         this.setEvent(WebSocketEvent.StartLoadLanguage, this.startLoadLanguage)
         this.setEvent(WebSocketEvent.CloseWebSocket, this.closeWebsocket)
-        console.log("監聽設定玩");
 
     }
 
@@ -264,7 +258,16 @@ export default class GameWebSocket extends SocketModel {
             }
         }
     }
+    JsonData(url: string, callback: Function, errCallback: Function) {
+        console.log('downloadText.url:', url);
 
+        resources.load(url, JsonAsset, (err, _data: JsonAsset) => {
+            if (err) errCallback(url, err)
+            callback(JSON.stringify(_data.json), url)
+            console.log(_data);
+
+        })
+    }
 
     RomoteData(url: string, callback: Function, errCallback: Function) {
         var url = url;
@@ -322,13 +325,24 @@ export default class GameWebSocket extends SocketModel {
     startLoadLanguage() {
         console.log("開始讀");
 
-        let gameLang = `${this.libPath}gameLanguage/${GameData.getInstance.gameID}/${this.UserLanguage}.json?/${new Date().getTime()}`
-        this.RomoteData(gameLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
-        let serverLang = this.libPath + "serverLanguage/" + this.UserLanguage + ".json?" + new Date().getTime()
-        this.RomoteData(serverLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
-        let serverAPILang = this.libPath + "serverApiLanguage/" + this.UserLanguage + ".json?" + new Date().getTime()
-        this.RomoteData(serverAPILang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
+        if (sys.os === sys.OS.IOS) {
+            let gameLang = `Lib/gameLanguage/${GameData.getInstance.gameID}/${this.UserLanguage}`
+            this.JsonData(gameLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
+            let serverLang = `Lib/serverLanguage/${this.UserLanguage}`
+            this.JsonData(serverLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
+            let serverAPILang = `Lib/serverApiLanguage/${this.UserLanguage}`
+            this.JsonData(serverAPILang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
+        }
+        else {
+            let gameLang = `${this.libPath}gameLanguage/${GameData.getInstance.gameID}/${this.UserLanguage}.json?/${new Date().getTime()}`
+            this.RomoteData(gameLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
+            let serverLang = this.libPath + "serverLanguage/" + this.UserLanguage + ".json?" + new Date().getTime()
+            this.RomoteData(serverLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
+            let serverAPILang = this.libPath + "serverApiLanguage/" + this.UserLanguage + ".json?" + new Date().getTime()
+            this.RomoteData(serverAPILang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
+        }
 
+        // ${new Date().getTime()}
     }
     loadLanguageEnd(jsonText: string, url?: string) {
         console.log("loadLanguageEnd");
@@ -347,9 +361,9 @@ export default class GameWebSocket extends SocketModel {
     loadLanguageError(url: string, err?: string) {
         // console.log("loadLanguageError");
         if (err)
-            // console.log("錯誤?" + err);
+            console.log("錯誤?" + err);
 
-            this.loadLanguageCount = 0;
+        this.loadLanguageCount = 0;
         this.RomoteData(url, this.loadLanguageEnd.bind(this), this.loadLanguageErrorAgain.bind(this));
     }
     loadLanguageErrorAgain(url: string) {

@@ -73,15 +73,15 @@ export default class PanelHome extends BaseComponent {
     loopTime: number = 60
 
     onLoad() {
-        if (window.isGPGServer || PublicData.getInstance.isApp == "1")
-            PublicData.getInstance.isChageOnline();
+        // if (window.isGPGServer || PublicData.getInstance.isApp == "1")
+        PublicData.getInstance.isChageOnline();
         this.marquee = this.labelMarquee.addComponent(Marquee)
         this.timer = this.labelTime.addComponent(Timer);
         this.timer.setBGNode(this.timeBG);
         /**取TOKEN */
         // console.error(Player.getInstance.gpgToken);
-        if (!DEV)
-            Player.getInstance.gpgToken = (this.handleURLData(window.location.href) as URLVlaue).token
+        // if (!DEV)
+        // Player.getInstance.gpgToken = (this.handleURLData(window.location.href) as URLVlaue).token
         this.setEvent(LobbyStateEvent.NextIssueID, this.reset)
         PublicData.getInstance.markSixMsg.connet()
 
@@ -179,15 +179,7 @@ export default class PanelHome extends BaseComponent {
         this.currentIssueID = Number(getDate.issueID)
         // this.timer.setTimeNoTimer(PublicModel.getInstance.convertDateTime(getDate.openDate))
         // console.log(getDate.serverNowTime);
-
-        var Date_A = new Date(getDate.openDate);
-        var Date_B = 0;
-        if (DEV)
-            //@ts-ignore
-            Date_B = new Date(getDate.serverNowTime);
-        else
-            //@ts-ignore
-            Date_B = new Date(getDate.serverNowTime);
+        var Date_A = new Date(getDate.openDate), Date_B = new Date(getDate.serverNowTime);
         //@ts-ignore
         var countTime = Date_A - Date_B
         var Date_C = new Date(countTime);

@@ -7,8 +7,8 @@ export default class PublicData extends BaseSingleton<PublicData>() {
     arr_ComponentBaseClass: Array<ComponentBase> = new Array
     BaseViewWidth: number = 720;
     BaseViewHeight: number = 1280;
-    gameVersion: string = "0.4.8" ;
-    onlineVersion: string = "0.4.8" ;
+    gameVersion: string = "0.4.8";
+    onlineVersion: string = "0.4.8";
     checkLoading = new CheckLoading();
     /**畫面重製 */
     isResetView: boolean;
@@ -38,5 +38,9 @@ export default class PublicData extends BaseSingleton<PublicData>() {
         this.gpgApiKey = RequestGPG.GPGAPIKey.Online;
         this.gpgUrlPlayApi = RequestGPG.APIUrl.playAPI
         this.gpgUrlids = RequestGPG.APIUrl.ids
+        console.error(this.gpgApiKey);
+        console.error(this.gpgUrlPlayApi);
+        console.error(this.gpgUrlids);
+
     }
 }

@@ -8,7 +8,7 @@
       "1654667623042": {
         "id": "1654667623042",
         "progress": 0.20000000000000004,
-        "state": "processing",
+        "state": "failure",
         "message": "Build engine",
         "options": {
           "name": "Baccarat",
@@ -171,15 +171,80 @@
         },
         "time": "2023-7-21 13:56",
         "dirty": false
+      },
+      "1705474110138": {
+        "id": "1705474110138",
+        "progress": 1,
+        "state": "success",
+        "message": "2024-1-17 14:49 Build success in 41628 ms!",
+        "options": {
+          "name": "Baccarat",
+          "platform": "ios",
+          "buildPath": "/Users/chenghsiangtsao/Downloads/3.4.2_MarkSix/build",
+          "debug": false,
+          "md5Cache": true,
+          "sourceMaps": false,
+          "replaceSplashScreen": true,
+          "mainBundleCompressionType": "merge_all_json",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": false,
+          "startScene": "602c3d25-484a-4071-ae9b-2b9ed340bc8b",
+          "scenes": [
+            {
+              "url": "db://assets/Scene/Loading.scene",
+              "uuid": "602c3d25-484a-4071-ae9b-2b9ed340bc8b",
+              "inBundle": false
+            },
+            {
+              "url": "db://assets/Scene/Lobby.scene",
+              "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc"
+            }
+          ],
+          "outputName": "ios",
+          "packages": {
+            "ios": {
+              "orientation": {
+                "landscapeRight": false,
+                "landscapeLeft": false,
+                "portrait": true
+              },
+              "renderBackEnd": {
+                "metal": true
+              },
+              "skipUpdateXcodeProject": false,
+              "targetVersion": "12.0",
+              "packageName": "com.sixmarkgame.app"
+            },
+            "native": {
+              "polyfills": {
+                "asyncFunctions": true
+              },
+              "encrypted": false,
+              "xxteaKey": "3cGu3jGGRONJLzZy",
+              "compressZip": false,
+              "makeAfterBuild": false,
+              "JobSystem": "tbb"
+            },
+            "cocos-service": {
+              "configID": "08c3e2",
+              "services": []
+            }
+          }
+        },
+        "time": "2024-1-17 14:48",
+        "dirty": false
       }
     }
   },
   "common": {
-    "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\game50003",
+    "buildPath": "/Users/chenghsiangtsao/Downloads/3.4.2_MarkSix/build",
     "mainBundleCompressionType": "merge_all_json",
-    "outputName": "web-mobile",
-    "platform": "web-mobile",
-    "md5Cache": false,
+    "outputName": "ios",
+    "platform": "ios",
+    "md5Cache": true,
     "experimentalEraseModules": false,
     "compressTexture": true,
     "packAutoAtlas": false,
@@ -190,13 +255,13 @@
     "startScene": "602c3d25-484a-4071-ae9b-2b9ed340bc8b",
     "scenes": [
       {
-        "url": "db://assets/Scene/Lobby.scene",
-        "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
+        "url": "db://assets/Scene/Loading.scene",
+        "uuid": "602c3d25-484a-4071-ae9b-2b9ed340bc8b",
         "inBundle": false
       },
       {
-        "url": "db://assets/Scene/Loading.scene",
-        "uuid": "602c3d25-484a-4071-ae9b-2b9ed340bc8b"
+        "url": "db://assets/Scene/Lobby.scene",
+        "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc"
       }
     ],
     "mainBundleIsRemote": false

@@ -1,5 +1,5 @@
 {
-  "__version__": "3.0.7",
+  "__version__": "3.0.2",
   "options": {
     "web-desktop": {
       "configID": "08c3e2",
@@ -10,6 +10,10 @@
       "services": []
     },
     "android": {
+      "configID": "08c3e2",
+      "services": []
+    },
+    "ios": {
       "configID": "08c3e2",
       "services": []
     }

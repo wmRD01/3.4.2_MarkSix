@@ -1,4 +1,4 @@
-import { EventTouch, _decorator } from 'cc';
+import { EventTouch, sys, _decorator } from 'cc';
 import { MarkSixCommandType } from '../../../../Enum/MarkSixCommandType';
 import BaseComponent from '../../../../Model/ComponentBase';
 import PublicData from '../../../../Model/PublicData';
@@ -26,6 +26,8 @@ export default class ItemLink extends BaseComponent {
 
     }
     onOpenWindow(e: EventTouch, customEventData?: string) {
+
+        // sys.openURL()//原生裝置開啟瀏覽器
         if (PublicData.getInstance.isApp == '1')
             if (this.url == NativeUrlType.Official)
                 window.location.href = this.url

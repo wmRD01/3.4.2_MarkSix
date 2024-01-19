@@ -1,6 +1,6 @@
 {
     "gameID": "50003",
-    "serverport": "10003",
+    "serverport": "10006",
     "connectionType": "wss",
     "serverhost": "inpoker.best",
     "exChangeLib": ["1000", "5000", "MAX"],

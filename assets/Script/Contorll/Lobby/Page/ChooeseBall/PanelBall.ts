@@ -1,20 +1,21 @@
-import { Button, color, EventTouch, instantiate, Label, Layout, Node, Prefab, random, Sprite, Vec3, _decorator } from 'cc';
+import { EventTouch, instantiate, Label, Layout, Node, Prefab, _decorator } from 'cc';
 import { DEV } from 'cc/env';
 import DelayTime from '../../../../../Plug/DelayTime';
 import { AssetType } from '../../../../Enum/AssetType';
-import { CheckLoadingType } from '../../../../Enum/CheckLoadingType';
-import { CommandType } from '../../../../Enum/CommandType';
 import { LangType } from '../../../../Enum/LangType';
 import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import { WebSocketEvent } from '../../../../Enum/WebSocketEvent';
 import AssetMng from '../../../../Manager/AssetMng';
 import ButtonMng from '../../../../Manager/ButtonMng';
 import BallData from '../../../../Model/BallData';
-import CheckLoading from '../../../../Model/CheckLoading';
 import BaseComponent from '../../../../Model/ComponentBase';
+import Player from '../../../../Model/Player';
+import PublicData from '../../../../Model/PublicData';
+import PublicModel from '../../../../Model/PublicModel';
 import SocketSetting from '../../../../Socket/SocketSetting';
+import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
+import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import * as RP from '../../../Api/ResponeCommand';
-import { bet } from '../../../Api/SendCommand';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
 import PanelSystemMessage from '../../../NoClearNode/PanelSystemMessage';
 const { ccclass, property } = _decorator;
@@ -61,7 +62,8 @@ export default class PanelBall extends BaseComponent {
     tipTimer: Timer
 
 
-    async start() {
+    async onLoad() {
+        super.onLoad()
         await AssetMng.waitStateCheck(AssetType.Sprite)
         this.labelState.node.active = true;
         this.tipBox.active = false;
@@ -109,14 +111,14 @@ export default class PanelBall extends BaseComponent {
         this.eventEmit(LobbyStateEvent.ChangeBallButtonState, true)
         this.eventEmit(LobbyStateEvent.ChangeConfirmState, false)
         this.setEvent(LobbyStateEvent.UpDateBall, this.reProcessing)
-        this.setEvent(LobbyStateEvent.AttackBall, this.onConfirmAttack)
+        this.setEvent(LobbyStateEvent.AttackBall, this.confirmAttack)
         this.setEvent(LobbyStateEvent.NextIssueID, this.reset)
     }
-    onEnable() {
+    async onEnable() {
         this.eventEmit(LobbyStateEvent.ChangeConfirmState, false)
-        
+        await this.requesBetlog()
         // this.eventEmit(WebSocketEvent.StartConnect)
-        
+
     }
     onDisable() {
         this.eventEmit(WebSocketEvent.CloseWebSocket)
@@ -235,20 +237,37 @@ export default class PanelBall extends BaseComponent {
             this.eventEmit(LobbyStateEvent.BallChooeseAction, this.mapBallNumber.get(this.isChoose[index]).node, index)
             await DelayTime.getInstance.StartDT(.1);
         }
-
-
         /**打leo的com */
         this.tempChoose = []
         this.isConfirm = true
     }
-    onSendCheckAttack(e?: EventTouch, customEventData?: string) {
+    async requestBetWrite(e?: EventTouch, customEventData?: string) {
         this.eventEmit(LobbyStateEvent.ChangeConfirmState, false)
-        const _bet = new bet()
-        _bet.betCode = this.tempChoose
-        this.eventEmit(WebSocketEvent.WebSocketSendCommand, CommandType.bet, _bet)
+        const body = new RequestGPG.Body.NeedToken.BetWrite()
+        body.memberID = Player.getInstance.gpgInfo.data.memberID
+        body.issueID = PublicData.getInstance.curIssueID
+        body.betCode = this.tempChoose;
+        body.betTime = PublicModel.getInstance.convertDateToGPGServerTime()
+        body.gameID = 50003;
+        await new RequestGPG.Request()
+            .setMethod(RequestGPG.Method.POST)
+            .setToken(Player.getInstance.gpgToken)
+            .setBody(JSON.stringify(body))
+            .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.BetWrite}`, this.responseBetWrite.bind(this))
+    }
+    responseBetWrite(response?: ResponseGPG.Betlog.DataClass) {
+        if (response?.Status?.Code == '0') this.confirmAttack()
+        /**請注意這邊是走GPG的error Code不是走Game的 */
+        else {
+            if (!response)
+                PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("520", LangType.ServerAPI))
+            else
+                PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t(response.Status.Code, LangType.ServerAPI))
+        }
+
 
     }
-    onConfirmAttack(e?: EventTouch, customEventData?: string) {
+    confirmAttack(e?: EventTouch, customEventData?: string) {
         this.eventEmit(LobbyStateEvent.ChangeBallButtonState, false)
         this.Attack()
         PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("037", LangType.Game))
@@ -258,20 +277,6 @@ export default class PanelBall extends BaseComponent {
             element.enabledBall(bool)
         })
         this.isFullBall = !bool;
-    }
-    watiWebSocket() {
-        return new Promise<void>((resolve, reject) => {
-            if (CheckLoading.getInstance.checkState(CheckLoadingType.isWebSocketOpen)) {
-                resolve()
-                return
-            }
-            let inter = setInterval(() => {
-                if (CheckLoading.getInstance.checkState(CheckLoadingType.isWebSocketOpen)) {
-                    clearInterval(inter)
-                    resolve()
-                }
-            }, 100)
-        })
     }
 
     reProcessing(data: RP.ln | RP.bet) {
@@ -294,6 +299,40 @@ export default class PanelBall extends BaseComponent {
             this.eventEmit(LobbyStateEvent.ChangeBallButtonState, false)
         }
         this.labelIssueID.string = `第${data.drawIssue}期`;
+        PanelLoading.instance.closeLoading()
+    }
+    async requesBetlog() {
+        return new Promise<void>(async (resolve, reject) => {
+            const body = new RequestGPG.Body.NeedToken.Betlog()
+            body.sDate = PublicData.getInstance.today.split("T")[0]
+            body.eDate = PublicData.getInstance.today.split("T")[0]
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Betlog)
+            let convert = PublicModel.getInstance.convertObjectToWebParams(body)
+            await new RequestGPG.Request()
+                .setToken(Player.getInstance.gpgToken)
+                .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.Betlog}?${convert}`, this.responseBetlog.bind(this))
+            resolve()
+        })
+    }
+    responseBetlog(response?: ResponseGPG.Betlog.DataClass) {
+        this.onResetChooese(null)
+        if (response.data.length != 0) {
+            if (this.isFullBall) {
+                if (DEV)
+                    this.onTestReset(null)
+                else {
+                    PanelLoading.instance.closeLoading()
+                    return
+                }
+            }
+            for (let index = 0; index < response.data[0].betCode.length; index++) {
+                this.onChooeseBall(null, response.data[0].betCode[index].toString())
+            }
+            this.Attack()
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("038", LangType.Game))
+            this.eventEmit(LobbyStateEvent.ChangeBallButtonState, false)
+        }
+        this.labelIssueID.string = `第${PublicData.getInstance.curIssueID}期`;
         PanelLoading.instance.closeLoading()
     }
 

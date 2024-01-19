@@ -27,7 +27,7 @@ export class ChooeseBall extends State {
                 EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(LobbyStateEvent.ChangeBallButtonState, true)
                 EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(LobbyStateEvent.ChangeConfirmState, false)
             }
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t(data.code, LangType.Server))
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t(data.code, LangType.ServerAPI))
         }
     }
 

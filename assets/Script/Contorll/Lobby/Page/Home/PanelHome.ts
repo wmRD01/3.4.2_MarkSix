@@ -1,4 +1,4 @@
-import { Button, Component, EventTouch, instantiate, Label, Node, path, Prefab, UITransform, _decorator } from 'cc';
+import { Button, Component, EventTouch, instantiate, Label, Node, Prefab, UITransform, _decorator } from 'cc';
 import { DEV } from 'cc/env';
 import { LangType } from '../../../../Enum/LangType';
 import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
@@ -72,15 +72,8 @@ export default class PanelHome extends BaseComponent {
     loopTime: number = 60
 
     onLoad() {
-        let str = "C:/CocosProject/3.4.2_MarkSix/library/f4/f46c7420-bf6b-4392-a21e-842b3f53de37.pem"
-        console.log(str.indexOf('library'));
-        console.log(str.substring(30, str.length))
-        console.log(path.dirname('cer/cacert'));
-
-        console.log(window.location);
-
-        // if (window.isGPGServer || PublicData.getInstance.isApp == "1")
-        PublicData.getInstance.isChageOnline();
+        if (window.isGPGServer || PublicData.getInstance.isApp == "1")
+            PublicData.getInstance.isChageOnline();
         this.marquee = this.labelMarquee.addComponent(Marquee)
         this.timer = this.labelTime.addComponent(Timer);
         this.timer.setBGNode(this.timeBG);
@@ -96,14 +89,6 @@ export default class PanelHome extends BaseComponent {
     async onEnable() {
         this.reset()
     }
-    start() {
-        // this.marquee.startMarque("HIHIHI")
-        // this.timer.setTime(100)
-    }
-
-    onDisable() {
-
-    }
     async reset() {
         if (this.isChangeIssueID) {
             PanelLoading.instance.closeLoading()
@@ -113,6 +98,7 @@ export default class PanelHome extends BaseComponent {
         await this.requestDrawHistory()
         await this.requestDrawUpcoming()
         await this.requesMyScore()
+
         PanelLoading.instance.closeLoading()
         if (this.isChangeIssueID) {
             this.testtotoel = 0
@@ -181,6 +167,7 @@ export default class PanelHome extends BaseComponent {
     responseDrawUpcoming(response?: ResponseGPG.DrawUpcoming.DataClass) {
         let getDate = response.data[0]
         PublicData.getInstance.today = getDate.openDate
+        PublicData.getInstance.curIssueID = getDate.issueID
         this.labelCurrentDrawIssueID.string = `第${getDate.issueID}期`
         this.currentIssueID = Number(getDate.issueID)
         // this.timer.setTimeNoTimer(PublicModel.getInstance.convertDateTime(getDate.openDate))
@@ -233,11 +220,11 @@ export default class PanelHome extends BaseComponent {
         return new Promise<void>(async (resolve, reject) => {
             const body = new RequestGPG.Body.NeedToken.MyInfo()
             body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApiKey)
-
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.MyInfo}?${convert}`, (response: ResponseGPG.MyInfo.DataClass) => {
+                    Player.getInstance.gpgInfo = response;
                     console.log("MyInfo", response)
                     console.log("確認玩家token登入無異常");
                     if (!response || !response.data) {
@@ -308,6 +295,7 @@ export default class PanelHome extends BaseComponent {
         // console.log(obj);
         return obj
     }
+
 }
 
 class Marquee extends Component {

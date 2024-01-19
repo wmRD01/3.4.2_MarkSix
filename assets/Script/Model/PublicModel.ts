@@ -304,6 +304,30 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         // return new URLSearchParams(obj).toString()
 
     }
+    convertDateToGPGServerTime(date: Date = new Date) {
+        const pad = (num: number, size: number): string => {
+            let s = num.toString();
+            while (s.length < size) s = "0" + s;
+            return s;
+        };
+        const year = date.getFullYear();
+        const month = pad(date.getMonth() + 1, 2); // Months are zero-indexed
+        const day = pad(date.getDate(), 2);
+        const hours = pad(date.getHours(), 2);
+        const minutes = pad(date.getMinutes(), 2);
+        const seconds = pad(date.getSeconds(), 2);
+        const milliseconds = pad(date.getMilliseconds(), 7); // Pad to 7 digits
+
+        // Format timezone offset
+        const offset = -date.getTimezoneOffset();
+        const offsetSign = offset >= 0 ? "+" : "-";
+        const offsetHours = pad(Math.floor(Math.abs(offset) / 60), 2);
+        const offsetMinutes = pad(Math.abs(offset) % 60, 2);
+        console.log();
+        
+
+        return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}.${milliseconds}${offsetSign}${offsetHours}:${offsetMinutes}`;
+    }
 
 }
 

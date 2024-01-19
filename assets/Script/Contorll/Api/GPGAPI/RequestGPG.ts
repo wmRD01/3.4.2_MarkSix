@@ -34,18 +34,18 @@ export namespace RequestGPG {
 
         fetchData(_url: string, callback: Function) {
             // console.log(_url);
-            console.log(this);
+            // console.log(this);
             // console.log(_url.split("?"));
             // console.log(_url.split("?")[0].split("/"));
             // console.log(_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length]);
             return new Promise<void>((resolve, reject) => {
                 let data;
                 fetch(_url, this)
-                    .then((response) => {
-                        console.log(response);
-                        return response.json()
-                    })
-                    // .then(response => response.json())
+                    // .then((response) => {
+                    //     console.log(response);
+                    //     return response.json()
+                    // })
+                    .then(response => response.json())
                     .then(response => data = response)
                     .catch(err => reject)
                     .then(response => console.log(`資料名稱：${_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length - 1]}`))
@@ -157,6 +157,17 @@ export namespace RequestGPG {
                 "sDate": string;
                 "eDate": string;
             }
+            export class ValidateContactInfo {
+                Phone: string
+                Email: string
+            }
+            export class BetWrite {
+                memberID: number;
+                issueID: string;
+                betCode: number[]
+                betTime: string;
+                gameID: number;
+            }
         }
         export namespace NotNeedToken {
             // export class EmailSign {
@@ -164,10 +175,7 @@ export namespace RequestGPG {
             //     verifyCode: string;
             //     email: string;
             // }
-            export class ValidateContactInfo {
-                Phone: string
-                Email: string
-            }
+
             export class RankList {
 
             }
@@ -214,6 +222,7 @@ export namespace RequestGPG {
         TopScore = "/Mark6/Top_Score",
         Betlog = "/Report/Betlog/Get",
         My_Score = "/Mark6/My_Score",
+        BetWrite= "/Report/Betlog/Write"
     }
     export enum GPGAPIKey {
         QA = "5gh394D",

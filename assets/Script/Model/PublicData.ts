@@ -24,8 +24,9 @@ export default class PublicData extends BaseSingleton<PublicData>() {
     language: string;
     isLandscape: boolean = false
     isClickScreen: boolean = false
-
     today: string;
+    curIssueID: string;
+
     gpgApiKey: RequestGPG.GPGAPIKey = RequestGPG.GPGAPIKey.QA;
 
     gpgUrlPlayApi = RequestGPG.APIUrl.QA_playAPI;

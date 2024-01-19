@@ -15141,7 +15141,7 @@
     },
     "component": "",
     "_componentId": "d2f08z8+GFP0YISvqiICQ0r",
-    "handler": "onSendCheckAttack",
+    "handler": "requestBetWrite",
     "customEventData": ""
   },
   {

@@ -82,7 +82,7 @@ export default class PanelClientEdit extends BaseComponent {
     async onValidateContactInfoPhone() {
         /**確認信箱 */
         //TODO 製作手機驗證(整理好後再回頭製作)
-        const body = new RequestGPG.Body.NotNeedToken.ValidateContactInfo()
+        const body = new RequestGPG.Body.NeedToken.ValidateContactInfo()
         // body.Phone = this.editPhone.string;
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
@@ -92,7 +92,7 @@ export default class PanelClientEdit extends BaseComponent {
     async onValidateContactInfoEmail() {
         /**確認信箱格式 */
         // if (!this.checkEmail(this.editEmail.string)) return;
-        const body = new RequestGPG.Body.NotNeedToken.ValidateContactInfo()
+        const body = new RequestGPG.Body.NeedToken.ValidateContactInfo()
         // body.Email = this.editEmail.string;
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)

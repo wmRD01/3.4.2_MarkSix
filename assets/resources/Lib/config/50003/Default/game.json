@@ -1,8 +1,8 @@
 {
     "gameID": "50003",
-    "serverport": "10007",
+    "serverport": "10003",
     "connectionType": "wss",
-    "serverhost": "inpoker.va-game.com",
+    "serverhost": "inpoker.best",
     "exChangeLib": ["1000", "5000", "MAX"],
     "staoredValueUrl": "https://godplay.app/deposit?type=giftpack&class=cycle",
     "backHomeUrl": ""

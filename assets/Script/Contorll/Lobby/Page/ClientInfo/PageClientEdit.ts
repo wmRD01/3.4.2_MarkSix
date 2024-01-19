@@ -1,21 +1,20 @@
-import { Button, EventTouch, Label, Node, Sprite, SpriteFrame, _decorator } from 'cc';
-import { NotificationType } from '../../../../Enum/NotificationType';
+import { Button, Node, _decorator } from 'cc';
+import { MyEditBox } from '../../../../../Plug/MyEditBox';
+import { EditMenu } from '../../../../Enum/EditMenu';
+import { LangType } from '../../../../Enum/LangType';
 import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
+import { NotificationType } from '../../../../Enum/NotificationType';
+import ButtonMng from '../../../../Manager/ButtonMng';
 import EventMng from '../../../../Manager/EventMng';
 import BaseComponent from '../../../../Model/ComponentBase';
 import Player from '../../../../Model/Player';
+import PublicData from '../../../../Model/PublicData';
+import PublicModel from '../../../../Model/PublicModel';
+import SocketSetting from '../../../../Socket/SocketSetting';
 import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
-import { MyEditBox } from '../../../../../Plug/MyEditBox';
-import PublicModel from '../../../../Model/PublicModel';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
-import ButtonMng from '../../../../Manager/ButtonMng';
-import { EditMenu } from '../../../../Enum/EditMenu';
 import PanelSystemMessage from '../../../NoClearNode/PanelSystemMessage';
-import SocketSetting from '../../../../Socket/SocketSetting';
-import { LangType } from '../../../../Enum/LangType';
-import { VerificationTimer } from '../../../../Model/VerificationTimer';
-import PublicData from '../../../../Model/PublicData';
 const { ccclass, property } = _decorator;
 @ccclass('PanelClientEdit')
 export default class PanelClientEdit extends BaseComponent {
@@ -59,7 +58,7 @@ export default class PanelClientEdit extends BaseComponent {
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
             .setToken(Player.getInstance.gpgToken)
-            .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.Nickname}`, this.responseNickname.bind(this))
+            .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.Nickname}`, this.responseNickname.bind(this))
     }
     /**驗證碼發送是否成功 */
     responseNickname(response: ResponseGPG.Nickname.DataClass) {
@@ -88,7 +87,7 @@ export default class PanelClientEdit extends BaseComponent {
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
-            .fetchData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.ValidateContactInfo}`, this.responseValidateContactInfo.bind(this))
+            .XMLData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.ValidateContactInfo}`, this.responseValidateContactInfo.bind(this))
     }
     async onValidateContactInfoEmail() {
         /**確認信箱格式 */
@@ -98,7 +97,7 @@ export default class PanelClientEdit extends BaseComponent {
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
-            .fetchData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.ValidateContactInfo}`, this.responseValidateContactInfo.bind(this))
+            .XMLData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.ValidateContactInfo}`, this.responseValidateContactInfo.bind(this))
     }
     async responseValidateContactInfo(response: ResponseGPG.ValidateContactInfo.DataClass) {
         console.log("ValidateContactInfo", response)
@@ -121,7 +120,7 @@ export default class PanelClientEdit extends BaseComponent {
             await new RequestGPG.Request()
                 .setMethod(RequestGPG.Method.POST)
                 .setBody(JSON.stringify(sendBody))
-                .fetchData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.SendRegisterVerification}`, this.responseSendRegisterVerification.bind(this))
+                .XMLData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.SendRegisterVerification}`, this.responseSendRegisterVerification.bind(this))
         }
     }
     /**驗證碼發送是否成功 */
@@ -171,7 +170,7 @@ export default class PanelClientEdit extends BaseComponent {
             .setMethod(RequestGPG.Method.POST)
             .setToken(Player.getInstance.gpgToken)
             .setBody(JSON.stringify(body))
-            .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.CertifiedEmall}`, this.responseCertifiedEmall.bind(this))
+            .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.CertifiedEmall}`, this.responseCertifiedEmall.bind(this))
     }
 
     /**是否修改信箱成功 */

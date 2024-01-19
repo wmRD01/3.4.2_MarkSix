@@ -1,7 +1,8 @@
+
 export namespace RequestGPG {
 
     export class Request {
-        method: Method = Method.Get;
+        method: Method = Method.GET;
         headers: Headers = new Headers();
         body: string | FormData
         setMethod(_method: Method) {
@@ -38,7 +39,11 @@ export namespace RequestGPG {
             return new Promise<void>((resolve, reject) => {
                 let data;
                 fetch(_url, this)
-                    .then(response => response.json())
+                    .then((response) => {
+                        console.log(response);
+                        return response.json()
+                    })
+                    // .then(response => response.json())
                     .then(response => data = response)
                     .catch(err => reject)
                     .then(response => console.log(`資料名稱：${_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length - 1]}`))
@@ -53,6 +58,43 @@ export namespace RequestGPG {
                     .then(resolve)
             })
 
+        }
+        XMLData(url: string, callback: Function) {
+            console.log("開始", url);
+
+            return new Promise<void>((resolve, reject) => {
+                var xhr = new XMLHttpRequest(),
+                    errInfo = 'Load text file failed: ' + url;
+                console.error(this.method);
+                console.error(this.headers["Content-Type"]);
+                xhr.setRequestHeader("Content-Type", this.headers["Content-Type"])
+                xhr.setRequestHeader("Accept", this.headers["Accept"])
+                xhr.setRequestHeader("Authorization", this.headers["Authorization"])
+                if (xhr.overrideMimeType) xhr.overrideMimeType('text\/plain; charset=utf-8');
+                xhr.onload = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200 || xhr.status === 0) {
+                            // console.error(xhr.response);
+                            // console.error(JSON.parse(xhr.response));
+                            callback(JSON.parse(xhr.response), url);
+                            resolve()
+                        }
+                        else {
+                            // errCallback(url)
+                            // errCallback({ status: xhr.status, errorMessage: errInfo + '(wrong status)' });
+                        }
+                    }
+                    else {
+                        // errCallback(url)
+                        // errCallback({ status: xhr.status, errorMessage: errInfo + '(wrong readyState)' });
+                    }
+                };
+                xhr.open(this.method, url, true);
+                if (this.method == Method.POST)
+                    xhr.send(this.body);
+                else
+                    xhr.send();
+            })
         }
 
     }
@@ -137,7 +179,7 @@ export namespace RequestGPG {
     }
 
     export enum Method {
-        Get = "Get",
+        GET = "GET",
         POST = "POST",
     }
 

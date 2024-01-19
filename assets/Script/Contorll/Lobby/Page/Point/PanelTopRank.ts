@@ -1,15 +1,15 @@
 import { instantiate, Node, Prefab, _decorator } from 'cc';
 import { AssetType } from '../../../../Enum/AssetType';
+import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import AssetMng from '../../../../Manager/AssetMng';
-import BaseComponent from '../../../../Model/ComponentBase';
 import AutoFollow from '../../../../Model/AutoFollow';
+import BaseComponent from '../../../../Model/ComponentBase';
+import Player from '../../../../Model/Player';
+import PublicData from '../../../../Model/PublicData';
+import PublicModel from '../../../../Model/PublicModel';
 import RankItmeData from '../../../../Model/RankItmeData';
 import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
-import PublicModel from '../../../../Model/PublicModel';
-import PublicData from '../../../../Model/PublicData';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
-import Player from '../../../../Model/Player';
-import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 const { ccclass, property } = _decorator;
 @ccclass('PanelTopRank')
 export default class PanelTopRank extends BaseComponent {
@@ -51,12 +51,12 @@ export default class PanelTopRank extends BaseComponent {
             body.sDate = `${todayDate.getFullYear()}-${todayDate.getMonth() + 1}-1`
             body.eDate = `${todayDate.getFullYear()}-${todayDate.getMonth() + 1}-${todayDate.getDate()}`
             body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.TopScore)
-            let convert = new URLSearchParams(body).toString()
+            let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             console.log(body);
             console.log(convert);
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.TopScore}?${convert}`, this.responseTopScore.bind(this))
+                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.TopScore}?${convert}`, this.responseTopScore.bind(this))
             resolve()
         })
     }

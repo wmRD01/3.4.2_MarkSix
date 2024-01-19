@@ -1,4 +1,4 @@
-import { JsonAsset, log, resources, sys, _decorator } from "cc";
+import { Asset, JsonAsset, log, resources, sys, _decorator } from "cc";
 import DelayTime from '../../Plug/DelayTime';
 import { ln, URLVlaue } from "../Contorll/Api/SendCommand";
 import GameControll from "../Contorll/GameControll/GameControll";
@@ -54,6 +54,10 @@ export default class GameWebSocket extends SocketModel {
     test(from: Array<number>, data) {
         from.push(data)
     }
+
+
+
+
     connectToServer(jsonText?: string) {
         if (jsonText) {
             let jsonTo = JSON.parse(jsonText)
@@ -62,13 +66,37 @@ export default class GameWebSocket extends SocketModel {
             PublicModel.getInstance.TwoClassCheckData(this, jsonTo)
 
         }
+
+        let pemUrl = 'cer/DERInpokerBest'
         let host = `${this.connectionType}://${this.serverhost}:${this.serverport}`;
-        console.log(host);
-        this.webSocket = new WebSocket(host)
-        this.webSocket.onopen = this.onWS_Open.bind(this);
-        this.webSocket.onerror = this.onWS_Error.bind(this);
-        this.webSocket.onclose = this.onWS_Close.bind(this);
-        this.webSocket.onmessage = this.onWS_Receive.bind(this);
+        // console.log(host);
+        // if (sys.isNative && (sys.os == sys.OS.ANDROID || sys.os == sys.OS.IOS) && host.indexOf(`wss://`) > -1) {
+        //     this.webSocket = new WebSocket(host, pemUrl)
+        // } else {
+        //     this.webSocket = new WebSocket(host)
+        // }
+        console.log(this);
+        // var testurl = `resources/cer/cacert`, excheang = path.changeExtname(testurl.substr)
+
+
+        resources.load('cer/cacert', (err, data: Asset) => {
+            console.log(data);
+            // let convertPath = data.nativeUrl.replace('library', 'assets/resources/native')
+            this.webSocket = new WebSocket(host, `../${data.nativeUrl.substring(30, data.nativeUrl.length)}`)
+            this.webSocket.onopen = this.onWS_Open.bind(this);
+            this.webSocket.onerror = this.onWS_Error.bind(this);
+            this.webSocket.onclose = this.onWS_Close.bind(this);
+            this.webSocket.onmessage = this.onWS_Receive.bind(this);
+            console.error("設定綁定");
+        })
+
+        // this.webSocket = new WebSocket(host)
+        // this.webSocket.onopen = this.onWS_Open.bind(this);
+        // this.webSocket.onerror = this.onWS_Error.bind(this);
+        // this.webSocket.onclose = this.onWS_Close.bind(this);
+        // this.webSocket.onmessage = this.onWS_Receive.bind(this);
+        // this.webSocket = new WebSocket(host)
+
     }
 
     eventSetting() {
@@ -160,12 +188,15 @@ export default class GameWebSocket extends SocketModel {
     }
     onWS_Error(event) {
         console.log("Send Text fired an error");
+        console.error(event);
+
         CheckLoading.getInstance.resetState(CheckLoadingType.isWebSocketOpen);
         // 連線錯誤，詳細情況請洽客服!
         // GameControll.getInstance.messaggeState(MessageCommend.BackHome, SocketSetting.t("E_0001", LangType.Game))
     }
     onWS_Close(event) {
         console.log("WebSocket instance closed.");
+        console.error(event);
         this.isClose = true
         if (CheckLoading.getInstance.checkState(CheckLoadingType.isWebSocketOpen)) {
             CheckLoading.getInstance.resetState(CheckLoadingType.isWebSocketOpen);

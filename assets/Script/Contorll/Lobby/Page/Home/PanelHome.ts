@@ -1,4 +1,4 @@
-import { Button, Component, EventTouch, instantiate, Label, Node, Prefab, UITransform, _decorator } from 'cc';
+import { Button, Component, EventTouch, instantiate, Label, Node, path, Prefab, UITransform, _decorator } from 'cc';
 import { DEV } from 'cc/env';
 import { LangType } from '../../../../Enum/LangType';
 import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
@@ -13,7 +13,6 @@ import PublicModel from '../../../../Model/PublicModel';
 import SocketSetting from '../../../../Socket/SocketSetting';
 import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
-import { URLVlaue } from '../../../Api/SendCommand';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
 import PanelSystemMessage from '../../../NoClearNode/PanelSystemMessage';
 
@@ -73,6 +72,13 @@ export default class PanelHome extends BaseComponent {
     loopTime: number = 60
 
     onLoad() {
+        let str = "C:/CocosProject/3.4.2_MarkSix/library/f4/f46c7420-bf6b-4392-a21e-842b3f53de37.pem"
+        console.log(str.indexOf('library'));
+        console.log(str.substring(30, str.length))
+        console.log(path.dirname('cer/cacert'));
+
+        console.log(window.location);
+
         // if (window.isGPGServer || PublicData.getInstance.isApp == "1")
         PublicData.getInstance.isChageOnline();
         this.marquee = this.labelMarquee.addComponent(Marquee)
@@ -119,10 +125,10 @@ export default class PanelHome extends BaseComponent {
             const body = new RequestGPG.Body.NeedToken.DrawHistory()
             body.top = "1"
             body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.DrawHistory)
-            let convert = new URLSearchParams(body).toString()
+            let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
+                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
             resolve();
         })
     }
@@ -165,10 +171,10 @@ export default class PanelHome extends BaseComponent {
         return new Promise<void>(async (resolve, reject) => {
             const body = new RequestGPG.Body.NeedToken.DrawUpcoming()
             body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApiKey)
-            let convert = new URLSearchParams(body).toString()
+            let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawUpcoming}?${convert}`, this.responseDrawUpcoming.bind(this))
+                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawUpcoming}?${convert}`, this.responseDrawUpcoming.bind(this))
             resolve()
         })
     }
@@ -203,10 +209,10 @@ export default class PanelHome extends BaseComponent {
             body.sDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-01`
             body.eDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-${PublicModel.getInstance.getMonthAllDay(PublicData.getInstance.today)}`
             body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.MyScore)
-            let convert = new URLSearchParams(body).toString()
+            let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.My_Score}?${convert}`, this.responseMyScore.bind(this))
+                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.My_Score}?${convert}`, this.responseMyScore.bind(this))
             resolve()
         })
     }
@@ -227,10 +233,11 @@ export default class PanelHome extends BaseComponent {
         return new Promise<void>(async (resolve, reject) => {
             const body = new RequestGPG.Body.NeedToken.MyInfo()
             body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApiKey)
-            let convert = new URLSearchParams(body).toString()
-            await new RequestGPG.Request()
+
+            let convert = PublicModel.getInstance.convertObjectToWebParams(body)
+            new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.MyInfo}?${convert}`, (response: ResponseGPG.MyInfo.DataClass) => {
+                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.MyInfo}?${convert}`, (response: ResponseGPG.MyInfo.DataClass) => {
                     console.log("MyInfo", response)
                     console.log("確認玩家token登入無異常");
                     if (!response || !response.data) {
@@ -246,15 +253,15 @@ export default class PanelHome extends BaseComponent {
     async requestDrawUpcomingLoop() {
         const body = new RequestGPG.Body.NeedToken.DrawUpcoming()
         body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApiKey)
-        let convert = new URLSearchParams(body).toString()
+        let convert = PublicModel.getInstance.convertObjectToWebParams(body)
         await new RequestGPG.Request()
             .setToken(Player.getInstance.gpgToken)
-            .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawUpcoming}?${convert}`, this.checkIssueID.bind(this))
+            .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawUpcoming}?${convert}`, this.checkIssueID.bind(this))
     }
     checkIssueID(response?: ResponseGPG.DrawUpcoming.DataClass) {
-        console.log("打拉打拉");
-        console.log(DEV);
-        console.log(this.testtotoel);
+        // console.log("打拉打拉");
+        // console.log(DEV);
+        // console.log(this.testtotoel);
 
         if (DEV) {
 

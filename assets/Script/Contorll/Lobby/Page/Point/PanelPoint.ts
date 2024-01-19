@@ -1,16 +1,15 @@
-import { instantiate, Node, Prefab, ScrollView, Vec3, ViewGroup, _decorator } from 'cc';
-import BaseComponent from '../../../../Model/ComponentBase';
-import PointItemData from '../../../../Model/PointItemData';
+import { instantiate, Node, Prefab, ScrollView, Vec3, _decorator } from 'cc';
 import { AssetType } from '../../../../Enum/AssetType';
+import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import AssetMng from '../../../../Manager/AssetMng';
-import { NotificationType } from '../../../../Enum/NotificationType';
-import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
+import BaseComponent from '../../../../Model/ComponentBase';
 import Player from '../../../../Model/Player';
+import PointItemData from '../../../../Model/PointItemData';
+import PublicData from '../../../../Model/PublicData';
 import PublicModel from '../../../../Model/PublicModel';
+import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
-import PublicData from '../../../../Model/PublicData';
-import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 const { ccclass, property } = _decorator;
 //TODO 優化如果未選號，自動縮欄位
 @ccclass('PanelPoint')
@@ -64,10 +63,10 @@ export default class PanelPoint extends BaseComponent {
             const body = new RequestGPG.Body.NeedToken.DrawHistory()
             body.top = count.toString()//目前固定10筆
             body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.DrawHistory)
-            let convert = new URLSearchParams(body).toString()
+            let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
+                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
             resolve()
         })
     }
@@ -110,10 +109,10 @@ export default class PanelPoint extends BaseComponent {
             body.sDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-${getDate.getDate()}`
             body.eDate = PublicData.getInstance.today.split("T")[0]
             body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Betlog)
-            let convert = new URLSearchParams(body).toString()
+            let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .fetchData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.Betlog}?${convert}`, this.responseBetlog.bind(this))
+                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.Betlog}?${convert}`, this.responseBetlog.bind(this))
             resolve()
         })
     }

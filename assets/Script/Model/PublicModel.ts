@@ -1,7 +1,7 @@
-import { director, dynamicAtlasManager, Node, UITransform, Vec2, Vec3, _decorator } from "cc";
+import { director, dynamicAtlasManager, Node, sys, UITransform, Vec2, Vec3 } from "cc";
+import CryptoES from 'crypto-es';
 import BaseSingleton from "../../Patten/Singleton/BaseSingleton";
 import MyMath from "../../Plug/MyMath";
-import CryptoES from 'crypto-es';
 import { RequestGPG } from "../Contorll/Api/GPGAPI/RequestGPG";
 import PublicData from "./PublicData";
 export default class PublicModel extends BaseSingleton<PublicModel>() {
@@ -295,5 +295,15 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         const getDay = new Date(day)
         return new Date(getDay.getFullYear(), getDay.getMonth() + 1, 0).getDate()
     }
+    convertObjectToWebParams(obj) {
+        if (sys.platform !== sys.Platform.MOBILE_BROWSER)
+            return Object.keys(obj)
+                .map(key => { return `${key}=${encodeURIComponent(obj[key])}` })
+                .join('&')
+        else return new URLSearchParams(obj).toString()
+        // return new URLSearchParams(obj).toString()
+
+    }
+
 }
 

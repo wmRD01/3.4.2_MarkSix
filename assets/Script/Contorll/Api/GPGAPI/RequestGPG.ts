@@ -1,3 +1,4 @@
+import { sys } from "cc";
 
 export namespace RequestGPG {
 
@@ -30,7 +31,8 @@ export namespace RequestGPG {
             this.headers["Content-Type"] = type;
             return this
         }
-        async fetchData(_url: string, callback: Function) {
+
+        fetchData(_url: string, callback: Function) {
             // console.log(_url);
             console.log(this);
             // console.log(_url.split("?"));
@@ -96,8 +98,16 @@ export namespace RequestGPG {
                     xhr.send();
             })
         }
+        async SwitchGetData(url: string, callback: Function) {
+            // console.log(sys.isNative);
 
+            if (sys.isNative && (sys.os === sys.OS.ANDROID || sys.os === sys.OS.IOS) && !sys.isBrowser)
+                await this.XMLData(url, callback)
+            else
+                await this.fetchData(url, callback)
+        }
     }
+
     class Headers {
 
         [x: string]: string;

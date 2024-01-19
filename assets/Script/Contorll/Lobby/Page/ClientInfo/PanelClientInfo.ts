@@ -105,7 +105,7 @@ export default class PanelClientInfo extends BaseComponent {
             .deletContentType()
             .setBody(fileData)
             .setToken(Player.getInstance.gpgToken)
-            .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.UploadAvatar}`, (response: ResponseGPG.UploadAvatar.DataClass) => {
+            .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.UploadAvatar}`, (response: ResponseGPG.UploadAvatar.DataClass) => {
                 this.responseUploadAvatar(response, _spriteFrame)
             })
     }
@@ -131,7 +131,7 @@ export default class PanelClientInfo extends BaseComponent {
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.MyInfo}?${convert}`, this.responseMyInfo.bind(this))
+                .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.MyInfo}?${convert}`, this.responseMyInfo.bind(this))
             resolve();
         })
     }
@@ -180,7 +180,7 @@ export default class PanelClientInfo extends BaseComponent {
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.My_Score}?${convert}`, this.responseMyScore.bind(this))
+                .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.My_Score}?${convert}`, this.responseMyScore.bind(this))
             resolve()
         })
     }

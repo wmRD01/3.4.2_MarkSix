@@ -66,7 +66,7 @@ export default class PanelPoint extends BaseComponent {
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
+                .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
             resolve()
         })
     }
@@ -112,7 +112,7 @@ export default class PanelPoint extends BaseComponent {
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.Betlog}?${convert}`, this.responseBetlog.bind(this))
+                .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.Betlog}?${convert}`, this.responseBetlog.bind(this))
             resolve()
         })
     }

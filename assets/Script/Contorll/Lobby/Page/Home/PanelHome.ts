@@ -128,7 +128,7 @@ export default class PanelHome extends BaseComponent {
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
+                .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
             resolve();
         })
     }
@@ -174,7 +174,7 @@ export default class PanelHome extends BaseComponent {
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawUpcoming}?${convert}`, this.responseDrawUpcoming.bind(this))
+                .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawUpcoming}?${convert}`, this.responseDrawUpcoming.bind(this))
             resolve()
         })
     }
@@ -212,7 +212,7 @@ export default class PanelHome extends BaseComponent {
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.My_Score}?${convert}`, this.responseMyScore.bind(this))
+                .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.My_Score}?${convert}`, this.responseMyScore.bind(this))
             resolve()
         })
     }
@@ -237,7 +237,7 @@ export default class PanelHome extends BaseComponent {
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.MyInfo}?${convert}`, (response: ResponseGPG.MyInfo.DataClass) => {
+                .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.MyInfo}?${convert}`, (response: ResponseGPG.MyInfo.DataClass) => {
                     console.log("MyInfo", response)
                     console.log("確認玩家token登入無異常");
                     if (!response || !response.data) {
@@ -256,7 +256,7 @@ export default class PanelHome extends BaseComponent {
         let convert = PublicModel.getInstance.convertObjectToWebParams(body)
         await new RequestGPG.Request()
             .setToken(Player.getInstance.gpgToken)
-            .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawUpcoming}?${convert}`, this.checkIssueID.bind(this))
+            .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawUpcoming}?${convert}`, this.checkIssueID.bind(this))
     }
     checkIssueID(response?: ResponseGPG.DrawUpcoming.DataClass) {
         // console.log("打拉打拉");

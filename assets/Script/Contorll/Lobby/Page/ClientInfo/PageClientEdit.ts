@@ -58,7 +58,7 @@ export default class PanelClientEdit extends BaseComponent {
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
             .setToken(Player.getInstance.gpgToken)
-            .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.Nickname}`, this.responseNickname.bind(this))
+            .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.Nickname}`, this.responseNickname.bind(this))
     }
     /**驗證碼發送是否成功 */
     responseNickname(response: ResponseGPG.Nickname.DataClass) {
@@ -87,7 +87,7 @@ export default class PanelClientEdit extends BaseComponent {
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
-            .XMLData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.ValidateContactInfo}`, this.responseValidateContactInfo.bind(this))
+            .SwitchGetData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.ValidateContactInfo}`, this.responseValidateContactInfo.bind(this))
     }
     async onValidateContactInfoEmail() {
         /**確認信箱格式 */
@@ -97,7 +97,7 @@ export default class PanelClientEdit extends BaseComponent {
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
-            .XMLData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.ValidateContactInfo}`, this.responseValidateContactInfo.bind(this))
+            .SwitchGetData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.ValidateContactInfo}`, this.responseValidateContactInfo.bind(this))
     }
     async responseValidateContactInfo(response: ResponseGPG.ValidateContactInfo.DataClass) {
         console.log("ValidateContactInfo", response)
@@ -120,7 +120,7 @@ export default class PanelClientEdit extends BaseComponent {
             await new RequestGPG.Request()
                 .setMethod(RequestGPG.Method.POST)
                 .setBody(JSON.stringify(sendBody))
-                .XMLData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.SendRegisterVerification}`, this.responseSendRegisterVerification.bind(this))
+                .SwitchGetData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.SendRegisterVerification}`, this.responseSendRegisterVerification.bind(this))
         }
     }
     /**驗證碼發送是否成功 */
@@ -170,7 +170,7 @@ export default class PanelClientEdit extends BaseComponent {
             .setMethod(RequestGPG.Method.POST)
             .setToken(Player.getInstance.gpgToken)
             .setBody(JSON.stringify(body))
-            .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.CertifiedEmall}`, this.responseCertifiedEmall.bind(this))
+            .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.CertifiedEmall}`, this.responseCertifiedEmall.bind(this))
     }
 
     /**是否修改信箱成功 */

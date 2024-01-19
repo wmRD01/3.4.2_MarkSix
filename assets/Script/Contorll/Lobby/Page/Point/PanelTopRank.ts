@@ -56,7 +56,7 @@ export default class PanelTopRank extends BaseComponent {
             console.log(convert);
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)
-                .XMLData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.TopScore}?${convert}`, this.responseTopScore.bind(this))
+                .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.TopScore}?${convert}`, this.responseTopScore.bind(this))
             resolve()
         })
     }

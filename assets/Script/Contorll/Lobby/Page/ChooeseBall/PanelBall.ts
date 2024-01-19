@@ -114,7 +114,8 @@ export default class PanelBall extends BaseComponent {
     }
     onEnable() {
         this.eventEmit(LobbyStateEvent.ChangeConfirmState, false)
-        this.eventEmit(WebSocketEvent.StartConnect)
+        
+        // this.eventEmit(WebSocketEvent.StartConnect)
         
     }
     onDisable() {

@@ -82,7 +82,7 @@ export default class PanelClientEdit extends BaseComponent {
     async onValidateContactInfoPhone() {
         /**確認信箱 */
         //TODO 製作手機驗證(整理好後再回頭製作)
-        const body = new RequestGPG.Body.NeedToken.ValidateContactInfo()
+        const body = new RequestGPG.Body.NotNeedToken.ValidateContactInfo()
         // body.Phone = this.editPhone.string;
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
@@ -92,7 +92,7 @@ export default class PanelClientEdit extends BaseComponent {
     async onValidateContactInfoEmail() {
         /**確認信箱格式 */
         // if (!this.checkEmail(this.editEmail.string)) return;
-        const body = new RequestGPG.Body.NeedToken.ValidateContactInfo()
+        const body = new RequestGPG.Body.NotNeedToken.ValidateContactInfo()
         // body.Email = this.editEmail.string;
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
@@ -213,21 +213,7 @@ export default class PanelClientEdit extends BaseComponent {
         this.editNicName.string = "";
         // this.editVerificationCode.string = "";
     }
-    /**確認信箱格式 */
-    checkEmailRegular(_string: string) {
-        //please input the test email to see is valid
-        var strEmail = _string;
 
-        //Regular expression Testing
-        var emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
-
-        //validate ok or not
-        if (strEmail.search(emailRule) != -1) {
-            return true
-        } else {
-            return false
-        }
-    }
     checkName(str: string) {
         if (str.length == 0 || (str.length < 2 || str.length > 16)) {
             PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("031", LangType.Game))
@@ -262,7 +248,7 @@ export default class PanelClientEdit extends BaseComponent {
             // console.error("文字有空白");
             return false;
         }
-        if (!this.checkEmailRegular(str)) {
+        if (!PublicModel.getInstance.checkEmailRegular(str)) {
             PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("028", LangType.Game))
             // console.error("請輸入正確信箱");
             return false;

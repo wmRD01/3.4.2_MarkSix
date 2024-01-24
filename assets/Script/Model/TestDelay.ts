@@ -9,7 +9,7 @@ export default class TestDelay extends BaseComponent {
     }
     stopDelay() {
         this.isdelay = false
-        console.error(this.delay);
+        // console.error(this.delay);
         this.destroy()
     }
     update(dt: number) {

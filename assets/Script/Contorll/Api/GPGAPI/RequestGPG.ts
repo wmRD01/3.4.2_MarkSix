@@ -1,4 +1,4 @@
-import { sys } from "cc";
+import PublicModel from "../../../Model/PublicModel";
 
 export namespace RequestGPG {
 
@@ -22,7 +22,11 @@ export namespace RequestGPG {
             this.body = _body;
             return this
         }
-
+        deletother() {
+            delete this.headers.Accept
+            delete this.headers.Authorization
+            return this
+        }
         deletContentType() {
             delete this.headers["Content-Type"]
             return this
@@ -34,7 +38,7 @@ export namespace RequestGPG {
 
         fetchData(_url: string, callback: Function) {
             // console.log(_url);
-            // console.log(this);
+            console.log(this);
             // console.log(_url.split("?"));
             // console.log(_url.split("?")[0].split("/"));
             // console.log(_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length]);
@@ -67,8 +71,8 @@ export namespace RequestGPG {
             return new Promise<void>((resolve, reject) => {
                 var xhr = new XMLHttpRequest(),
                     errInfo = 'Load text file failed: ' + url;
-                console.error(this.method);
-                console.error(this.headers["Content-Type"]);
+                // console.error(this.method);
+                // console.error(this.headers["Content-Type"]);
                 xhr.setRequestHeader("Content-Type", this.headers["Content-Type"])
                 xhr.setRequestHeader("Accept", this.headers["Accept"])
                 xhr.setRequestHeader("Authorization", this.headers["Authorization"])
@@ -99,9 +103,7 @@ export namespace RequestGPG {
             })
         }
         async SwitchGetData(url: string, callback: Function) {
-            // console.log(sys.isNative);
-
-            if (sys.isNative && (sys.os === sys.OS.ANDROID || sys.os === sys.OS.IOS) && !sys.isBrowser)
+            if (PublicModel.getInstance.checkApp())
                 await this.XMLData(url, callback)
             else
                 await this.fetchData(url, callback)
@@ -157,17 +159,8 @@ export namespace RequestGPG {
                 "sDate": string;
                 "eDate": string;
             }
-            export class ValidateContactInfo {
-                Phone: string
-                Email: string
-            }
-            export class BetWrite {
-                memberID: number;
-                issueID: string;
-                betCode: number[]
-                betTime: string;
-                gameID: number;
-            }
+
+
         }
         export namespace NotNeedToken {
             // export class EmailSign {
@@ -185,8 +178,31 @@ export namespace RequestGPG {
                 Email: string;
 
             }
+            export class SendLoginVerification {
+                Locale: string = "zh-TW";
+                Phone: string;
+                Email: string;
 
-
+            }
+            export class BetWrite {
+                memberID: number;
+                issueID: string;
+                betCode: number[]
+                betTime: string;
+                gameID: number;
+            }
+            export class ValidateContactInfo {
+                Phone: string
+                Email: string
+            }
+            export class GetToken {
+                phone: string
+                email: string
+                client_id: string = "mark_six";
+                client_secret: string;
+                grant_type: string;
+                verifycode: string;
+            }
         }
 
     }
@@ -194,6 +210,7 @@ export namespace RequestGPG {
         Default = "",
         Json = "application/json, text/plain, */*",
         FormData = "multipart/form-data",
+        Form = "application/x-www-form-urlencoded"
     }
 
     export enum Method {
@@ -222,10 +239,15 @@ export namespace RequestGPG {
         TopScore = "/Mark6/Top_Score",
         Betlog = "/Report/Betlog/Get",
         My_Score = "/Mark6/My_Score",
-        BetWrite= "/Report/Betlog/Write"
+        BetWrite = "/Report/Betlog/Write",
+        GetToken = "/connect/token"
     }
     export enum GPGAPIKey {
         QA = "5gh394D",
+        Online = "4fypra!c!?",
+    }
+    export enum SecretKey {
+        QA = "secret",
         Online = "4fypra!c!?",
     }
 }

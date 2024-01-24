@@ -31,6 +31,7 @@ export default class PublicData extends BaseSingleton<PublicData>() {
 
     gpgUrlPlayApi = RequestGPG.APIUrl.QA_playAPI;
     gpgUrlids = RequestGPG.APIUrl.QA_ids;
+    gpgSecret = RequestGPG.SecretKey.QA;
     markSixMsg: MarkSix = new MarkSix();
     isApp: string = '0';
 
@@ -39,9 +40,10 @@ export default class PublicData extends BaseSingleton<PublicData>() {
         this.gpgApiKey = RequestGPG.GPGAPIKey.Online;
         this.gpgUrlPlayApi = RequestGPG.APIUrl.playAPI
         this.gpgUrlids = RequestGPG.APIUrl.ids
-        console.error(this.gpgApiKey);
-        console.error(this.gpgUrlPlayApi);
-        console.error(this.gpgUrlids);
+        this.gpgSecret = RequestGPG.SecretKey.Online
+        // console.error(this.gpgApiKey);
+        // console.error(this.gpgUrlPlayApi);
+        // console.error(this.gpgUrlids);
 
     }
 }

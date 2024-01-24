@@ -2,8 +2,10 @@ import { Button, Label } from "cc";
 
 export class VerificationTimer {
     time: number = 5
+    orgStr: string;
 
     constructor(_label: Label, _button: Button, _time: number) {
+        this.orgStr = _label.string;
         let rememberOrgStr = _label.string
         _button.interactable = false
         this.time = _time ? _time : this.time;

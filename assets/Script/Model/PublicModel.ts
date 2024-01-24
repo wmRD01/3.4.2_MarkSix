@@ -1,4 +1,5 @@
 import { director, dynamicAtlasManager, Node, sys, UITransform, Vec2, Vec3 } from "cc";
+import { DEV } from "cc/env";
 import CryptoES from 'crypto-es';
 import BaseSingleton from "../../Patten/Singleton/BaseSingleton";
 import MyMath from "../../Plug/MyMath";
@@ -94,6 +95,40 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         if (countLen > len)
             name = this.reName(name, len);
         return name
+
+    }
+    /**確認信箱格式 */
+    checkPhoneRegular(_string: string) {
+        //please input the test email to see is valid
+        var strPhone = _string;
+
+        //判+886
+        var phoneRule886 = /^\+[0-9]{1,15}$/;
+
+        //validate ok or not
+        if (phoneRule886.test(strPhone)) {
+            return true
+        } else {
+            return false
+        }
+
+
+    }
+    /**確認信箱格式 */
+    checkEmailRegular(_string: string) {
+        //please input the test email to see is valid
+        var strEmail = _string;
+
+        //Regular expression Testing
+        var emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+
+        //validate ok or not
+        if (strEmail.search(emailRule) != -1) {
+            return true
+        } else {
+            return false
+        }
+        // ^\+[0 - 9]{ 1, 15 } $
 
     }
     /**確認名稱長度 */
@@ -277,6 +312,27 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         return `${hours}:${min}:${sec}`;
 
     }
+    checkApp() {
+        console.log(sys.isNative);
+        console.log(sys.os)
+        console.log(sys.isBrowser)
+        if (sys.isNative && !sys.isBrowser) {
+            if (DEV) {
+                if (sys.os === sys.OS.ANDROID || sys.os === sys.OS.IOS || sys.os === sys.OS.WINDOWS)
+                    return true
+                else
+                    return false
+            }
+            else {
+                if (sys.os === sys.OS.ANDROID || sys.os === sys.OS.IOS)
+                    return true
+                else
+                    return false
+            }
+        }
+        else
+            return false
+    }
     /**轉換國立 */
     convertToROC(yearAD) {
         const ROC_OFFSET = 1911;
@@ -287,6 +343,7 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
     checkStringNull(str: string) {
         return str == "" || str == null || str == undefined ? true : false
     }
+
     convertDateDiff(_date: string, offsetDay: number) { // sDate1 和 sDate2 是 2016-06-18 格式
         var oDate1 = new Date(_date)
         return new Date(oDate1.setDate(oDate1.getDate() + offsetDay));
@@ -323,8 +380,6 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         const offsetSign = offset >= 0 ? "+" : "-";
         const offsetHours = pad(Math.floor(Math.abs(offset) / 60), 2);
         const offsetMinutes = pad(Math.abs(offset) % 60, 2);
-        console.log();
-        
 
         return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}.${milliseconds}${offsetSign}${offsetHours}:${offsetMinutes}`;
     }

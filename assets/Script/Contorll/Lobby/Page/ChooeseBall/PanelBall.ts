@@ -243,7 +243,7 @@ export default class PanelBall extends BaseComponent {
     }
     async requestBetWrite(e?: EventTouch, customEventData?: string) {
         this.eventEmit(LobbyStateEvent.ChangeConfirmState, false)
-        const body = new RequestGPG.Body.NeedToken.BetWrite()
+        const body = new RequestGPG.Body.NotNeedToken.BetWrite()
         body.memberID = Player.getInstance.gpgInfo.data.memberID
         body.issueID = PublicData.getInstance.curIssueID
         body.betCode = this.tempChoose;
@@ -255,7 +255,7 @@ export default class PanelBall extends BaseComponent {
             .setBody(JSON.stringify(body))
             .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.BetWrite}`, this.responseBetWrite.bind(this))
     }
-    responseBetWrite(response?: ResponseGPG.Betlog.DataClass) {
+    responseBetWrite(response?: ResponseGPG.BetWrite.DataClass) {
         if (response?.Status?.Code == '0') this.confirmAttack()
         /**請注意這邊是走GPG的error Code不是走Game的 */
         else {

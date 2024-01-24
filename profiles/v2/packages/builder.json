@@ -7,9 +7,9 @@
     "taskMap": {
       "1654667623042": {
         "id": "1654667623042",
-        "progress": 0.20000000000000004,
-        "state": "processing",
-        "message": "Build engine",
+        "progress": 1,
+        "state": "success",
+        "message": "2024-1-24 12:19 Build success in 20438 ms!",
         "options": {
           "name": "Baccarat",
           "platform": "web-mobile",
@@ -52,7 +52,7 @@
             }
           }
         },
-        "time": "2024-1-4 16:04",
+        "time": "2024-1-24 12:19",
         "dirty": false
       },
       "1659321737563": {

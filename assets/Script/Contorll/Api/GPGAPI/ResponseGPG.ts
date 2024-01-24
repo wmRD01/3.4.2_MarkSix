@@ -52,6 +52,25 @@ export namespace ResponseGPG {
         }
 
     }
+    export namespace SendLoginVerification {
+        export class DataClass {
+            Status: State = new State();
+        }
+        class State {
+            Code: string
+            Message: string
+        }
+
+
+    }
+    export namespace GetToken {
+        export class DataClass {
+            access_token: string
+            expires_in: number
+            scope: string
+            token_type: string
+        }
+    }
     export namespace Nickname {
         export class DataClass {
             Status: State = new State();
@@ -192,4 +211,23 @@ export namespace ResponseGPG {
             betTimes: number;
         }
     }
+    export namespace BetWrite {
+        export class DataClass {
+            data: BetWrite = new BetWrite();
+            Status = new State()
+        }
+        class State {
+            Code: string
+            Message: string
+        }
+        class BetWrite {
+            betCode: number[] = [];
+            betTime: string;
+            gameID: number;
+            issueID: string;
+            memberID: number;
+        }
+    }
+
+
 }

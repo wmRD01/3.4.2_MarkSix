@@ -181,7 +181,7 @@ export default class PanelHome extends BaseComponent {
         //TODO 如果時間到了該怎處理?
         this.timer.setTimer(Date_C.getTime())
         if (countTime < 0) {
-            console.error("時間到了，該開始搓報API");
+            // console.error("時間到了，該開始搓報API");
             this.isChangeIssueID = true;
             return
         }
@@ -251,10 +251,9 @@ export default class PanelHome extends BaseComponent {
         // console.log(this.testtotoel);
 
         if (DEV) {
-
             this.testtotoel++
             if (this.testtotoel == 3) {
-                console.error("終於換天拉!!!!");
+                // console.error("終於換天拉!!!!");
                 this.isChangeIssueID = false;
                 clearInterval(this.loopTimer)
                 this.eventEmit(LobbyStateEvent.NextIssueID)
@@ -265,7 +264,7 @@ export default class PanelHome extends BaseComponent {
 
 
         if (this.currentIssueID != Number(response.data[0].issueID)) {
-            console.error("終於換天拉!!!!");
+            // console.error("終於換天拉!!!!");
             this.isChangeIssueID = false;
             clearInterval(this.loopTimer)
             this.eventEmit(LobbyStateEvent.NextIssueID)
@@ -275,7 +274,7 @@ export default class PanelHome extends BaseComponent {
     onGoPage(e: EventTouch, customEventData?: string) {
         let split = customEventData.split('-')
         if (isNaN(Number(split[0])))
-            console.error("錯誤啦!!!是不是忘記設定");
+            // console.error("錯誤啦!!!是不是忘記設定");
         this.eventEmit(LobbyStateEvent.ChangePointPage, null, split[1])
         EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, Number(split[0]))
     }

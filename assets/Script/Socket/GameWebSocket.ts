@@ -325,7 +325,7 @@ export default class GameWebSocket extends SocketModel {
     startLoadLanguage() {
         console.log("開始讀");
 
-        if (sys.os === sys.OS.IOS) {
+        if (PublicModel.getInstance.checkApp()) {
             let gameLang = `Lib/gameLanguage/${GameData.getInstance.gameID}/${this.UserLanguage}`
             this.JsonData(gameLang, this.loadLanguageEnd.bind(this), this.loadLanguageError.bind(this))
             let serverLang = `Lib/serverLanguage/${this.UserLanguage}`

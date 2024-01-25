@@ -27,25 +27,22 @@ export default class ItemLink extends BaseComponent {
 
     }
     onOpenWindow(e: EventTouch, customEventData?: string) {
-
         // sys.openURL()//原生裝置開啟瀏覽器
-        CanvasControll.instance.rootEndNode()
-        if (PublicModel.getInstance.checkApp())
-            if (this.url == NativeUrlType.Official)
-                director.loadScene(GameSceneName.Loading)
-            else
+
+        if (this.url == NativeUrlType.Official||this.url == WebUrlType.Official)
+        {
+            CanvasControll.instance.rootEndNode()
+            director.loadScene(GameSceneName.Loading)
+            return
+
+        }
+        if (PublicModel.getInstance.checkApp())         
                 sys.openURL(this.url)
         else {
-            let _data = new SendData()
-            _data.name = this.node.name.split("Link")[0]
-            PublicData.getInstance.markSixMsg.send(MarkSixCommandType.contact, _data)
-
-
-            if (this.url = WebUrlType.Official) {
-                director.loadScene(GameSceneName.Loading)
-            }
-            else
-                window.location.href = this.url
+            // let _data = new SendData()
+            // _data.name = this.node.name.split("Link")[0]
+            // PublicData.getInstance.markSixMsg.send(MarkSixCommandType.contact, _data)
+            window.location.href = this.url
         }
         // window.open(this.url)
         // console.log(this.url);

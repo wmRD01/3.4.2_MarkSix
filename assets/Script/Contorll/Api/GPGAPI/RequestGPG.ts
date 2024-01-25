@@ -230,7 +230,7 @@ export namespace RequestGPG {
         MyInfo = "/Member/MyInfo",
         Nickname = "/Member/Nickname",
         /**已綁定 */
-        SendLoginVerification = "/Token/SendLoginVerification ",
+        SendLoginVerification = "/Token/SendLoginVerification",
         /**未綁定 */
         SendRegisterVerification = "/Token/SendRegisterVerification",
         ValidateContactInfo = "/Token/ValidateContactInfo",

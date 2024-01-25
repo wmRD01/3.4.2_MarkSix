@@ -145,7 +145,7 @@ export default class PanelClientInfo extends BaseComponent {
             this.labelMail.string = response.data.email
         // /*上傳圖片功能暫時隱藏 */
         if (!PublicModel.getInstance.checkStringNull(response.data.photo.headPhoto))
-            await this.loadPicture(response.data.photo.headPhoto)
+             this.loadPicture(response.data.photo.headPhoto)
         if (!PublicModel.getInstance.checkStringNull(response.data.nickName)) {
             this.getplatform = response.data.nickName?.split("_")[0]/**因為前面會有註冊會員的文字，要刪除掉 */
             this.labelNickName.string = response.data.nickName.replace(`${this.getplatform}_`, "")
@@ -154,17 +154,15 @@ export default class PanelClientInfo extends BaseComponent {
             this.labelNickName.string = response.data.nickName
         this.labelPhone.string = PublicModel.getInstance.checkStringNull(response.data.phoneNumber) ? "" : response.data.phoneNumber
     }
-    async loadPicture(url: string) {
-        return new Promise<void>((resolve, reject) => {
+     loadPicture(url: string) {
             assetManager.loadRemote(url, (err, image: ImageAsset) => {
                 if (err) {
                     console.error(err.message);
                     return
                 }
                 this.spritePlayer.spriteFrame = SpriteFrame.createWithImage(image)
-                resolve()
             })
-        })
+
     }
     //#endregion
     //#region Betlog

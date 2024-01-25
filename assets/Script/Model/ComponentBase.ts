@@ -1,6 +1,6 @@
-import { _decorator, Component, UIOpacity, Vec3 } from "cc";
-import { NotificationType } from "../Enum/NotificationType";
+import { Component, UIOpacity, Vec3, _decorator } from "cc";
 import { GameEvent } from "../Enum/GameEvent";
+import { NotificationType } from "../Enum/NotificationType";
 import EventMng from "../Manager/EventMng";
 import PublicData from "./PublicData";
 import PublicModel from "./PublicModel";
@@ -23,6 +23,11 @@ export default class BaseComponent extends Component {
             this.getComponent(UIOpacity).opacity = 255
     }
     protected start(): void {
+    }
+    protected onDestroy() {
+        let getIndex = PublicData.getInstance.arr_ComponentBaseClass.indexOf(this)
+        if (getIndex != -1)
+            PublicData.getInstance.arr_ComponentBaseClass.splice(getIndex, 1)
     }
     setZIndex() {
         this.node.setSiblingIndex(this.zIndex);
@@ -58,7 +63,7 @@ export default class BaseComponent extends Component {
     hide(): void {
         this.node.active = false
     }
-    reProcessing(any:any) {
+    reProcessing(any: any) {
 
     }
     startDelay() {

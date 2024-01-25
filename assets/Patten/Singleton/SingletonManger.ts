@@ -39,6 +39,9 @@ export default class SingletManager {
         // console.log(js.getClassName(self));
 
         const name = js.getClassName(self);
+        if (!this.componentClass) this.componentClass = new Map<string, IBaseSingleton>();
+        // console.error(this.componentClass);
+
         if (this.componentClass.has(name)) {
             // return console.error("Adam", `：${name}`, "請勿重複實現單例");
         } else {
@@ -82,11 +85,16 @@ export default class SingletManager {
      * @param name
      */
     delete(name: any): void {
-        if (this.componentClass.has(name)) {
-            this.componentClass.get(name).clear();
-            this.componentClass.delete(name);
-        } else {
-            // console.warn("查找不到該物件,無須清除");
+        try {
+
+            if (this.componentClass.has(name)) {
+                this.componentClass.get(name).clear();
+                this.componentClass.delete(name);
+            } else {
+                // console.warn("查找不到該物件,無須清除");
+            }
+        } catch (error) {
+            console.warn("查找不到該物件,無須清除");
         }
     }
 }

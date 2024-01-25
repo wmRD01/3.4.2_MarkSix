@@ -1,5 +1,5 @@
 
-import { _decorator, view, ResolutionPolicy, find, UITransform, screen, Size, macro, size, sys, game, } from 'cc';
+import { find, game, macro, ResolutionPolicy, screen, Size, size, sys, UITransform, view, _decorator } from 'cc';
 import DelayTime from '../../../Plug/DelayTime';
 const { ccclass, property } = _decorator;
 

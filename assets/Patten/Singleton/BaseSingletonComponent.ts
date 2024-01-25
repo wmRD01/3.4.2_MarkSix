@@ -24,6 +24,12 @@ export default function BaseSingletonComponent<T>() {
          */
         public clear() {
         }
+        onDestroy() {
+            super.onDestroy()
+            console.log(js.getClassName(this));
+
+            SingletManager.instance.delete(js.getClassName(this));
+        }
     }
 
     return BaseSingletonComponent;

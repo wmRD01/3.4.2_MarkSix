@@ -13,7 +13,6 @@ const { ccclass, property } = _decorator;
 @ccclass('MainLoading')
 export default class MainLoading extends BaseSingletonComponent<MainLoading>() {
     onLoad() {
-
         PublicData.getInstance.currentScene = GameSceneName.Loading
         super.onLoad()
         game.frameRate = 59
@@ -23,8 +22,11 @@ export default class MainLoading extends BaseSingletonComponent<MainLoading>() {
         EventMng.getInstance.init()
     }
     start() {
+        // console.error("阿你不用再看?");
+
         // return
         if (!PublicModel.getInstance.checkApp()) {
+            // console.log("我該做事情八?");
             PanelLoading.instance.openLoading()
             director.preloadScene(GameSceneName.Lobby, () => {
                 director.loadScene(GameSceneName.Lobby)

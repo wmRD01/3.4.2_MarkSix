@@ -6,6 +6,7 @@ const { ccclass, property } = _decorator;
 export default class PanelVersion extends BaseSingletonComponent<PanelVersion>() {
     labelVersion: Label;
     onLoad() {
+        super.onLoad()
         this.labelVersion = find("LabelVersion", this.node).getComponent(Label)
         if (window.isEditor || window.isBuildSelf)
             this.labelVersion.string = "beta_" + PublicData.getInstance.gameVersion;

@@ -2850,7 +2850,7 @@
       "__expectedType__": "cc.SpriteFrame"
     },
     "_inputFlag": 5,
-    "_inputMode": 2,
+    "_inputMode": 6,
     "_maxLength": 6,
     "spriteBG": null,
     "isAutoOff": false,

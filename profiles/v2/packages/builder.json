@@ -172,13 +172,13 @@
         "time": "2023-7-21 13:56",
         "dirty": false
       },
-      "1706168048415": {
-        "id": "1706168048415",
+      "1706175783256": {
+        "id": "1706175783256",
         "progress": 1,
         "state": "success",
-        "message": "2024-1-25 15:47 Build success in 15073 ms!",
+        "message": "2024-1-26 12:14 Build success in 9293 ms!",
         "options": {
-          "name": "Baccarat",
+          "name": "MarkSix",
           "platform": "ios",
           "buildPath": "/Users/chenghsiangtsao/Downloads/3.4.2_MarkSix/build",
           "debug": false,
@@ -235,7 +235,7 @@
             }
           }
         },
-        "time": "2024-1-25 15:47",
+        "time": "2024-1-26 12:14",
         "dirty": false
       }
     }
@@ -251,7 +251,7 @@
     "packAutoAtlas": false,
     "replaceSplashScreen": true,
     "sourceMaps": false,
-    "name": "Baccarat",
+    "name": "MarkSix",
     "debug": false,
     "startScene": "602c3d25-484a-4071-ae9b-2b9ed340bc8b",
     "scenes": [
@@ -262,8 +262,7 @@
       },
       {
         "url": "db://assets/Scene/Lobby.scene",
-        "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
-        "inBundle": false
+        "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc"
       }
     ],
     "mainBundleIsRemote": false

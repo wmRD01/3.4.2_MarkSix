@@ -4,12 +4,10 @@ import { NotificationType } from "../../Enum/NotificationType";
 import { PageAction } from "../../Enum/PageAction";
 import { PageMenu } from "../../Enum/PageMenu";
 import AssetMng from "../../Manager/AssetMng";
-import ButtonMng from "../../Manager/ButtonMng";
 import EventMng from "../../Manager/EventMng";
 import BaseComponent from "../../Model/ComponentBase";
 import PublicData from "../../Model/PublicData";
 import PublicModel from "../../Model/PublicModel";
-import PageControll from "./PageControll";
 
 const { ccclass, property } = _decorator;
 @ccclass('PanelBottomNavigationBar')
@@ -36,7 +34,7 @@ export default class PanelBottomNavigationBar extends BaseComponent {
     //#endregion
     async onLoad() {
         super.onLoad()
-        console.log("誰搶誰");
+        // console.log("誰搶誰");
 
         // PageControll.instance.pageEvnet.on(PageAction.ChangeTo, this.onMoveCircle, this)
         await AssetMng.waitStateCheck(AssetType.Sprite)

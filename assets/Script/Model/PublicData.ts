@@ -41,9 +41,5 @@ export default class PublicData extends BaseSingleton<PublicData>() {
         this.gpgUrlPlayApi = RequestGPG.APIUrl.playAPI
         this.gpgUrlids = RequestGPG.APIUrl.ids
         this.gpgSecret = RequestGPG.SecretKey.Online
-        // console.error(this.gpgApiKey);
-        // console.error(this.gpgUrlPlayApi);
-        // console.error(this.gpgUrlids);
-
     }
 }

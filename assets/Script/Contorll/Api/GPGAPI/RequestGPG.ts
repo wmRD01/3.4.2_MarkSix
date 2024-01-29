@@ -10,21 +10,12 @@ export namespace RequestGPG {
             this.method = _method;
             return this
         }
-        setHeaders(_headers: Headers) {
-            this.headers = _headers;
-            return this
-        }
         setToken(str: string) {
             this.headers.Authorization = `Bearer ${str}`
             return this
         }
         setBody(_body: string | FormData) {
             this.body = _body;
-            return this
-        }
-        deletother() {
-            delete this.headers.Accept
-            delete this.headers.Authorization
             return this
         }
         deletContentType() {
@@ -35,13 +26,8 @@ export namespace RequestGPG {
             this.headers["Content-Type"] = type;
             return this
         }
-
-        fetchData(_url: string, callback: Function) {
-            // console.log(_url);
-            console.log(this);
-            // console.log(_url.split("?"));
-            // console.log(_url.split("?")[0].split("/"));
-            // console.log(_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length]);
+        private fetchData(_url: string, callback: Function) {
+            // console.log(this);
             return new Promise<void>((resolve, reject) => {
                 let data;
                 fetch(_url, this)
@@ -65,14 +51,10 @@ export namespace RequestGPG {
             })
 
         }
-        XMLData(url: string, callback: Function) {
+        private XMLData(url: string, callback: Function) {
             console.log("開始", url);
-
             return new Promise<void>((resolve, reject) => {
-                var xhr = new XMLHttpRequest(),
-                    errInfo = 'Load text file failed: ' + url;
-                // console.error(this.method);
-                // console.error(this.headers["Content-Type"]);
+                var xhr = new XMLHttpRequest()
                 xhr.setRequestHeader("Content-Type", this.headers["Content-Type"])
                 xhr.setRequestHeader("Accept", this.headers["Accept"])
                 xhr.setRequestHeader("Authorization", this.headers["Authorization"])
@@ -80,8 +62,6 @@ export namespace RequestGPG {
                 xhr.onload = function () {
                     if (xhr.readyState === 4) {
                         if (xhr.status === 200 || xhr.status === 0) {
-                            // console.error(xhr.response);
-                            // console.error(JSON.parse(xhr.response));
                             callback(JSON.parse(xhr.response), url);
                             resolve()
                         }
@@ -163,15 +143,7 @@ export namespace RequestGPG {
 
         }
         export namespace NotNeedToken {
-            // export class EmailSign {
-            //     [x: string]: string;
-            //     verifyCode: string;
-            //     email: string;
-            // }
-
-            export class RankList {
-
-            }
+  
             export class SendRegisterVerification {
                 Locale: string = "zh-TW";
                 Phone: string;

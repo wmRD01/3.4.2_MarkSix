@@ -1,6 +1,5 @@
 import { Node, PageView, _decorator } from 'cc';
 import BaseSingletonComponent from '../../../Patten/Singleton/BaseSingletonComponent';
-import SingletManager from '../../../Patten/Singleton/SingletonManger';
 import { NotificationType } from '../../Enum/NotificationType';
 import { PageAction } from '../../Enum/PageAction';
 import { PageMenu } from '../../Enum/PageMenu';
@@ -16,25 +15,18 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
 
     currnetIndex: number = 0;
     onLoad() {
-        /**現階段測試 正是要往Loading移動 */
         super.onLoad()
-        // console.log(this.pageEvnet);
         this.pageView = this.getComponent(PageView)
 
         EventMng.getInstance.mapEvnet.get(NotificationType.Page).on(PageAction.ChangeTo, this.onToPage, this)
         for (let index = 0; index < this.page.length; index++) {
             this.page[index].active = false
         }
-        // console.log(this.pageEvnet);
     }
     start() {
         this.closeTouch(this.pageView)
-        // console.log("欸我已經送了欸");
         EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(WebSocketEvent.StartLoadLanguage)
         EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, 0);
-        // if (DEV)
-        // else
-        //     EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, 0);
     }
     closeTouch(target: PageView) {
         //@ts-ignore
@@ -48,9 +40,6 @@ export default class PageControll extends BaseSingletonComponent<PageControll>()
     }
     /**接收的值也是number，只是PageMenu是enum內存number */
     onToPage(index: PageMenu) {
-        console.log(SingletManager.instance.getAll());
-        console.log(PanelLoading.instance);
-
         PanelLoading.instance.openLoading("資料讀取中")
         this.page[this.currnetIndex].active = false
         this.currnetIndex = index

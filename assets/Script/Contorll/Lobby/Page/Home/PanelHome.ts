@@ -271,30 +271,15 @@ export default class PanelHome extends BaseComponent {
         }
     }
     //#endregion
+    /**監聽傳入的格式會有兩種，1種是單數字，另一種為數字-數字(ex:1-0) */
     onGoPage(e: EventTouch, customEventData?: string) {
+        
         let split = customEventData.split('-')
         if (isNaN(Number(split[0])))
             // console.error("錯誤啦!!!是不是忘記設定");
-        this.eventEmit(LobbyStateEvent.ChangePointPage, null, split[1])
+            this.eventEmit(LobbyStateEvent.ChangePointPage, null, split[1])
         EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, Number(split[0]))
     }
-    handleURLData(_url: string) {
-        //  _url = "https://play1.godplay.app/10001/index.html?loginType=web&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0aW1lIjoxNjY4NzYyMjcwMDQ1LCJ1aWQiOiJYUGpST1oiLCJkYyI6IkdQRyIsImFnZW50SWQiOiJ0ckUzeW1XaURMYjIiLCJicmFuZElkIjoiR1BHIiwiYnJhbmRUaXRsZSI6IkdQRyIsImdhbWVJZCI6IjEwMDAxIiwiaWF0IjoxNjY4NzYyMjcwLCJleHAiOjE2Njg3NjU4NzB9.k_GVGPiQCjWxhFG3SGM2zoSy_ggN2cZXuUQ5GvqZib_0TCJ2ul9K5xbTKkgwm7OUw7nMCWLWlwERHc0MMF586SgjuQe9W7SoRSMaBtw_AkiKNn4S1NMvhemgNAdIyjL7I1Gg5xyT-x110RF73lF-yt-n6KKTP3TGkd7wR9_fPz8&record=https://backendsystem.godplay.app/wList&dc=GPG&agentId=trE3ymWiDLb2&GGID=1&lang=tw&forceExchange=true&providerlogo=true"
-        // console.log(_url.split("?")[1].split("&"));
-        // console.log(_url.split("?")[1]);
-
-        if (_url.split("?")[1] == undefined) return undefined
-
-        let arr = _url.split("?")[1].split("&")
-        let obj = new Object()
-        for (let index = 0; index < arr.length; index++) {
-            let cut = arr[index].split("=")
-            obj[cut[0]] = cut[1]
-        }
-        // console.log(obj);
-        return obj
-    }
-
 }
 
 class Marquee extends Component {

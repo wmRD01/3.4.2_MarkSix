@@ -29,14 +29,14 @@ export default class Player extends BaseSingleton<Player>() {
     /// 相關資訊.
     // totalGame :string= '';    // 遊戲總局數.
     // winGame :string= '';      // 勝局數.
-    // maxPrize :string= '';     // 最大底池.
-    // maxPType :string= '';     // 最大牌型.
-    // maxPInfo :string= '';     // 最大牌資訊.
+    // maxPrize :string= '';    
+    // maxPType :string= '';   
+    // maxPInfo :string= '';     
 
 
     // pos: number = -1;          // 玩家入座位置(0~8), -1為尚未入座.
     // credit: number = 0;        // 遊戲剩餘籌碼.
-    // bets: number = 0;          // 已下注籌碼.
+    // bets: number = 0;        
 
 
     getPoint() {

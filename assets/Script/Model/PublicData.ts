@@ -1,6 +1,5 @@
 import BaseSingleton from "../../Patten/Singleton/BaseSingleton";
 import { RequestGPG } from "../Contorll/Api/GPGAPI/RequestGPG";
-import { MarkSix } from "../Contorll/Api/MarkSix";
 import { GameSceneName } from "../Enum/GameSenceName";
 import CheckLoading from "./CheckLoading";
 export default class PublicData extends BaseSingleton<PublicData>() {
@@ -32,7 +31,6 @@ export default class PublicData extends BaseSingleton<PublicData>() {
     gpgUrlPlayApi = RequestGPG.APIUrl.QA_playAPI;
     gpgUrlids = RequestGPG.APIUrl.QA_ids;
     gpgSecret = RequestGPG.SecretKey.QA;
-    markSixMsg: MarkSix = new MarkSix();
     isApp: string = '0';
 
 

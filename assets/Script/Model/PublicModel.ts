@@ -313,9 +313,9 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
 
     }
     checkApp() {
-        console.log(sys.isNative);
-        console.log(sys.os)
-        console.log(sys.isBrowser)
+        // console.log(sys.isNative);
+        // console.log(sys.os)
+        // console.log(sys.isBrowser)
         if (sys.isNative && !sys.isBrowser) {
             if (DEV) {
                 if (sys.os === sys.OS.ANDROID || sys.os === sys.OS.IOS || sys.os === sys.OS.WINDOWS|| sys.os === sys.OS.OSX)

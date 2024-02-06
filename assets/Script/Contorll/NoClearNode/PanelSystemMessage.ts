@@ -43,8 +43,8 @@ export default class PanelSystemMessage extends BaseSingletonComponent<PanelSyst
         }
     }
     setLanguage() {
-        this.labelConfirm.string = SocketSetting.t("1000", LangType.Game)
-        this.labelCancel.string = SocketSetting.t("1001", LangType.Game)
+        this.labelConfirm.string = SocketSetting.getInstance.t("1000", LangType.Game)
+        this.labelCancel.string = SocketSetting.getInstance.t("1001", LangType.Game)
         super.setLanguage()
     }
     showSingleConfirm(caption: string, _callBack?: Function, ...arg: any) {

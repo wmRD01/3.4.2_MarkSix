@@ -105,7 +105,7 @@ export default class SocketModel extends BaseComponent {
         /**確認是否為App 這個會從前端那邊傳 */
         if (this.urlData != undefined)
             PublicData.getInstance.isApp = (this.urlData as URLVlaue).app
-        console.log(this.urlData);
+        // console.log(this.urlData);
 
         // this.serverhost = "211.22.137.96"; // server host
         // this.ConnectionType = "ws"
@@ -160,9 +160,6 @@ export default class SocketModel extends BaseComponent {
             return "https://wmrd01.github.io/BaccaratPlay/lib/"
         else//預設 // 本地端
             return "http://127.0.0.1/JaiJaiTest/lib/";
-        // return "http://192.168.4.61/JaiJaiTest/lib/"
-        // return "http://192.168.89.61/JaiJaiTest/lib/"
-        // return "http://192.168.0.238/JaiJaiTest/lib/"
     }
 
     handleURLData(_url: string) {

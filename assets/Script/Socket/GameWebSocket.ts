@@ -154,7 +154,7 @@ export default class GameWebSocket extends SocketModel {
         CheckLoading.getInstance.endWork(CheckLoadingType.isWebSocketOpen);
         this.onLogIn("ln")
         if (this.usertoken == "") {
-            // GameControll.getInstance.messaggeState(MessageCommend.BackHome, SocketSetting.t("E_0001", LangType.Game))
+            // GameControll.getInstance.messaggeState(MessageCommend.BackHome,  SocketSetting.getInstance.t("E_0001", LangType.Game))
             return;
         }
     }
@@ -162,14 +162,14 @@ export default class GameWebSocket extends SocketModel {
         console.log("Send Text fired an error");
         CheckLoading.getInstance.resetState(CheckLoadingType.isWebSocketOpen);
         // 連線錯誤，詳細情況請洽客服!
-        // GameControll.getInstance.messaggeState(MessageCommend.BackHome, SocketSetting.t("E_0001", LangType.Game))
+        // GameControll.getInstance.messaggeState(MessageCommend.BackHome,  SocketSetting.getInstance.t("E_0001", LangType.Game))
     }
     onWS_Close(event) {
         console.log("WebSocket instance closed.");
         this.isClose = true
         if (CheckLoading.getInstance.checkState(CheckLoadingType.isWebSocketOpen)) {
             CheckLoading.getInstance.resetState(CheckLoadingType.isWebSocketOpen);
-            // GameControll.getInstance.messaggeState(MessageCommend.BackHome, SocketSetting.t("E_0002", LangType.Game))
+            // GameControll.getInstance.messaggeState(MessageCommend.BackHome,  SocketSetting.getInstance.t("E_0002", LangType.Game))
         };
     }
     onWS_Receive(event) {
@@ -354,8 +354,8 @@ export default class GameWebSocket extends SocketModel {
         if (url.indexOf("serverApiLanguage") > 0)
             type = LangType.ServerAPI
         let jsonTo = JSON.parse(jsonText)
-        SocketSetting.setLang(this.UserLanguage).init(jsonTo, type); //設定語言   
-        // SocketSetting.setLang(MyWebSocket.instence.UserLanguage).init(jsonTo, type); //設定語言   
+        SocketSetting.getInstance.setLang(this.UserLanguage).init(jsonTo, type); //設定語言   
+        //  SocketSetting.getInstancesetLang(MyWebSocket.instence.UserLanguage).init(jsonTo, type); //設定語言   
         // MainModelUp.instance.IsLoadLanguage = true;
     }
     loadLanguageError(url: string, err?: string) {
@@ -370,7 +370,7 @@ export default class GameWebSocket extends SocketModel {
         this.isClose = true
         // console.log("语言包下载失败请通知客服");
         GameControll.getInstance.messaggeState(MessageCommend.BackHome, "資源包有問題，請洽客服")
-        // Panel_Message.showConfirm(this, 1, SocketSetting.t("S_9077"), (e) => {
+        // Panel_Message.showConfirm(this, 1,  SocketSetting.getInstance.t("S_9077"), (e) => {
         //     this.onBackHome();
         // }); //"语言包下载失败请通知客服";
         // MainModelUp.instance.ShowMessageBox = true;

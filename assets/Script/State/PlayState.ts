@@ -1,19 +1,17 @@
 import { State } from "../../Patten/StatePatten";
 import * as RP from "../Contorll/Api/ResponeCommand";
-import { NotificationType } from "../Enum/NotificationType";
-import { GameStateEvent } from "../Enum/GameStateEvent";
-import EventMng from "../Manager/EventMng";
 import PanelSystemMessage from "../Contorll/NoClearNode/PanelSystemMessage";
-import SocketSetting from "../Socket/SocketSetting";
 import { LangType } from "../Enum/LangType";
 import { LobbyStateEvent } from "../Enum/LobbyStateEvent";
+import { NotificationType } from "../Enum/NotificationType";
+import EventMng from "../Manager/EventMng";
+import SocketSetting from "../Socket/SocketSetting";
 // /**自己入房 */
 // export class OwnerInRoom extends State {
 //     public changeState(data: RP.goin): void {
 //     }
 
 // }
-/**自身下注 */
 export class ChooeseBall extends State {
     public changeState(data: RP.bet): void {
         console.log("BET", data);
@@ -27,7 +25,7 @@ export class ChooeseBall extends State {
                 EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(LobbyStateEvent.ChangeBallButtonState, true)
                 EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(LobbyStateEvent.ChangeConfirmState, false)
             }
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t(data.code, LangType.ServerAPI))
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t(data.code, LangType.ServerAPI))
         }
     }
 

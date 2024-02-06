@@ -64,10 +64,6 @@ export default class PanelBottomNavigationBar extends BaseComponent {
     }
     async onMoveCircle(index: PageMenu) {
         await AssetMng.waitStateCheck(AssetType.Sprite)
-        // console.error("誰搶誰");
-        // console.log(this.currentIndex, index);
-
-
         this.lastIndex = this.currentIndex
         this.currentIndex = Number(index)
         if (this.mapButton.size == 0)

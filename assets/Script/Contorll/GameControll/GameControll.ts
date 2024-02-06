@@ -1,25 +1,16 @@
+import { Game, game } from "cc";
+import BaseSingleton from "../../../Patten/Singleton/BaseSingleton";
+import { LobbyState, MessageState, PlayerState } from "../../../Patten/StatePatten";
 import { CommandType } from "../../Enum/CommandType";
 import { GameEvent } from "../../Enum/GameEvent";
+import { LangType } from "../../Enum/LangType";
+import { MessageCommend } from "../../Enum/MessageCommend";
+import { NotificationType } from "../../Enum/NotificationType";
 import EventMng from "../../Manager/EventMng";
 import PublicData from "../../Model/PublicData";
-import { GameState, LobbyState, MessageState, PlayerState, ViewState } from "../../../Patten/StatePatten";
+import SocketSetting from "../../Socket/SocketSetting";
 import { AccountLogIn } from "../../State/LobbyState";
 import { BackHomeMessage, ShowConfirmMessage } from "../../State/MessageState";
-import { MessageCommend } from "../../Enum/MessageCommend";
-import { LangType } from "../../Enum/LangType";
-import { ServerGameSenceType } from "../../Enum/ServerGameSenceType";
-import BaseSingleton from "../../../Patten/Singleton/BaseSingleton";
-import SocketSetting from "../../Socket/SocketSetting";
-import { Game, game } from "cc";
-import { GameSceneName } from "../../Enum/GameSenceName";
-import RoomData from "../../Model/RoomData";
-import PanelLoading from "../NoClearNode/PanelLoading";
-import { GameStateEvent } from "../../Enum/GameStateEvent";
-import GameSenceText from "../../Model/GameSenceText";
-import GameData from "../../Model/GameData";
-import CheckLoading from "../../Model/CheckLoading";
-import { CheckLoadingType } from "../../Enum/CheckLoadingType";
-import { NotificationType } from "../../Enum/NotificationType";
 import { ChooeseBall } from "../../State/PlayState";
 
 export default class GameControll extends BaseSingleton<GameControll>() {
@@ -108,7 +99,7 @@ export default class GameControll extends BaseSingleton<GameControll>() {
         if (isNaN(Number(code)))
             return code
         else
-            return SocketSetting.t(code, LangType.Server);
+            return SocketSetting.getInstance.t(code, LangType.Server);
 
     }
     resetView() {

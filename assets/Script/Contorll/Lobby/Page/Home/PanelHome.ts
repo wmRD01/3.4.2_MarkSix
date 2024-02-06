@@ -77,14 +77,7 @@ export default class PanelHome extends BaseComponent {
         this.marquee = this.labelMarquee.addComponent(Marquee)
         this.timer = this.labelTime.addComponent(Timer);
         this.timer.setBGNode(this.timeBG);
-        /**取TOKEN */
-        // console.error(Player.getInstance.gpgToken);
-        // if (!DEV)
-        // Player.getInstance.gpgToken = (this.handleURLData(window.location.href) as URLVlaue).token
         this.setEvent(LobbyStateEvent.NextIssueID, this.reset)
-        PublicData.getInstance.markSixMsg.connet()
-
-
     }
     async onEnable() {
         this.reset()
@@ -228,7 +221,7 @@ export default class PanelHome extends BaseComponent {
                     console.log("MyInfo", response)
                     console.log("確認玩家token登入無異常");
                     if (!response || !response.data) {
-                        PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("E_0007", LangType.Game))
+                        PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("E_0007", LangType.Game))
                     }
                     else resolve()
                 })
@@ -271,15 +264,25 @@ export default class PanelHome extends BaseComponent {
         }
     }
     //#endregion
-    /**監聽傳入的格式會有兩種，1種是單數字，另一種為數字-數字(ex:1-0) */
     onGoPage(e: EventTouch, customEventData?: string) {
-        
         let split = customEventData.split('-')
         if (isNaN(Number(split[0])))
             // console.error("錯誤啦!!!是不是忘記設定");
             this.eventEmit(LobbyStateEvent.ChangePointPage, null, split[1])
         EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, Number(split[0]))
     }
+    handleURLData(_url: string) {
+        if (_url.split("?")[1] == undefined) return undefined
+
+        let arr = _url.split("?")[1].split("&")
+        let obj = new Object()
+        for (let index = 0; index < arr.length; index++) {
+            let cut = arr[index].split("=")
+            obj[cut[0]] = cut[1]
+        }
+        return obj
+    }
+
 }
 
 class Marquee extends Component {

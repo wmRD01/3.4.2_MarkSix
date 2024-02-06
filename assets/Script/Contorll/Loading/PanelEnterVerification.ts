@@ -8,7 +8,7 @@ import PublicData from '../../Model/PublicData';
 import PublicModel from '../../Model/PublicModel';
 import SocketSetting from '../../Socket/SocketSetting';
 import { RequestGPG } from '../Api/GPGAPI/RequestGPG';
-import { ResponseGPG } from '../Api/GPGAPI/ResponseGPG';
+import { OpenidConfiguration, ResponseGPG } from '../Api/GPGAPI/ResponseGPG';
 import PanelLoading from '../NoClearNode/PanelLoading';
 import PanelSystemMessage from '../NoClearNode/PanelSystemMessage';
 const { ccclass, property } = _decorator;
@@ -27,8 +27,8 @@ export default class PanelEnterVerification extends BaseSingletonComponent<Panel
     }
 
     onLogIn(e?: Event) {
-        if (this.labelVerification.string.replace(/ /g, '').length == 0) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t("033", LangType.Game))
+        if (this.labelVerification.string.replace(/ /g, '').length == 0 || this.labelVerification.string.replace(/ /g, '').length < 6) {
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("033", LangType.Game))
             return
         }
         this.requestLogIn();
@@ -44,14 +44,15 @@ export default class PanelEnterVerification extends BaseSingletonComponent<Panel
             .SwitchGetData(this.url, this.responseLogIn.bind(this))
     }
     responseLogIn(response: ResponseGPG.GetToken.DataClass) {
-        try {
-            Player.getInstance.gpgToken = response.access_token
+        if (response.error_description) {
+            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("000", LangType.Game))
+        }
+        else {
+            Player.getInstance.gpgToken = response?.access_token
             PanelLoading.instance.openLoading()
             director.preloadScene(GameSceneName.Lobby, () => {
                 director.loadScene(GameSceneName.Lobby)
             })
-        } catch (error) {
-            PanelSystemMessage.instance.showSingleConfirm('驗證碼可能過期，請再重新傳送')
         }
     }
     onBackEnterDate() {
@@ -62,8 +63,9 @@ export default class PanelEnterVerification extends BaseSingletonComponent<Panel
         await new RequestGPG.Request()
             .SwitchGetData(`${PublicData.getInstance.gpgUrlids}/.well-known/openid-configuration`, this.responseUrl.bind(this))
     }
-    responseUrl(response) {
-        // console.error(response.token_endpoint);
+    responseUrl(response: OpenidConfiguration) {
+        console.error(response);
+        console.log(this);
         this.url = response.token_endpoint
     }
 }

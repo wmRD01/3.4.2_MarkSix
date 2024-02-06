@@ -69,6 +69,8 @@ export namespace ResponseGPG {
             expires_in: number
             scope: string
             token_type: string
+            error: string;
+            error_description: string;
         }
     }
     export namespace Nickname {
@@ -230,4 +232,111 @@ export namespace ResponseGPG {
     }
 
 
+}
+
+export class OpenidConfiguration {
+    authorization_endpoint: string = "https://ids.ceis.tw/connect/authorize"
+    backchannel_logout_supported: boolean = true
+    backchannel_logout_session_supported: boolean = true
+    check_session_iframe: string = "https://ids.ceis.tw/connect/checksession"
+    claims_supported: string[] = [
+        "sub",
+        "name",
+        "family_name",
+        "given_name",
+        "middle_name",
+        "nickname",
+        "preferred_username",
+        "profile",
+        "picture",
+        "website",
+        "gender",
+        "birthdate",
+        "zoneinfo",
+        "locale",
+        "updated_at",
+        "aud"
+    ]
+    code_challenge_methods_supported: string[] = [
+        "plain",
+        "S256"
+    ]
+    device_authorization_endpoint: string = "https://ids.ceis.tw/connect/deviceauthorization"
+    end_session_endpoint: string = "https://ids.ceis.tw/connect/endsession"
+    frontchannel_logout_session_supported: boolean = true
+    frontchannel_logout_supported: boolean = true
+    grant_types_supported: string[] = [
+        "authorization_code",
+        "client_credentials",
+        "refresh_token",
+        "implicit",
+        "urn:ietf:params:oauth:grant-type:device_code",
+        "mk_phone",
+        "mk_register",
+        "gpg_token",
+        "mk_adLogin"
+    ]
+    id_token_signing_alg_values_supported: string[] = [
+        "RS256"
+    ]
+    introspection_endpoint: string = "https://ids.ceis.tw/connect/introspect"
+    issuer: string = "https://ids.ceis.tw"
+    jwks_uri: string = "https://ids.ceis.tw/.well-known/openid-configuration/jwks"
+    request_parameter_supported: boolean = true
+
+    response_modes_supported: string[] = [
+        "form_post",
+        "query",
+        "fragment"
+    ]
+    response_types_supported: string[] = [
+        "code",
+        "token",
+        "id_token",
+        "id_token token",
+        "code id_token",
+        "code token",
+        "code id_token token"
+    ]
+    revocation_endpoint: string = "https://ids.ceis.tw/connect/revocation"
+    scopes_supported: string[] = [
+        "openid",
+        "profile",
+        "wallet.search",
+        "wallet.transfer",
+        "member.info.user",
+        "member.info.machine",
+        "singlewallet.all",
+        "singlewallet.search",
+        "singlewallet.transfer",
+        "mining.sharedpool.search",
+        "mining.personalpool.search",
+        "voucher.machine",
+        "activity.drawlots",
+        "transaction.machine",
+        "chat.ai",
+        "coupon.addorder",
+        "rabbitmq.read:*/*/*",
+        "rabbitmq.*",
+        "rabbitmq.configure:*/*",
+        "rabbitmq.read:*/*",
+        "rabbitmq.tag:administrator",
+        "rabbitmq.write:*/*",
+        "mining.miningrate.search",
+        "mark6.draw.history",
+        "mark6.score.user",
+        "report.write",
+        "report.read",
+        "game.link",
+        "offline_access"
+    ]
+    subject_types_supported: string[] = [
+        "public"
+    ]
+    token_endpoint: string = "https://ids.ceis.tw/connect/token"
+    token_endpoint_auth_methods_supported: string[] = [
+        "client_secret_basic",
+        "client_secret_post"
+    ]
+    userinfo_endpoint: string = "https://ids.ceis.tw/connect/userinfo"
 }

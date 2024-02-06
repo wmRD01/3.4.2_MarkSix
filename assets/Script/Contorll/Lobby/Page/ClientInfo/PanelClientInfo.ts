@@ -1,4 +1,4 @@
-import { assetManager, Button, EventTouch, ImageAsset, Label, Sprite, SpriteFrame, _decorator } from 'cc';
+import { Button, EventTouch, Label, Sprite, SpriteFrame, _decorator } from 'cc';
 import { EditMenu } from '../../../../Enum/EditMenu';
 import { LangType } from '../../../../Enum/LangType';
 import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
@@ -120,7 +120,7 @@ export default class PanelClientInfo extends BaseComponent {
         }
     }
     responError(errorCode: string) {
-        PanelSystemMessage.instance.showSingleConfirm(SocketSetting.t(errorCode, LangType.Game))
+        PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t(errorCode, LangType.Game))
     }
     //#endregion
     //#region  MyInfo

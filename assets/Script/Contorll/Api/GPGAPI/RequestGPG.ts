@@ -10,12 +10,21 @@ export namespace RequestGPG {
             this.method = _method;
             return this
         }
+        setHeaders(_headers: Headers) {
+            this.headers = _headers;
+            return this
+        }
         setToken(str: string) {
             this.headers.Authorization = `Bearer ${str}`
             return this
         }
         setBody(_body: string | FormData) {
             this.body = _body;
+            return this
+        }
+        deletother() {
+            delete this.headers.Accept
+            delete this.headers.Authorization
             return this
         }
         deletContentType() {
@@ -26,8 +35,13 @@ export namespace RequestGPG {
             this.headers["Content-Type"] = type;
             return this
         }
-        private fetchData(_url: string, callback: Function) {
-            // console.log(this);
+
+        fetchData(_url: string, callback: Function) {
+            // console.log(_url);
+            console.log(this);
+            // console.log(_url.split("?"));
+            // console.log(_url.split("?")[0].split("/"));
+            // console.log(_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length]);
             return new Promise<void>((resolve, reject) => {
                 let data;
                 fetch(_url, this)
@@ -37,7 +51,7 @@ export namespace RequestGPG {
                     // })
                     .then(response => response.json())
                     .then(response => data = response)
-                    .catch(err => reject)
+                    .catch(err => reject())
                     .then(response => console.log(`資料名稱：${_url.split("?")[0].split("/")[_url.split("?")[0].split("/").length - 1]}`))
                     .then(response => {
                         try {
@@ -51,28 +65,32 @@ export namespace RequestGPG {
             })
 
         }
-        private XMLData(url: string, callback: Function) {
+        XMLData(url: string, callback: Function) {
             console.log("開始", url);
+
             return new Promise<void>((resolve, reject) => {
                 var xhr = new XMLHttpRequest()
+                // console.error(this.method);
+                // console.error(this.headers["Content-Type"]);
                 xhr.setRequestHeader("Content-Type", this.headers["Content-Type"])
                 xhr.setRequestHeader("Accept", this.headers["Accept"])
                 xhr.setRequestHeader("Authorization", this.headers["Authorization"])
                 if (xhr.overrideMimeType) xhr.overrideMimeType('text\/plain; charset=utf-8');
-                xhr.onload = function () {
+                xhr.onload = () => {
+                    console.log(xhr);
                     if (xhr.readyState === 4) {
-                        if (xhr.status === 200 || xhr.status === 0) {
-                            callback(JSON.parse(xhr.response), url);
+                        try {
+                            console.warn(JSON.parse(xhr.response));
+                            callback(JSON.parse(xhr.response));
                             resolve()
-                        }
-                        else {
-                            // errCallback(url)
-                            // errCallback({ status: xhr.status, errorMessage: errInfo + '(wrong status)' });
+                        } catch (error) {
+                            reject()
+                            console.error("Format error", xhr);
                         }
                     }
                     else {
-                        // errCallback(url)
-                        // errCallback({ status: xhr.status, errorMessage: errInfo + '(wrong readyState)' });
+                        reject()
+                        console.error("connet error", xhr);
                     }
                 };
                 xhr.open(this.method, url, true);
@@ -143,7 +161,15 @@ export namespace RequestGPG {
 
         }
         export namespace NotNeedToken {
-  
+            // export class EmailSign {
+            //     [x: string]: string;
+            //     verifyCode: string;
+            //     email: string;
+            // }
+
+            export class RankList {
+
+            }
             export class SendRegisterVerification {
                 Locale: string = "zh-TW";
                 Phone: string;

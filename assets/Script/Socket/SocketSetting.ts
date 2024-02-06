@@ -1,11 +1,7 @@
+import BaseSingleton from "../../Patten/Singleton/BaseSingleton";
 import { LangType } from "../Enum/LangType";
 
-class SocketSetting {
-    UserLanguage: string;
-    IsMessage: boolean;
-    ClientSetObject = {};      // 客端底層所有參數存放位置
-    setboolean = false;        // 讓設定值只設定一次
-    ServerReturnData = {};     // Server回傳所有參數 
+export default class SocketSetting extends BaseSingleton<SocketSetting>() {
     Language = "";
     gameData: Object = new Object();
     serverData: Object = new Object();
@@ -38,9 +34,7 @@ class SocketSetting {
             case LangType.ServerAPI:
                 this.isServerAPI = true;
         }
-
         return this
-
         //@ts-ignore
         // this.data = data;
         // console.log(language);
@@ -76,7 +70,7 @@ class SocketSetting {
             let checkLoop = setInterval(() => {
                 let isbool = _type == LangType.Game ? this.isGame : this.isServer
                 if (isbool) {
-                    // console.log(SocketSetting.data);
+                    // console.log( SocketSetting.getInstancedata);
 
                     resolve();
                     clearInterval(checkLoop)
@@ -99,5 +93,5 @@ class SocketSetting {
 
 
 }
-export default new SocketSetting();
+
 

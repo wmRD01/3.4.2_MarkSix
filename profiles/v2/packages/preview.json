@@ -2,7 +2,7 @@
   "__version__": "1.0.1",
   "preview": {
     "simulator_resolution": 25,
-    "simulator_orientation": "portrait"
+    "simulator_orientation": "landscape"
   },
   "general": {
     "start_scene": "602c3d25-484a-4071-ae9b-2b9ed340bc8b"

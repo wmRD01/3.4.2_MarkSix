@@ -1,29 +1,20 @@
-import IAsset from "../Interface/IAsset";
 import MusicAsset from "../Asset/MusicAsset";
 import SpriteAsset from "../Asset/SpriteAsset";
-import SpriteAtlasAsset from "../Asset/SpriteAtlasAsset";
 import { AssetType } from "../Enum/AssetType";
-import PrefabAsset from "../Asset/PrefabAsset";
+import IAsset from "../Interface/IAsset";
 
 class AssetMng {
     AssetClass: Map<AssetType, IAsset> = new Map();
-    // AssetClass: Array<IAsset> = []
     isAllOK: boolean;
     startLoad() {
         this.AssetClass.set(AssetType.Sprite, SpriteAsset.loadAsset());
         this.AssetClass.set(AssetType.Music, MusicAsset.loadAsset());
-        return
-        this.AssetClass.set(AssetType.SpriteAtlast, SpriteAtlasAsset.loadAsset());
-        this.AssetClass.set(AssetType.Prefab, PrefabAsset.loadAsset());
-        // resources.load()
     }
 
     loadLogoAsset(lang: string) {
         SpriteAsset.loadLogo(lang)
     }
     checkState(type: AssetType) {
-        // console.log(type);
-        // console.log(this.AssetClass);
         try {
             return this.AssetClass.get(type).checkAssetState
         } catch (error) {

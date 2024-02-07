@@ -5,7 +5,7 @@ import { LangType } from "../Enum/LangType";
 import { LobbyStateEvent } from "../Enum/LobbyStateEvent";
 import { NotificationType } from "../Enum/NotificationType";
 import EventMng from "../Manager/EventMng";
-import SocketSetting from "../Socket/SocketSetting";
+import LanguageManager from "../Manager/LanguageManager";
 // /**自己入房 */
 // export class OwnerInRoom extends State {
 //     public changeState(data: RP.goin): void {
@@ -25,7 +25,7 @@ export class ChooeseBall extends State {
                 EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(LobbyStateEvent.ChangeBallButtonState, true)
                 EventMng.getInstance.mapEvnet.get(NotificationType.Pulic).emit(LobbyStateEvent.ChangeConfirmState, false)
             }
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t(data.code, LangType.ServerAPI))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t(data.code, LangType.ServerAPI))
         }
     }
 

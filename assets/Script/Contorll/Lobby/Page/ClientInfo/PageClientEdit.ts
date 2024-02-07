@@ -10,7 +10,7 @@ import BaseComponent from '../../../../Model/ComponentBase';
 import Player from '../../../../Model/Player';
 import PublicData from '../../../../Model/PublicData';
 import PublicModel from '../../../../Model/PublicModel';
-import SocketSetting from '../../../../Socket/SocketSetting';
+import LanguageManager from '../../../../Manager/LanguageManager';
 import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
@@ -65,13 +65,13 @@ export default class PanelClientEdit extends BaseComponent {
         console.log("Nickname", response)
 
         if (response.Status.Code == "0") {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("026", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("026", LangType.Game))
             EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).emit(LobbyStateEvent.EditUpdate, this.editNicName.string, EditMenu.Nickname)
             ButtonMng.clearEvent(this.buttonConfirm);
             this.reset()
         }
         else {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t(response.Status.Code, LangType.ServerAPI))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t(response.Status.Code, LangType.ServerAPI))
             PanelLoading.instance.closeLoading()
             // console.error("資料有問題");
         }
@@ -104,9 +104,9 @@ export default class PanelClientEdit extends BaseComponent {
         /**代表此已經綁定過不可以綁定! */
         if (response.Status.Code == "0") {
             // if (this.editEmail.string != "")
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("040", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("040", LangType.Game))
             // if (this.editPhone.string != "")
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("034", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("034", LangType.Game))
             return;
         }
         else {
@@ -127,7 +127,7 @@ export default class PanelClientEdit extends BaseComponent {
     responseSendRegisterVerification(response: ResponseGPG.SendRegisterVerification.DataClass) {
         console.log("SendRegisterVerification", response)
         if (response.Status.Code == "0") {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("035", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("035", LangType.Game))
             // new VerificationTimer(this.labelVerificationCode, this.buttonVerificationCode, 180)
             console.log("送出驗證碼囉");
         }
@@ -178,14 +178,14 @@ export default class PanelClientEdit extends BaseComponent {
         console.log("CertifiedEmall", response)
         if (response.Status.Code == "0") {
             console.log("過關惹");
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("036", LangType.ServerAPI))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("036", LangType.ServerAPI))
             // EventMng.getInstance.mapEvnet.get(NotificationType.PanelClient).emit(LobbyStateEvent.EditUpdate, this.editEmail.string, EditMenu.Email)
             ButtonMng.clearEvent(this.buttonConfirm);
             this.reset()
         }
         else {
             //TODO顯示錯誤訊息
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t(response.Status.Code, LangType.ServerAPI))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t(response.Status.Code, LangType.ServerAPI))
             PanelLoading.instance.closeLoading()
         }
     }
@@ -216,17 +216,17 @@ export default class PanelClientEdit extends BaseComponent {
 
     checkName(str: string) {
         if (str.length == 0 || (str.length < 2 || str.length > 16)) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("031", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("031", LangType.Game))
             // console.error("長度須為2~16");
             return false;
         }
         if (/\s/.test(str)) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("029", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("029", LangType.Game))
             // console.error("文字有空白");
             return false;
         }
         if (PublicModel.getInstance.checkNicknameCondition(str)) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("030", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("030", LangType.Game))
             // console.error("出現非法文字");
             return false;
         }
@@ -239,17 +239,17 @@ export default class PanelClientEdit extends BaseComponent {
      */
     checkEmail(str: string) {
         if (str.length == 0) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("028", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("028", LangType.Game))
             // console.error("請輸入信箱");
             return false;
         }
         if (/\s/.test(str)) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("029", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("029", LangType.Game))
             // console.error("文字有空白");
             return false;
         }
         if (!PublicModel.getInstance.checkEmailRegular(str)) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("028", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("028", LangType.Game))
             // console.error("請輸入正確信箱");
             return false;
         }
@@ -260,17 +260,17 @@ export default class PanelClientEdit extends BaseComponent {
      */
     checkVerification(str: string) {
         if (str.length == 0) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("033", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("033", LangType.Game))
             // console.error("請輸入數字");
             return false;
         }
         if (/\s/.test(str)) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("029", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("029", LangType.Game))
             // console.error("文字有空白");
             return false;
         }
         if (str.length != 6) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("032", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("032", LangType.Game))
             // console.error("驗證碼最少六碼");
             return false;
         }

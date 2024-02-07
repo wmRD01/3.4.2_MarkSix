@@ -12,7 +12,7 @@ import BaseComponent from '../../../../Model/ComponentBase';
 import Player from '../../../../Model/Player';
 import PublicData from '../../../../Model/PublicData';
 import PublicModel from '../../../../Model/PublicModel';
-import SocketSetting from '../../../../Socket/SocketSetting';
+import LanguageManager from '../../../../Manager/LanguageManager';
 import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import * as RP from '../../../Api/ResponeCommand';
@@ -71,7 +71,7 @@ export default class PanelBall extends BaseComponent {
         this.labelContent.removeAllChildren()
         this.HorLayout.removeAllChildren()
         let isEnd = false
-        this.labelState.string = SocketSetting.getInstance.t("041", LangType.Game).replace("$0", this.MaxCount.toString())
+        this.labelState.string = LanguageManager.getInstance.t("041", LangType.Game).replace("$0", this.MaxCount.toString())
         for (let V = 0; V < this.Valign; V++) {
             let layout = instantiate(this.layoutItem)
             this.HorLayout.addChild(layout)
@@ -155,9 +155,9 @@ export default class PanelBall extends BaseComponent {
                 this.eventEmit(LobbyStateEvent.ChangeConfirmState, false)
             }
             if (this.tempChoose.length == 0)
-                this.labelState.string = SocketSetting.getInstance.t("041", LangType.Game).replace("$0", this.MaxCount.toString())
+                this.labelState.string = LanguageManager.getInstance.t("041", LangType.Game).replace("$0", this.MaxCount.toString())
             else
-                this.labelState.string = SocketSetting.getInstance.t("042", LangType.Game).replace("$0", this.tempChoose.length.toString())
+                this.labelState.string = LanguageManager.getInstance.t("042", LangType.Game).replace("$0", this.tempChoose.length.toString())
             return
         }
         /**如果選號已滿 */
@@ -165,7 +165,7 @@ export default class PanelBall extends BaseComponent {
         /**紀錄球號 */
         this.tempChoose.push(convert)
         this.mapBallNumber.get(convert).choose()
-        this.labelState.string = SocketSetting.getInstance.t("042", LangType.Game).replace("$0", this.tempChoose.length.toString())
+        this.labelState.string = LanguageManager.getInstance.t("042", LangType.Game).replace("$0", this.tempChoose.length.toString())
         if (this.tempChoose.length === this.MaxCount) {
             this.isFullBall = true;
             this.tipBox.active = true;
@@ -208,15 +208,15 @@ export default class PanelBall extends BaseComponent {
         this.tempChoose = []
         this.eventEmit(LobbyStateEvent.ChangeConfirmState, false)
         this.tipBox.active = false
-        this.labelState.string = SocketSetting.getInstance.t("041", LangType.Game).replace("$0", this.MaxCount.toString())
+        this.labelState.string = LanguageManager.getInstance.t("041", LangType.Game).replace("$0", this.MaxCount.toString())
     }
     async Attack() {
         if (this.isConfirm) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("038", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("038", LangType.Game))
             return
         }
         if (this.tempChoose.length < this.MaxCount) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("039", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("039", LangType.Game))
             return
         }
         this.labelState.node.active = false;
@@ -260,9 +260,9 @@ export default class PanelBall extends BaseComponent {
         /**請注意這邊是走GPG的error Code不是走Game的 */
         else {
             if (!response)
-                PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("520", LangType.ServerAPI))
+                PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("520", LangType.ServerAPI))
             else
-                PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t(response.Status.Code, LangType.ServerAPI))
+                PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t(response.Status.Code, LangType.ServerAPI))
         }
 
 
@@ -270,7 +270,7 @@ export default class PanelBall extends BaseComponent {
     confirmAttack(e?: EventTouch, customEventData?: string) {
         this.eventEmit(LobbyStateEvent.ChangeBallButtonState, false)
         this.Attack()
-        PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("037", LangType.Game))
+        PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("037", LangType.Game))
     }
     fullResetBallColor(bool: boolean) {
         this.mapBallNumber.forEach(element => {
@@ -295,7 +295,7 @@ export default class PanelBall extends BaseComponent {
                 this.onChooeseBall(null, data.betCode[index].toString())
             }
             this.Attack()
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("038", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("038", LangType.Game))
             this.eventEmit(LobbyStateEvent.ChangeBallButtonState, false)
         }
         this.labelIssueID.string = `第${data.drawIssue}期`;
@@ -329,7 +329,7 @@ export default class PanelBall extends BaseComponent {
                 this.onChooeseBall(null, response.data[0].betCode[index].toString())
             }
             this.Attack()
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("038", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("038", LangType.Game))
             this.eventEmit(LobbyStateEvent.ChangeBallButtonState, false)
         }
         this.labelIssueID.string = `第${PublicData.getInstance.curIssueID}期`;

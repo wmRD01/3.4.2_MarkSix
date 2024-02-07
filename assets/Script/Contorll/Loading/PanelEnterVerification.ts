@@ -6,7 +6,7 @@ import { LangType } from '../../Enum/LangType';
 import Player from '../../Model/Player';
 import PublicData from '../../Model/PublicData';
 import PublicModel from '../../Model/PublicModel';
-import SocketSetting from '../../Socket/SocketSetting';
+import LanguageManager from '../../Manager/LanguageManager';
 import { RequestGPG } from '../Api/GPGAPI/RequestGPG';
 import { OpenidConfiguration, ResponseGPG } from '../Api/GPGAPI/ResponseGPG';
 import PanelLoading from '../NoClearNode/PanelLoading';
@@ -28,7 +28,7 @@ export default class PanelEnterVerification extends BaseSingletonComponent<Panel
 
     onLogIn(e?: Event) {
         if (this.labelVerification.string.replace(/ /g, '').length == 0 || this.labelVerification.string.replace(/ /g, '').length < 6) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("033", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("033", LangType.Game))
             return
         }
         this.requestLogIn();
@@ -45,7 +45,7 @@ export default class PanelEnterVerification extends BaseSingletonComponent<Panel
     }
     responseLogIn(response: ResponseGPG.GetToken.DataClass) {
         if (response.error_description) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("000", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("000", LangType.Game))
         }
         else {
             Player.getInstance.gpgToken = response?.access_token

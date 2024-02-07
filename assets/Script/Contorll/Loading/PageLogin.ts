@@ -1,10 +1,7 @@
 import { _decorator } from 'cc';
-import { LangType } from '../../Enum/LangType';
 import BaseComponent from '../../Model/ComponentBase';
 import PublicModel from '../../Model/PublicModel';
-import SocketSetting from '../../Socket/SocketSetting';
 import { RequestGPG as RequestGPG } from '../Api/GPGAPI/RequestGPG';
-import PanelLoading from '../NoClearNode/PanelLoading';
 import PanelEnterData from './PanelEnterData';
 import PanelEnterVerification from './PanelEnterVerification';
 const { ccclass, property } = _decorator;
@@ -17,14 +14,18 @@ export default class PageLogin extends BaseComponent {
         super.onLoad()
         this.setEvent('showEnterData', this.showEnterData)
         this.setEvent('showEnterVerification', this.showEnterVerification)
+
     }
-    async start() {
+    start() {
+        PanelEnterData.instance.hide();
+        PanelEnterVerification.instance.hide();
         if (PublicModel.getInstance.checkApp()) {
-            PanelLoading.instance.show()
-            await SocketSetting.getInstance.checkLanguage(LangType.Game)
-            PanelLoading.instance.hide()
             this.showEnterData()
         }
+
+    }
+    callback(e) {
+        console.error(e);
 
     }
     showEnterData() {

@@ -41,39 +41,6 @@ declare class AllData {
     win: number;
     rank: number;
 }
-declare class OwnerData {
-    orderNo: number;
-    bet: number;
-    autoOdds: number;
-    isResult: number;
-    resultOdds: number;
-}
-
-declare class RoomData {
-    roomNo: number;
-    /**
-     * 房名
-     */
-    name: number;
-    coinType: number; // 遊戲桌型別 0: 金幣 1:銀幣
-    sequenceID: string;
-    nowStage: string;
-    stageTime: number;
-    remainTime: number;
-    odds: number;
-    actionMode: number;
-    actionRate: number;
-    ownerBets: Array<OwnerData>;
-    allBets: Array<AllData>;
-    seatNo: number;
-    password: string;
-}
-declare class ResultData {
-    roomNo: number;
-    bet: number;
-    resultOdds: number;
-    win: number;
-}
 declare class ButtonFunctionApi {
     //會被另一個node搞所以只能寫any
     target: any
@@ -90,16 +57,7 @@ declare class Panel_SoundSet {
     switchEevent(e: Event, customEventData?: string);
     // openEevent();
 }
-declare class DataSoundSet {
-}
-/**再回頭整理 */
-// declare enum GameWinerResult {
 
-//     Player,
-//     Banker,
-//     Tie,
-//     Null,
-// }
 declare class GameWinerResult {
 
 }

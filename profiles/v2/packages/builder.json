@@ -9,16 +9,16 @@
         "id": "1654667623042",
         "progress": 1,
         "state": "success",
-        "message": "2024-1-24 12:19 Build success in 20438 ms!",
+        "message": "2024-2-7 14:47 Build success in 21323 ms!",
         "options": {
-          "name": "Baccarat",
+          "name": "MarkSix",
           "platform": "web-mobile",
           "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\game50003",
           "debug": false,
           "md5Cache": false,
           "sourceMaps": false,
           "replaceSplashScreen": true,
-          "mainBundleCompressionType": "none",
+          "mainBundleCompressionType": "merge_all_json",
           "mainBundleIsRemote": false,
           "mergeStartScene": false,
           "experimentalEraseModules": false,
@@ -52,7 +52,7 @@
             }
           }
         },
-        "time": "2024-1-24 12:19",
+        "time": "2024-2-7 14:47",
         "dirty": false
       },
       "1659321737563": {

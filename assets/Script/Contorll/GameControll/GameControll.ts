@@ -8,7 +8,7 @@ import { MessageCommend } from "../../Enum/MessageCommend";
 import { NotificationType } from "../../Enum/NotificationType";
 import EventMng from "../../Manager/EventMng";
 import PublicData from "../../Model/PublicData";
-import SocketSetting from "../../Socket/SocketSetting";
+import LanguageManager from "../../Manager/LanguageManager";
 import { AccountLogIn } from "../../State/LobbyState";
 import { BackHomeMessage, ShowConfirmMessage } from "../../State/MessageState";
 import { ChooeseBall } from "../../State/PlayState";
@@ -99,7 +99,7 @@ export default class GameControll extends BaseSingleton<GameControll>() {
         if (isNaN(Number(code)))
             return code
         else
-            return SocketSetting.getInstance.t(code, LangType.Server);
+            return LanguageManager.getInstance.t(code, LangType.Server);
 
     }
     resetView() {

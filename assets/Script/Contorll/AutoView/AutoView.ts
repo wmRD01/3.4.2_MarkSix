@@ -1,8 +1,9 @@
 
-import { _decorator, Component, view, ResolutionPolicy, find, UITransform, screen, Label, Size, sys } from 'cc';
+import { Component, find, ResolutionPolicy, Size, UITransform, view, _decorator } from 'cc';
 import DelayTime from '../../../Plug/DelayTime';
-
 import PublicData from '../../Model/PublicData';
+import PublicModel from '../../Model/PublicModel';
+
 const { ccclass, property } = _decorator;
 
 @ccclass('AutoView')
@@ -11,9 +12,8 @@ export default class AutoView extends Component {
 
     isCanUpdata: boolean = true
     start() {
-        console.log(find("AutoView"));
-
         // if (sys.os == sys.OS.ANDROID) return
+        if (PublicModel.getInstance.checkApp()) this.node.destroy()
         this.AdjustView();
         window.addEventListener("resize", (async () => {
             if (this.isCanUpdata) {

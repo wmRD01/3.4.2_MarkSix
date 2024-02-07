@@ -3,7 +3,7 @@ import BaseSingleton from "./Singleton/BaseSingleton";
 export abstract class State {
     protected context: Context;
     public setContext(context: Context) {
-        this.context = context;
+    this.context = context;
     }
     public abstract changeState(data): void;
 

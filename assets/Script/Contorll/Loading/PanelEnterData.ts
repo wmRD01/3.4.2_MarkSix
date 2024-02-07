@@ -5,7 +5,7 @@ import { LangType } from '../../Enum/LangType';
 import Player from '../../Model/Player';
 import PublicData from '../../Model/PublicData';
 import PublicModel from '../../Model/PublicModel';
-import SocketSetting from '../../Socket/SocketSetting';
+import LanguageManager from '../../Manager/LanguageManager';
 import { RequestGPG } from '../Api/GPGAPI/RequestGPG';
 import { ResponseGPG } from '../Api/GPGAPI/ResponseGPG';
 import PanelSystemMessage from '../NoClearNode/PanelSystemMessage';
@@ -30,11 +30,11 @@ export default class PanelEnterData extends BaseSingletonComponent<PanelEnterDat
         let checkStr = this.labelData.string.replace(/ /g, '')
         if (!PublicModel.getInstance.checkPhoneRegular(checkStr.replace(/^0/, "+886")) &&
             !PublicModel.getInstance.checkEmailRegular(checkStr)) {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("028", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("028", LangType.Game))
             return
         }
         if (checkStr == "") {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("029", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("029", LangType.Game))
             return
         }
         this.requestValidateContactInfo(checkStr)
@@ -89,7 +89,7 @@ export default class PanelEnterData extends BaseSingletonComponent<PanelEnterDat
         this.isPhone ? delete body.email : delete body.phone
         this.btnSendVerification.interactable = true
         if (response.Status.Code == "0" || response.Status.Code == "1006") {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t(response.Status.Code == "0" ? "035" : "048", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t(response.Status.Code == "0" ? "035" : "048", LangType.Game))
             this.eventEmit('showEnterVerification', body)
             console.log("送出驗證碼囉");
         }
@@ -104,7 +104,7 @@ export default class PanelEnterData extends BaseSingletonComponent<PanelEnterDat
         this.isPhone ? delete body.email : delete body.phone
         this.btnSendVerification.interactable = true
         if (response.Status.Code == "0" || response.Status.Code == "1006") {
-            PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t(response.Status.Code == "0" ? "035" : "048", LangType.Game))
+            PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t(response.Status.Code == "0" ? "035" : "048", LangType.Game))
             this.eventEmit('showEnterVerification', body)
             console.log("送出驗證碼囉");
         }

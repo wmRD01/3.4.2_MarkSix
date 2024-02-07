@@ -10,7 +10,7 @@ import BaseComponent from '../../../../Model/ComponentBase';
 import Player from '../../../../Model/Player';
 import PublicData from '../../../../Model/PublicData';
 import PublicModel from '../../../../Model/PublicModel';
-import SocketSetting from '../../../../Socket/SocketSetting';
+import LanguageManager from '../../../../Manager/LanguageManager';
 import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
@@ -221,7 +221,7 @@ export default class PanelHome extends BaseComponent {
                     console.log("MyInfo", response)
                     console.log("確認玩家token登入無異常");
                     if (!response || !response.data) {
-                        PanelSystemMessage.instance.showSingleConfirm(SocketSetting.getInstance.t("E_0007", LangType.Game))
+                        PanelSystemMessage.instance.showSingleConfirm(LanguageManager.getInstance.t("E_0007", LangType.Game))
                     }
                     else resolve()
                 })
@@ -271,17 +271,7 @@ export default class PanelHome extends BaseComponent {
             this.eventEmit(LobbyStateEvent.ChangePointPage, null, split[1])
         EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, Number(split[0]))
     }
-    handleURLData(_url: string) {
-        if (_url.split("?")[1] == undefined) return undefined
-
-        let arr = _url.split("?")[1].split("&")
-        let obj = new Object()
-        for (let index = 0; index < arr.length; index++) {
-            let cut = arr[index].split("=")
-            obj[cut[0]] = cut[1]
-        }
-        return obj
-    }
+  
 
 }
 

@@ -318,7 +318,7 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
         // console.log(sys.isBrowser)
         if (sys.isNative && !sys.isBrowser) {
             if (DEV) {
-                if (sys.os === sys.OS.ANDROID || sys.os === sys.OS.IOS || sys.os === sys.OS.WINDOWS|| sys.os === sys.OS.OSX)
+                if (sys.os === sys.OS.ANDROID || sys.os === sys.OS.IOS || sys.os === sys.OS.WINDOWS || sys.os === sys.OS.OSX)
                     return true
                 else
                     return false
@@ -383,6 +383,29 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
 
         return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}.${milliseconds}${offsetSign}${offsetHours}:${offsetMinutes}`;
     }
+    ////#region  
+    handleURLData(_url: string) {
+        if (_url.split("?")[1] == undefined) return undefined
+        let arr = _url.split("?")[1].split("&")
+        let obj = new Object()
+        for (let index = 0; index < arr.length; index++) {
+            let cut = arr[index].split("=")
+            obj[cut[0]] = cut[1]
+        }
 
+        return obj
+    }
+
+    checkLanguagePath() {
+        if (PublicModel.getInstance.checkApp())
+            return "lib"; // 語言包路徑
+        else if (window.isVAServer || window.isInpokerServer)
+            return "../../lib/"
+        else if (window.isGitServer)
+            return "https://wmrd01.github.io/BaccaratPlay/lib/"
+        else//預設 // 本地端
+            return "http://127.0.0.1/JaiJaiTest/lib/";
+    }
+    //#region 
 }
 

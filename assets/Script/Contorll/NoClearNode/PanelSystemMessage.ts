@@ -5,7 +5,7 @@ import { GameEvent } from "../../Enum/GameEvent";
 import { LangType } from "../../Enum/LangType";
 import { WebSocketEvent } from "../../Enum/WebSocketEvent";
 import ButtonMng from "../../Manager/ButtonMng";
-import SocketSetting from "../../Socket/SocketSetting";
+import LanguageManager from "../../Manager/LanguageManager";
 const { ccclass, property } = _decorator;
 @ccclass('PanelSystemMessage')
 export default class PanelSystemMessage extends BaseSingletonComponent<PanelSystemMessage>() {
@@ -43,8 +43,8 @@ export default class PanelSystemMessage extends BaseSingletonComponent<PanelSyst
         }
     }
     setLanguage() {
-        this.labelConfirm.string = SocketSetting.getInstance.t("1000", LangType.Game)
-        this.labelCancel.string = SocketSetting.getInstance.t("1001", LangType.Game)
+        this.labelConfirm.string = LanguageManager.getInstance.t("1000", LangType.Game)
+        this.labelCancel.string = LanguageManager.getInstance.t("1001", LangType.Game)
         super.setLanguage()
     }
     showSingleConfirm(caption: string, _callBack?: Function, ...arg: any) {

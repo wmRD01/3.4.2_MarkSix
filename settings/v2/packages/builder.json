@@ -1,7 +1,7 @@
 {
   "__version__": "1.3.1",
   "splash-setting": {
-    "url": "project://settings/LaunchScreen.png",
+    "url": "project://",
     "displayRatio": 0.4,
     "totalTime": 0,
     "clearColor": {

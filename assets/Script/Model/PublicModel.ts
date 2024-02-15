@@ -4,7 +4,6 @@ import CryptoES from 'crypto-es';
 import BaseSingleton from "../../Patten/Singleton/BaseSingleton";
 import MyMath from "../../Plug/MyMath";
 import { RequestGPG } from "../Contorll/Api/GPGAPI/RequestGPG";
-import PublicData from "./PublicData";
 export default class PublicModel extends BaseSingleton<PublicModel>() {
     /**
      * @param targetNode 需要移動的物件
@@ -256,12 +255,12 @@ export default class PublicModel extends BaseSingleton<PublicModel>() {
     openShader() {
         dynamicAtlasManager.enabled = false//打開Shader合批(????)
     }
-    convertSign<T extends RequestGPG.Body.NeedToken.base>(body: Object, _class: { new(): T }, isDelete: boolean = true) {
+    convertSign<T extends RequestGPG.Body.NeedToken.base>(body: Object, _class: { new(): T }, key: RequestGPG.GPGAPIKey, isDelete: boolean = true) {
         let sign = new _class();
         PublicModel.getInstance.TwoClassCheckData(sign, body)
         if (isDelete)
             delete sign.sign
-        const dataWithApiKey = this.sortObj(sign, PublicData.getInstance.gpgApiKey);
+        const dataWithApiKey = this.sortObj(sign, key);
         // console.log(dataWithApiKey);
         // console.log(CryptoES.MD5(dataWithApiKey).toString());
         return CryptoES.MD5(dataWithApiKey).toString()

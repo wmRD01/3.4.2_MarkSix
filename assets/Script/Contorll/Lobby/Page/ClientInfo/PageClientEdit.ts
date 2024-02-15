@@ -53,7 +53,7 @@ export default class PanelClientEdit extends BaseComponent {
         PanelLoading.instance.openLoading("資料更新中")
         const body = new RequestGPG.Body.NeedToken.Nickname()
         body.nickname = this.editNicName.string
-        body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Nickname)
+        body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Nickname, PublicData.getInstance.gpgApiKey)
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
@@ -165,7 +165,7 @@ export default class PanelClientEdit extends BaseComponent {
         const body = new RequestGPG.Body.NeedToken.CertifiedEmail()
         // body.email = this.editEmail.string
         // body.verifyCode = this.editVerificationCode.string
-        body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.CertifiedEmail)
+        body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.CertifiedEmail, PublicData.getInstance.gpgApiKey)
         await new RequestGPG.Request()
             .setMethod(RequestGPG.Method.POST)
             .setToken(Player.getInstance.gpgToken)

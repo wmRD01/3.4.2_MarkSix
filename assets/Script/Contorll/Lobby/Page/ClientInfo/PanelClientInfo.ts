@@ -172,7 +172,7 @@ export default class PanelClientInfo extends BaseComponent {
             const getDate = new Date(PublicData.getInstance.today)
             body.sDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-01`
             body.eDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-${PublicModel.getInstance.getMonthAllDay(PublicData.getInstance.today)}`
-            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.MyScore)
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.MyScore, PublicData.getInstance.gpgApiKey)
             console.log(body);
 
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)

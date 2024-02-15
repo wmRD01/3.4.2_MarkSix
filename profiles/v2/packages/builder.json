@@ -9,13 +9,13 @@
         "id": "1654667623042",
         "progress": 1,
         "state": "success",
-        "message": "2024-2-7 14:47 Build success in 21323 ms!",
+        "message": "2024-2-15 11:14 Build success in 67540 ms!",
         "options": {
           "name": "MarkSix",
           "platform": "web-mobile",
           "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\game50003",
           "debug": false,
-          "md5Cache": false,
+          "md5Cache": true,
           "sourceMaps": false,
           "replaceSplashScreen": true,
           "mainBundleCompressionType": "merge_all_json",
@@ -52,7 +52,7 @@
             }
           }
         },
-        "time": "2024-2-7 14:47",
+        "time": "2024-2-15 11:13",
         "dirty": false
       },
       "1659321737563": {
@@ -95,82 +95,6 @@
             }
           }
         }
-      },
-      "1662027362863": {
-        "id": "1662027362863",
-        "progress": 1,
-        "state": "success",
-        "message": "2023-7-21 13:57 Build success in 38222 ms!",
-        "options": {
-          "name": "GPG_Rocket",
-          "platform": "android",
-          "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\game50003",
-          "debug": false,
-          "md5Cache": true,
-          "sourceMaps": false,
-          "replaceSplashScreen": true,
-          "mainBundleCompressionType": "merge_all_json",
-          "mainBundleIsRemote": false,
-          "mergeStartScene": false,
-          "experimentalEraseModules": false,
-          "compressTexture": true,
-          "packAutoAtlas": false,
-          "startScene": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
-          "scenes": [
-            {
-              "url": "db://assets/Scene/Lobby.scene",
-              "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
-              "inBundle": false
-            }
-          ],
-          "outputName": "android",
-          "packages": {
-            "android": {
-              "packageName": "com.cocos.RocketPlay",
-              "orientation": {
-                "portrait": true,
-                "upsideDown": false,
-                "landscapeRight": false,
-                "landscapeLeft": false
-              },
-              "apiLevel": "android-30",
-              "appABIs": [
-                "armeabi-v7a"
-              ],
-              "useDebugKeystore": true,
-              "keystorePath": "",
-              "keystorePassword": "",
-              "keystoreAlias": "",
-              "keystoreAliasPassword": "",
-              "appBundle": false,
-              "androidInstant": false,
-              "remoteUrl": "",
-              "sdkPath": "",
-              "ndkPath": "",
-              "renderBackEnd": {
-                "vulkan": false,
-                "gles3": true,
-                "gles2": true
-              }
-            },
-            "native": {
-              "polyfills": {
-                "asyncFunctions": true
-              },
-              "encrypted": false,
-              "xxteaKey": "06g9qyTYRL4bE3MQ",
-              "compressZip": false,
-              "makeAfterBuild": false,
-              "JobSystem": "tbb"
-            },
-            "cocos-service": {
-              "configID": "08c3e2",
-              "services": []
-            }
-          }
-        },
-        "time": "2023-7-21 13:56",
-        "dirty": false
       },
       "1706175783256": {
         "id": "1706175783256",
@@ -241,11 +165,11 @@
     }
   },
   "common": {
-    "buildPath": "/Users/chenghsiangtsao/Downloads/3.4.2_MarkSix/build",
+    "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\game50003",
     "mainBundleCompressionType": "merge_all_json",
     "outputName": "ios",
     "platform": "ios",
-    "md5Cache": false,
+    "md5Cache": true,
     "experimentalEraseModules": false,
     "compressTexture": true,
     "packAutoAtlas": false,
@@ -262,7 +186,8 @@
       },
       {
         "url": "db://assets/Scene/Lobby.scene",
-        "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc"
+        "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
+        "inBundle": false
       }
     ],
     "mainBundleIsRemote": false

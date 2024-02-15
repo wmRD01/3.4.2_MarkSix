@@ -306,7 +306,7 @@ export default class PanelBall extends BaseComponent {
             const body = new RequestGPG.Body.NeedToken.Betlog()
             body.sDate = PublicData.getInstance.today.split("T")[0]
             body.eDate = PublicData.getInstance.today.split("T")[0]
-            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Betlog)
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Betlog, PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             await new RequestGPG.Request()
                 .setToken(Player.getInstance.gpgToken)

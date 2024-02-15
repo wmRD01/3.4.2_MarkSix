@@ -130,19 +130,6 @@
           ],
           "outputName": "ios",
           "packages": {
-            "ios": {
-              "orientation": {
-                "landscapeRight": false,
-                "landscapeLeft": false,
-                "portrait": true
-              },
-              "renderBackEnd": {
-                "metal": true
-              },
-              "skipUpdateXcodeProject": false,
-              "targetVersion": "12.0",
-              "packageName": "com.sixmarkgame.app"
-            },
             "native": {
               "polyfills": {
                 "asyncFunctions": true
@@ -156,10 +143,162 @@
             "cocos-service": {
               "configID": "08c3e2",
               "services": []
+            },
+            "ios": {
+              "orientation": {
+                "landscapeRight": false,
+                "landscapeLeft": false,
+                "portrait": true
+              },
+              "renderBackEnd": {
+                "metal": true
+              },
+              "skipUpdateXcodeProject": false,
+              "targetVersion": "12.0",
+              "packageName": "com.sixmarkgame.app"
             }
           }
         },
         "time": "2024-1-26 12:14",
+        "dirty": false,
+        "rawOptions": {
+          "name": "MarkSix",
+          "platform": "ios",
+          "buildPath": "/Users/chenghsiangtsao/Downloads/3.4.2_MarkSix/build",
+          "debug": false,
+          "md5Cache": false,
+          "sourceMaps": false,
+          "replaceSplashScreen": true,
+          "mainBundleCompressionType": "merge_all_json",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": false,
+          "startScene": "602c3d25-484a-4071-ae9b-2b9ed340bc8b",
+          "scenes": [
+            {
+              "url": "db://assets/Scene/Loading.scene",
+              "uuid": "602c3d25-484a-4071-ae9b-2b9ed340bc8b",
+              "inBundle": false
+            },
+            {
+              "url": "db://assets/Scene/Lobby.scene",
+              "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
+              "inBundle": false
+            }
+          ],
+          "outputName": "ios",
+          "packages": {
+            "native": {
+              "polyfills": {
+                "asyncFunctions": true
+              },
+              "encrypted": false,
+              "xxteaKey": "3dClN+7NBGv5Xue4",
+              "compressZip": false,
+              "makeAfterBuild": false,
+              "JobSystem": "tbb"
+            },
+            "cocos-service": {
+              "configID": "08c3e2",
+              "services": []
+            },
+            "ios": {
+              "orientation": {
+                "landscapeRight": false,
+                "landscapeLeft": false,
+                "portrait": true
+              },
+              "renderBackEnd": {
+                "metal": true
+              },
+              "skipUpdateXcodeProject": false,
+              "targetVersion": "12.0",
+              "packageName": "com.sixmarkgame.app"
+            }
+          }
+        }
+      },
+      "1707976126956": {
+        "id": "1707976126956",
+        "progress": 1,
+        "state": "failure",
+        "message": "2024-2-15 17:00 make package C:\\inetpub\\wwwroot\\JaiJaiTest\\game50003\\android failed!",
+        "options": {
+          "name": "MarkSix",
+          "platform": "android",
+          "buildPath": "C:\\inetpub\\wwwroot\\JaiJaiTest\\game50003",
+          "debug": false,
+          "md5Cache": false,
+          "sourceMaps": false,
+          "replaceSplashScreen": true,
+          "mainBundleCompressionType": "merge_all_json",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": false,
+          "startScene": "602c3d25-484a-4071-ae9b-2b9ed340bc8b",
+          "scenes": [
+            {
+              "url": "db://assets/Scene/Loading.scene",
+              "uuid": "602c3d25-484a-4071-ae9b-2b9ed340bc8b",
+              "inBundle": false
+            },
+            {
+              "url": "db://assets/Scene/Lobby.scene",
+              "uuid": "45e4a202-9a2b-4605-8f2c-970d3e4491cc",
+              "inBundle": false
+            }
+          ],
+          "outputName": "android",
+          "packages": {
+            "android": {
+              "packageName": "com.cocos.MarkSix",
+              "orientation": {
+                "portrait": true,
+                "upsideDown": false,
+                "landscapeRight": false,
+                "landscapeLeft": false
+              },
+              "apiLevel": "android-30",
+              "appABIs": [
+                "arm64-v8a"
+              ],
+              "useDebugKeystore": true,
+              "keystorePath": "",
+              "keystorePassword": "",
+              "keystoreAlias": "",
+              "keystoreAliasPassword": "",
+              "appBundle": false,
+              "androidInstant": false,
+              "remoteUrl": "",
+              "sdkPath": "",
+              "ndkPath": "",
+              "renderBackEnd": {
+                "vulkan": false,
+                "gles3": true,
+                "gles2": true
+              }
+            },
+            "native": {
+              "polyfills": {
+                "asyncFunctions": true
+              },
+              "encrypted": false,
+              "xxteaKey": "dcmHXixBFGRIxA24",
+              "compressZip": false,
+              "makeAfterBuild": false,
+              "JobSystem": "tbb"
+            },
+            "cocos-service": {
+              "configID": "08c3e2",
+              "services": []
+            }
+          }
+        },
+        "time": "2024-2-15 16:59",
         "dirty": false
       }
     }
@@ -169,7 +308,7 @@
     "mainBundleCompressionType": "merge_all_json",
     "outputName": "ios",
     "platform": "ios",
-    "md5Cache": true,
+    "md5Cache": false,
     "experimentalEraseModules": false,
     "compressTexture": true,
     "packAutoAtlas": false,

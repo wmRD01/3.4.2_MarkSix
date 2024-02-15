@@ -5,12 +5,12 @@ import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import { NotificationType } from '../../../../Enum/NotificationType';
 import { PageAction } from '../../../../Enum/PageAction';
 import EventMng from '../../../../Manager/EventMng';
+import LanguageManager from '../../../../Manager/LanguageManager';
 import BallData from '../../../../Model/BallData';
 import BaseComponent from '../../../../Model/ComponentBase';
 import Player from '../../../../Model/Player';
 import PublicData from '../../../../Model/PublicData';
 import PublicModel from '../../../../Model/PublicModel';
-import LanguageManager from '../../../../Manager/LanguageManager';
 import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
@@ -72,7 +72,7 @@ export default class PanelHome extends BaseComponent {
     loopTime: number = 60
 
     onLoad() {
-        if (window.isGPGServer ||PublicModel.getInstance.checkApp())
+        if (window.isGPGServer || PublicModel.getInstance.checkApp())
             PublicData.getInstance.isChageOnline();
         this.marquee = this.labelMarquee.addComponent(Marquee)
         this.timer = this.labelTime.addComponent(Timer);
@@ -105,7 +105,7 @@ export default class PanelHome extends BaseComponent {
             body.top = "1"
             body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.DrawHistory, PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
             resolve();
@@ -151,7 +151,7 @@ export default class PanelHome extends BaseComponent {
             const body = new RequestGPG.Body.NeedToken.DrawUpcoming()
             body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawUpcoming}?${convert}`, this.responseDrawUpcoming.bind(this))
             resolve()
@@ -190,7 +190,7 @@ export default class PanelHome extends BaseComponent {
             body.eDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-${PublicModel.getInstance.getMonthAllDay(PublicData.getInstance.today)}`
             body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.MyScore, PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.My_Score}?${convert}`, this.responseMyScore.bind(this))
             resolve()
@@ -214,7 +214,7 @@ export default class PanelHome extends BaseComponent {
             const body = new RequestGPG.Body.NeedToken.MyInfo()
             body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-            new RequestGPG.Request()
+            new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.MyInfo}?${convert}`, (response: ResponseGPG.MyInfo.DataClass) => {
                     Player.getInstance.gpgInfo = response;
@@ -234,7 +234,7 @@ export default class PanelHome extends BaseComponent {
         const body = new RequestGPG.Body.NeedToken.DrawUpcoming()
         body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApiKey)
         let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-        await new RequestGPG.Request()
+        await new RequestGPG.Request(PublicModel.getInstance.checkApp())
             .setToken(Player.getInstance.gpgToken)
             .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawUpcoming}?${convert}`, this.checkIssueID.bind(this))
     }
@@ -271,7 +271,7 @@ export default class PanelHome extends BaseComponent {
             this.eventEmit(LobbyStateEvent.ChangePointPage, null, split[1])
         EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, Number(split[0]))
     }
-  
+
 
 }
 

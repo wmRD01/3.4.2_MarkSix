@@ -2,10 +2,10 @@ import { Button, _decorator } from 'cc';
 import BaseSingletonComponent from '../../../Patten/Singleton/BaseSingletonComponent';
 import { MyEditBox } from '../../../Plug/MyEditBox';
 import { LangType } from '../../Enum/LangType';
+import LanguageManager from '../../Manager/LanguageManager';
 import Player from '../../Model/Player';
 import PublicData from '../../Model/PublicData';
 import PublicModel from '../../Model/PublicModel';
-import LanguageManager from '../../Manager/LanguageManager';
 import { RequestGPG } from '../Api/GPGAPI/RequestGPG';
 import { ResponseGPG } from '../Api/GPGAPI/ResponseGPG';
 import PanelSystemMessage from '../NoClearNode/PanelSystemMessage';
@@ -52,7 +52,7 @@ export default class PanelEnterData extends BaseSingletonComponent<PanelEnterDat
         }
         console.log(body);
         this.btnSendVerification.interactable = false
-        await new RequestGPG.Request()
+        await new RequestGPG.Request(PublicModel.getInstance.checkApp())
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
             .setToken(Player.getInstance.gpgToken)
@@ -64,7 +64,7 @@ export default class PanelEnterData extends BaseSingletonComponent<PanelEnterDat
             /**代表此已經綁定過不可以綁定! */
             const body = new RequestGPG.Body.NotNeedToken.SendLoginVerification()
             this.isPhone ? body.Phone = this.data : body.Email = this.data
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setMethod(RequestGPG.Method.POST)
                 .setBody(JSON.stringify(body))
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.SendLoginVerification}`, this.responseSendLoginVerification.bind(this))
@@ -73,7 +73,7 @@ export default class PanelEnterData extends BaseSingletonComponent<PanelEnterDat
             console.log("恭喜信箱不存在，可繼續註冊");
             const body = new RequestGPG.Body.NotNeedToken.SendRegisterVerification()
             this.isPhone ? body.Phone = this.data : body.Email = this.data
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setMethod(RequestGPG.Method.POST)
                 .setBody(JSON.stringify(body))
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.SendRegisterVerification}`, this.responseSendRegisterVerification.bind(this))

@@ -54,7 +54,7 @@ export default class PanelTopRank extends BaseComponent {
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             console.log(body);
             console.log(convert);
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.TopScore}?${convert}`, this.responseTopScore.bind(this))
             resolve()

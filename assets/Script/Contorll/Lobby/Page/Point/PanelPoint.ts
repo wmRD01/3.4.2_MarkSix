@@ -64,7 +64,7 @@ export default class PanelPoint extends BaseComponent {
             body.top = count.toString()//目前固定10筆
             body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.DrawHistory, PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
             resolve()
@@ -110,7 +110,7 @@ export default class PanelPoint extends BaseComponent {
             body.eDate = PublicData.getInstance.today.split("T")[0]
             body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Betlog, PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.Betlog}?${convert}`, this.responseBetlog.bind(this))
             resolve()

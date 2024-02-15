@@ -7,7 +7,7 @@ export namespace RequestGPG {
         body: string | FormData
         isApp: boolean = false;
         /**避免傳遞過長，因此在初始化時就先記錄app狀況 */
-        constructor(appBool: boolean) {
+        constructor(appBool: boolean = false) {
             this.isApp = appBool
         }
         setMethod(_method: Method) {

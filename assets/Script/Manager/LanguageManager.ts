@@ -19,9 +19,10 @@ export default class LanguageManager extends BaseSingleton<LanguageManager>() {
         if (lang === this.Language) return
         this.Language = lang;
         let lib = PublicModel.getInstance.checkLanguagePath()
-        this.switchLoag(`${lib}gameLanguage/${gameID.toString()}/${lang}`)
-        this.switchLoag(`${lib}serverLanguage/${lang}`)
-        this.switchLoag(`${lib}serverApiLanguage/${lang}`)
+        /**再研究一下html端與app端為什麼兩天會有點不一樣，lib路徑設定?? */
+        this.switchLoag(`${lib}/gameLanguage/${gameID.toString()}/${lang}`)
+        this.switchLoag(`${lib}/serverLanguage/${lang}`)
+        this.switchLoag(`${lib}/serverApiLanguage/${lang}`)
     }
 
     setDate(_data: Object, _type: LangType) {

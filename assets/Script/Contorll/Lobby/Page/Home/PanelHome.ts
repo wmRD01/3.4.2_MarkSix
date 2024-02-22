@@ -5,12 +5,12 @@ import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import { NotificationType } from '../../../../Enum/NotificationType';
 import { PageAction } from '../../../../Enum/PageAction';
 import EventMng from '../../../../Manager/EventMng';
+import LanguageManager from '../../../../Manager/LanguageManager';
 import BallData from '../../../../Model/BallData';
 import BaseComponent from '../../../../Model/ComponentBase';
 import Player from '../../../../Model/Player';
 import PublicData from '../../../../Model/PublicData';
 import PublicModel from '../../../../Model/PublicModel';
-import LanguageManager from '../../../../Manager/LanguageManager';
 import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
@@ -65,7 +65,7 @@ export default class PanelHome extends BaseComponent {
     specialBallItem: Node
     marquee: Marquee;
     timer: Timer;
-    isChangeIssueID: boolean;
+    // isChangeIssueID: boolean;
     currentIssueID: number;
     loopTimer: number;
     testtotoel: number = 0;
@@ -82,21 +82,24 @@ export default class PanelHome extends BaseComponent {
     async onEnable() {
         this.reset()
     }
+    onDestroy() {
+        clearInterval(this.loopTimer)
+    }
     async reset() {
-        if (this.isChangeIssueID) {
-            PanelLoading.instance.closeLoading()
-            return;
-        }
+        // if (this.isChangeIssueID) {
+        //     PanelLoading.instance.closeLoading()
+        //     return;
+        // }
         await this.requestMyInfo()
         await this.requestDrawHistory()
         await this.requestDrawUpcoming()
         await this.requesMyScore()
 
         PanelLoading.instance.closeLoading()
-        if (this.isChangeIssueID) {
-            this.testtotoel = 0
-            this.loopTimer = setInterval(this.requestDrawUpcomingLoop.bind(this), this.loopTime * 1000)
-        }
+        // if (this.isChangeIssueID) {
+        //     this.testtotoel = 0
+        //     this.loopTimer = setInterval(this.requestDrawUpcomingLoop.bind(this), this.loopTime * 1000)
+        // }
     }
     //#region  DrawHistory
     async requestDrawHistory() {
@@ -173,11 +176,11 @@ export default class PanelHome extends BaseComponent {
         console.log(Date_C);
         //TODO 如果時間到了該怎處理?
         this.timer.setTimer(Date_C.getTime())
-        if (countTime < 0) {
-            // console.error("時間到了，該開始搓報API");
-            this.isChangeIssueID = true;
-            return
-        }
+        // if (countTime < 0) {
+        //     // console.error("時間到了，該開始搓報API");
+        //     this.isChangeIssueID = true;
+        //     return
+        // }
     }
     //#endregion
 
@@ -247,7 +250,7 @@ export default class PanelHome extends BaseComponent {
             this.testtotoel++
             if (this.testtotoel == 3) {
                 // console.error("終於換天拉!!!!");
-                this.isChangeIssueID = false;
+                // this.isChangeIssueID = false;
                 clearInterval(this.loopTimer)
                 this.eventEmit(LobbyStateEvent.NextIssueID)
             }
@@ -258,7 +261,7 @@ export default class PanelHome extends BaseComponent {
 
         if (this.currentIssueID != Number(response.data[0].issueID)) {
             // console.error("終於換天拉!!!!");
-            this.isChangeIssueID = false;
+            // this.isChangeIssueID = false;
             clearInterval(this.loopTimer)
             this.eventEmit(LobbyStateEvent.NextIssueID)
         }
@@ -271,7 +274,7 @@ export default class PanelHome extends BaseComponent {
             this.eventEmit(LobbyStateEvent.ChangePointPage, null, split[1])
         EventMng.getInstance.mapEvnet.get(NotificationType.Page).emit(PageAction.ChangeTo, Number(split[0]))
     }
-  
+
 
 }
 

@@ -6,11 +6,11 @@ import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import { NotificationType } from '../../../../Enum/NotificationType';
 import ButtonMng from '../../../../Manager/ButtonMng';
 import EventMng from '../../../../Manager/EventMng';
+import LanguageManager from '../../../../Manager/LanguageManager';
 import BaseComponent from '../../../../Model/ComponentBase';
 import Player from '../../../../Model/Player';
 import PublicData from '../../../../Model/PublicData';
 import PublicModel from '../../../../Model/PublicModel';
-import LanguageManager from '../../../../Manager/LanguageManager';
 import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
@@ -53,8 +53,8 @@ export default class PanelClientEdit extends BaseComponent {
         PanelLoading.instance.openLoading("資料更新中")
         const body = new RequestGPG.Body.NeedToken.Nickname()
         body.nickname = this.editNicName.string
-        body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Nickname)
-        await new RequestGPG.Request()
+        body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Nickname, PublicData.getInstance.gpgApiKey)
+        await new RequestGPG.Request(PublicModel.getInstance.checkApp())
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
             .setToken(Player.getInstance.gpgToken)
@@ -84,7 +84,7 @@ export default class PanelClientEdit extends BaseComponent {
         //TODO 製作手機驗證(整理好後再回頭製作)
         const body = new RequestGPG.Body.NotNeedToken.ValidateContactInfo()
         // body.Phone = this.editPhone.string;
-        await new RequestGPG.Request()
+        await new RequestGPG.Request(PublicModel.getInstance.checkApp())
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
             .SwitchGetData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.ValidateContactInfo}`, this.responseValidateContactInfo.bind(this))
@@ -94,7 +94,7 @@ export default class PanelClientEdit extends BaseComponent {
         // if (!this.checkEmail(this.editEmail.string)) return;
         const body = new RequestGPG.Body.NotNeedToken.ValidateContactInfo()
         // body.Email = this.editEmail.string;
-        await new RequestGPG.Request()
+        await new RequestGPG.Request(PublicModel.getInstance.checkApp())
             .setMethod(RequestGPG.Method.POST)
             .setBody(JSON.stringify(body))
             .SwitchGetData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.ValidateContactInfo}`, this.responseValidateContactInfo.bind(this))
@@ -117,7 +117,7 @@ export default class PanelClientEdit extends BaseComponent {
             //     sendBody.Email = this.editEmail.string
             // if (this.editPhone.string != "")
             //     sendBody.Phone = this.editPhone.string
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setMethod(RequestGPG.Method.POST)
                 .setBody(JSON.stringify(sendBody))
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlids}${RequestGPG.API.SendRegisterVerification}`, this.responseSendRegisterVerification.bind(this))
@@ -165,8 +165,8 @@ export default class PanelClientEdit extends BaseComponent {
         const body = new RequestGPG.Body.NeedToken.CertifiedEmail()
         // body.email = this.editEmail.string
         // body.verifyCode = this.editVerificationCode.string
-        body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.CertifiedEmail)
-        await new RequestGPG.Request()
+        body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.CertifiedEmail, PublicData.getInstance.gpgApiKey)
+        await new RequestGPG.Request(PublicModel.getInstance.checkApp())
             .setMethod(RequestGPG.Method.POST)
             .setToken(Player.getInstance.gpgToken)
             .setBody(JSON.stringify(body))

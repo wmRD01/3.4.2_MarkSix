@@ -62,9 +62,9 @@ export default class PanelPoint extends BaseComponent {
         return new Promise<void>(async (resolve, reject) => {
             const body = new RequestGPG.Body.NeedToken.DrawHistory()
             body.top = count.toString()//目前固定10筆
-            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.DrawHistory)
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.DrawHistory, PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
             resolve()
@@ -108,9 +108,9 @@ export default class PanelPoint extends BaseComponent {
             const getDate = PublicModel.getInstance.convertDateDiff(PublicData.getInstance.today, -(count))
             body.sDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-${getDate.getDate()}`
             body.eDate = PublicData.getInstance.today.split("T")[0]
-            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Betlog)
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Betlog, PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.Betlog}?${convert}`, this.responseBetlog.bind(this))
             resolve()

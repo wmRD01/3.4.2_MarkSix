@@ -1,7 +1,7 @@
 {
   "options": {
     "android": {
-      "packageName": "com.cocos.RocketPlay",
+      "packageName": "com.cocos.MarkSix",
       "orientation": {
         "portrait": true,
         "upsideDown": false,
@@ -10,7 +10,7 @@
       },
       "apiLevel": "android-30",
       "appABIs": [
-        "armeabi-v7a"
+        "arm64-v8a"
       ],
       "useDebugKeystore": true,
       "keystorePath": "",

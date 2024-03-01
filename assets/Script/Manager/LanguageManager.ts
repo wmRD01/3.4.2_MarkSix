@@ -1,6 +1,7 @@
 import { JsonAsset, resources } from "cc";
 import BaseSingleton from "../../Patten/Singleton/BaseSingleton";
 import { LangType } from "../Enum/LangType";
+import GetLanguage from "../Model/GetLanguage";
 import PublicModel from "../Model/PublicModel";
 
 export default class LanguageManager extends BaseSingleton<LanguageManager>() {
@@ -12,10 +13,13 @@ export default class LanguageManager extends BaseSingleton<LanguageManager>() {
     isServer: boolean
     isServerAPI: boolean;
     loadCount: number;
-    startLoad(gameID: number, lang: string) {
+    /**遊戲內切換語系時，可以帶入參數切換，否則會走預設判斷 */
+    startLoad(gameID: number, lang?: string) {
+        if (!lang) lang = new GetLanguage().get()
         if (lang === this.Language) return
         this.Language = lang;
         let lib = PublicModel.getInstance.checkLanguagePath()
+        /**再研究一下html端與app端為什麼兩天會有點不一樣，lib路徑設定?? */
         this.switchLoag(`${lib}/gameLanguage/${gameID.toString()}/${lang}`)
         this.switchLoag(`${lib}/serverLanguage/${lang}`)
         this.switchLoag(`${lib}/serverApiLanguage/${lang}`)
@@ -25,8 +29,6 @@ export default class LanguageManager extends BaseSingleton<LanguageManager>() {
         console.log(_type, _data);
         let data = this.getTypeData(_type);
         // console.log(data);
-
-
         for (const key in _data) {
             if (!Object.prototype.hasOwnProperty.call(data, key)) {
                 data[key] = _data[key];
@@ -102,19 +104,7 @@ export default class LanguageManager extends BaseSingleton<LanguageManager>() {
         }
     }
 
-    JsonData(url: string, callback: Function) {
-        console.log('downloadText.url:', url);
-        resources.load(url, JsonAsset, (err, _data: JsonAsset) => {
-            if (err) {
-                console.error("資源載入錯誤");
-                return
-            }
 
-            callback(JSON.stringify(_data.json), url)
-            console.log(_data);
-
-        })
-    }
 
     loadLanguageEnd(jsonText: string, url?: string) {
         console.log("loadLanguageEnd");
@@ -164,10 +154,28 @@ export default class LanguageManager extends BaseSingleton<LanguageManager>() {
                         callback(xhr.response, url);
                     }
                 }
+                else {
+                    console.error("資源載入錯誤");
+                    return
+                }
+
             };
 
             xhr.send(null);
         }
+    }
+    JsonData(url: string, callback: Function) {
+        console.log('downloadText.url:', url);
+        resources.load(url, JsonAsset, (err, _data: JsonAsset) => {
+            if (err) {
+                console.error("資源載入錯誤");
+                return
+            }
+
+            callback(JSON.stringify(_data.json), url)
+            console.log(_data);
+
+        })
     }
 }
 

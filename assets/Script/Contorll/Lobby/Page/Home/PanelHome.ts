@@ -72,7 +72,7 @@ export default class PanelHome extends BaseComponent {
     loopTime: number = 60
 
     onLoad() {
-        if (window.isGPGServer || PublicData.getInstance.isApp == "1")
+        if (window.isGPGServer || PublicModel.getInstance.checkApp())
             PublicData.getInstance.isChageOnline();
         this.marquee = this.labelMarquee.addComponent(Marquee)
         this.timer = this.labelTime.addComponent(Timer);
@@ -106,9 +106,9 @@ export default class PanelHome extends BaseComponent {
         return new Promise<void>(async (resolve, reject) => {
             const body = new RequestGPG.Body.NeedToken.DrawHistory()
             body.top = "1"
-            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.DrawHistory)
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.DrawHistory, PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawHistory}?${convert}`, this.responseDrawHistory.bind(this))
             resolve();
@@ -154,7 +154,7 @@ export default class PanelHome extends BaseComponent {
             const body = new RequestGPG.Body.NeedToken.DrawUpcoming()
             body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawUpcoming}?${convert}`, this.responseDrawUpcoming.bind(this))
             resolve()
@@ -191,9 +191,9 @@ export default class PanelHome extends BaseComponent {
             const getDate = new Date(PublicData.getInstance.today)
             body.sDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-01`
             body.eDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-${PublicModel.getInstance.getMonthAllDay(PublicData.getInstance.today)}`
-            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.MyScore)
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.MyScore, PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.My_Score}?${convert}`, this.responseMyScore.bind(this))
             resolve()
@@ -217,7 +217,7 @@ export default class PanelHome extends BaseComponent {
             const body = new RequestGPG.Body.NeedToken.MyInfo()
             body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-            new RequestGPG.Request()
+            new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.MyInfo}?${convert}`, (response: ResponseGPG.MyInfo.DataClass) => {
                     Player.getInstance.gpgInfo = response;
@@ -237,7 +237,7 @@ export default class PanelHome extends BaseComponent {
         const body = new RequestGPG.Body.NeedToken.DrawUpcoming()
         body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApiKey)
         let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-        await new RequestGPG.Request()
+        await new RequestGPG.Request(PublicModel.getInstance.checkApp())
             .setToken(Player.getInstance.gpgToken)
             .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.DrawUpcoming}?${convert}`, this.checkIssueID.bind(this))
     }

@@ -3,10 +3,10 @@ import BaseSingletonComponent from '../../../Patten/Singleton/BaseSingletonCompo
 import { MyEditBox } from '../../../Plug/MyEditBox';
 import { GameSceneName } from '../../Enum/GameSenceName';
 import { LangType } from '../../Enum/LangType';
+import LanguageManager from '../../Manager/LanguageManager';
 import Player from '../../Model/Player';
 import PublicData from '../../Model/PublicData';
 import PublicModel from '../../Model/PublicModel';
-import LanguageManager from '../../Manager/LanguageManager';
 import { RequestGPG } from '../Api/GPGAPI/RequestGPG';
 import { OpenidConfiguration, ResponseGPG } from '../Api/GPGAPI/ResponseGPG';
 import PanelLoading from '../NoClearNode/PanelLoading';
@@ -37,7 +37,7 @@ export default class PanelEnterVerification extends BaseSingletonComponent<Panel
         this.data.client_secret = PublicData.getInstance.gpgSecret
         this.data.verifycode = this.labelVerification.string
         await this.requestUrl()
-        await new RequestGPG.Request()
+        await new RequestGPG.Request(PublicModel.getInstance.checkApp())
             .setMethod(RequestGPG.Method.POST)
             .setContentType(RequestGPG.ContentType.Form)
             .setBody(PublicModel.getInstance.convertObjectToWebParams(this.data))
@@ -60,7 +60,7 @@ export default class PanelEnterVerification extends BaseSingletonComponent<Panel
     }
 
     async requestUrl() {
-        await new RequestGPG.Request()
+        await new RequestGPG.Request(PublicModel.getInstance.checkApp())
             .SwitchGetData(`${PublicData.getInstance.gpgUrlids}/.well-known/openid-configuration`, this.responseUrl.bind(this))
     }
     responseUrl(response: OpenidConfiguration) {

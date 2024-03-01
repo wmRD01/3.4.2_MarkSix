@@ -50,11 +50,11 @@ export default class PanelTopRank extends BaseComponent {
             const todayDate = new Date(PublicData.getInstance.today)
             body.sDate = `${todayDate.getFullYear()}-${todayDate.getMonth() + 1}-1`
             body.eDate = `${todayDate.getFullYear()}-${todayDate.getMonth() + 1}-${todayDate.getDate()}`
-            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.TopScore)
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.TopScore, PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
             console.log(body);
             console.log(convert);
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.TopScore}?${convert}`, this.responseTopScore.bind(this))
             resolve()

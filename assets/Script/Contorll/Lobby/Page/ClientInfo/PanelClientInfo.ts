@@ -4,12 +4,12 @@ import { LangType } from '../../../../Enum/LangType';
 import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import { NotificationType } from '../../../../Enum/NotificationType';
 import EventMng from '../../../../Manager/EventMng';
+import LanguageManager from '../../../../Manager/LanguageManager';
 import BaseComponent from '../../../../Model/ComponentBase';
 import CreateFileSprite from '../../../../Model/CreateFileSprite';
 import Player from '../../../../Model/Player';
 import PublicData from '../../../../Model/PublicData';
 import PublicModel from '../../../../Model/PublicModel';
-import LanguageManager from '../../../../Manager/LanguageManager';
 import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import PanelLoading from '../../../NoClearNode/PanelLoading';
@@ -100,7 +100,7 @@ export default class PanelClientInfo extends BaseComponent {
         // PublicModel.getInstance.convertByteToBinary(PublicModel.getInstance._base64ToBytes(base64))
         let fileData = new FormData()
         fileData.append('file', file)
-        await new RequestGPG.Request()
+        await new RequestGPG.Request(PublicModel.getInstance.checkApp())
             .setMethod(RequestGPG.Method.POST)
             .deletContentType()
             .setBody(fileData)
@@ -129,7 +129,7 @@ export default class PanelClientInfo extends BaseComponent {
             const body = new RequestGPG.Body.NeedToken.MyInfo()
             body.sign = PublicModel.getInstance.convertMD5(PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.MyInfo}?${convert}`, this.responseMyInfo.bind(this))
             resolve();
@@ -144,7 +144,8 @@ export default class PanelClientInfo extends BaseComponent {
         if (!PublicModel.getInstance.checkStringNull(response.data.nickName))
             this.labelMail.string = response.data.email
         // /*上傳圖片功能暫時隱藏 */
-
+        if (!PublicModel.getInstance.checkStringNull(response.data.photo.headPhoto))
+            this.loadPicture(response.data.photo.headPhoto)
         if (!PublicModel.getInstance.checkStringNull(response.data.nickName)) {
             this.getplatform = response.data.nickName?.split("_")[0]/**因為前面會有註冊會員的文字，要刪除掉 */
             this.labelNickName.string = response.data.nickName.replace(`${this.getplatform}_`, "")
@@ -152,6 +153,16 @@ export default class PanelClientInfo extends BaseComponent {
         else
             this.labelNickName.string = response.data.nickName
         this.labelPhone.string = PublicModel.getInstance.checkStringNull(response.data.phoneNumber) ? "" : response.data.phoneNumber
+    }
+    loadPicture(url: string) {
+        assetManager.loadRemote(url, (err, image: ImageAsset) => {
+            if (err) {
+                console.error(err.message);
+                return
+            }
+            this.spritePlayer.spriteFrame = SpriteFrame.createWithImage(image)
+        })
+
     }
     //#endregion
     //#region Betlog
@@ -161,11 +172,11 @@ export default class PanelClientInfo extends BaseComponent {
             const getDate = new Date(PublicData.getInstance.today)
             body.sDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-01`
             body.eDate = `${getDate.getFullYear()}-${getDate.getMonth() + 1}-${PublicModel.getInstance.getMonthAllDay(PublicData.getInstance.today)}`
-            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.MyScore)
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.MyScore, PublicData.getInstance.gpgApiKey)
             console.log(body);
 
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.My_Score}?${convert}`, this.responseMyScore.bind(this))
             resolve()

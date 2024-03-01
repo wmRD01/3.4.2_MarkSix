@@ -7,12 +7,12 @@ import { LobbyStateEvent } from '../../../../Enum/LobbyStateEvent';
 import { WebSocketEvent } from '../../../../Enum/WebSocketEvent';
 import AssetMng from '../../../../Manager/AssetMng';
 import ButtonMng from '../../../../Manager/ButtonMng';
+import LanguageManager from '../../../../Manager/LanguageManager';
 import BallData from '../../../../Model/BallData';
 import BaseComponent from '../../../../Model/ComponentBase';
 import Player from '../../../../Model/Player';
 import PublicData from '../../../../Model/PublicData';
 import PublicModel from '../../../../Model/PublicModel';
-import LanguageManager from '../../../../Manager/LanguageManager';
 import { RequestGPG } from '../../../Api/GPGAPI/RequestGPG';
 import { ResponseGPG } from '../../../Api/GPGAPI/ResponseGPG';
 import * as RP from '../../../Api/ResponeCommand';
@@ -249,7 +249,7 @@ export default class PanelBall extends BaseComponent {
         body.betCode = this.tempChoose;
         body.betTime = PublicModel.getInstance.convertDateToGPGServerTime()
         body.gameID = 50003;
-        await new RequestGPG.Request()
+        await new RequestGPG.Request(PublicModel.getInstance.checkApp())
             .setMethod(RequestGPG.Method.POST)
             .setToken(Player.getInstance.gpgToken)
             .setBody(JSON.stringify(body))
@@ -306,9 +306,9 @@ export default class PanelBall extends BaseComponent {
             const body = new RequestGPG.Body.NeedToken.Betlog()
             body.sDate = PublicData.getInstance.today.split("T")[0]
             body.eDate = PublicData.getInstance.today.split("T")[0]
-            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Betlog)
+            body.sign = PublicModel.getInstance.convertSign(body, RequestGPG.Body.NeedToken.Betlog, PublicData.getInstance.gpgApiKey)
             let convert = PublicModel.getInstance.convertObjectToWebParams(body)
-            await new RequestGPG.Request()
+            await new RequestGPG.Request(PublicModel.getInstance.checkApp())
                 .setToken(Player.getInstance.gpgToken)
                 .SwitchGetData(`${PublicData.getInstance.gpgUrlPlayApi}${RequestGPG.API.Betlog}?${convert}`, this.responseBetlog.bind(this))
             resolve()

@@ -1,4 +1,3 @@
-import PublicModel from "../../../Model/PublicModel";
 
 export namespace RequestGPG {
 
@@ -6,6 +5,11 @@ export namespace RequestGPG {
         method: Method = Method.GET;
         headers: Headers = new Headers();
         body: string | FormData
+        isApp: boolean = false;
+        /**避免傳遞過長，因此在初始化時就先記錄app狀況 */
+        constructor(appBool: boolean = false) {
+            this.isApp = appBool
+        }
         setMethod(_method: Method) {
             this.method = _method;
             return this
@@ -101,7 +105,7 @@ export namespace RequestGPG {
             })
         }
         async SwitchGetData(url: string, callback: Function) {
-            if (PublicModel.getInstance.checkApp())
+            if (this.isApp)
                 await this.XMLData(url, callback)
             else
                 await this.fetchData(url, callback)
